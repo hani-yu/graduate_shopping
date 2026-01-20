@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品详情管理 - 锦囊护卫</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/archive_detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/item_detail.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body class="item_page">
+
+    <!-- 顶部导航栏（与主站一致） -->
+    <nav class="daohang">
+        <div class="daohang_wrapper">
+            <ul class="daohang_list">
+                <li class="daohang_items"><a href="index.html">首页</a></li>
+                <li class="daohang_items"><a href="about.html">平台概况</a></li>
+                <li class="daohang_items"><a href="categories.html">商品分类</a></li>
+                <li class="daohang_items"><a href="guide.html">流转锦囊</a></li>
+                <li class="daohang_items"><a href="events.html">活动专区</a></li>
+                <li class="daohang_items active"><a href="user.html">用户中心</a></li>
+            </ul>
+            <div class="nav_auth"><a href="signin.html" class="btn_nav">登录</a></div>
+        </div>
+    </nav>
+
+    <!-- Box 1: Hero Banner (透视长廊背景) -->
+    <header class="item_hero">
+        <div class="hero_overlay"></div> <!-- 对应 CSS 中的蒙层 -->
+        <div class="hero_content animate__animated animate__fadeIn">
+            <span class="en_text">PRODUCT</span>
+            <h1 class="elegant_title">九成新人体工学椅·清仓详情 <span class="item_seal">收藏</span></h1>
+            <div class="elegant_line"></div>
+            <p>ErgoComfort 品牌，网面+铝合金框架，毕业季特惠转让。</p>
+        </div>
+
+        <!-- 底部波浪线 (建议保留以衔接下方色块) -->
+        <div class="banner_wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C0,0,31.83,14.28,64,27.1,126.31,52,187.31,68,250.31,68c31.11,0,32.25-10.15,71.08-11.56Z"
+                    fill="#f9fbfa"></path>
+            </svg>
+        </div>
+    </header>
+    <main>
+        <!-- 主要内容区域 -->
+        <div class="container">
+            <!-- 模块1：核心商品信息 -->
+            <section class="management-section" id="online-devices">
+                <div class="section-header">
+                    <h2><i class="fas fa-couch"></i> 核心参数与状态</h2>
+                    <span class="badge">已降价 ¥20</span>
+                </div>
+                <div class="devices-list device-grid">
+                    <!-- 设备1 - 核心成色 -->
+                    <div class="device-item current">
+                        <div class="device-icon">
+                            <i class="fas fa-tag"></i>
+                        </div>
+                        <div class="device-info">
+                            <h3>人体工学椅 <span class="current-tag">九成新</span></h3>
+                            <p class="device-meta">
+                                <span><i class="fas fa-history"></i> 使用时长：1年半</span>
+                                <span><i class="fas fa-check-circle"></i> 功能完好</span>
+                                <span><i class="fas fa-box-open"></i> 含原装滚轮/靠垫</span>
+                            </p>
+                            <p class="device-type">毕业清仓 · 包邮 · 节省73%</p>
+                        </div>
+                        <div class="device-actions">
+                            <button class="btn-action btn-secondary" disabled>
+                                <i class="fas fa-yen-sign"></i> 现价 ¥120
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 设备2 - 卖家背书 -->
+                    <div class="device-item">
+                        <div class="device-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="device-info">
+                            <h3>张学长 (优质卖家)</h3>
+                            <p class="device-meta">
+                                <span><i class="fas fa-graduation-cap"></i> 2024届计算机学院</span>
+                                <span><i class="fas fa-star"></i> 信用评分 4.8</span>
+                                <span><i class="fas fa-thumbs-up"></i> 98% 好评率</span>
+                            </p>
+                            <p class="device-type">历史成交 32 笔 | 诚信度极高</p>
+                        </div>
+                        <div class="device-actions">
+                            <button class="btn-action btn-warning">
+                                <i class="fas fa-comment-dots"></i> 在线聊天
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 设备3 - 规格描述 -->
+                    <div class="device-item">
+                        <div class="device-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div class="device-info">
+                            <h3>ErgoComfort 规格</h3>
+                            <p class="device-meta">
+                                <span><i class="fas fa-ruler-combined"></i> 60x55x130cm</span>
+                                <span><i class="fas fa-weight-hanging"></i> 重量 18kg</span>
+                                <span><i class="fas fa-tools"></i> 材质: 铝合金/网面</span>
+                            </p>
+                            <p class="device-type">可调节: 高度、扶手、后仰角度</p>
+                        </div>
+                        <div class="device-actions">
+                            <button class="btn-action btn-warning">
+                                <i class="fas fa-search-plus"></i> 查看详图
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 模块2：买家历史评价记录 -->
+            <section class="management-section" id="login-history">
+                <div class="section-header">
+                    <h2><i class="fas fa-history"></i> 历史买家评价</h2>
+                    <div class="filter-options">
+                        <select class="filter-select">
+                            <option value="30">全部 32 条</option>
+                            <option value="7">好评优先</option>
+                            <option value="90">追评记录</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="login-history-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>日期</th>
+                                <th>评价人</th>
+                                <th>内容摘要</th>
+                                <th>购买商品</th>
+                                <th>状态</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="login-success">
+                                <td>2024-04-15</td>
+                                <td>李同学</td>
+                                <td>椅子很舒服，腰部支撑特别好，编程不累。</td>
+                                <td>工学椅 + 支架</td>
+                                <td><span class="status-success"><i class="fas fa-star"></i> 5星</span></td>
+                            </tr>
+                            <tr class="login-success">
+                                <td>2024-04-10</td>
+                                <td>张同学</td>
+                                <td>卖家很耐心，送货上门，成色很好，性价比超高！</td>
+                                <td>人体工学椅</td>
+                                <td><span class="status-success"><i class="fas fa-star"></i> 5星</span></td>
+                            </tr>
+                            <tr class="login-failed">
+                                <td>2024-03-25</td>
+                                <td>刘同学</td>
+                                <td>面交爽约（此记录为自动生成系统日志）</td>
+                                <td>其他在售</td>
+                                <td><span class="status-failed"><i class="fas fa-exclamation-triangle"></i> 异常</span>
+                                </td>
+                            </tr>
+                            <tr class="login-success">
+                                <td>2024-03-20</td>
+                                <td>王同学</td>
+                                <td>包装得很结实，物流速度很快，满意。</td>
+                                <td>数码配件</td>
+                                <td><span class="status-success"><i class="fas fa-star"></i> 5星</span></td>
+                            </tr>
+                            <tr class="login-success">
+                                <td>2024-03-15</td>
+                                <td>陈学妹</td>
+                                <td>学长人很好，东西保护得很干净，推荐。</td>
+                                <td>办公用品</td>
+                                <td><span class="status-success"><i class="fas fa-star"></i> 5星</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-footer">
+                    <button class="btn-secondary">
+                        <i class="fas fa-download"></i> 导出信用报告
+                    </button>
+                    <button class="btn-secondary">
+                        <i class="fas fa-trash-alt"></i> 查看全部评价
+                    </button>
+                </div>
+            </section>
+
+            <!-- 模块3：配送方式选项 -->
+            <section class="management-section" id="trusted-devices">
+                <div class="section-header">
+                    <h2><i class="fas fa-truck"></i> 交易与配送方式</h2>
+                    <span class="hint-text">支持 3 种配送途径</span>
+                </div>
+
+                <div class="trusted-grid">
+                    <div class="trusted-card">
+                        <i class="fas fa-university card-icon"></i>
+                        <h3>同校面交</h3>
+                        <p>图书馆/食堂/宿舍楼下</p>
+                        <span class="trusted-badge"><i class="fas fa-star"></i> 免费</span>
+                    </div>
+
+                    <div class="trusted-card">
+                        <i class="fas fa-shipping-fast card-icon"></i>
+                        <h3>快递配送</h3>
+                        <p>24小时内极速送达</p>
+                        <span class="trusted-badge"><i class="fas fa-star"></i> ¥20</span>
+                    </div>
+
+                    <div class="trusted-card">
+                        <i class="fas fa-walking card-icon"></i>
+                        <h3>上门自提</h3>
+                        <p>卖家宿舍地址自取</p>
+                        <span class="untrusted-badge">免费</span>
+                    </div>
+                </div>
+
+                <div class="trusted-setting-mini">
+                    <span>开启平台担保交易模式</span>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </section>
+
+
+            <!-- 模块4：交易安全策略 -->
+            <section class="management-section" id="security-policy">
+                <div class="section-header">
+                    <h2><i class="fas fa-shield-alt"></i> 安全保障策略</h2>
+                </div>
+
+                <div class="policy-mini-grid">
+
+                    <div class="policy-mini-card">
+                        <h3><i class="fas fa-lock"></i> 平台担保</h3>
+                        <p>资金安全有保障</p>
+                    </div>
+
+                    <div class="policy-mini-card">
+                        <h3><i class="fas fa-check-double"></i> 验货付款</h3>
+                        <p>核对描述一致后再确认</p>
+                    </div>
+
+                    <div class="policy-mini-card">
+                        <h3><i class="fas fa-balance-scale"></i> 争议调解</h3>
+                        <p>平台客服介入保障</p>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- 模块5：购买管理操作 -->
+            <section class="management-section" id="batch-management">
+                <div class="section-header">
+                    <h2><i class="fas fa-shopping-cart"></i> 购买与议价操作</h2>
+                </div>
+
+                <div class="batch-mini-grid">
+
+                    <div class="batch-mini-card">
+                        <i class="fas fa-shopping-bag"></i>
+                        <h3>立即购买</h3>
+                        <button class="btn-warning">立即下单</button>
+                    </div>
+
+                    <div class="batch-mini-card">
+                        <i class="fas fa-comments-dollar"></i>
+                        <h3>发起议价</h3>
+                        <button class="btn-secondary">议价</button>
+                    </div>
+
+                    <div class="batch-mini-card">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h3>预约面交</h3>
+                        <button class="btn-secondary">预约</button>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- 确认对话框 -->
+            <div class="confirmation-dialog" id="logoutAllDialog" style="display: none;">
+                <div class="dialog-content">
+                    <h3><i class="fas fa-exclamation-triangle"></i> 确认购买该商品</h3>
+                    <p>您正在发起对“九成新人体工学椅”的购买请求。请确保已详细阅读商品参数并与学长确认面交时间。</p>
+                    <div class="dialog-actions">
+                        <button class="btn-secondary" onclick="closeDialog()">取消</button>
+                        <button class="btn-warning" onclick="confirmLogoutAll()">确认购买</button>
+                    </div>
+                </div>
+            </div>
+            </section>
+
+
+        </div>
+    </main>
+
+    <footer class="footer_area">
+        <div class="footer_wrapper">
+            <div class="bottom_bar">
+                <p>&copy; 2026 Campus Market | 校园毕业物品流转平台团队 | <a href="#">服务条款</a></p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="js/item_detail.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品分类 - 校园毕业物品流转平台</title>
+    <!-- <script src="https://kit.fontawesome.com/0ad2b99521.js" crossorigin="anonymous" async></script> -->
+    <link rel="stylesheet" href="css/style.min.css"> <!-- 引用全局样式 -->
+    <link rel="stylesheet" href="css/archive_detail.css"> <!-- 本页专供样式 -->
+    <link rel="stylesheet" href="css/jike_detail.css"> <!-- 引用本页专用样式 -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body class="jike_page">
+   <!-- 顶部导航栏（与主站一致） -->
+    <nav class="daohang">
+        <div class="daohang_wrapper">
+            <ul class="daohang_list">
+                <li class="daohang_items"><a href="index.html">首页</a></li>
+                <li class="daohang_items"><a href="about.html">平台概况</a></li>
+                <li class="daohang_items active"><a href="categories.html">商品分类</a></li>
+                <li class="daohang_items"><a href="guide.html">流转锦囊</a></li>
+                <li class="daohang_items"><a href="events.html">活动专区</a></li>
+                <li class="daohang_items"><a href="user.html">用户中心</a></li>
+            </ul>
+            <div class="nav_auth"><a href="signin.html" class="btn_nav">登录</a></div>
+        </div>
+    </nav>
+
+    <!-- Box 1: Hero Banner (透视长廊背景) -->
+    <header class="jike_hero">
+        <div class="hero_overlay"></div> <!-- 对应 CSS 中的蒙层 -->
+        <div class="hero_content animate__animated animate__fadeIn">
+            <span class="en_text">JIKE</span>
+            <h1 class="elegant_title">数码极客外设 <span class="jike_seal">电子</span></h1>
+            <div class="elegant_line"></div>
+            <!-- <p>详细了解福利获取机制、成长体系及使用指南。</p> -->
+        </div>
+
+        <!-- 底部波浪线 (建议保留以衔接下方色块) -->
+        <div class="banner_wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C0,0,31.83,14.28,64,27.1,126.31,52,187.31,68,250.31,68c31.11,0,32.25-10.15,71.08-11.56Z"
+                    fill="#f9fbfa"></path>
+            </svg>
+        </div>
+    </header>
+
+<main class="channel_container">
+    <!-- 1. 顶部：热门大咖推荐 (Hero) -->
+    <section class="hero_recommend">
+        <div class="hero_card">
+            <div class="hero_badge">极客力荐</div>
+            <div class="hero_content">
+                <h2>全无线桌面生产力套装 (机械键盘 + 垂直鼠标)</h2>
+                <p class="hero_desc">“告别线缆束缚，这套外设陪我敲出了三十万行代码。愿它助你效率翻倍。”</p>
+                <div class="hero_price_row">
+                    <span class="price">¥299.00</span>
+                    <span class="old_price">原价 ¥680</span>
+                    <button class="btn_view">立即抢购</button>
+                </div>
+            </div>
+            <div class="hero_icon">
+                <i class="fas fa-desktop"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. 分类筛选 -->
+    <div class="filter_bar_wrapper">
+        <div class="filter_bar" id="filterBar">
+            <button class="filter_btn active" data-type="all">全部设备</button>
+            <button class="filter_btn" data-type="keyboard">键盘鼠标</button>
+            <button class="filter_btn" data-type="audio">音频耳机</button>
+            <button class="filter_btn" data-type="accessories">充电周边</button>
+        </div>
+    </div>
+
+    <!-- 3. 限时抢购专区 (Flash Sale) -->
+    <section class="flash_sale">
+        <div class="section_title">
+            <h3><i class="fas fa-bolt"></i> 极客续缘 <span id="timer">00:00:00</span></h3>
+        </div>
+        <div class="flash_wrapper">
+            <!-- 抢购单品 1 -->
+            <div class="flash_item">
+                <div class="flash_tag">仅一个</div>
+                <i class="fas fa-headset"></i>
+                <h4>降噪蓝牙耳机 旗舰级</h4>
+                <p class="flash_price">¥199.0 <del>¥899</del></p>
+            </div>
+            <!-- 抢购单品 2 -->
+            <div class="flash_item">
+                <div class="flash_tag">九成新</div>
+                <i class="fas fa-battery-full"></i>
+                <h4>20000mAh 快充充电宝</h4>
+                <p class="flash_price">¥39.0 <del>¥159</del></p>
+            </div>
+             <!-- 抢购单品 3 -->
+             <div class="flash_item">
+                <div class="flash_tag">绝版</div>
+                <i class="fas fa-lightbulb"></i>
+                <h4>护眼屏幕挂灯 (三色调光)</h4>
+                <p class="flash_price">¥45.0 <del>¥129</del></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. 底部动态：拾光流转 (Live Feed) -->
+    <section class="live_feed_section">
+        <div class="feed_box">
+            <i class="fas fa-history"></i>
+            <div class="feed_list" id="feedList">
+                <div class="feed_inner">
+                <p class="feed_item">● 5分钟前：[极客***] 的《青轴机械键盘》被 [研一***] 预约了</p>
+                <p class="feed_item">● 15分钟前：[学长***] 刚刚上架了《4K高清显示器》</p>
+                <p class="feed_item">● 40分钟前：[电子学院] 成功流转了一台绘图板</p>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 新增模块 5：进阶宝库 (Thematic Bundles) -->
+    <section class="special_collections">
+        <div class="section_header">
+            <h3><i class="fas fa-layer-group"></i> 极客宝库·硬件合辑</h3>
+        </div>
+        <div class="collection_grid">
+            <!-- 合辑 1 -->
+            <div class="collection_card" style="--card-color: #0d9488;">
+                <div class="col_icon"><i class="fas fa-gamepad"></i></div>
+                <div class="col_info">
+                    <h4>宿舍电竞大师大礼包</h4>
+                    <p>包含：RGB机械键盘、高DPI游戏鼠标、超大鼠标垫及电竞耳机。附赠：鼠标脚贴及清洁装。</p>
+                    <div class="col_footer">
+                        <span class="bundle_tag">共4件</span>
+                        <span class="bundle_price">¥245.00</span>
+                        <button class="btn_view">查看全集</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 合辑 2 -->
+            <div class="collection_card" style="--card-color: #f59e0b;">
+                <div class="col_icon"><i class="fas fa-mobile-alt"></i></div>
+                <div class="col_info">
+                    <h4>Vlog创作者拍摄包</h4>
+                    <p>包含：手机稳定器、补光灯、麦克风。学姐赠送：PR/剪映剪辑入门网课资源。</p>
+                    <div class="col_footer">
+                        <span class="bundle_tag">共3件</span>
+                        <span class="bundle_price">¥188.00</span>
+                        <button class="btn_view">查看全集</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 合辑 3 -->
+            <div class="collection_card" style="--card-color: #3b82f6;">
+                <div class="col_icon"><i class="fas fa-server"></i></div>
+                <div class="col_info">
+                    <h4>iPad/笔记本 生产力合集</h4>
+                    <p>包含：Type-C多功能扩展坞、蓝牙触控笔、支架。解决宿舍接口不足的烦恼。</p>
+                    <div class="col_footer">
+                        <span class="bundle_tag">共3件</span>
+                        <span class="bundle_price">¥99.00</span>
+                        <button class="btn_view">查看全集</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. 求书广场 (改为：求购专栏) -->
+    <section class="wishlist_section">
+        <div class="section_header_flex">
+            <div class="header_left">
+                <h3><i class="fas fa-search-plus"></i> 拾光寻迹 · 极客寻宝</h3>
+                <p>在找冷门配件？发布你的需求，让极客圈的学长学姐帮你回血。</p>
+            </div>
+            <button class="btn_post_wish"><i class="fas fa-pen-nib"></i> 发布求购愿望</button>
+        </div>
+
+        <div class="wish_wall">
+            <!-- 需求卡片 1 -->
+            <div class="wish_card">
+                <div class="wish_user">
+                    <i class="fas fa-user-astronaut"></i>
+                    <span>大三·王同学</span>
+                </div>
+                <h4>求购：24寸或27寸显示器</h4>
+                <p>最好带HDMI高清口，成色不限，能亮就行，写代码用。</p>
+                <div class="wish_footer">
+                    <span class="wish_time">1小时前发布</span>
+                    <span class="btn_helper">我有此物</span>
+                </div>
+            </div>
+
+            <!-- 需求卡片 2 -->
+            <div class="wish_card">
+                <div class="wish_user">
+                    <i class="fas fa-user-astronaut"></i>
+                    <span>大二·小陈</span>
+                </div>
+                <h4>寻找：苹果 Pencil 一代笔</h4>
+                <p>记笔记用，有无包装盒均可，希望价格在2xx左右。</p>
+                <div class="wish_footer">
+                    <span class="wish_time">3小时前发布</span>
+                    <span class="btn_helper">我有此物</span>
+                </div>
+            </div>
+
+            <!-- 需求卡片 3 -->
+            <div class="wish_card">
+                <div class="wish_user">
+                    <i class="fas fa-user-astronaut"></i>
+                    <span>大一·萌新</span>
+                </div>
+                <h4>重赏：机械键盘 轴体拉拔器</h4>
+                <p>急求一个拔轴器，想自己换轴，最好在西校区。</p>
+                <div class="wish_footer">
+                    <span class="wish_time">5小时前发布</span>
+                    <span class="btn_helper">我有此物</span>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+    <footer class="footer_area">
+        <div class="footer_wrapper">
+            <div class="bottom_bar">
+                <p>&copy; 2026 Campus Market | 校园毕业物品流转平台团队 | <a href="#">服务条款</a></p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="js/jike_detail.js"></script>
+</body>
+
+</html>

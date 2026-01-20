@@ -1,208 +1,537 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Student Marketplace</title>
+    <title>校园毕业物品流转平台</title>
     <script src="https://kit.fontawesome.com/0ad2b99521.js" crossorigin="anonymous" async></script>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="icon" href="https://img.icons8.com/color/40/000000/home.png" />
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1PLJCMDK6S"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href=" https://unpkg.com/boxicons@2.1.1/dist/boxicons.js" />
-    <!-- <script defer src="https://progressier.com/client/script.js?id=oAfWiCUiIs83YxdUKyoN"></script>  -->
-    <link rel="manifest" href="https://progressier.com/client/progressier.json?id=vk617cksNrra082RCzRQ"><script defer src="https://progressier.com/client/script.js?id=vk617cksNrra082RCzRQ"></script> 
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'G-1PLJCMDK6S'); <
-        script > navigator.serviceWorker.register("pwabuilder-adv-sw.js")
-    </script>
-    <script>
-        navigator.serviceWorker.register("pwabuilder-adv-sw.js")
-    </script>
-<script>navigator.serviceWorker.register("sw.js")</script> 
-<script>navigator.serviceWorker.register("sw.js")</script> 
-<script>navigator.serviceWorker.register("sw.js")</script> 
-<script>navigator.serviceWorker.register("sw.js")</script> 
-<script>navigator.serviceWorker.register("sw.js")</script> 
-    </script>
 </head>
 
 <body>
-    <nav class="nav">
-        <div class="nav__wrapper">
-            <ul class="nav__list">
-                <li class="nav__items"><a href="#menu">Who We Are</a></li>
-                <li class="nav__items"><a href="#reviews">Review</a></li>
-                <li class="nav__items"><a href="#contact">Contact</a></li>
+    <!-- 顶部导航栏，5 个栏目 -->
+    <nav class="daohang">
+        <div class="daohang_wrapper">
+            <!-- 中间菜单栏目 -->
+            <ul class="daohang_list">
+                <!-- 平台概况 -->
+                <li class="daohang_items dropdown">
+                    <a href="about.html">平台概况</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html#mission">使命理念</a></li>
+                        <li><a href="about.html#team">团队介绍</a></li>
+                        <li><a href="about.html#history">发展历程</a></li>
+                        <li><a href="about.html#rules">使用规则</a></li>
+                        <li><a href="about.html#faq">常见问题</a></li>
+                    </ul>
+                </li>
+
+                <!-- 商品分类 -->
+                <li class="daohang_items dropdown">
+                    <a href="categories.html">商品分类</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="categories.html#beauty">美妆护肤</a></li>
+                        <li><a href="categories.html#clothes">服装鞋包</a></li>
+                        <li><a href="categories.html#books">教材书籍</a></li>
+                        <li><a href="categories.html#electronics">电子产品</a></li>
+                        <li><a href="categories.html#furniture">宿舍家具</a></li>
+                    </ul>
+                </li>
+
+                <!-- 校园生活指南 -->
+                <li class="daohang_items dropdown">
+                    <a href="guide.html">流转锦囊</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="guide.html#news">闲置动态</a></li>
+                        <li><a href="guide.html#resources">学霸传承</a></li>
+                        <li><a href="guide.html#graduation">流转攻略</a></li>
+                        <li><a href="guide.html#welfare">流转福利</a></li>
+                        <li><a href="guide.html#social">互助广场</a></li>
+                    </ul>
+                </li>
+
+
+                <!-- 活动专区 -->
+                <li class="daohang_items dropdown">
+                    <a href="events.html">活动专区</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="events.html#flashsale">闪购活动</a></li>
+                        <li><a href="events.html#giveaway">赠品活动</a></li>
+                        <li><a href="events.html#exchange">物品交换</a></li>
+                        <li><a href="events.html#contest">学生挑战赛</a></li>
+                        <li><a href="events.html#promotion">活动公告</a></li>
+                    </ul>
+                </li>
+
+                <!-- 用户中心 -->
+                <li class="daohang_items dropdown">
+                    <a href="user.html">用户中心</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="user.html#profile">个人信息</a></li>
+                        <li><a href="user.html#orders">流转记录</a></li>
+                        <li><a href="user.html#favorites">我的收藏</a></li>
+                        <li><a href="user.html#reviews">我的评价</a></li>
+                        <li><a href="user.html#settings">账户安全</a></li>
+                    </ul>
+                </li>
             </ul>
+            <!-- 登录注册按钮容器 -->
+            <div class="nav_auth">
+                <a href="signin.html" class="btn_nav">登录</a>
+                <a href="signin.html?action=signup" class="btn_nav btn_nav_outline">注册</a>
+            </div>
         </div>
     </nav>
 
-    <header class="header">
-        <div class="header__text">
-            <h1 class="header__title u-margin-bottom-xlarge">
-                <span class="header__title--primary" id="home">The Student Marketplace</span>
-                <span class="header__title--secondary">Buy And Sell Goods And Services Only From Other Students</span>
+    <!-- Banner -->
+    <!-- <header class="header">
+        <div class="header_text">
+            <h1 class="header_title u-margin-bottom-xlarge">
+            
+                <span class="header_title--primary biaoti-dh" id="home">校园毕业物品流转平台</span>
+       
+                <span class="header_title--secondary wenzi-dh-1">毕业生二手物品交易首选平台</span>
                 <br>
-                <span class="header__title--secondary">At Fair Prices.</span>
+    
+                <span class="header_title--secondary wenzi-dh-2">安全、便捷、公平</span>
                 <br>
                 <br>
-                <span class="header__title--secondary">Built By A Student For Students</span>
+           
+                <span class="header_title--secondary bottom-dh">专为校园学生打造</span>
             </h1>
-
         </div>
-        <a href="signin.html" class="btn btn__primary">Login</a>
-        <br>
-        <a href="signin.html?action=signup" class="btn btn__primary">SignUp</a>
-    </header>
+    </header> -->
 
+    <!-- Banner -->
+    <header class="header">
+
+        <div class="deco-circle circle-1"></div>
+        <div class="deco-circle circle-2"></div>
+        <div class="header_text">
+            <h1 class="header_title">
+                <!-- 主标题 -->
+                <span class="header_title--primary biaoti-dh" id="home">校园毕业物品流转平台</span>
+
+                <!-- 副标题容器 -->
+                <div class="subtitle_box">
+                    <span class="header_title--secondary wenzi-dh-1">毕业生二手物品交易首选平台</span>
+                    <br>
+                    <span class="header_title--secondary wenzi-dh-2">安全、便捷、公平</span>
+                </div>
+
+                <!-- 底部强调文字 -->
+                <div class="bottom_box">
+                    <span class="bottom-dh">专为校园学生打造</span>
+                </div>
+            </h1>
+        </div>
+    </header>
     <main>
 
-        <section class="section-menu animate__animated animate__bounce" id="menu">
-            <div class="section__wrapper">
-                <h2 class="type__title">Why This I Made This</h2>
-                <div class="section u-margin-bottom-large">
+        <section class="campus_intro" id="menu">
+            <div class="container">
+                <div class="section_header">
+                    <h2 class="main_title">为什么选择校友集市</h2>
+                    <div class="title_line"></div>
+                    <p class="subtitle">专为毕业生打造的校内安全流转空间</p>
+                </div>
 
-                    <div class="section__card">
-                        <h3 class="section__title"><span class="special">Fair</span></h3>
-                        <p class="section__desc">Prices Are Fair And Affordable To Allow Students To Buy Products
-                            Without Breaking The Bank.</p>
-                        <h3 class="section__price">Safe And Reliable</h3>
+                <div class="card_grid">
+                    <!-- 卡片 1 -->
+                    <div class="feature_card animate__animated animate__fadeInUp">
+                        <div class="icon_box">
+                            <i class="fas fa-tag"></i> <!-- 建议引入FontAwesome或使用SVG -->
+                            <span class="dot"></span>
+                        </div>
+                        <h3 class="card_title">价格实惠</h3>
+                        <p class="describe">拒绝中间商赚差价。所有商品均为学长学姐直售，价格透明，支持当面验货。 </p>
+                        <div class="card_footer">
+                            <span class="badge">安全可靠</span>
+                        </div>
                     </div>
 
-
-                    <div class="section__card">
-                        <h3 class="section__title"><span class="special">Only For University Students</span></h3>
-                        <p class="section__desc">Only Students With A Valid Uni.AC.UK Email Are Allowed To Sign Up, This
-                            Is Fair Because It Deters
-                            Away Drop Shippers From Ruining Market Prices To Allow Students To Buy and Sell At A Fair
-                            Price. </p>
-                        <h3 class="section__price">Valid Email Required To Verify</h3>
+                    <!-- 卡片 2 -->
+                    <div class="feature_card animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+                        <div class="icon_box">
+                            <i class="fas fa-user-graduate"></i>
+                            <span class="dot"></span>
+                        </div>
+                        <h3 class="card_title">仅限校内</h3>
+                        <p class="describe">注册需通过学校邮箱后缀验证。确保交易双方身份真实，杜绝校外闲杂人员。 </p>
+                        <div class="card_footer">
+                            <span class="badge">实名认证</span>
+                        </div>
                     </div>
 
-
-                    <div class="section__card">
-                        <h3 class="section__title"><span class="special">Free</span></h3>
-                        <p class="section__desc">Keep All Revenue, Whilst You Study, The Site Will Be Supported By Ads
-                            And Membership Fee's Which Unlock More Features To Help You Sell Much Quickly And Around The
-                            UK.</p>
-                        <br>
-                        <h3 class="section__price">Membership Feature Coming Soon</h3>
+                    <!-- 卡片 3 -->
+                    <div class="feature_card animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
+                        <div class="icon_box">
+                            <i class="fas fa-rocket"></i>
+                            <span class="dot"></span>
+                        </div>
+                        <h3 class="card_title">极速发布</h3>
+                        <p class="describe">一键上传闲置物品，支持校园内定点交付。专属毕业季流量扶持，助你快速“清仓”。</p>
+                        <div class="card_footer">
+                            <span class="badge">会员功能内测中</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="reviews parallax animate__animated animate__fadeIn" id="reviews">
-            <h3 class="type__title u-margin-bottom-medium">Reviews</h3>
-            <h2 class="reviewt1 u-margin-bottom-small">What Other Students Have Said</h2>
-            <div class="slide-container">
-                <div class="slides">
-                    <div class="slide">
-                        <h2 class="testimonial">Fast, Free And Easy To Buy And Sell</h2>
-                        <p class="person">Student From Leicester</p>
+        <section class="hot_products" id="popular">
+            <div class="container">
+                <div class="section_header">
+                    <h2 class="main_title">热门交易分类</h2>
+                    <div class="title_line"></div>
+                    <p class="subtitle">毕业带不走的，让它在校内继续传递价值</p>
+                </div>
+
+                <div class="product_grid">
+                    <!-- 类别 1: 书籍 -->
+                    <div class="product_card category_blue animate__animated animate__zoomIn">
+                        <div class="card_content">
+                            <div class="category_tag">学霸必备</div>
+                            <h3 class="card_title">二手书籍</h3>
+                            <p class="describe">教材课本、考研资料、文学名著，低至1折起。</p>
+                            <div class="explore_btn">查看更多 →</div>
+                        </div>
+                        <div class="card_icon"><i class="fas fa-book"></i></div>
                     </div>
-                    <div class="slide">
-                        <h2 class="testimonial">Super Clean Design And Easy To Contact Buyer And Seller</h2>
-                        <p class="person">Student From Sussex</p>
+
+                    <!-- 类别 2: 家具 -->
+                    <div class="product_card category_green animate__animated animate__zoomIn"
+                        style="animation-delay: 0.1s;">
+                        <div class="card_content">
+                            <div class="category_tag">寝室神器</div>
+                            <h3 class="card_title">宿舍家具</h3>
+                            <p class="describe">人体工学椅、收纳架、折叠桌，即买即用无需组装。</p>
+                            <div class="explore_btn">查看更多 →</div>
+                        </div>
+                        <div class="card_icon"><i class="fas fa-couch"></i></div>
                     </div>
-                    <div class="slide">
-                        <h2 class="testimonial">I Like Student Marketplace More and More Each Day Because It Makes My
-                            Life A Lot Easier</h2>
-                        <p class="person">Student From BCU</p>
+
+                    <!-- 类别 3: 电子 -->
+                    <div class="product_card category_purple animate__animated animate__zoomIn"
+                        style="animation-delay: 0.2s;">
+                        <div class="card_content">
+                            <div class="category_tag">数码前沿</div>
+                            <h3 class="card_title">电子产品</h3>
+                            <p class="describe">二手显示器、机械键盘、平板支架，学生价真香。</p>
+                            <div class="explore_btn">查看更多 →</div>
+                        </div>
+                        <div class="card_icon"><i class="fas fa-laptop"></i></div>
+                    </div>
+
+                    <!-- 类别 4: 生活 -->
+                    <div class="product_card category_orange animate__animated animate__zoomIn"
+                        style="animation-delay: 0.3s;">
+                        <div class="card_content">
+                            <div class="category_tag">品质生活</div>
+                            <h3 class="card_title">生活用品</h3>
+                            <p class="describe">宿舍小锅、加湿器、全身镜，让新寝室更有温度。</p>
+                            <div class="explore_btn">查看更多 →</div>
+                        </div>
+                        <div class="card_icon"><i class="fas fa-tshirt"></i></div>
+                    </div>
+
+                    <!-- 类别 5: 运动 -->
+                    <div class="product_card category_teal animate__animated animate__zoomIn"
+                        style="animation-delay: 0.4s;">
+                        <div class="card_content">
+                            <div class="category_tag">活力校园</div>
+                            <h3 class="card_title">运动器材</h3>
+                            <p class="describe">哑铃、羽毛球拍、滑板，在这里开启运动新篇章。</p>
+                            <div class="explore_btn">查看更多 →</div>
+                        </div>
+                        <div class="card_icon"><i class="fas fa-basketball-ball"></i></div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Order Section Here -->
-        <section class="section-order" id="order">
-            <div class="section__wrapper">
-                <!-- Order Title -->
-                <h2 class="type__title u-margin-bottom-medium">Need To Contact Us?</h2>
-                <!-- Order Container -->
-                <div class="order__container">
-                    <!-- Order Card Open Hours -->
-                    <div class="time-box box">
-                        <h3 class="box__title">Opening Hours</h3>
-                        <p class="box__day">Monday - Friday</p>
-                        <p class="box__time">09.00 - 17.00 </p>
-                        <p class="box__day">Saturday - Sundays</p>
-                        <p class="box__time">12.00 - 17.00 </p>
-                    </div>
-                    <!-- Telephone -->
-                    <div class="box">
-                        <a href="mailto:#">
-                            <h3 class="box__title">Found a Bug?</h3>
-                            <i class="fas fa-bug fa-4x icon"></i>
-                            <p class="box__link">Email Us A Screenshot and Description Of The Bug, And I'll Attempt To
-                                Fix It ASAP.</p>
-                        </a>
+
+        <!-- 3. 最新发布 -->
+        <section class="new_release_section animate__animated animate__fadeIn" id="new">
+            <div class="content_container">
+                <!-- 标题部分 -->
+                <div class="header_box">
+                    <h2 class="title_text">最新发布</h2>
+                    <div class="title_underline"></div>
+                    <p class="description_text">学长学姐刚刚上传的宝贝，先到先得</p>
+                </div>
+
+                <!-- 商品展示列表 -->
+                <div class="goods_list">
+                    <!-- 商品 1 -->
+                    <div class="goods_item animate__animated animate__fadeInUp">
+                        <div class="new_tag">NEW</div>
+                        <!-- <div class="image_placeholder">
+                            <i class="fas fa-laptop"></i>
+                        </div> -->
+                        <img src="images/bijiben.jpg">
+                        <div class="info_area">
+                            <h3 class="goods_name">毕业季笔记本出售</h3>
+                            <div class="price_row">
+                                <span class="goods_price">¥ 2300</span>
+                                <span class="time_tag">3分钟前</span>
+                            </div>
+                        </div>
                     </div>
 
+                    <!-- 商品 2 -->
+                    <div class="goods_item animate__animated animate__fadeInUp" style="animation-delay: 0.1s;">
+                        <div class="new_tag">NEW</div>
+                        <!-- <div class="image_placeholder">
+                            <i class="fas fa-ice-cream"></i>
+                        </div> -->
+                        <img src="images/bingxiang.jpg">
+                        <div class="info_area">
+                            <h3 class="goods_name">宿舍小冰箱</h3>
+                            <div class="price_row">
+                                <span class="goods_price">¥ 150</span>
+                                <span class="time_tag">15分钟前</span>
+                            </div>
+                        </div>
+                    </div>
 
-                    <!-- WhatsApp -->
-                    <div class="box">
-                        <a href="https://wa.me/0000000000/">
-                            <h3 class="box__title">WhatsApp</h3>
-                            <i class="fab fa-whatsapp-square fa-4x icon"></i>
-                            <p class="box__link">+44 1234 5678</p>
-                        </a>
+                    <!-- 商品 3 -->
+                    <div class="goods_item animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+                        <!-- <div class="image_placeholder">
+                            <i class="fas fa-lightbulb"></i>
+                        </div> -->
+                        <img src="images/taideng.jpg">
+                        <div class="info_area">
+                            <h3 class="goods_name">二手台灯</h3>
+                            <div class="price_row">
+                                <span class="goods_price">¥ 15</span>
+                                <span class="time_tag">1小时前</span>
+                            </div>
+                        </div>
                     </div>
-                    <!-- Instagram DM -->
-                    <div class="box">
-                        <a href="mailto:Raheemshah2809@gmail.com">
-                            <h3 class="box__title">Email</h3>
-                            <i class="fa fa-envelope fa-4x icon"></i>
-                            <div class="box__link">Email Us</div>
-                        </a>
+
+                    <!-- 商品 4 -->
+                    <div class="goods_item animate__animated animate__fadeInUp" style="animation-delay: 0.3s;">
+                        <!-- <div class="image_placeholder">
+                            <i class="fas fa-shoe-prints"></i>
+                        </div> -->
+                        <img src="images/shoes.jpg">
+                        <div class="info_area">
+                            <h3 class="goods_name">九成新运动鞋</h3>
+                            <div class="price_row">
+                                <span class="goods_price">¥ 80</span>
+                                <span class="time_tag">2小时前</span>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- 商品 5 -->
+                    <div class="goods_item animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
+                        <!-- <div class="image_placeholder">
+                            <i class="fas fa-columns"></i>
+                        </div> -->
+                        <img src="images/shujia.jpg">
+                        <div class="info_area">
+                            <h3 class="goods_name">简易三层书架</h3>
+                            <div class="price_row">
+                                <span class="goods_price">¥ 20</span>
+                                <span class="time_tag">5小时前</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="reviews_section animate__animated animate__fadeIn" id="reviews">
+            <div class="container">
+                <div class="section_header_center">
+                    <h3 class="sub_title">听听学长学姐怎么说</h3>
+                    <h2 class="main_title">毕业生口碑</h2>
+                    <div class="title_line_center"></div>
+                </div>
+
+                <!-- 评价滚动容器 -->
+                <div class="review_track_container">
+                    <div class="review_track">
+                        <!-- 评价卡片 1 -->
+                        <div class="review_card">
+                            <div class="quote_icon"><i class="fas fa-quote-left"></i></div>
+                            <p class="testimonial">操作简单，毕业清仓神器！下午发布的电脑，晚上就交易成功了。</p>
+                            <div class="student_meta">
+                                <div class="avatar_circle bg_blue">李</div>
+                                <div class="info_text">
+                                    <span class="name">李同学</span>
+                                    <span class="school_tag">北京大学</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 评价卡片 2 -->
+                        <div class="review_card">
+                            <div class="quote_icon"><i class="fas fa-quote-left"></i></div>
+                            <p class="testimonial">交易安全可靠，省心放心。能在校内面交，完全不用担心被骗。</p>
+                            <div class="student_meta">
+                                <div class="avatar_circle bg_red">王</div>
+                                <div class="info_text">
+                                    <span class="name">王同学</span>
+                                    <span class="school_tag">清华大学</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 评价卡片 3 -->
+                        <div class="review_card">
+                            <div class="quote_icon"><i class="fas fa-quote-left"></i></div>
+                            <p class="testimonial">帮助我顺利处理了带不走的宿舍家具，比卖给收破烂的价格高多了。</p>
+                            <div class="student_meta">
+                                <div class="avatar_circle bg_gold">张</div>
+                                <div class="info_text">
+                                    <span class="name">张同学</span>
+                                    <span class="school_tag">复旦大学</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 评价卡片 4 -->
+                        <div class="review_card">
+                            <div class="quote_icon"><i class="fas fa-quote-left"></i></div>
+                            <p class="testimonial">价格合理透明，比闲鱼更适合校园交易，大家都是校友，沟通很方便。</p>
+                            <div class="student_meta">
+                                <div class="avatar_circle bg_green">赵</div>
+                                <div class="info_text">
+                                    <span class="name">赵同学</span>
+                                    <span class="school_tag">浙江大学</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 为了实现无缝滚动，复制一份卡片（或者在CSS中控制） -->
+                        <!-- 也可以根据需要再添加 1-2 个 -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. 联系我们 -->
+        <section class="contact_section animate__animated animate__fadeIn" id="order">
+            <div class="container_box">
+                <div class="header_group">
+                    <h2 class="title_main">联系与帮助</h2>
+                    <div class="title_bar"></div>
+                    <p class="title_sub">遇到问题？校友客服团队随时为你提供支持</p>
+                </div>
+
+                <div class="contact_grid">
+                    <!-- 办公时间 -->
+                    <div class="contact_card time_card animate__animated animate__fadeInUp">
+                        <div class="icon_wrap"><i class="fas fa-clock"></i></div>
+                        <h3 class="card_head">客服在线时间</h3>
+                        <div class="time_info">
+                            <p><span>周一 - 周五:</span> 09:00 - 17:00</p>
+                            <p><span>周六 - 周日:</span> 12:00 - 17:00</p>
+                        </div>
+                        <div class="status_tag">在线中</div>
+                    </div>
+
+                    <!-- 问题反馈 -->
+                    <a href="mailto:feedback@campus.edu.cn" class="contact_card animate__animated animate__fadeInUp"
+                        style="animation-delay: 0.1s;">
+                        <div class="icon_wrap"><i class="fas fa-comment-dots"></i></div>
+                        <h3 class="card_head">建议与反馈</h3>
+                        <p class="card_desc">发现Bug或功能建议？请随时联系我们处理。</p>
+                        <span class="action_link">发送邮件 →</span>
+                    </a>
+
+                    <!-- 微信联系 -->
+                    <div class="contact_card animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+                        <div class="icon_wrap"><i class="fab fa-weixin"></i></div>
+                        <h3 class="card_head">官方微信</h3>
+                        <p class="card_desc">添加校园助手微信号：<br><strong>Campus_Helper_01</strong></p>
+                        <span class="action_link">点击复制号</span>
+                    </div>
+
+                    <!-- 电子邮箱 -->
+                    <a href="mailto:support@campusmarket.cn" class="contact_card animate__animated animate__fadeInUp"
+                        style="animation-delay: 0.3s;">
+                        <div class="icon_wrap"><i class="fas fa-envelope-open-text"></i></div>
+                        <h3 class="card_head">官方邮箱</h3>
+                        <p class="card_desc">商务合作或大宗交易验证：<br>support@campusmarket.cn</p>
+                        <span class="action_link">立即联系</span>
+                    </a>
+
+                    <!-- 帮助中心 -->
+                    <a href="#menu" class="contact_card animate__animated animate__fadeInUp"
+                        style="animation-delay: 0.4s;">
+                        <div class="icon_wrap"><i class="fas fa-question-circle"></i></div>
+                        <h3 class="card_head">帮助中心</h3>
+                        <p class="card_desc">查看买卖流程、身份验证等常见问题指南。</p>
+                        <span class="action_link">查看指南</span>
+                    </a>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <!-- Footer Container -->
-        <div class="footer__container">
-            <div class="footer__logo">
+    <!-- 6. 页脚区域 -->
+    <footer class="footer_area animate__animated animate__fadeInUp">
+        <div class="footer_wrapper">
+            <div class="footer_main">
+                <!-- 品牌介绍 -->
+                <div class="footer_brand_box">
+                    <div class="footer_logo_text">校友集市 <span>Campus Market</span></div>
+                    <p class="footer_slogan">毕业不是终点，让学长学姐的美好记忆在校园里继续传递。</p>
+                    <div class="social_icons">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fas fa-share-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- 快捷链接 -->
+                <div class="footer_link_group">
+                    <h4 class="footer_title">快速跳转</h4>
+                    <ul>
+                        <li><a href="#menu">平台特色</a></li>
+                        <li><a href="#popular">热门商品</a></li>
+                        <li><a href="#new">最新发布</a></li>
+                        <li><a href="#reviews">校友口碑</a></li>
+                    </ul>
+                </div>
+
+                <!-- 平台保障 -->
+                <div class="footer_link_group">
+                    <h4 class="footer_title">平台保障</h4>
+                    <ul>
+                        <li><a href="#">学生实名认证</a></li>
+                        <li><a href="#">校园邮箱验证</a></li>
+                        <li><a href="#">面交安全指南</a></li>
+                        <li><a href="#">物品发布规范</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer__container--text">
-                <!-- Contact Area -->
-                <!-- <div class="contact" id="contact">
-                    <h3 class="contact__title">Open Source Code</h3>
-                    <a href="" target="blank"<p class="contact__adress">Github <i class="fa fa-github icon"></i></p></a>
-                    <br>
-                    <h3 class="contact__title">Email us at</h3>
-                    <a href="mailto:" class="contact__email">Add Email Here</a>
-                </div> -->
-                <!-- Copyright Area -->
-                <div class="copyright">
-                    <p class="copyright__details">This Site Was Made By Raheem</p>
-                    <p class="copyright__details"><span class="copy">&copy;2022</span> Raheem, All Right Reserved
-                    </p>
-                    <p class="copyright__details"><span class="copy">Version Number</span>
-                        1.2.0</p>
-                    <div class="copyright__links">
-                        <a href="#home">Contact Raheem</a>
+
+            <!-- 底部版权信息 -->
+            <div class="bottom_bar">
+                <div class="copyright_box">
+                    <p class="team_text">本网站由校园毕业物品流转平台团队制作</p>
+                    <div class="copy_info">
+                        <span>&copy; 2026 Campus Market</span>
+                        <span class="divider">|</span>
+                        <span>All Rights Reserved</span>
+                        <span class="divider">|</span>
+                        <span class="version_tag">版本号 v1.0.0</span>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-    <script>
-        navigator.serviceWorker.register("/pwabuilder-adv-sw.js")
-    </script>
+
+
     <script src="js/script.js" async></script>
 </body>
 

@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>课程资料库 - 学霸之路必备 | 校友集市</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/archive_detail.css">
+    <link rel="stylesheet" href="css/study_detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+</head>
+
+<body class="study_page">
+
+    <!-- 顶部导航栏 -->
+    <nav class="daohang">
+        <div class="daohang_wrapper">
+            <ul class="daohang_list">
+                <li class="daohang_items"><a href="index.html">首页</a></li>
+                <li class="daohang_items"><a href="about.html">平台概况</a></li>
+                <li class="daohang_items"><a href="categories.html">商品分类</a></li>
+                <li class="daohang_items active"><a href="guide.html">流转锦囊</a></li>
+                <li class="daohang_items"><a href="events.html">活动专区</a></li>
+                <li class="daohang_items"><a href="user.html">用户中心</a></li>
+            </ul>
+            <div class="nav_auth"><a href="signin.html" class="btn_nav">登录</a></div>
+        </div>
+    </nav>
+
+    <header class="study_hero">
+        <div class="hero_overlay"></div> <!-- 对应 CSS 中的蒙层 -->
+        <div class="hero_content animate__animated animate__fadeIn">
+            <span class="en_text">RESOURSE LIBIRARY</span>
+            <h1 class="elegant_title">课程资料库 <span class="study_seal">资源</span></h1>
+            <div class="elegant_line"></div>
+            <!-- <p>岁月如梭，足迹成卷；回首来时路，锦囊意正浓。</p> -->
+        </div>
+
+        <!-- 底部波浪线 (建议保留以衔接下方色块) -->
+        <div class="banner_wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C0,0,31.83,14.28,64,27.1,126.31,52,187.31,68,250.31,68c31.11,0,32.25-10.15,71.08-11.56Z"
+                    fill="#f9fbfa"></path>
+            </svg>
+        </div>
+    </header>
+
+
+    <main class="container">
+        <!-- ===== 盒子1：学科分类导航网格 ===== -->
+        <section class="content-box category-nav-box" id="categories" data-aos="fade-up">
+            <div class="box-header">
+                <h2><i class="fas fa-sitemap"></i> 学科分类导航</h2>
+                <p class="box-subtitle">按学院、专业、课程类型快速查找所需资料</p>
+            </div>
+
+            <div class="category-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="college">按学院</button>
+                    <button class="tab-btn" data-tab="course-type">按课程类型</button>
+                    <button class="tab-btn" data-tab="hot-tags">热门标签</button>
+                </div>
+
+                <div class="tab-content active" id="tab-college">
+                    <div class="college-grid">
+                        <div class="college-card">
+                            <div class="college-icon cs">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <h3>计算机学院</h3>
+                            <p class="course-count">428门课程</p>
+                            <div class="popular-courses">
+                                <span class="course-tag">数据结构</span>
+                                <span class="course-tag">算法设计</span>
+                                <span class="course-tag">数据库系统</span>
+                                <span class="course-tag">人工智能</span>
+                            </div>
+                            <button class="view-college-btn">
+                                查看全部 <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+
+                        <div class="college-card">
+                            <div class="college-icon business">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3>经管学院</h3>
+                            <p class="course-count">356门课程</p>
+                            <div class="popular-courses">
+                                <span class="course-tag">微观经济学</span>
+                                <span class="course-tag">财务管理</span>
+                                <span class="course-tag">市场营销</span>
+                                <span class="course-tag">管理学原理</span>
+                            </div>
+                            <button class="view-college-btn">
+                                查看全部 <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+
+                        <div class="college-card">
+                            <div class="college-icon language">
+                                <i class="fas fa-language"></i>
+                            </div>
+                            <h3>外国语学院</h3>
+                            <p class="course-count">289门课程</p>
+                            <div class="popular-courses">
+                                <span class="course-tag">大学英语</span>
+                                <span class="course-tag">日语入门</span>
+                                <span class="course-tag">法语语法</span>
+                                <span class="course-tag">翻译实践</span>
+                            </div>
+                            <button class="view-college-btn">
+                                查看全部 <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+
+                        <div class="college-card">
+                            <div class="college-icon law">
+                                <i class="fas fa-balance-scale"></i>
+                            </div>
+                            <h3>法学院</h3>
+                            <p class="course-count">312门课程</p>
+                            <div class="popular-courses">
+                                <span class="course-tag">宪法学</span>
+                                <span class="course-tag">民法总论</span>
+                                <span class="course-tag">刑法学</span>
+                                <span class="course-tag">国际法</span>
+                            </div>
+                            <button class="view-college-btn">
+                                查看全部 <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+
+                        <div class="college-card">
+                            <div class="college-icon science">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <h3>理学院</h3>
+                            <p class="course-count">401门课程</p>
+                            <div class="popular-courses">
+                                <span class="course-tag">高等数学</span>
+                                <span class="course-tag">大学物理</span>
+                                <span class="course-tag">线性代数</span>
+                                <span class="course-tag">概率统计</span>
+                            </div>
+                            <button class="view-college-btn">
+                                查看全部 <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+
+                        <div class="college-card">
+                            <div class="college-icon engineering">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <h3>工学院</h3>
+                            <p class="course-count">447门课程</p>
+                            <div class="popular-courses">
+                                <span class="course-tag">机械制图</span>
+                                <span class="course-tag">电路原理</span>
+                                <span class="course-tag">材料力学</span>
+                                <span class="course-tag">自动控制</span>
+                            </div>
+                            <button class="view-college-btn">
+                                查看全部 <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+
+                        <div class="college-card">
+                            <div class="college-icon medical">
+                                <i class="fas fa-stethoscope"></i>
+                            </div>
+                            <h3>医学院</h3>
+                            <p class="course-count">398门课程</p>
+                            <div class="popular-courses">
+                                <span class="course-tag">人体解剖学</span>
+                                <span class="course-tag">生理学</span>
+                                <span class="course-tag">药理学</span>
+                                <span class="course-tag">病理学</span>
+                            </div>
+                            <button class="view-college-btn">
+                                查看全部 <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+
+                        <div class="college-card">
+                            <div class="college-icon arts">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <h3>艺术学院</h3>
+                            <p class="course-count">217门课程</p>
+                            <div class="popular-courses">
+                                <span class="course-tag">设计基础</span>
+                                <span class="course-tag">素描</span>
+                                <span class="course-tag">艺术史</span>
+                                <span class="course-tag">色彩构成</span>
+                            </div>
+                            <button class="view-college-btn">
+                                查看全部 <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="tab-course-type">
+                    <div class="course-type-grid">
+                        <div class="type-card">
+                            <div class="type-icon required">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <h4>公共必修课</h4>
+                            <p class="type-count">1,245份资料</p>
+                            <p class="type-desc">全校通识课程，涵盖政治、英语、体育等</p>
+                        </div>
+
+                        <div class="type-card">
+                            <div class="type-icon core">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h4>专业核心课</h4>
+                            <p class="type-count">6,892份资料</p>
+                            <p class="type-desc">各专业核心课程，深度专业知识</p>
+                        </div>
+
+                        <div class="type-card">
+                            <div class="type-icon elective">
+                                <i class="fas fa-list-alt"></i>
+                            </div>
+                            <h4>选修课</h4>
+                            <p class="type-count">3,127份资料</p>
+                            <p class="type-desc">兴趣拓展课程，跨专业选修</p>
+                        </div>
+
+                        <div class="type-card">
+                            <div class="type-icon lab">
+                                <i class="fas fa-vial"></i>
+                            </div>
+                            <h4>实验课</h4>
+                            <p class="type-count">1,592份资料</p>
+                            <p class="type-desc">实验报告、操作指南、数据记录</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="tab-hot-tags">
+                    <div class="tags-cloud">
+                        <span class="tag-lg" data-weight="9">高等数学</span>
+                        <span class="tag-lg" data-weight="8">大学英语</span>
+                        <span class="tag-lg" data-weight="7">线性代数</span>
+                        <span class="tag-md" data-weight="6">概率统计</span>
+                        <span class="tag-md" data-weight="6">大学物理</span>
+                        <span class="tag-sm" data-weight="5">数据结构</span>
+                        <span class="tag-sm" data-weight="5">算法设计</span>
+                        <span class="tag-lg" data-weight="8">考研数学</span>
+                        <span class="tag-md" data-weight="6">考研英语</span>
+                        <span class="tag-sm" data-weight="5">计算机二级</span>
+                        <span class="tag-sm" data-weight="5">英语四级</span>
+                        <span class="tag-sm" data-weight="5">英语六级</span>
+                        <span class="tag-md" data-weight="6">微观经济学</span>
+                        <span class="tag-md" data-weight="6">宏观经济学</span>
+                        <span class="tag-sm" data-weight="5">财务管理</span>
+                        <span class="tag-sm" data-weight="5">会计学</span>
+                        <span class="tag-sm" data-weight="5">电路分析</span>
+                        <span class="tag-sm" data-weight="5">模拟电路</span>
+                        <span class="tag-sm" data-weight="5">数字电路</span>
+                        <span class="tag-md" data-weight="6">马克思主义原理</span>
+                        <span class="tag-sm" data-weight="5">毛泽东思想</span>
+                        <span class="tag-sm" data-weight="5">中国特色社会主义</span>
+                        <span class="tag-lg" data-weight="7">实验报告</span>
+                        <span class="tag-md" data-weight="6">课程设计</span>
+                        <span class="tag-md" data-weight="6">毕业设计</span>
+                        <span class="tag-sm" data-weight="5">编程实践</span>
+                        <span class="tag-sm" data-weight="5">项目源码</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== 盒子2：学霸笔记展示墙 ===== -->
+        <section class="content-box notes-showcase-box" id="notes" data-aos="fade-up">
+            <div class="box-header">
+                <h2><i class="fas fa-star"></i> 学霸笔记展示墙</h2>
+                <p class="box-subtitle">高分学霸的精华笔记，学习方法的精髓所在</p>
+            </div>
+
+            <div class="notes-filter">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">全部笔记</button>
+                    <button class="filter-btn" data-filter="handwritten">手写笔记</button>
+                    <button class="filter-btn" data-filter="digital">电子笔记</button>
+                    <button class="filter-btn" data-filter="mindmap">思维导图</button>
+                    <button class="filter-btn" data-filter="summary">知识总结</button>
+                </div>
+
+                <div class="sort-options">
+                    <select class="sort-select">
+                        <option value="popular">按人气排序</option>
+                        <option value="downloads">按下载量排序</option>
+                        <option value="recent">按最近更新</option>
+                        <option value="rating">按评分排序</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="notes-grid">
+                <div class="note-card" data-category="handwritten" data-rating="4.8">
+                    <div class="note-preview math-bg">
+                        <div class="note-badge">
+                            <i class="fas fa-crown"></i>
+                            学霸精选
+                        </div>
+                        <div class="note-stats">
+                            <span><i class="fas fa-download"></i> 1,248</span>
+                            <span><i class="fas fa-heart"></i> 568</span>
+                        </div>
+                    </div>
+                    <div class="note-info">
+                        <div class="note-header">
+                            <h3>高等数学（上）精华笔记</h3>
+                            <div class="note-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>4.8</span>
+                            </div>
+                        </div>
+                        <p class="note-desc">涵盖极限、导数、积分等核心概念，手写工整，重点突出</p>
+                        <div class="note-meta">
+                            <div class="note-author">
+                                <div class="author-avatar">王</div>
+                                <div class="author-info">
+                                    <h5>王学长 · 数学系</h5>
+                                    <p>高数满分，连续三年国奖</p>
+                                </div>
+                            </div>
+                            <div class="note-specs">
+                                <span><i class="fas fa-file-pdf"></i> PDF · 48页</span>
+                                <span><i class="fas fa-calendar"></i> 2025秋</span>
+                            </div>
+                        </div>
+                        <div class="note-actions">
+                            <button class="btn-preview-note">
+                                <i class="fas fa-eye"></i>
+                                预览
+                            </button>
+                            <button class="btn-download-note">
+                                <i class="fas fa-download"></i>
+                                下载 (5积分)
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="note-card" data-category="digital" data-rating="4.6">
+                    <div class="note-preview english-bg">
+                        <div class="note-badge">
+                            <i class="fas fa-fire"></i>
+                            热门下载
+                        </div>
+                        <div class="note-stats">
+                            <span><i class="fas fa-download"></i> 2,156</span>
+                            <span><i class="fas fa-heart"></i> 892</span>
+                        </div>
+                    </div>
+                    <div class="note-info">
+                        <div class="note-header">
+                            <h3>大学英语四级核心词汇</h3>
+                            <div class="note-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>4.6</span>
+                            </div>
+                        </div>
+                        <p class="note-desc">2000高频词汇+例句+记忆技巧，电子表格可筛选打印</p>
+                        <div class="note-meta">
+                            <div class="note-author">
+                                <div class="author-avatar">李</div>
+                                <div class="author-info">
+                                    <h5>李学姐 · 外国语学院</h5>
+                                    <p>四级680分，六级650分</p>
+                                </div>
+                            </div>
+                            <div class="note-specs">
+                                <span><i class="fas fa-file-excel"></i> Excel · 55页</span>
+                                <span><i class="fas fa-calendar"></i> 2026春</span>
+                            </div>
+                        </div>
+                        <div class="note-actions">
+                            <button class="btn-preview-note">
+                                <i class="fas fa-eye"></i>
+                                预览
+                            </button>
+                            <button class="btn-download-note">
+                                <i class="fas fa-download"></i>
+                                下载 (3积分)
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="note-card" data-category="mindmap" data-rating="4.9">
+                    <div class="note-preview cs-bg">
+                        <div class="note-badge">
+                            <i class="fas fa-lightbulb"></i>
+                            创新思维
+                        </div>
+                        <div class="note-stats">
+                            <span><i class="fas fa-download"></i> 1,874</span>
+                            <span><i class="fas fa-heart"></i> 745</span>
+                        </div>
+                    </div>
+                    <div class="note-info">
+                        <div class="note-header">
+                            <h3>数据结构与算法思维导图</h3>
+                            <div class="note-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>4.9</span>
+                            </div>
+                        </div>
+                        <p class="note-desc">完整知识体系，XMind源文件，可编辑修改</p>
+                        <div class="note-meta">
+                            <div class="note-author">
+                                <div class="author-avatar">张</div>
+                                <div class="author-info">
+                                    <h5>张学长 · 计算机系</h5>
+                                    <p>ACM竞赛金牌，保研清华</p>
+                                </div>
+                            </div>
+                            <div class="note-specs">
+                                <span><i class="fas fa-file-alt"></i> XMind · 12图</span>
+                                <span><i class="fas fa-calendar"></i> 2025秋</span>
+                            </div>
+                        </div>
+                        <div class="note-actions">
+                            <button class="btn-preview-note">
+                                <i class="fas fa-eye"></i>
+                                预览
+                            </button>
+                            <button class="btn-download-note">
+                                <i class="fas fa-download"></i>
+                                下载 (8积分)
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="note-card" data-category="summary" data-rating="4.7">
+                    <div class="note-preview physics-bg">
+                        <div class="note-badge">
+                            <i class="fas fa-award"></i>
+                            精品总结
+                        </div>
+                        <div class="note-stats">
+                            <span><i class="fas fa-download"></i> 987</span>
+                            <span><i class="fas fa-heart"></i> 432</span>
+                        </div>
+                    </div>
+                    <div class="note-info">
+                        <div class="note-header">
+                            <h3>大学物理公式定理大全</h3>
+                            <div class="note-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>4.7</span>
+                            </div>
+                        </div>
+                        <p class="note-desc">力学、电磁学、光学核心公式+推导+例题</p>
+                        <div class="note-meta">
+                            <div class="note-author">
+                                <div class="author-avatar">陈</div>
+                                <div class="author-info">
+                                    <h5>陈学姐 · 物理系</h5>
+                                    <p>物理竞赛省一等奖</p>
+                                </div>
+                            </div>
+                            <div class="note-specs">
+                                <span><i class="fas fa-file-word"></i> Word · 36页</span>
+                                <span><i class="fas fa-calendar"></i> 2026春</span>
+                            </div>
+                        </div>
+                        <div class="note-actions">
+                            <button class="btn-preview-note">
+                                <i class="fas fa-eye"></i>
+                                预览
+                            </button>
+                            <button class="btn-download-note">
+                                <i class="fas fa-download"></i>
+                                下载 (4积分)
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="notes-toplist">
+                <h3 class="toplist-title">热门笔记排行榜</h3>
+                <div class="toplist-items">
+                    <div class="toplist-item">
+                        <div class="rank">1</div>
+                        <div class="item-content">
+                            <h4>高等数学（上）期末复习宝典</h4>
+                            <div class="item-meta">
+                                <span><i class="fas fa-download"></i> 3,245次下载</span>
+                                <span><i class="fas fa-user"></i> 王学长</span>
+                            </div>
+                        </div>
+                        <div class="item-rating">4.9</div>
+                    </div>
+
+                    <div class="toplist-item">
+                        <div class="rank">2</div>
+                        <div class="item-content">
+                            <h4>英语四级全套备考资料</h4>
+                            <div class="item-meta">
+                                <span><i class="fas fa-download"></i> 2,987次下载</span>
+                                <span><i class="fas fa-user"></i> 李学姐</span>
+                            </div>
+                        </div>
+                        <div class="item-rating">4.8</div>
+                    </div>
+
+                    <div class="toplist-item">
+                        <div class="rank">3</div>
+                        <div class="item-content">
+                            <h4>线性代数知识点梳理</h4>
+                            <div class="item-meta">
+                                <span><i class="fas fa-download"></i> 2,543次下载</span>
+                                <span><i class="fas fa-user"></i> 刘学长</span>
+                            </div>
+                        </div>
+                        <div class="item-rating">4.7</div>
+                    </div>
+
+                    <div class="toplist-item">
+                        <div class="rank">4</div>
+                        <div class="item-content">
+                            <h4>数据结构代码示例集</h4>
+                            <div class="item-meta">
+                                <span><i class="fas fa-download"></i> 2,321次下载</span>
+                                <span><i class="fas fa-user"></i> 张学长</span>
+                            </div>
+                        </div>
+                        <div class="item-rating">4.9</div>
+                    </div>
+
+                    <div class="toplist-item">
+                        <div class="rank">5</div>
+                        <div class="item-content">
+                            <h4>概率统计公式手册</h4>
+                            <div class="item-meta">
+                                <span><i class="fas fa-download"></i> 2,156次下载</span>
+                                <span><i class="fas fa-user"></i> 赵学姐</span>
+                            </div>
+                        </div>
+                        <div class="item-rating">4.6</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== 盒子3：课件与资料时间线 ===== -->
+        <section class="content-box timeline-box" id="timeline" data-aos="fade-up">
+            <div class="box-header">
+                <h2><i class="fas fa-history"></i> 课件与资料时间线</h2>
+                <p class="box-subtitle">按学期浏览，追踪课程资料更新轨迹</p>
+            </div>
+
+            <div class="timeline-container">
+                <div class="timeline-nav">
+                    <button class="timeline-nav-btn active" data-semester="2026-spring">2026春季</button>
+                    <button class="timeline-nav-btn" data-semester="2025-autumn">2025秋季</button>
+                    <button class="timeline-nav-btn" data-semester="2025-spring">2025春季</button>
+                    <button class="timeline-nav-btn" data-semester="2024-autumn">2024秋季</button>
+                    <button class="timeline-nav-btn" data-semester="2024-spring">2024春季</button>
+                </div>
+
+                <div class="timeline-content active" id="timeline-2026-spring">
+                    <div class="semester-header">
+                        <h3>2026年春季学期</h3>
+                        <p class="semester-stats">本学期已有 <strong>2,348</strong> 份资料上传，<strong>328</strong> 位教师参与</p>
+                    </div>
+
+                    <div class="weekly-updates">
+                        <div class="week-card current">
+                            <div class="week-header">
+                                <h3>第12周 (5.6-5.12)</h3>
+                                <span class="week-badge">本周更新</span>
+                            </div>
+                            <div class="week-updates">
+                                <div class="update-item">
+                                    <div class="update-icon">
+                                        <i class="fas fa-file-powerpoint"></i>
+                                    </div>
+                                    <div class="update-content">
+                                        <h5>《人工智能》第8章课件</h5>
+                                        <p class="update-meta">王教授 · 计算机学院 · 2小时前</p>
+                                        <p class="update-desc">深度学习基础：神经网络与反向传播算法</p>
+                                    </div>
+                                    <button class="btn-download-update">
+                                        <i class="fas fa-download"></i>
+                                    </button>
+                                </div>
+
+                                <div class="update-item">
+                                    <div class="update-icon">
+                                        <i class="fas fa-file-pdf"></i>
+                                    </div>
+                                    <div class="update-content">
+                                        <h5>《微观经济学》习题解析</h5>
+                                        <p class="update-meta">李副教授 · 经管学院 · 5小时前</p>
+                                        <p class="update-desc">第4-6章课后习题详细解答与扩展思考</p>
+                                    </div>
+                                    <button class="btn-download-update">
+                                        <i class="fas fa-download"></i>
+                                    </button>
+                                </div>
+
+                                <div class="update-item">
+                                    <div class="update-icon">
+                                        <i class="fas fa-file-word"></i>
+                                    </div>
+                                    <div class="update-content">
+                                        <h5>《大学英语(四)》期末复习指南</h5>
+                                        <p class="update-meta">张讲师 · 外国语学院 · 昨天</p>
+                                        <p class="update-desc">考试范围、重点词汇、作文模板、听力技巧</p>
+                                    </div>
+                                    <button class="btn-download-update">
+                                        <i class="fas fa-download"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h3>第11周 (4.29-5.5)</h3>
+                            </div>
+                            <div class="week-stats">
+                                <span class="stat"><i class="fas fa-file"></i> 86份资料</span>
+                                <span class="stat"><i class="fas fa-download"></i> 3,245次下载</span>
+                                <span class="stat"><i class="fas fa-users"></i> 32位教师更新</span>
+                            </div>
+                        </div>
+
+                        <div class="week-card">
+                            <div class="week-header">
+                                <h3>第10周 (4.22-4.28)</h3>
+                            </div>
+                            <div class="week-stats">
+                                <span class="stat"><i class="fas fa-file"></i> 92份资料</span>
+                                <span class="stat"><i class="fas fa-download"></i> 3,587次下载</span>
+                                <span class="stat"><i class="fas fa-users"></i> 28位教师更新</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="teacher-highlights">
+                        <h3>教师专区亮点</h3>
+                        <div class="teacher-cards">
+                            <div class="teacher-card">
+                                <div class="teacher-avatar">王</div>
+                                <div class="teacher-info">
+                                    <h5>王教授</h5>
+                                    <p class="teacher-department">计算机学院</p>
+                                    <p class="teacher-course">《人工智能》《机器学习》</p>
+                                </div>
+                                <div class="teacher-stats">
+                                    <span class="stat">42份课件</span>
+                                    <span class="stat">8,542次下载</span>
+                                </div>
+                            </div>
+
+                            <div class="teacher-card">
+                                <div class="teacher-avatar">李</div>
+                                <div class="teacher-info">
+                                    <h5>李副教授</h5>
+                                    <p class="teacher-department">经管学院</p>
+                                    <p class="teacher-course">《微观经济学》《宏观经济学》</p>
+                                </div>
+                                <div class="teacher-stats">
+                                    <span class="stat">38份资料</span>
+                                    <span class="stat">7,231次下载</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== 盒子4：智能搜索与筛选 ===== -->
+        <section class="content-box search-box" id="search" data-aos="fade-up">
+            <div class="box-header">
+                <h2><i class="fas fa-search"></i> 智能搜索与筛选</h2>
+                <p class="box-subtitle">精准定位您需要的课程资料</p>
+            </div>
+
+            <div class="search-container">
+                <div class="search-bar">
+                    <div class="search-input-group">
+                        <i class="fas fa-search"></i>
+                        <input type="text" class="search-input" placeholder="搜索课程、教师、关键词...">
+                        <button class="search-btn">搜索</button>
+                    </div>
+                    <div class="search-options">
+                        <button class="advanced-search-btn">
+                            <i class="fas fa-sliders-h"></i>
+                            高级筛选
+                        </button>
+                    </div>
+                </div>
+
+                <div class="advanced-filters">
+                    <div class="filter-group">
+                        <label for="course-name"><i class="fas fa-book"></i> 课程名称</label>
+                        <input type="text" id="course-name" placeholder="输入完整或部分课程名">
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="teacher-name"><i class="fas fa-chalkboard-teacher"></i> 教师姓名</label>
+                        <input type="text" id="teacher-name" placeholder="输入教师姓名">
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="college-select"><i class="fas fa-university"></i> 学院</label>
+                        <select id="college-select">
+                            <option value="">全部学院</option>
+                            <option value="cs">计算机学院</option>
+                            <option value="business">经管学院</option>
+                            <option value="language">外国语学院</option>
+                            <option value="law">法学院</option>
+                            <option value="science">理学院</option>
+                            <option value="engineering">工学院</option>
+                            <option value="medical">医学院</option>
+                            <option value="arts">艺术学院</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="file-type"><i class="fas fa-file"></i> 文件类型</label>
+                        <select id="file-type">
+                            <option value="">全部类型</option>
+                            <option value="pdf">PDF文档</option>
+                            <option value="ppt">PPT课件</option>
+                            <option value="word">Word文档</option>
+                            <option value="excel">Excel表格</option>
+                            <option value="image">图片文件</option>
+                            <option value="video">视频资料</option>
+                            <option value="code">代码文件</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="semester"><i class="fas fa-calendar"></i> 学期</label>
+                        <select id="semester">
+                            <option value="">全部学期</option>
+                            <option value="2026-spring">2026春季</option>
+                            <option value="2025-autumn">2025秋季</option>
+                            <option value="2025-spring">2025春季</option>
+                            <option value="2024-autumn">2024秋季</option>
+                            <option value="2024-spring">2024春季</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="sort-by"><i class="fas fa-sort"></i> 排序方式</label>
+                        <select id="sort-by">
+                            <option value="relevance">相关性</option>
+                            <option value="downloads">下载量</option>
+                            <option value="recent">最新上传</option>
+                            <option value="rating">评分最高</option>
+                            <option value="name">名称排序</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="search-results">
+                    <h3 class="results-title">为您推荐</h3>
+                    <div class="recommendation-cards">
+                        <div class="recommendation-card">
+                            <div class="recommendation-badge">猜你喜欢</div>
+                            <h4>《数据结构》实验指导书</h4>
+                            <p class="recommendation-desc">包含所有实验的详细步骤、代码示例和测试数据</p>
+                            <div class="recommendation-meta">
+                                <span><i class="fas fa-user-graduate"></i> 张教授</span>
+                                <span><i class="fas fa-download"></i> 2,148次下载</span>
+                            </div>
+                            <button class="btn-view-recommendation">查看详情</button>
+                        </div>
+
+                        <div class="recommendation-card">
+                            <div class="recommendation-badge">热门搜索</div>
+                            <h4>高等数学期末试题集</h4>
+                            <p class="recommendation-desc">近5年期末试卷+详细解答，附考点分析</p>
+                            <div class="recommendation-meta">
+                                <span><i class="fas fa-user-graduate"></i> 数学教研室</span>
+                                <span><i class="fas fa-download"></i> 3,587次下载</span>
+                            </div>
+                            <button class="btn-view-recommendation">查看详情</button>
+                        </div>
+
+                        <div class="recommendation-card">
+                            <div class="recommendation-badge">与你专业相关</div>
+                            <h4>计算机组成原理课件</h4>
+                            <p class="recommendation-desc">完整课件+习题解答+实验指导</p>
+                            <div class="recommendation-meta">
+                                <span><i class="fas fa-user-graduate"></i> 刘教授</span>
+                                <span><i class="fas fa-download"></i> 1,876次下载</span>
+                            </div>
+                            <button class="btn-view-recommendation">查看详情</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="search-history">
+                    <h4>搜索历史</h4>
+                    <div class="history-tags">
+                        <span class="history-tag">高等数学</span>
+                        <span class="history-tag">英语四级</span>
+                        <span class="history-tag">数据结构</span>
+                        <span class="history-tag">线性代数</span>
+                        <span class="history-tag">王教授</span>
+                        <span class="history-tag">实验报告</span>
+                    </div>
+                </div>
+
+                <div class="popular-searches">
+                    <h4>热门搜索</h4>
+                    <div class="popular-tags">
+                        <span class="popular-tag">
+                            期末复习资料
+                            <span class="search-count">8,245次</span>
+                        </span>
+                        <span class="popular-tag">
+                            考研数学
+                            <span class="search-count">6,872次</span>
+                        </span>
+                        <span class="popular-tag">
+                            英语六级
+                            <span class="search-count">5,943次</span>
+                        </span>
+                        <span class="popular-tag">
+                            课程设计
+                            <span class="search-count">4,568次</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== 盒子5：学习工具与社区互动 ===== -->
+        <section class="content-box tools-box" id="tools" data-aos="fade-up">
+            <div class="box-header">
+                <h2><i class="fas fa-tools"></i> 学习工具与社区互动</h2>
+                <p class="box-subtitle">辅助学习，交流经验，共同进步</p>
+            </div>
+
+            <div class="tools-container">
+                <div class="tools-section">
+                    <h3 class="section-title">在线学习工具</h3>
+                    <div class="tools-grid">
+                        <div class="tool-card">
+                            <div class="tool-icon preview">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="tool-content">
+                                <h4>在线文档预览</h4>
+                                <p>支持PDF、PPT、Word在线预览，无需下载</p>
+                                <div class="tool-features">
+                                    <span><i class="fas fa-check"></i> 缩放控制</span>
+                                    <span><i class="fas fa-check"></i> 全文搜索</span>
+                                    <span><i class="fas fa-check"></i> 目录导航</span>
+                                </div>
+                            </div>
+                            <button class="btn-use-tool">立即使用</button>
+                        </div>
+
+                        <div class="tool-card">
+                            <div class="tool-icon editor">
+                                <i class="fas fa-edit"></i>
+                            </div>
+                            <div class="tool-content">
+                                <h4>在线笔记编辑器</h4>
+                                <p>Markdown编辑器，支持代码高亮、数学公式</p>
+                                <div class="tool-features">
+                                    <span><i class="fas fa-check"></i> 实时保存</span>
+                                    <span><i class="fas fa-check"></i> 多模板</span>
+                                    <span><i class="fas fa-check"></i> 导出PDF</span>
+                                </div>
+                            </div>
+                            <button class="btn-use-tool">立即使用</button>
+                        </div>
+
+                        <div class="tool-card">
+                            <div class="tool-icon mindmap">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                            <div class="tool-content">
+                                <h4>思维导图工具</h4>
+                                <p>在线制作知识结构图，支持拖拽、样式调整</p>
+                                <div class="tool-features">
+                                    <span><i class="fas fa-check"></i> 节点拖拽</span>
+                                    <span><i class="fas fa-check"></i> 多种主题</span>
+                                    <span><i class="fas fa-check"></i> 导出图片</span>
+                                </div>
+                            </div>
+                            <button class="btn-use-tool">立即使用</button>
+                        </div>
+
+                        <div class="tool-card">
+                            <div class="tool-icon flashcards">
+                                <i class="fas fa-layer-group"></i>
+                            </div>
+                            <div class="tool-content">
+                                <h4>闪卡记忆工具</h4>
+                                <p>制作记忆卡片，支持艾宾浩斯复习计划</p>
+                                <div class="tool-features">
+                                    <span><i class="fas fa-check"></i> 自动排期</span>
+                                    <span><i class="fas fa-check"></i> 进度追踪</span>
+                                    <span><i class="fas fa-check"></i> 共享卡组</span>
+                                </div>
+                            </div>
+                            <button class="btn-use-tool">立即使用</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="community-section">
+                    <h3 class="section-title">学习社区互动</h3>
+                    <div class="community-tabs">
+                        <div class="community-tab-buttons">
+                            <button class="community-tab-btn active" data-tab="qna">问答社区</button>
+                            <button class="community-tab-btn" data-tab="bounty">资料悬赏</button>
+                            <button class="community-tab-btn" data-tab="study-group">学习小组</button>
+                        </div>
+
+                        <div class="community-tab-content active" id="tab-qna">
+                            <div class="qna-list">
+                                <div class="qna-item">
+                                    <div class="qna-header">
+                                        <h4>数据结构二叉树遍历的非递归实现？</h4>
+                                        <span class="qna-status solved"><i class="fas fa-check-circle"></i> 已解决</span>
+                                    </div>
+                                    <p class="qna-content">求二叉树前序、中序、后序遍历的非递归算法实现，最好有C++代码示例。</p>
+                                    <div class="qna-meta">
+                                        <span><i class="fas fa-user"></i> 提问者：张同学</span>
+                                        <span><i class="fas fa-clock"></i> 3小时前</span>
+                                        <span><i class="fas fa-comment"></i> 8个回答</span>
+                                    </div>
+                                </div>
+
+                                <div class="qna-item">
+                                    <div class="qna-header">
+                                        <h4>高数中泰勒展开的余项如何理解？</h4>
+                                        <span class="qna-status answering"><i class="fas fa-comments"></i> 解答中</span>
+                                    </div>
+                                    <p class="qna-content">拉格朗日余项和皮亚诺余项的区别和应用场景是什么？</p>
+                                    <div class="qna-meta">
+                                        <span><i class="fas fa-user"></i> 提问者：李同学</span>
+                                        <span><i class="fas fa-clock"></i> 1天前</span>
+                                        <span><i class="fas fa-comment"></i> 5个回答</span>
+                                    </div>
+                                </div>
+
+                                <div class="qna-item">
+                                    <div class="qna-header">
+                                        <h4>英语四六级听力快速提升方法？</h4>
+                                        <span class="qna-status open"><i class="fas fa-question-circle"></i> 进行中</span>
+                                    </div>
+                                    <p class="qna-content">距离考试还有一个月，听力部分如何有效提分？求经验分享。</p>
+                                    <div class="qna-meta">
+                                        <span><i class="fas fa-user"></i> 提问者：王同学</span>
+                                        <span><i class="fas fa-clock"></i> 2天前</span>
+                                        <span><i class="fas fa-comment"></i> 12个回答</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="btn-ask-question">
+                                <i class="fas fa-question-circle"></i>
+                                我要提问
+                            </button>
+                        </div>
+
+                        <div class="community-tab-content" id="tab-bounty">
+                            <div class="bounty-list">
+                                <div class="bounty-item">
+                                    <div class="bounty-reward">
+                                        <span class="reward-amount">50积分</span>
+                                        <span class="reward-label">悬赏中</span>
+                                    </div>
+                                    <div class="bounty-content">
+                                        <h4>求《数字信号处理》张教授2025秋季课件</h4>
+                                        <p class="bounty-desc">需要完整的PPT课件，最好包含课堂补充内容</p>
+                                        <div class="bounty-meta">
+                                            <span><i class="fas fa-user"></i> 发布者：陈同学</span>
+                                            <span><i class="fas fa-clock"></i> 剩余3天</span>
+                                        </div>
+                                    </div>
+                                    <button class="btn-claim-bounty">领取悬赏</button>
+                                </div>
+
+                                <div class="bounty-item">
+                                    <div class="bounty-reward">
+                                        <span class="reward-amount">30积分</span>
+                                        <span class="reward-label">悬赏中</span>
+                                    </div>
+                                    <div class="bounty-content">
+                                        <h4>求《财务管理》课程案例分析报告模板</h4>
+                                        <p class="bounty-desc">需要规范的格式模板和优秀范例参考</p>
+                                        <div class="bounty-meta">
+                                            <span><i class="fas fa-user"></i> 发布者：刘同学</span>
+                                            <span><i class="fas fa-clock"></i> 剩余5天</span>
+                                        </div>
+                                    </div>
+                                    <button class="btn-claim-bounty">领取悬赏</button>
+                                </div>
+                            </div>
+
+                            <button class="btn-post-bounty">
+                                <i class="fas fa-bullhorn"></i>
+                                发布悬赏
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 上传资料CTA -->
+        <!-- <section class="upload-cta" data-aos="fade-up">
+            <div class="cta-content">
+                <div class="cta-icon">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                </div>
+                <div class="cta-text">
+                    <h3>分享你的学习资料，帮助更多同学</h3>
+                    <p>上传优质资料可获得积分奖励，积分可用于下载其他资料或兑换礼品</p>
+                </div>
+                <button class="btn-upload-cta">
+                    <i class="fas fa-upload"></i>
+                    立即上传资料
+                </button>
+            </div>
+        </section> -->
+    </main>
+
+    <footer class="footer_area">
+        <div class="footer_wrapper">
+            <div class="bottom_bar">
+                <p>&copy; 2026 Campus Market | 校园毕业物品流转平台团队 | <a href="#">服务条款</a></p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- JavaScript文件 -->
+    <script src="js/study_detail.js"></script>
+    <script>
+        // 初始化AOS动画
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+
+</html>

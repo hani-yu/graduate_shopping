@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>毕业季·云端拍卖会详情 - 毕业物品流转平台</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/auction_detail.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/archive_detail.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+</head>
+
+<body class="auction_page">
+    <!-- 顶部导航栏（与主站一致） -->
+    <nav class="daohang">
+        <div class="daohang_wrapper">
+            <ul class="daohang_list">
+                <li class="daohang_items"><a href="index.html">首页</a></li>
+                <li class="daohang_items"><a href="about.html">平台概况</a></li>
+                <li class="daohang_items"><a href="categories.html">商品分类</a></li>
+                <li class="daohang_items active"><a href="guide.html">流转锦囊</a></li>
+                <li class="daohang_items"><a href="events.html">活动专区</a></li>
+                <li class="daohang_items"><a href="user.html">用户中心</a></li>
+            </ul>
+            <div class="nav_auth"><a href="signin.html" class="btn_nav">登录</a></div>
+        </div>
+    </nav>
+
+    <!-- Box 1: Hero Banner (透视长廊背景) -->
+    <header class="auction_hero">
+        <div class="hero_overlay"></div> <!-- 对应 CSS 中的蒙层 -->
+        <div class="hero_content animate__animated animate__fadeIn">
+            <span class="en_text">GRADUATION AUCTION</span>
+            <h1 class="elegant_title">毕业季·云端拍卖会 <span class="auction_seal">拍卖会</span></h1>
+            <div class="elegant_line"></div>
+            <p>围观学长学姐的"传家宝"花落谁家</p>
+        </div>
+
+        <!-- 底部波浪线 (建议保留以衔接下方色块) -->
+        <div class="banner_wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C0,0,31.83,14.28,64,27.1,126.31,52,187.31,68,250.31,68c31.11,0,32.25-10.15,71.08-11.56Z"
+                    fill="#f9fbfa"></path>
+            </svg>
+        </div>
+    </header>
+    <!-- 页面头部 -->
+    <!-- <header class="page-header">
+            <div class="header-content">
+                <div class="event-tags">
+                    <span class="tag online-tag">线上活动</span>
+                    <span class="tag status-tag">进行中</span>
+                    <span class="tag participant-tag">500+人参与</span>
+                </div>
+                <h1 class="page-title">毕业季·云端拍卖会</h1>
+                <p class="page-subtitle">围观学长学姐的"传家宝"花落谁家</p>
+                <div class="header-tagline">
+                    <i class="fas fa-gavel"></i> 精品闲置在线竞拍，透明竞价，惊喜成交
+                </div>
+            </div>
+        </header> -->
+    <div class="container">
+        <!-- 第一部分：活动概览 -->
+        <section id="overview" class="content-section">
+            <div class="section-header">
+                <div class="section-number">01</div>
+                <h2 class="section-title">活动概览</h2>
+                <p class="section-desc">了解云端拍卖会的基本信息和特色亮点</p>
+            </div>
+
+            <div class="section-content">
+                <!-- 活动基本信息 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-info-circle"></i>
+                        活动基本信息
+                    </h3>
+
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-desktop"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>活动形式</h4>
+                                <p>线上直播竞拍 + 平台异步竞价</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>活动时间</h4>
+                                <p>5月25日-6月15日（共三周）</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>拍卖周期</h4>
+                                <p>每周三、周六晚 20:00-22:00（直播场）</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-user-check"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>参与资格</h4>
+                                <p>平台注册用户均可参与（需完成实名认证）</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>技术平台</h4>
+                                <p>平台直播系统 + 实时竞价系统</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 活动特色亮点 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-star"></i>
+                        活动特色亮点
+                    </h3>
+
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-broadcast-tower"></i>
+                            </div>
+                            <h4>直播互动</h4>
+                            <p>主播展示物品细节，实时答疑</p>
+                        </div>
+
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <h4>透明竞价</h4>
+                            <p>所有出价公开可见，避免暗箱操作</p>
+                        </div>
+
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-calendar-star"></i>
+                            </div>
+                            <h4>限时专场</h4>
+                            <p>按物品品类划分专场（数码/书籍/收藏品专场）</p>
+                        </div>
+
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-comment-dots"></i>
+                            </div>
+                            <h4>校友认证</h4>
+                            <p>部分物品附带原主人寄语和故事</p>
+                        </div>
+
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <h4>绿色认证</h4>
+                            <p>成交物品获"绿色传承"电子证书</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第二部分：参与方式详解 -->
+        <section id="participation" class="content-section">
+            <div class="section-header">
+                <div class="section-number">02</div>
+                <h2 class="section-title">参与方式详解</h2>
+                <p class="section-desc">了解作为买家或卖家的完整参与流程</p>
+            </div>
+
+            <div class="section-content">
+                <!-- 买家参与流程 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-shopping-cart"></i>
+                        买家参与流程
+                    </h3>
+
+                    <div class="process-tabs">
+                        <div class="tab-buttons">
+                            <button class="tab-btn active" data-tab="buyer-step1">第一步：准备</button>
+                            <button class="tab-btn" data-tab="buyer-step2">第二步：参与</button>
+                            <button class="tab-btn" data-tab="buyer-step3">第三步：后续</button>
+                        </div>
+
+                        <div class="tab-content">
+                            <!-- 第一步内容 -->
+                            <div class="tab-pane active" id="buyer-step1">
+                                <div class="step-content">
+                                    <div class="step-item">
+                                        <div class="step-number">1</div>
+                                        <div class="step-text">
+                                            <h4>完成平台实名认证</h4>
+                                            <p>确保账户已完成实名认证，保障交易安全</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <div class="step-number">2</div>
+                                        <div class="step-text">
+                                            <h4>观看参与指南视频</h4>
+                                            <p>观看《云端拍卖会参与指南》教学视频（5分钟）</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <div class="step-number">3</div>
+                                        <div class="step-text">
+                                            <h4>设置支付方式</h4>
+                                            <p>设置支付方式（支持微信/支付宝/校园卡）</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <div class="step-number">4</div>
+                                        <div class="step-text">
+                                            <h4>参与模拟竞拍</h4>
+                                            <p>参与模拟竞拍体验（熟悉出价流程）</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 第二步内容 -->
+                            <div class="tab-pane" id="buyer-step2">
+                                <div class="step-content">
+                                    <div class="step-item">
+                                        <div class="step-number">1</div>
+                                        <div class="step-text">
+                                            <h4>提前进入直播间</h4>
+                                            <p>提前15分钟进入直播间，了解当日拍卖物品</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <div class="step-number">2</div>
+                                        <div class="step-text">
+                                            <h4>关注心仪物品</h4>
+                                            <p>关注心仪物品，设置出价提醒</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <div class="step-number">3</div>
+                                        <div class="step-text">
+                                            <h4>参与实时竞价</h4>
+                                            <p>直播期间可随时出价，系统自动通知竞价状态</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <div class="step-number">4</div>
+                                        <div class="step-text">
+                                            <h4>及时完成支付</h4>
+                                            <p>最终成交者5分钟内完成支付确认</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 第三步内容 -->
+                            <div class="tab-pane" id="buyer-step3">
+                                <div class="step-content">
+                                    <div class="step-item">
+                                        <div class="step-number">1</div>
+                                        <div class="step-text">
+                                            <h4>签订电子协议</h4>
+                                            <p>线上签订电子交易协议，明确双方权利义务</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <div class="step-number">2</div>
+                                        <div class="step-text">
+                                            <h4>约定面交细节</h4>
+                                            <p>约定校内面交时间地点（推荐3天内完成）</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <div class="step-number">3</div>
+                                        <div class="step-text">
+                                            <h4>获取成交凭证</h4>
+                                            <p>支付完成获电子成交凭证</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <div class="step-number">4</div>
+                                        <div class="step-text">
+                                            <h4>参与反馈评价</h4>
+                                            <p>参与拍卖反馈评价，帮助完善平台服务</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 卖家参与流程 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-store"></i>
+                        卖家参与流程
+                    </h3>
+
+                    <div class="seller-process">
+                        <div class="process-steps">
+                            <!-- 第一步 -->
+                            <div class="process-step">
+                                <div class="step-header">
+                                    <div class="step-number">第一步</div>
+                                    <h4>物品提交</h4>
+                                </div>
+                                <ul class="step-details">
+                                    <li>提交拍卖申请（需提供：物品图片、描述、心理底价）</li>
+                                    <li>平台审核（1-2个工作日）</li>
+                                    <li>通过后进入排期待拍列表</li>
+                                </ul>
+                            </div>
+
+                            <!-- 第二步 -->
+                            <div class="process-step">
+                                <div class="step-header">
+                                    <div class="step-number">第二步</div>
+                                    <h4>拍前准备</h4>
+                                </div>
+                                <ul class="step-details">
+                                    <li>配合拍摄物品展示视频（30-60秒）</li>
+                                    <li>撰写物品故事（可选，增加情感价值）</li>
+                                    <li>设定起拍价和保留价（最低成交价）</li>
+                                    <li>选择拍卖专场（数码/书籍/家具/其他）</li>
+                                </ul>
+                            </div>
+
+                            <!-- 第三步 -->
+                            <div class="process-step">
+                                <div class="step-header">
+                                    <div class="step-number">第三步</div>
+                                    <h4>拍卖中配合</h4>
+                                </div>
+                                <ul class="step-details">
+                                    <li>可在直播间与买家互动</li>
+                                    <li>回答关于物品的详细问题</li>
+                                    <li>见证最终成交过程</li>
+                                </ul>
+                            </div>
+
+                            <!-- 第四步 -->
+                            <div class="process-step">
+                                <div class="step-header">
+                                    <div class="step-number">第四步</div>
+                                    <h4>拍卖后跟进</h4>
+                                </div>
+                                <ul class="step-details">
+                                    <li>确认成交信息</li>
+                                    <li>与买家约定面交细节</li>
+                                    <li>物品成功交接后收到款项</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第三部分：拍卖规则详解 -->
+        <section id="rules" class="content-section">
+            <div class="section-header">
+                <div class="section-number">03</div>
+                <h2 class="section-title">拍卖规则详解</h2>
+                <p class="section-desc">详细了解竞价、出价和成交规则，确保公平参与</p>
+            </div>
+
+            <div class="section-content">
+                <!-- 竞价规则 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-money-bill-wave"></i>
+                        竞价规则
+                    </h3>
+
+                    <div class="rules-grid">
+                        <div class="rule-card">
+                            <div class="rule-header">
+                                <div class="rule-icon">
+                                    <i class="fas fa-flag"></i>
+                                </div>
+                                <h4>起拍价</h4>
+                            </div>
+                            <p>卖家设定的最低起始价格</p>
+                        </div>
+
+                        <div class="rule-card">
+                            <div class="rule-header">
+                                <div class="rule-icon">
+                                    <i class="fas fa-arrow-up"></i>
+                                </div>
+                                <h4>加价幅度</h4>
+                            </div>
+                            <p>系统自动设定（按物品价值分为¥5/¥10/¥20三档）</p>
+                        </div>
+
+                        <div class="rule-card">
+                            <div class="rule-header">
+                                <div class="rule-icon">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+                                <h4>保留价</h4>
+                            </div>
+                            <p>卖家可设置秘密最低成交价，未达到则流拍</p>
+                        </div>
+
+                        <div class="rule-card">
+                            <div class="rule-header">
+                                <div class="rule-icon">
+                                    <i class="fas fa-hourglass-half"></i>
+                                </div>
+                                <h4>竞价时间</h4>
+                            </div>
+                            <p>每件物品竞价时长为5-10分钟</p>
+                        </div>
+
+                        <div class="rule-card">
+                            <div class="rule-header">
+                                <div class="rule-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <h4>延时规则</h4>
+                            </div>
+                            <p>最后2分钟内如有新出价，自动延长1分钟</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 出价规则 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-hand-paper"></i>
+                        出价规则
+                    </h3>
+
+                    <div class="rules-table">
+                        <div class="table-row">
+                            <div class="table-cell rule-name">实名出价</div>
+                            <div class="table-cell rule-desc">所有出价记录公开显示用户昵称</div>
+                        </div>
+
+                        <div class="table-row">
+                            <div class="table-cell rule-name">保证金制度</div>
+                            <div class="table-cell rule-desc">高价物品（¥500以上）需冻结保证金</div>
+                        </div>
+
+                        <div class="table-row">
+                            <div class="table-cell rule-name">出价不可撤销</div>
+                            <div class="table-cell rule-desc">出价后5分钟内可修改，之后不可撤销</div>
+                        </div>
+
+                        <div class="table-row">
+                            <div class="table-cell rule-name">自动出价</div>
+                            <div class="table-cell rule-desc">可设置最高心理价位，系统自动代理出价</div>
+                        </div>
+
+                        <div class="table-row">
+                            <div class="table-cell rule-name">恶意竞价惩罚</div>
+                            <div class="table-cell rule-desc">成交后不支付将扣除保证金并限制参与</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 成交规则 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-handshake"></i>
+                        成交规则
+                    </h3>
+
+                    <div class="rules-accordion">
+                        <!-- 规则1 -->
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <div class="accordion-title">
+                                    <i class="fas fa-trophy"></i>
+                                    <span>最高价成交</span>
+                                </div>
+                                <div class="accordion-toggle">
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                            </div>
+                            <div class="accordion-content">
+                                <p>竞价结束后最高出价者成交。如出现相同最高价，则先出价者优先。</p>
+                            </div>
+                        </div>
+
+                        <!-- 规则2 -->
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <div class="accordion-title">
+                                    <i class="fas fa-clock"></i>
+                                    <span>支付时限</span>
+                                </div>
+                                <div class="accordion-toggle">
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                            </div>
+                            <div class="accordion-content">
+                                <p>成交后15分钟内需确认支付。超时未支付视为违约，将扣除保证金。</p>
+                            </div>
+                        </div>
+
+                        <!-- 规则3 -->
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <div class="accordion-title">
+                                    <i class="fas fa-times-circle"></i>
+                                    <span>流拍处理</span>
+                                </div>
+                                <div class="accordion-toggle">
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                            </div>
+                            <div class="accordion-content">
+                                <p>未达保留价或无人出价，物品返回卖家。卖家可选择重新定价上拍或转为普通发布。</p>
+                            </div>
+                        </div>
+
+                        <!-- 规则4 -->
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <div class="accordion-title">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <span>违约处理</span>
+                                </div>
+                                <div class="accordion-toggle">
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                            </div>
+                            <div class="accordion-content">
+                                <p>买家违约扣除保证金，卖家违约下架所有物品。严重违约者将被限制参与平台活动。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第四部分：专场安排 -->
+        <section id="sessions" class="content-section">
+            <div class="section-header">
+                <div class="section-number">04</div>
+                <h2 class="section-title">专场安排</h2>
+                <p class="section-desc">三周精彩专场，各具特色，满足不同需求</p>
+            </div>
+
+            <div class="section-content">
+                <!-- 专场导航 -->
+                <div class="session-navigation">
+                    <div class="session-nav-item active" data-session="week1">
+                        <div class="session-nav-week">第一周</div>
+                        <div class="session-nav-title">数码精品专场</div>
+                        <div class="session-nav-date">5月25日 周三</div>
+                    </div>
+
+                    <div class="session-nav-item" data-session="week2">
+                        <div class="session-nav-week">第二周</div>
+                        <div class="session-nav-title">知识传承专场</div>
+                        <div class="session-nav-date">6月1日 周三</div>
+                    </div>
+
+                    <div class="session-nav-item" data-session="week3">
+                        <div class="session-nav-week">第三周</div>
+                        <div class="session-nav-title">情怀收藏专场</div>
+                        <div class="session-nav-date">6月8日 周三</div>
+                    </div>
+
+                    <div class="session-nav-item" data-session="final">
+                        <div class="session-nav-week">毕业狂欢</div>
+                        <div class="session-nav-title">综合场</div>
+                        <div class="session-nav-date">6月15日 周六</div>
+                    </div>
+                </div>
+
+                <!-- 专场详情 -->
+                <div class="session-details-container">
+                    <!-- 第一周专场 -->
+                    <div class="session-details active" id="week1-details">
+                        <div class="session-header">
+                            <div class="session-badge digital-badge">
+                                <i class="fas fa-laptop"></i>
+                                <span>数码精品专场</span>
+                            </div>
+                            <div class="session-time">5月25日（周三）20:00-21:30</div>
+                        </div>
+
+                        <div class="session-content">
+                            <div class="session-theme">
+                                <h4><i class="fas fa-bullhorn"></i> 专场主题</h4>
+                                <p>智能设备传承计划</p>
+                            </div>
+
+                            <div class="session-highlights">
+                                <h4><i class="fas fa-star"></i> 特色物品</h4>
+                                <div class="highlight-items">
+                                    <div class="highlight-item">
+                                        <i class="fas fa-apple-alt"></i>
+                                        <span>苹果三件套（MacBook + iPad + iPhone）</span>
+                                    </div>
+                                    <div class="highlight-item">
+                                        <i class="fas fa-paint-brush"></i>
+                                        <span>专业绘图板（艺术系毕业生）</span>
+                                    </div>
+                                    <div class="highlight-item">
+                                        <i class="fas fa-camera"></i>
+                                        <span>单反相机+镜头套装</span>
+                                    </div>
+                                    <div class="highlight-item">
+                                        <i class="fas fa-gamepad"></i>
+                                        <span>电竞外设套装（键盘+鼠标+耳机）</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="session-features">
+                                <h4><i class="fas fa-gem"></i> 专场亮点</h4>
+                                <div class="feature-item">
+                                    <i class="fas fa-clipboard-check"></i>
+                                    <div>
+                                        <strong>专业检测报告</strong>
+                                        <p>提供专业设备检测报告，确保物品功能完好</p>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <div>
+                                        <strong>7天试用保障</strong>
+                                        <p>成交后享7天试用期，不满意可协商退货</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 第二周专场 -->
+                    <div class="session-details" id="week2-details">
+                        <div class="session-header">
+                            <div class="session-badge knowledge-badge">
+                                <i class="fas fa-book"></i>
+                                <span>知识传承专场</span>
+                            </div>
+                            <div class="session-time">6月1日（周三）20:00-21:30</div>
+                        </div>
+
+                        <div class="session-content">
+                            <div class="session-theme">
+                                <h4><i class="fas fa-bullhorn"></i> 专场主题</h4>
+                                <p>学霸笔记与专业书籍</p>
+                            </div>
+
+                            <div class="session-highlights">
+                                <h4><i class="fas fa-star"></i> 特色物品</h4>
+                                <div class="highlight-items">
+                                    <div class="highlight-item">
+                                        <i class="fas fa-sticky-note"></i>
+                                        <span>四年完整专业课笔记（带重点标注）</span>
+                                    </div>
+                                    <div class="highlight-item">
+                                        <i class="fas fa-language"></i>
+                                        <span>稀缺原版外文教材</span>
+                                    </div>
+                                    <div class="highlight-item">
+                                        <i class="fas fa-graduation-cap"></i>
+                                        <span>考研全套资料（含真题解析）</span>
+                                    </div>
+                                    <div class="highlight-item">
+                                        <i class="fas fa-award"></i>
+                                        <span>竞赛获奖作品集</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="session-features">
+                                <h4><i class="fas fa-gem"></i> 专场亮点</h4>
+                                <div class="feature-item">
+                                    <i class="fas fa-comments"></i>
+                                    <div>
+                                        <strong>原主人线上答疑</strong>
+                                        <p>可预约原主人线上答疑1小时，传授学习心得</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 第三周专场 -->
+                    <div class="session-details" id="week3-details">
+                        <div class="session-header">
+                            <div class="session-badge collection-badge">
+                                <i class="fas fa-heart"></i>
+                                <span>情怀收藏专场</span>
+                            </div>
+                            <div class="session-time">6月8日（周三）20:00-21:30</div>
+                        </div>
+
+                        <div class="session-content">
+                            <div class="session-theme">
+                                <h4><i class="fas fa-bullhorn"></i> 专场主题</h4>
+                                <p>有故事的校园记忆</p>
+                            </div>
+
+                            <div class="session-highlights">
+                                <h4><i class="fas fa-star"></i> 特色物品</h4>
+                                <div class="highlight-items">
+                                    <div class="highlight-item">
+                                        <i class="fas fa-hammer"></i>
+                                        <span>手工制作的毕业设计作品</span>
+                                    </div>
+                                    <div class="highlight-item">
+                                        <i class="fas fa-medal"></i>
+                                        <span>校园活动纪念品（限量版）</span>
+                                    </div>
+                                    <div class="highlight-item">
+                                        <i class="fas fa-users"></i>
+                                        <span>社团传承物品（如辩论队奖杯）</span>
+                                    </div>
+                                    <div class="highlight-item">
+                                        <i class="fas fa-collection"></i>
+                                        <span>个人收藏品（明信片、邮票等）</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="session-features">
+                                <h4><i class="fas fa-gem"></i> 专场亮点</h4>
+                                <div class="feature-item">
+                                    <i class="fas fa-video"></i>
+                                    <div>
+                                        <strong>物品故事视频</strong>
+                                        <p>附带物品故事视频，传承校园文化</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 毕业狂欢综合场 -->
+                    <div class="session-details" id="final-details">
+                        <div class="session-header">
+                            <div class="session-badge final-badge">
+                                <i class="fas fa-fire"></i>
+                                <span>毕业狂欢综合场</span>
+                            </div>
+                            <div class="session-time">6月15日（周六）19:00-22:00</div>
+                        </div>
+
+                        <div class="session-content">
+                            <div class="session-theme">
+                                <h4><i class="fas fa-bullhorn"></i> 专场主题</h4>
+                                <p>毕业前的最后惊喜</p>
+                            </div>
+
+                            <div class="session-highlights">
+                                <h4><i class="fas fa-star"></i> 专场特色</h4>
+                                <div class="highlight-items">
+                                    <div class="highlight-item">
+                                        <i class="fas fa-redo"></i>
+                                        <span>所有流拍精品重新上拍</span>
+                                    </div>
+                                    <div class="highlight-item">
+                                        <i class="fas fa-gift"></i>
+                                        <span>特别捐赠物品无底价起拍</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="session-features">
+                                <h4><i class="fas fa-gem"></i> 专场亮点</h4>
+                                <div class="feature-item">
+                                    <i class="fas fa-hand-holding-heart"></i>
+                                    <div>
+                                        <strong>公益捐赠</strong>
+                                        <p>所有成交额5%捐赠校园环保基金</p>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-tags"></i>
+                                    <div>
+                                        <strong>无底价惊喜</strong>
+                                        <p>部分物品无底价起拍，惊喜不断</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第九部分：常见问题解答 -->
+        <section id="faq" class="content-section">
+            <div class="section-header">
+                <div class="section-number">05</div>
+                <h2 class="section-title">常见问题解答</h2>
+                <p class="section-desc">解答参与云端拍卖会可能遇到的疑问</p>
+            </div>
+
+            <div class="section-content">
+                <div class="faq-container">
+                    <!-- 问题1 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <div class="faq-q">Q1</div>
+                            <div class="faq-text">拍卖需要缴纳费用吗？</div>
+                            <div class="faq-toggle">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-a">A</div>
+                            <div class="faq-answer-text">
+                                <p>平台完全免费。卖家无需支付上架费，买家无需支付佣金。只有成交后支付款项给卖家。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 问题2 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <div class="faq-q">Q2</div>
+                            <div class="faq-text">如果拍下后不想要了怎么办？</div>
+                            <div class="faq-toggle">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-a">A</div>
+                            <div class="faq-answer-text">
+                                <p>成交后15分钟内可取消（需说明合理原因）。超过15分钟或物品已交接，将按违约处理。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 问题3 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <div class="faq-q">Q3</div>
+                            <div class="faq-text">物品描述和实际不符怎么办？</div>
+                            <div class="faq-toggle">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-a">A</div>
+                            <div class="faq-answer-text">
+                                <p>可申请平台介入调解。如证实描述不符，卖家需接受退货或部分退款。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 问题4 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <div class="faq-q">Q4</div>
+                            <div class="faq-text">可以多人联合竞拍吗？</div>
+                            <div class="faq-toggle">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-a">A</div>
+                            <div class="faq-answer-text">
+                                <p>可以。但需指定一人作为主账户出价，成交后内部自行分配。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 问题5 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <div class="faq-q">Q5</div>
+                            <div class="faq-text">流拍物品怎么处理？</div>
+                            <div class="faq-toggle">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-a">A</div>
+                            <div class="faq-answer-text">
+                                <p>流拍物品可选择：1）降价后重新上拍 2）转为普通发布 3）私下议价交易</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 问题6 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <div class="faq-q">Q6</div>
+                            <div class="faq-text">如何防止恶意竞价？</div>
+                            <div class="faq-toggle">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-a">A</div>
+                            <div class="faq-answer-text">
+                                <p>系统会检测异常出价行为，高价物品需冻结保证金，恶意竞价者将被限制参与。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+
+    <footer class="footer_area">
+        <div class="footer_wrapper">
+            <div class="bottom_bar">
+                <p>&copy; 2026 Campus Market | 校园毕业物品流转平台团队 | <a href="#">服务条款</a></p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="js/auction_detail.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>热门闪购·限时秒杀详情 - 毕业物品流转平台</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/archive_detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/sale_detail.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body class="sale_page">
+
+    <!-- 顶部导航栏（与主站一致） -->
+    <nav class="daohang">
+        <div class="daohang_wrapper">
+            <ul class="daohang_list">
+                <li class="daohang_items"><a href="index.html">首页</a></li>
+                <li class="daohang_items"><a href="about.html">平台概况</a></li>
+                <li class="daohang_items"><a href="categories.html">商品分类</a></li>
+                <li class="daohang_items"><a href="guide.html">流转锦囊</a></li>
+                <li class="daohang_items active"><a href="events.html">活动专区</a></li>
+                <li class="daohang_items"><a href="user.html">用户中心</a></li>
+            </ul>
+            <div class="nav_auth"><a href="signin.html" class="btn_nav">登录</a></div>
+        </div>
+    </nav>
+
+    <!-- Box 1: Hero Banner (透视长廊背景) -->
+    <header class="sale_hero">
+        <div class="hero_overlay"></div> <!-- 对应 CSS 中的蒙层 -->
+        <div class="hero_content animate__animated animate__fadeIn">
+            <span class="en_text">WELFARE</span>
+            <h1 class="elegant_title">校友权益·专属福利详情 <span class="sale_seal">福利领取</span></h1>
+            <div class="elegant_line"></div>
+            <p>详细了解福利获取机制、成长体系及使用指南。</p>
+        </div>
+
+        <!-- 底部波浪线 (建议保留以衔接下方色块) -->
+        <div class="banner_wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C0,0,31.83,14.28,64,27.1,126.31,52,187.31,68,250.31,68c31.11,0,32.25-10.15,71.08-11.56Z"
+                    fill="#f9fbfa"></path>
+            </svg>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- 第一部分：闪购活动规则说明 -->
+        <section id="rules" class="content-section">
+            <div class="section-header">
+                <div class="section-number">01</div>
+                <h2 class="section-title">闪购活动规则说明</h2>
+                <p class="section-desc">了解限时秒杀的基本规则与参与要求</p>
+            </div>
+
+            <div class="section-content">
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-book"></i>
+                        闪购基本规则
+                    </h3>
+                    
+                    <div class="rules-grid">
+                        <div class="rule-item">
+                            <div class="rule-icon">
+                                <i class="fas fa-tags"></i>
+                            </div>
+                            <div class="rule-content">
+                                <h4>活动性质</h4>
+                                <p>限时限量特价抢购，价格远低于市场价</p>
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="rule-content">
+                                <h4>时间机制</h4>
+                                <ul>
+                                    <li><strong>预热期：</strong>商品提前24小时展示，可收藏预约</li>
+                                    <li><strong>开抢时间：</strong>统一时间点准时开抢（如20:00）</li>
+                                    <li><strong>抢购时长：</strong>每场闪购持续2-4小时，售完即止</li>
+                                    <li><strong>库存显示：</strong>实时显示剩余库存，售罄自动下架</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-icon">
+                                <i class="fas fa-user-check"></i>
+                            </div>
+                            <div class="rule-content">
+                                <h4>参与资格</h4>
+                                <ul>
+                                    <li>平台注册用户均可参与</li>
+                                    <li>需完成实名认证（保障交易安全）</li>
+                                    <li>同一用户同款商品限购1-2件（防止囤货）</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第二部分：抢购操作全流程 -->
+        <section id="process" class="content-section">
+            <div class="section-header">
+                <div class="section-number">02</div>
+                <h2 class="section-title">抢购操作全流程</h2>
+                <p class="section-desc">从开抢到收货的完整操作指南</p>
+            </div>
+
+            <div class="section-content">
+                <!-- 抢购中操作 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-mouse-pointer"></i>
+                        抢购中操作
+                    </h3>
+                    
+                    <div class="process-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-time">19:55-19:59</div>
+                            <div class="timeline-content">
+                                <h4>进入准备</h4>
+                                <p>进入商品页面，反复刷新，确保网络连接稳定</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item highlight">
+                            <div class="timeline-time">20:00:00</div>
+                            <div class="timeline-content">
+                                <h4>点击抢购</h4>
+                                <p>立即点击"立即抢购"按钮，动作要快</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-time">20:00:01-20:00:05</div>
+                            <div class="timeline-content">
+                                <h4>选择规格</h4>
+                                <p>快速选择规格（如有选项需要选择）</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-time">20:00:05-20:00:15</div>
+                            <div class="timeline-content">
+                                <h4>提交支付</h4>
+                                <p>提交订单并完成支付，建议使用快捷支付方式</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tips-box">
+                        <h4><i class="fas fa-lightbulb"></i> 抢购技巧</h4>
+                        <div class="tips-grid">
+                            <div class="tip-item">
+                                <i class="fas fa-mobile-alt"></i>
+                                <p>使用平台APP比网页端响应更快</p>
+                            </div>
+                            <div class="tip-item">
+                                <i class="fas fa-wifi"></i>
+                                <p>关闭其他占用网络的应用程序</p>
+                            </div>
+                            <div class="tip-item">
+                                <i class="fas fa-heart"></i>
+                                <p>提前将商品加入收藏，快速进入</p>
+                            </div>
+                            <div class="tip-item">
+                                <i class="fas fa-credit-card"></i>
+                                <p>支付时选择已绑定的快捷支付方式</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 抢购后处理 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-clipboard-check"></i>
+                        抢购后处理
+                    </h3>
+                    
+                    <div class="outcome-tabs">
+                        <div class="outcome-nav">
+                            <button class="outcome-btn active" data-outcome="success">抢购成功</button>
+                            <button class="outcome-btn" data-outcome="fail">未抢到</button>
+                            <button class="outcome-btn" data-outcome="issue">订单问题</button>
+                        </div>
+                        
+                        <div class="outcome-content">
+                            <!-- 成功处理 -->
+                            <div class="outcome-pane active" id="success-pane">
+                                <div class="success-steps">
+                                    <div class="success-step">
+                                        <div class="step-icon">
+                                            <i class="fas fa-clock"></i>
+                                        </div>
+                                        <div class="step-desc">
+                                            <h5>及时支付</h5>
+                                            <p>10分钟内完成支付，超时订单自动取消</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="success-step">
+                                        <div class="step-icon">
+                                            <i class="fas fa-sms"></i>
+                                        </div>
+                                        <div class="step-desc">
+                                            <h5>确认通知</h5>
+                                            <p>支付成功后收到确认短信和订单号</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="success-step">
+                                        <div class="step-icon">
+                                            <i class="fas fa-truck"></i>
+                                        </div>
+                                        <div class="step-desc">
+                                            <h5>查看物流</h5>
+                                            <p>可在"我的订单"查看物流信息</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 未抢到处理 -->
+                            <div class="outcome-pane" id="fail-pane">
+                                <div class="fail-options">
+                                    <div class="option-item">
+                                        <div class="option-icon">
+                                            <i class="fas fa-bell"></i>
+                                        </div>
+                                        <div class="option-desc">
+                                            <h5>关注补货通知</h5>
+                                            <p>少量库存可能补货，及时关注平台通知</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="option-item">
+                                        <div class="option-icon">
+                                            <i class="fas fa-heart"></i>
+                                        </div>
+                                        <div class="option-desc">
+                                            <h5>加入心愿单</h5>
+                                            <p>类似商品上架时提醒，不错过下次机会</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="option-item">
+                                        <div class="option-icon">
+                                            <i class="fas fa-redo"></i>
+                                        </div>
+                                        <div class="option-desc">
+                                            <h5>参与下一场</h5>
+                                            <p>参与下一场闪购，积累经验提高成功率</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 订单问题处理 -->
+                            <div class="outcome-pane" id="issue-pane">
+                                <div class="issue-list">
+                                    <div class="issue-item">
+                                        <div class="issue-name">支付失败</div>
+                                        <div class="issue-solution">5分钟内可重新支付，确保账户余额充足</div>
+                                    </div>
+                                    
+                                    <div class="issue-item">
+                                        <div class="issue-name">地址错误</div>
+                                        <div class="issue-solution">下单后15分钟内可修改收货地址</div>
+                                    </div>
+                                    
+                                    <div class="issue-item">
+                                        <div class="issue-name">商品问题</div>
+                                        <div class="issue-solution">收到货后24小时内可申请售后处理</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第三部分：商品品质与售后保障 -->
+        <section id="quality" class="content-section">
+            <div class="section-header">
+                <div class="section-number">03</div>
+                <h2 class="section-title">商品品质与售后保障</h2>
+                <p class="section-desc">分级标准、质检流程与完善售后服务</p>
+            </div>
+
+            <div class="section-content">
+                <!-- 品质分级标准 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-star"></i>
+                        品质分级标准
+                    </h3>
+                    
+                    <div class="grade-cards">
+                        <!-- S级 -->
+                        <div class="grade-card s-grade">
+                            <div class="grade-header">
+                                <div class="grade-badge">S级</div>
+                                <div class="grade-title">近乎全新</div>
+                            </div>
+                            <div class="grade-content">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> 使用时间＜3个月</li>
+                                    <li><i class="fas fa-check-circle"></i> 无任何划痕或使用痕迹</li>
+                                    <li><i class="fas fa-check-circle"></i> 配件齐全，包装完好</li>
+                                    <li><i class="fas fa-check-circle"></i> 享受7天无理由退货</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- A级 -->
+                        <div class="grade-card a-grade">
+                            <div class="grade-header">
+                                <div class="grade-badge">A级</div>
+                                <div class="grade-title">精品二手</div>
+                            </div>
+                            <div class="grade-content">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> 使用时间3-12个月</li>
+                                    <li><i class="fas fa-check-circle"></i> 轻微使用痕迹，功能完好</li>
+                                    <li><i class="fas fa-check-circle"></i> 主要配件齐全</li>
+                                    <li><i class="fas fa-check-circle"></i> 享受3天验货期</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- B级 -->
+                        <div class="grade-card b-grade">
+                            <div class="grade-header">
+                                <div class="grade-badge">B级</div>
+                                <div class="grade-title">高性价比</div>
+                            </div>
+                            <div class="grade-content">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> 使用时间1-2年</li>
+                                    <li><i class="fas fa-check-circle"></i> 有明显使用痕迹，但功能正常</li>
+                                    <li><i class="fas fa-check-circle"></i> 可能缺少次要配件</li>
+                                    <li><i class="fas fa-check-circle"></i> 享受24小时重大瑕疵验货</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 质检流程 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-clipboard-list"></i>
+                        质检流程
+                    </h3>
+                    
+                    <div class="inspection-flow">
+                        <div class="flow-step">
+                            <div class="flow-number">1</div>
+                            <div class="flow-content">
+                                <h4>卖家自检</h4>
+                                <p>上传物品时需如实描述并拍照</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flow-step">
+                            <div class="flow-number">2</div>
+                            <div class="flow-content">
+                                <h4>平台初审</h4>
+                                <p>审核图片与描述的一致性</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flow-step">
+                            <div class="flow-number">3</div>
+                            <div class="flow-content">
+                                <h4>实物抽检</h4>
+                                <p>高价商品（¥500以上）进行实物抽检</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flow-step">
+                            <div class="flow-number">4</div>
+                            <div class="flow-content">
+                                <h4>问题处理</h4>
+                                <p>描述不符商品立即下架，卖家受处罚</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 售后服务体系 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-headset"></i>
+                        售后服务体系
+                    </h3>
+                    
+                    <div class="service-grid">
+                        <!-- 验货期保障 -->
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <div class="service-content">
+                                <h4>验货期保障</h4>
+                                <div class="service-details">
+                                    <div class="detail-item">
+                                        <span class="detail-grade">S级商品</span>
+                                        <span class="detail-value">7天无理由退货</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-grade">A级商品</span>
+                                        <span class="detail-value">3天功能验货期</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-grade">B级商品</span>
+                                        <span class="detail-value">24小时重大瑕疵验货</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 问题处理流程 -->
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <div class="service-content">
+                                <h4>问题处理流程</h4>
+                                <ol class="process-list">
+                                    <li>提交问题描述和证据图片</li>
+                                    <li>平台24小时内响应</li>
+                                    <li>协商解决方案（退货/换货/部分退款）</li>
+                                    <li>执行方案并完成售后</li>
+                                </ol>
+                            </div>
+                        </div>
+                        
+                        <!-- 极速退款 -->
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-money-bill-wave"></i>
+                            </div>
+                            <div class="service-content">
+                                <h4>极速退款</h4>
+                                <div class="refund-details">
+                                    <div class="refund-item">
+                                        <i class="fas fa-clock"></i>
+                                        <div>
+                                            <strong>2小时内启动退款</strong>
+                                            <p>售后问题确认后立即处理</p>
+                                        </div>
+                                    </div>
+                                    <div class="refund-item">
+                                        <i class="fas fa-route"></i>
+                                        <div>
+                                            <strong>原路返回</strong>
+                                            <p>退款原路返回，预计1-3个工作日到账</p>
+                                        </div>
+                                    </div>
+                                    <div class="refund-item">
+                                        <i class="fas fa-hand-holding-usd"></i>
+                                        <div>
+                                            <strong>平台垫付</strong>
+                                            <p>紧急情况可申请平台垫付</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 物流配送服务 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-shipping-fast"></i>
+                        物流配送服务
+                    </h3>
+                    
+                    <div class="delivery-options">
+                        <!-- 校内配送 -->
+                        <div class="delivery-card">
+                            <div class="delivery-header">
+                                <div class="delivery-icon">
+                                    <i class="fas fa-university"></i>
+                                </div>
+                                <h4>校内配送</h4>
+                            </div>
+                            <ul class="delivery-features">
+                                <li>校区内免费配送</li>
+                                <li>下单后24小时内送达</li>
+                                <li>可指定时间段（如12:00-14:00）</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- 同城配送 -->
+                        <div class="delivery-card">
+                            <div class="delivery-header">
+                                <div class="delivery-icon">
+                                    <i class="fas fa-city"></i>
+                                </div>
+                                <h4>同城配送</h4>
+                            </div>
+                            <ul class="delivery-features">
+                                <li>合作快递学生特惠价</li>
+                                <li>下单后48小时内送达</li>
+                                <li>配送前电话确认</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- 包装标准 -->
+                        <div class="delivery-card">
+                            <div class="delivery-header">
+                                <div class="delivery-icon">
+                                    <i class="fas fa-box-open"></i>
+                                </div>
+                                <h4>包装标准</h4>
+                            </div>
+                            <ul class="delivery-features">
+                                <li>电子产品：防震气泡膜+纸箱</li>
+                                <li>易碎物品：泡沫箱+防震材料</li>
+                                <li>普通物品：防水袋+纸箱</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第四部分：公平性承诺 -->
+        <section id="fairness" class="content-section">
+            <div class="section-header">
+                <div class="section-number">04</div>
+                <h2 class="section-title">公平性承诺</h2>
+                <p class="section-desc">公开透明的抢购环境，保障每一位参与者的权益</p>
+            </div>
+
+            <div class="section-content">
+                <div class="fairness-grid">
+                    <!-- 价格透明 -->
+                    <div class="fairness-card">
+                        <div class="fairness-header">
+                            <div class="fairness-icon">
+                                <i class="fas fa-dollar-sign"></i>
+                            </div>
+                            <h4>价格透明</h4>
+                        </div>
+                        <ul class="fairness-list">
+                            <li>明确标注原价与闪购价</li>
+                            <li>价格计算方式公开</li>
+                            <li>历史价格可查询</li>
+                            <li>价格异议处理通道</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- 过程公开 -->
+                    <div class="fairness-card">
+                        <div class="fairness-header">
+                            <div class="fairness-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <h4>过程公开</h4>
+                        </div>
+                        <ul class="fairness-list">
+                            <li>抢购过程可追溯</li>
+                            <li>成功名单公示（脱敏处理）</li>
+                            <li>库存变化实时显示</li>
+                            <li>规则变更提前公告</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- 投诉渠道 -->
+                    <div class="fairness-card">
+                        <div class="fairness-header">
+                            <div class="fairness-icon">
+                                <i class="fas fa-comment-alt"></i>
+                            </div>
+                            <h4>投诉渠道</h4>
+                        </div>
+                        <ul class="fairness-list">
+                            <li>在线客服实时响应</li>
+                            <li>投诉邮箱24小时接收</li>
+                            <li>重大争议平台介入仲裁</li>
+                            <li>处理结果公示</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- 公平承诺声明 -->
+                <div class="fairness-statement">
+                    <div class="statement-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="statement-content">
+                        <h4>我们的承诺</h4>
+                        <p>我们致力于打造公平、公正、公开的闪购环境，保障每一位用户的合法权益。任何违反公平原则的行为都将受到严肃处理，确保良好的抢购体验。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第五部分：常见问题解答 -->
+        <section id="faq" class="content-section">
+            <div class="section-header">
+                <div class="section-number">05</div>
+                <h2 class="section-title">常见问题解答</h2>
+                <p class="section-desc">解答闪购参与过程中最常见的疑问</p>
+            </div>
+
+            <div class="section-content">
+                <div class="faq-container">
+                    <!-- Q1 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <div class="faq-number">Q1</div>
+                            <div class="faq-text">为什么总是抢不到？</div>
+                            <div class="faq-toggle">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>闪购商品因价格优惠、库存有限，抢购竞争激烈。建议：</p>
+                                <ol>
+                                    <li>提前准备，完善账户信息</li>
+                                    <li>使用平台APP，网络环境稳定</li>
+                                    <li>关注非热门时段场次</li>
+                                    <li>提升会员等级获得提前进入资格</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Q2 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <div class="faq-number">Q2</div>
+                            <div class="faq-text">抢购成功后可以取消订单吗？</div>
+                            <div class="faq-toggle">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>支付成功后15分钟内可取消订单，超时后商品已进入打包流程，不可取消。如确有特殊情况，可联系客服处理，但可能影响信用评级。</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Q3 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <div class="faq-number">Q3</div>
+                            <div class="faq-text">商品描述与实际不符怎么办？</div>
+                            <div class="faq-toggle">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>在验货期内（根据商品等级1-7天）可申请售后。提供对比照片，平台客服将在24小时内介入处理，核实后支持退货退款或部分退款。</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Q4 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <div class="faq-number">Q4</div>
+                            <div class="faq-text">闪购商品支持退换货吗？</div>
+                            <div class="faq-toggle">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>根据商品等级不同：S级支持7天无理由退货；A级支持3天功能问题退货；B级支持24小时重大瑕疵退货。非质量问题退换货需承担来回运费。</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Q5 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <div class="faq-number">Q5</div>
+                            <div class="faq-text">如何提高抢购成功率？</div>
+                            <div class="faq-toggle">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <ol>
+                                    <li>成为高级会员获得提前进入资格</li>
+                                    <li>使用5G网络或稳定Wi-Fi</li>
+                                    <li>提前将商品加入收藏</li>
+                                    <li>关闭后台其他应用</li>
+                                    <li>多设备同时准备（不违反规则前提下）</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    
+            </div>
+        </section>
+
+     
+    </div>
+
+        <footer class="footer_area">
+        <div class="footer_wrapper">
+            <div class="bottom_bar">
+                <p>&copy; 2026 Campus Market | 校园毕业物品流转平台团队 | <a href="#">服务条款</a></p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="js/sale_detail.js"></script>
+</body>
+</html>

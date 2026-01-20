@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大件闲置绿色取货预约通知 | 校园流转平台</title>
+    <link rel="stylesheet" href="css/notice_detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 顶部导航栏（结构保留，内容留空） -->
+    <nav class="main-nav"></nav>
+
+    <!-- Banner区域（结构保留，内容留空） -->
+    <header class="page-banner"></header>
+
+    <!-- 主要内容区 -->
+    <main class="notice-container">
+      
+
+        <!-- 模块一：具体服务细则 -->
+        <section id="service-details" class="content-section">
+            <div class="section-title">
+                <h2><i class="fas fa-box-open"></i> 具体服务细则</h2>
+                <p class="section-desc">明确回收范围与取货点设置，确保顺利交接</p>
+            </div>
+
+            <div class="details-grid">
+                <!-- 可回收物品 -->
+                <div class="detail-card accepted-items">
+                    <div class="card-header">
+                        <div class="card-icon success">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>可回收物品范围</h3>
+                        <span class="card-subtitle">符合环保循环标准</span>
+                    </div>
+                    
+                    <div class="card-content">
+                        <div class="category-group">
+                            <div class="category-header">
+                                <i class="fas fa-chair"></i>
+                                <h4>小型家具</h4>
+                            </div>
+                            <ul class="item-list">
+                                <li>椅子、凳子（完好可用）</li>
+                                <li>书架、置物架（可拆卸）</li>
+                                <li>鞋架、衣帽架</li>
+                                <li>小型储物柜</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="category-group">
+                            <div class="category-header">
+                                <i class="fas fa-plug"></i>
+                                <h4>家电类</h4>
+                            </div>
+                            <ul class="item-list">
+                                <li>台灯、床头灯（带电源线）</li>
+                                <li>小风扇、USB风扇</li>
+                                <li>电热水壶、电饭煲</li>
+                                <li>电吹风、卷发棒</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="category-group">
+                            <div class="category-header">
+                                <i class="fas fa-running"></i>
+                                <h4>体育器材</h4>
+                            </div>
+                            <ul class="item-list">
+                                <li>瑜伽垫、健身垫</li>
+                                <li>小型哑铃、拉力器</li>
+                                <li>跳绳、羽毛球拍</li>
+                                <li>滑板、轮滑鞋</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="category-group">
+                            <div class="category-header">
+                                <i class="fas fa-book"></i>
+                                <h4>大件书籍/资料</h4>
+                            </div>
+                            <ul class="item-list">
+                                <li>成套教材（5本以上）</li>
+                                <li>工具书、百科全书</li>
+                                <li>学术期刊合订本</li>
+                                <li>考研/考证全套资料</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 不可回收物品 -->
+                <div class="detail-card rejected-items">
+                    <div class="card-header">
+                        <div class="card-icon warning">
+                            <i class="fas fa-times-circle"></i>
+                        </div>
+                        <h3>不接收物品范围</h3>
+                        <span class="card-subtitle">需特殊处理或不符合安全标准</span>
+                    </div>
+                    
+                    <div class="card-content">
+                        <div class="rejection-group">
+                            <div class="rejection-item">
+                                <div class="rejection-icon">
+                                    <i class="fas fa-tv"></i>
+                                </div>
+                                <div class="rejection-content">
+                                    <h5>大型电器</h5>
+                                    <p>冰箱、洗衣机、空调等需单独预约专业回收</p>
+                                </div>
+                            </div>
+                            
+                            <div class="rejection-item">
+                                <div class="rejection-icon">
+                                    <i class="fas fa-ban"></i>
+                                </div>
+                                <div class="rejection-content">
+                                    <h5>破损严重物品</h5>
+                                    <p>无法正常使用或存在安全隐患</p>
+                                </div>
+                            </div>
+                            
+                            <div class="rejection-item">
+                                <div class="rejection-icon">
+                                    <i class="fas fa-bed"></i>
+                                </div>
+                                <div class="rejection-content">
+                                    <h5>床上用品</h5>
+                                    <p>除捐赠给指定慈善机构外</p>
+                                </div>
+                            </div>
+                            
+                            <div class="rejection-item">
+                                <div class="rejection-icon">
+                                    <i class="fas fa-flask"></i>
+                                </div>
+                                <div class="rejection-content">
+                                    <h5>危险品化学品</h5>
+                                    <p>电池、化学试剂、易燃易爆品</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 回收点设置表格 -->
+            <div class="collection-table">
+                <div class="table-header">
+                    <h3><i class="fas fa-map-marker-alt"></i> 回收点设置</h3>
+                    <p class="table-subtitle">各宿舍区域具体取货位置</p>
+                </div>
+                
+                <div class="table-container">
+                    <div class="table-row header-row">
+                        <div class="table-cell">宿舍区域</div>
+                        <div class="table-cell">取货点位置</div>
+                        <div class="table-cell">开放时间</div>
+                        <div class="table-cell">负责人</div>
+                    </div>
+                    
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <div class="area-info">
+                                <i class="fas fa-building"></i>
+                                <div>
+                                    <div class="area-name">东区1-6号楼</div>
+                                    <div class="area-desc">本科生宿舍区</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-cell">
+                            <div class="location-detail">
+                                <i class="fas fa-door-open"></i>
+                                <span>各楼一层大厅指定区域</span>
+                            </div>
+                        </div>
+                        <div class="table-cell">
+                            <div class="time-slot">
+                                <span class="time-range">8:00-20:00</span>
+                                <span class="time-note">全天候开放</span>
+                            </div>
+                        </div>
+                        <div class="table-cell">
+                            <div class="contact-person">
+                                <i class="fas fa-user"></i>
+                                <span>王阿姨<br><small>楼管值班室</small></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <div class="area-info">
+                                <i class="fas fa-building"></i>
+                                <div>
+                                    <div class="area-name">西区7-12号楼</div>
+                                    <div class="area-desc">本科生宿舍区</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-cell">
+                            <div class="location-detail">
+                                <i class="fas fa-tree"></i>
+                                <span>宿舍楼侧面空地（雨棚下）</span>
+                            </div>
+                        </div>
+                        <div class="table-cell">
+                            <div class="time-slot">
+                                <span class="time-range">9:00-21:00</span>
+                                <span class="time-note">避开午休时间</span>
+                            </div>
+                        </div>
+                        <div class="table-cell">
+                            <div class="contact-person">
+                                <i class="fas fa-user"></i>
+                                <span>张师傅<br><small>西区物业办</small></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <div class="area-info">
+                                <i class="fas fa-university"></i>
+                                <div>
+                                    <div class="area-name">研究生公寓区</div>
+                                    <div class="area-desc">硕士/博士研究生</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-cell">
+                            <div class="location-detail">
+                                <i class="fas fa-home"></i>
+                                <span>公寓管理中心一楼大厅</span>
+                            </div>
+                        </div>
+                        <div class="table-cell">
+                            <div class="time-slot">
+                                <span class="time-range">全天24小时</span>
+                                <span class="time-note">自助存放柜</span>
+                            </div>
+                        </div>
+                        <div class="table-cell">
+                            <div class="contact-person">
+                                <i class="fas fa-user"></i>
+                                <span>李老师<br><small>研究生处</small></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <div class="area-info">
+                                <i class="fas fa-globe-americas"></i>
+                                <div>
+                                    <div class="area-name">国际学生公寓</div>
+                                    <div class="area-desc">留学生宿舍区</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-cell">
+                            <div class="location-detail">
+                                <i class="fas fa-passport"></i>
+                                <span>留学生服务处前台</span>
+                            </div>
+                        </div>
+                        <div class="table-cell">
+                            <div class="time-slot">
+                                <span class="time-range">10:00-18:00</span>
+                                <span class="time-note">英语服务支持</span>
+                            </div>
+                        </div>
+                        <div class="table-cell">
+                            <div class="contact-person">
+                                <i class="fas fa-user"></i>
+                                <span>Ms. Smith<br><small>国际处</small></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 模块二：预约流程指南 -->
+        <section id="booking-process" class="content-section">
+            <div class="section-title">
+                <h2><i class="fas fa-clipboard-list"></i> 预约流程指南</h2>
+                <p class="section-desc">四步完成预约，轻松参与绿色回收</p>
+            </div>
+
+            <div class="process-steps">
+                <!-- 步骤1 -->
+                <div class="process-step">
+                    <div class="step-number">
+                        <div class="number-circle">1</div>
+                        <div class="step-label">线上预约</div>
+                    </div>
+                    <div class="step-content">
+                        <div class="step-header">
+                            <h3>线上预约（1月15日开放）</h3>
+                            <div class="step-status">准备中</div>
+                        </div>
+                        <div class="step-details">
+                            <div class="detail-item">
+                                <div class="detail-icon">
+                                    <i class="fas fa-home"></i>
+                                </div>
+                                <div class="detail-text">
+                                    <h5>访问专区</h5>
+                                    <p>平台首页 → "大件回收"专区</p>
+                                </div>
+                            </div>
+                            
+                            <div class="detail-item">
+                                <div class="detail-icon">
+                                    <i class="fas fa-edit"></i>
+                                </div>
+                                <div class="detail-text">
+                                    <h5>填写信息</h5>
+                                    <p>物品类型、数量、宿舍号、联系方式</p>
+                                </div>
+                            </div>
+                            
+                            <div class="detail-item">
+                                <div class="detail-icon">
+                                    <i class="fas fa-camera"></i>
+                                </div>
+                                <div class="detail-text">
+                                    <h5>上传照片</h5>
+                                    <p>需包含物品全景、尺寸参照、功能展示</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="step-tips">
+                            <h5><i class="fas fa-lightbulb"></i> 温馨提示</h5>
+                            <ul>
+                                <li>建议提前测量物品尺寸</li>
+                                <li>照片需清晰展示物品状态</li>
+                                <li>可预约未来7天内的时间段</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 步骤2 -->
+                <div class="process-step">
+                    <div class="step-number">
+                        <div class="number-circle">2</div>
+                        <div class="step-label">预约确认</div>
+                    </div>
+                    <div class="step-content">
+                        <div class="step-header">
+                            <h3>预约确认</h3>
+                            <div class="step-status">自动处理</div>
+                        </div>
+                        <div class="step-details">
+                            <div class="detail-item">
+                                <div class="detail-icon">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                                <div class="detail-text">
+                                    <h5>系统审核</h5>
+                                    <p>24小时内完成审核，确认是否符合标准</p>
+                                </div>
+                            </div>
+                            
+                            <div class="detail-item">
+                                <div class="detail-icon">
+                                    <i class="fas fa-comment-alt"></i>
+                                </div>
+                                <div class="detail-text">
+                                    <h5>通知确认</h5>
+                                    <p>短信/微信通知具体取货时间及地点</p>
+                                </div>
+                            </div>
+                            
+                            <div class="detail-item">
+                                <div class="detail-icon">
+                                    <i class="fas fa-qrcode"></i>
+                                </div>
+                                <div class="detail-text">
+                                    <h5>生成二维码</h5>
+                                    <p>专属取货二维码，用于现场核验</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="step-tips">
+                            <h5><i class="fas fa-lightbulb"></i> 温馨提示</h5>
+                            <ul>
+                                <li>请保持手机畅通接收通知</li>
+                                <li>如需修改时间，请提前24小时申请</li>
+                                <li>保存好二维码截图</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 步骤3 -->
+                <div class="process-step">
+                    <div class="step-number">
+                        <div class="number-circle">3</div>
+                        <div class="step-label">现场准备</div>
+                    </div>
+                    <div class="step-content">
+                        <div class="step-header">
+                            <h3>现场准备</h3>
+                            <div class="step-status">用户操作</div>
+                        </div>
+                        <div class="step-details">
+                            <div class="detail-item">
+                                <div class="detail-icon">
+                                    <i class="fas fa-box"></i>
+                                </div>
+                                <div class="detail-text">
+                                    <h5>整理物品</h5>
+                                    <p>提前将物品整理至宿舍门口或指定位置</p>
+                                </div>
+                            </div>
+                            
+                            <div class="detail-item">
+                                <div class="detail-icon">
+                                    <i class="fas fa-broom"></i>
+                                </div>
+                                <div class="detail-text">
+                                    <h5>清洁处理</h5>
+                                    <p>确保物品清洁、干燥、无异味</p>
+                                </div>
+                            </div>
+                            
+                            <div class="detail-item">
+                                <div class="detail-icon">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+                                <div class="detail-text">
+                                    <h5>贵重物品</h5>
+                                    <p>建议贵重物品或隐私物品自行处理</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="step-tips">
+                            <h5><i class="fas fa-lightbulb"></i> 温馨提示</h5>
+                            <ul>
+                                <li>建议提前1小时做好准备</li>
+                                <li>易碎物品请特别标注</li>
+                                <li>请勿将多人物品混放</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 步骤4 -->
+                <div class="process-step">
+                    <div class="step-number">
+                        <div class="number-circle">4</div>
+                        <div class="step-label">回收确认</div>
+                    </div>
+                    <div class="step-content">
+                        <div class="step-header">
+                            <h3>回收确认</h3>
+                            <div class="step-status">现场完成</div>
+                        </div>
+                        <div class="step-details">
+                            <div class="detail-item">
+                                <div class="detail-icon">
+                                    <i class="fas fa-qrcode"></i>
+                                </div>
+                                <div class="detail-text">
+                                    <h5>扫码核验</h5>
+                                    <p>工作人员现场扫码确认物品信息</p>
+                                </div>
+                            </div>
+                            
+                            <div class="detail-item">
+                                <div class="detail-icon">
+                                    <i class="fas fa-file-signature"></i>
+                                </div>
+                                <div class="detail-text">
+                                    <h5>签署确认单</h5>
+                                    <p>签署《环保流转确认单》留存凭证</p>
+                                </div>
+                            </div>
+                            
+                            <div class="detail-item">
+                                <div class="detail-icon">
+                                    <i class="fas fa-check-double"></i>
+                                </div>
+                                <div class="detail-text">
+                                    <h5>完成交接</h5>
+                                    <p>物品交接完成，流程结束</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="step-tips">
+                            <h5><i class="fas fa-lightbulb"></i> 温馨提示</h5>
+                            <ul>
+                                <li>请核对确认单信息准确性</li>
+                                <li>保留确认单照片或复印件</li>
+                                <li>积分将在24小时内到账</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 模块三：时间安排表 -->
+        <section id="schedule" class="content-section">
+            <div class="section-title">
+                <h2><i class="far fa-calendar-alt"></i> 时间安排表</h2>
+                <p class="section-desc">详细服务时段与区域覆盖，合理安排时间</p>
+            </div>
+
+            <div class="schedule-container">
+                <!-- 主要时间表 -->
+                <div class="main-schedule">
+                    <div class="schedule-header">
+                        <h3>主要服务时间安排</h3>
+                        <div class="schedule-filter">
+                            <button class="filter-btn active" data-filter="all">全部</button>
+                            <button class="filter-btn" data-filter="east">东区</button>
+                            <button class="filter-btn" data-filter="west">西区</button>
+                            <button class="filter-btn" data-filter="graduate">研究生区</button>
+                        </div>
+                    </div>
+                    
+                    <div class="schedule-table">
+                        <!-- 日期分组 -->
+                        <div class="date-group" data-area="east">
+                            <div class="group-header">
+                                <div class="date-range">1月20日 - 1月22日</div>
+                                <div class="area-badge">东区宿舍</div>
+                            </div>
+                            
+                            <div class="time-slots">
+                                <div class="time-slot-card">
+                                    <div class="slot-header">
+                                        <div class="slot-date">1月20日</div>
+                                        <div class="slot-type">上午场</div>
+                                    </div>
+                                    <div class="slot-content">
+                                        <div class="slot-time">
+                                            <i class="far fa-clock"></i>
+                                            <span>9:00 - 12:00</span>
+                                        </div>
+                                        <div class="slot-area">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            <span>东区1-3号楼</span>
+                                        </div>
+                                        <div class="slot-status available">可预约</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="time-slot-card">
+                                    <div class="slot-header">
+                                        <div class="slot-date">1月20日</div>
+                                        <div class="slot-type">下午场</div>
+                                    </div>
+                                    <div class="slot-content">
+                                        <div class="slot-time">
+                                            <i class="far fa-clock"></i>
+                                            <span>14:00 - 17:00</span>
+                                        </div>
+                                        <div class="slot-area">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            <span>东区4-6号楼</span>
+                                        </div>
+                                        <div class="slot-status available">可预约</div>
+                                    </div>
+                                </div>
+                                
+                                <!-- 更多时间段... -->
+                            </div>
+                        </div>
+                        
+                        <div class="date-group" data-area="west">
+                            <div class="group-header">
+                                <div class="date-range">1月23日 - 1月25日</div>
+                                <div class="area-badge">西区宿舍</div>
+                            </div>
+                            
+                            <div class="time-slots">
+                                <div class="time-slot-card">
+                                    <div class="slot-header">
+                                        <div class="slot-date">1月23日</div>
+                                        <div class="slot-type">上午场</div>
+                                    </div>
+                                    <div class="slot-content">
+                                        <div class="slot-time">
+                                            <i class="far fa-clock"></i>
+                                            <span>9:00 - 12:00</span>
+                                        </div>
+                                        <div class="slot-area">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            <span>西区7-9号楼</span>
+                                        </div>
+                                        <div class="slot-status limited">少量名额</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="time-slot-card">
+                                    <div class="slot-header">
+                                        <div class="slot-date">1月23日</div>
+                                        <div class="slot-type">下午场</div>
+                                    </div>
+                                    <div class="slot-content">
+                                        <div class="slot-time">
+                                            <i class="far fa-clock"></i>
+                                            <span>14:00 - 17:00</span>
+                                        </div>
+                                        <div class="slot-area">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            <span>西区10-12号楼</span>
+                                        </div>
+                                        <div class="slot-status available">可预约</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="date-group" data-area="graduate">
+                            <div class="group-header">
+                                <div class="date-range">1月26日 - 1月31日</div>
+                                <div class="area-badge">研究生/国际公寓</div>
+                            </div>
+                            
+                            <div class="time-slots">
+                                <div class="time-slot-card full-day">
+                                    <div class="slot-header">
+                                        <div class="slot-date">1月26-28日</div>
+                                        <div class="slot-type">全天服务</div>
+                                    </div>
+                                    <div class="slot-content">
+                                        <div class="slot-time">
+                                            <i class="far fa-clock"></i>
+                                            <span>8:00 - 22:00</span>
+                                        </div>
+                                        <div class="slot-area">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            <span>研究生公寓区</span>
+                                        </div>
+                                        <div class="slot-status available">可预约</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="time-slot-card full-day">
+                                    <div class="slot-header">
+                                        <div class="slot-date">1月29-31日</div>
+                                        <div class="slot-type">全天服务</div>
+                                    </div>
+                                    <div class="slot-content">
+                                        <div class="slot-time">
+                                            <i class="far fa-clock"></i>
+                                            <span>10:00 - 18:00</span>
+                                        </div>
+                                        <div class="slot-area">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            <span>国际学生公寓</span>
+                                        </div>
+                                        <div class="slot-status available">可预约</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 特别服务通道 -->
+                <div class="special-services">
+                    <div class="special-header">
+                        <h3><i class="fas fa-star"></i> 特别服务通道</h3>
+                        <p class="special-subtitle">针对特殊情况提供的便捷服务</p>
+                    </div>
+                    
+                    <div class="service-cards">
+                        <div class="service-card emergency">
+                            <div class="service-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="service-content">
+                                <h4>紧急处理通道</h4>
+                                <p>因特殊情况需紧急处理的同学</p>
+                                <div class="contact-info">
+                                    <i class="fas fa-phone"></i>
+                                    <span>电话预约：8790-xxxx</span>
+                                </div>
+                                <div class="service-note">24小时紧急热线</div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-card group">
+                            <div class="service-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="service-content">
+                                <h4>批量处理优先</h4>
+                                <p>宿舍组团5件以上享优先安排</p>
+                                <div class="group-requirements">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>需同一宿舍楼</span>
+                                </div>
+                                <div class="service-note">提前3天集体预约</div>
+                            </div>
+                        </div>
+                        
+                        <div class="service-card assistance">
+                            <div class="service-icon">
+                                <i class="fas fa-wheelchair"></i>
+                            </div>
+                            <div class="service-content">
+                                <h4>困难帮扶服务</h4>
+                                <p>行动不便同学专人上门协助</p>
+                                <div class="assistance-info">
+                                    <i class="fas fa-hands-helping"></i>
+                                    <span>需提供相关证明</span>
+                                </div>
+                                <div class="service-note">志愿者团队支持</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 模块四：常见问题解答 -->
+        <section id="faq" class="content-section">
+            <div class="section-title">
+                <h2><i class="far fa-question-circle"></i> 常见问题解答</h2>
+                <p class="section-desc">解答您关心的问题，让参与更顺畅</p>
+            </div>
+
+            <div class="faq-container">
+                <!-- 问题1 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <div class="q-marker">Q1</div>
+                        <div class="q-text">
+                            <h4>如何判断物品是否符合回收标准？</h4>
+                            <p>不确定物品是否符合要求怎么办？</p>
+                        </div>
+                        <div class="q-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <p>您可以通过以下方式判断物品是否符合回收标准：</p>
+                            <div class="answer-details">
+                                <div class="method">
+                                    <div class="method-icon">
+                                        <i class="fas fa-book"></i>
+                                    </div>
+                                    <div class="method-content">
+                                        <h5>参考评估指南</h5>
+                                        <p>平台"大件物品评估指南"提供详细标准说明和示例图片</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="method">
+                                    <div class="method-icon">
+                                        <i class="fas fa-camera"></i>
+                                    </div>
+                                    <div class="method-content">
+                                        <h5>在线咨询客服</h5>
+                                        <p>拍照上传物品图片，客服将在1小时内给予专业建议</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="method">
+                                    <div class="method-icon">
+                                        <i class="fas fa-question-circle"></i>
+                                    </div>
+                                    <div class="method-content">
+                                        <h5>快速自查清单</h5>
+                                        <ul>
+                                            <li>是否功能完好可正常使用</li>
+                                            <li>是否清洁干燥无严重污渍</li>
+                                            <li>尺寸是否便于搬运（长宽高≤1.5米）</li>
+                                            <li>是否属于禁止回收类别</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 问题2 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <div class="q-marker">Q2</div>
+                        <div class="q-text">
+                            <h4>错过预约时间怎么办？</h4>
+                            <p>无法按时交接物品的处理方式</p>
+                        </div>
+                        <div class="q-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <p>如果错过预约时间，您可以选择以下处理方式：</p>
+                            <div class="solution-cards">
+                                <div class="solution-card">
+                                    <div class="solution-header">
+                                        <div class="solution-icon">
+                                            <i class="fas fa-redo"></i>
+                                        </div>
+                                        <h5>重新预约</h5>
+                                    </div>
+                                    <div class="solution-content">
+                                        <p>在下一轮预约时段重新选择时间</p>
+                                        <ul>
+                                            <li>原预约自动取消</li>
+                                            <li>需重新提交申请</li>
+                                            <li>不影响个人信用记录</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="solution-card">
+                                    <div class="solution-header">
+                                        <div class="solution-icon">
+                                            <i class="fas fa-box-open"></i>
+                                        </div>
+                                        <h5>自助投放</h5>
+                                    </div>
+                                    <div class="solution-content">
+                                        <p>选择自助投放到指定回收站</p>
+                                        <ul>
+                                            <li>24小时开放的自助回收箱</li>
+                                            <li>需自行搬运至回收点</li>
+                                            <li>扫描二维码完成登记</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="solution-card">
+                                    <div class="solution-header">
+                                        <div class="solution-icon">
+                                            <i class="fas fa-user-clock"></i>
+                                        </div>
+                                        <h5>延期处理</h5>
+                                    </div>
+                                    <div class="solution-content">
+                                        <p>特殊情况可申请延期处理</p>
+                                        <ul>
+                                            <li>需提前联系客服说明情况</li>
+                                            <li>最多可延期3天</li>
+                                            <li>需提供相关证明</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 问题3 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <div class="q-marker">Q3</div>
+                        <div class="q-text">
+                            <h4>物品回收后如何跟踪去向？</h4>
+                            <p>了解捐赠物品的最终流向</p>
+                        </div>
+                        <div class="q-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <p>平台提供完整的物品流向跟踪系统：</p>
+                            <div class="tracking-flow">
+                                <div class="flow-step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h5>扫码查询</h5>
+                                        <p>使用确认单上的二维码，在平台"物品追踪"页面查询实时状态</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flow-step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h5>状态更新</h5>
+                                        <p>物品处理过程中，系统会推送状态更新通知</p>
+                                        <div class="status-types">
+                                            <span class="status-tag processing">处理中</span>
+                                            <span class="status-tag cleaning">清洁消毒</span>
+                                            <span class="status-tag quality">质检通过</span>
+                                            <span class="status-tag matched">匹配成功</span>
+                                            <span class="status-tag delivered">已送达</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flow-step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h5>接收反馈</h5>
+                                        <p>爱心捐赠类物品，可获取接收方的感谢反馈和照片</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 问题4 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <div class="q-marker">Q4</div>
+                        <div class="q-text">
+                            <h4>积分多久到账？如何使用？</h4>
+                            <p>环保积分相关疑问解答</p>
+                        </div>
+                        <div class="q-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <div class="points-info">
+                                <div class="points-timeline">
+                                    <h5>积分到账时间</h5>
+                                    <div class="timeline-item">
+                                        <div class="time-label">物品确认回收</div>
+                                        <div class="time-arrow">→</div>
+                                        <div class="time-value">立即</div>
+                                        <div class="time-desc">系统自动登记</div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="time-label">数据审核</div>
+                                        <div class="time-arrow">→</div>
+                                        <div class="time-value">12小时内</div>
+                                        <div class="time-desc">人工复核确认</div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="time-label">积分到账</div>
+                                        <div class="time-arrow">→</div>
+                                        <div class="time-value">24小时内</div>
+                                        <div class="time-desc">可在"我的环保"查看</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="points-usage">
+                                    <h5>积分使用途径</h5>
+                                    <div class="usage-grid">
+                                        <div class="usage-item">
+                                            <div class="usage-icon">
+                                                <i class="fas fa-truck"></i>
+                                            </div>
+                                            <div class="usage-content">
+                                                <h6>快递优惠</h6>
+                                                <p>50积分 = ¥10快递费抵扣</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="usage-item">
+                                            <div class="usage-icon">
+                                                <i class="fas fa-gift"></i>
+                                            </div>
+                                            <div class="usage-content">
+                                                <h6>兑换纪念品</h6>
+                                                <p>校园文创、环保用品等</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="usage-item">
+                                            <div class="usage-icon">
+                                                <i class="fas fa-crown"></i>
+                                            </div>
+                                            <div class="usage-content">
+                                                <h6>升级会员</h6>
+                                                <p>提升平台会员等级</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="usage-item">
+                                            <div class="usage-icon">
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <div class="usage-content">
+                                                <h6>参与评选</h6>
+                                                <p>季度环保之星评选资格</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 问题5 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <div class="q-marker">Q5</div>
+                        <div class="q-text">
+                            <h4>如有物品争议如何处理？</h4>
+                            <p>争议解决机制说明</p>
+                        </div>
+                        <div class="q-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            <p>平台提供完善的争议解决机制：</p>
+                            <div class="dispute-process">
+                                <div class="process-step">
+                                    <div class="step-header">
+                                        <div class="step-number">第一步</div>
+                                        <h5>现场拍照存档</h5>
+                                    </div>
+                                    <div class="step-content">
+                                        <p>工作人员会对有争议的物品进行多角度拍照存档，作为处理依据</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="process-step">
+                                    <div class="step-header">
+                                        <div class="step-number">第二步</div>
+                                        <h5>填写争议说明</h5>
+                                    </div>
+                                    <div class="step-content">
+                                        <p>双方填写《物品交接争议说明表》，明确争议焦点</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="process-step">
+                                    <div class="step-header">
+                                        <div class="step-number">第三步</div>
+                                        <h5>平台仲裁处理</h5>
+                                    </div>
+                                    <div class="step-content">
+                                        <p>平台仲裁委员会在3个工作日内进行调查并给出处理意见</p>
+                                        <div class="arbitration-options">
+                                            <div class="option-item">
+                                                <i class="fas fa-exchange-alt"></i>
+                                                <span>物品退回，重新评估</span>
+                                            </div>
+                                            <div class="option-item">
+                                                <i class="fas fa-coins"></i>
+                                                <span>调整积分补偿</span>
+                                            </div>
+                                            <div class="option-item">
+                                                <i class="fas fa-handshake"></i>
+                                                <span>双方协商解决</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="process-step">
+                                    <div class="step-header">
+                                        <div class="step-number">第四步</div>
+                                        <h5>执行处理结果</h5>
+                                    </div>
+                                    <div class="step-content">
+                                        <p>按照仲裁结果执行，平台监督执行情况</p>
+                                        <div class="dispute-tips">
+                                            <p><i class="fas fa-lightbulb"></i> 建议：交接时双方仔细检查确认，可有效避免争议</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 模块五：相关部门联系方式 -->
+        <section id="contact" class="content-section">
+            <div class="section-title">
+                <h2><i class="fas fa-address-book"></i> 相关部门联系方式</h2>
+                <p class="section-desc">获取帮助与支持，随时为您服务</p>
+            </div>
+
+            <div class="contact-container">
+                <!-- 咨询渠道 -->
+                <div class="contact-channels">
+                    <h3><i class="fas fa-comments"></i> 咨询渠道</h3>
+                    
+                    <div class="channel-cards">
+                        <div class="channel-card">
+                            <div class="channel-icon primary">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div class="channel-content">
+                                <h4>平台客服热线</h4>
+                                <div class="contact-detail">
+                                    <i class="fas fa-phone"></i>
+                                    <span>400-xxx-xxxx</span>
+                                </div>
+                                <div class="contact-time">
+                                    <i class="far fa-clock"></i>
+                                    <span>服务时间：8:00 - 22:00</span>
+                                </div>
+                                <div class="channel-desc">
+                                    提供预约咨询、问题解答、投诉建议等服务
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="channel-card">
+                            <div class="channel-icon secondary">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="channel-content">
+                                <h4>后勤服务中心</h4>
+                                <div class="contact-detail">
+                                    <i class="fas fa-phone"></i>
+                                    <span>校内电话：8790-xxxx</span>
+                                </div>
+                                <div class="contact-time">
+                                    <i class="far fa-clock"></i>
+                                    <span>工作时间：8:30 - 17:30</span>
+                                </div>
+                                <div class="channel-desc">
+                                    处理回收点安排、大件物品搬运等后勤事务
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="channel-card">
+                            <div class="channel-icon success">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <div class="channel-content">
+                                <h4>环保协会</h4>
+                                <div class="contact-detail">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>学生活动中心308室</span>
+                                </div>
+                                <div class="contact-time">
+                                    <i class="far fa-clock"></i>
+                                    <span>值班时间：周一至周五 18:00-21:00</span>
+                                </div>
+                                <div class="channel-desc">
+                                    志愿者协调、环保活动咨询、积分兑换指导
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="channel-card">
+                            <div class="channel-icon info">
+                                <i class="fas fa-laptop"></i>
+                            </div>
+                            <div class="channel-content">
+                                <h4>在线咨询</h4>
+                                <div class="contact-detail">
+                                    <i class="fas fa-globe"></i>
+                                    <span>平台"绿色回收"专区</span>
+                                </div>
+                                <div class="contact-time">
+                                    <i class="fas fa-bolt"></i>
+                                    <span>响应时间：平均15分钟</span>
+                                </div>
+                                <div class="channel-desc">
+                                    7×24小时在线客服，支持图片、文件传输
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 服务团队 -->
+                <div class="service-team">
+                    <h3><i class="fas fa-users"></i> 服务团队</h3>
+                    
+                    <div class="team-cards">
+                        <div class="team-card lead">
+                            <div class="team-avatar">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div class="team-info">
+                                <h4>李老师</h4>
+                                <div class="team-role">
+                                    <i class="fas fa-briefcase"></i>
+                                    <span>总负责人</span>
+                                </div>
+                                <div class="team-department">
+                                    <i class="fas fa-building"></i>
+                                    <span>后勤处</span>
+                                </div>
+                                <div class="team-responsibility">
+                                    <i class="fas fa-tasks"></i>
+                                    负责整体协调与资源调配
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="team-card coordinator">
+                            <div class="team-avatar">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="team-info">
+                                <h4>环保协会志愿服务部</h4>
+                                <div class="team-role">
+                                    <i class="fas fa-hands-helping"></i>
+                                    <span>学生协调</span>
+                                </div>
+                                <div class="team-department">
+                                    <i class="fas fa-users"></i>
+                                    <span>学生组织</span>
+                                </div>
+                                <div class="team-responsibility">
+                                    <i class="fas fa-tasks"></i>
+                                    志愿者招募、现场协调、宣传推广
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="team-card tech">
+                            <div class="team-avatar">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="team-info">
+                                <h4>平台开发组</h4>
+                                <div class="team-role">
+                                    <i class="fas fa-cogs"></i>
+                                    <span>技术支持</span>
+                                </div>
+                                <div class="team-department">
+                                    <i class="fas fa-laptop-code"></i>
+                                    <span>技术部</span>
+                                </div>
+                                <div class="team-responsibility">
+                                    <i class="fas fa-tasks"></i>
+                                    系统维护、功能优化、技术支持
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 底部信息栏（结构保留，内容留空） -->
+    <footer class="main-footer"></footer>
+
+    <script src="js/notice_detail.js"></script>
+</body>
+</html>

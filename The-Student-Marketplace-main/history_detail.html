@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>拾光长廊 - 发展历程 | 校友集市</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/archive_detail.css">
+    <link rel="stylesheet" href="css/history_detail.css"> <!-- 本页专属 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://kit.fontawesome.com/0ad2b99521.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body class="archive_page">
+
+    <!-- Box 1: 顶部导航栏 (全站统一) -->
+    <nav class="daohang">
+        <div class="daohang_wrapper">
+            <ul class="daohang_list">
+                <li class="daohang_items"><a href="index.html">首页</a></li>
+                <li class="daohang_items active"><a href="about.html">平台概况</a></li>
+                <li class="daohang_items"><a href="categories.html">商品分类</a></li>
+                <li class="daohang_items"><a href="guide.html">流转锦囊</a></li>
+                <li class="daohang_items"><a href="events.html">活动专区</a></li>
+                <li class="daohang_items"><a href="user.html">用户中心</a></li>
+            </ul>
+            <div class="nav_auth"><a href="signin.html" class="btn_nav">登录</a></div>
+        </div>
+    </nav>
+
+
+    <!-- Box 1: Hero Banner (透视长廊背景) -->
+    <header class="mission_hero">
+        <div class="hero_overlay"></div> <!-- 对应 CSS 中的蒙层 -->
+        <div class="hero_content animate__animated animate__fadeIn">
+            <span class="en_text">OUR JOURNEY</span>
+            <h1 class="elegant_title">拾光长廊 <span class="mission_seal">历程</span></h1>
+            <div class="elegant_line"></div>
+            <p>岁月如梭，足迹成卷；回首来时路，锦囊意正浓。</p>
+        </div>
+
+        <!-- 底部波浪线 (建议保留以衔接下方色块) -->
+        <div class="banner_wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C0,0,31.83,14.28,64,27.1,126.31,52,187.31,68,250.31,68c31.11,0,32.25-10.15,71.08-11.56Z"
+                    fill="#f9fbfa"></path>
+            </svg>
+        </div>
+    </header>
+
+    <main class="main_container">
+
+
+        <!-- Box 2: 简介区域 (卷轴开场风格) -->
+        <section id="jianjie_section" class="section_box jianjie_new">
+            <div class="container">
+                <div class="jianjie_baozhuang animate__animated" id="jianjieCard">
+                    <!-- 装饰性大首字 -->
+                    <div class="shou_zi">拾</div>
+                    <div class="jianjie_content">
+                        <h2 class="title_hu">从寝室构思到全校流转</h2>
+                        <div class="mei_xian"></div>
+                        <p class="jianjie_p">
+                            校友集市的故事始于一个夏夜的寝室讨论。我们发现毕业季的校门外全是“被遗弃的记忆”，于是决定用技术搭建一个锦囊，让这些美好的物件能够代代相传。
+                        </p>
+                        <div class="shiguang_yin">拾光寄语</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Box 3: 垂直时间轴 (能量生长风格) -->
+        <section id="licheng_section" class="section_box licheng_area">
+            <div class="container">
+                <!-- 模块标题 -->
+                <div class="section_title_v2">
+                    <span class="en_title">GROWTH TIMELINE</span>
+                    <h2>拾光足迹 · 岁月刻度</h2>
+                    <div class="title_decoration"><span class="dot"></span><span class="line"></span></div>
+                </div>
+
+                <div class="shiguang_zhou_box">
+                    <!-- 中心生长线 -->
+                    <div class="zhou_middle_line">
+                        <div class="zhou_progress" id="zhouLine"></div>
+                    </div>
+
+                    <!-- 节点 1 -->
+                    <div class="zhou_ka_wrap left_ka">
+                        <div class="zhou_dian_new"></div>
+                        <div class="zhou_ka">
+                            <div class="ka_header">
+                                <span class="ka_date">2025.06</span>
+                                <i class="fas fa-flag"></i>
+                            </div>
+                            <h4>拾光启航</h4>
+                            <p>团队正式组建，确定“绿色循环”核心理念，在 302 寝室敲下了第一行代码。</p>
+                        </div>
+                    </div>
+
+                    <!-- 节点 2 -->
+                    <div class="zhou_ka_wrap right_ka">
+                        <div class="zhou_dian_new"></div>
+                        <div class="zhou_ka">
+                            <div class="ka_header">
+                                <span class="ka_date">2025.09</span>
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <h4>内测上线</h4>
+                            <p>首批邀请 500 名校友参与内测，反响热烈，完成了 1200kg 的闲置流转量。</p>
+                        </div>
+                    </div>
+
+                    <!-- 节点 3 -->
+                    <div class="zhou_ka_wrap left_ka">
+                        <div class="zhou_dian_new"></div>
+                        <div class="zhou_ka">
+                            <div class="ka_header">
+                                <span class="ka_date">2025.12</span>
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h4>系统 V2.0</h4>
+                            <p>引入 AI 图像识别与 .edu 邮箱硬认证系统，为校友交易筑起一道安全锦囊。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Box 4 & 5: 重大突破点 (采用展柜折叠布局) -->
+        <section id="tupo_section" class="section_box tupo_area_new">
+            <div class="container">
+                <!-- 突破点 A -->
+                <div class="tupo_ka left_ka_new reveal">
+                    <div class="tupo_tu_wrap">
+                        <div class="tu_zhehao"></div> <!-- 动态遮罩层 -->
+                        <img
+                            src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=80">
+                        <div class="tu_label_pin">第一桶金</div>
+                    </div>
+                    <div class="tupo_wen_box">
+                        <span class="tupo_year">2025.11</span>
+                        <h3>拾光荣光 · 创业金支持</h3>
+                        <div class="wen_line"></div>
+                        <p>我们凭借“校园低碳循环方案”获得了学校创业孵化基地 5 万元的专项支持。这笔资金让我们能购买更好的服务器，并定制了第一批环保搬家纸箱。</p>
+                    </div>
+                </div>
+
+                <!-- 突破点 B -->
+                <div class="tupo_ka right_ka_new reveal">
+                    <div class="tupo_tu_wrap">
+                        <div class="tu_zhehao"></div>
+                        <img
+                            src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=800&q=80">
+                        <div class="tu_label_pin">里程碑</div>
+                    </div>
+                    <div class="tupo_wen_box">
+                        <span class="tupo_year">2026.01</span>
+                        <h3>破茧成蝶 · 万名校友见证</h3>
+                        <div class="wen_line"></div>
+                        <p>注册用户正式突破 10,000 人。那晚我们在图书馆门前合影，庆祝这个属于全校拾光者的里程碑。这证明了：流转，是校园真正的刚需。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Box 6: 数据可视化 (锦书绘卷折线版) -->
+        <section id="quxian_section" class="section_box quxian_area">
+            <div class="container">
+                <!-- 模块标题 -->
+                <div class="section_title_v2">
+                    <span class="en_title">GROWTH TRAJECTORY</span>
+                    <h2>成长曲线</h2>
+                    <div class="title_decoration"><span class="dot"></span><span class="line"></span></div>
+                    <p class="section_desc">见证从 0 到 10,000 的每一次信任飞跃。</p>
+                </div>
+
+                <div class="zhe_xian_board" id="shujuBoard">
+          
+                    <div class="wang_ge">
+                        <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+
+
+                    <svg class="svg_wrap" viewBox="0 0 800 300" preserveAspectRatio="none">
+                        <defs>
+                            <linearGradient id="areaGradient" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#0d9488" stop-opacity="0.3" />
+                                <stop offset="100%" stop-color="#0d9488" stop-opacity="0" />
+                            </linearGradient>
+                        </defs>
+
+
+                        <path class="shui_mo_area" d="M50,250 L250,180 L500,120 L750,50 L750,250 L50,250 Z"
+                            fill="url(#areaGradient)" style="opacity: 0;"></path>
+               
+                        <path class="sheng_zhang_xian" id="growthPath" d="M50,250 L250,180 L500,120 L750,50" fill="none"
+                            stroke="#f59e0b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                    <!-- 3. 动态坐标点 -->
+                    <div class="dian_group">
+                        <!-- 点 1：对应 M50,250 -->
+                        <div class="quxian_dian" style="left: 90px; top: 250px;" data-delay="0s">
+                            <div class="dian_ripple"></div>
+                            <div class="dian_label">6月<br><span class="pao_num" data-target="100">0</span></div>
+                        </div>
+                        <!-- 点 2：对应 L250,180 -->
+                        <div class="quxian_dian" style="left: 290px; top: 190px;" data-delay="0.6s">
+                            <div class="dian_ripple"></div>
+                            <div class="dian_label">9月<br><span class="pao_num" data-target="1200">0</span></div>
+                        </div>
+                        <!-- 点 3：对应 L500,120 -->
+                        <div class="quxian_dian" style="left: 500px; top: 120px;" data-delay="1.2s">
+                            <div class="dian_ripple"></div>
+                            <div class="dian_label">11月<br><span class="pao_num" data-target="4500">0</span></div>
+                        </div>
+                        <!-- 点 4：对应 L750,50 -->
+                        <div class="quxian_dian gold_node" style="left: 750px; top: 50px;" data-delay="1.8s">
+                            <div class="dian_ripple"></div>
+                            <div class="dian_label">1月<br><span class="pao_num" data-target="10000">0</span></div>
+                        </div>
+                    </div>
+                    <p class="board_bottom_text">校友活跃度与交易量实时增长趋势图</p>
+                </div>
+
+
+            </div>
+
+        </section>
+
+        <!-- Box 7: 合作伙伴矩阵 -->
+        <section class="section_box huoban_area">
+            <h2 class="area_title">合作伙伴 · 共筑锦囊</h2>
+            <div class="jinang_container" id="jinangContainer">
+                <!-- 锦囊1：校团委 -->
+                <div class="jinang" data-index="0">
+                    <div class="jinang_front">
+                        <div class="jinang_ribbon">协作</div>
+                        <i class="fas fa-university jinang_icon"></i>
+                        <div class="jinang_name">校团委</div>
+                        <p class="jinang_desc">点击展开锦囊，查看合作详情</p>
+                    </div>
+                    <div class="jinang_back">
+                        <div class="jinang_name">校团委</div>
+                        <p class="jinang_desc">作为本次"拾光流转"活动的主办方之一，校团委负责整体策划与协调，为活动提供场地与宣传支持，确保活动顺利进行。</p>
+                    </div>
+                </div>
+
+                <!-- 锦囊2：环保协会 -->
+                <div class="jinang" data-index="1">
+                    <div class="jinang_front">
+                        <div class="jinang_ribbon">绿色</div>
+                        <i class="fas fa-leaf jinang_icon"></i>
+                        <div class="jinang_name">环保协会</div>
+                        <p class="jinang_desc">点击展开锦囊，查看合作详情</p>
+                    </div>
+                    <div class="jinang_back">
+                        <div class="jinang_name">环保协会</div>
+                        <p class="jinang_desc">负责活动环保理念的推广与执行，提供物品回收与分类指导，确保"拾光流转"符合可持续发展理念。</p>
+                    </div>
+                </div>
+
+                <!-- 锦囊3：学生会 -->
+                <div class="jinang" data-index="2">
+                    <div class="jinang_front">
+                        <div class="jinang_ribbon">组织</div>
+                        <i class="fas fa-users jinang_icon"></i>
+                        <div class="jinang_name">学生会</div>
+                        <p class="jinang_desc">点击展开锦囊，查看合作详情</p>
+                    </div>
+                    <div class="jinang_back">
+                        <div class="jinang_name">学生会</div>
+                        <p class="jinang_desc">负责活动志愿者招募与管理，协调各院系参与，组织线下流转市集，确保活动覆盖全校范围。</p>
+                    </div>
+                </div>
+
+                <!-- 锦囊4：青协 -->
+                <div class="jinang" data-index="3">
+                    <div class="jinang_front">
+                        <div class="jinang_ribbon">志愿</div>
+                        <i class="fas fa-volunteer-activism jinang_icon"></i>
+                        <div class="jinang_name">青协</div>
+                        <p class="jinang_desc">点击展开锦囊，查看合作详情</p>
+                    </div>
+                    <div class="jinang_back">
+                        <div class="jinang_name">青年志愿者协会</div>
+                        <p class="jinang_desc">提供专业的志愿服务支持，负责物品登记、消毒与配送工作，确保流转过程安全、有序。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Box 8: 订阅 CTA -->
+        <section class="section_box dingyue_area_new">
+            <div class="open_book_container">
+                <!-- 书本左页 (书脊和内页) -->
+                <div class="book_left_page">
+                    <div class="book_spine_new">
+                        <div class="spine_title">拾光<br>流转</div>
+                        <div class="spine_decoration"></div>
+                    </div>
+                    <div class="book_left_content">
+                        <div class="book_page_decoration">
+                            <span class="page_corner"></span>
+                            <span class="page_number">1</span>
+                        </div>
+                        <h3 class="book_left_title">拾光流转·周报</h3>
+                        <div class="book_left_line"></div>
+                        <ul class="weekly_features">
+                            <li><i class="fas fa-seedling"></i> 每周环保数据报告</li>
+                            <li><i class="fas fa-recycle"></i> 热门流转物品TOP10</li>
+                            <li><i class="fas fa-heart"></i> 温情流转故事分享</li>
+                            <li><i class="fas fa-calendar-star"></i> 下周活动预告</li>
+                        </ul>
+                        <div class="book_seal">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>校园专属</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 书本右页 (订阅表单) -->
+                <div class="book_right_page">
+                    <div class="book_page_decoration">
+                        <span class="page_corner"></span>
+                        <span class="page_number">2</span>
+                    </div>
+
+                    <h3 class="book_right_title">订阅续章</h3>
+                    <div class="book_right_line"></div>
+
+                    <p class="book_description">订阅拾光流转周报，每周获取最新校园流转动态、环保数据报告、特色物品故事以及即将到来的活动信息。让记忆的传递有迹可循，共同见证每一次温暖的传递。
+                    </p>
+
+                    <div class="book_subscribe_form">
+                        <div class="form_group">
+                            <label for="emailInputNew"><i class="fas fa-envelope"></i> 校园邮箱</label>
+                            <input type="email" id="emailInputNew" placeholder="username@school.edu">
+                            <div class="form_tip">仅支持校园邮箱(.edu)订阅</div>
+                        </div>
+
+                        <div class="form_group">
+                            <label for="frequencySelect"><i class="fas fa-clock"></i> 接收频率</label>
+                            <select id="frequencySelect">
+                                <option value="weekly">每周一次</option>
+                                <option value="biweekly">每两周一次</option>
+                                <option value="monthly">每月精选</option>
+                            </select>
+                        </div>
+
+                        <button class="book_subscribe_btn" id="subscribeBtnNew">
+                            <i class="fas fa-feather-alt"></i> 确认订阅
+                        </button>
+
+                        <div class="book_privacy_note">
+                            <i class="fas fa-lock"></i> 我们承诺严格保护您的隐私，仅用于发送周报
+                        </div>
+                    </div>
+
+                    <div class="success_message_new" id="successMessageNew">
+                        <div class="success_icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h4>订阅成功！</h4>
+                        <p>订阅确认邮件已发送至您的邮箱，请查收并激活订阅。</p>
+                        <p class="success_tip">下周一起，您将收到第一份《拾光流转周报》</p>
+                    </div>
+                </div>
+
+                <!-- 书本中间的装订线效果 -->
+                <div class="book_binding"></div>
+                <div class="book_binding_shadow"></div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer_area">
+        <div class="footer_wrapper">
+            <div class="bottom_bar">
+                <p>&copy; 2026 Campus Market | 校园毕业物品流转平台团队 | <a href="#">服务条款</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/history_detail.js"></script>
+</body>
+
+</html>

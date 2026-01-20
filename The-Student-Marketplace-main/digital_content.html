@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>极客仓库·数码续篇 - 校园数码产品流转平台</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/archive_detail.css">
+    <link rel="stylesheet" href="css/digital_content.css"> <!-- 本页专属 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://kit.fontawesome.com/0ad2b99521.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- 图表库 -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script> <!-- 粒子效果 -->
+</head>
+<body class="digital_page">
+    
+    <!-- 顶部导航栏 (与书籍页面保持一致) -->
+    <nav class="daohang">
+        <div class="daohang_wrapper">
+            <ul class="daohang_list">
+                <li class="daohang_items"><a href="index.html">首页</a></li>
+                <li class="daohang_items"><a href="about.html">平台概况</a></li>
+                <li class="daohang_items active"><a href="categories.html">商品分类</a></li>
+                <li class="daohang_items"><a href="guide.html">流转锦囊</a></li>
+                <li class="daohang_items"><a href="user.html">用户中心</a></li>
+            </ul>
+            <div class="nav_auth"><a href="signin.html" class="btn_nav">登录</a></div>
+        </div>
+    </nav>
+
+    <!-- Box 1: Hero Banner (性能参数盒 - 数码风格) -->
+    <header class="digital_hero" id="performanceBanner">
+        <div class="hero_overlay"></div>
+        <div class="hero_content animate__animated animate__fadeIn">
+            <span class="en_tag">DIGITAL LEGACY</span>
+            <h1 class="elegant_title">极客仓库 <span class="mission_seal">数码</span></h1>
+            <div class="elegant_line"></div>
+            <p class="elegant_subtitle">参数透明 · 性能保障 · 让科技在校园中智慧流转</p>
+        </div>
+        <!-- 数码风格装饰 -->
+        <div class="digital_wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C0,0,31.83,14.28,64,27.1,126.31,52,187.31,68,250.31,68c31.11,0,32.25-10.15,71.08-11.56Z"
+                    fill="#f9fbfa"></path>
+            </svg>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <!-- 模块2：成色分级盒 -->
+        <section class="module condition-box" id="module2">
+            <h2 class="module-title"><i class="fas fa-layer-group"></i> 【成色分级盒】</h2>
+            <div class="condition-levels">
+                <div class="condition-card" data-level="99" data-tooltip="仅拆封，几乎全新">
+                    <div class="condition-badge">99新</div>
+                    <div class="condition-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="condition-name">仅拆封级</h3>
+                    <p class="condition-desc">包装配件齐全，外观无任何使用痕迹</p>
+                    <div class="condition-count">24件</div>
+                </div>
+                <div class="condition-card" data-level="95" data-tooltip="爱护有加，轻微使用痕迹">
+                    <div class="condition-badge">95新</div>
+                    <div class="condition-icon">
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3 class="condition-name">爱护级</h3>
+                    <p class="condition-desc">轻微使用痕迹，功能完全正常</p>
+                    <div class="condition-count">156件</div>
+                </div>
+                <div class="condition-card" data-level="80" data-tooltip="正常使用痕迹，性能良好">
+                    <div class="condition-badge">80新</div>
+                    <div class="condition-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="condition-name">战斗级</h3>
+                    <p class="condition-desc">正常使用痕迹，性能完好</p>
+                    <div class="condition-count">89件</div>
+                </div>
+            </div>
+            <div class="condition-details" id="conditionDetails">
+                <!-- 详细信息将通过JS动态显示 -->
+                <div class="detail-content">
+                    <h4>成色分级标准</h4>
+                    <p>点击上方卡片查看不同成色级别的详细标准...</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 模块3：视频验货盒 -->
+        <section class="module video-box" id="module3">
+            <h2 class="module-title"><i class="fas fa-video"></i> 【视频验货盒】</h2>
+            <div class="video-container">
+                <div class="video-preview" id="videoPreview">
+                    <div class="video-placeholder">
+                        <i class="fas fa-play-circle"></i>
+                        <p>点击下方设备预览开机测试视频</p>
+                    </div>
+                    <div class="video-player" id="videoPlayer" style="display: none;">
+                        <video id="deviceVideo" controls>
+                            <source src="https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" type="video/mp4">
+                            您的浏览器不支持视频播放
+                        </video>
+                        <div class="video-info">
+                            <h4 id="videoTitle">设备开机测试</h4>
+                            <p id="videoDesc">学长录制 · 屏幕无亮点测试 · 功能全面检测</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="device-list">
+                    <div class="device-item active" data-video="1" data-title="iPad Pro 2022开机测试" data-desc="屏幕无亮点，触控灵敏，电池健康度98%">
+                        <div class="device-icon">
+                            <i class="fas fa-tablet-alt"></i>
+                        </div>
+                        <div class="device-info">
+                            <h4>iPad Pro 2022</h4>
+                            <p>屏幕测试 · 3分钟</p>
+                        </div>
+                        <div class="play-btn">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="device-item" data-video="2" data-title="MacBook Air M2性能测试" data-desc="开机速度、键盘测试、接口功能演示">
+                        <div class="device-icon">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <div class="device-info">
+                            <h4>MacBook Air M2</h4>
+                            <p>性能测试 · 5分钟</p>
+                        </div>
+                        <div class="play-btn">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="device-item" data-video="3" data-title="显示器无坏点检测" data-desc="纯色背景测试，确保屏幕无坏点、无亮点">
+                        <div class="device-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <div class="device-info">
+                            <h4>27寸4K显示器</h4>
+                            <p>屏幕检测 · 2分钟</p>
+                        </div>
+                        <div class="play-btn">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 模块4：配件清单盒 -->
+        <section class="module accessories-box" id="module4">
+            <h2 class="module-title"><i class="fas fa-box-open"></i> 【配件清单盒】</h2>
+            <div class="accessories-selector">
+                <div class="product-preview">
+                    <div class="product-3d" id="product3d">
+                        <div class="product-base">
+                            <div class="product-screen"></div>
+                            <div class="product-body"></div>
+                        </div>
+                        <!-- 配件将动态添加到此处 -->
+                    </div>
+                </div>
+                <div class="accessories-list">
+                    <div class="accessory-item" data-accessory="box" data-tooltip="原装包装盒">
+                        <div class="accessory-checkbox">
+                            <input type="checkbox" id="box" checked>
+                            <label for="box"></label>
+                        </div>
+                        <div class="accessory-icon">
+                            <i class="fas fa-box"></i>
+                        </div>
+                        <div class="accessory-info">
+                            <h4>原装包装盒</h4>
+                            <p>完整原盒，保护配件</p>
+                        </div>
+                    </div>
+                    <div class="accessory-item" data-accessory="charger" data-tooltip="原装充电器+数据线">
+                        <div class="accessory-checkbox">
+                            <input type="checkbox" id="charger" checked>
+                            <label for="charger"></label>
+                        </div>
+                        <div class="accessory-icon">
+                            <i class="fas fa-plug"></i>
+                        </div>
+                        <div class="accessory-info">
+                            <h4>原装充电套装</h4>
+                            <p>20W快充，原装数据线</p>
+                        </div>
+                    </div>
+                    <div class="accessory-item" data-accessory="screenProtector" data-tooltip="已贴高清钢化膜">
+                        <div class="accessory-checkbox">
+                            <input type="checkbox" id="screenProtector">
+                            <label for="screenProtector"></label>
+                        </div>
+                        <div class="accessory-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="accessory-info">
+                            <h4>已贴高清膜</h4>
+                            <p>钢化玻璃膜，防刮防摔</p>
+                        </div>
+                    </div>
+                    <div class="accessory-item" data-accessory="adapter" data-tooltip="Type-C转接头">
+                        <div class="accessory-checkbox">
+                            <input type="checkbox" id="adapter">
+                            <label for="adapter"></label>
+                        </div>
+                        <div class="accessory-icon">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <div class="accessory-info">
+                            <h4>转接头</h4>
+                            <p>Type-C转多种接口</p>
+                        </div>
+                    </div>
+                    <div class="accessory-item" data-accessory="case" data-tooltip="保护壳">
+                        <div class="accessory-checkbox">
+                            <input type="checkbox" id="case" checked>
+                            <label for="case"></label>
+                        </div>
+                        <div class="accessory-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="accessory-info">
+                            <h4>保护壳</h4>
+                            <p>防摔硅胶保护套</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accessories-summary" id="accessoriesSummary">
+                <h4>配件清单汇总</h4>
+                <p>已选择 <span id="selectedCount">3</span> 项配件</p>
+                <div class="selected-items" id="selectedItems">
+                    <!-- 动态生成已选配件 -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- 模块5：价格走势盒 -->
+        <section class="module price-trend-box" id="module5">
+            <h2 class="module-title"><i class="fas fa-chart-line"></i> 【价格走势盒】</h2>
+            <div class="trend-controls">
+                <div class="device-selector">
+                    <select id="deviceSelect">
+                        <option value="ipad">iPad Pro 11寸</option>
+                        <option value="macbook">MacBook Air M2</option>
+                        <option value="display">27寸4K显示器</option>
+                        <option value="iphone">iPhone 14 Pro</option>
+                    </select>
+                </div>
+                <div class="time-range">
+                    <button class="time-btn active" data-range="7">近7天</button>
+                    <button class="time-btn" data-range="30">近30天</button>
+                    <button class="time-btn" data-range="90">近90天</button>
+                </div>
+            </div>
+            <div class="trend-chart-container">
+                <canvas id="priceTrendChart"></canvas>
+            </div>
+            <div class="trend-info">
+                <div class="trend-stat">
+                    <h4>成交均价</h4>
+                    <p class="trend-price" id="avgPrice">¥4,280</p>
+                </div>
+                <div class="trend-stat">
+                    <h4>价格波动</h4>
+                    <p class="trend-change" id="priceChange">+2.3%</p>
+                </div>
+                <div class="trend-stat">
+                    <h4>成交量</h4>
+                    <p class="trend-volume" id="tradeVolume">42件</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 模块6：主要展架盒 -->
+        <section class="module showcase-box" id="module6">
+            <h2 class="module-title"><i class="fas fa-th-large"></i> 【主要展架盒】</h2>
+            <div class="product-showcase">
+                <div class="showcase-item">
+                    <div class="showcase-badges">
+                        <span class="badge-clean">已清理私有数据</span>
+                        <span class="badge-test">支持现场试机</span>
+                    </div>
+                    <div class="showcase-image" data-image="ipad">
+                        <div class="image-overlay">
+                            <button class="view-3d"><i class="fas fa-cube"></i> 3D查看</button>
+                        </div>
+                    </div>
+                    <div class="showcase-info">
+                        <h3>iPad Pro 11寸 2022款</h3>
+                        <p class="showcase-specs">M2芯片 · 128GB · 蜂窝版</p>
+                        <div class="showcase-price">
+                            <span class="price-now">¥5,299</span>
+                            <span class="price-original">¥7,999</span>
+                        </div>
+                        <div class="showcase-actions">
+                            <button class="btn-detail"><i class="fas fa-search"></i> 查看详情</button>
+                            <button class="btn-contact"><i class="fas fa-comment"></i> 联系卖家</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="showcase-item">
+                    <div class="showcase-badges">
+                        <span class="badge-clean">已恢复出厂设置</span>
+                        <span class="badge-test">支持现场试机</span>
+                    </div>
+                    <div class="showcase-image" data-image="macbook">
+                        <div class="image-overlay">
+                            <button class="view-3d"><i class="fas fa-cube"></i> 3D查看</button>
+                        </div>
+                    </div>
+                    <div class="showcase-info">
+                        <h3>MacBook Air M2 2022</h3>
+                        <p class="showcase-specs">16GB RAM · 512GB SSD · 金色</p>
+                        <div class="showcase-price">
+                            <span class="price-now">¥8,499</span>
+                            <span class="price-original">¥10,999</span>
+                        </div>
+                        <div class="showcase-actions">
+                            <button class="btn-detail"><i class="fas fa-search"></i> 查看详情</button>
+                            <button class="btn-contact"><i class="fas fa-comment"></i> 联系卖家</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 模块7：转手原因盒 -->
+        <section class="module reason-box" id="module7">
+            <h2 class="module-title"><i class="fas fa-comment-alt"></i> 【转手原因盒】</h2>
+            <div class="reasons-container">
+                <div class="reason-item" data-reason="upgrade">
+                    <div class="reason-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="reason-content">
+                        <h4>换了新款</h4>
+                        <p>"M3芯片出了，旧款光荣退役，寻找有缘人"</p>
+                        <span class="reason-tag">设备升级</span>
+                    </div>
+                </div>
+                <div class="reason-item" data-reason="graduation">
+                    <div class="reason-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="reason-content">
+                        <h4>考研结束</h4>
+                        <p>"考研成功上岸，陪伴一年的平板完成使命"</p>
+                        <span class="reason-tag">学业完成</span>
+                    </div>
+                </div>
+                <div class="reason-item" data-reason="gift">
+                    <div class="reason-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <div class="reason-content">
+                        <h4>生日礼物重复</h4>
+                        <p>"收到两份同样的礼物，转让一份给需要的同学"</p>
+                        <span class="reason-tag">礼物转让</span>
+                    </div>
+                </div>
+                <div class="reason-item" data-reason="needmoney">
+                    <div class="reason-icon">
+                        <i class="fas fa-piggy-bank"></i>
+                    </div>
+                    <div class="reason-content">
+                        <h4>急需用钱</h4>
+                        <p>"实习需要资金周转，忍痛转让爱机"</p>
+                        <span class="reason-tag">资金周转</span>
+                    </div>
+                </div>
+            </div>
+            <div class="reason-animation" id="reasonAnimation">
+                <!-- 转手原因动画展示 -->
+                <div class="floating-reason" id="floatingReason">
+                    <div class="floating-content">
+                        <i class="fas fa-sync-alt"></i>
+                        <p>设备正在校园中流转...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 模块8：求购公告盒 -->
+        <section class="module wanted-box" id="module8">
+            <h2 class="module-title"><i class="fas fa-bullhorn"></i> 【求购公告盒】</h2>
+            <div class="wanted-container">
+                <div class="wanted-posts" id="wantedPosts">
+                    <!-- 求购信息将动态生成 -->
+                </div>
+                <div class="wanted-form">
+                    <h4>发布求购信息</h4>
+                    <div class="form-group">
+                        <input type="text" id="wantedItem" placeholder="我想求购..." maxlength="30">
+                        <div class="char-count"><span id="charCount">0</span>/30</div>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="wantedDetail" placeholder="具体要求（如型号、预算、成色要求等）..." rows="3"></textarea>
+                    </div>
+                    <button class="btn-post" id="postWanted">
+                        <i class="fas fa-paper-plane"></i> 发布求购
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p class="footer-text">© 2023 极客仓库·数码续篇 - 校园数码产品流转平台</p>
+            <p class="footer-text">让科技在校园中流动，让每一台设备都找到新的主人</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript文件 -->
+    <script src="js/digital_content.js"></script>
+</body>
+</html>

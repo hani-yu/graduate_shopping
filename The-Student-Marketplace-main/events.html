@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>活动专区 - 校友集市</title>
+    <link rel="stylesheet" href="css/style.min.css"> <!-- 引用全局样式 -->
+    <link rel="stylesheet" href="css/events.css"> <!-- 引用本页专用样式 -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <!-- 顶部导航栏 -->
+    <nav class="daohang">
+        <div class="daohang_wrapper">
+            <ul class="daohang_list">
+                <li class="daohang_items"><a href="index.html">首页</a></li>
+                <li class="daohang_items dropdown"><a href="about.html">平台概况</a></li>
+                <li class="daohang_items dropdown"><a href="categories.html">商品分类</a></li>
+                <li class="daohang_items dropdown"><a href="guide.html">流转锦囊</a></li>
+                <li class="daohang_items dropdown active">
+                    <a href="events.html">活动专区</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="events.html#flashsale">闪购活动</a></li>
+                        <li><a href="events.html#giveaway">赠品活动</a></li>
+                        <li><a href="events.html#exchange">物品交换</a></li>
+                        <li><a href="events.html#contest">学生挑战赛</a></li>
+                        <li><a href="events.html#announcement">活动公告</a></li>
+                    </ul>
+                </li>
+                <li class="daohang_items"><a href="user.html">用户中心</a></li>
+            </ul>
+            <div class="nav_auth">
+                <a href="signin.html" class="btn_nav">登录</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner -->
+    <header class="events_banner">
+        <!-- 1. 动态粒子背景 -->
+        <canvas id="eventsCanvas"></canvas>
+
+        <!-- 2. 背景装饰：漂浮的活动元素 -->
+        <div class="events_floating_elements">
+            <i class="fas fa-ticket-alt icon_1"></i> <!-- 门票 -->
+            <i class="fas fa-gift icon_2"></i> <!-- 礼品 -->
+            <i class="fas fa-star icon_3"></i> <!-- 热门 -->
+            <i class="fas fa-stopwatch icon_4"></i> <!-- 秒杀/限时 -->
+        </div>
+
+        <!-- 3. 主体内容层 (带视差效果) -->
+        <div class="events_banner_content" id="eventsScene">
+            <div class="events_text_group">
+                <!-- 核心标题：延续锦囊感 -->
+                <h1 class="elegant_title">
+                    活动专区
+                    <span class="events_seal">活动</span>
+                </h1>
+
+                <!-- 装饰线条 -->
+                <div class="elegant_line"></div>
+
+                <!-- 文雅副标题 -->
+                <p class="elegant_subtitle">
+                    聚首校友集市，共享流转盛筵；<br>
+                    集四方优惠锦囊，绘锦绣校园生活。
+                </p>
+
+                <!-- 功能按钮 -->
+                <div class="elegant_btns">
+                    <a href="#flashsale" class="btn_main">参与秒杀</a>
+                    <a href="#giveaway" class="btn_sub">领取赠品</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. 滚动提示 -->
+        <div class="scroll_down_wrapper">
+            <div class="mouse_icon">
+                <div class="wheel"></div>
+            </div>
+        </div>
+
+        <!-- 5. 底部波浪线 (保持全站统一) -->
+        <div class="banner_wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C0,0,31.83,14.28,64,27.1,126.31,52,187.31,68,250.31,68c31.11,0,32.25-10.15,71.08-11.56Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
+    </header>
+
+    <main class="content_wrapper">
+        <!-- Box 1: 热门闪购 -->
+        <section id="flashsale" class="section_box flashsale_modern">
+            <div class="container">
+                <!-- 标题区域 (保持与流转锦囊页风格统一) -->
+                <div class="section_title_v2">
+                    <span class="en_title">LIMITED FLASH SALE</span>
+                    <h2>热门闪购 · 限时秒杀</h2>
+                    <a href="sale_detail.html" class="mini_explore_tag" id="flashsale_rule_btn">
+                        <span>查看规则</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+
+                    <p class="section_desc">毕业季回馈，精选好物低至一折，手慢无！</p>
+                    <div class="title_decoration">
+                        <span class="dot"></span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+
+                <div class="flash_grid">
+                    <!-- 闪购卡片 1 -->
+                    <div class="flash_card animate__animated animate__fadeInUp">
+                        <div class="flash_img_wrapper">
+                            <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=600" alt="Item">
+                            <div class="discount_tag">2.5折</div>
+                            <div class="timer_overlay">
+                                <span class="timer_icon"><i class="fas fa-stopwatch"></i></span>
+                                <span class="countdown" data-time="2026-01-10 20:00:00">00:00:00</span>
+                            </div>
+                        </div>
+                        <div class="flash_info">
+                            <h3>考研党必备：iPad Pro (9成新)</h3>
+                            <p>内含全套学霸网课资料，已贴类纸膜。</p>
+                            <div class="price_row">
+                                <span class="new_price">¥2499</span>
+                                <span class="old_price">¥4200</span>
+                            </div>
+                            <div class="stock_status">
+                                <div class="stock_header">
+                                    <span>抢购进度</span>
+                                    <span>仅剩 3 台</span>
+                                </div>
+                                <div class="stock_bar">
+                                    <div class="fill" style="width: 85%;"></div>
+                                </div>
+                            </div>
+                            <button class="flash_btn">立即抢购</button>
+                        </div>
+                    </div>
+
+                    <!-- 闪购卡片 2 -->
+                    <div class="flash_card animate__animated animate__fadeInUp" style="animation-delay:0.1s;">
+                        <div class="flash_img_wrapper">
+                            <img src="https://images.unsplash.com/photo-1595225476474-87563907a212?q=80&w=600"
+                                alt="Item">
+                            <div class="discount_tag">1.2折</div>
+                            <div class="timer_overlay">
+                                <span class="timer_icon"><i class="fas fa-stopwatch"></i></span>
+                                <span class="countdown" data-time="2026-01-12 18:00:00">00:00:00</span>
+                            </div>
+                        </div>
+                        <div class="flash_info">
+                            <h3>宿舍收纳神器：多层置物架</h3>
+                            <p>铝合金材质，毕业搬运超方便，仅用半年。</p>
+                            <div class="price_row">
+                                <span class="new_price">¥19.9</span>
+                                <span class="old_price">¥89</span>
+                            </div>
+                            <div class="stock_status">
+                                <div class="stock_header">
+                                    <span>抢购进度</span>
+                                    <span>仅剩 12 件</span>
+                                </div>
+                                <div class="stock_bar">
+                                    <div class="fill" style="width: 60%;"></div>
+                                </div>
+                            </div>
+                            <button class="flash_btn">立即抢购</button>
+                        </div>
+                    </div>
+
+                    <!-- 闪购卡片 3 -->
+                    <div class="flash_card animate__animated animate__fadeInUp" style="animation-delay:0.2s;">
+                        <div class="flash_img_wrapper">
+                            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=600"
+                                alt="Item">
+                            <div class="discount_tag">3.5折</div>
+                            <div class="timer_overlay">
+                                <span class="timer_icon"><i class="fas fa-stopwatch"></i></span>
+                                <span class="countdown" data-time="2026-01-09 12:00:00">00:00:00</span>
+                            </div>
+                        </div>
+                        <div class="flash_info">
+                            <h3>降噪耳麦：图书馆复习神物</h3>
+                            <p>专业级降噪，学长忍痛转让，成色极佳。</p>
+                            <div class="price_row">
+                                <span class="new_price">¥399</span>
+                                <span class="old_price">¥1299</span>
+                            </div>
+                            <div class="stock_status">
+                                <div class="stock_header">
+                                    <span>抢购进度</span>
+                                    <span>仅剩 1 件</span>
+                                </div>
+                                <div class="stock_bar">
+                                    <div class="fill" style="width: 95%;"></div>
+                                </div>
+                            </div>
+                            <button class="flash_btn hot">最后机会</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Box 2: 赠品活动 -->
+        <section id="giveaway" class="section_box giveaway_modern">
+            <div class="container">
+                <!-- 标题区域：颜色已适配深绿体系 -->
+                <div class="section_title_v2">
+                    <span class="en_title">GRADUATION GIFTS</span>
+                    <h2>锦囊馈赠 · 毕业礼遇</h2>
+
+                    <a href="gift_detail.html" class="mini_explore_tag" id="flashsale_rule_btn">
+                        <span>查看规则</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+
+                    <p class="section_desc">每一份流转的闲置，都值得一份专属的毕业纪念。</p>
+                    <div class="title_decoration">
+                        <span class="dot"></span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+
+                <div class="giveaway_grid">
+                    <!-- 赠品卡片 1 -->
+                    <div class="gift_card animate__animated animate__fadeInUp">
+                        <div class="gift_cover">
+                            <div class="gift_icon"><i class="fas fa-box-open"></i></div>
+                            <h3>毕业寄送礼包</h3>
+                            <p>限时免费申领</p>
+                        </div>
+                        <div class="gift_content">
+                            <h4>流转助力包</h4>
+                            <p>内含：加厚纸箱×3、气泡膜×1卷、密封胶带×1。助你轻松处理大件行李。</p>
+                            <div class="gift_meta">剩余：156 份</div>
+                            <button class="claim_gift_btn">点击拆开</button>
+                        </div>
+                    </div>
+
+                    <!-- 赠品卡片 2 -->
+                    <div class="gift_card animate__animated animate__fadeInUp" style="animation-delay: 0.1s;">
+                        <div class="gift_cover">
+                            <div class="gift_icon"><i class="fas fa-medal"></i></div>
+                            <h3>环保传承勋章</h3>
+                            <p>校友专属纪念</p>
+                        </div>
+                        <div class="gift_content">
+                            <h4>循环先锋纪念章</h4>
+                            <p>成功流转5件以上物品的校友，可获赠定制金属勋章一枚，镌刻毕业寄语。</p>
+                            <div class="gift_meta">已发：2.4k 枚</div>
+                            <button class="claim_gift_btn">申请领取</button>
+                        </div>
+                    </div>
+
+                    <!-- 赠品卡片 3 -->
+                    <div class="gift_card animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+                        <div class="gift_cover">
+                            <div class="gift_icon"><i class="fas fa-scroll"></i></div>
+                            <h3>学霸笔记锦囊</h3>
+                            <p>知识共享福利</p>
+                        </div>
+                        <div class="gift_content">
+                            <h4>全学科电子锦囊</h4>
+                            <p>汇集往届优秀学长学霸笔记PDF全集，发布任意闲置即可免费解锁下载权限。</p>
+                            <div class="gift_meta">无限量 供应</div>
+                            <button class="claim_gift_btn">立即解锁</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Box 3: 物品交换 -->
+        <section id="exchange" class="section_box exchange_modern">
+            <div class="container">
+                <!-- 标题区域：深绿配色 -->
+                <div class="section_title_v2">
+                    <span class="en_title">BARTER ECOSYSTEM</span>
+                    <h2>以物易物 · 缘分交换</h2>
+                    <p class="section_desc">非金钱的价值流转，让旧物在交换中寻找新主人。</p>
+                    <div class="title_decoration">
+                        <span class="dot"></span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+
+                <div class="exchange_grid">
+                    <!-- 交换项 1 -->
+                    <div class="exchange_card" data-aos="fade-up">
+                        <div class="swap_visual">
+                            <div class="item have">
+                                <i class="fas fa-book"></i>
+                                <span>考研数学</span>
+                            </div>
+                            <div class="swap_icon">
+                                <i class="fas fa-sync-alt"></i>
+                            </div>
+                            <div class="item want">
+                                <i class="fas fa-pen-nib"></i>
+                                <span>雅思真题</span>
+                            </div>
+                        </div>
+                        <div class="exchange_info">
+                            <h3>学术资料互换</h3>
+                            <p>“上岸学姐诚意交换，希望换取雅思相关备考资料。”</p>
+                            <div class="user_tag">来自：经管学院 · 苏同学</div>
+                            <!-- <button class="interest_btn">我有意向</button> -->
+                            <a href="exchange_detail.html" class="interest_btn">我有意向</a>
+
+                        </div>
+                    </div>
+
+                    <!-- 交换项 2 -->
+                    <div class="exchange_card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="swap_visual">
+                            <div class="item have">
+                                <i class="fas fa-fan"></i>
+                                <span>手持风扇</span>
+                            </div>
+                            <div class="swap_icon">
+                                <i class="fas fa-sync-alt"></i>
+                            </div>
+                            <div class="item want">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>充电台灯</span>
+                            </div>
+                        </div>
+                        <div class="exchange_info">
+                            <h3>宿舍好物匹配</h3>
+                            <p>“毕业清仓，闲置风扇换一个能调光的台灯，成色要新。”</p>
+                            <div class="user_tag">来自：信息学院 · 王同学</div>
+                            <button class="interest_btn">我也想换</button>
+                        </div>
+                    </div>
+
+                    <!-- 交换项 3 -->
+                    <div class="exchange_card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="swap_visual">
+                            <div class="item have">
+                                <i class="fas fa-keyboard"></i>
+                                <span>机械键盘</span>
+                            </div>
+                            <div class="swap_icon">
+                                <i class="fas fa-sync-alt"></i>
+                            </div>
+                            <div class="item want">
+                                <i class="fas fa-headphones"></i>
+                                <span>降噪耳机</span>
+                            </div>
+                        </div>
+                        <div class="exchange_info">
+                            <h3>数码外设接力</h3>
+                            <p>“青轴换个降噪耳机，图书馆复习太吵了，补差价亦可。”</p>
+                            <div class="user_tag">来自：艺术学院 · 李同学</div>
+                            <button class="interest_btn">私聊匹配</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Box 4: 学生挑战赛 -->
+        <!-- <section class="box contest">
+            <h2>学生挑战赛</h2>
+            <div class="grid_layout">
+                <div class="card"><h3>校园跑步赛</h3></div>
+                <div class="card"><h3>编程挑战赛</h3></div>
+            </div>
+        </section> -->
+
+        <!-- Box 4: 学生挑战赛 (流转达人专版) -->
+        <section id="contest" class="section_box contest_modern">
+            <div class="container">
+                <!-- 标题区域：深绿体系 -->
+                <div class="section_title_v2">
+                    <span class="en_title">CIRCULATION CHALLENGE</span>
+                    <h2>流转挑战 · 环保先锋</h2>
+                    <p class="section_desc">以竞技之名，赋旧物新生。参与挑战赢取毕业季专属大奖。</p>
+                    <div class="title_decoration">
+                        <span class="dot"></span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+
+                <div class="contest_grid">
+                    <!-- 挑战 1: 绿色流转挑战赛 -->
+                    <div class="contest_card" data-tilt>
+                        <div class="card_header">
+                            <div class="contest_tag hot">进行中</div>
+                            <div class="prize_pool">奖池：<span class="gold">¥2000</span></div>
+                        </div>
+                        <div class="contest_main">
+                            <div class="contest_icon"><i class="fas fa-recycle"></i></div>
+                            <h3>绿色循环先锋赛</h3>
+                            <p>在毕业季期间，累计流转成功件数最多的校友，将获得“绿色传承之星”称号及奖金。</p>
+                            <div class="participation_info">
+                                <div class="progress_text">
+                                    <span>当前参与：1.2k 人</span>
+                                    <span>目标：2k</span>
+                                </div>
+                                <div class="progress_bar">
+                                    <div class="fill" style="width: 65%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <button class="join_btn">立即参赛</button> -->
+                        <!-- <a href="challenge_detail.html" class="join_btn">立即参赛</a> -->
+
+                        <button class="join_btn" id="joinBtn">立即参赛</button>
+
+                        <script>
+                            document.getElementById("joinBtn").addEventListener("click", function () {
+                                window.location.href = "challenge_detail.html";
+                            });
+                        </script>
+
+
+                    </div>
+
+                    <!-- 挑战 2: 闲置改造创意赛 -->
+                    <div class="contest_card" data-tilt>
+                        <div class="card_header">
+                            <div class="contest_tag new">新开启</div>
+                            <div class="prize_pool">奖池：<span class="gold">定制周边</span></div>
+                        </div>
+                        <div class="contest_main">
+                            <div class="contest_icon"><i class="fas fa-tools"></i></div>
+                            <h3>“变废为宝”改造赛</h3>
+                            <p>上传你对购买/领取的旧物进行二次创作的照片。用创意让闲置物品焕发第二次生命。</p>
+                            <div class="participation_info">
+                                <div class="progress_text">
+                                    <span>当前参与：480 人</span>
+                                    <span>目标：1k</span>
+                                </div>
+                                <div class="progress_bar">
+                                    <div class="fill" style="width: 48%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="join_btn">提交作品</button>
+                    </div>
+
+                    <!-- 挑战 3: 毕业锦囊故事赛 -->
+                    <div class="contest_card" data-tilt>
+                        <div class="card_header">
+                            <div class="contest_tag">筹备中</div>
+                            <div class="prize_pool">奖池：<span class="gold">荣誉勋章</span></div>
+                        </div>
+                        <div class="contest_main">
+                            <div class="contest_icon"><i class="fas fa-feather-alt"></i></div>
+                            <h3>旧物物语故事赛</h3>
+                            <p>每一件闲置都有一个故事。为你的商品撰写一段动人的回忆或锦囊建议，赢取高额积分。</p>
+                            <div class="participation_info">
+                                <div class="progress_text">
+                                    <span>即将开启</span>
+                                    <span>关注：2.1k</span>
+                                </div>
+                                <div class="progress_bar">
+                                    <div class="fill" style="width: 0%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="join_btn disabled">敬请期待</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="calendar_announcement_wrapper">
+            <!-- Box 6: 活动日历 (流转周历版) -->
+            <section id="calendar" class="section_box calendar_modern">
+                <div class="section_title_v2">
+                    <span class="en_title">CIRCULATION SCHEDULE</span>
+                    <h2>流转日程 · 本周看点</h2>
+                    <div class="title_decoration">
+                        <span class="dot"></span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+
+                <div class="calendar_grid_v2">
+                    <!-- 周一 -->
+                    <div class="calendar_day active">
+                        <div class="day_header">12<span>MON</span></div>
+                        <div class="day_body">
+                            <div class="event_tag sale">闪购</div>
+                            <p>数码产品<br>特惠秒杀</p>
+                        </div>
+                    </div>
+                    <!-- 周二 -->
+                    <div class="calendar_day">
+                        <div class="day_header">13<span>TUE</span></div>
+                        <div class="day_body">
+                            <div class="event_tag gift">领赠品</div>
+                            <p>搬家纸箱<br>免费发放</p>
+                        </div>
+                    </div>
+                    <!-- 周三 -->
+                    <div class="calendar_day">
+                        <div class="day_header">14<span>WED</span></div>
+                        <div class="day_body">
+                            <div class="event_tag swap">交换</div>
+                            <p>考研资料<br>缘分互换</p>
+                        </div>
+                    </div>
+                    <!-- 周四 -->
+                    <div class="calendar_day today">
+                        <div class="day_header">15<span>THU</span></div>
+                        <div class="day_body">
+                            <div class="event_tag contest">挑战赛</div>
+                            <p>流转达人<br>积分翻倍</p>
+                        </div>
+                        <div class="today_badge">今天</div>
+                    </div>
+                    <!-- 周五 -->
+                    <div class="calendar_day">
+                        <div class="day_header">16<span>FRI</span></div>
+                        <div class="day_body">
+                            <div class="event_tag promo">促销</div>
+                            <p>大件家具<br>上门回收</p>
+                        </div>
+                    </div>
+                    <!-- 周六 -->
+                    <div class="calendar_day">
+                        <div class="day_header">17<span>SAT</span></div>
+                        <div class="day_body">
+                            <div class="event_tag swap">面交</div>
+                            <p>生活区<br>跳蚤之夜</p>
+                        </div>
+                    </div>
+                    <!-- 周日 -->
+                    <div class="calendar_day">
+                        <div class="day_header">18<span>SUN</span></div>
+                        <div class="day_body">
+                            <div class="event_tag notice">公示</div>
+                            <p>本周流转<br>战报统计</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Box 7: 活动公告 (动态看板版) -->
+            <!-- Box 7: 活动公告 (动态实时播报版) -->
+            <section id="announcement" class="section_box announcement_modern">
+                <div class="container">
+                    <div class="section_title_v2">
+                        <span class="en_title">LIVE BROADCAST</span>
+                        <h2>重要公示 · 实时播报</h2>
+                        <div class="title_decoration">
+                            <span class="dot"></span>
+                            <span class="line"></span>
+                        </div>
+                    </div>
+
+                    <!-- 动态看板容器 -->
+                    <div class="notice_dashboard">
+                        <div class="dashboard_header">
+                            <div class="live_tag"><span class="pulse_dot"></span> LIVE 实时更新</div>
+                            <div class="scroll_controls">
+                                <i class="fas fa-chevron-up" id="prevNotice"></i>
+                                <i class="fas fa-chevron-down" id="nextNotice"></i>
+                            </div>
+                        </div>
+
+                        <div class="notice_viewport">
+                            <div class="notice_scroll_wrapper" id="noticeList">
+                                <!-- 公告 1 -->
+                                <div class="notice_item highlight">
+                                    <div class="notice_icon"><i class="fas fa-bullhorn"></i></div>
+                                    <div class="notice_text">
+                                        <h4>关于开启“大件闲置绿色取货”预约的通知</h4>
+                                        <p>1月20日起，宿舍楼下将增设大件物品临时停放点，预约上门回收可免搬运费。</p>
+                                        <span class="notice_date">2026-01-08 20:30</span>
+                                    </div>
+                                </div>
+                                <!-- 公告 2 -->
+                                <div class="notice_item">
+                                    <div class="notice_icon"><i class="fas fa-shield-alt"></i></div>
+                                    <div class="notice_text">
+                                        <h4>数码类目“正品保障”质检周启动</h4>
+                                        <p>凡在集市交易的平板、笔记本电脑，均可前往互助站进行免费电池与屏幕质检。</p>
+                                        <span class="notice_date">2026-01-07 14:20</span>
+                                    </div>
+                                </div>
+                                <!-- 公告 3 -->
+                                <div class="notice_item">
+                                    <div class="notice_icon"><i class="fas fa-heart"></i></div>
+                                    <div class="notice_text">
+                                        <h4>爱心捐赠积分兑换规则调整公告</h4>
+                                        <p>每捐赠一本公共课教材，可获得50积分，直接抵扣毕业离校寄件快递费。</p>
+                                        <span class="notice_date">2026-01-05 09:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- Box 8: 联系与反馈 -->
+        <!-- <section class="box contact">
+            <h2>联系与反馈</h2>
+            <div class="grid_layout">
+                <div class="card"><i class="fas fa-envelope"></i><h3>邮件联系</h3></div>
+                <div class="card"><i class="fas fa-comment-dots"></i><h3>反馈建议</h3></div>
+            </div>
+        </section> -->
+    </main>
+
+    <footer class="footer_area">
+        <div class="footer_wrapper">
+            <div class="bottom_bar">
+                <p>&copy; 2026 Campus Market | 校园毕业物品流转平台团队 | <a href="#">服务条款</a></p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.querySelectorAll(".notice_item").forEach(item => {
+    item.style.cursor = "pointer";  // 鼠标手型
+    item.addEventListener("click", function () {
+        window.location.href = "notice_detail.html";
+    });
+});
+
+    </script>
+    <script src="js/events.js"></script>
+</body>
+
+</html>

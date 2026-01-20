@@ -1,0 +1,686 @@
+/* ============================================================
+   计算机专业教材频道 - 核心样式 (Main Content Only)
+   基调：淡雅白、大字体(>=1.1rem)、幽灵按钮
+   ============================================================ */
+
+:root {
+    --main-color: #0d9488;       /* 主题深青 */
+    --main-light: #f0fdfa;       /* 极浅青色背景 */
+    --accent-orange: #f59e0b;    /* 琥珀橙 */
+    --text-dark: #1e293b;        /* 深色文本 */
+    --text-gray: #64748b;        /* 灰色文本 */
+    --border-light: #f1f5f9;     /* 极浅边框色 */
+    --card-bg: #ffffff;          /* 纯白背景 */
+
+    --deep-green: #064e3b;
+    --theme-teal: #0d9488;
+    --accent-gold: #f59e0b;
+    --paper-white: #f9fbfa;
+    --text-slate: #475569;
+}
+
+body.dorm_page {
+    background: var(--paper-white);
+    color: var(--text-slate);
+    font-family: 'PingFang SC', 'Noto Serif SC', serif;
+}
+
+p {
+    font-size: 1.15rem !important;
+    line-height: 1.8;
+}
+
+h2,
+h3 {
+    color: var(--deep-green);
+    font-family: "Noto Serif SC", serif;
+}
+
+/* --- Box 1: Hero (法典封面风格) --- */
+.dorm_hero {
+    height: 60vh;
+    background: url('https://images.unsplash.com/photo-1541339907198-e087563f976d?auto=format&fit=crop&w=1200&q=80') center/cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero_overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(6, 78, 59, 0.7);
+    backdrop-filter: blur(4px);
+}
+
+.hero_content {
+    position: relative;
+    z-index: 2;
+}
+
+.elegant_title {
+    font-size: 4rem;
+    letter-spacing: 8px;
+    font-weight: 800;
+}
+
+.dorm_seal {
+    font-size: 0.8rem;
+    background: var(--accent-gold);
+    color: var(--deep-green);
+    padding: 8px 4px;
+    writing-mode: vertical-rl;
+    vertical-align: middle;
+}
+
+.elegant_line {
+    width: 60px;
+    height: 3px;
+    background: var(--accent-gold);
+    margin: 20px auto;
+}
+
+.hero_content p {
+    font-size: 1.3rem !important;
+}
+
+
+/* 1. 页面大容器 */
+.channel_container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-size: 1.1rem; /* 确保全局基础字体满足要求 */
+}
+
+/* 2. 通用幽灵按钮 - 这里的背景是透明或纯白，看起来非常轻盈 */
+.btn_view {
+    display: inline-block;
+    padding: 10px 24px;
+    background: transparent;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: center;
+}
+
+.btn_view:hover {
+    background: var(--main-color);
+    color: #ffffff;
+    box-shadow: 0 5px 15px rgba(13, 148, 136, 0.2);
+    transform: translateY(-2px);
+}
+
+/* 3. 顶部推荐 (Hero Card) - 白色基调，侧边点缀 */
+.hero_recommend {
+    margin-bottom: 50px;
+}
+
+.hero_card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-light);
+    border-radius: 24px;
+    padding: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    position: relative;
+    overflow: hidden;
+}
+
+/* 左侧装饰线条，画龙点睛 */
+.hero_card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: var(--main-color);
+}
+
+.hero_badge {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    background: var(--main-light);
+    color: var(--main-color);
+    padding: 6px 18px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.hero_content h2 {
+    font-size: 2.4rem;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+    font-family: "Noto Serif SC", serif;
+}
+
+.hero_desc {
+    font-size: 1.25rem;
+    color: var(--text-gray);
+    margin-bottom: 30px;
+    max-width: 650px;
+    line-height: 1.6;
+}
+
+.hero_price_row {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.hero_price_row .price {
+    font-size: 2.2rem;
+    color: var(--main-color);
+    font-weight: 800;
+}
+
+.hero_price_row .old_price {
+    font-size: 1.1rem;
+    color: #cbd5e1;
+    text-decoration: line-through;
+}
+
+.hero_icon i {
+    font-size: 7rem;
+    color: var(--main-light); /* 图标采用极淡颜色，作为背景装饰 */
+}
+
+/* 4. 分类筛选 - 简约药丸按钮 */
+.filter_bar_wrapper {
+    margin-bottom: 40px;
+}
+
+.filter_bar {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.filter_btn {
+    padding: 12px 28px;
+    background: #fff;
+    border: 1.5px solid var(--border-light);
+    color: var(--text-gray);
+    border-radius: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter_btn:hover, .filter_btn.active {
+    border-color: var(--main-color);
+    color: var(--main-color);
+    background: var(--main-light);
+}
+
+/* 5. 限时抢购 (Flash Sale) - 虚线描边增加灵动感 */
+.flash_sale {
+    background: #fff;
+    border-radius: 20px;
+    padding: 35px;
+    margin-bottom: 60px;
+    border: 2px dashed var(--main-light);
+}
+
+.section_title h3 {
+    font-size: 1.7rem;
+    color: var(--text-dark);
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#timer {
+    color: var(--accent-orange);
+    background: #fffbeb;
+    padding: 4px 15px;
+    border-radius: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.flash_wrapper {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    padding-bottom: 15px;
+}
+
+.flash_item {
+    min-width: 240px;
+    background: #fdfdfd;
+    padding: 30px;
+    border-radius: 18px;
+    text-align: center;
+    border: 1px solid var(--border-light);
+    transition: 0.3s;
+}
+
+.flash_item:hover {
+    border-color: var(--accent-orange);
+    background: #fff;
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(245, 158, 11, 0.1);
+}
+
+.flash_item i {
+    font-size: 3.5rem;
+    color: var(--main-color);
+    margin-bottom: 15px;
+}
+
+.flash_item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    color: var(--text-dark);
+}
+
+.flash_price {
+    font-size: 1.4rem;
+    color: var(--accent-orange);
+    font-weight: bold;
+}
+
+.flash_price del {
+    font-size: 1rem;
+    color: #cbd5e1;
+    margin-left: 10px;
+}
+
+/* 6. 商品展示网格 (3D 卡片保持淡雅) */
+.product_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 35px;
+    margin-bottom: 70px;
+}
+
+.product_item {
+    background: #fff;
+    border-radius: 20px;
+    border: 1px solid var(--border-light);
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.product_item:hover {
+    border-color: var(--main-color);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+}
+
+.img_holder {
+    height: 220px;
+    background: #f9fbfa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    color: #e2e8f0;
+    position: relative;
+}
+
+.senior_note {
+    position: absolute;
+    inset: 0;
+    background: rgba(13, 148, 136, 0.9);
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.4s;
+    color: #fff;
+    text-align: center;
+}
+
+.product_item:hover .senior_note {
+    opacity: 1;
+}
+
+.senior_note p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+/* 修改物语里的按钮为白框 */
+.senior_note .btn_view {
+    border-color: #fff;
+    color: #fff;
+}
+.senior_note .btn_view:hover {
+    background: #fff;
+    color: var(--main-color);
+}
+
+.p_info {
+    padding: 25px;
+}
+
+.p_info h4 {
+    font-size: 1.3rem;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.price_row .price {
+    font-size: 1.6rem;
+    color: var(--main-color);
+    font-weight: 800;
+}
+
+.stock_tag {
+    font-size: 1rem;
+    color: var(--text-gray);
+}
+
+/* 7. 进阶宝库 (Special Collections) - 纵向描边 */
+.special_collections {
+    margin-bottom: 80px;
+}
+
+.section_header h3 {
+    font-size: 1.8rem;
+    margin-bottom: 35px;
+    color: var(--text-dark);
+       margin-top: 40px;
+}
+
+.collection_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 30px;
+}
+
+.collection_card {
+    background: #fff;
+    padding: 35px;
+    border-radius: 24px;
+    border: 1px solid var(--border-light);
+    border-top: 6px solid var(--card-color); /* 顶部色条区分 */
+    transition: 0.4s;
+}
+
+.collection_card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.collection_card h4 {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.collection_card p {
+    font-size: 1.15rem;
+    color: var(--text-gray);
+    margin-bottom: 25px;
+    line-height: 1.7;
+}
+
+.col_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border-light);
+    padding-top: 20px;
+}
+
+.bundle_price {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+/* 8. 底部流转动态 (Live Feed) - 悬浮胶囊 */
+/* --- 5. 底部动态：拾光流转 (Live Feed) 修改版 --- */
+.live_feed_section {
+    margin-top: 50px;
+    /* 换成淡淡的青色背景，让它在白色背景中脱颖而出 */
+    background: #f0fdfa; 
+    /* 增加一个稍微深一点的青色边框 */
+    border: 1.5px solid rgba(13, 148, 136, 0.2); 
+    padding: 18px 40px;
+    border-radius: 50px; /* 胶囊形状 */
+    box-shadow: 0 4px 15px rgba(13, 148, 136, 0.05);
+}
+
+.feed_box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.feed_box i {
+    color: var(--main-color);
+    font-size: 1.5rem; /* 图标放大 */
+    animation: pulse-icon 2s infinite; /* 给图标加个微弱的呼吸感 */
+}
+
+/* 呼吸动画：让小图标动起来 */
+@keyframes pulse-icon {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.feed_list {
+    /* 这里的宽度和高度要配合 JS 滚动逻辑 */
+    height: 36px; 
+    overflow: hidden;
+    flex: 1;
+}
+
+.feed_item {
+    height: 36px;
+    line-height: 36px;
+    /* 字体加粗放大到 1.2rem */
+    font-size: 1.2rem; 
+    color: var(--text-dark);
+    font-weight: 500;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 强调文字颜色（如学长学姐的名字） */
+.feed_item b {
+    color: var(--main-color);
+}
+
+/* 针对 Webkit 浏览器的滚动条优化 (让抢购区滚动条更细) */
+.flash_wrapper::-webkit-scrollbar {
+    height: 4px;
+}
+.flash_wrapper::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+.flash_wrapper::-webkit-scrollbar-thumb {
+    background: #e2e8f0;
+    border-radius: 10px;
+}
+
+/* --- 6. 求书广场样式 --- */
+.wishlist_section {
+    margin: 80px 0;
+    padding: 40px;
+    background: #fff;
+    border-radius: 32px;
+    border: 1px solid #f1f5f9;
+}
+
+.section_header_flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 40px;
+}
+
+.header_left h3 {
+    font-size: 1.8rem;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.header_left p {
+    font-size: 1.1rem;
+    color: var(--text-gray);
+}
+
+.btn_post_wish {
+    padding: 12px 30px;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn_post_wish:hover {
+    background: var(--main-color);
+    color: #fff;
+    box-shadow: 0 10px 20px rgba(13, 148, 136, 0.15);
+}
+
+.wish_wall {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.wish_card {
+    background: #fcfdfe;
+    border: 1px solid #f1f5f9;
+    border-radius: 20px;
+    padding: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.wish_card:hover {
+    background: #fff;
+    border-color: var(--main-color);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+}
+
+.wish_user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    color: var(--main-color);
+    margin-bottom: 15px;
+}
+
+.wish_card h4 {
+    font-size: 1.25rem;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.wish_card p {
+    font-size: 1.1rem;
+    color: var(--text-gray);
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.wish_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 15px;
+}
+
+.wish_time {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+}
+
+.btn_helper {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--main-color);
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 5px 12px;
+    border-radius: 6px;
+}
+
+.btn_helper:hover {
+    background: var(--main-light);
+    color: var(--main-color);
+}
+
+/* 通用标题包装（支持三种结构） */
+.section_title h3,
+.section_header h3,
+.header_left h3 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    font-family: "Noto Serif SC", serif;
+}
+
+/* 统一标题内图标表现 */
+.section_title h3 i,
+.section_header h3 i,
+.header_left h3 i {
+    font-size: 1.6rem;
+    color: var(--main-color);
+}
+
+.footer_area {
+    background: #1f2937;
+    padding: 2rem 0;
+    text-align: center;
+    color: #cbd5e1;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+.footer_area::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #0f9d95, #f59e0b, #f472b6);
+}
+
+.footer_area a {
+    color: #0f9d95;
+    text-decoration: none;
+}
+
+.footer_area a:hover {
+    text-decoration: underline;
+}

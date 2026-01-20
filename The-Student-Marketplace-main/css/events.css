@@ -1,0 +1,1412 @@
+body {
+    font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    margin: 0;
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+}
+
+
+nav.daohang {
+    position: fixed;
+    width: 100%;
+    /* background: rgba(255, 255, 255, 0.7);  */
+    background: rgba(248, 250, 252, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    /* 极细的底部边线，增加精致感 */
+    border-bottom: 1px solid rgba(13, 148, 136, 0.1);
+    z-index: 1000;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 滚动后的样式：增加不透明度 */
+nav.daohang.nav_scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.daohang_wrapper {
+    max-width: 1200px;
+    /* 限制宽度，显得不那么散乱 */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 2rem;
+}
+
+.daohang_list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.daohang_items {
+    margin: 0 1.2rem;
+    position: relative;
+}
+
+/* 导航文字：增加字间距与字体质感 */
+.daohang_items a {
+    text-decoration: none;
+    color: #475569;
+    /* 深灰色，更稳重 */
+    font-weight: 500;
+    font-size: rem;
+    letter-spacing: 1px;
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+/* 悬停效果：颜色变为主题绿，并切换为书卷气的字体感觉 */
+.daohang_items a:hover,
+.daohang_items a.active {
+    color: #0d9488;
+}
+
+/* 动态下划线：像毛笔顿笔一样的效果 */
+.daohang_items a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #f59e0b;
+    /* 使用琥珀金作为点缀 */
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.daohang_items a:hover::after {
+    width: 100%;
+}
+
+/* 下拉菜单：圆润且带有软阴影 */
+.dropdown-menu {
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: #ffffff;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    padding: 1rem 0;
+    border-radius: 18px;
+    /* 超大圆角 */
+    border: 1px solid rgba(13, 148, 136, 0.05);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: flex;
+    opacity: 1;
+    top: 100%;
+    transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-menu li {
+    list-style: none;
+}
+
+.dropdown-menu a {
+    padding: 0.7rem 2rem;
+    font-size: 0.9rem;
+    color: #64748b;
+    width: 100%;
+    text-align: center;
+}
+
+.dropdown-menu a::after {
+    display: none;
+}
+
+/* 去掉下拉菜单的下划线 */
+
+.dropdown-menu a:hover {
+    background: #f0fdfa;
+    color: #0d9488;
+}
+
+/* 登录按钮：改用琥珀金，作为全局视觉焦点 */
+.btn_nav {
+    background: #f59e0b;
+    color: #fff !important;
+    padding: 0.6rem 1.8rem;
+    border-radius: 50px;
+    /* 胶囊形状 */
+    font-weight: 600;
+    letter-spacing: 2px;
+    box-shadow: 0 10px 20px rgba(245, 158, 11, 0.2);
+    transition: all 0.3s ease;
+}
+
+.btn_nav:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 25px rgba(245, 158, 11, 0.3);
+    background: #d97706;
+}
+
+/* Banner */
+/* .events_banner {
+    height: 300px;
+    background: #0d9488;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.events_banner h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.events_banner p {
+    font-size: 1.2rem;
+} */
+
+/* --- 升级版 Banner 基础容器 (与锦囊页完全一致) --- */
+.events_banner {
+    position: relative;
+    height: 100vh;
+    /* 提升为全屏高度，更有冲击力 */
+    overflow: hidden;
+    background: linear-gradient(135deg, #0d9488 0%, #064e3b 100%) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+/* Canvas 粒子层 */
+#eventsCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* 漂浮图标动画 */
+.events_floating_elements i {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.2);
+    filter: blur(1px);
+    animation: events_float 6s infinite ease-in-out;
+    z-index: 2;
+}
+
+.icon_1 {
+    top: 20%;
+    left: 15%;
+    font-size: 3rem;
+    animation-delay: 0s;
+}
+
+.icon_2 {
+    top: 60%;
+    left: 10%;
+    font-size: 2rem;
+    animation-delay: 1s;
+}
+
+.icon_3 {
+    top: 30%;
+    right: 15%;
+    font-size: 2.5rem;
+    animation-delay: 2s;
+}
+
+.icon_4 {
+    top: 70%;
+    right: 12%;
+    font-size: 4rem;
+    animation-delay: 3s;
+}
+
+@keyframes events_float {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(10deg);
+    }
+}
+
+/* 文字内容层 */
+.events_banner_content {
+    position: relative;
+    z-index: 10;
+    margin-top: -60px;
+}
+
+.events_text_group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* 标题：书卷气 (确保与锦囊页一致) */
+.elegant_title {
+    font-family: "Noto Serif SC", "SimSun", serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 8px;
+    margin-bottom: 5px;
+    position: relative;
+    text-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.events_seal {
+    position: absolute;
+    right: -50px;
+    top: 5px;
+    font-size: 0.8rem;
+    background: #f59e0b;
+    /* 琥珀金 */
+    color: #064e3b;
+    padding: 6px 3px;
+    writing-mode: vertical-rl;
+    border-radius: 2px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.elegant_line {
+    width: 60px;
+    height: 3px;
+    background: #f59e0b;
+    margin: 25px auto;
+    border-radius: 2px;
+}
+
+.elegant_subtitle {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.8;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+/* 按钮样式同步 */
+.elegant_btns {
+    display: flex;
+    gap: 20px;
+}
+
+.btn_main {
+    padding: 12px 35px;
+    background: #f59e0b;
+    color: #fff !important;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    border: 2px solid #f59e0b;
+    transition: 0.3s;
+}
+
+.btn_main:hover {
+    background: transparent;
+    color: #f59e0b !important;
+}
+
+.btn_sub {
+    padding: 12px 35px;
+    background: transparent;
+    color: #fff !important;
+    text-decoration: none;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.btn_sub:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #fff;
+}
+
+/* 底部波浪线 */
+.banner_wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 5;
+}
+
+.banner_wave .shape-fill {
+    fill: #f8fafc;
+}
+
+/* 鼠标提示器 */
+.scroll_down_wrapper {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.mouse_icon {
+    width: 26px;
+    height: 40px;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    position: relative;
+}
+
+.wheel {
+    width: 4px;
+    height: 8px;
+    background: #f59e0b;
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+    animation: scrollWheel 1.5s infinite;
+}
+
+@keyframes scrollWheel {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, 15px);
+    }
+}
+
+/* --- 热门闪购模块样式 --- */
+
+.section_title_v2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 1. 顶部小标题：使用明亮的主题绿，增加呼吸感 */
+.section_title_v2 .en_title {
+    font-size: 0.9rem !important;
+    color: #0d9488;
+    /* 标准主题绿 */
+    letter-spacing: 4px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* 2. 主标题：使用深林绿色，代替黑色，显得更有质感且深邃 */
+.section_title_v2 h2 {
+    font-size: 2.2rem !important;
+    color: #064e3b;
+    /* 极深绿色，比黑色更高级 */
+    font-family: "Noto Serif SC", serif;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+/* 3. 下方描述文字：使用中性灰绿色，既保证易读性，又不脱离绿色调 */
+.section_title_v2 .section_desc {
+    font-size: 1.4rem !important;
+    color: #4d7c78;
+    /* 灰绿色 */
+    margin-top: 5px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+/* 4. 装饰线条颜色同步 */
+.title_decoration .line {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #0d9488, #14b8a6);
+    /* 绿色渐变线 */
+    border-radius: 2px;
+}
+
+.title_decoration .dot {
+    width: 8px;
+    height: 8px;
+    background: #f59e0b;
+    /* 保持琥珀金作为点睛之笔，不建议改绿，否则没重点 */
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.flashsale_modern {
+    background: #ffffff;
+    padding: 100px 0;
+}
+
+.flash_grid {
+    max-width: 1200px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+/* 卡片主体 */
+.flash_card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.flash_card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(13, 148, 136, 0.1);
+    border-color: rgba(13, 148, 136, 0.2);
+}
+
+/* 图片区域 */
+.flash_img_wrapper {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.flash_img_wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.flash_card:hover .flash_img_wrapper img {
+    transform: scale(1.1);
+}
+
+/* 标签与倒计时 */
+.discount_tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #ef4444;
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    z-index: 2;
+}
+
+.timer_overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem !important;
+}
+
+/* 文字内容区 */
+.flash_info {
+    padding: 25px;
+}
+
+.flash_info h3 {
+    font-size: 1.3rem !important;
+    color: #1e293b;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.flash_info p {
+    font-size: 1rem !important;
+    color: #64748b;
+    margin-bottom: 20px;
+    height: 3rem;
+    overflow: hidden;
+}
+
+/* 价格 */
+.price_row {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.new_price {
+    font-size: 1.8rem !important;
+    font-weight: 800;
+    color: #0d9488;
+}
+
+.old_price {
+    font-size: 1.1rem !important;
+    color: #94a3b8;
+    text-decoration: line-through;
+}
+
+/* 进度条 */
+.stock_status {
+    margin-bottom: 25px;
+}
+
+.stock_header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95rem;
+    color: #64748b;
+    margin-bottom: 8px;
+}
+
+.stock_bar {
+    width: 100%;
+    height: 8px;
+    background: #f1f5f9;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.stock_bar .fill {
+    height: 100%;
+    background: linear-gradient(90deg, #0d9488, #14b8a6);
+    border-radius: 10px;
+}
+
+/* 抢购按钮 */
+.flash_btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background: #1e293b;
+    color: #fff;
+    font-size: 1.1rem !important;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.flash_btn:hover {
+    background: #0d9488;
+}
+
+.flash_btn.hot {
+    background: #f59e0b;
+}
+
+/* 最后机会用琥珀金 */
+
+
+/* --- 赠品活动模块升级 --- */
+.giveaway_modern {
+    background: #fdfdfd;
+    padding: 100px 0;
+}
+
+.giveaway_grid {
+    max-width: 1200px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    padding: 0 20px;
+}
+
+/* 礼盒卡片基础 */
+.gift_card {
+    height: 380px;
+    background: #ffffff;
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(13, 148, 136, 0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    transition: all 0.5s ease;
+}
+
+/* 封面层 (向上滑动的盖子) */
+.gift_cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(145deg, #0d9488, #064e3b);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    text-align: center;
+    padding: 20px;
+}
+
+.gift_icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.gift_cover h3 {
+    font-size: 1.5rem !important;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.gift_cover p {
+    font-size: 1.1rem !important;
+    opacity: 0.8;
+}
+
+/* 底部内容层 (露出的详情) */
+.gift_content {
+    padding: 40px 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #fff;
+}
+
+.gift_content h4 {
+    color: #064e3b;
+    /* 深绿色标题 */
+    font-size: 1.4rem !important;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.gift_content p {
+    color: #4d7c78;
+    /* 灰绿色正文 */
+    font-size: 1.1rem !important;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.gift_meta {
+    font-size: 1rem !important;
+    color: #0d9488;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+/* 按钮样式 */
+.claim_gift_btn {
+    padding: 12px 30px;
+    background: #f59e0b;
+    /* 保持琥珀金作为点睛色 */
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1rem !important;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+}
+
+.claim_gift_btn:hover {
+    background: #d97706;
+    transform: scale(1.1);
+}
+
+/* 悬停动画：盖子向上移出 */
+.gift_card:hover .gift_cover {
+    transform: translateY(-100%);
+}
+
+.gift_card:hover {
+    box-shadow: 0 20px 50px rgba(13, 148, 136, 0.2);
+}
+
+/* --- 物品交换模块样式 --- */
+.exchange_modern {
+    background: #ffffff;
+    padding: 100px 0;
+}
+
+.exchange_grid {
+    max-width: 1200px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+/* 交换卡片主体 */
+.exchange_card {
+    background: #fff;
+    border-radius: 24px;
+    padding: 30px;
+    border: 1px solid rgba(13, 148, 136, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 视觉匹配区 */
+.swap_visual {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 25px;
+    padding: 20px;
+    background: #f0fdfa;
+    /* 浅绿底色 */
+    border-radius: 20px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+}
+
+.item i {
+    font-size: 2rem;
+    color: #0d9488;
+}
+
+.item span {
+    font-size: 1.4rem !important;
+    font-weight: 600;
+    color: #4d7c78;
+}
+
+/* 交换图标动画 */
+.swap_icon {
+    font-size: 1.5rem;
+    color: #f59e0b;
+    /* 琥珀金 */
+    margin: 0 15px;
+    transition: transform 0.6s ease;
+}
+
+.exchange_card:hover .swap_icon {
+    transform: rotate(180deg);
+}
+
+/* 文字信息区 */
+.exchange_info {
+    text-align: center;
+}
+
+.exchange_info h3 {
+    font-size: 1.3rem !important;
+    color: #064e3b;
+    /* 深绿标题 */
+    margin-bottom: 12px;
+}
+
+.exchange_info p {
+    font-size: 1.1rem !important;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.user_tag {
+    font-size: 1rem !important;
+    color: #0d9488;
+    background: rgba(13, 148, 136, 0.05);
+    padding: 5px 15px;
+    border-radius: 50px;
+    margin-bottom: 25px;
+    display: inline-block;
+}
+
+/* 匹配按钮 */
+.interest_btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    color: #0d9488;
+    border: 2px solid #0d9488;
+    border-radius: 50px;
+    font-size: 1.1rem !important;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.interest_btn:hover {
+    background: #0d9488;
+    color: #fff;
+    box-shadow: 0 10px 20px rgba(13, 148, 136, 0.2);
+}
+
+.exchange_card:hover {
+    transform: translateY(-10px);
+    border-color: #0d9488;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+/* --- 学生挑战赛模块样式 --- */
+.contest_modern {
+    background: #f8fafc;
+    padding: 100px 0;
+}
+
+.contest_grid {
+    max-width: 1200px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+/* 挑战赛卡片 */
+.contest_card {
+    background: #fff;
+    border-radius: 28px;
+    padding: 35px;
+    position: relative;
+    border: 1px solid rgba(13, 148, 136, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    transition: all 0.4s ease;
+    transform-style: preserve-3d;
+    /* 开启3D */
+    perspective: 1000px;
+}
+
+.card_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.contest_tag {
+    background: #f1f5f9;
+    color: #64748b;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1rem !important;
+}
+
+.contest_tag.hot {
+    background: #fee2e2;
+    color: #ef4444;
+}
+
+.contest_tag.new {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.prize_pool {
+    font-size: 1rem !important;
+    color: #475569;
+}
+
+.prize_pool .gold {
+    color: #f59e0b;
+    font-weight: 800;
+}
+
+/* 主体内容 */
+.contest_main {
+    text-align: center;
+    transform: translateZ(20px);
+    /* 视差效果 */
+}
+
+.contest_icon {
+    font-size: 3.5rem;
+    color: #0d9488;
+    margin-bottom: 20px;
+}
+
+.contest_main h3 {
+    font-size: 1.4rem !important;
+    color: #064e3b;
+    /* 深绿标题 */
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.contest_main p {
+    font-size: 1.1rem !important;
+    color: #64748b;
+    line-height: 1.6;
+    height: 4.8rem;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+/* 参与进度 */
+.participation_info {
+    margin-bottom: 30px;
+}
+
+.progress_text {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem !important;
+    color: #94a3b8;
+    margin-bottom: 10px;
+}
+
+.progress_bar {
+    width: 100%;
+    height: 8px;
+    background: #f1f5f9;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress_bar .fill {
+    height: 100%;
+    background: linear-gradient(90deg, #0d9488, #f59e0b);
+    border-radius: 10px;
+}
+
+/* 参赛按钮 */
+.join_btn {
+    /* display: block; */
+    width: 100%;
+    padding: 15px;
+    background: #0d9488;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.2rem !important;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 10px 20px rgba(13, 148, 136, 0.2);
+}
+
+.join_btn:hover {
+    background: #064e3b;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(6, 78, 59, 0.3);
+}
+
+.join_btn.disabled {
+    background: #e2e8f0;
+    color: #94a3b8;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.contest_card:hover {
+    border-color: #0d9488;
+}
+
+/* --- 日历与公告整合容器 --- */
+.calendar_announcement_wrapper {
+    background: #fdfdfd;
+    padding: 20px 0 100px;
+}
+
+/* --- 日历模块升级 --- */
+.calendar_grid_v2 {
+    max-width: 1200px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 15px;
+    padding: 0 20px;
+}
+
+.calendar_day {
+    background: #fff;
+    border-radius: 20px;
+    border: 1px solid rgba(13, 148, 136, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.day_header {
+    background: #f1f5f9;
+    padding: 10px;
+    font-size: 1.5rem !important;
+    font-weight: 800;
+    color: #475569;
+    display: flex;
+    flex-direction: column;
+}
+
+.day_header span {
+    font-size: 0.8rem !important;
+    font-weight: 600;
+    color: #94a3b8;
+    letter-spacing: 1px;
+}
+
+.day_body {
+    padding: 20px 10px;
+}
+
+.day_body p {
+    font-size: 1rem !important;
+    color: #4d7c78;
+    line-height: 1.4;
+    margin-top: 10px;
+}
+
+.event_tag {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 5px;
+    font-size: 0.85rem !important;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* 标签颜色区分 */
+.event_tag.sale {
+    background: #0d9488;
+}
+
+.event_tag.gift {
+    background: #f59e0b;
+}
+
+.event_tag.swap {
+    background: #8b5cf6;
+}
+
+.event_tag.contest {
+    background: #ef4444;
+}
+
+.event_tag.promo {
+    background: #064e3b;
+}
+
+.event_tag.notice {
+    background: #64748b;
+}
+
+/* 状态交互 */
+.calendar_day:hover {
+    transform: translateY(-10px);
+    border-color: #0d9488;
+    box-shadow: 0 15px 30px rgba(13, 148, 136, 0.1);
+}
+
+.calendar_day.today {
+    border: 2px solid #f59e0b;
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.15);
+}
+
+.today_badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #f59e0b;
+    color: #fff;
+    font-size: 0.75rem !important;
+    padding: 2px 8px;
+    border-radius: 0 0 10px 0;
+    font-weight: bold;
+}
+
+/* --- 公告模块升级 --- */
+.notice_item:last-child {
+    border-bottom: none;
+}
+
+.notice_icon {
+    width: 60px;
+    height: 60px;
+    background: #f0fdfa;
+    color: #0d9488;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.notice_text h4 {
+    font-size: 1.25rem !important;
+    color: #064e3b;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.notice_text p {
+    font-size: 1.1rem !important;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.notice_date {
+    font-size: 0.95rem !important;
+    color: #94a3b8;
+}
+
+*/
+
+/* --- 动态公告看板专用样式 --- */
+.notice_dashboard {
+    max-width: 900px;
+    margin: 50px auto;
+    background: #fff;
+    border-radius: 28px;
+    border: 1px solid rgba(13, 148, 136, 0.15);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.dashboard_header {
+    background: #064e3b;
+    /* 深绿背景 */
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+.live_tag {
+    font-size: 1rem !important;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* 红色呼吸灯点 */
+.pulse_dot {
+    width: 8px;
+    height: 8px;
+    background: #ff4d4d;
+    border-radius: 50%;
+    box-shadow: 0 0 0 rgba(255, 77, 77, 0.4);
+    animation: pulse-red 2s infinite;
+}
+
+@keyframes pulse-red {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(255, 77, 77, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(255, 77, 77, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(255, 77, 77, 0);
+    }
+}
+
+.scroll_controls i {
+    cursor: pointer;
+    margin-left: 15px;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.scroll_controls i:hover {
+    opacity: 1;
+    color: #f59e0b;
+}
+
+/* 滚动视口 */
+.notice_viewport {
+    height: 180px;
+    /* 只显示一条公告的高度 */
+    overflow: hidden;
+    position: relative;
+    padding: 0 30px;
+}
+
+.notice_item {
+    height: 180px;
+    /* 固定高度确保滚动步长一致 */
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    padding: 30px 0;
+    transition: all 0.5s ease;
+}
+
+/* 呼吸的扩音器图标 */
+.notice_item.highlight .notice_icon {
+    background: #0d9488;
+    color: #fff;
+    animation: icon-bounce 2s infinite;
+}
+
+@keyframes icon-bounce {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.notice_icon {
+    width: 65px;
+    height: 65px;
+    background: #f0fdfa;
+    color: #0d9488;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    flex-shrink: 0;
+}
+
+.notice_text h4 {
+    font-size: 1.3rem !important;
+    color: #064e3b;
+    margin-bottom: 8px;
+}
+
+.notice_text p {
+    font-size: 1.2rem !important;
+    color: #64748b;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.notice_date {
+    font-size: 1.1rem !important;
+    color: #94a3b8;
+}
+
+/* 高亮样式 */
+.notice_item.highlight {
+    background: rgba(13, 148, 136, 0.02);
+    padding: 25px;
+    border-radius: 15px;
+    border-left: 4px solid #0d9488;
+}
+
+/* Footer */
+.footer_area {
+    background: #1f2937;
+    padding: 2rem 0;
+    text-align: center;
+    color: #cbd5e1;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+.footer_area::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #0f9d95, #f59e0b, #f472b6);
+}
+
+.footer_area a {
+    color: #0f9d95;
+    text-decoration: none;
+}
+
+.footer_area a:hover {
+    text-decoration: underline;
+}
+
+/* 让 H2 和按钮同一行 */
+.section_title_v2 .title_row {
+    display: flex;
+    align-items: center;
+    gap: 16px;          /* H2 与按钮间距 */
+    flex-wrap: wrap;    /* 小屏不挤爆 */
+}
+
+/* ---- 你的按钮美化（保留+优化） ---- */
+.mini_explore_tag {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 6px 16px;
+    border: 1px solid rgba(245, 158, 11, 0.6);
+    border-radius: 4px;
+    color: #f59e0b !important;
+    background: transparent;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+/* 文字 */
+.mini_explore_tag span {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* 小箭头 */
+.mini_explore_tag i {
+    font-size: 0.8rem;
+    margin-left: 6px;
+    transition: transform 0.3s ease;
+}
+
+/* hover 状态 */
+.mini_explore_tag:hover {
+    background: #f59e0b;
+    color: #fff !important;
+    border-color: #f59e0b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(245, 158, 11, 0.35);
+}
+
+.mini_explore_tag:hover i {
+    transform: translateX(3px);
+}

@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>用户中心 - 校园毕业物品流转平台</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/user.css">
+  <link rel="icon" href="https://img.icons8.com/color/40/000000/home.png" />
+  <script src="https://kit.fontawesome.com/0ad2b99521.js" crossorigin="anonymous" async></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<main>
+
+  <body>
+    <!-- 顶部导航栏 -->
+    <nav class="daohang">
+      <div class="daohang_wrapper">
+        <ul class="daohang_list">
+          <li class="daohang_items"><a href="index.html">首页</a></li>
+          <li class="daohang_items dropdown"><a href="about.html">平台概况</a></li>
+          <li class="daohang_items dropdown"><a href="categories.html">商品分类</a></li>
+          <li class="daohang_items dropdown"><a href="guide.html">流转锦囊</a></li>
+          <li class="daohang_items dropdown"><a href="events.html">活动专区</a></li>
+          <li class="daohang_items dropdown active">
+            <a href="user.html">用户中心</a>
+            <ul class="dropdown-menu">
+              <li><a href="user.html#profile">个人信息</a></li>
+              <li><a href="user.html#orders">流转记录</a></li>
+              <li><a href="user.html#favorites">我的收藏</a></li>
+              <li><a href="user.html#reviews">我的评价</a></li>
+              <li><a href="user.html#settings">账户安全</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="nav_auth">
+          <a href="signin.html" class="btn_nav">登录</a>
+        </div>
+      </div>
+    </nav>
+
+
+    <!-- Box 2 Banner  -->
+    <header class="user_banner">
+      <!-- 1. 动态粒子背景 -->
+      <canvas id="userCanvas"></canvas>
+
+      <!-- 2. 背景装饰：漂浮的个人管理元素 -->
+      <div class="user_floating_elements">
+        <i class="fas fa-user-shield icon_1"></i> <!-- 安全 -->
+        <i class="fas fa-hand-holding-heart icon_2"></i> <!-- 互助 -->
+        <i class="fas fa-seedling icon_3"></i> <!-- 环保 -->
+        <i class="fas fa-history icon_4"></i> <!-- 记录 -->
+      </div>
+
+      <!-- 3. 主体内容层 (带视差效果) -->
+      <div class="user_banner_content" id="userScene">
+        <div class="user_text_group">
+          <!-- 核心标题：延续锦囊感 -->
+          <h1 class="elegant_title">
+            用户中心
+            <span class="user_seal">账户</span>
+          </h1>
+
+          <!-- 装饰线条 -->
+          <div class="elegant_line"></div>
+
+          <!-- 文雅副标题 -->
+          <p class="elegant_subtitle">
+            记录每一次物品的温情流转；<br>
+            在方寸锦囊之间，阅览属于你的毕业续章。
+          </p>
+
+          <!-- 快速操作按钮 -->
+          <div class="elegant_btns">
+            <a href="#profile" class="btn_main">查看档案</a>
+            <a href="#orders" class="btn_sub">流转行志</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. 滚动提示 (同步活动页) -->
+      <div class="scroll_down_wrapper">
+        <div class="mouse_icon">
+          <div class="wheel"></div>
+        </div>
+      </div>
+
+      <!-- 5. 底部波浪线 (保持全站统一) -->
+      <div class="banner_wave">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C0,0,31.83,14.28,64,27.1,126.31,52,187.31,68,250.31,68c31.11,0,32.25-10.15,71.08-11.56Z"
+            class="shape-fill"></path>
+        </svg>
+      </div>
+    </header>
+
+    <main class="content_wrapper">
+      <!-- 模块 1: 档案概览 (数据化看板) -->
+      <section id="profile" class="section_box stats_premium">
+        <div class="container">
+          <!-- 标题区域：深绿体系 -->
+          <div class="section_title_v2">
+            <span class="en_title">DATA OVERVIEW</span>
+            <h2>流转数据 · 档案概览</h2>
+            <a href="profile_detail.html" class="mini_explore_tag" id="flashsale_rule_btn">
+              <span>查看档案</span>
+              <i class="fas fa-chevron-right"></i>
+            </a>
+            <div class="title_decoration">
+              <span class="dot"></span>
+              <span class="line"></span>
+            </div>
+          </div>
+
+          <div class="stats_dynamic_grid">
+            <!-- 项 1: 流转总数 -->
+            <div class="stat_premium_card" data-tilt>
+              <div class="stat_halo"></div>
+              <div class="stat_inner">
+                <div class="stat_visual">
+                  <svg viewBox="0 0 100 100">
+                    <circle class="bg" cx="50" cy="50" r="45"></circle>
+                    <circle class="meter m-1" cx="50" cy="50" r="45"></circle>
+                  </svg>
+                  <i class="fas fa-exchange-alt"></i>
+                </div>
+                <div class="stat_content">
+                  <span class="num" data-target="12">0</span>
+                  <p>成功流转项目</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 项 2: 碳减排 -->
+            <div class="stat_premium_card" data-tilt>
+              <div class="stat_halo"></div>
+              <div class="stat_inner">
+                <div class="stat_visual">
+                  <svg viewBox="0 0 100 100">
+                    <circle class="bg" cx="50" cy="50" r="45"></circle>
+                    <circle class="meter m-2" cx="50" cy="50" r="45"></circle>
+                  </svg>
+                  <i class="fas fa-leaf"></i>
+                </div>
+                <div class="stat_content">
+                  <span class="num" data-target="15.8" data-decimal="1">0</span>
+                  <span class="unit">kg</span>
+                  <p>碳减排总贡献</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 项 3: 诚信分 -->
+            <div class="stat_premium_card" data-tilt>
+              <div class="stat_halo"></div>
+              <div class="stat_inner">
+                <div class="stat_visual">
+                  <svg viewBox="0 0 100 100">
+                    <circle class="bg" cx="50" cy="50" r="45"></circle>
+                    <circle class="meter m-3" cx="50" cy="50" r="45"></circle>
+                  </svg>
+                  <i class="fas fa-award"></i>
+                </div>
+                <div class="stat_content">
+                  <span class="num" data-target="850">0</span>
+                  <p>个人诚信评级</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 模块 2: 流转行志 (精美交易记录) -->
+      <section id="orders" class="section_box history_archive_premium">
+        <div class="container">
+          <div class="section_title_v2">
+            <span class="en_title">CIRCULATION LOG</span>
+            <h2>流转行志 · 交易卷宗</h2>
+            <a href="record_detail.html" class="mini_explore_tag" id="flashsale_rule_btn">
+              <span>查看档案</span>
+              <i class="fas fa-chevron-right"></i>
+            </a>
+            <p class="section_desc">每一笔流转，都是一段校园记忆的交接与存证。</p>
+            <div class="title_decoration">
+              <span class="dot"></span>
+              <span class="line"></span>
+            </div>
+          </div>
+
+          <div class="timeline_container">
+            <!-- 记录 1: 书籍 -->
+            <div class="history_entry left_entry" data-category="book">
+              <div class="entry_date_box">
+                <span class="m">JAN</span>
+                <span class="d">08</span>
+              </div>
+              <div class="entry_card">
+                <div class="card_header">
+                  <span class="type_tag">学术传承</span>
+                  <span class="serial">NO. 2026010801</span>
+                </div>
+                <div class="card_body">
+                  <div class="item_thumb"><i class="fas fa-book"></i></div>
+                  <div class="item_info">
+                    <h4>二手教材：线性代数辅导书</h4>
+                    <p>交接人：信工学院 · 严学长</p>
+                  </div>
+                  <div class="item_price">¥15.00</div>
+                </div>
+                <!-- 动态印章 -->
+                <div class="status_stamp" id="stamp1">
+                  <svg viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="2" />
+                    <text x="50" y="45" text-anchor="middle" font-weight="bold" font-size="14">校友集市</text>
+                    <text x="50" y="65" text-anchor="middle" font-weight="bold" font-size="18">流转成功</text>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- 记录 2: 家具 -->
+            <div class="history_entry right_entry" data-category="furniture">
+              <div class="entry_date_box">
+                <span class="m">JAN</span>
+                <span class="d">05</span>
+              </div>
+              <div class="entry_card">
+                <div class="card_header">
+                  <span class="type_tag">宿舍好物</span>
+                  <span class="serial">NO. 2026010522</span>
+                </div>
+                <div class="card_body">
+                  <div class="item_thumb"><i class="fas fa-couch"></i></div>
+                  <div class="item_info">
+                    <h4>人体工学椅 (蓝色)</h4>
+                    <p>交接地点：图书馆南草坪</p>
+                  </div>
+                  <div class="item_price">¥120.00</div>
+                </div>
+                <div class="status_stamp" id="stamp2">
+                  <svg viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="2" />
+                    <text x="50" y="45" text-anchor="middle" font-weight="bold" font-size="14">校友集市</text>
+                    <text x="50" y="65" text-anchor="middle" font-weight="bold" font-size="18">已面交</text>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- 记录 3: 数码 -->
+            <div class="history_entry left_entry" data-category="digital">
+              <div class="entry_date_box">
+                <span class="m">JAN</span>
+                <span class="d">02</span>
+              </div>
+              <div class="entry_card">
+                <div class="card_header">
+                  <span class="type_tag">电子接力</span>
+                  <span class="serial">NO. 2026010214</span>
+                </div>
+                <div class="card_body">
+                  <div class="item_thumb"><i class="fas fa-tablet-alt"></i></div>
+                  <div class="item_info">
+                    <h4>iPad Pencil 替代笔</h4>
+                    <p>附赠：全新替换笔尖×2</p>
+                  </div>
+                  <div class="item_price">¥45.00</div>
+                </div>
+                <div class="status_stamp" id="stamp3">
+                  <svg viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="2" />
+                    <text x="50" y="45" text-anchor="middle" font-weight="bold" font-size="14">校友集市</text>
+                    <text x="50" y="65" text-anchor="middle" font-weight="bold" font-size="18">流转成功</text>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 模块 3: 收藏锦匣 (流光博古架版) -->
+      <section id="favorites" class="section_box treasures_premium">
+        <div class="container">
+          <div class="section_title_v2">
+            <span class="en_title">FAVORITE TREASURES</span>
+            <h2>收藏锦匣 · 好物关注</h2>
+            <p class="section_desc">悉心珍藏的每一件好物，都在等待一个契合的新主人。</p>
+            <div class="title_decoration">
+              <span class="dot"></span>
+              <span class="line"></span>
+            </div>
+          </div>
+
+          <!-- 收藏分类过滤 -->
+          <div class="treasure_filter">
+            <button class="active">全部</button>
+            <button>学术书籍</button>
+            <button>数码电器</button>
+            <button>生活家居</button>
+          </div>
+
+          <div class="treasure_grid_v2">
+            <!-- 物品 1 -->
+            <!-- <div class="treasure_box item_large" data-category="furniture">
+              <div class="box_inner">
+                <div class="img_container">
+                  <img src="https://images.unsplash.com/photo-1592078615290-033ee584e267?q=80&w=600"
+                    class="parallax_img">
+                  <div class="status_tag sale">降价 ¥20</div>
+                </div>
+                <div class="box_info">
+                  <h4>九成新人体工学椅</h4>
+                  <p>原价¥450，现毕业清仓处理</p>
+                  <div class="box_footer">
+                    <span class="price">¥120</span>
+                    <button class="quick_view"><i class="fas fa-eye"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+            <a href="item_detail.html" class="treasure_box item_large" data-category="furniture">
+              <div class="box_inner">
+                <div class="img_container">
+                  <img src="https://images.unsplash.com/photo-1592078615290-033ee584e267?q=80&w=600"
+                    class="parallax_img">
+                  <div class="status_tag sale">降价 ¥20</div>
+                </div>
+
+                <div class="box_info">
+                  <h4>九成新人体工学椅</h4>
+                  <p>原价¥450，现毕业清仓处理</p>
+
+                  <div class="box_footer">
+                    <span class="price">¥120</span>
+                    <button class="quick_view">
+                      <i class="fas fa-eye"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+
+            <!-- 物品 2 -->
+            <div class="treasure_box item_small" data-category="book">
+              <div class="box_inner">
+                <div class="img_container">
+                  <!-- <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=600" class="parallax_img"> -->
+                  <img src="images/yasi.png">
+                  <div class="status_tag hot">热度高</div>
+                </div>
+                <div class="box_info">
+                  <h4>雅思核心词汇书</h4>
+                  <p>学姐高分笔记，纯手工标注</p>
+                  <div class="box_footer">
+                    <span class="price">¥15</span>
+                    <button class="quick_view"><i class="fas fa-eye"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 物品 3 -->
+            <div class="treasure_box item_small" data-category="daily">
+              <div class="box_inner">
+                <div class="img_container">
+                  <!-- <img src="https://images.unsplash.com/photo-1522441815192-d9f04eb0615c?q=80&w=600"
+                    class="parallax_img"> -->
+                  <img src="images/laingyijia.png">
+                </div>
+                <div class="box_info">
+                  <h4>宿舍落地晾衣架</h4>
+                  <p>不锈钢材质，可拆卸易携带</p>
+                  <div class="box_footer">
+                    <span class="price">¥35</span>
+                    <button class="quick_view"><i class="fas fa-eye"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 物品 4 -->
+            <div class="treasure_box item_small" data-category="digital">
+              <div class="box_inner">
+                <div class="img_container">
+                  <!-- <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80&w=600"
+                    class="parallax_img"> -->
+                  <img src="images/jixiejianpan.png">
+                </div>
+                <div class="box_info">
+                  <h4>机械键盘 (青轴)</h4>
+                  <p>灯效拉满，室友“福音”</p>
+                  <div class="box_footer">
+                    <span class="price">¥85</span>
+                    <button class="quick_view"><i class="fas fa-eye"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 物品 5 -->
+            <div class="treasure_box item_large" data-category="daily">
+              <div class="box_inner">
+                <div class="img_container">
+                  <!-- <img src="https://images.unsplash.com/photo-1585120040315-2241b774ad0f?q=80&w=600"
+                    class="parallax_img"> -->
+                  <img src="images/weibolu.png">
+                  <div class="status_tag warn">即将下架</div>
+                </div>
+                <div class="box_info">
+                  <h4>半自动微波炉</h4>
+                  <p>宿舍深夜食堂神器，运转良好</p>
+                  <div class="box_footer">
+                    <span class="price">¥150</span>
+                    <button class="quick_view"><i class="fas fa-eye"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 模块 4: 言传评价 (评价互动) -->
+      <!-- <section id="reviews" class="section_box reviews_wall">
+        <div class="section_title_v2">
+            <span class="en_title">USER REVIEWS</span>
+            <h2>言传评价 · 互助口碑</h2>
+            <div class="title_decoration"><span class="dot"></span><span class="line"></span></div>
+        </div>
+        <div class="review_bubbles">
+            <div class="bubble">
+                <p>“学姐人超级好，书里还夹了她手写的复试笔记，这就是最好的毕业礼物！”</p>
+                <div class="reviewer">—— 经管学院 李同学</div>
+            </div>
+        </div>
+    </section> -->
+
+      <!-- 模块 4: 言传评价 (锦书口碑墙版) -->
+      <section id="reviews" class="section_box reviews_premium">
+        <div class="container">
+          <!-- 标题区域：同步全站深绿风格 -->
+          <div class="section_title_v2">
+            <span class="en_title">VOICE OF ALUMNI</span>
+            <h2>言传评价 · 互助口碑</h2>
+            <p class="section_desc">每一句真诚的反馈，都是校友间信任流转的见证。</p>
+            <div class="title_decoration">
+              <span class="dot"></span>
+              <span class="line"></span>
+            </div>
+          </div>
+
+          <div class="reviews_masonry">
+            <!-- 评价 1: 书籍传承 -->
+            <div class="review_letter" data-aos="fade-up">
+              <div class="letter_stamp"><i class="fas fa-check-circle"></i> 诚信成交</div>
+              <div class="letter_inner">
+                <div class="quote_icon"><i class="fas fa-quote-left"></i></div>
+                <p class="review_text">“学姐人超级好，书里还夹了她手写的复试笔记，甚至还有几张考研时候的鼓励贴纸，这就是最好的毕业礼物！知识在流转中真的带有了温度。”</p>
+                <div class="reviewer_info">
+                  <div class="avatar_mini">苏</div>
+                  <div class="name_meta">
+                    <span class="name">苏同学</span>
+                    <span class="dept">经管学院 · 2027届</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 评价 2: 电器流转 -->
+            <div class="review_letter" data-aos="fade-up" data-aos-delay="100">
+              <div class="letter_stamp"><i class="fas fa-leaf"></i> 绿色接力</div>
+              <div class="letter_inner">
+                <div class="quote_icon"><i class="fas fa-quote-left"></i></div>
+                <p class="review_text">“买到了学姐留下的九成新烧水壶和护眼灯，价格非常良心，省去了我大一新生开学到处采购的麻烦，平台面交也非常安全靠谱！”</p>
+                <div class="reviewer_info">
+                  <div class="avatar_mini">王</div>
+                  <div class="name_meta">
+                    <span class="name">王同学</span>
+                    <span class="dept">信息学院 · 2029届</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 评价 3: 生活好物 -->
+            <div class="review_letter" data-aos="fade-up" data-aos-delay="200">
+              <div class="letter_stamp"><i class="fas fa-medal"></i> 优质卖家</div>
+              <div class="letter_inner">
+                <div class="quote_icon"><i class="fas fa-quote-left"></i></div>
+                <p class="review_text">“椅子非常舒服，搬运的时候学姐还主动帮我抬到了宿舍楼下，毕业季虽然忙碌，但这种互助的精神让人觉得特别温暖。”</p>
+                <div class="reviewer_info">
+                  <div class="avatar_mini">李</div>
+                  <div class="name_meta">
+                    <span class="name">李同学</span>
+                    <span class="dept">艺术学院 · 2026届</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="view_more_center">
+            <button class="btn_ghost" onclick="window.location.href='reviews_detail.html'">查看全部 128 条评价</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 模块 5: 账户设置 (安全中心) -->
+      <!-- 模块 5: 账户安全 (安全密库版) -->
+      <section id="settings" class="section_box vault_premium">
+        <div class="container">
+          <!-- 标题区域 -->
+          <div class="section_title_v2">
+            <span class="en_title">SECURITY VAULT</span>
+            <h2>锦囊护卫 · 账户安全</h2>
+            <p class="section_desc">多重加密防护，为你的每一笔流转锦囊保驾护航。</p>
+            <div class="title_decoration">
+              <span class="dot"></span>
+              <span class="line"></span>
+            </div>
+          </div>
+
+          <div class="vault_grid">
+            <!-- 左侧：安全状态仪表盘 -->
+            <div class="vault_status_panel">
+              <div class="security_gauge">
+                <div class="gauge_inner">
+                  <div class="radar_line"></div>
+                  <span class="score_num">85</span>
+                  <span class="score_label">安全分</span>
+                </div>
+              </div>
+              <div class="status_info">
+                <h4>环境监测：安全</h4>
+                <p>上次登录：2026-01-08 21:30</p>
+                <button class="scan_btn"><i class="fas fa-shield-alt"></i> 立即扫描</button>
+              </div>
+            </div>
+
+            <!-- 右侧：安全设置列表 -->
+            <div class="vault_actions_list">
+              <!-- 密码管理 -->
+              <div class="action_item" data-status="medium">
+                <div class="action_icon"><i class="fas fa-key"></i></div>
+                <div class="action_text">
+                  <h5>登录密码</h5>
+                  <p>安全性：中等。建议定期更换强密码。</p>
+                </div>
+                <!-- <button class="btn_action_toggle" data-target="form_pwd">修改</button> -->
+                <button class="btn_vault_action btn_action_toggle" data-target="form_pwd">
+                  <span>安全修改</span>
+                  <i class="fas fa-chevron-right"></i>
+                </button>
+              </div>
+              <div class="action_collapse" id="form_pwd">
+                <div class="form_inner">
+                  <input type="password" placeholder="请输入原密码">
+                  <input type="password" placeholder="请输入新密码" id="newPwdInput">
+                  <div class="pwd_strength_bar"><span id="strengthBar"></span></div>
+                  <button class="btn_main">确认更新</button>
+                </div>
+              </div>
+
+              <!-- 手机绑定 -->
+              <div class="action_item" data-status="safe">
+                <div class="action_icon"><i class="fas fa-mobile-alt"></i></div>
+                <div class="action_text">
+                  <h5>密保手机</h5>
+                  <p>已绑定：138****8888</p>
+                </div>
+                <!-- <button class="btn_action_toggle">更换</button> -->
+                <button class="btn_vault_action">
+                  <span>立即更换</span>
+                  <i class="fas fa-chevron-right"></i>
+                </button>
+              </div>
+
+              <!-- 二步验证 -->
+              <div class="action_item" data-status="warning">
+                <div class="action_icon"><i class="fas fa-fingerprint"></i></div>
+                <div class="action_text">
+                  <h5>二步身份验证</h5>
+                  <p>未开启。开启后交易需二次确认。</p>
+                </div>
+                <div class="toggle_switch">
+                  <input type="checkbox" id="mfaToggle">
+                  <label for="mfaToggle"></label>
+                </div>
+              </div>
+
+              <!-- 设备管理 -->
+              <div class="action_item">
+                <div class="action_icon"><i class="fas fa-laptop-code"></i></div>
+                <div class="action_text">
+                  <h5>登录设备管理</h5>
+                  <p>当前有 2 台常用设备在线</p>
+                </div>
+                <!-- <button class="btn_action_toggle">管理</button> -->
+                <a href="device_detail.html" class="btn_vault_action">
+                  <span>深度管理</span>
+                  <i class="fas fa-chevron-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer_area">
+      <div class="footer_wrapper">
+        <div class="bottom_bar">
+          <p>&copy; 2026 Campus Market | 校园毕业物品流转平台团队 | <a href="#">服务条款</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/user.js"></script>
+  </body>
+
+</html>

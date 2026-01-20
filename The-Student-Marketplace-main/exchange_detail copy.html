@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>交换详情 - 考研数学资料交换 | 校园流转平台</title>
+    <link rel="stylesheet" href="css/exchange_detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <i class="fas fa-recycle"></i>
+                <span>校园流转平台</span>
+            </a>
+            <div class="nav-menu">
+                <a href="#"><i class="fas fa-home"></i> 首页</a>
+                <a href="#" class="active"><i class="fas fa-exchange-alt"></i> 物品交换</a>
+                <a href="#"><i class="fas fa-graduation-cap"></i> 学霸笔记</a>
+                <a href="#"><i class="fas fa-heart"></i> 爱心捐赠</a>
+                <a href="#"><i class="fas fa-user-circle"></i> 个人中心</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 页面主要内容 -->
+    <main class="exchange-container">
+
+        <!-- 第一部分：物品对比区 -->
+        <section id="item-compare" class="content-section">
+            <div class="section-title">
+                <h2><i class="fas fa-balance-scale"></i> 物品详情对比</h2>
+                <p class="section-desc">双方物品价值评估与详细对比</p>
+            </div>
+
+            <div class="compare-grid">
+                <!-- 交换方物品 -->
+                <div class="compare-card left-card">
+                    <div class="card-header">
+                        <div class="item-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3>交换方物品</h3>
+                        <span class="item-category">考研数学全套资料</span>
+                    </div>
+                    <div class="card-content">
+                        <ul class="item-list">
+                            <li><i class="fas fa-check-circle"></i> 李永乐《考研数学复习全书》</li>
+                            <li><i class="fas fa-check-circle"></i> 近10年真题详解（2013-2023）</li>
+                            <li><i class="fas fa-check-circle"></i> 高数线代概率手写笔记</li>
+                            <li><i class="fas fa-check-circle"></i> 个性化错题集锦</li>
+                            <li><i class="fas fa-check-circle"></i> 配套视频课程链接</li>
+                        </ul>
+                        <div class="item-details">
+                            <div class="detail-row">
+                                <span class="detail-label">物品成色</span>
+                                <span class="detail-value">9成新</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">使用痕迹</span>
+                                <span class="detail-value">少量标注</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">配套附件</span>
+                                <span class="detail-value">视频课链接+公式卡</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">预估价值</span>
+                                <span class="detail-value price-value">¥150</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 交换箭头 -->
+                <div class="compare-arrow">
+                    <div class="arrow-container">
+                        <i class="fas fa-exchange-alt"></i>
+                        <div class="arrow-text">交换</div>
+                    </div>
+                    <div class="value-diff">
+                        <i class="fas fa-balance-scale"></i>
+                        <span>价值差：约¥30</span>
+                        <small>（可协商）</small>
+                    </div>
+                </div>
+
+                <!-- 需求方物品 -->
+                <div class="compare-card right-card">
+                    <div class="card-header">
+                        <div class="item-icon">
+                            <i class="fas fa-pen-nib"></i>
+                        </div>
+                        <h3>需求方物品</h3>
+                        <span class="item-category">雅思备考资料</span>
+                    </div>
+                    <div class="card-content">
+                        <ul class="item-list">
+                            <li><i class="fas fa-search"></i> 剑桥雅思真题集（10-17）</li>
+                            <li><i class="fas fa-search"></i> 雅思口语最新题库</li>
+                            <li><i class="fas fa-search"></i> 写作高分范文集</li>
+                            <li><i class="fas fa-search"></i> 听力专项训练材料</li>
+                            <li><i class="fas fa-search"></i> 阅读解题技巧指南</li>
+                        </ul>
+                        <div class="item-details">
+                            <div class="detail-row">
+                                <span class="detail-label">期望成色</span>
+                                <span class="detail-value">8成新以上</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">版本要求</span>
+                                <span class="detail-value">近3年内</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">配套期望</span>
+                                <span class="detail-value">带答案解析</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">预估价值</span>
+                                <span class="detail-value price-value">¥180</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第二部分：交换者信息区 -->
+        <section id="exchanger-info" class="content-section">
+            <div class="section-title">
+                <h2><i class="fas fa-user-graduate"></i> 交换者信息与信誉</h2>
+                <p class="section-desc">建立信任，安全交换</p>
+            </div>
+
+            <div class="exchanger-profile">
+                <div class="profile-header">
+                    <div class="avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="profile-basic">
+                        <h3>苏文静同学</h3>
+                        <p class="student-info">
+                            <i class="fas fa-id-card"></i> 学号：2019****0321
+                        </p>
+                        <div class="profile-tags">
+                            <span class="tag">经管学院</span>
+                            <span class="tag">金融学专业</span>
+                            <span class="tag">大四毕业生</span>
+                            <span class="tag">西区3号楼</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-details">
+                    <div class="detail-card">
+                        <h4><i class="fas fa-chart-line"></i> 平台信誉数据</h4>
+                        <div class="rating-display">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="rating-score">4.2/5.0</span>
+                            </div>
+                            <div class="stats-grid">
+                                <div class="stat-item">
+                                    <div class="stat-value">12</div>
+                                    <div class="stat-label">成功交换</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">8</div>
+                                    <div class="stat-label">物品流转</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">100%</div>
+                                    <div class="stat-label">好评率</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">0</div>
+                                    <div class="stat-label">纠纷记录</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-card">
+                        <h4><i class="fas fa-history"></i> 在线状态与习惯</h4>
+                        <div class="habits-list">
+                            <div class="habit-item">
+                                <i class="far fa-clock"></i>
+                                <span>活跃时间：19:00-23:00</span>
+                            </div>
+                            <div class="habit-item">
+                                <i class="fas fa-reply"></i>
+                                <span>回复速度：平均30分钟内</span>
+                            </div>
+                            <div class="habit-item">
+                                <i class="fas fa-handshake"></i>
+                                <span>偏好交付：图书馆面交</span>
+                            </div>
+                            <div class="habit-item">
+                                <i class="fas fa-comments"></i>
+                                <span>沟通风格：耐心细致</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <h4><i class="fas fa-comment-dots"></i> 历史评价</h4>
+                    <div class="reviews">
+                        <div class="review-item">
+                            <div class="review-content">
+                                <i class="fas fa-quote-left"></i>
+                                交换很守时，资料很完整，学姐还给了很多备考建议！
+                                <i class="fas fa-quote-right"></i>
+                            </div>
+                            <div class="review-meta">
+                                <span class="reviewer">张同学</span>
+                                <span class="review-date">2023-03-15</span>
+                            </div>
+                        </div>
+                        <div class="review-item">
+                            <div class="review-content">
+                                <i class="fas fa-quote-left"></i>
+                                物品描述准确，交易过程愉快，推荐！
+                                <i class="fas fa-quote-right"></i>
+                            </div>
+                            <div class="review-meta">
+                                <span class="reviewer">李同学</span>
+                                <span class="review-date">2023-02-28</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第三部分：交换条件区 -->
+        <section id="exchange-terms" class="content-section">
+            <div class="section-title">
+                <h2><i class="fas fa-file-contract"></i> 交换条件与规则</h2>
+                <p class="section-desc">明确条款，安心交换</p>
+            </div>
+
+            <div class="terms-grid">
+                <div class="term-card">
+                    <div class="term-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h4>交换方式</h4>
+                    <div class="term-options">
+                        <div class="option selected">
+                            <i class="fas fa-check-circle"></i>
+                            <span>面交（首选）</span>
+                            <small>图书馆/食堂/教学楼</small>
+                        </div>
+                        <div class="option">
+                            <i class="fas fa-check-circle"></i>
+                            <span>平台中转</span>
+                            <small>校园快递柜</small>
+                        </div>
+                        <div class="option disabled">
+                            <i class="fas fa-times-circle"></i>
+                            <span>邮寄交换</span>
+                            <small>暂不支持</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-icon">
+                        <i class="far fa-calendar-alt"></i>
+                    </div>
+                    <h4>时间窗口</h4>
+                    <div class="time-info">
+                        <div class="time-item">
+                            <i class="far fa-clock"></i>
+                            <div>
+                                <div class="time-label">期望完成</div>
+                                <div class="time-value">4月20日前</div>
+                            </div>
+                        </div>
+                        <div class="time-item">
+                            <i class="fas fa-calendar-check"></i>
+                            <div>
+                                <div class="time-label">可约时段</div>
+                                <div class="time-value">工作日晚上、周末全天</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h4>补充条款</h4>
+                    <ul class="clause-list">
+                        <li>
+                            <i class="fas fa-hand-holding-usd"></i>
+                            <span>可接受补差价：¥20-30元</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-search"></i>
+                            <span>需现场验货确认</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-exchange-alt"></i>
+                            <span>支持部分交换</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-file-audio"></i>
+                            <span>需包含口语范例音频</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-icon">
+                        <i class="fas fa-exclamation-circle"></i>
+                    </div>
+                    <h4>特殊要求</h4>
+                    <div class="requirements">
+                        <div class="req-item">
+                            <div class="req-badge">重要</div>
+                            <p>不接受破损严重或水浸资料</p>
+                        </div>
+                        <div class="req-item">
+                            <div class="req-badge">期望</div>
+                            <p>希望交换者也是备考同学，可交流经验</p>
+                        </div>
+                        <div class="req-item">
+                            <div class="req-badge">建议</div>
+                            <p>可互相分享备考心得和技巧</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第四部分：交换进度区 -->
+        <section id="exchange-progress" class="content-section">
+            <div class="section-title">
+                <h2><i class="fas fa-sync-alt"></i> 交换进度与动态</h2>
+                <p class="section-desc">实时跟踪，透明过程</p>
+            </div>
+
+            <div class="progress-container">
+                <!-- 时间线 -->
+                <div class="timeline">
+                    <h4>交换时间线</h4>
+                    <div class="timeline-track">
+                        <div class="timeline-item active">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">4月10日 14:30</div>
+                                <div class="timeline-desc">发布交换请求</div>
+                            </div>
+                        </div>
+                        <div class="timeline-item active">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">4月11日 09:15</div>
+                                <div class="timeline-desc">3人表示意向</div>
+                            </div>
+                        </div>
+                        <div class="timeline-item active">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">4月11日 15:40</div>
+                                <div class="timeline-desc">与张同学初步匹配</div>
+                            </div>
+                        </div>
+                        <div class="timeline-item active">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">4月11日 20:30</div>
+                                <div class="timeline-desc">约定看货时间</div>
+                            </div>
+                        </div>
+                        <div class="timeline-item current">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">当前状态</div>
+                                <div class="timeline-desc">等待确认交换</div>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">4月13日</div>
+                                <div class="timeline-desc">计划：图书馆面交</div>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">4月15日</div>
+                                <div class="timeline-desc">预计：完成交换</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 意向者列表 -->
+                <div class="interested-list">
+                    <h4>当前意向者 <span class="count-badge">3人</span></h4>
+                    <div class="interester-cards">
+                        <div class="interester-card top-match">
+                            <div class="match-badge">
+                                <i class="fas fa-crown"></i> 最佳匹配
+                            </div>
+                            <div class="interester-info">
+                                <div class="interester-name">张明哲</div>
+                                <div class="interester-detail">
+                                    <i class="fas fa-graduation-cap"></i> 英语学院 · 大三
+                                </div>
+                                <div class="match-score">
+                                    <span class="score-label">匹配度</span>
+                                    <span class="score-value">92%</span>
+                                </div>
+                            </div>
+                            <div class="offer-info">
+                                <h5>可提供物品：</h5>
+                                <ul>
+                                    <li>剑桥雅思13-17真题集</li>
+                                    <li>口语素材库（带音频）</li>
+                                    <li>写作批改服务</li>
+                                </ul>
+                            </div>
+                            <div class="interester-note">
+                                <i class="fas fa-comment"></i>
+                                "我也在备考，可以一起学习交流"
+                            </div>
+                        </div>
+
+                        <div class="interester-card">
+                            <div class="interester-info">
+                                <div class="interester-name">李雨薇</div>
+                                <div class="interester-detail">
+                                    <i class="fas fa-graduation-cap"></i> 国际学院 · 大四
+                                </div>
+                                <div class="match-score">
+                                    <span class="score-label">匹配度</span>
+                                    <span class="score-value">85%</span>
+                                </div>
+                            </div>
+                            <div class="offer-info">
+                                <h5>可提供物品：</h5>
+                                <ul>
+                                    <li>全套雅思官方指南</li>
+                                    <li>机经预测题</li>
+                                    <li>在线模考账号</li>
+                                </ul>
+                            </div>
+                            <div class="interester-note">
+                                <i class="fas fa-comment"></i>
+                                "需要补差价吗？可以协商"
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第五部分：推荐与安全区 -->
+        <section id="recommendations" class="content-section">
+            <div class="section-title">
+                <h2><i class="fas fa-shield-alt"></i> 推荐与安全保障</h2>
+                <p class="section-desc">平台支持，安心无忧</p>
+            </div>
+
+            <div class="rec-grid">
+                <!-- 推荐区域 -->
+                <div class="rec-card">
+                    <h4><i class="fas fa-lightbulb"></i> 你可能还感兴趣</h4>
+                    <div class="rec-list">
+                        <a href="#" class="rec-item">
+                            <div class="rec-icon">
+                                <i class="fas fa-exchange-alt"></i>
+                            </div>
+                            <div class="rec-content">
+                                <div class="rec-title">概率论笔记 ↔ 托福词汇书</div>
+                                <div class="rec-meta">
+                                    <span class="match-badge">匹配度88%</span>
+                                    <span class="count-badge">2人关注</span>
+                                </div>
+                            </div>
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                        <a href="#" class="rec-item">
+                            <div class="rec-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="rec-content">
+                                <div class="rec-title">考研政治冲刺讲义</div>
+                                <div class="rec-meta">
+                                    <span>同一发布者</span>
+                                    <span class="price-badge">¥25</span>
+                                </div>
+                            </div>
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                        <a href="#" class="rec-item">
+                            <div class="rec-icon">
+                                <i class="fas fa-recycle"></i>
+                            </div>
+                            <div class="rec-content">
+                                <div class="rec-title">经管类教材回收计划</div>
+                                <div class="rec-meta">
+                                    <span>平台直接回收</span>
+                                    <span class="point-badge">兑换积分</span>
+                                </div>
+                            </div>
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 安全保障 -->
+                <div class="safety-card">
+                    <h4><i class="fas fa-shield-alt"></i> 平台保障服务</h4>
+                    <div class="safety-grid">
+                        <div class="safety-item">
+                            <div class="safety-icon verified">
+                                <i class="fas fa-id-card"></i>
+                            </div>
+                            <div class="safety-content">
+                                <h5>实名认证</h5>
+                                <p>双方学生证已验证</p>
+                            </div>
+                        </div>
+                        <div class="safety-item">
+                            <div class="safety-icon contract">
+                                <i class="fas fa-file-contract"></i>
+                            </div>
+                            <div class="safety-content">
+                                <h5>交换协议</h5>
+                                <p>平台提供标准合同</p>
+                            </div>
+                        </div>
+                        <div class="safety-item">
+                            <div class="safety-icon support">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div class="safety-content">
+                                <h5>纠纷调解</h5>
+                                <p>24小时客服支持</p>
+                            </div>
+                        </div>
+                        <div class="safety-item">
+                            <div class="safety-icon rating">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="safety-content">
+                                <h5>信用体系</h5>
+                                <p>交换后互评影响信誉分</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 交换小贴士 -->
+                    <div class="tips-card">
+                        <h5><i class="fas fa-lightbulb"></i> 交换小贴士</h5>
+                        <ul class="tips-list">
+                            <li>建议初次交换选择白天公共场合</li>
+                            <li>交换前互相确认物品照片和细节</li>
+                            <li>保留聊天记录作为凭证</li>
+                            <li>完成交换后及时确认并评价</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 底部行动栏 -->
+    <!-- <footer class="action-footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <div class="match-hint">
+                    <i class="fas fa-bullseye"></i>
+                    <div class="hint-content">
+                        <strong>智能匹配发现！</strong>
+    
+                        <span>您拥有的《考研英语真题精解》与本交换匹配度 <strong class="match-percent">79%</strong></span>
+                    </div>
+                </div>
+                <div class="action-buttons">
+                    <button class="btn-secondary">
+                        <i class="fas fa-exchange-alt"></i> 快速发起交换
+                    </button>
+                    <button class="btn-secondary">
+                        <i class="fas fa-search"></i> 查看匹配详情
+                    </button>
+                </div>
+            </div>
+            
+            <div class="main-actions">
+                <button class="btn-favorite">
+                    <i class="far fa-heart"></i> 关注
+                </button>
+                <button class="btn-share">
+                    <i class="fas fa-share-alt"></i> 分享
+                </button>
+                <button class="btn-primary">
+                    <i class="fas fa-handshake"></i> 我有意向
+                </button>
+            </div>
+        </div>
+    </footer> -->
+
+    <!-- 聊天窗口 -->
+    <!-- <div class="chat-widget">
+        <button class="chat-toggle">
+            <i class="fas fa-comments"></i>
+            <span class="chat-badge">3</span>
+        </button>
+    </div> -->
+
+    <footer class="footer_area">
+        <div class="footer_wrapper">
+            <div class="bottom_bar">
+                <p>&copy; 2026 Campus Market | 校园毕业物品流转平台团队 | <a href="#">服务条款</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/exchange_detail.js"></script>
+</body>
+</html>

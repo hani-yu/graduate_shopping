@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>拾光匠人 - 团队介绍 | 校友集市</title>
+    <!-- 外部资源 -->
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/archive_detail.css"> <!-- 引用通用详情样式 -->
+    <link rel="stylesheet" href="css/team_detail.css"> <!-- 本页专属样式 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://kit.fontawesome.com/0ad2b99521.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body class="archive_page">
+
+    <!-- Box 1: 顶部导航栏 (已同步金色高亮与毛玻璃效果) -->
+    <nav class="daohang">
+        <div class="daohang_wrapper">
+            <ul class="daohang_list">
+                <li class="daohang_items"><a href="index.html">首页</a></li>
+                <li class="daohang_items active"><a href="about.html">平台概况</a></li>
+                <li class="daohang_items"><a href="categories.html">商品分类</a></li>
+                <li class="daohang_items"><a href="guide.html">流转锦囊</a></li>
+                <li class="daohang_items"><a href="events.html">活动专区</a></li>
+                <li class="daohang_items"><a href="user.html">用户中心</a></li>
+            </ul>
+            <div class="nav_auth"><a href="signin.html" class="btn_nav">登录</a></div>
+        </div>
+    </nav>
+
+    <!-- Box 1: Hero Banner (团队深夜剪影) -->
+    <header class="team_hero">
+        <div class="hero_overlay"></div>
+        <div class="hero_content animate__animated animate__fadeIn">
+            <span class="en_tag">THE ARCHITECTS OF LIGHT</span>
+            <h1 class="elegant_title">拾光匠人 <span class="mission_seal">主创</span></h1>
+            <div class="elegant_line"></div>
+            <p class="elegant_subtitle">一行代码，一抹深绿，串联起万千校园记忆。</p>
+        </div>
+        <div class="banner_wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C0,0,31.83,14.28,64,27.1,126.31,52,187.31,68,250.31,68c31.11,0,32.25-10.15,71.08-11.56Z"
+                    fill="#f9fbfa"></path>
+            </svg>
+        </div>
+    </header>
+
+
+
+    <main class="archive_container">
+
+        <!-- Box 2: 团队简介 (匠心手稿版) -->
+        <section class="section_box team_preface">
+            <!-- 背景装饰：漂浮的符号与光影 -->
+            <div class="preface_deco_bg">
+                <span class="deco_text">CREATIVITY</span>
+                <div class="deco_circle"></div>
+            </div>
+
+            <div class="container">
+                <div class="preface_wrapper">
+                    <!-- 左侧：装饰性大首字与垂直标题 -->
+                    <div class="preface_sidebar">
+                        <div class="large_char">匠</div>
+                        <div class="vertical_en">THE STORY OF US</div>
+                    </div>
+
+                    <!-- 右侧：核心文案卡片 -->
+                    <div class="preface_main_card">
+                        <div class="card_seal_mark">锦囊志</div>
+
+                        <div class="section_title_v2">
+                            <span class="en_title">OUR PHILOSOPHY</span>
+                            <h2>锦囊初衷 · 匠心序言</h2>
+                            <div class="title_decoration"><span class="dot"></span><span class="line"></span></div>
+                        </div>
+
+                        <!-- 动态打字机文案容器 -->
+                        <div class="preface_text_content">
+                            <p id="typewriterText">
+                                我们是一群来自各院系的开发者与设计师。在深夜的图书馆，我们思考如何让“毕业”不再意味着大量的浪费，而是知识与器物的优雅接力。凭借对校园文化的热爱，我们构建了这个充满温情的流转平台。
+                            </p>
+                        </div>
+
+                        <!-- 底部装饰：团队印章与签名 -->
+                        <div class="preface_footer">
+                            <div class="team_signature">Campus Market Creators</div>
+                            <div class="mini_seal"><i class="fas fa-fingerprint"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Box 3: 核心成员档案袋 (学生证卡片布局) -->
+        <section id="tuandui_box" class="section_box tuandui_area">
+            <div class="container">
+                <!-- 模块标题 -->
+                <div class="title_group">
+                    <span class="small_title">CORE TEAM</span>
+                    <h2>主创团队 · 核心成员</h2>
+                    <div class="line_box"><span class="dian"></span><span class="xian"></span></div>
+                    <p class="desc_text">一群热爱代码和校园生活的同学，共同搭建了这个拾光锦囊。</p>
+                </div>
+
+                <div class="chengyuan_grid">
+                    <!-- 成员 1 -->
+                    <div class="chengyuan_card_wrap">
+                        <div class="chengyuan_card" data-tilt>
+                            <div class="card_light"></div> <!-- 鼠标扫过的亮光 -->
+                            <div class="top_jiazi"></div> <!-- 顶部的装饰夹子 -->
+
+                            <div class="card_top">
+                                <span class="xueyuan_text">信息学院 / IT</span>
+                                <div class="renzheng_tag">
+                                    <i class="fas fa-check-circle"></i> 已认证
+                                </div>
+                            </div>
+
+                            <div class="card_mid">
+                                <div class="head_img_box">
+                                    <div class="saomiao_xian"></div> <!-- 扫描动画 -->
+                                    <img src="https://ui-avatars.com/api/?name=L&background=064e3b&color=fff" alt="CTO">
+                                </div>
+                                <div class="user_xinxi">
+                                    <h4>林同学</h4>
+                                    <span class="user_job">首席技术官 · CTO</span>
+                                </div>
+                            </div>
+
+                            <div class="card_bottom">
+                                <p>“搞定所有底层代码，让大家交易更安全。”</p>
+                                <div class="tiaoxingma">
+                                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 成员 2 -->
+                    <div class="chengyuan_card_wrap" style="transition-delay: 0.1s;">
+                        <div class="chengyuan_card" data-tilt>
+                            <div class="card_light"></div>
+                            <div class="top_jiazi"></div>
+
+                            <div class="card_top">
+                                <span class="xueyuan_text">艺术学院 / Art</span>
+                                <div class="renzheng_tag"><i class="fas fa-check-circle"></i> 已认证</div>
+                            </div>
+
+                            <div class="card_mid">
+                                <div class="head_img_box">
+                                    <div class="saomiao_xian"></div>
+                                    <img src="https://ui-avatars.com/api/?name=S&background=0d9488&color=fff" alt="CDO">
+                                </div>
+                                <div class="user_xinxi">
+                                    <h4>苏同学</h4>
+                                    <span class="user_job">设计总监 · CDO</span>
+                                </div>
+                            </div>
+
+                            <div class="card_bottom">
+                                <p>“把页面做得漂亮，让毕业流转更有温度。”</p>
+                                <div class="tiaoxingma">
+                                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 成员 3 -->
+                    <div class="chengyuan_card_wrap" style="transition-delay: 0.2s;">
+                        <div class="chengyuan_card" data-tilt>
+                            <div class="card_light"></div>
+                            <div class="top_jiazi"></div>
+
+                            <div class="card_top">
+                                <span class="xueyuan_text">经管学院 / Eco</span>
+                                <div class="renzheng_tag"><i class="fas fa-check-circle"></i> 已认证</div>
+                            </div>
+
+                            <div class="card_mid">
+                                <div class="head_img_box">
+                                    <div class="saomiao_xian"></div>
+                                    <img src="https://ui-avatars.com/api/?name=W&background=f59e0b&color=fff" alt="COO">
+                                </div>
+                                <div class="user_xinxi">
+                                    <h4>王同学</h4>
+                                    <span class="user_job">运营负责人 · COO</span>
+                                </div>
+                            </div>
+
+                            <div class="card_bottom">
+                                <p>“连接全校社团，大家一起处理闲置。”</p>
+                                <div class="tiaoxingma">
+                                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Box 4: 开发故事 (左图右文：.edu 认证攻坚) -->
+        <section class="section_box split_layout tech_story">
+            <div class="split_img">
+                <div class="code_window">
+                    <div class="dot_group"><span></span><span></span><span></span></div>
+                    <pre><code>if (email.endsWith(".edu.cn")) {
+    grantAccess("Circulation_Hub");
+    log("A verified Alumnus joined.");
+}</code></pre>
+                </div>
+            </div>
+            <div class="split_text">
+                <h3>破茧：.edu 邮箱的纯净誓言</h3>
+                <p>为了确保每一个“拾光者”都是真实的同窗，我们花费三个月攻克了全校 12 个院系的邮箱接口适配。这不仅是技术上的挑战，更是我们对“诚信校园”使命的坚守。</p>
+            </div>
+        </section>
+
+        <!-- Box 5: 设计理念 (右图左文：深绿与锦囊) -->
+        <section class="section_box split_layout design_logic reverse">
+            <div class="split_img">
+                <div class="mood_board">
+                    <div class="color_swatch" style="background:#064e3b">#064E3B</div>
+                    <div class="color_swatch" style="background:#f59e0b">#F59E0B</div>
+                    <div class="silk_bag_icon"><i class="fas fa-scroll"></i></div>
+                </div>
+            </div>
+            <div class="split_text">
+                <h3>本真：深绿与琥珀的对话</h3>
+                <p>我们选择深林绿，因为它象征校园的常青与环保的初衷；我们点缀琥珀金，因为它代表每一件被收藏旧物的珍贵。锦囊的形状，则是我们对中国传统“锦囊妙计”文化的致敬。</p>
+            </div>
+        </section>
+
+        <!-- Box 6: 团队技能矩阵 (可视化图表) -->
+
+        <section id="jineng_area" class="section_box jineng_section">
+            <!-- 背景装饰点点 -->
+            <div class="jineng_bg_dian"></div>
+
+            <div class="container">
+                <!-- 模块标题 (保持全站统一) -->
+                <div class="section_title_v2">
+                    <span class="en_title">TECHNICAL STACK</span>
+                    <h2>锦囊匠人 · 技能矩阵</h2>
+                    <div class="title_decoration"><span class="dot"></span><span class="line"></span></div>
+                    <p class="section_desc">从底层代码到视觉美学，我们用多维能力打磨每一寸流转体验。</p>
+                </div>
+
+                <div class="jineng_grid">
+                    <!-- 技能 1 -->
+                    <div class="jineng_card" data-tilt>
+                        <div class="jineng_head">
+                            <div class="jineng_icon"><i class="fab fa-react"></i></div>
+                            <div class="jineng_wenzi">
+                                <h4>React / 前端架构</h4>
+                                <div class="num_box">
+                                    <span class="num_text" data-target="95">0</span><small>%</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tiao_bg">
+                            <!-- 进度条填充 -->
+                            <div class="tiao_fill" style="--w: 95%;">
+                                <div class="tiao_guang"></div> <!-- 流动的亮光 -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 技能 2 -->
+                    <div class="jineng_card" data-tilt>
+                        <div class="jineng_head">
+                            <div class="jineng_icon"><i class="fab fa-python"></i></div>
+                            <div class="jineng_wenzi">
+                                <h4>Python / 数据流转</h4>
+                                <div class="num_box">
+                                    <span class="num_text" data-target="88">0</span><small>%</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tiao_bg">
+                            <div class="tiao_fill" style="--w: 88%;">
+                                <div class="tiao_guang"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 技能 3 -->
+                    <div class="jineng_card" data-tilt>
+                        <div class="jineng_head">
+                            <div class="jineng_icon"><i class="fas fa-palette"></i></div>
+                            <div class="jineng_wenzi">
+                                <h4>UI / 博物感设计</h4>
+                                <div class="num_box">
+                                    <span class="num_text" data-target="92">0</span><small>%</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tiao_bg">
+                            <div class="tiao_fill" style="--w: 92%;">
+                                <div class="tiao_guang"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 技能 4 -->
+                    <div class="jineng_card" data-tilt>
+                        <div class="jineng_head">
+                            <div class="jineng_icon"><i class="fas fa-bullhorn"></i></div>
+                            <div class="jineng_wenzi">
+                                <h4>校园运营 / 资源对接</h4>
+                                <div class="num_box">
+                                    <span class="num_text" data-target="85">0</span><small>%</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tiao_bg">
+                            <div class="tiao_fill" style="--w: 85%;">
+                                <div class="tiao_guang"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Box 7: 团队照片瀑布流 (拍立得黑板风格) -->
+        <section class="section_box team_gallery">
+            <div class="gallery_blackboard">
+                <div class="polaroid" style="--rotate: -5deg;">
+                    <img
+                        src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=80">
+                    <span>深夜会议 · 2025</span>
+                </div>
+                <div class="polaroid" style="--rotate: 3deg;">
+                    <img
+                        src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=400&q=80">
+                    <span>代码审查 · 图书馆</span>
+                </div>
+                <div class="polaroid" style="--rotate: -2deg;">
+                    <img
+                        src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=400&q=80">
+                    <span>线下集市筹备</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Box 8: 志愿者招募 (CTA 入口) -->
+        <section id="zhaomu_area" class="section_box zhaomu_section">
+            <div class="container">
+                <!-- 招募卡片主体 -->
+                <div class="zhaomu_glass_box" id="zhaomuBox">
+                    <!-- 装饰性的光晕，由 JS 控制随鼠标移动 -->
+                    <div class="zhaomu_light"></div>
+
+                    <div class="zhaomu_content">
+                        <div class="zhaomu_icon">
+                            <i class="fas fa-paper-plane"></i>
+                        </div>
+                        <span class="zhaomu_tag">WANT YOU</span>
+                        <h3>成为“拾光守护志愿者”</h3>
+                        <p>热爱校园，渴望挑战？我们正在寻找校园推客、技术极客与情感编辑。期待你的锦囊妙计，让流转不负韶华。</p>
+
+                        <div class="btn_wrap">
+                            <button class="btn_shenqing" id="btnShenqing">
+                                <span>提交加入申请</span>
+                                <div class="btn_guang"></div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 四角的装饰小点 -->
+                    <div class="box_dot top_left"></div>
+                    <div class="box_dot top_right"></div>
+                    <div class="box_dot bottom_left"></div>
+                    <div class="box_dot bottom_right"></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer_area">
+        <div class="footer_wrapper">
+            <div class="bottom_bar">
+                <p>&copy; 2026 Campus Market | 校园毕业物品流转平台团队 | <a href="#">服务条款</a></p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/team_detail.js"></script>
+</body>
+
+</html>

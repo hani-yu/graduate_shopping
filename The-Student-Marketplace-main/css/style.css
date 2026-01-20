@@ -52,7 +52,7 @@ a {
 	font-style: italic;
 	font-display: swap;
 }
-.type__title {
+.type_title {
 	font-family: 'Futura', 'Helvetica Neue', Helvetica, Arial;
 	font-size: 6rem;
 	font-style: italic;
@@ -94,7 +94,7 @@ a {
 	transform: translateY(-0.1rem);
 	box-shadow: 0 0.5rem 1rem rgba(17, 17, 17, 0.7);
 }
-.btn__primary {
+.btn_primary {
 	background-color: transparent;
 	color: #f8fffd;
 	font-size: 2rem;
@@ -102,7 +102,7 @@ a {
 	letter-spacing: 0.2rem;
 	border: 1px solid #f8fffd;
 }
-.btn__primary:hover {
+.btn_primary:hover {
 	background-color: #e4091d;
 	border: 1px solid #e4091d;
 }
@@ -178,7 +178,7 @@ a {
 .food__card:hover img {
 	transform: scale(1.2);
 }
-.order__container {
+.contact_container {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
@@ -205,26 +205,26 @@ a {
 .box:hover {
 	box-shadow: 0 1rem 4rem rgba(17, 17, 17, 0.5);
 }
-.box__title {
+.box_title {
 	margin-bottom: 2rem;
 	text-align: center;
 	text-transform: uppercase;
 	font-family: 'Gotham', Helvetica, Arial, sans-serif;
 	font-size: 3rem;
 }
-.box__day {
+.box_day {
 	font-family: 'Gotham', Helvetica, Arial, sans-serif;
 	font-weight: 100;
 	font-size: 2rem;
 	color: #444;
 }
-.box__time {
+.box_time {
 	font-family: 'Gotham', Helvetica, Arial, sans-serif;
 	font-weight: 100;
 	font-size: 2rem;
 	color: #e4091d;
 }
-.box__link {
+.box_link {
 	color: #111;
 	font-size: 2rem;
 	font-family: 'Futura', 'Helvetica Neue', Helvetica, Arial;
@@ -238,17 +238,17 @@ a {
 	background-color: #261c13;
 	padding: 0 0 4rem;
 }
-.footer__container--text {
+.footer_text {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 	flex-wrap: wrap;
 }
-.footer__logo {
+.footer_logo {
 	text-align: center;
 	padding: 2rem 0;
 }
-.footer__logo--img {
+.footer_logo--img {
 	width: 20rem;
 }
 .contact {
@@ -274,7 +274,7 @@ a {
 .copyright {
 	text-align: center;
 }
-.copyright__details {
+.copyright_details {
 	font-size: 1.6rem;
 	font-family: 'Gotham', Helvetica, Arial, sans-serif;
 	color: #f8fffd;
@@ -303,11 +303,11 @@ a {
 	align-items: center;
 	margin-top: -12rem;
 }
-.header__text {
+.header_text {
 	text-align: center;
 	margin-top: 35rem;
 }
-.header__title--primary {
+.header_title--primary {
 	font-family: 'Gotham', Helvetica, Arial, sans-serif;
 	font-size: 11rem;
 	font-style: normal;
@@ -321,10 +321,10 @@ a {
 	display: block;
 	margin-bottom: 3rem;
 }
-.header__title--primary:hover {
+.header_title--primary:hover {
 	transform: skewY(-2deg) skewX(-15deg) scale(1.1);
 }
-.header__title--secondary {
+.header_title--secondary {
 	font-family: 'Futura', 'Helvetica Neue', Helvetica, Arial;
 	font-size: 6rem;
 	font-style: italic;
@@ -342,16 +342,16 @@ a {
 	z-index: 5;
 	transition: 0.5s all;
 }
-.nav__wrapper {
+.daohang_wrapper {
 	margin: 0 auto;
 	max-width: 50rem;
 }
-.nav__list {
+.daohang_list {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
-.nav__items::after {
+.daohang_items::after {
 	content: '';
 	display: block;
 	margin: auto;
@@ -360,11 +360,11 @@ a {
 	background: transparent;
 	transition: width 0.5s ease, background-color 0.5s ease;
 }
-.nav__items:hover::after {
+.daohang_items:hover::after {
 	width: 100%;
 	background: #e4091d;
 }
-.nav__items a {
+.daohang_items a {
 	color: #f8fffd;
 	text-transform: uppercase;
 	font-family: 'Gotham', Helvetica, Arial, sans-serif;
@@ -373,14 +373,14 @@ a {
 	transition: 0.5s all;
 	padding: 2.5rem 0;
 }
-.nav__items a:hover {
+.daohang_items a:hover {
 	color: #e4091d;
 }
-.nav__scrolled {
+.nav_scrolled {
 	background-color: #f8fffd;
 	box-shadow: 0 0.3rem 2rem rgba(17, 17, 17, 0.3);
 }
-.nav__scrolled a {
+.nav_scrolled a {
 	color: #261c13;
 }
 @media (max-width: 768px) {
@@ -388,35 +388,35 @@ a {
 		display: none;
 		background-color: #f8fffd;
 	}
-	.nav__list {
+	.daohang_list {
 		flex-direction: column;
 	}
-	.nav__logo {
+	.nav_logo {
 		order: 1;
 		padding: 1rem;
 	}
-	.nav__items {
+	.daohang_items {
 		order: 2;
 		padding: 1rem;
 	}
-	.nav__items a {
+	.daohang_items a {
 		color: #261c13;
 		padding: 1rem;
 	}
 	.header {
 		margin-top: 0;
 	}
-	.header__text {
+	.header_text {
 		margin-top: 15rem;
 	}
-	.header__title--primary {
+	.header_title--primary {
 		font-size: 8rem;
 		line-height: 8rem;
 	}
-	.header__title--primary:hover {
+	.header_title--primary:hover {
 		transform: none;
 	}
-	.header__title--secondary {
+	.header_title--secondary {
 		font-size: 4rem;
 	}
 	.food__card {
@@ -452,18 +452,18 @@ a {
 		padding: 1rem;
 	}
 }
-.section-menu {
+.section_menu {
 	padding: 10rem 0 2rem;
 }
 .section-review {
 	padding: 30rem 0;
 	background-color: #e4091d;
 }
-.section-order {
+.section-contact {
 	padding: 20rem 0 10rem;
 	margin-top: -8rem;
 }
-.section__wrapper {
+.section_wrapper {
 	max-width: 175rem;
 	margin: 0 auto;
 }

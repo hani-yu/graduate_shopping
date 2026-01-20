@@ -1,0 +1,557 @@
+/* --- Box 1: Hero (深夜图书馆感) --- */
+.team_hero {
+    height: 60vh;
+
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+    text-align: center; color: #fff;
+}
+
+/* --- 团队前言高级重塑 --- */
+.team_preface {
+    background: #fdfdfd;
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 背景装饰文字 */
+.preface_deco_bg {
+    position: absolute;
+    top: 10%; right: 5%;
+    pointer-events: none;
+}
+.deco_text {
+    font-size: 8rem;
+    font-weight: 900;
+    color: rgba(13, 148, 136, 0.03);
+    letter-spacing: 15px;
+}
+
+/* 布局包装 */
+.preface_wrapper {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 60px;
+    align-items: flex-start;
+    perspective: 2000px; /* 增加视距 */
+}
+
+/* 左侧装饰侧栏 */
+.preface_sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.large_char {
+    font-size: 5rem;
+    font-family: "Noto Serif SC", serif;
+    color: #064e3b;
+    line-height: 1;
+    position: relative;
+}
+.large_char::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; left: 50%; transform: translateX(-50%);
+    width: 30px; height: 2px; background: #f59e0b;
+}
+.vertical_en {
+    writing-mode: vertical-rl;
+    margin-top: 30px;
+    color: #94a3b8;
+    letter-spacing: 5px;
+    font-size: 0.9rem;
+}
+
+/* 主文案卡片 */
+.preface_main_card {
+    background: #ffffff;
+    padding: 60px 80px;
+    border-radius: 4px; /* 趋于直角，像书页 */
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.05);
+    border-left: 6px solid #064e3b; /* 类似书脊的设计 */
+    position: relative;
+     transform-style: preserve-3d;
+}
+.preface_main_card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    /* 这里的坐标通过 JS 动态更新 */
+    background: radial-gradient(
+        circle at var(--mouse-x) var(--mouse-y), 
+        rgba(13, 148, 136, 0.08) 0%, 
+        transparent 50%
+    );
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.preface_main_card:hover::before {
+    opacity: 1;
+}
+
+.preface_main_card:hover {
+    box-shadow: 0 50px 100px rgba(6, 78, 59, 0.1);
+    border-left-color: #0d9488; /* 书脊变亮 */
+}
+
+/* 装饰小印章 */
+.card_seal_mark {
+    position: absolute;
+    top: 30px; right: 40px;
+    border: 1px solid #f59e0b;
+    color: #f59e0b;
+    padding: 5px 10px;
+    font-size: 1.3rem;
+    transform: rotate(5deg);
+    opacity: 0.6;
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.5s;
+    transform-style: preserve-3d;
+}
+
+.preface_main_card:hover .card_seal_mark {
+    transform: translateZ(10px) rotate(5deg); /* 悬浮时在空间里飞出 */
+    opacity: 1;
+    color: #f59e0b;
+}
+
+/* 文案排版 */
+.preface_text_content p {
+    font-size: 1.25rem !important; /* 增大字号 */
+    line-height: 2;
+    color: #475569;
+    text-align: justify;
+    margin-top: 30px;
+    font-weight: 500;
+    transform: translateZ(20px);
+}
+
+/* 底部签名区 */
+.preface_footer {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.team_signature {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 1.5rem;
+    color: #0d9488;
+    opacity: 0.8;
+}
+.mini_seal {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    border: 1px solid #ef4444;
+    color: #ef4444;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0.5;
+}
+
+/* 动画：卡片整体进入 */
+.preface_main_card {
+    animation: cardReveal 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes cardReveal {
+    from { opacity: 0; transform: translateX(50px) rotateY(10deg); }
+    to { opacity: 1; transform: translateX(0) rotateY(0); }
+}
+
+/* --- Box 3: ID Card 卡片 --- */
+/* .matrix_grid_premium {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;
+    max-width: 1200px; margin: 0 auto;
+}
+.id_card {
+    background: #fff; padding: 30px; border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-top: 15px solid var(--deep-green);
+    position: relative; overflow: hidden;
+    transition: all 0.4s ease;
+}
+.card_clip {
+    position: absolute; top: -5px; left: 50%; transform: translateX(-50%);
+    width: 60px; height: 15px; background: #e2e8f0; border-radius: 4px;
+}
+.avatar_box { width: 100px; height: 100px; border-radius: 12px; overflow: hidden; margin-bottom: 15px; border: 3px solid #f1f5f9; }
+.avatar_box img { width: 100%; }
+.verified_stamp {
+    position: absolute; top: 40px; right: -20px;
+    transform: rotate(45deg); background: rgba(239, 68, 68, 0.1);
+    color: #ef4444; border: 2px solid #ef4444; padding: 2px 20px;
+    font-size: 0.7rem; font-weight: 900;
+}
+.barcode { height: 40px; background: repeating-linear-gradient(90deg, #334155, #334155 2px, transparent 2px, transparent 4px); margin-top: 15px; opacity: 0.3; } */
+
+/* --- 团队成员区域 (学生作业风) --- */
+.tuandui_area {
+    background: #fdfdfd;
+    padding: 80px 0;
+}
+
+/* 标题样式适配 */
+.title_group { text-align: center; margin-bottom: 50px; }
+.small_title { color: #0d9488; font-weight: bold; letter-spacing: 2px; font-size: 1.2rem; }
+.title_group h2 { font-size: 2.2rem !important; color: #064e3b; margin: 10px 0; font-family: "Noto Serif SC", serif; }
+.line_box { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 15px 0; }
+.line_box .xian { width: 50px; height: 2px; background: #0d9488; }
+.line_box .dian { width: 6px; height: 6px; background: #f59e0b; border-radius: 50%; }
+.desc_text { font-size: 1.15rem !important; color: #64748b; }
+
+/* 成员网格 */
+.chengyuan_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.chengyuan_card_wrap { perspective: 1000px; }
+
+.chengyuan_card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #eee;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    transition: all 0.4s ease;
+    transform-style: preserve-3d;
+}
+
+/* 卡片亮光效果 */
+.card_light {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at var(--mx) var(--my), rgba(13, 148, 136, 0.06) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+/* 装饰夹子 */
+.top_jiazi {
+    position: absolute;
+    top: 0; left: 50%; transform: translateX(-50%);
+    width: 60px; height: 10px; background: #e2e8f0;
+    border-radius: 0 0 8px 8px;
+}
+
+.card_top { display: flex; justify-content: space-between; margin-bottom: 25px; align-items: center; }
+.xueyuan_text { font-size: 1rem !important; color: #94a3b8; font-weight: bold; }
+.renzheng_tag { background: #f0fdf4; color: #16a34a; padding: 3px 10px; border-radius: 20px; font-size: 1rem !important; }
+
+/* 头像和扫描线 */
+.head_img_box {
+    position: relative;
+    width: 100px; height: 100px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    border: 2px solid #f8fafc;
+}
+.head_img_box img { width: 100%; height: 100%; object-fit: cover; }
+
+.saomiao_xian {
+    position: absolute;
+    top: -100%; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to bottom, transparent, rgba(13, 148, 136, 0.3), transparent);
+    animation: saomiao_move 3s infinite linear;
+}
+@keyframes saomiao_move {
+    0% { top: -100%; }
+    100% { top: 100%; }
+}
+
+.user_xinxi h4 { font-size: 1.5rem !important; color: #064e3b; margin-bottom: 5px; }
+.user_job { font-size: 1.1rem !important; color: #0d9488; font-weight: bold; }
+
+/* 底部条形码 */
+.card_bottom { margin-top: 20px; padding-top: 20px; border-top: 1px dashed #eee; }
+.card_bottom p { font-size: 1.1rem !important; color: #64748b; font-style: italic; margin-bottom: 15px; }
+
+.tiaoxingma { display: flex; gap: 3px; height: 20px; opacity: 0.2; }
+.tiaoxingma span { flex: 1; background: #064e3b; height: 100%; }
+.tiaoxingma span:nth-child(odd) { height: 70%; }
+
+/* 悬停效果 */
+.chengyuan_card:hover {
+    border-color: #0d9488;
+    box-shadow: 0 20px 40px rgba(6, 78, 59, 0.08);
+}
+
+/* --- Box 4: Code Window --- */
+.code_window {
+    background: #1e293b; border-radius: 12px; padding: 20px;
+    color: #38bdf8; font-family: 'Courier New', Courier, monospace;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+.dot_group span { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 5px; }
+.dot_group span:nth-child(1) { background: #ff5f56; }
+.dot_group span:nth-child(2) { background: #ffbd2e; }
+.dot_group span:nth-child(3) { background: #27c93f; }
+
+/* --- Box 6: Skill Matrix --- */
+/* .skill_bars { max-width: 800px; margin: 40px auto; }
+.skill_item { margin-bottom: 25px; }
+.skill_item label { font-size: 1.1rem !important; color: var(--deep-green); font-weight: 700; margin-bottom: 10px; display: block; }
+.progress_track { height: 12px; background: #f1f5f9; border-radius: 6px; overflow: hidden; }
+.progress_fill { height: 100%; background: linear-gradient(90deg, var(--theme-teal), var(--accent-gold)); width: 0; transition: width 1.5s ease-out; } */
+
+/* --- 技能展示区域 (学生作业风格) --- */
+.jineng_section {
+    background: #ffffff;
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 背景的点点装饰 */
+.jineng_bg_dian {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: radial-gradient(rgba(13, 148, 136, 0.05) 1.5px, transparent 1.5px);
+    background-size: 30px 30px;
+    z-index: 0;
+}
+
+.jineng_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 双列排列，作业里最常用的稳重布局 */
+    gap: 40px;
+    max-width: 1100px;
+    margin: 50px auto 0;
+    position: relative;
+    z-index: 1;
+}
+
+/* 技能小卡片 */
+.jineng_card {
+    background: #fff;
+    padding: 35px;
+    border-radius: 15px;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    transition: all 0.4s ease;
+}
+
+.jineng_card:hover {
+    transform: translateY(-8px);
+    border-color: #0d9488;
+    box-shadow: 0 20px 40px rgba(13, 148, 136, 0.08);
+}
+
+.jineng_head {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.jineng_icon {
+    width: 55px; height: 55px;
+    background: #f0fdfa; /* 浅绿色背景 */
+    color: #0d9488;
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.6rem;
+}
+
+.jineng_wenzi { flex: 1; display: flex; align-items: center; justify-content: space-between; }
+
+.jineng_wenzi h4 {
+    font-size: 1.25rem !important; /* 文字要大 */
+    color: #064e3b; /* 深林绿 */
+    margin: 0;
+}
+
+.num_box { color: #f59e0b; font-weight: 800; }
+.num_text { font-size: 1.8rem !important; } /* 数字要大 */
+.num_box small { font-size: 1.1rem; margin-left: 2px; }
+
+/* 进度条轨道 */
+.tiao_bg {
+    width: 100%;
+    height: 12px;
+    background: #f1f5f9;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* 进度条填充色 */
+.tiao_fill {
+    height: 100%;
+    width: 0; /* JS 控制这个宽度 */
+    background: linear-gradient(90deg, #0d9488, #f59e0b);
+    border-radius: 20px;
+    position: relative;
+    transition: width 2s cubic-bezier(0.1, 1, 0.3, 1);
+}
+
+/* 进度条里闪过的一道光 */
+.tiao_guang {
+    position: absolute;
+    top: 0; right: 0;
+    width: 60px; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+    animation: guang_move 2s infinite linear;
+}
+
+@keyframes guang_move {
+    0% { transform: translateX(-300%); }
+    100% { transform: translateX(100%); }
+}
+
+
+/* --- Box 7: Polaroid Gallery --- */
+.gallery_blackboard {
+    background: #2d3748; padding: 60px; border-radius: 20px;
+    display: flex; justify-content: center; gap: 40px;
+    box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
+}
+.polaroid {
+    background: #fff; padding: 15px 15px 40px 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transform: rotate(var(--rotate)); transition: 0.3s;
+}
+.polaroid:hover { transform: rotate(0) scale(1.1); z-index: 10; }
+.polaroid img { width: 200px; height: 150px; object-fit: cover; border: 1px solid #eee; }
+.polaroid span { display: block; margin-top: 15px; font-family: "KaiTi", serif; font-size: 1.1rem !important; color: #4a5568; text-align: center; }
+
+/* --- Box 8: CTA --- */
+/* --- 志愿者招募区域 (学生作业风格) --- */
+.zhaomu_section {
+    padding: 100px 0;
+    background: #fdfdfd;
+}
+
+.zhaomu_glass_box {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 60px 40px;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid rgba(13, 148, 136, 0.1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.03);
+    transition: transform 0.4s ease;
+}
+
+/* 随鼠标移动的淡绿色光晕 */
+.zhaomu_light {
+    position: absolute;
+    top: 0; left: 0;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(13, 148, 136, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.zhaomu_content { position: relative; z-index: 1; }
+
+.zhaomu_icon {
+    font-size: 2.5rem;
+    color: #f59e0b; /* 琥珀金 */
+    margin-bottom: 20px;
+}
+
+.zhaomu_tag {
+    display: block;
+    font-size: 0.9rem !important;
+    font-weight: 800;
+    color: #0d9488;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+.zhaomu_glass_box h3 {
+    font-size: 2rem !important;
+    color: #064e3b;
+    margin-bottom: 20px;
+    font-family: "Noto Serif SC", serif;
+}
+
+.zhaomu_glass_box p {
+    font-size: 1.2rem !important; /* 字体加大 */
+    color: #64748b;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+}
+
+/* --- 申请按钮样式 --- */
+.btn_shenqing {
+    background: #0d9488;
+    color: #fff;
+    border: none;
+    padding: 18px 50px;
+    border-radius: 50px;
+    font-size: 1.2rem !important;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(13, 148, 136, 0.2);
+}
+
+.btn_shenqing:hover {
+    background: #064e3b;
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(6, 78, 59, 0.3);
+}
+
+/* 按钮内部的流光动画 */
+.btn_guang {
+    position: absolute;
+    top: 0; left: -100%;
+    width: 50%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transform: skewX(-25deg);
+    transition: 0.5s;
+}
+
+.btn_shenqing:hover .btn_guang {
+    left: 150%;
+}
+
+/* 装饰性小点 */
+.box_dot {
+    position: absolute;
+    width: 8px; height: 8px;
+    background: #f59e0b;
+    border-radius: 50%;
+    opacity: 0.3;
+}
+.top_left { top: 20px; left: 20px; }
+.top_right { top: 20px; right: 20px; }
+.bottom_left { bottom: 20px; left: 20px; }
+.bottom_right { bottom: 20px; right: 20px; }
+
+.footer_area {
+    background: #1f2937;
+    padding: 2rem 0;
+    text-align: center;
+    color: #cbd5e1;
+    font-size: 1.2rem;
+    position: relative;
+}
+.footer_area::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #0f9d95, #f59e0b, #f472b6);
+}
+.footer_area a { color: #0f9d95; text-decoration: none; }
+.footer_area a:hover { text-decoration: underline; }

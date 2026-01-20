@@ -13,7 +13,7 @@ const headerOptions = {
 // Observer 
 const headerObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-        !entry.isIntersecting ? nav.classList.add('nav__scrolled') :  nav.classList.remove('nav__scrolled');
+        !entry.isIntersecting ? nav.classList.add('nav_scrolled') :  nav.classList.remove('nav_scrolled');
     });
 }, headerOptions);
 

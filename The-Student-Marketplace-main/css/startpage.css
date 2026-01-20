@@ -136,11 +136,11 @@ hr {
     max-height: 50px;
 }
 
-.btn__primary:hover {
+.btn_primary:hover {
 	background-color: teal;;
 	border: 1px solid teal;
 }
-.btn__primary {
+.btn_primary {
 	background-color: transparent;
 	color: #f8fffd;
 	font-size: 2rem;

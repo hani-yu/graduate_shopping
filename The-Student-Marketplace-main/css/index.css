@@ -1,0 +1,1850 @@
+:root {
+    /* 你提供的新配色 */
+    --deep-green: #064e3b;
+    --theme-teal: #0d9488;
+    --accent-gold: #f59e0b;
+    --paper-white: #f9fbfa;
+    --text-slate: #475569;
+
+    /* 映射原有变量以保持兼容性 */
+    --primary-color: var(--theme-teal);
+    --primary-light: #f0fdfa;
+    --accent-color: var(--theme-teal);
+    --text-main: #1f2937;
+    --text-muted: var(--text-slate);
+    --bg-light: var(--paper-white);
+
+    --shadow-sm: 0 2px 4px rgba(6, 78, 59, 0.1);
+    --shadow-md: 0 10px 15px -3px rgba(6, 78, 59, 0.2);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: var(--text-main);
+    background-color: #fcfcfc;
+    /* 去掉生硬的侧边框，改为优雅的间距 */
+    padding: 0;
+}
+
+/* --- Banner 主容器 --- */
+.header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -12rem;
+    overflow: hidden;
+    position: relative;
+    
+
+    /* 关键属性：overlay 模式会让颜色“染”进图片里，而不是死板的覆盖 */
+    /* background-blend-mode: overlay; */
+    background-size: cover !important;
+    background-position: center !important;
+    background-image: url('../images/beijing.jpg') !important; 
+    background-attachment: fixed;
+    /* 视差效果，增加高级感 */
+}
+
+/* 彻底删除之前丑陋的 ::before 和 ::after */
+.header::before,
+.header::after {
+    display: none !important;
+}
+
+/* 4. 装饰元素：漂浮的虚化圆球（增加细节） */
+.header .deco-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: var(--theme-teal);
+    filter: blur(80px);
+    opacity: 0.3;
+    z-index: 1;
+    animation: float 10s infinite ease-in-out;
+}
+
+.header .circle-1 {
+    width: 400px;
+    height: 400px;
+    top: -10%;
+    left: -10%;
+    background: var(--theme-teal);
+}
+
+.header .circle-2 {
+    width: 300px;
+    height: 300px;
+    bottom: 10%;
+    right: -5%;
+    background: var(--accent-gold);
+    opacity: 0.15;
+}
+
+/* 动画效果 */
+@keyframes header-bg-zoom {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0);
+    }
+
+    50% {
+        transform: translateY(-30px) rotate(10deg);
+    }
+}
+
+/* --- 文字背后的轻微毛玻璃容器（可选，若想文字纯悬浮可去掉背景） --- */
+.header_glass_box {
+    background: rgba(255, 255, 255, 0.1);
+    /* 极度透明的白色 */
+    backdrop-filter: blur(4px);
+    /* 淡淡的毛玻璃，让背景图更高级 */
+    padding: 4rem 6rem;
+    border-radius: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+    /* 极淡的阴影 */
+}
+
+/* --- 文字容器：确保在背景上方 --- */
+.header_text {
+    position: relative;
+    z-index: 2;
+    /* 必须高于伪元素的 z-index */
+    text-align: center;
+    /* margin-top 这里可以适当调小，因为父容器用了 flex 居中 */
+    margin-top: 5rem;
+    padding: 6rem;
+    background-image:
+        radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 30px 30px;
+    background-position: center;
+}
+
+/* --- 背景专用缩放动画（只缩放背景，不抖动文字） --- */
+@keyframes bg-zoom-animation {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.15);
+        /* 稍微放大，产生呼吸感 */
+    }
+}
+
+/* --- 主标题颜色与阴影修改 --- */
+.header_title--primary {
+    font-family: "Gotham", Helvetica, Arial, sans-serif;
+    font-size: 8rem;
+    font-weight: 700;
+    line-height: 10rem;
+    text-transform: uppercase;
+    color: var(--deep-green);
+    /* color: var(--theme-teal) !important;  */
+    text-shadow: 0 0.2rem 2rem rgba(249, 251, 250, 0.8);
+    /* text-shadow: 0 0.5rem 1.5rem rgba(255, 255, 255, 0.8); */
+    transition: 0.2s all;
+    display: block;
+    margin-bottom: 3rem;
+}
+
+
+/* 强调文字使用辅助金 (Accent Gold) */
+.bottom-dh {
+    opacity: 0;
+    display: inline-block !important;
+    color: var(--accent-gold) !important;
+    text-shadow: 0 0 2rem rgba(245, 158, 11, 0.6) !important;
+}
+
+/* --- Banner 按钮修改 --- */
+.btn_primary {
+    background-color: transparent;
+    color: var(--paper-white);
+    font-size: 2rem;
+    font-weight: 700;
+    border: 2px solid var(--paper-white);
+    position: relative;
+    bottom: 82px;
+}
+
+.btn_primary:hover {
+    background-color: var(--accent-gold);
+    /* 悬停变为金色 */
+    border-color: var(--accent-gold);
+    color: var(--deep-green);
+    /* 文字变深绿增加对比 */
+    box-shadow: 0 1rem 2rem rgba(6, 78, 59, 0.3);
+}
+
+ul {
+    list-style-type: none
+}
+
+a {
+    text-decoration: none
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Futura';
+    src: url("../font/FuturaCondMedium.woff2") format("woff2"), url("../font/FuturaCondMedium.woff") format("woff");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url("../font/Gotham-Bold.woff2") format("woff2"), url("../font/Gotham-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url("../font/Gotham-Bold.woff2") format("woff2"), url("../font/Gotham-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url("../font/Gotham-BoldItalic.woff2") format("woff2"), url("../font/Gotham-BoldItalic.woff") format("woff");
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap
+}
+
+.type_title {
+    font-family: "Futura", "Helvetica Neue", Helvetica, Arial;
+    font-size: 5rem;
+    font-style: italic;
+    font-weight: 600;
+    letter-spacing: normal;
+    line-height: 6rem;
+    text-transform: none;
+    margin-bottom: 4rem;
+    color: teal;
+    text-transform: uppercase;
+    text-align: center
+}
+
+.campus_intro {
+    padding: 8rem 2rem;
+    background-color: var(--bg-light);
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 标题设计 */
+.section_header {
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+.main_title {
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.title_line {
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+    margin: 0 auto 1.5rem;
+    border-radius: 2px;
+}
+
+.subtitle {
+    font-size: 1.4rem;
+    color: var(--text-light);
+}
+
+/* 卡片网格布局 */
+.card_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+}
+
+/* 卡片样式设计 */
+.feature_card {
+    background: #ffffff;
+    padding: 4rem 3rem;
+    border-radius: 2rem;
+    text-align: center;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* 图标装饰 */
+.icon_box {
+    width: 80px;
+    height: 80px;
+    background: rgba(42, 82, 152, 0.1);
+    border-radius: 50%;
+    margin: 0 auto 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: var(--primary-color);
+    position: relative;
+}
+
+.icon_box .dot {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #ffd700;
+    /* 毕业金点缀 */
+    border-radius: 50%;
+    right: 0;
+    bottom: 0;
+    border: 3px solid #fff;
+}
+
+.card_title {
+    font-size: 2.2rem;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.describe {
+    font-size: 1.5rem;
+    color: var(--text-light);
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+    min-height: 80px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.6rem 1.5rem;
+    background: #f8f9fa;
+    color: var(--primary-color);
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1px solid rgba(42, 82, 152, 0.2);
+}
+
+/* 悬停动画效果 */
+.feature_card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(42, 82, 152, 0.15);
+    background: linear-gradient(145deg, #ffffff, #f0f7ff);
+}
+
+.feature_card:hover .icon_box {
+    background: var(--primary-color);
+    color: #fff;
+    transform: rotateY(360deg);
+    transition: 0.6s all;
+}
+
+.feature_card:hover .badge {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+/* --- 热门商品区域背景微调，增加层次感 --- */
+.hot_products {
+    padding: 10rem 2rem;
+    background-color: #fcfcfc;
+    /* 极浅灰，衬托纯白卡片 */
+}
+
+.hot_products .container {
+    max-width: 1100px;
+    /* 关键：限制总宽度，卡片就不会变大 */
+    margin: 0 auto;
+}
+
+.product_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 关键：一行 3 个 */
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+/* --- 卡片基础样式优化 --- */
+.product_card {
+    height: 260px;
+    /* 略微增加高度 */
+    background: #ffffff;
+    border-radius: 1.2rem;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* 顶部对齐 */
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid #edf2f7;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+
+/* 分类标签 - 加重字重 */
+.category_tag {
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.8rem;
+    display: inline-block;
+}
+
+.product_card .card_title {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+    color: #1a202c;
+    /* 更深的标题色 */
+    z-index: 2;
+    font-weight: 700;
+}
+
+.product_card .describe {
+    font-size: 1.4rem;
+    color: #4a5568;
+    /* 更深的描述色 */
+    line-height: 1.7;
+    z-index: 2;
+    max-width: 90%;
+    transition: color 0.3s;
+}
+
+/* 1. 书籍 - 沉稳蓝 */
+.category_blue {
+    border-top: 6px solid #83a3e8;
+}
+
+.category_blue .category_tag {
+    color: #83a3e8;
+}
+
+.category_blue:hover {
+    background-color: #83a3e8;
+    border-top-color: #2563eb;
+}
+
+/* 2. 家具 - 森林绿 */
+.category_green {
+    border-top: 6px solid #88efce;
+}
+
+.category_green .category_tag {
+    color: #88efce;
+}
+
+.category_green:hover {
+    background-color: #88efce;
+    border-top-color: #059669;
+}
+
+/* 3. 电子 - 极客紫 */
+.category_purple {
+    border-top: 6px solid #a47fe4;
+}
+
+.category_purple .category_tag {
+    color: #a47fe4;
+}
+
+.category_purple:hover {
+    background-color: #a47fe4;
+    border-top-color: #7c3aed;
+}
+
+/* 4. 生活 - 活力橙 */
+.category_orange {
+    border-top: 6px solid #eda780;
+}
+
+.category_orange .category_tag {
+    color: #eda780;
+}
+
+.category_orange:hover {
+    background-color: #eda780;
+    border-top-color: #ea580c;
+}
+
+/* 5. 运动 - 湖水蓝 (Teal) */
+.category_teal {
+    border-top: 6px solid #55c5bc;
+}
+
+.category_teal .category_tag {
+    color: #55c5bc;
+}
+
+.category_teal:hover {
+    background-color: #55c5bc;
+    border-top-color: #0d9488;
+}
+
+/* --- 悬停后的文字与图标状态 --- */
+.product_card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* 悬停时文字统一变白，解决“看不见文字”的问题 */
+.product_card:hover .card_title,
+.product_card:hover .describe,
+.product_card:hover .category_tag,
+.product_card:hover .explore_btn {
+    color: #ffffff !important;
+}
+
+/* 探索按钮 - 增加一个白色底框效果 */
+.explore_btn {
+    position: absolute;
+    bottom: 2.5rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: inherit;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s;
+}
+
+.product_card:hover .explore_btn {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* 背景大图标 - 调暗默认透明度，增强悬停对比 */
+.card_icon {
+    position: absolute;
+    right: -10px;
+    bottom: -10px;
+    font-size: 8rem;
+    opacity: 0.03;
+    /* 默认非常淡 */
+    transform: rotate(-15deg);
+    transition: all 0.5s ease;
+    pointer-events: none;
+}
+
+.product_card:hover .card_icon {
+    opacity: 0.15;
+    /* 悬停时稍微亮一点点，但依然作为背景 */
+    transform: rotate(0deg) scale(1.1);
+    color: #fff;
+}
+
+/* --- 最新发布区域背景 --- */
+.new_release_section {
+    padding: 6rem 2rem;
+    background-color: #ffffff;
+}
+
+.content_container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* --- 标题样式 --- */
+.header_box {
+    text-align: left;
+    /* 改为左对齐，更有流转平台的感觉 */
+    margin-bottom: 3rem;
+    border-left: 5px solid var(--primary-color);
+    padding-left: 1.5rem;
+}
+
+.title_text {
+    font-size: 2.4rem;
+    color: var(--text-main);
+    font-weight: 800;
+}
+
+.description_text {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+}
+
+/* --- 商品网格布局：一行 3-4 个 --- */
+.goods_list {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* --- 单个商品卡片 --- */
+.goods_item {
+    background: #ffffff;
+    border: 1px solid #f0f0f0;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+}
+
+/* 模拟图片区域 */
+.image_placeholder {
+    height: 180px;
+    background-color: #f9fafb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5rem;
+    color: #d1d5db;
+    transition: all 0.3s;
+}
+
+/* NEW 徽章动画 */
+.new_tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #ff4757;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 4px;
+    z-index: 5;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* 信息区域 */
+.info_area {
+    padding: 1.2rem;
+}
+
+.goods_name {
+    font-size: 1.6rem;
+    color: var(--text-main);
+    margin-bottom: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* 文字过长显示省略号 */
+}
+
+.price_row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.goods_price {
+    font-size: 1.4rem;
+    color: #e44d26;
+    /* 价格使用显眼的橙红色 */
+    font-weight: 700;
+    font-family: 'Arial', sans-serif;
+}
+
+.time_tag {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+}
+
+/* --- 鼠标悬停交互 --- */
+.goods_item:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-color);
+}
+
+.goods_item:hover .image_placeholder {
+    background-color: var(--primary-light);
+    color: var(--primary-color);
+}
+
+.goods_item:hover .goods_name {
+    color: var(--primary-color);
+}
+
+/* --- 评价区域背景 --- */
+.reviews_section {
+    padding: 10rem 0;
+    background: linear-gradient(to bottom, #fcfcfc, #f0fdfa);
+    /* 渐变到浅青色 */
+    overflow: hidden;
+    /* 隐藏溢出的卡片 */
+}
+
+/* --- 居中标题 --- */
+.section_header_center {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.sub_title {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.title_line_center {
+    width: 50px;
+    height: 3px;
+    background: var(--primary-color);
+    margin: 1.5rem auto;
+}
+
+/* --- 滚动轨道布局 --- */
+.review_track_container {
+    width: 100%;
+    position: relative;
+    padding: 2rem 0;
+}
+
+.review_track {
+    display: flex;
+    width: max-content;
+    /* 宽度由内容决定 */
+    animation: scroll_track 30s linear infinite;
+    /* 无缝滚动动画 */
+}
+
+/* 鼠标悬停时停止滚动，方便阅读 */
+.review_track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll_track {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+
+    /* 滚动一半的距离实现循环 */
+}
+
+/* --- 评价卡片精致设计 --- */
+.review_card {
+    width: 380px;
+    background: #ffffff;
+    margin-right: 2.5rem;
+    padding: 3rem;
+    border-radius: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.quote_icon {
+    font-size: 2rem;
+    color: rgba(13, 148, 136, 0.2);
+    /* 浅青色引号 */
+    margin-bottom: 1rem;
+}
+
+.testimonial {
+    font-size: 1.1rem;
+    color: #4b5563;
+    line-height: 1.8;
+    height: 80px;
+    /* 固定高度确保整齐 */
+    margin-bottom: 2rem;
+}
+
+/* 学生信息区域 */
+.student_meta {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #f3f4f6;
+    padding-top: 1.5rem;
+}
+
+.avatar_circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.bg_blue {
+    background-color: #3b82f6;
+}
+
+.bg_red {
+    background-color: #ef4444;
+}
+
+.bg_gold {
+    background-color: #f59e0b;
+}
+
+.bg_green {
+    background-color: #10b981;
+}
+
+.info_text {
+    display: flex;
+    flex-direction: column;
+}
+
+.info_text .name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.info_text .school_tag {
+    font-size: 1rem;
+    color: var(--text-muted);
+}
+
+/* --- 卡片悬停微动 --- */
+.review_card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(13, 148, 136, 0.1);
+    border-color: var(--primary-color);
+}
+
+/* --- 联系区域背景 --- */
+.contact_section {
+    padding: 8rem 2rem;
+    background-color: #f8fafc;
+    /* 极淡的灰蓝色背景 */
+}
+
+.container_box {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* --- 头部标题 --- */
+.header_group {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.title_main {
+    font-size: 2.8rem;
+    color: var(--primary-color);
+    font-weight: 800;
+}
+
+.title_bar {
+    width: 60px;
+    height: 4px;
+    background: var(--accent-color);
+    margin: 1.2rem auto;
+    border-radius: 2px;
+}
+
+.title_sub {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+/* --- 网格布局 --- */
+.contact_grid {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* --- 联系卡片基础样式 --- */
+.contact_card {
+    background: #ffffff;
+    padding: 2.5rem 2rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    /* 针对链接卡片 */
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.02);
+}
+
+/* 图标容器 */
+.icon_wrap {
+    width: 70px;
+    height: 70px;
+    background: var(--primary-light);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    transition: all 0.3s;
+}
+
+.card_head {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #1e293b;
+}
+
+.card_desc {
+    font-size: 1.3rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* 时间卡片特别样式 */
+.time_info p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: #475569;
+}
+
+.time_info span {
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-right: 5px;
+}
+
+.status_tag {
+    margin-top: 10px;
+    background: #def7ec;
+    color: #03543f;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* 底部动作文字 */
+.action_link {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-top: auto;
+    /* 靠底部对齐 */
+}
+
+/* --- 交互与动画 --- */
+.contact_card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.06);
+}
+
+.contact_card:hover .icon_wrap {
+    background: var(--primary-color);
+    color: #ffffff;
+    transform: rotate(10deg);
+    /* 悬停时图标微旋 */
+}
+
+/* 图标呼吸动画 */
+.icon_wrap i {
+    animation: icon_bounce 3s infinite ease-in-out;
+}
+
+@keyframes icon_bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+
+.type_title1 {
+    font-family: "Futura", "Helvetica Neue", Helvetica, Arial;
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 600;
+    letter-spacing: normal;
+    line-height: 6rem;
+    text-transform: none;
+    margin-bottom: 4rem;
+    color: teal;
+    text-transform: uppercase;
+    text-align: center
+}
+
+.u-margin-bottom-small {
+    margin-bottom: 2rem
+}
+
+.u-margin-bottom-medium {
+    margin-bottom: 4rem
+}
+
+.u-margin-bottom-large {
+    margin-bottom: 8rem
+}
+
+.u-margin-bottom-xlarge {
+    margin-bottom: 12rem
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    padding: 1.5rem 4rem;
+    border-radius: 10rem;
+    transition: transform 0.2s, background-color 0.5s, border 0.2s;
+    text-align: center;
+    font-family: "Gotham", Helvetica, Arial, sans-serif;
+}
+
+.btn:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba(17, 17, 17, 0.2)
+}
+
+.btn:active {
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba(17, 17, 17, 0.7)
+}
+
+.btn_primary {
+    background-color: transparent;
+    color: #f8fffd;
+    font-size: 2rem;
+    font-weight: 700;
+    border: 1px solid #f8fffd;
+    position: relative;
+    bottom: 82px;
+}
+
+.btn_primary2 {
+    background-color: transparent;
+    color: black;
+    font-size: 2rem;
+    font-weight: 700;
+    border: 1px solid black;
+    position: relative;
+    bottom: 25px;
+
+}
+
+.btn_primary:hover {
+    background-color: teal;
+    border: 1px solid teal;
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap
+}
+
+.section_large {
+    margin: 0rem auto 8rem;
+    max-width: 130rem
+}
+
+.section_img {
+    width: 100%;
+    padding: 1rem;
+    margin-top: -5rem;
+    transition: 1s all
+}
+
+.section_img1 {
+    width: 102px;
+    padding: 1rem;
+    margin-top: -5rem;
+    transition: 1s all
+}
+
+.section .special {
+    display: block;
+    font-family: "Gotham", Helvetica, Arial, sans-serif;
+    font-size: 5rem;
+    margin: 1rem 0;
+    line-height: 4rem;
+}
+
+.header {
+    min-height: 100vh;
+    /* 1. 混合层：将深绿渐变放在图片前面 */
+    background-image:
+        linear-gradient(to bottom right,
+            rgba(6, 78, 59, 0.85),
+            /* 你的 --deep-green 透明版 */
+            rgba(13, 148, 136, 0.7)
+            /* 你的 --theme-teal 透明版 */
+        ),
+        url('https://images.unsplash.com/photo-1541339907198-e087563f976d?auto=format&fit=crop&w=1200&q=80');
+
+    /* 2. 核心设置：使用 multiply 让颜色和图片融合，变绿的关键！ */
+    background-blend-mode: multiply;
+    /* background-size: cover; */
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -12rem;
+
+    /* background-blend-mode: normal !important; */
+    background-color: transparent !important;
+
+    overflow: hidden;
+    animation: dh-bg-move 10s linear infinite alternate;
+}
+
+@keyframes dh-bg-move {
+    from {
+        background-size: 100%;
+    }
+
+    to {
+        background-size: 115%;
+    }
+}
+
+/* 
+.header_text {
+	text-align: center;
+	margin-top: 25rem;
+
+} */
+
+.header_title--primary {
+    font-family: "Gotham", Helvetica, Arial, sans-serif;
+    font-size: 8rem;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 10rem;
+    text-transform: uppercase;
+    color: #f8fffd;
+    text-shadow: 0 0.7rem 0 teal;
+    transition: 0.2s all;
+    display: block;
+    margin-bottom: 3rem;
+}
+
+.header_title--primary:hover {
+    transform: skewY(-2deg) skewX(-15deg) scale(1.1)
+}
+
+.header_title--secondary {
+    font-family: "Futura", "Helvetica Neue", Helvetica, Arial;
+    font-size: 5rem;
+    font-style: italic;
+    font-weight: 600;
+    letter-spacing: normal;
+    line-height: 5rem;
+    text-transform: none;
+    color: #f8fffd;
+    /* color: var(--deep-green) !important; */
+    text-shadow: 0 1rem 4rem rgba(17, 17, 17, 0.9);
+    display: inline-block;
+    /* 基础也要设为 inline-block */
+}
+
+.header_title--secondary:hover {
+    /* color: var(--theme-teal); */
+    transform: translateY(-2px);
+}
+
+
+@keyframes dh-drop {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    70% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes dh-up {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes dh-zoom {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes dh-shanshuo {
+
+    0%,
+    100% {
+        opacity: 1;
+        text-shadow: 0 0 10px rgba(20, 184, 166, 0.5);
+    }
+
+    50% {
+        opacity: 0.7;
+        text-shadow: 0 0 20px rgba(20, 184, 166, 0.8);
+    }
+}
+
+/* 2. 主标题动画：确保是 block 才能位移 */
+.biaoti-dh {
+    display: block !important;
+    /* 必须是 block */
+    opacity: 0;
+    animation: dh-drop 1s ease-out forwards !important;
+}
+
+
+
+/* 3. 副标题动画：确保是 inline-block */
+.wenzi-dh-1 {
+    opacity: 0;
+    display: inline-block !important;
+    animation: dh-up 0.8s ease-out 0.5s forwards !important;
+}
+
+.wenzi-dh-2 {
+    opacity: 0;
+    display: inline-block !important;
+    animation: dh-up 0.8s ease-out 1s forwards !important;
+}
+
+/* 4. 底部强调文字 */
+.bottom-dh {
+    opacity: 0;
+    display: inline-block !important;
+    color: var(--accent-color) !important;
+    /* 组合动画：先放大入场，然后持续闪烁 */
+    animation: dh-zoom 0.5s ease-out 1.5s forwards dh-shanshuo 2s infinite 2s !important;
+}
+
+
+.daohang {
+    /* position: sticky; */
+    position: fixed;
+    top: 0;
+    /* 建议从 0 开始，如果非要悬浮感可以设为 10px */
+    left: 0;
+    /* 必须为 0，否则导航栏会偏离 */
+    width: 100%;
+    /* 宽度占满全屏 */
+    /* z-index: 5; */
+    transition: 0.5s all;
+    /* padding: 10px; */
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    z-index: 1000;
+    /* 未滚动时背景可略带深绿透明 */
+    background-color: rgba(6, 78, 59, 0.1);
+    padding: 1rem 0;
+    z-index: 1000;
+}
+
+.daohang_wrapper {
+    /* margin: 0 auto;
+	max-width: 80rem; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    max-width: 95%;
+    /* 调宽一点，给右侧留空间 */
+    margin: 0 auto;
+    height: 70px;
+}
+
+.daohang_list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+/* 右侧按钮容器：放大并向右靠齐 */
+.nav_auth {
+    position: absolute;
+    /* 绝对定位，脱离文档流，不影响菜单居中 */
+    right: 2rem;
+    /* 靠右对齐 */
+    top: 50%;
+    transform: translateY(-50%);
+    /* 垂直方向完美居中 */
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+
+/* --- 通用按钮基础样式 --- */
+.btn_nav {
+    font-family: "Gotham", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1rem 2.4rem;
+    border-radius: 50px;
+    /* 胶囊形状 */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    border: 2px solid transparent;
+}
+
+/* --- 登录按钮：简约风格 --- */
+.btn_nav {
+    color: #f8fffd;
+    background: transparent;
+}
+
+.btn_nav:hover {
+    color: #0d9488;
+    background-color: rgba(248, 255, 253, 0.9);
+    transform: translateY(-2px);
+}
+
+/* --- 注册按钮：高亮风格 (核心操作) --- */
+.btn_nav_outline {
+    background-color: #f8fffd;
+    /* 纯色背景使其突出 */
+    color: #0d9488 !important;
+    /* 文字使用主题色 */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid #f8fffd;
+}
+
+.btn_nav_outline:hover {
+    background-color: transparent;
+    color: #f8fffd !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px) scale(1.05);
+    /* 悬停时稍微放大 */
+}
+
+/* --- 点击时的反馈 --- */
+.btn_nav:active,
+.btn_nav_outline:active {
+    transform: translateY(0) scale(0.98);
+}
+
+.daohang_items {
+    position: relative;
+    /* 关键：让下拉菜单定位基于父级 */
+}
+
+.daohang_items::after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 3px;
+    width: 0px;
+    background: transparent;
+    transition: width 0.5s ease, background-color 0.5s ease
+}
+
+.daohang_items:hover::after {
+    width: 100%;
+    /* background: teal; */
+    background: var(--accent-gold);
+}
+
+.daohang_items a {
+    /* color: #f8fffd; */
+    text-transform: uppercase;
+    font-family: "Gotham", Helvetica, Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    transition: 0.5s all;
+    padding: 2.5rem 0;
+    color: var(--paper-white);
+
+}
+
+.daohang_items a:hover {
+    color: teal;
+    /* color: var(--accent-gold); */
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    /* 在父菜单下方 */
+    left: 0;
+    background-color: #f8fffd;
+    /* 白色背景 */
+    border: 1px solid teal;
+    min-width: 140px;
+    z-index: 1000;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 20px;
+    color: teal;
+    /* 字体颜色 */
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-family: "Gotham", Helvetica, Arial, sans-serif;
+    transition: background 0.3s;
+}
+
+.dropdown-menu li a:hover {
+    background-color: teal;
+    color: #f8fffd;
+}
+
+/* 鼠标悬停显示二级菜单 */
+.daohang_items:hover .dropdown-menu {
+    display: block;
+}
+
+/* 登录注册按钮 */
+.nav_auth {
+    display: flex;
+    gap: 20px;
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    padding: 1.5rem 4rem;
+    border-radius: 10rem;
+    transition: transform 0.2s, background-color 0.5s, border 0.2s;
+    text-align: center;
+    font-family: "Gotham", Helvetica, Arial, sans-serif;
+}
+
+.btn:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba(17, 17, 17, 0.2)
+}
+
+.btn:active {
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba(17, 17, 17, 0.7)
+}
+
+.btn_primary {
+    background-color: transparent;
+    color: #f8fffd;
+    font-size: 2rem;
+    font-weight: 700;
+    border: 1px solid #f8fffd;
+    position: relative;
+    bottom: 82px;
+}
+
+.btn_primary2 {
+    background-color: transparent;
+    color: black;
+    font-size: 2rem;
+    font-weight: 700;
+    border: 1px solid black;
+    position: relative;
+    bottom: 25px;
+
+}
+
+.btn_primary:hover {
+    background-color: teal;
+    border: 1px solid teal;
+}
+
+.nav_scrolled {
+    /* background-color: #f8fffd;
+	box-shadow: 0 0.3rem 2rem rgba(17, 17, 17, 0.3) */
+    background-color: var(--paper-white);
+    box-shadow: 0 0.3rem 2rem rgba(6, 78, 59, 0.15);
+}
+
+.nav_scrolled a {
+    /* color: #261c13 */
+    color: var(--deep-green);
+}
+
+.nav_scrolled .daohang_items a:hover {
+    color: var(--theme-teal);
+}
+
+@media (max-width: 768px) {
+    .daohang {
+        display: none;
+        background-color: #f8fffd
+    }
+
+    .daohang_list {
+        flex-direction: column
+    }
+
+    .nav_logo {
+        order: 1;
+        padding: 1rem
+    }
+
+    .daohang_items {
+        order: 2;
+        padding: 1rem;
+        position: relative;
+        /* 确保下拉菜单相对定位 */
+    }
+
+    .daohang_items a {
+        color: #261c13;
+        padding: 1rem
+    }
+
+    .header {
+        margin-top: 0;
+    }
+
+    .card {
+        background: teal;
+        box-shadow: 0 1rem 4rem rgba(17, 17, 17, 0.5);
+        transition: none !important
+    }
+
+    .card h3 {
+        color: #f8fffd
+    }
+
+    .card p {
+        color: #f8fffd
+    }
+
+    .card:hover {
+        transform: none
+    }
+
+    .card:hover img {
+        transform: none
+    }
+
+    .special--long {
+        font-size: 3.2rem !important;
+        line-height: 4rem !important
+    }
+
+    .time-box {
+        margin-bottom: 4rem !important
+    }
+
+    .contact {
+        text-align: center;
+        padding-bottom: 4rem;
+        border-bottom: 2px solid teal;
+    }
+
+    .copyright {
+        padding: 1rem
+    }
+
+    .btn_primary2 {
+        background-color: transparent;
+        color: black;
+        font-size: 2rem;
+        font-weight: 700;
+        border: 1px solid black;
+        position: relative;
+        bottom: 25px;
+    }
+
+
+}
+
+.section_menu {
+    padding: 10rem 0 2rem
+}
+
+.section-review {
+    padding: 30rem 0;
+    background-color: teal;
+}
+
+.section-contact {
+    padding: 20rem 0 10rem;
+    margin-top: -8rem;
+    background-color: #ffffff;
+    border-radius: 2rem;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.15);
+}
+
+.section_wrapper {
+    max-width: 175rem;
+    margin: 0 auto;
+    background-color: #ffffff;
+    /* 白色背景，可根据风格调整 */
+    border-radius: 1.5rem;
+    /* 圆角 */
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.15);
+    /* 阴影效果 */
+    padding: 4rem 3rem;
+    /* 内边距，保持内容呼吸感 */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* 鼠标悬停微微放大阴影 */
+.section_wrapper:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+}
+
+.notify {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 0;
+    box-sizing: border-box;
+    color: white;
+    text-align: center;
+    background: #03bf6d;
+    overflow: hidden;
+    box-sizing: border-box;
+    -webkit-transition: all ease 0.4s;
+    -moz-transition: all ease 0.4s;
+    -ms-transition: all ease 0.4s;
+    -o-transition: all ease 0.4s;
+    transition: all ease 0.4s;
+}
+
+#notifyType:before {
+    display: block;
+    margin-top: 15px;
+}
+
+.notify.active {
+    height: 50px;
+}
+
+.success:before {
+    content: "Saved - Publish your post for changes to take effect";
+}
+
+
+/* --- 页脚主区域 --- */
+.footer_area {
+    background-color: #1a202c;
+    /* 深色背景，增加稳重感 */
+    color: #e2e8f0;
+    padding: 5rem 0 2rem;
+    margin-top: 5rem;
+}
+
+.footer_wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* --- 上部布局：三栏网格 --- */
+.footer_main {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 4rem;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 品牌部分 */
+.footer_logo_text {
+    font-size: 2.1rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+}
+
+.footer_logo_text span {
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-left: 8px;
+}
+
+.footer_slogan {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #94a3b8;
+    max-width: 350px;
+    margin-bottom: 1.5rem;
+}
+
+/* 社交图标动画 */
+.social_icons a {
+    color: #cbd5e1;
+    font-size: 1.5rem;
+    margin-right: 1.5rem;
+    transition: all 0.3s;
+}
+
+.social_icons a:hover {
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+/* 链接列表样式 */
+.footer_title {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.footer_link_group ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer_link_group ul li {
+    margin-bottom: 0.8rem;
+}
+
+.footer_link_group ul li a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+}
+
+.footer_link_group ul li a:hover {
+    color: #ffffff;
+    padding-left: 5px;
+    /* 悬停时微微右移 */
+}
+
+/* --- 底部版权栏 --- */
+.bottom_bar {
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.team_text {
+    font-size: 1.2rem;
+    color: #94a3b8;
+    margin-bottom: 0.8rem;
+}
+
+.copy_info {
+    font-size: 1rem;
+    color: #64748b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.divider {
+    color: rgba(255, 255, 255, 0.1);
+}
+
+.version_tag {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2px 8px;
+    border-radius: 4px;
+}

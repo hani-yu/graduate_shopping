@@ -1,0 +1,207 @@
+
+/* --- 全局变量 --- */
+:root {
+    --deep-green: #064e3b;
+    --theme-teal: #0d9488;
+    --accent-gold: #f59e0b;
+    --paper-white: #f9fbfa;
+    --text-slate: #475569;
+}
+
+body.reviews_page {
+    background: var(--paper-white);
+    color: var(--text-slate);
+    font-family: 'PingFang SC', 'Noto Serif SC', serif;
+}
+
+p { font-size: 1.15rem !important; line-height: 1.8; }
+
+h2, h3 {
+    color: var(--deep-green);
+    font-family: "Noto Serif SC", serif;
+}
+
+/* --- Box 1: Hero (法典封面风格) --- */
+.reviews_hero {
+    height: 60vh;
+    background: url('https://images.unsplash.com/photo-1541339907198-e087563f976d?auto=format&fit=crop&w=1200&q=80') center/cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero_overlay {
+    position: absolute;
+    width: 100%; height: 100%;
+    background: rgba(6, 78, 59, 0.7);
+    backdrop-filter: blur(4px);
+}
+
+.hero_content { position: relative; z-index: 2; }
+
+.elegant_title {
+    font-size: 4rem;
+    letter-spacing: 8px;
+    font-weight: 800;
+}
+
+.reviews_seal {
+    font-size: 0.8rem;
+    background: var(--accent-gold);
+    color: var(--deep-green);
+    padding: 8px 4px;
+    writing-mode: vertical-rl;
+}
+
+.elegant_line {
+    width: 60px; height: 3px;
+    background: var(--accent-gold);
+    margin: 20px auto;
+}
+
+.hero_content p { font-size: 1.3rem !important; }
+
+/* --- 基础布局控制 --- */
+.reviews-detail-container {
+    max-width: 1200px;
+    margin: 40px auto; /* 核心：水平居中 */
+    padding: 0 28px;
+}
+
+
+a { text-decoration: none; color: inherit; }
+
+/* --------------------------
+   面包屑导航
+-------------------------- */
+.breadcrumb-nav {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+    color: #64748b;
+}
+.breadcrumb-nav a { color: #0d9488; font-weight: 500; }
+.breadcrumb-nav .current { font-weight: 600; color: #334155; }
+
+/* --------------------------
+   页面标题
+-------------------------- */
+.page-header { text-align: center; margin-bottom: 50px; }
+.page-title { font-size: 2.5rem; font-weight: 700; display: flex; justify-content: center; align-items: center; gap: 12px; color: #0d9488; }
+.page-subtitle { font-size: 1.15rem; color: #64748b; margin-top: 8px; }
+
+/* ===========================
+   卡片通用样式
+=========================== */
+.stats-card, .review-card, .growth-card, .category-info, .pending-review {
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+.stats-card:hover, .review-card:hover, .growth-card:hover, .category-info:hover, .pending-review:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+/* --------------------------
+   渐入动画
+-------------------------- */
+.animate-float {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+    animation: floatUp 0.6s cubic-bezier(.16,.84,.44,1) forwards;
+}
+
+@keyframes floatUp {
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* --------------------------
+   统计概览卡片
+-------------------------- */
+.stats-grid {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+.stats-card .stats-item {
+    margin-bottom: 16px;
+}
+.stats-value { font-size: 1.7rem; font-weight: 700; color: #0d9488; }
+.stats-label { font-size: 0.95rem; color: #64748b; margin-top: 2px; }
+.stats-note { font-size: 0.85rem; color: #94a3b8; margin-top: 2px; }
+
+/* --------------------------
+   评分分布条
+-------------------------- */
+.distribution-list { margin-top: 10px; }
+.dist-item { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 0.95rem; }
+.dist-bar { flex: 1; height: 8px; background: #e2e8f0; border-radius: 4px; overflow: hidden; }
+.dist-fill { height: 100%; background: #0d9488; border-radius: 4px; transition: width 0.6s ease; }
+
+/* --------------------------
+   标签墙
+-------------------------- */
+.tags-cloud { margin-top: 12px; }
+.tags-cloud .tag {
+    display: inline-block;
+    margin: 4px 6px 4px 0;
+    padding: 4px 12px;
+    font-size: 0.95rem;
+    border-radius: 12px;
+    background: #e2f0f0;
+    color: #0d9488;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+.tags-cloud .tag:hover {
+    transform: scale(1.1);
+    background: #0d9488;
+    color: #fff;
+}
+
+/* --------------------------
+   评价卡片
+-------------------------- */
+.review-card { margin-bottom: 22px; }
+.review-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.reviewer-avatar { width: 48px; height: 48px; border-radius: 50%; background: #0d9488; color: #fff; display: flex; justify-content: center; align-items: center; font-weight: 700; font-size: 1.2rem; }
+.reviewer-info { flex: 1; margin-left: 12px; }
+.reviewer-name { font-weight: 600; font-size: 1.05rem; color: #334155; }
+.reviewer-meta { font-size: 0.9rem; color: #64748b; margin-top: 2px; }
+.review-date { font-size: 0.85rem; color: #94a3b8; }
+.review-rating i { color: #f59e0b; margin-right: 2px; }
+.rating-text { margin-left: 6px; font-weight: 600; color: #334155; }
+.review-content { margin-top: 10px; font-size: 0.95rem; color: #475569; }
+.review-content .item-info { margin-top: 8px; font-size: 0.9rem; display: flex; align-items: center; gap: 6px; color: #64748b; }
+.review-content .review-images { display: flex; gap: 6px; margin-top: 10px; }
+.review-content .image-thumb img { width: 70px; height: 70px; object-fit: cover; border-radius: 8px; }
+
+/* 回复 */
+.seller-reply { margin-top: 12px; padding: 12px 14px; background: #f5faf9; border-left: 4px solid #0d9488; border-radius: 10px; }
+.reply-header { font-weight: 600; margin-bottom: 4px; }
+.reply-text { font-size: 0.95rem; color: #334155; }
+.reply-time { font-size: 0.85rem; color: #94a3b8; margin-top: 2px; }
+
+/* --------------------------
+   底部操作按钮
+-------------------------- */
+.review-stats { display: flex; align-items: center; justify-content: space-between; margin-top: 12px; }
+.helpful-btn {
+    background: #0d9488; color: #fff; border: none; border-radius: 12px; padding: 6px 14px;
+    font-size: 0.95rem; cursor: pointer; display: flex; align-items: center; gap: 6px;
+    transition: all 0.3s ease;
+}
+.helpful-btn:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 18px rgba(13,148,136,0.25);
+}

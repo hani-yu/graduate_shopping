@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校友权益·专属福利详情 - 毕业物品流转平台</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/archive_detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/welfare_detail.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body class="welfare_page">
+
+
+    <!-- 顶部导航栏（与主站一致） -->
+    <nav class="daohang">
+        <div class="daohang_wrapper">
+            <ul class="daohang_list">
+                <li class="daohang_items"><a href="index.html">首页</a></li>
+                <li class="daohang_items"><a href="about.html">平台概况</a></li>
+                <li class="daohang_items"><a href="categories.html">商品分类</a></li>
+                <li class="daohang_items active"><a href="guide.html">流转锦囊</a></li>
+                <li class="daohang_items"><a href="events.html">活动专区</a></li>
+                <li class="daohang_items"><a href="user.html">用户中心</a></li>
+            </ul>
+            <div class="nav_auth"><a href="signin.html" class="btn_nav">登录</a></div>
+        </div>
+    </nav>
+
+    <!-- Box 1: Hero Banner (透视长廊背景) -->
+    <header class="welfare_hero">
+        <div class="hero_overlay"></div> <!-- 对应 CSS 中的蒙层 -->
+        <div class="hero_content animate__animated animate__fadeIn">
+            <span class="en_text">WELFARE</span>
+            <h1 class="elegant_title">校友权益·专属福利详情 <span class="welfare_seal">福利领取</span></h1>
+            <div class="elegant_line"></div>
+            <p>详细了解福利获取机制、成长体系及使用指南。</p>
+        </div>
+
+        <!-- 底部波浪线 (建议保留以衔接下方色块) -->
+        <div class="banner_wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C0,0,31.83,14.28,64,27.1,126.31,52,187.31,68,250.31,68c31.11,0,32.25-10.15,71.08-11.56Z"
+                    fill="#f9fbfa"></path>
+            </svg>
+        </div>
+    </header>
+
+
+    <!-- 顶部福利卡片预览 -->
+    <!-- <section class="coupon-preview-section animate__animated animate__fadeIn">
+        <div class="coupon-preview-card">
+            <div class="coupon-card-top">
+                <div class="coupon-value">
+                    <div class="coupon-value-currency">¥</div>
+                    <div class="coupon-value-number">20</div>
+                    <div class="coupon-type">离校寄件券</div>
+                </div>
+                <div class="coupon-info">
+                    <h2>毕业搬家特惠券</h2>
+                    <p>平台认证顺丰/京东快递可用，轻松寄送毕业行李</p>
+                    <div class="coupon-status active">
+                        <i class="fas fa-check-circle" style="margin-right: 8px;"></i>
+                        可领取
+                    </div>
+                </div>
+            </div>
+            <div class="coupon-card-bottom">
+                <div class="progress-container">
+                    <div class="progress-label">
+                        <span>领取进度</span>
+                        <span>已领 85%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                    <p style="margin-top: 8px; font-size: 14px; color: var(--faq-gray);">
+                        有效期：领取后30天内有效
+                    </p>
+                </div>
+                <div class="action-buttons">
+                    <button class="btn-share">
+                        <i class="fas fa-share-alt" style="margin-right: 8px;"></i>分享
+                    </button>
+                    <button class="btn-claim">
+                        <i class="fas fa-gift" style="margin-right: 8px;"></i>立即领取
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- 详情内容区域 -->
+    <div class="detail-sections">
+        <!-- 1. 使用条件块 -->
+        <section class="detail-section animate__animated" id="conditions-section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-clipboard-check"></i>
+                </div>
+                <div>
+                    <h2 class="section-title">使用条件</h2>
+                    <div class="section-subtitle">请仔细阅读使用规则，确保顺利使用</div>
+                </div>
+            </div>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4><i class="fas fa-user-graduate"></i> 适用对象</h4>
+                    <ul class="info-list">
+                        <li>本校在校学生（需学籍认证）</li>
+                        <li>应届毕业生（2024届）</li>
+                        <li>平台注册用户且完成实名认证</li>
+                        <li>无违规记录的良好用户</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4><i class="fas fa-suitcase"></i> 使用场景</h4>
+                    <ul class="info-list">
+                        <li>毕业季离校行李寄送</li>
+                        <li>校内物品跨校区转运</li>
+                        <li>实习/就业地点物品寄送</li>
+                        <li>非商业用途的个人物品</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4><i class="fas fa-money-bill-wave"></i> 消费限制</h4>
+                    <ul class="info-list">
+                        <li>最低消费：满¥50可用</li>
+                        <li>叠加规则：不可与其他优惠券叠加</li>
+                        <li>仅限首重1kg内包裹</li>
+                        <li>超重部分按快递标准计费</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4><i class="fas fa-calendar-times"></i> 其他限制</h4>
+                    <ul class="info-list">
+                        <li>每人限领1张，不可重复领取</li>
+                        <li>领取后不可转让、退换</li>
+                        <li>不可兑换现金或找零</li>
+                        <li>违规使用将收回券码</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. 领取流程块 -->
+        <section class="detail-section animate__animated" id="claim-process-section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-download"></i>
+                </div>
+                <div>
+                    <h2 class="section-title">领取流程</h2>
+                    <div class="section-subtitle">四步轻松领取，简单快捷</div>
+                </div>
+            </div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h4>点击领取</h4>
+                    <ul class="step-list">
+                        <li>确认满足领取条件</li>
+                        <li>点击"立即领取"按钮</li>
+                        <li>系统验证用户资格</li>
+                    </ul>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h4>确认领取</h4>
+                    <ul class="step-list">
+                        <li>阅读使用条款并同意</li>
+                        <li>确认领取不可撤销</li>
+                        <li>系统生成唯一券码</li>
+                    </ul>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h4>查看券码</h4>
+                    <ul class="step-list">
+                        <li>在"我的福利"中查看</li>
+                        <li>获取二维码/数字码</li>
+                        <li>保存至手机相册</li>
+                    </ul>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h4>准备使用</h4>
+                    <ul class="step-list">
+                        <li>阅读详细使用说明</li>
+                        <li>确认有效期和限制</li>
+                        <li>了解合作快递信息</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="notice-item" style="margin-top: 25px;">
+                <h4><i class="fas fa-exclamation-triangle" style="margin-right: 10px; color: var(--faq-gold);"></i> 重要提示
+                </h4>
+                <p>每人限领1张，领取后不可退换。请确保在有效期内使用，过期自动作废。</p>
+            </div>
+        </section>
+
+        <!-- 3. 使用步骤块 -->
+        <section class="detail-section animate__animated" id="usage-steps-section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-shipping-fast"></i>
+                </div>
+                <div>
+                    <h2 class="section-title">使用步骤</h2>
+                    <div class="section-subtitle">线上/线下两种使用方式</div>
+                </div>
+            </div>
+
+            <div class="info-grid" style="margin-bottom: 30px;">
+                <div class="info-card">
+                    <h4><i class="fas fa-laptop"></i> 线上寄件流程</h4>
+                    <ul class="info-list">
+                        <li>登录顺丰/京东小程序或APP</li>
+                        <li>填写寄件人和收件人信息</li>
+                        <li>选择物品类型和重量</li>
+                        <li>在支付页面输入优惠券码</li>
+                        <li>系统自动抵扣¥20</li>
+                        <li>支付剩余金额完成订单</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4><i class="fas fa-store"></i> 线下寄件流程</h4>
+                    <ul class="info-list">
+                        <li>前往校园内合作快递点</li>
+                        <li>向工作人员出示二维码</li>
+                        <li>工作人员扫码核销券码</li>
+                        <li>核对包裹信息和重量</li>
+                        <li>支付剩余金额</li>
+                        <li>索取寄件凭证</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="notice-item warning">
+                <h4><i class="fas fa-lightbulb" style="margin-right: 10px;"></i> 使用建议</h4>
+                <p>建议提前打包好物品并称重，选择非高峰期寄件可享受更快捷的服务。贵重物品建议购买保价服务。</p>
+            </div>
+        </section>
+
+        <!-- 4. 合作快递信息块 -->
+        <section class="detail-section animate__animated" id="courier-info-section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <div>
+                    <h2 class="section-title">合作快递信息</h2>
+                    <div class="section-subtitle">校园专属服务，毕业季特惠</div>
+                </div>
+            </div>
+
+            <div class="courier-cards">
+                <div class="courier-card">
+                    <div class="courier-header">
+                        <div class="courier-logo">顺丰</div>
+                        <div>
+                            <h3 class="courier-name">顺丰速运</h3>
+                            <p style="color: var(--faq-gray); margin: 0; font-size: 14px;">校园内3个代收点</p>
+                        </div>
+                    </div>
+                    <ul class="courier-features">
+                        <li><i class="fas fa-map-marker-alt feature-icon"></i> 北区菜鸟驿站、南区服务中心、东门快递点</li>
+                        <li><i class="fas fa-clock feature-icon"></i> 服务时间：8:00-21:00（毕业季延长）</li>
+                        <li><i class="fas fa-truck feature-icon"></i> 上门取件：需提前2小时预约</li>
+                        <li><i class="fas fa-gift feature-icon"></i> 免费提供：纸箱、气泡膜（限量）</li>
+                        <li><i class="fas fa-phone feature-icon"></i> 客服微信：campus_sf001</li>
+                    </ul>
+                </div>
+
+                <div class="courier-card">
+                    <div class="courier-header">
+                        <div class="courier-logo jd">京东</div>
+                        <div>
+                            <h3 class="courier-name">京东物流</h3>
+                            <p style="color: var(--faq-gray); margin: 0; font-size: 14px;">2个自提点 + 大件专享</p>
+                        </div>
+                    </div>
+                    <ul class="courier-features">
+                        <li><i class="fas fa-map-marker-alt feature-icon"></i> 西门京东派、学生公寓7号楼</li>
+                        <li><i class="fas fa-clock feature-icon"></i> 服务时间：6月1日-7月15日 9:00-20:00</li>
+                        <li><i class="fas fa-box feature-icon"></i> 大件行李：专享85折优惠</li>
+                        <li><i class="fas fa-shield-alt feature-icon"></i> 免费服务：基础保价¥500</li>
+                        <li><i class="fas fa-phone feature-icon"></i> 联系电话：400-xxx-xxxx</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="notice-grid" style="margin-top: 25px;">
+                <div class="notice-item">
+                    <h4><i class="fas fa-calendar-day" style="margin-right: 10px;"></i> 服务时间</h4>
+                    <p>毕业季特惠期：6月1日-7月15日，服务时间延长至21:00，周末正常营业。</p>
+                </div>
+                <div class="notice-item">
+                    <h4><i class="fas fa-tools" style="margin-right: 10px;"></i> 特殊服务</h4>
+                    <p>免费提供打包材料（限量），大件行李协助搬运，毕业季专属优惠价格。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. 使用小贴士块 -->
+        <section class="detail-section animate__animated" id="tips-section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <div>
+                    <h2 class="section-title">使用小贴士</h2>
+                    <div class="section-subtitle">让寄件更省心、更划算</div>
+                </div>
+            </div>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4><i class="fas fa-clock"></i> 最佳使用时间</h4>
+                    <ul class="info-list">
+                        <li>避开离校高峰期（6月25-30日）</li>
+                        <li>建议上午9-11点或下午3-5点</li>
+                        <li>提前3-5天寄送非急需物品</li>
+                        <li>周末寄件可能等待时间较长</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4><i class="fas fa-box-open"></i> 打包建议</h4>
+                    <ul class="info-list">
+                        <li>易碎品用气泡膜单独包装</li>
+                        <li>书籍建议分箱，单箱不超10kg</li>
+                        <li>衣物使用压缩袋节省空间</li>
+                        <li>在外箱标注"易碎""向上"等标识</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4><i class="fas fa-shield-alt"></i> 安全保障</h4>
+                    <ul class="info-list">
+                        <li>贵重物品建议购买保价服务</li>
+                        <li>电子产品原包装保留</li>
+                        <li>保留寄件凭证和物流单号</li>
+                        <li>及时跟踪物流信息</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4><i class="fas fa-coins"></i> 省钱技巧</h4>
+                    <ul class="info-list">
+                        <li>多个包裹分开寄可能更划算</li>
+                        <li>与同学拼单共享大件优惠</li>
+                        <li>使用平台提供的免费包装材料</li>
+                        <li>关注快递点的促销活动</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. 常见问题块 -->
+        <!-- <section class="detail-section animate__animated" id="faq-section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-question-circle"></i>
+                </div>
+                <div>
+                    <h2 class="section-title">常见问题</h2>
+                    <div class="section-subtitle">快速解答您的疑问</div>
+                </div>
+            </div>
+            
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4><i class="fas fa-barcode"></i> 券码问题</h4>
+                    <ul class="info-list">
+                        <li><strong>Q：券码失效怎么办？</strong><br>A：联系客服核实后重新发放</li>
+                        <li><strong>Q：领取后找不到券码？</strong><br>A：在"我的福利-已领取"中查看</li>
+                        <li><strong>Q：可以转让给同学吗？</strong><br>A：不可以，仅限领取者本人使用</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4><i class="fas fa-truck"></i> 使用问题</h4>
+                    <ul class="info-list">
+                        <li><strong>Q：快递员说不能用此优惠？</strong><br>A：出示平台说明，或联系客服协助</li>
+                        <li><strong>Q：超过有效期能否延期？</strong><br>A：原则上不可延期，特殊情况可申请</li>
+                        <li><strong>Q：部分商品不支持使用？</strong><br>A：仅限普通包裹，特殊物品除外</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4><i class="fas fa-money-check-alt"></i> 支付问题</h4>
+                    <ul class="info-list">
+                        <li><strong>Q：为什么没有抵扣？</strong><br>A：检查是否满足最低消费¥50</li>
+                        <li><strong>Q：可以与其他优惠叠加吗？</strong><br>A：不可以，一次只能使用一张券</li>
+                        <li><strong>Q：支付失败怎么办？</strong><br>A：重新尝试或更换支付方式</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4><i class="fas fa-headset"></i> 客服支持</h4>
+                    <ul class="info-list">
+                        <li><strong>客服渠道：</strong>平台在线客服</li>
+                        <li><strong>响应时间：</strong>工作时间内1小时</li>
+                        <li><strong>紧急热线：</strong>400-xxx-xxxx</li>
+                        <li><strong>邮箱支持：</strong>support@campus-recycle.edu</li>
+                    </ul>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- 7. 投诉处理块 -->
+        <!-- <section class="detail-section animate__animated" id="complaint-section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <div>
+                    <h2 class="section-title">投诉与处理</h2>
+                    <div class="section-subtitle">问题反馈渠道与处理流程</div>
+                </div>
+            </div>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h4>提交投诉</h4>
+                    <ul class="step-list">
+                        <li>平台内提交投诉申请</li>
+                        <li>附上问题截图凭证</li>
+                        <li>描述详细情况</li>
+                    </ul>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h4>平台响应</h4>
+                    <ul class="step-list">
+                        <li>24小时内响应</li>
+                        <li>确认问题类型</li>
+                        <li>联系相关方核实</li>
+                    </ul>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h4>提出方案</h4>
+                    <ul class="step-list">
+                        <li>核实后提出解决方案</li>
+                        <li>补偿或重新发放</li>
+                        <li>与用户沟通确认</li>
+                    </ul>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h4>执行关闭</h4>
+                    <ul class="step-list">
+                        <li>执行解决方案</li>
+                        <li>用户确认结果</li>
+                        <li>问题关闭并评价</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="notice-item warning" style="margin-top: 25px;">
+                <h4><i class="fas fa-file-contract" style="margin-right: 10px;"></i> 投诉须知</h4>
+                <p>请保留相关证据（截图、录音、凭证等），平台承诺公正处理。对于恶意投诉，平台保留追究权利。</p>
+            </div>
+        </section> -->
+
+        <!-- 8. 相关推荐块 -->
+        <section class="detail-section animate__animated" id="recommend-section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div>
+                    <h2 class="section-title">其他推荐福利</h2>
+                    <div class="section-subtitle">更多优惠选择，满足不同需求</div>
+                </div>
+            </div>
+
+            <div class="recommendations">
+                <div class="recommend-card">
+                    <div class="recommend-value">¥15</div>
+                    <h4 class="recommend-title">菜鸟裹裹券</h4>
+                    <p style="color: var(--faq-gray); font-size: 14px; margin: 10px 0;">全国通用，上门取件</p>
+                    <button class="recommend-btn">查看详情</button>
+                </div>
+                <div class="recommend-card">
+                    <div class="recommend-value">¥25</div>
+                    <h4 class="recommend-title">德邦大件券</h4>
+                    <p style="color: var(--faq-gray); font-size: 14px; margin: 10px 0;">大件行李专享，性价比高</p>
+                    <button class="recommend-btn">查看详情</button>
+                </div>
+                <div class="recommend-card">
+                    <div class="recommend-value">免费</div>
+                    <h4 class="recommend-title">打包材料包</h4>
+                    <p style="color: var(--faq-gray); font-size: 14px; margin: 10px 0;">纸箱+气泡膜+胶带</p>
+                    <button class="recommend-btn">立即领取</button>
+                </div>
+                <div class="recommend-card">
+                    <div class="recommend-value">升级</div>
+                    <h4 class="recommend-title">白银会员</h4>
+                    <p style="color: var(--faq-gray); font-size: 14px; margin: 10px 0;">享¥30寄件券+更多权益</p>
+                    <button class="recommend-btn">升级会员</button>
+                </div>
+            </div>
+
+            <div class="notice-item" style="margin-top: 25px; text-align: center;">
+                <h4><i class="fas fa-bullhorn" style="margin-right: 10px;"></i> 活动预告</h4>
+                <p>下周将推出"毕业季免费寄"抽奖活动，一等奖可享全国免邮！关注平台公告获取最新信息。</p>
+            </div>
+        </section>
+    </div>
+    <footer class="footer_area">
+        <div class="footer_wrapper">
+            <div class="bottom_bar">
+                <p>&copy; 2026 Campus Market | 校园毕业物品流转平台团队 | <a href="#">服务条款</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/welfare_detail.js"></script>
+</body>
+
+</html>

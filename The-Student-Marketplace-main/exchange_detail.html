@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>热门闪购·限时秒杀详情 - 毕业物品流转平台</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/archive_detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/exchange_detail.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body class="exchange_page">
+
+    <!-- 顶部导航栏（与主站一致） -->
+    <nav class="daohang">
+        <div class="daohang_wrapper">
+            <ul class="daohang_list">
+                <li class="daohang_items"><a href="index.html">首页</a></li>
+                <li class="daohang_items"><a href="about.html">平台概况</a></li>
+                <li class="daohang_items"><a href="categories.html">商品分类</a></li>
+                <li class="daohang_items"><a href="guide.html">流转锦囊</a></li>
+                <li class="daohang_items active"><a href="events.html">活动专区</a></li>
+                <li class="daohang_items"><a href="user.html">用户中心</a></li>
+            </ul>
+            <div class="nav_auth"><a href="signin.html" class="btn_nav">登录</a></div>
+        </div>
+    </nav>
+
+    <!-- Box 1: Hero Banner (透视长廊背景) -->
+    <header class="exchange_hero">
+        <div class="hero_overlay"></div> <!-- 对应 CSS 中的蒙层 -->
+        <div class="hero_content animate__animated animate__fadeIn">
+            <span class="en_text">WELFARE</span>
+            <h1 class="elegant_title">校友权益·专属福利详情 <span class="exchange_seal">福利领取</span></h1>
+            <div class="elegant_line"></div>
+            <p>详细了解福利获取机制、成长体系及使用指南。</p>
+        </div>
+
+        <!-- 底部波浪线 (建议保留以衔接下方色块) -->
+        <div class="banner_wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C0,0,31.83,14.28,64,27.1,126.31,52,187.31,68,250.31,68c31.11,0,32.25-10.15,71.08-11.56Z"
+                    fill="#f9fbfa"></path>
+            </svg>
+        </div>
+    </header>
+    <div class="container">
+
+        <!-- 第一部分：物品对比与价值评估 -->
+        <section id="rules" class="content-section">
+            <div class="section-header">
+                <div class="section-number">01</div>
+                <h2 class="section-title">物品对比与价值评估</h2>
+                <p class="section-desc">双方物品价值评估与详细清单对比</p>
+            </div>
+
+            <div class="section-content">
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-balance-scale"></i>
+                        交换物品基本信息
+                    </h3>
+                    
+                    <div class="rules-grid">
+                        <!-- 交换方 -->
+                        <div class="rule-item">
+                            <div class="rule-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="rule-content">
+                                <h4>交换方：考研数学资料</h4>
+                                <ul>
+                                    <li><strong>清单：</strong>李永乐全书、10年真题详解、手写笔记、错题集</li>
+                                    <li><strong>成色：</strong>9成新（少量标注）</li>
+                                    <li><strong>预估价值：</strong>¥150.00</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- 需求方 -->
+                        <div class="rule-item">
+                            <div class="rule-icon">
+                                <i class="fas fa-pen-nib"></i>
+                            </div>
+                            <div class="rule-content">
+                                <h4>需求方：雅思备考资料</h4>
+                                <ul>
+                                    <li><strong>期望：</strong>剑雅10-17、口语题库、高分范文、听力材料</li>
+                                    <li><strong>成色：</strong>期望8成新以上</li>
+                                    <li><strong>预估价值：</strong>¥180.00</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- 价值调整 -->
+                        <div class="rule-item">
+                            <div class="rule-icon">
+                                <i class="fas fa-exchange-alt"></i>
+                            </div>
+                            <div class="rule-content">
+                                <h4>价值平衡机制</h4>
+                                <ul>
+                                    <li><strong>价值差额：</strong>约 ¥30.00</li>
+                                    <li><strong>补偿方式：</strong>支持补差价或部分交换</li>
+                                    <li><strong>协商条款：</strong>现场验货确认价值</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第二部分：交换进度与意向流程 -->
+        <section id="process" class="content-section">
+            <div class="section-header">
+                <div class="section-number">02</div>
+                <h2 class="section-title">交换进度与意向流程</h2>
+                <p class="section-desc">实时跟踪交换状态，挑选最合适的交换伙伴</p>
+            </div>
+
+            <div class="section-content">
+                <!-- 交换时间线 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-history"></i>
+                        当前交换动态
+                    </h3>
+                    
+                    <div class="process-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-time">4月10日</div>
+                            <div class="timeline-content">
+                                <h4>发布请求</h4>
+                                <p>发布“考研数学资料”交换“雅思资料”请求</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-time">4月11日</div>
+                            <div class="timeline-content">
+                                <h4>初步匹配</h4>
+                                <p>系统匹配3名意向者，锁定“张明哲”为最佳匹配</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item highlight">
+                            <div class="timeline-time">当前时刻</div>
+                            <div class="timeline-content">
+                                <h4>等待看货</h4>
+                                <p>双方已约定时间，准备进行图书馆线下验货</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-time">预计15日</div>
+                            <div class="timeline-content">
+                                <h4>完成交换</h4>
+                                <p>双方确认物品无误，签署电子协议，完成评价</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tips-box">
+                        <h4><i class="fas fa-lightbulb"></i> 交换小贴士</h4>
+                        <div class="tips-grid">
+                            <div class="tip-item">
+                                <i class="fas fa-sun"></i>
+                                <p>建议初次交换选择白天公共场合面交</p>
+                            </div>
+                            <div class="tip-item">
+                                <i class="fas fa-camera"></i>
+                                <p>交换前通过私信确认物品实拍细节</p>
+                            </div>
+                            <div class="tip-item">
+                                <i class="fas fa-file-invoice"></i>
+                                <p>保留平台聊天记录作为纠纷凭证</p>
+                            </div>
+                            <div class="tip-item">
+                                <i class="fas fa-star"></i>
+                                <p>完成后及时评价，有助于积累信用分</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 意向者处理 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-users"></i>
+                        意向伙伴筛选
+                    </h3>
+                    
+                    <div class="outcome-tabs">
+                        <div class="outcome-nav">
+                            <button class="outcome-btn active" data-outcome="success">最佳匹配(张明哲)</button>
+                            <button class="outcome-btn" data-outcome="fail">次选意向(李雨薇)</button>
+                            <button class="outcome-btn" data-outcome="issue">交换限制</button>
+                        </div>
+                        
+                        <div class="outcome-content">
+                            <!-- 最佳匹配 -->
+                            <div class="outcome-pane active" id="success-pane">
+                                <div class="success-steps">
+                                    <div class="success-step">
+                                        <div class="step-icon">
+                                            <i class="fas fa-crown"></i>
+                                        </div>
+                                        <div class="step-desc">
+                                            <h5>匹配度 92%</h5>
+                                            <p>英语学院大三，提供剑雅13-17及口语素材包</p>
+                                        </div>
+                                    </div>
+                                    <div class="success-step">
+                                        <div class="step-icon">
+                                            <i class="fas fa-comment"></i>
+                                        </div>
+                                        <div class="step-desc">
+                                            <h5>交换留言</h5>
+                                            <p>“我也在备考，资料带音频，可以一起交流。”</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 次选处理 -->
+                            <div class="outcome-pane" id="fail-pane">
+                                <div class="fail-options">
+                                    <div class="option-item">
+                                        <div class="option-icon">
+                                            <i class="fas fa-percent"></i>
+                                        </div>
+                                        <div class="option-desc">
+                                            <h5>匹配度 85%</h5>
+                                            <p>提供全套雅思官方指南及机经预测题</p>
+                                        </div>
+                                    </div>
+                                    <div class="option-item">
+                                        <div class="option-icon">
+                                            <i class="fas fa-hand-holding-usd"></i>
+                                        </div>
+                                        <div class="option-desc">
+                                            <h5>差价协商</h5>
+                                            <p>由于资料较新，李同学表示可补差价进行交换</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 交换问题处理 -->
+                            <div class="outcome-pane" id="issue-pane">
+                                <div class="issue-list">
+                                    <div class="issue-item">
+                                        <div class="issue-name">交付限制</div>
+                                        <div class="issue-solution">目前仅支持校内图书馆/食堂/教学楼面交</div>
+                                    </div>
+                                    <div class="issue-item">
+                                        <div class="issue-name">品质拒收</div>
+                                        <div class="issue-solution">不接受破损严重、缺页或有大面积水渍的资料</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第三部分：交换者信誉与品质保障 -->
+        <section id="quality" class="content-section">
+            <div class="section-header">
+                <div class="section-number">03</div>
+                <h2 class="section-title">交换者信誉与品质保障</h2>
+                <p class="section-desc">详细的信誉评分、交易数据及平台安全认证</p>
+            </div>
+
+            <div class="section-content">
+                <!-- 个人信誉卡片 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-user-shield"></i>
+                        交换者：苏文静同学
+                    </h3>
+                    
+                    <div class="grade-cards">
+                        <!-- 身份信息 -->
+                        <div class="grade-card s-grade">
+                            <div class="grade-header">
+                                <div class="grade-badge">实名认证</div>
+                                <div class="grade-title">经管学院大四</div>
+                            </div>
+                            <div class="grade-content">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> 金融学专业 · 西区3号楼</li>
+                                    <li><i class="fas fa-check-circle"></i> 活跃时间：19:00-23:00</li>
+                                    <li><i class="fas fa-check-circle"></i> 平台信誉评分：4.2 / 5.0</li>
+                                    <li><i class="fas fa-check-circle"></i> 回复速度：平均30分钟内</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- 交易统计 -->
+                        <div class="grade-card a-grade">
+                            <div class="grade-header">
+                                <div class="grade-badge">交易达人</div>
+                                <div class="grade-title">历史评价100%</div>
+                            </div>
+                            <div class="grade-content">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> 成功交换记录：12 次</li>
+                                    <li><i class="fas fa-check-circle"></i> 成功流转物品：8 件</li>
+                                    <li><i class="fas fa-check-circle"></i> 历史交易纠纷：0 记录</li>
+                                    <li><i class="fas fa-check-circle"></i> 沟通风格：耐心细致</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- 习惯偏好 -->
+                        <div class="grade-card b-grade">
+                            <div class="grade-header">
+                                <div class="grade-badge">面交首选</div>
+                                <div class="grade-title">规则遵守度100%</div>
+                            </div>
+                            <div class="grade-content">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> 交付地点：图书馆 (西区)</li>
+                                    <li><i class="fas fa-check-circle"></i> 时间：工作日晚、周末全天</li>
+                                    <li><i class="fas fa-check-circle"></i> 接受补差价：¥20-30元</li>
+                                    <li><i class="fas fa-check-circle"></i> 要求：现场验货确认</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 验证流程 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-shield-alt"></i>
+                        平台安全保障流程
+                    </h3>
+                    
+                    <div class="inspection-flow">
+                        <div class="flow-step">
+                            <div class="flow-number">1</div>
+                            <div class="flow-content">
+                                <h4>身份核验</h4>
+                                <p>双方学生证已通过平台教务系统实名关联</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flow-step">
+                            <div class="flow-number">2</div>
+                            <div class="flow-content">
+                                <h4>照片存档</h4>
+                                <p>发布时物品原始照片已在服务器加密存证</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flow-step">
+                            <div class="flow-number">3</div>
+                            <div class="flow-content">
+                                <h4>电子协议</h4>
+                                <p>确认交换前生成标准权属变更电子合同</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flow-step">
+                            <div class="flow-number">4</div>
+                            <div class="flow-content">
+                                <h4>反馈评价</h4>
+                                <p>交换完成后互评记录将永久计入信誉档案</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 售后服务体系 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-headset"></i>
+                        交换支持服务
+                    </h3>
+                    
+                    <div class="service-grid">
+                        <!-- 验货期 -->
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <div class="service-content">
+                                <h4>验货保障</h4>
+                                <div class="service-details">
+                                    <div class="detail-item">
+                                        <span class="detail-grade">面交现场</span>
+                                        <span class="detail-value">不符可随时拒绝</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-grade">平台调解</span>
+                                        <span class="detail-value">24小时人工客服</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 历史评价 -->
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <div class="service-content">
+                                <h4>真实口碑</h4>
+                                <p>"学姐很守时，资料非常完整，还给了很多备考建议！" —— 张同学</p>
+                                <p>"描述准确，交易过程非常愉快。" —— 李同学</p>
+                            </div>
+                        </div>
+                        
+                        <!-- 推荐 -->
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div class="service-content">
+                                <h4>您可能还感兴趣</h4>
+                                <div class="refund-details">
+                                    <div class="refund-item">
+                                        <i class="fas fa-exchange-alt"></i>
+                                        <div>
+                                            <strong>托福词汇书</strong>
+                                            <p>匹配度 88%</p>
+                                        </div>
+                                    </div>
+                                    <div class="refund-item">
+                                        <i class="fas fa-book"></i>
+                                        <div>
+                                            <strong>政治讲义</strong>
+                                            <p>同一发布者</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第四部分：公平性与安全承诺 -->
+        <section id="fairness" class="content-section">
+            <div class="section-header">
+                <div class="section-number">04</div>
+                <h2 class="section-title">公平性与安全承诺</h2>
+                <p class="section-desc">公开透明的信用体系，保障校园流转的纯净与安全</p>
+            </div>
+
+            <div class="section-content">
+                <div class="fairness-grid">
+                    <!-- 信用透明 -->
+                    <div class="fairness-card">
+                        <div class="fairness-header">
+                            <div class="fairness-icon">
+                                <i class="fas fa-id-badge"></i>
+                            </div>
+                            <h4>信用透明</h4>
+                        </div>
+                        <ul class="fairness-list">
+                            <li>双方信用分实时显示</li>
+                            <li>违约及鸽子行为计入档案</li>
+                            <li>历史成交量真实可追溯</li>
+                            <li>评分权重由平台动态管理</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- 过程合规 -->
+                    <div class="fairness-card">
+                        <div class="fairness-header">
+                            <div class="fairness-icon">
+                                <i class="fas fa-file-contract"></i>
+                            </div>
+                            <h4>协议保障</h4>
+                        </div>
+                        <ul class="fairness-list">
+                            <li>平台提供标准电子合同</li>
+                            <li>明确规定验货及交付权责</li>
+                            <li>差价资金托管保障安全</li>
+                            <li>争议由平台校友仲裁组判定</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- 争议处理 -->
+                    <div class="fairness-card">
+                        <div class="fairness-header">
+                            <div class="fairness-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <h4>纠纷调解</h4>
+                        </div>
+                        <ul class="fairness-list">
+                            <li>24小时人工客服受理</li>
+                            <li>资料真实性仲裁处理</li>
+                            <li>重大违约封禁账号处理</li>
+                            <li>处理结果全网公示</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- 声明 -->
+                <div class="fairness-statement">
+                    <div class="statement-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="statement-content">
+                        <h4>校园交换公约</h4>
+                        <p>我们致力于建立一个基于信任、平等、分享的校园流转环境。每一笔交换不仅是物品的互通，更是知识与善意的传递。请尊重每一位交换者的付出与时间。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第五部分：常见问题解答 -->
+        <section id="faq" class="content-section">
+            <div class="section-header">
+                <div class="section-number">05</div>
+                <h2 class="section-title">常见问题解答</h2>
+                <p class="section-desc">解答等价交换过程中最常见的疑问</p>
+            </div>
+
+            <div class="section-content">
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <div class="faq-number">Q1</div>
+                            <div class="faq-text">价值不对等如何处理？</div>
+                            <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>支持“差价补全”机制。您可以与对方协商通过平台红包补齐价值差额，或增加一两件小物品作为“搭头”来平衡价值。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <div class="faq-number">Q2</div>
+                            <div class="faq-text">面交时反悔了怎么办？</div>
+                            <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>现场验货是每位用户的基本权利。如发现物品与描述严重不符，可直接拒绝交换并点击平台“中止交易”按钮，不会影响您的信誉分。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+            <footer class="footer_area">
+        <div class="footer_wrapper">
+            <div class="bottom_bar">
+                <p>&copy; 2026 Campus Market | 校园毕业物品流转平台团队 | <a href="#">服务条款</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/exchange_detail.js"></script>
+</body>
+</html>

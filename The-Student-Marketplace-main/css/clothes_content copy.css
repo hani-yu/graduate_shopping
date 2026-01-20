@@ -1,0 +1,281 @@
+/* --- 全局变量 --- */
+:root {
+    --deep-green: #064e3b;
+    --theme-teal: #0d9488;
+    --accent-gold: #f59e0b;
+    --paper-white: #f9fbfa;
+    --text-slate: #475569;
+}
+
+body.clothes_page {
+    background: var(--paper-white);
+    color: var(--text-slate);
+    font-family: 'PingFang SC', 'Noto Serif SC', serif;
+}
+
+p {
+    font-size: 1.15rem !important;
+    line-height: 1.8;
+}
+
+h2,
+h3 {
+    color: var(--deep-green);
+    font-family: "Noto Serif SC", serif;
+}
+
+/* --- Box 1: Hero (法典封面风格) --- */
+.clothes_hero {
+    height: 60vh;
+    background: url('https://images.unsplash.com/photo-1541339907198-e087563f976d?auto=format&fit=crop&w=1200&q=80') center/cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero_overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(6, 78, 59, 0.7);
+    backdrop-filter: blur(4px);
+}
+
+.hero_content {
+    position: relative;
+    z-index: 2;
+}
+
+.elegant_title {
+    font-size: 4rem;
+    letter-spacing: 8px;
+    font-weight: 800;
+}
+
+.clothes_seal {
+    font-size: 0.8rem;
+    background: var(--accent-gold);
+    color: var(--deep-green);
+    padding: 8px 4px;
+    writing-mode: vertical-rl;
+    vertical-align: middle;
+}
+
+.elegant_line {
+    width: 60px;
+    height: 3px;
+    background: var(--accent-gold);
+    margin: 20px auto;
+}
+
+.hero_content p {
+    font-size: 1.3rem !important;
+}
+
+
+.container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+
+.module {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    padding: 40px;
+    margin-bottom: 50px;
+    border: 1px solid rgba(13, 148, 136, 0.1);
+    box-shadow: 0 20px 40px rgba(6, 78, 59, 0.05);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.module-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--deep-green);
+    border-left: 5px solid var(--accent-gold);
+    padding-left: 15px;
+}
+
+/* --- 1. 尺码魔方 (Size Cube) --- */
+.size-result {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 30px;
+    margin-top: 30px;
+    background: #fff;
+    border-radius: 20px;
+    padding: 25px;
+}
+
+.size-control { margin-bottom: 25px; }
+input[type=range] {
+    width: 100%;
+    accent-color: var(--theme-teal);
+    cursor: pointer;
+}
+
+.size-visualization {
+    background: #f1f5f9;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 200px;
+}
+
+#bodyChart { max-width: 100%; height: auto; } /* 动态形变人体图 */
+
+/* --- 2. 清洁透明 (Cleaning) --- */
+.cleaning-status {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.cleaning-card {
+    padding: 25px;
+    border-radius: 20px;
+    background: #fff;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.cleaning-card.active {
+    border-color: var(--theme-teal);
+    background: rgba(13, 148, 136, 0.05);
+}
+
+.cleaning-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: var(--theme-teal);
+    color: #fff;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    margin: 10px 0;
+}
+
+/* --- 3. 真人试穿 (Try-on) --- */
+.tryon-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.viewer-stage {
+    background: #e2e8f0;
+    border-radius: 30px;
+    height: 450px;
+    position: relative;
+    overflow: hidden;
+    perspective: 1000px;
+}
+
+.mannequin-base {
+    width: 150px;
+    height: 350px;
+    background: #94a3b8;
+    margin: 50px auto;
+    border-radius: 75px 75px 20px 20px;
+    transition: transform 0.6s ease;
+}
+
+.outfit-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.outfit-item {
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.outfit-item:hover { transform: translateX(10px); }
+
+/* --- 4. 主要展架 (Showcase) --- */
+.clothing-showcase {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.clothing-item {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.clothing-image {
+    height: 300px;
+    background: #f8fafc;
+    position: relative;
+    cursor: zoom-in;
+}
+
+.zoom-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(6, 78, 59, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.clothing-image:hover .zoom-overlay { opacity: 1; }
+
+/* --- 5. 闲置回收 (Recycle) --- */
+.recycle-container {
+    background: var(--deep-green);
+    color: #fff;
+    border-radius: 30px;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 40px;
+}
+
+.recycle-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.stat-item { text-align: center; }
+.stat-value {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--accent-gold);
+    display: block;
+}
+
+.progress-container {
+    background: rgba(255,255,255,0.1);
+    height: 12px;
+    border-radius: 10px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--accent-gold);
+    box-shadow: 0 0 15px var(--accent-gold);
+}

@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>拾光锦囊 · 疑难解答 | 校友集市</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/archive_detail.css">
+    <link rel="stylesheet" href="css/faq_detail.css"> <!-- 本页专属 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://kit.fontawesome.com/0ad2b99521.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body class="faq_page">
+
+    <!-- Box 1: 顶部导航栏 (全站统一) -->
+    <nav class="daohang">
+        <div class="daohang_wrapper">
+            <ul class="daohang_list">
+                <li class="daohang_items"><a href="index.html">首页</a></li>
+                <li class="daohang_items active"><a href="about.html">平台概况</a></li>
+                <li class="daohang_items"><a href="categories.html">商品分类</a></li>
+                <li class="daohang_items"><a href="guide.html">流转锦囊</a></li>
+                <li class="daohang_items"><a href="events.html">活动专区</a></li>
+                <li class="daohang_items"><a href="user.html">用户中心</a></li>
+            </ul>
+            <div class="nav_auth"><a href="signin.html" class="btn_nav">登录</a></div>
+        </div>
+    </nav>
+
+    <!-- Box 1: Hero Banner (问号装饰) -->
+    <header class="mission_hero">
+        <div class="hero_overlay"></div>
+        <div class="hero_content animate__animated animate__fadeIn">
+            <span class="en_tag">FAQ CENTER</span>
+            <h1 class="elegant_title">拾光锦囊 <span class="mission_seal">疑难解答</span></h1>
+            <div class="elegant_line"></div>
+            <p class="elegant_subtitle">所有关于流转的困惑，都能在这里找到锦囊解法</p>
+        </div>
+
+        <!-- 问号装饰元素 -->
+        <div class="faq_decorations">
+            <div class="faq_qmark qmark1">?</div>
+            <div class="faq_qmark qmark2">?</div>
+            <div class="faq_qmark qmark3">?</div>
+            <div class="faq_qmark qmark4">?</div>
+            <div class="faq_qmark qmark5">?</div>
+        </div>
+
+        <!-- 底部波浪线 -->
+        <div class="banner_wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C0,0,31.83,14.28,64,27.1,126.31,52,187.31,68,250.31,68c31.11,0,32.25-10.15,71.08-11.56Z"
+                    fill="#f9fbfa"></path>
+            </svg>
+        </div>
+    </header>
+
+    <main class="main_container">
+
+        <!-- Box 2: 简介区域 -->
+        <section id="intro_section" class="section_box intro_new">
+            <div class="container">
+                <div class="intro_baozhuang" id="introCard">
+                    <!-- 装饰性大首字 -->
+                    <div class="shou_zi">答</div>
+                    <div class="intro_content">
+                        <h2 class="title_hu">所有关于流转的困惑，都能在这里找到锦囊解法</h2>
+                        <div class="mei_xian"></div>
+                        <p class="intro_p">
+                            从注册认证到交易纠纷，从物流配送到信用积分，我们整理了校友集市最常见的问题与解决方案。
+                            如果找不到答案，可以随时联系我们的校园客服团队。
+                        </p>
+                        <div class="rules_yin">有问必答 · 拾光无忧</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Box 3: 搜索框 -->
+        <section id="search_section" class="section_box search_area">
+            <div class="container">
+                <div class="search_container">
+                    <div class="search_header">
+                        <h3><i class="fas fa-search"></i> 搜索我的问题</h3>
+                        <p>输入关键词快速查找相关解答，支持中英文混合搜索</p>
+                    </div>
+
+                    <div class="search_box">
+                        <div class="search_input_wrap">
+                            <input type="text" id="faqSearch" placeholder="例如：如何修改手机号、商品发布规范、面交地点推荐...">
+                            <button class="search_btn" id="searchBtn">
+                                <i class="fas fa-search"></i> 搜索
+                            </button>
+                        </div>
+
+                        <!-- 热门搜索标签 -->
+                        <div class="search_tags">
+                            <span class="search_tag" data-keyword="注册认证">注册认证</span>
+                            <span class="search_tag" data-keyword="商品发布">商品发布</span>
+                            <span class="search_tag" data-keyword="交易安全">交易安全</span>
+                            <span class="search_tag" data-keyword="信用积分">信用积分</span>
+                            <span class="search_tag" data-keyword="面交地点">面交地点</span>
+                            <span class="search_tag" data-keyword="违规处理">违规处理</span>
+                        </div>
+
+                        <!-- 搜索建议 -->
+                        <div class="search_suggestions" id="searchSuggestions">
+                            <div class="suggestions_header">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>智能建议</span>
+                            </div>
+                            <div class="suggestions_list"></div>
+                        </div>
+
+                        <!-- 搜索结果 -->
+                        <div class="search_results" id="searchResults">
+                            <div class="results_header">
+                                <h4>搜索结果</h4>
+                                <span id="resultsCount">0</span> 条相关解答
+                            </div>
+                            <div class="results_list"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Box 4: 分类手风琴 -->
+        <section id="category_section" class="section_box category_area">
+            <div class="container">
+                <div class="category_header">
+                    <h3><i class="fas fa-folder-open"></i> 问题分类导航</h3>
+                    <p>点击分类展开查看常见问题与解答</p>
+                </div>
+
+                <div class="accordion_container">
+                    <!-- 分类1 -->
+                    <div class="accordion_item active">
+                        <div class="accordion_header">
+                            <div class="accordion_icon">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <h3>注册登录</h3>
+                            <span class="accordion_count">6个问题</span>
+                            <i class="fas fa-chevron-down accordion_arrow"></i>
+                        </div>
+                        <div class="accordion_content">
+                            <div class="faq_item">
+                                <div class="faq_question">
+                                    <span class="faq_q">Q</span>
+                                    <h5>如何注册校友集市账号？</h5>
+                                    <i class="fas fa-plus faq_toggle"></i>
+                                </div>
+                                <div class="faq_answer">
+                                    <span class="faq_a">A</span>
+                                    <div>
+                                        <p>注册流程：</p>
+                                        <ol>
+                                            <li>访问校友集市官网，点击右上角"注册"按钮</li>
+                                            <li>使用校园邮箱(.edu.cn)进行验证</li>
+                                            <li>填写个人信息并上传学生证照片</li>
+                                            <li>设置登录密码和安全问题</li>
+                                            <li>阅读并同意《用户协议》后完成注册</li>
+                                        </ol>
+                                        <p class="faq_tip"><i class="fas fa-lightbulb"></i> 建议使用常用校园邮箱，便于接收重要通知</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq_item">
+                                <div class="faq_question">
+                                    <span class="faq_q">Q</span>
+                                    <h5>忘记密码如何找回？</h5>
+                                    <i class="fas fa-plus faq_toggle"></i>
+                                </div>
+                                <div class="faq_answer">
+                                    <span class="faq_a">A</span>
+                                    <div>
+                                        <p>两种方式找回密码：</p>
+                                        <ul>
+                                            <li><strong>邮箱重置</strong>：在登录页点击"忘记密码"，输入注册邮箱接收重置链接</li>
+                                            <li><strong>人工找回</strong>：联系校园客服提供学生证信息进行人工验证</li>
+                                        </ul>
+                                        <p class="faq_tip"><i class="fas fa-clock"></i> 邮箱重置链接有效期为24小时</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 分类2 -->
+                    <div class="accordion_item">
+                        <div class="accordion_header">
+                            <div class="accordion_icon">
+                                <i class="fas fa-box-open"></i>
+                            </div>
+                            <h3>发布买卖</h3>
+                            <span class="accordion_count">8个问题</span>
+                            <i class="fas fa-chevron-down accordion_arrow"></i>
+                        </div>
+                        <div class="accordion_content">
+                            <div class="faq_item">
+                                <div class="faq_question">
+                                    <span class="faq_q">Q</span>
+                                    <h5>发布商品需要哪些信息？</h5>
+                                    <i class="fas fa-plus faq_toggle"></i>
+                                </div>
+                                <div class="faq_answer">
+                                    <span class="faq_a">A</span>
+                                    <div>
+                                        <p>必填信息包括：</p>
+                                        <ul>
+                                            <li>商品标题（清晰准确）</li>
+                                            <li>商品描述（如实详细）</li>
+                                            <li>实物照片（至少3张不同角度）</li>
+                                            <li>商品成色（按标准选择）</li>
+                                            <li>交易价格（合理定价）</li>
+                                            <li>面交地点（校内安全区域）</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq_item">
+                                <div class="faq_question">
+                                    <span class="faq_q">Q</span>
+                                    <h5>哪些商品禁止发布？</h5>
+                                    <i class="fas fa-plus faq_toggle"></i>
+                                </div>
+                                <div class="faq_answer">
+                                    <span class="faq_a">A</span>
+                                    <div>
+                                        <p>严禁发布以下商品：</p>
+                                        <ul>
+                                            <li>违禁品、危险品、管制物品</li>
+                                            <li>假冒伪劣、侵权商品</li>
+                                            <li>药品、医疗器材</li>
+                                            <li>活体动物、植物</li>
+                                            <li>虚拟账号、游戏代练</li>
+                                            <li>其他违反法律法规和校规的商品</li>
+                                        </ul>
+                                        <p class="faq_tip"><i class="fas fa-exclamation-triangle"></i> 发布违禁品将面临账号封禁</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 分类3 -->
+                    <div class="accordion_item">
+                        <div class="accordion_header">
+                            <div class="accordion_icon">
+                                <i class="fas fa-balance-scale"></i>
+                            </div>
+                            <h3>争议维权</h3>
+                            <span class="accordion_count">5个问题</span>
+                            <i class="fas fa-chevron-down accordion_arrow"></i>
+                        </div>
+                        <div class="accordion_content">
+                            <div class="faq_item">
+                                <div class="faq_question">
+                                    <span class="faq_q">Q</span>
+                                    <h5>商品描述不符怎么办？</h5>
+                                    <i class="fas fa-plus faq_toggle"></i>
+                                </div>
+                                <div class="faq_answer">
+                                    <span class="faq_a">A</span>
+                                    <div>
+                                        <p>处理步骤：</p>
+                                        <ol>
+                                            <li>保持冷静，与卖家友好沟通</li>
+                                            <li>在平台"我的订单"中发起争议</li>
+                                            <li>上传对比照片和聊天记录作为证据</li>
+                                            <li>等待平台仲裁委员会审核（3个工作日内）</li>
+                                            <li>根据仲裁结果执行退款或其他解决方案</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq_item">
+                                <div class="faq_question">
+                                    <span class="faq_q">Q</span>
+                                    <h5>遇到欺诈行为如何处理？</h5>
+                                    <i class="fas fa-plus faq_toggle"></i>
+                                </div>
+                                <div class="faq_answer">
+                                    <span class="faq_a">A</span>
+                                    <div>
+                                        <p>立即采取以下措施：</p>
+                                        <ul>
+                                            <li>停止交易，不再支付任何费用</li>
+                                            <li>保存所有聊天记录和证据</li>
+                                            <li>在平台举报该用户</li>
+                                            <li>联系校园客服紧急处理</li>
+                                            <li>如涉及金额较大，可向学校保卫处报告</li>
+                                        </ul>
+                                        <p class="faq_tip"><i class="fas fa-shield-alt"></i> 平台提供交易安全险，符合条件可获得赔付</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 分类4 -->
+                    <div class="accordion_item">
+                        <div class="accordion_header">
+                            <div class="accordion_icon">
+                                <i class="fas fa-shipping-fast"></i>
+                            </div>
+                            <h3>物流面交</h3>
+                            <span class="accordion_count">7个问题</span>
+                            <i class="fas fa-chevron-down accordion_arrow"></i>
+                        </div>
+                        <div class="accordion_content">
+                            <div class="faq_item">
+                                <div class="faq_question">
+                                    <span class="faq_q">Q</span>
+                                    <h5>推荐的面交地点有哪些？</h5>
+                                    <i class="fas fa-plus faq_toggle"></i>
+                                </div>
+                                <div class="faq_answer">
+                                    <span class="faq_a">A</span>
+                                    <div>
+                                        <p>安全面交地点推荐：</p>
+                                        <ul>
+                                            <li><strong>图书馆大堂</strong>：监控全覆盖，开放时间8:00-22:00</li>
+                                            <li><strong>学生活动中心</strong>：服务台可协助，9:00-21:00</li>
+                                            <li><strong>食堂入口处</strong>：人流量大，推荐11:00-13:00时段</li>
+                                            <li><strong>校门保安亭旁</strong>：最安全，24小时可交易</li>
+                                            <li><strong>教学楼大厅</strong>：有监控，课间时段人多</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq_item">
+                                <div class="faq_question">
+                                    <span class="faq_q">Q</span>
+                                    <h5>面交时如何验货？</h5>
+                                    <i class="fas fa-plus faq_toggle"></i>
+                                </div>
+                                <div class="faq_answer">
+                                    <span class="faq_a">A</span>
+                                    <div>
+                                        <p>验货检查清单：</p>
+                                        <ol>
+                                            <li>核对商品与照片一致性</li>
+                                            <li>检查外观有无未描述的瑕疵</li>
+                                            <li>测试核心功能是否正常</li>
+                                            <li>确认配件、说明书是否齐全</li>
+                                            <li>检查生产日期、保修信息</li>
+                                            <li>确认无误后再进行付款</li>
+                                        </ol>
+                                        <p class="faq_tip"><i class="fas fa-clipboard-check"></i> 贵重物品建议录像留证</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Box 5: 视频教程 -->
+        <section id="video_section" class="section_box video_area">
+            <div class="container">
+                <div class="video_split">
+                    <div class="video_left">
+                        <div class="video_container">
+                            <div class="video_placeholder">
+                                <div class="play_btn">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                                <div class="video_duration">
+                                    <i class="fas fa-clock"></i> 01:30
+                                </div>
+                                <div class="video_label">
+                                    <span>教学视频</span>
+                                </div>
+                            </div>
+                            <div class="video_info">
+                                <div class="video_stats">
+                                    <span><i class="fas fa-eye"></i> 2,458 次观看</span>
+                                    <span><i class="fas fa-thumbs-up"></i> 98% 好评</span>
+                                    <span><i class="fas fa-calendar-alt"></i> 2026.01发布</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video_right">
+                        <h3>1分钟学会发布高吸引力商品</h3>
+                        <div class="video_line"></div>
+                        <p class="video_desc">
+                            本视频将手把手教你如何拍摄商品照片、撰写吸引人的描述、合理定价以及选择最佳面交时间。
+                            掌握这些技巧，让你的商品在30分钟内获得更多关注！
+                        </p>
+
+                        <div class="video_steps">
+                            <div class="video_step">
+                                <div class="step_num">1</div>
+                                <div class="step_content">
+                                    <h5>拍摄技巧</h5>
+                                    <p>自然光拍摄、多角度展示、突出细节</p>
+                                </div>
+                            </div>
+
+                            <div class="video_step">
+                                <div class="step_num">2</div>
+                                <div class="step_content">
+                                    <h5>文案撰写</h5>
+                                    <p>标题关键词、真实描述、故事化表达</p>
+                                </div>
+                            </div>
+
+                            <div class="video_step">
+                                <div class="step_num">3</div>
+                                <div class="step_content">
+                                    <h5>定价策略</h5>
+                                    <p>市场调研、成色对应、留议价空间</p>
+                                </div>
+                            </div>
+
+                            <div class="video_step">
+                                <div class="step_num">4</div>
+                                <div class="step_content">
+                                    <h5>发布时机</h5>
+                                    <p>选择活跃时段、避免节假日、及时回复</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="btn_watch_video" id="watchVideoBtn">
+                            <i class="fas fa-play-circle"></i> 立即观看完整教程
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Box 6: 快速自助入口 -->
+        <section id="quick_section" class="section_box quick_area">
+            <div class="container">
+                <div class="quick_header">
+                    <h3><i class="fas fa-bolt"></i> 快速自助入口</h3>
+                    <p>常用操作一键直达，快速解决问题</p>
+                </div>
+
+                <div class="quick_grid">
+                    <div class="quick_card" data-action="modifyPhone">
+                        <div class="quick_icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h4>修改手机号</h4>
+                        <p>更换绑定手机，接收安全验证</p>
+                        <div class="quick_badge">5分钟完成</div>
+                    </div>
+
+                    <div class="quick_card" data-action="resetPassword">
+                        <div class="quick_icon">
+                            <i class="fas fa-key"></i>
+                        </div>
+                        <h4>找回密码</h4>
+                        <p>忘记密码快速重置，保障账号安全</p>
+                        <div class="quick_badge">立即处理</div>
+                    </div>
+
+                    <div class="quick_card" data-action="contactSupport">
+                        <div class="quick_icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h4>联系人工</h4>
+                        <p>复杂问题需要人工协助解决</p>
+                        <div class="quick_badge">工作日9:00-18:00</div>
+                    </div>
+
+                    <div class="quick_card" data-action="reportIssue">
+                        <div class="quick_icon">
+                            <i class="fas fa-flag"></i>
+                        </div>
+                        <h4>举报反馈</h4>
+                        <p>违规行为举报，维护平台秩序</p>
+                        <div class="quick_badge">24小时内响应</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Box 7: 问题解决进度 -->
+        <section id="progress_section" class="section_box progress_area">
+            <div class="container">
+                <div class="progress_container">
+                    <div class="progress_header">
+                        <h3><i class="fas fa-chart-line"></i> 问题解决进度</h3>
+                        <p>实时了解常见问题的解决状态与处理时效</p>
+                    </div>
+
+                    <div class="progress_chart">
+                        <div class="chart_labels">
+                            <div class="chart_label">咨询类</div>
+                            <div class="chart_label">操作类</div>
+                            <div class="chart_label">技术类</div>
+                            <div class="chart_label">纠纷类</div>
+                        </div>
+
+                        <div class="chart_bars">
+                            <div class="chart_bar" data-type="consult" data-value="95">
+                                <div class="bar_fill"></div>
+                                <div class="bar_value">95%</div>
+                                <div class="bar_label">平均解决时间: 2小时</div>
+                            </div>
+
+                            <div class="chart_bar" data-type="operation" data-value="88">
+                                <div class="bar_fill"></div>
+                                <div class="bar_value">88%</div>
+                                <div class="bar_label">平均解决时间: 4小时</div>
+                            </div>
+
+                            <div class="chart_bar" data-type="technical" data-value="76">
+                                <div class="bar_fill"></div>
+                                <div class="bar_value">76%</div>
+                                <div class="bar_label">平均解决时间: 1天</div>
+                            </div>
+
+                            <div class="chart_bar" data-type="dispute" data-value="82">
+                                <div class="bar_fill"></div>
+                                <div class="bar_value">82%</div>
+                                <div class="bar_label">平均解决时间: 2天</div>
+                            </div>
+                        </div>
+
+                        <div class="chart_legend">
+                            <div class="legend_item">
+                                <span class="legend_color" style="background-color: #0d9488;"></span>
+                                <span>满意度 ≥ 90%</span>
+                            </div>
+                            <div class="legend_item">
+                                <span class="legend_color" style="background-color: #f59e0b;"></span>
+                                <span>满意度 75-89%</span>
+                            </div>
+                            <div class="legend_item">
+                                <span class="legend_color" style="background-color: #ef4444;"></span>
+                                <span>需要优化</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="progress_stats">
+                        <div class="stat_item">
+                            <div class="stat_number">2,458</div>
+                            <div class="stat_label">本周已解决问题</div>
+                        </div>
+                        <div class="stat_item">
+                            <div class="stat_number">89%</div>
+                            <div class="stat_label">用户满意度</div>
+                        </div>
+                        <div class="stat_item">
+                            <div class="stat_number">12h</div>
+                            <div class="stat_label">平均响应时间</div>
+                        </div>
+                        <div class="stat_item">
+                            <div class="stat_number">99%</div>
+                            <div class="stat_label">问题解决率</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Box 8: 客服留言 -->
+        <section id="contact_section" class="section_box contact_area">
+            <div class="container">
+                <div class="contact_card">
+                    <div class="contact_header">
+                        <div class="contact_icon">
+                            <i class="fas fa-comment-dots"></i>
+                        </div>
+                        <h2>没找到答案？直接给校园客服留言</h2>
+                        <div class="contact_line"></div>
+                        <p class="contact_desc">
+                            我们的校园客服团队将在24小时内回复您的问题。<br>
+                            请详细描述您遇到的问题，便于我们提供更准确的解决方案。
+                        </p>
+                    </div>
+
+                    <form class="contact_form" id="contactForm">
+                        <div class="form_row">
+                            <div class="form_group">
+                                <label for="contactName">
+                                    <i class="fas fa-user"></i> 姓名
+                                </label>
+                                <input type="text" id="contactName" placeholder="请输入您的姓名" required>
+                            </div>
+
+                            <div class="form_group">
+                                <label for="contactEmail">
+                                    <i class="fas fa-envelope"></i> 校园邮箱
+                                </label>
+                                <input type="email" id="contactEmail" placeholder="username@school.edu" required>
+                            </div>
+                        </div>
+
+                        <div class="form_group">
+                            <label for="contactCategory">
+                                <i class="fas fa-tag"></i> 问题分类
+                            </label>
+                            <select id="contactCategory" required>
+                                <option value="">请选择问题分类</option>
+                                <option value="register">注册登录问题</option>
+                                <option value="publish">商品发布问题</option>
+                                <option value="transaction">交易纠纷问题</option>
+                                <option value="technical">技术故障问题</option>
+                                <option value="suggestion">建议反馈</option>
+                                <option value="other">其他问题</option>
+                            </select>
+                        </div>
+
+                        <div class="form_group">
+                            <label for="contactMessage">
+                                <i class="fas fa-edit"></i> 问题描述
+                            </label>
+                            <textarea id="contactMessage" rows="5" 
+                                      placeholder="请详细描述您遇到的问题，包括相关商品信息、交易时间、聊天记录截图等..."
+                                      required></textarea>
+                            <div class="textarea_counter">
+                                <span id="charCount">0</span>/500 字
+                            </div>
+                        </div>
+
+                        <div class="form_group">
+                            <label>
+                                <i class="fas fa-paperclip"></i> 附件上传（可选）
+                            </label>
+                            <div class="upload_area" id="uploadArea">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <p>点击或拖拽文件到此处上传</p>
+                                <small>支持 JPG, PNG, PDF 格式，单个文件不超过5MB</small>
+                                <input type="file" id="fileUpload" accept=".jpg,.jpeg,.png,.pdf" multiple hidden>
+                            </div>
+                            <div class="file_list" id="fileList"></div>
+                        </div>
+
+                        <div class="form_submit">
+                            <button type="submit" class="btn_submit_message">
+                                <i class="fas fa-paper-plane"></i> 发送留言
+                            </button>
+                            <div class="contact_tip">
+                                <i class="fas fa-clock"></i>
+                                客服将在24小时内通过邮件回复您的问题
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="contact_success" id="contactSuccess">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>留言已发送！</h4>
+                            <p>我们已收到您的问题，客服将在24小时内通过邮件回复。<br>
+                               如需紧急帮助，请拨打校园客服热线：400-123-4567</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer_area">
+        <div class="footer_wrapper">
+            <div class="bottom_bar">
+                <p>&copy; 2026 Campus Market | 校园毕业物品流转平台团队 | <a href="#">服务条款</a></p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="js/faq_detail.js"></script>
+</body>
+
+</html>
