@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>热门闪购·限时秒杀详情 - 毕业物品流转平台</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/archive_detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/challenge_detail.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body class="challenge_page">
+
+    <!-- 顶部导航栏 -->
+    <nav class="daohang">
+        <div class="daohang_wrapper">
+            <ul class="daohang_list">
+                <li class="daohang_items"><a href="index.html">首页</a></li>
+                <li class="daohang_items"><a href="about.html">平台概况</a></li>
+                <li class="daohang_items"><a href="categories.html">商品分类</a></li>
+                <li class="daohang_items"><a href="guide.html">流转锦囊</a></li>
+                <li class="daohang_items active"><a href="events.html">活动专区</a></li>
+                <li class="daohang_items"><a href="user.html">用户中心</a></li>
+            </ul>
+            <div class="nav_auth"><a href="signin.html" class="btn_nav">登录</a></div>
+        </div>
+    </nav>
+
+    <!--  Hero Banner -->
+    <header class="challenge_hero">
+        <div class="hero_overlay"></div> <!-- 对应 CSS 中的蒙层 -->
+        <div class="hero_content animate__animated animate__fadeIn">
+            <span class="en_text">CHALLENGE</span>
+            <h1 class="elegant_title">绿色循环挑战赛 <span class="challenge_seal">挑战赛</span></h1>
+            <div class="elegant_line"></div>
+         
+        </div>
+
+        <!-- 底部波浪线 -->
+        <div class="banner_wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C0,0,31.83,14.28,64,27.1,126.31,52,187.31,68,250.31,68c31.11,0,32.25-10.15,71.08-11.56Z"
+                    fill="#f9fbfa"></path>
+            </svg>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- 挑战赛规则说明 -->
+        <section id="rules" class="content-section">
+            <div class="section-header">
+                <div class="section-number">01</div>
+                <h2 class="section-title">挑战赛规则说明</h2>
+                <p class="section-desc">了解赛事基本信息、核心目标与参与资格</p>
+            </div>
+
+            <div class="section-content">
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-trophy"></i>
+                        赛事基本规则
+                    </h3>
+
+                    <div class="rules-grid">
+                        <div class="rule-item">
+                            <div class="rule-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <div class="rule-content">
+                                <h4>赛事目标</h4>
+                                <p>促进校园物品循环，减少毕业浪费，建设绿色、低碳的环保校园环境</p>
+                            </div>
+                        </div>
+
+                        <div class="rule-item">
+                            <div class="rule-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="rule-content">
+                                <h4>时间机制</h4>
+                                <ul>
+                                    <li><strong>赛季时间：</strong>2023年4月15日 - 6月15日（共计62天）</li>
+                                    <li><strong>关键节点：</strong>4.22地球日、5.20学霸日、6.5环境日成果展</li>
+                                    <li><strong>冲刺阶段：</strong>5月1日-7日劳动节流转周，开启双倍积分奖励</li>
+                                    <li><strong>统计截止：</strong>6月10日任务截止，6月15日举办盛大颁奖典礼</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="rule-item">
+                            <div class="rule-icon">
+                                <i class="fas fa-user-check"></i>
+                            </div>
+                            <div class="rule-content">
+                                <h4>参与资格</h4>
+                                <ul>
+                                    <li>全校在籍学生（含本、硕、博）均可参与</li>
+                                    <li>需完善个人环保档案，开启“挑战之旅”</li>
+                                    <li>参与赛道：发布闲置、成功交换、邀请好友、撰写故事</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 参赛进阶全流程 -->
+        <section id="process" class="content-section">
+            <div class="section-header">
+                <div class="section-number">02</div>
+                <h2 class="section-title">参赛进阶全流程</h2>
+                <p class="section-desc">从新手注册到冲击钻石等级的成长之路</p>
+            </div>
+
+            <div class="section-content">
+                <!-- 参与步骤 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-rocket"></i>
+                        四步快速参与路径
+                    </h3>
+
+                    <div class="process-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-time">STEP 01</div>
+                            <div class="timeline-content">
+                                <h4>注册登录</h4>
+                                <p>完善个人环保档案，领取新手礼包与初始积分</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item highlight">
+                            <div class="timeline-time">STEP 02</div>
+                            <div class="timeline-content">
+                                <h4>选择赛道</h4>
+                                <p>根据兴趣加入专项挑战，如“学霸笔记”或“春季清仓”</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-time">STEP 03</div>
+                            <div class="timeline-content">
+                                <h4>完成任务</h4>
+                                <p>对照挑战任务系统，逐步解锁青铜、白银、黄金、钻石勋章</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-time">STEP 04</div>
+                            <div class="timeline-content">
+                                <h4>积累积分</h4>
+                                <p>实时关注排行榜动态，兑换实物奖励，赢取实习推荐</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tips-box">
+                        <h4><i class="fas fa-lightbulb"></i> 积分获取技巧</h4>
+                        <div class="tips-grid">
+                            <div class="tip-item">
+                                <i class="fas fa-star"></i>
+                                <p>高质量物品获得五星好评，单次+5加分</p>
+                            </div>
+                            <div class="tip-item">
+                                <i class="fas fa-bolt"></i>
+                                <p>24小时内完成匹配交付，可获效率加分</p>
+                            </div>
+                            <div class="tip-item">
+                                <i class="fas fa-boxes"></i>
+                                <p>批量流转5件以上物品，额外奖励20%积分</p>
+                            </div>
+                            <div class="tip-item">
+                                <i class="fas fa-share-alt"></i>
+                                <p>成功邀请好友加入或撰写流转心得均有加分</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 挑战等级体系 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-shield-alt"></i>
+                        挑战任务等级体系
+                    </h3>
+
+                    <div class="outcome-tabs">
+                        <div class="outcome-nav">
+                            <button class="outcome-btn active" data-outcome="success">青铜/白银级</button>
+                            <button class="outcome-btn" data-outcome="fail">黄金级</button>
+                            <button class="outcome-btn" data-outcome="issue">钻石级(最高)</button>
+                        </div>
+
+                        <div class="outcome-content">
+                            <!-- 基础等级 -->
+                            <div class="outcome-pane active" id="success-pane">
+                                <div class="success-steps">
+                                    <div class="success-step">
+                                        <div class="step-icon">
+                                            <i class="fas fa-leaf"></i>
+                                        </div>
+                                        <div class="step-desc">
+                                            <h5>青铜新手</h5>
+                                            <p>发布首件物品并完成首次交换，获新手徽章</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="success-step">
+                                        <div class="step-icon">
+                                            <i class="fas fa-medal"></i>
+                                        </div>
+                                        <div class="step-desc">
+                                            <h5>白银玩家</h5>
+                                            <p>流转10件物品并获5次好评，获200积分奖励</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 黄金处理 -->
+                            <div class="outcome-pane" id="fail-pane">
+                                <div class="fail-options">
+                                    <div class="option-item">
+                                        <div class="option-icon">
+                                            <i class="fas fa-crown"></i>
+                                        </div>
+                                        <div class="option-desc">
+                                            <h5>流转达人</h5>
+                                            <p>单月流转30件，好评率保持95%，奖励500积分</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="option-item">
+                                        <div class="option-icon">
+                                            <i class="fas fa-bullhorn"></i>
+                                        </div>
+                                        <div class="option-desc">
+                                            <h5>活动组织</h5>
+                                            <p>策划并组织1次主题流转活动，获专属达人勋章</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 钻石处理 -->
+                            <div class="outcome-pane" id="issue-pane">
+                                <div class="issue-list">
+                                    <div class="issue-item">
+                                        <div class="issue-name">环保先锋</div>
+                                        <div class="issue-solution">赛季流转量达100件，创建50人以上流转社群</div>
+                                    </div>
+
+                                    <div class="issue-item">
+                                        <div class="issue-name">终极奖励</div>
+                                        <div class="issue-solution">1000积分 + 钻石勋章 + 企业实习优先推荐机会</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 荣誉榜单与奖励保障 -->
+        <section id="quality" class="content-section">
+            <div class="section-header">
+                <div class="section-number">03</div>
+                <h2 class="section-title">荣誉榜单与奖励保障</h2>
+                <p class="section-desc">见证达人风采，确保奖励实时兑现</p>
+            </div>
+
+            <div class="section-content">
+                <!-- 实时排行榜 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-chart-line"></i>
+                        赛季实时风云榜
+                    </h3>
+
+                    <div class="grade-cards">
+                        <!-- 冠军 -->
+                        <div class="grade-card s-grade">
+                            <div class="grade-header">
+                                <div class="grade-badge">冠军</div>
+                                <div class="grade-title">张明哲 (经济学院)</div>
+                            </div>
+                            <div class="grade-content">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> 总积分：2,845分</li>
+                                    <li><i class="fas fa-check-circle"></i> 成功流转 127 件物品</li>
+                                    <li><i class="fas fa-check-circle"></i> 完成 45 次帮助匹配</li>
+                                    <li><i class="fas fa-check-circle"></i> 贡献 8 篇优质环保故事</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- 亚军 -->
+                        <div class="grade-card a-grade">
+                            <div class="grade-header">
+                                <div class="grade-badge">亚军</div>
+                                <div class="grade-title">李雨薇 (外国语学院)</div>
+                            </div>
+                            <div class="grade-content">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> 总积分：2,312分</li>
+                                    <li><i class="fas fa-check-circle"></i> 成功流转 98 件物品</li>
+                                    <li><i class="fas fa-check-circle"></i> 累计获得 156 次好评</li>
+                                    <li><i class="fas fa-check-circle"></i> 创建 67 人活跃社群</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- 季军 -->
+                        <div class="grade-card b-grade">
+                            <div class="grade-header">
+                                <div class="grade-badge">季军</div>
+                                <div class="grade-title">王志远 (计算机学院)</div>
+                            </div>
+                            <div class="grade-content">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> 总积分：1,987分</li>
+                                    <li><i class="fas fa-check-circle"></i> 成功流转 84 件物品</li>
+                                    <li><i class="fas fa-check-circle"></i> 成功邀请 23 位好友</li>
+                                    <li><i class="fas fa-check-circle"></i> 组织 3 次线下流转活动</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 奖励兑换流程 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-clipboard-list"></i>
+                        奖励兑换与发放流程
+                    </h3>
+
+                    <div class="inspection-flow">
+                        <div class="flow-step">
+                            <div class="flow-number">1</div>
+                            <div class="flow-content">
+                                <h4>积分结算</h4>
+                                <p>任务完成后，系统实时计算并更新个人环保积分</p>
+                            </div>
+                        </div>
+
+                        <div class="flow-step">
+                            <div class="flow-number">2</div>
+                            <div class="flow-content">
+                                <h4>奖励申请</h4>
+                                <p>在“奖励商城”中使用积分申请实物或电子证书</p>
+                            </div>
+                        </div>
+
+                        <div class="flow-step">
+                            <div class="flow-number">3</div>
+                            <div class="flow-content">
+                                <h4>权益发放</h4>
+                                <p>勋章在线即时点亮，实物奖励于颁奖周统一领取</p>
+                            </div>
+                        </div>
+
+                        <div class="flow-step">
+                            <div class="flow-number">4</div>
+                            <div class="flow-content">
+                                <h4>特殊权益</h4>
+                                <p>钻石级选手进入“企业人才库”，获取实习直通车</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 亮点展示 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-star-half-alt"></i>
+                        赛事专属亮点权益
+                    </h3>
+
+                    <div class="service-grid">
+                        <!-- 碳积分 -->
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-tree"></i>
+                            </div>
+                            <div class="service-content">
+                                <h4>碳积分系统</h4>
+                                <div class="service-details">
+                                    <div class="detail-item">
+                                        <span class="detail-grade">低碳转化</span>
+                                        <span class="detail-value">减排贡献换算树木种植量</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-grade">实物奖励</span>
+                                        <span class="detail-value">碳积分可兑换环保周边</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 绿色指南 -->
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-book-open"></i>
+                            </div>
+                            <div class="service-content">
+                                <h4>绿色毕业指南</h4>
+                                <ol class="process-list">
+                                    <li>优秀流转故事入选指南</li>
+                                    <li>校园博物馆永久收藏案例</li>
+                                    <li>获得“校园环保大使”荣誉</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <!-- 企业合作 -->
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <div class="service-content">
+                                <h4>社会责任评价</h4>
+                                <div class="refund-details">
+                                    <div class="refund-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <div>
+                                            <strong>实习绿色通道</strong>
+                                            <p>合作企业优先推荐权</p>
+                                        </div>
+                                    </div>
+                                    <div class="refund-item">
+                                        <i class="fas fa-users"></i>
+                                        <div>
+                                            <strong>论坛席位</strong>
+                                            <p>受邀参加年度环保高峰论坛</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 赛事公平性承诺 -->
+        <section id="fairness" class="content-section">
+            <div class="section-header">
+                <div class="section-number">04</div>
+                <h2 class="section-title">赛事公平性承诺</h2>
+                <p class="section-desc">公开透明的评分环境，保障每一位参与者的权益</p>
+            </div>
+
+            <div class="section-content">
+                <div class="fairness-grid">
+                    <!-- 行为准则 -->
+                    <div class="fairness-card">
+                        <div class="fairness-header">
+                            <div class="fairness-icon">
+                                <i class="fas fa-ban"></i>
+                            </div>
+                            <h4>严禁舞弊</h4>
+                        </div>
+                        <ul class="fairness-list">
+                            <li>严禁虚假交易、刷单获取积分</li>
+                            <li>一经发现立即取消参赛资格</li>
+                            <li>所有流转需提供真实交易凭证</li>
+                            <li>恶意利用规则者将封禁账号</li>
+                        </ul>
+                    </div>
+
+                    <!-- 过程公开 -->
+                    <div class="fairness-card">
+                        <div class="fairness-header">
+                            <div class="fairness-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <h4>数据公开</h4>
+                        </div>
+                        <ul class="fairness-list">
+                            <li>排行榜数据实时、透明更新</li>
+                            <li>积分计算公式全站可查</li>
+                            <li>违规行为处理结果定期公示</li>
+                            <li>接受全校师生的公开监督</li>
+                        </ul>
+                    </div>
+
+                    <!-- 仲裁渠道 -->
+                    <div class="fairness-card">
+                        <div class="fairness-header">
+                            <div class="fairness-icon">
+                                <i class="fas fa-gavel"></i>
+                            </div>
+                            <h4>争议仲裁</h4>
+                        </div>
+                        <ul class="fairness-list">
+                            <li>设立专门赛事仲裁委员会</li>
+                            <li>争议投诉24小时内人工响应</li>
+                            <li>平台保留最终解释权</li>
+                            <li>结果公示后方可执行</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 公平声明 -->
+                <div class="fairness-statement">
+                    <div class="statement-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="statement-content">
+                        <h4>组委会承诺</h4>
+                        <p>我们致力于打造一个公平、公正的竞技平台，让每一份环保热情都能得到应有的尊重。希望各位参赛者秉持诚信原则，共建诚信校园流转生态。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--常见问题解答 -->
+        <section id="faq" class="content-section">
+            <div class="section-header">
+                <div class="section-number">05</div>
+                <h2 class="section-title">常见问题解答</h2>
+                <p class="section-desc">解答挑战赛参与过程中最常见的疑问</p>
+            </div>
+
+            <div class="section-content">
+                <div class="faq-container">
+                    <!-- Q1 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <div class="faq-number">Q1</div>
+                            <div class="faq-text">如何更高效地获取积分？</div>
+                            <div class="faq-toggle">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>建议：1. 提升物品质量以获取五星好评；2. 在节日加倍周期间密集发布；3. 组织批量流转活动（5件以上）；4. 邀请更多好友完成注册实名。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <div class="faq-number">Q2</div>
+                            <div class="faq-text">非毕业生可以参加“毕业季”挑战吗？</div>
+                            <div class="faq-toggle">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>可以。挑战赛面向全校所有年级学生。虽然6月主题为毕业季，但非毕业生同样可以作为接收方或提供方参与流转，贡献环保价值。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <div class="faq-number">Q3</div>
+                            <div class="faq-text">什么是碳积分，如何兑换？</div>
+                            <div class="faq-toggle">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>碳积分是根据物品流转所减少的碳排放量换算的虚拟数值。积分可在赛季末的“碳中和商城”中兑换环保帆布袋、竹纤维餐具等实物奖励。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q4 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <div class="faq-number">Q4</div>
+                            <div class="faq-text">实习机会是如何推荐的？</div>
+                            <div class="faq-toggle">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>达到钻石等级的参赛者将进入“绿色先锋人才库”，组委会将根据选手的表现（组织力、诚信度、专业背景）将其简历优先推送给合作的环保与科技企业。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+
+    <footer class="footer_area">
+        <div class="footer_wrapper">
+            <div class="bottom_bar">
+                <p>&copy; 2026 Campus Market | 校园毕业物品流转平台团队 | <a href="#">服务条款</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/challenge_detail.js"></script>
+</body>
+
+</html>

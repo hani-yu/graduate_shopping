@@ -4,7 +4,7 @@
 	font-size: 3rem;
 }
 
-.slide-container {
+.slides-container {
 	margin: 0 auto;
 	width: 90%;
 	overflow-x: hidden;
@@ -14,7 +14,7 @@
 	display: flex;
 	width: 100%;
 }
-.slide {
+.slides {
 	min-width: 100%;
 	padding: 2rem 1rem;
 	text-align: center;
@@ -30,7 +30,7 @@
 	font-family: $content-1;
 }
 
-.person {
+.person_name {
 	color: $color-primary;
 	font-family: $content-2;
 	font-size: 2rem;

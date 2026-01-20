@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>流转记录管理 - 锦囊护卫</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/archive_detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/record_detail.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body class="record_page">
+
+    <!-- 顶部导航栏（与主站一致） -->
+    <nav class="daohang">
+        <div class="daohang_wrapper">
+            <ul class="daohang_list">
+                <li class="daohang_items"><a href="index.html">首页</a></li>
+                <li class="daohang_items"><a href="about.html">平台概况</a></li>
+                <li class="daohang_items"><a href="categories.html">商品分类</a></li>
+                <li class="daohang_items"><a href="guide.html">流转锦囊</a></li>
+                <li class="daohang_items"><a href="events.html">活动专区</a></li>
+                <li class="daohang_items active"><a href="user.html">用户中心</a></li>
+            </ul>
+            <div class="nav_auth"><a href="signin.html" class="btn_nav">登录</a></div>
+        </div>
+    </nav>
+
+    <!-- Box 1: Hero Banner (透视长廊背景) -->
+    <header class="record_hero">
+        <div class="hero_overlay"></div> <!-- 对应 CSS 中的蒙层 -->
+        <div class="hero_content animate__animated animate__fadeIn">
+            <span class="en_text">RECORDS</span>
+            <h1 class="elegant_title">流转锦囊·交易明细详情 <span class="record_seal">记录追踪</span></h1>
+            <div class="elegant_line"></div>
+            <p>详细了解物流/面交状态、已发布闲置、购入锦囊及流转财务分析报告。</p>
+        </div>
+
+        <!-- 底部波浪线  -->
+        <div class="banner_wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C0,0,31.83,14.28,64,27.1,126.31,52,187.31,68,250.31,68c31.11,0,32.25-10.15,71.08-11.56Z"
+                    fill="#f9fbfa"></path>
+            </svg>
+        </div>
+    </header>
+    <main>
+        <!-- 主要内容区域 -->
+        <div class="container">
+            <!-- 模块1：实时物流/面交状态 -->
+            <section class="management-section" id="online-devices">
+                <div class="section-header">
+                    <h2><i class="fas fa-truck-moving"></i> 实时物流/面交状态</h2>
+                    <span class="badge">3项进行中</span>
+                </div>
+                <div class="devices-list device-grid">
+                    <!-- 设备1 - 快递寄送 -->
+                    <div class="device-item current">
+                        <div class="device-icon">
+                            <i class="fas fa-shipping-fast"></i>
+                        </div>
+                        <div class="device-info">
+                            <h3>《数据结构与算法》教材 <span class="current-tag">快递寄送</span></h3>
+                            <p class="device-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> 顺丰 SF123456789</span>
+                                <span><i class="fas fa-clock"></i> 预计明天送达</span>
+                                <span><i class="fas fa-network-wired"></i> 状态: 运输中</span>
+                            </p>
+                            <p class="device-type">已通过仓库揽收，正在发往目的地</p>
+                        </div>
+                        <div class="device-actions">
+                            <button class="btn-action btn-secondary" disabled>
+                                <i class="fas fa-check-circle"></i> 自动追踪中
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 设备2 - 面交确认 -->
+                    <div class="device-item">
+                        <div class="device-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="device-info">
+                            <h3>便携式小台灯</h3>
+                            <p class="device-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> 图书馆3楼自习区</span>
+                                <span><i class="fas fa-clock"></i> 今天 18:30</span>
+                                <span><i class="fas fa-network-wired"></i> 类型: 面交待确认</span>
+                            </p>
+                            <p class="device-type">请准时到达约定地点进行查验</p>
+                        </div>
+                        <div class="device-actions">
+                            <button class="btn-action btn-warning">
+                                <i class="fas fa-sign-out-alt"></i> 确认完成
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 设备3 - 上门取件 -->
+                    <div class="device-item">
+                        <div class="device-icon">
+                            <i class="fas fa-people-carry"></i>
+                        </div>
+                        <div class="device-info">
+                            <h3>宿舍小冰箱</h3>
+                            <p class="device-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> 上门取件</span>
+                                <span><i class="fas fa-clock"></i> 明天 14:00-16:00</span>
+                                <span><i class="fas fa-network-wired"></i> 王师傅 138****1234</span>
+                            </p>
+                            <p class="device-type">请提前准备好物品，保持电话畅通</p>
+                        </div>
+                        <div class="device-actions">
+                            <button class="btn-action btn-warning">
+                                <i class="fas fa-sign-out-alt"></i> 修改时间
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 模块2：近期流转记录 (合并自发布的闲置) -->
+            <section class="management-section" id="login-history">
+                <div class="section-header">
+                    <h2><i class="fas fa-history"></i> 我发布的闲置记录</h2>
+                    <div class="filter-options">
+                        <select class="filter-select">
+                            <option value="30">最近30天</option>
+                            <option value="7">最近7天</option>
+                            <option value="90">最近90天</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="login-history-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>时间</th>
+                                <th>物品名称</th>
+                                <th>交易对象/地点</th>
+                                <th>交易金额</th>
+                                <th>状态</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="login-success">
+                                <td>2026-01-10 09:30</td>
+                                <td>Kindle Paperwhite (九成新)</td>
+                                <td>浏览量: 128</td>
+                                <td>¥350.00</td>
+                                <td><span class="status-success"><i class="fas fa-check-circle"></i> 出售中</span></td>
+                            </tr>
+                            <tr class="login-success">
+                                <td>2026-01-10 08:15</td>
+                                <td>考研英语全套资料</td>
+                                <td>李同学·计算机学院</td>
+                                <td>¥120.00</td>
+                                <td><span class="status-success"><i class="fas fa-check-circle"></i> 已售出</span></td>
+                            </tr>
+                            <tr class="login-failed">
+                                <td>2026-01-09 23:10</td>
+                                <td>宜家书桌+椅子套装</td>
+                                <td>收纳指数: 23</td>
+                                <td>¥200.00</td>
+                                <td><span class="status-failed"><i class="fas fa-exclamation-triangle"></i> 已下架</span>
+                                </td>
+                            </tr>
+                            <tr class="login-success">
+                                <td>2026-01-09 22:45</td>
+                                <td>便携蓝牙音箱</td>
+                                <td>王同学</td>
+                                <td>¥120.00</td>
+                                <td><span class="status-success"><i class="fas fa-check-circle"></i> 成功</span></td>
+                            </tr>
+                            <tr class="login-success">
+                                <td>2026-01-08 21:30</td>
+                                <td>MacBook Pro 电脑包</td>
+                                <td>西区自提</td>
+                                <td>¥45.00</td>
+                                <td><span class="status-success"><i class="fas fa-check-circle"></i> 成功</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-footer">
+                    <button class="btn-secondary">
+                        <i class="fas fa-download"></i> 导出交易明细
+                    </button>
+                    <button class="btn-secondary">
+                        <i class="fas fa-trash-alt"></i> 查看全部12件闲置
+                    </button>
+                </div>
+            </section>
+
+            <!-- 模块3：我收入的锦囊 (已购) -->
+            <section class="management-section" id="trusted-devices">
+                <div class="section-header">
+                    <h2><i class="fas fa-shopping-bag"></i> 我收入的锦囊</h2>
+                    <span class="hint-text">总支出 ¥850.00</span>
+                </div>
+
+                <div class="trusted-grid">
+                    <div class="trusted-card">
+                        <i class="fas fa-desktop card-icon"></i>
+                        <h3>机械键盘（青轴）</h3>
+                        <p>¥180 | 张学长·软件工程</p>
+                        <span class="trusted-badge"><i class="fas fa-star"></i> 交易完成</span>
+                    </div>
+
+                    <div class="trusted-card">
+                        <i class="fas fa-book card-icon"></i>
+                        <h3>JavaScript高级程序设计</h3>
+                        <p>¥45 | 王同学·前端开发</p>
+                        <span class="trusted-badge"><i class="fas fa-star"></i> 运输中</span>
+                    </div>
+
+                    <div class="trusted-card">
+                        <i class="fas fa-gamepad card-icon"></i>
+                        <h3>Switch 游戏卡带</h3>
+                        <p>¥220 | 游戏社官方账号</p>
+                        <span class="untrusted-badge">争议处理中</span>
+                    </div>
+                </div>
+
+                <div class="trusted-setting-mini">
+                    <span>仅自己可见购买清单</span>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </section>
+
+
+            <!-- 模块4：流转财务报表 -->
+            <section class="management-section" id="security-policy">
+                <div class="section-header">
+                    <h2><i class="fas fa-chart-line"></i> 流转财务报表</h2>
+                </div>
+
+                <div class="policy-mini-grid">
+
+                    <div class="policy-mini-card">
+                        <h3><i class="fas fa-money-bill-wave"></i> 总收入</h3>
+                        <p>¥1,280 (↑15%)</p>
+                    </div>
+
+                    <div class="policy-mini-card">
+                        <h3><i class="fas fa-shopping-cart"></i> 总支出</h3>
+                        <p>¥850 (↓8%)</p>
+                    </div>
+
+                    <div class="policy-mini-card">
+                        <h3><i class="fas fa-coins"></i> 净收益</h3>
+                        <p>¥430 (正向循环)</p>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- 模块5：历史订单管理 -->
+            <section class="management-section" id="batch-management">
+                <div class="section-header">
+                    <h2><i class="fas fa-tasks"></i> 历史订单管理</h2>
+                </div>
+
+                <div class="batch-mini-grid">
+
+                    <div class="batch-mini-card">
+                        <i class="fas fa-search"></i>
+                        <h3>订单搜索</h3>
+                        <button class="btn-warning">搜索</button>
+                    </div>
+
+                    <div class="batch-mini-card">
+                        <i class="fas fa-filter"></i>
+                        <h3>类型筛选</h3>
+                        <button class="btn-secondary">筛选</button>
+                    </div>
+
+                    <div class="batch-mini-card">
+                        <i class="fas fa-file-export"></i>
+                        <h3>导出报告</h3>
+                        <button class="btn-secondary">导出</button>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- 确认对话框 -->
+            <div class="confirmation-dialog" id="logoutAllDialog" style="display: none;">
+                <div class="dialog-content">
+                    <h3><i class="fas fa-exclamation-triangle"></i> 确认清空历史记录</h3>
+                    <p>此操作将永久删除30天前的所有交易足迹。财务统计数据将保留，但无法查看具体物品详情。</p>
+                    <div class="dialog-actions">
+                        <button class="btn-secondary" onclick="closeDialog()">取消</button>
+                        <button class="btn-warning" onclick="confirmLogoutAll()">确认删除</button>
+                    </div>
+                </div>
+            </div>
+            </section>
+
+
+        </div>
+    </main>
+
+    <footer class="footer_area">
+        <div class="footer_wrapper">
+            <div class="bottom_bar">
+                <p>&copy; 2026 Campus Market | 校园毕业物品流转平台团队 | <a href="#">服务条款</a></p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="js/record_detail.js"></script>
+</body>
+
+</html>

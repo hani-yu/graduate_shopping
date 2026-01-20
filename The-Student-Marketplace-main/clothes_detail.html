@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品分类 - 校园毕业物品流转平台</title>
+    <script src="https://kit.fontawesome.com/0ad2b99521.js" crossorigin="anonymous" async></script>
+    <link rel="stylesheet" href="css/style.min.css"> <!-- 引用全局样式 -->
+    <link rel="stylesheet" href="css/clothes_detail.css"> <!-- 引用本页专用样式 -->
+    <link rel="stylesheet" href="css/archive_detail.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body class="network_page">
+   <!-- 顶部导航栏 -->
+    <nav class="daohang">
+        <div class="daohang_wrapper">
+            <ul class="daohang_list">
+                <li class="daohang_items"><a href="index.html">首页</a></li>
+                <li class="daohang_items"><a href="about.html">平台概况</a></li>
+                <li class="daohang_items active"><a href="categories.html">商品分类</a></li>
+                <li class="daohang_items"><a href="guide.html">流转锦囊</a></li>
+                <li class="daohang_items"><a href="events.html">活动专区</a></li>
+                <li class="daohang_items"><a href="user.html">用户中心</a></li>
+            </ul>
+            <div class="nav_auth"><a href="signin.html" class="btn_nav">登录</a></div>
+        </div>
+    </nav>
+
+    <!--  Hero Banner-->
+    <header class="network_hero">
+        <div class="hero_overlay"></div> <!-- 对应 CSS 中的蒙层 -->
+        <div class="hero_content animate__animated animate__fadeIn">
+            <span class="en_text">WOMEN CLOTHES</span>
+            <h1 class="elegant_title">女生穿搭 <span class="network_seal">服装</span></h1>
+            <div class="elegant_line"></div>
+          
+        </div>
+
+        <!-- 底部波浪线  -->
+        <div class="banner_wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C0,0,31.83,14.28,64,27.1,126.31,52,187.31,68,250.31,68c31.11,0,32.25-10.15,71.08-11.56Z"
+                    fill="#f9fbfa"></path>
+            </svg>
+        </div>
+    </header>
+
+<main class="channel_container">
+    <!-- 顶部：热门大咖推荐  -->
+    <section class="hero_recommend">
+        <div class="hero_card">
+            <div class="hero_badge">学姐力荐</div>
+            <div class="hero_content">
+                <h2>校招面试必胜西服套装 (含修身衬衫/丝巾)</h2>
+                <p class="hero_desc">“这是陪我拿到第一份名企Offer的正装。愿它的好运也能传递给你，让你的自信闪闪发光。”</p>
+                <div class="hero_price_row">
+                    <span class="price">¥158.00</span>
+                    <span class="old_price">原价 ¥499</span>
+                    <button class="btn_view">立即抢购</button>
+                </div>
+            </div>
+            <div class="hero_icon">
+                <i class="fas fa-user-tie"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- 分类筛选 -->
+    <div class="filter_bar_wrapper">
+        <div class="filter_bar" id="filterBar">
+            <button class="filter_btn active" data-type="all">全部好物</button>
+            <button class="filter_btn" data-type="clothes">精致女装</button>
+            <button class="filter_btn" data-type="bags">美鞋包包</button>
+            <button class="filter_btn" data-type="accessories">饰品配件</button>
+        </div>
+    </div>
+
+    <!--  限时抢购专区 (Flash Sale) -->
+    <section class="flash_sale">
+        <div class="section_title">
+            <h3><i class="fas fa-bolt"></i> 拾光续缘 <span id="timer">00:00:00</span></h3>
+        </div>
+        <div class="flash_wrapper">
+            <!-- 抢购单品 1 -->
+            <div class="flash_item">
+                <div class="flash_tag">仅一件</div>
+                <i class="fas fa-shopping-bag"></i>
+                <h4>法式复古腋下包 (米白色)</h4>
+                <p class="flash_price">¥29.9 <del>¥129</del></p>
+            </div>
+            <!-- 抢购单品 2 -->
+            <div class="flash_item">
+                <div class="flash_tag">九五新</div>
+                <i class="fas fa-gem"></i>
+                <h4>极简冷淡风珍珠耳饰</h4>
+                <p class="flash_price">¥9.9 <del>¥59</del></p>
+            </div>
+             <!-- 抢购单品 3 -->
+             <div class="flash_item">
+                <div class="flash_tag">全新</div>
+                <i class="fas fa-umbrella"></i>
+                <h4>莫兰迪色防紫外线太阳伞</h4>
+                <p class="flash_price">¥15.0 <del>¥45</del></p>
+            </div>
+        </div>
+    </section>
+
+    <!--  底部动态：拾光流转 (Live Feed) -->
+    <section class="live_feed_section">
+        <div class="feed_box">
+            <i class="fas fa-history"></i>
+            <div class="feed_list" id="feedList">
+                <div class="feed_inner">
+                <p class="feed_item">● 2分钟前：[经管学姐] 的《碎花连衣裙》被 [研一学妹] 预约了</p>
+                <p class="feed_item">● 12分钟前：[学姐***] 刚刚上架了《复古大衣/羊绒衫》</p>
+                <p class="feed_item">● 35分钟前：[艺术学院] 完成了一次精致美学的传递</p>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 进阶宝库 (Thematic Bundles) -->
+    <section class="special_collections">
+        <div class="section_header">
+            <h3><i class="fas fa-layer-group"></i> 拾光宝库·穿搭合辑</h3>
+        </div>
+        <div class="collection_grid">
+            <!-- 合辑 1 -->
+            <div class="collection_card" style="--card-color: #0d9488;">
+                <div class="col_icon"><i class="fas fa-briefcase"></i></div>
+                <div class="col_info">
+                    <h4>职场新人·初入职场全套</h4>
+                    <p>包含：职场西装、真丝衬衫、黑色中跟鞋。学姐赠送：面试淡妆小秘籍与职场避坑指南。</p>
+                    <div class="col_footer">
+                        <span class="bundle_tag">共3件</span>
+                        <span class="bundle_price">¥210.00</span>
+                        <button class="btn_view">查看全集</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 合辑 2 -->
+            <div class="collection_card" style="--card-color: #f59e0b;">
+                <div class="col_icon"><i class="fas fa-camera-retro"></i></div>
+                <div class="col_info">
+                    <h4>草坪野餐·超上镜度假包</h4>
+                    <p>包含：清新格子裙、手工编织草帽、复古墨镜。让你在操场野餐时轻松拍出氛围感大片。</p>
+                    <div class="col_footer">
+                        <span class="bundle_tag">共3件</span>
+                        <span class="bundle_price">¥88.00</span>
+                        <button class="btn_view">查看全集</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 合辑 3 -->
+            <div class="collection_card" style="--card-color: #3b82f6;">
+                <div class="col_icon"><i class="fas fa-coffee"></i></div>
+                <div class="col_info">
+                    <h4>图书馆·舒适宅家运动包</h4>
+                    <p>包含：纯棉字母卫衣、运动束脚裤、帆布鞋。学习与生活的平衡，从最舒适的穿着开始。</p>
+                    <div class="col_footer">
+                        <span class="bundle_tag">共3件</span>
+                        <span class="bundle_price">¥125.00</span>
+                        <button class="btn_view">查看全集</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--  求书广场  -->
+    <section class="wishlist_section">
+        <div class="section_header_flex">
+            <div class="header_left">
+                <h3><i class="fas fa-search-plus"></i> 拾光寻迹 · 穿搭寻踪</h3>
+                <p>在找某款特定的裙子或配饰？发布你的心愿，让学姐帮你翻翻衣柜。</p>
+            </div>
+            <button class="btn_post_wish"><i class="fas fa-pen-nib"></i> 发布求美愿望</button>
+        </div>
+
+        <div class="wish_wall">
+            <!-- 需求卡片 1 -->
+            <div class="wish_card">
+                <div class="wish_user">
+                    <i class="fas fa-magic"></i>
+                    <span>大二·小林</span>
+                </div>
+                <h4>求购：S码藏青色学院风JK裙</h4>
+                <p>校庆活动演出急需，希望能有学姐转让，成色要求八成新以上。</p>
+                <div class="wish_footer">
+                    <span class="wish_time">40分钟前发布</span>
+                    <span class="btn_helper">我有此物</span>
+                </div>
+            </div>
+
+            <!-- 需求卡片 2 -->
+            <div class="wish_card">
+                <div class="wish_user">
+                    <i class="fas fa-magic"></i>
+                    <span>大四·悦悦</span>
+                </div>
+                <h4>寻找：银色细跟晚礼服鞋 (37码)</h4>
+                <p>毕业晚会穿一次，不求全新，能撑起气场就行。重谢！</p>
+                <div class="wish_footer">
+                    <span class="wish_time">2小时前发布</span>
+                    <span class="btn_helper">我有此物</span>
+                </div>
+            </div>
+
+            <!-- 需求卡片 3 -->
+            <div class="wish_card">
+                <div class="wish_user">
+                    <i class="fas fa-magic"></i>
+                    <span>大三·晓晓</span>
+                </div>
+                <h4>借用：专业相机三脚架/反光板</h4>
+                <p>周末拍毕业写真，求哪位学姐可以短期借用或低价出租。</p>
+                <div class="wish_footer">
+                    <span class="wish_time">5小时前发布</span>
+                    <span class="btn_helper">我有此物</span>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+    <footer class="footer_area">
+        <div class="footer_wrapper">
+            <div class="bottom_bar">
+                <p>&copy; 2026 Campus Market | 校园毕业物品流转平台团队 | <a href="#">服务条款</a></p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="js/clothes_detail.js"></script>
+</body>
+
+</html>

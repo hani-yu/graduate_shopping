@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>平台概况 - 校园毕业物品流转平台</title>
+
+    <!-- 基础样式与关于页专用样式 -->
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/about.css">
+
+    <!-- 第三方库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://kit.fontawesome.com/0ad2b99521.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <!-- 头部导航 -->
+    <nav class="daohang">
+        <div class="daohang_wrapper">
+            <ul class="daohang_list">
+                <li class="daohang_items"><a href="index.html">首页</a></li>
+                <li class="daohang_items dropdown">
+                    <a href="about.html" style="color: #0d9488;">平台概况</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html#mission">使命理念</a></li>
+                        <li><a href="about.html#team">团队介绍</a></li>
+                        <li><a href="about.html#history">发展历程</a></li>
+                        <li><a href="about.html#rules">使用规则</a></li>
+                        <li><a href="about.html#faq">常见问题</a></li>
+                    </ul>
+                </li>
+                <li class="daohang_items"><a href="categories.html">商品分类</a></li>
+                <li class="daohang_items"><a href="guide.html">流转锦囊</a></li>
+                <li class="daohang_items"><a href="events.html">活动专区</a></li>
+                <li class="daohang_items"><a href="user.html">用户中心</a></li>
+            </ul>
+            <div class="nav_auth">
+                <a href="signin.html" class="btn_nav">登录</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner -->
+    <header class="about_banner">
+        <!-- 动态粒子背景容器 -->
+        <canvas id="bannerCanvas"></canvas>
+
+        <!-- 背景装饰元素 (漂浮的图标) -->
+        <div class="floating_elements">
+            <i class="fas fa-graduation-cap icon_1"></i>
+            <i class="fas fa-book icon_2"></i>
+            <i class="fas fa-heart icon_3"></i>
+            <i class="fas fa-bicycle icon_4"></i>
+        </div>
+
+        <!--  主体内容层 -->
+        <div class="banner_content" id="scene">
+            <div class="text_group" data-depth="0.2">
+                <!-- 核心标题 -->
+                <h1 class="elegant_title" data-text="校友集市 · 拾光记">平台概况
+                    <span class="shiguang_seal">平台</span>
+                </h1>
+
+                <!-- 装饰线条：居中且精致 -->
+                <div class="elegant_line"></div>
+
+                <!-- 副标题：限制宽度，增加行高 -->
+                <p class="elegant_subtitle">
+                    循旧物之迹，续未尽之缘；<br>让校园记忆在流转中，岁岁生香。
+                </p>
+
+                <!-- 按钮组：对齐并美化 -->
+                <div class="elegant_btns">
+                    <a href="#mission" class="btn_main">入席拾光</a>
+                    <a href="guide.html" class="btn_sub">物语手册</a>
+                </div>
+            </div>
+        </div>
+
+        <!--  底部弧形遮罩 (让过渡更自然) -->
+        <div class="banner_wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C0,0,31.83,14.28,64,27.1,126.31,52,187.31,68,250.31,68c31.11,0,32.25-10.15,71.08-11.56Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
+
+        <!-- 滚动提示 -->
+        <div class="scroll_down_wrapper">
+            <!-- <span class="scroll_text">SCROLL</span> -->
+            <div class="mouse_icon">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!--使命理念 -->
+        <section id="mission" class="about_section mission_interactive_area">
+            <!-- 背景装饰：巨大的浅色文字 -->
+            <div class="mission_bg_text">OUR MISSION</div>
+
+            <div class="container">
+                <div class="section_header_center reveal" style="text-align:center; margin-bottom: 60px;">
+                    <h2 class="main_title">我们的使命</h2>
+                    <a href="mission_detail.html" class="mini_explore_tag">
+                        <span>探索详情</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <div class="title_under_line"><span></span></div>
+                    <p class="subtitle">
+                        <span class="dynamic_text">让毕业季不再是终点，而是美好的延续</span>
+                    </p>
+                </div>
+
+                <div class="mission_grid_fancy">
+                    <!-- 卡片 1：绿色共享 -->
+                    <div class="campus_card" data-tilt>
+                        <div class="card_stamp">ECO</div> <!-- 像印章一样的装饰 -->
+                        <div class="card_icon_box">
+                            <div class="icon_bg"></div>
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <div class="card_text">
+                            <h3>绿色共享</h3>
+                            <div class="card_tag"># 低碳校园 # 资源循环</div>
+                            <p>不只是二手交易，更是学长学姐对校园环境的一份守护。让每一件书桌、每一盏台灯都能在学弟学妹手中延续生命。</p>
+                        </div>
+                        <div class="card_footer">
+                            <span class="step_num">01</span>
+                            <div class="footer_line"></div>
+                        </div>
+                    </div>
+
+                    <!-- 卡片 2：诚信交易 -->
+                    <div class="campus_card" data-tilt>
+                        <div class="card_stamp">SAFE</div>
+                        <div class="card_icon_box">
+                            <div class="icon_bg"></div>
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="card_text">
+                            <h3>诚信交易</h3>
+                            <div class="card_tag"># 实名认证 # 校友信任</div>
+                            <p>基于 .edu 邮箱的纯净圈子。告别社会平台的纷杂，在这里，每一份交易都建立在同窗之谊的信任基石之上。</p>
+                        </div>
+                        <div class="card_footer">
+                            <span class="step_num">02</span>
+                            <div class="footer_line"></div>
+                        </div>
+                    </div>
+
+                    <!-- 卡片 3：回忆延续 (建议增加一个凑成三个，视觉更稳) -->
+                    <div class="campus_card" data-tilt>
+                        <div class="card_stamp">LOVE</div>
+                        <div class="card_icon_box">
+                            <div class="icon_bg"></div>
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="card_text">
+                            <h3>回忆承载</h3>
+                            <div class="card_tag"># 毕业留念 # 爱心传递</div>
+                            <p>带不走的青春，寄托在物上。每一本书里的笔记，每一张手绘的明信片，都是校园记忆最温暖的流动。</p>
+                        </div>
+                        <div class="card_footer">
+                            <span class="step_num">03</span>
+                            <div class="footer_line"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 盒子 4：运行数据 -->
+
+        <section id="stats" class="stats_campus_board reveal">
+            <!-- 背景装饰：漂浮的纸飞机 -->
+            <div class="paper_airplane">
+                <i class="fas fa-paper-plane"></i>
+            </div>
+
+            <div class="container">
+                <div class="board_header">
+                    <h2 class="handwritten_title">基本概况</h2>
+                    <p>每一份数据，都是一个温暖的转手故事</p>
+                </div>
+
+                <div class="stats_polaroid_grid">
+                    <!-- 数据项 1：注册用户 -->
+                    <div class="stat_card polaroid" style="--rotate: -3deg;">
+                        <div class="card_inner">
+                            <div class="stat_icon"><i class="fas fa-users"></i></div>
+                            <div class="stat_value">
+                                <span class="counter" data-target="3200">0</span><small>+</small>
+                            </div>
+                            <p class="stat_label">入驻校友</p>
+                        </div>
+                    </div>
+
+                    <!-- 数据项 2：流转商品 -->
+                    <div class="stat_card polaroid" style="--rotate: 2deg;">
+                        <div class="card_inner">
+                            <div class="stat_icon"><i class="fas fa-box-open"></i></div>
+                            <div class="stat_value">
+                                <span class="counter" data-target="1500">0</span><small>件</small>
+                            </div>
+                            <p class="stat_label">闲置流转</p>
+                        </div>
+                    </div>
+
+                    <!-- 数据项 3：好评率 (带有动态圆环) -->
+                    <div class="stat_card polaroid" style="--rotate: -1deg;">
+                        <div class="card_inner">
+                            <div class="progress_box">
+                                <svg class="progress_svg" viewBox="0 0 100 100">
+                                    <circle class="bg" cx="50" cy="50" r="45"></circle>
+                                    <circle class="bar" cx="50" cy="50" r="45"></circle>
+                                </svg>
+                                <div class="stat_value percent">
+                                    <span class="counter" data-target="99">0</span><small>%</small>
+                                </div>
+                            </div>
+                            <p class="stat_label">校友称赞</p>
+                        </div>
+                    </div>
+
+                    <!-- 数据项 4：合作院校 -->
+                    <div class="stat_card polaroid" style="--rotate: 4deg;">
+                        <div class="card_inner">
+                            <div class="stat_icon"><i class="fas fa-university"></i></div>
+                            <div class="stat_value">
+                                <span class="counter" data-target="12">0</span><small>所</small>
+                            </div>
+                            <p class="stat_label">联结校园</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 底部手绘线条装饰 -->
+                <div class="chalk_line">
+                    <svg viewBox="0 0 500 20">
+                        <path d="M10,10 Q250,20 490,10" stroke="#0d9488" stroke-width="2" fill="none" class="path_draw">
+                        </path>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- 盒子 5：核心团队 -->
+
+        <section id="team" class="about_section team_campus_context reveal">
+            <div class="container">
+                <div class="section_header_center">
+                    <h2 class="main_title" style="text-align:center;">核心创作团队</h2>
+
+                    <a href="team_detail.html" class="mini_explore_tag">
+                        <span>探索详情</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <!-- <div class="title_under_line"><span></span></div> -->
+                    <p class="subtitle" style="text-align:center;">一群热爱校园文化的开发者与设计师</p>
+                </div>
+                <div class="team_id_grid">
+                    <!-- 成员 1：产品组 -->
+                    <div class="team_card_wrapper reveal">
+                        <div class="team_card_inner">
+                            <!-- 正面 -->
+                            <div class="card_face face_front">
+                                <div class="card_header">
+                                    <div class="school_logo">CAMPUS</div>
+                                    <div class="card_clip"></div> <!-- 模拟证件夹 -->
+                                </div>
+                                <div class="member_avatar_box">
+                                    <div class="avatar_frame">
+                                        <i class="fas fa-pencil-ruler"></i>
+                                    </div>
+                                    <div class="scan_line"></div> <!-- 扫描线动画 -->
+                                </div>
+                                <div class="member_info">
+                                    <h4>产品设计组</h4>
+                                    <span class="role_tag">UX/UI Design</span>
+                                </div>
+                                <div class="card_barcode"></div> <!-- 模拟条形码 -->
+                            </div>
+                            <!-- 背面 -->
+                            <div class="card_face face_back">
+                                <h5>核心职责</h5>
+                                <ul class="skill_list">
+                                    <li><i class="fas fa-check-circle"></i> 用户路径深度优化</li>
+                                    <li><i class="fas fa-check-circle"></i> 校园风视觉系统构建</li>
+                                    <li><i class="fas fa-check-circle"></i> 交互原型快速迭代</li>
+                                </ul>
+                                <p class="motto">"用设计连接每一份校园记忆"</p>
+                                <div class="card_stamp_verified">VERIFIED</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 成员 2：技术组 -->
+                    <div class="team_card_wrapper reveal">
+                        <div class="team_card_inner">
+                            <div class="card_face face_front">
+                                <div class="card_header">
+                                    <div class="school_logo">TECH</div>
+                                    <div class="card_clip"></div>
+                                </div>
+                                <div class="member_avatar_box">
+                                    <div class="avatar_frame">
+                                        <i class="fas fa-code"></i>
+                                    </div>
+                                    <div class="scan_line"></div>
+                                </div>
+                                <div class="member_info">
+                                    <h4>技术研发组</h4>
+                                    <span class="role_tag">Full-Stack Dev</span>
+                                </div>
+                                <div class="card_barcode"></div>
+                            </div>
+                            <div class="card_face face_back">
+                                <h5>技术栈</h5>
+                                <div class="tech_stack">
+                                    <span>React</span><span>Node.js</span><span>Python</span>
+                                </div>
+                                <p class="motto">"稳定驱动流转，代码改变校园"</p>
+                                <div class="card_stamp_verified">VERIFIED</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 成员 3：运营组 -->
+                    <div class="team_card_wrapper reveal">
+                        <div class="team_card_inner">
+                            <div class="card_face face_front">
+                                <div class="card_header">
+                                    <div class="school_logo">OPS</div>
+                                    <div class="card_clip"></div>
+                                </div>
+                                <div class="member_avatar_box">
+                                    <div class="avatar_frame">
+                                        <i class="fas fa-bullhorn"></i>
+                                    </div>
+                                    <div class="scan_line"></div>
+                                </div>
+                                <div class="member_info">
+                                    <h4>校园运营组</h4>
+                                    <span class="role_tag">Marketing</span>
+                                </div>
+                                <div class="card_barcode"></div>
+                            </div>
+                            <div class="card_face face_back">
+                                <h5>运营目标</h5>
+                                <ul class="skill_list">
+                                    <li><i class="fas fa-star"></i> 覆盖全校 12+ 院系</li>
+                                    <li><i class="fas fa-star"></i> 举办线下“跳蚤市场”</li>
+                                    <li><i class="fas fa-star"></i> 建立校友互助社群</li>
+                                </ul>
+                                <p class="motto">"让校友集市遍布每一个寝室楼"</p>
+                                <div class="card_stamp_verified">VERIFIED</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 发展历程 -->
+
+        <section id="history" class="fazhan_licheng_section reveal">
+            <div class="container licheng_container">
+                <div class="licheng_header">
+
+                    <h2 class="main_title">成长足迹</h2>
+                    <div class="title_decorate">Campus Growth Roadmap</div>
+                    <a href="history_detail.html" class="Lmini_explore_tag">
+                        <span>探索详情</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+
+                </div>
+
+                <div class="shijian_zhou_box">
+                    <!-- 动态进度线 -->
+                    <div class="main_line">
+                        <div class="active_line" id="licheng_progress"></div>
+                    </div>
+
+                    <!-- 节点 1 -->
+                    <div class="licheng_item reveal" data-index="0">
+                        <div class="yuan_dian"></div>
+                        <div class="licheng_content left">
+                            <div class="shijian_nian">2025.06</div>
+                            <div class="licheng_card">
+                                <i class="fas fa-flag"></i>
+                                <h4>团队启航</h4>
+                                <p>校友集市创业团队正式组建，核心成员来自兰州大学信息科学与工程学院。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 节点 2 -->
+                    <div class="licheng_item reveal" data-index="1">
+                        <div class="yuan_dian"></div>
+                        <div class="licheng_content right">
+                            <div class="shijian_nian">2025.10</div>
+                            <div class="licheng_card">
+                                <i class="fas fa-rocket"></i>
+                                <h4>小范围试点</h4>
+                                <p>平台内测版本在 3 所重点高校上线，单日访问量突破 1,000 次。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 节点 3 -->
+                    <div class="licheng_item reveal" data-index="2">
+                        <div class="yuan_dian"></div>
+                        <div class="licheng_content left">
+                            <div class="shijian_nian">2026.01</div>
+                            <div class="licheng_card">
+                                <i class="fas fa-trophy"></i>
+                                <h4>破万里程碑</h4>
+                                <p>注册用户突破 10,000 人，获得“校园优秀创业项目”称号。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 使用规则-->
+        <section id="rules" class="about_section container reveal guize_section">
+            <div class="shiyong_guize_card reveal">
+                <!-- 背景装饰：流动的线条 -->
+                <div class="card_bg_animation"></div>
+
+                <div class="guize_content">
+                    <!-- 左侧图标：由盾牌改为带勾的规章感图标 -->
+                    <div class="rule_icon_box">
+                        <i class="fas fa-clipboard-check main_rule_icon"></i>
+                        <div class="rule_pulse"></div> <!-- 呼吸光圈 -->
+                    </div>
+
+                    <div class="sec_info">
+                        <div class="status_badge_green">
+                            <span class="dot"></span> 准则已生效 (Rules Active)
+                        </div>
+                        <div class="rule_header_row">
+                            <h3>校园流转·拾光守则</h3>
+                            <a href="rules_detail.html" class="Rmini_explore_tag">
+                                <span>探索详情</span>
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                        <div class="rule_list_mini">
+                            <p><strong>1. 身份鉴真：</strong> 强制使用学校邮箱 <span class="highlight_edu">(.edu.cn)</span>
+                                认证，确保每一位拾光者皆为校友。</p>
+                            <p><strong>2. 诚实描述：</strong> 循旧物之迹，请如实记录物品瑕疵，不负校友信任。</p>
+                            <p><strong>3. 礼貌拾取：</strong> 校园流转重在情谊，请保持礼貌沟通，私下交易请选择校内公共区域。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 扫描光束效果 (保留，寓意规则的公正与透明) -->
+                <div class="scan_beam"></div>
+            </div>
+        </section>
+
+        <!-- 常见问题 FAQ -->
+
+        <section id="faq" class="about_section container reveal faq_campus_vibe">
+            <div class="faq_title_area">
+            
+                    <h2 class="main_title">校友答疑室</h2>
+                    <div class="title_tag">Q&A Session</div>
+                    <a href="faq_detail.html" class="Fmini_explore_tag">
+                        <span>探索详情</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+             
+
+                <p class="faq_motto">“每一件闲置，都是一段不曾褪色的校园记忆。”</p>
+            </div>
+
+            <div class="wenti_list">
+                <!-- 问题 1 -->
+                <div class="wenti_item">
+                    <div class="wenti_header">
+                        <span class="q_icon">Q</span>
+                        <h3>如何发布我的闲置物品？</h3>
+                        <div class="plus_minus_icon"></div>
+                    </div>
+                    <div class="daan_box">
+                        <div class="daan_inner">
+                            <p>登录后进入“用户中心”，点击“发布商品”，上传照片并填写描述即可。建议多拍几张寝室光线下的实物图，成交率更高哦！</p>
+                            <div class="daan_decorate"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 问题 2 -->
+                <div class="wenti_item">
+                    <div class="wenti_header">
+                        <span class="q_icon">Q</span>
+                        <h3>交易过程中产生纠纷怎么办？</h3>
+                        <div class="plus_minus_icon"></div>
+                    </div>
+                    <div class="daan_box">
+                        <div class="daan_inner">
+                            <p>您可以联系校园客服进行申诉，我们会核实身份并调解。校友间交易贵在诚信，必要时我们会限制对方账户并通告所属院系。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 问题 3 -->
+                <div class="wenti_item">
+                    <div class="wenti_header">
+                        <span class="q_icon">Q</span>
+                        <h3>忘记了校园邮箱密码怎么注册？</h3>
+                        <div class="plus_minus_icon"></div>
+                    </div>
+                    <div class="daan_box">
+                        <div class="daan_inner">
+                            <p>别担心，你可以提交学生证照片进行人工实名审核。点击注册页的“手动审核”入口即可，审核时间通常为 1 个工作日内。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 问题 4 -->
+                <div class="wenti_item">
+                    <div class="wenti_header">
+                        <span class="q_icon">Q</span>
+                        <h3>物品卖不出去可以申请推广吗？</h3>
+                        <div class="plus_minus_icon"></div>
+                    </div>
+                    <div class="daan_box">
+                        <div class="daan_inner">
+                            <p>毕业季期间，平台会根据分类自动轮换展示最新物品。你也可以参与“闪购”活动，或者在发布时带上 #急售 标签，我们会优先推送。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 底部 -->
+    <footer class="footer_area">
+        <div class="footer_wrapper">
+            <div class="bottom_bar">
+                <p>&copy; 2026 Campus Market | 校园毕业物品流转平台团队 | <a href="#">服务条款</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 外部脚本引用 -->
+    <script src="js/about.js"></script>
+</body>
+
+</html>

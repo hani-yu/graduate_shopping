@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品分类 - 校园毕业物品流转平台</title>
+    <script src="https://kit.fontawesome.com/0ad2b99521.js" crossorigin="anonymous" async></script>
+    <link rel="stylesheet" href="css/style.min.css"> <!-- 引用全局样式 -->
+    <link rel="stylesheet" href="css/categories.css"> <!-- 引用本页专用样式 -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <!-- 1. 顶部导航栏 (保持与首页一致) -->
+    <nav class="daohang">
+        <div class="daohang_wrapper">
+            <ul class="daohang_list">
+                <li class="daohang_items"><a href="index.html">首页</a></li>
+                <li class="daohang_items"><a href="about.html">平台概况</a></li>
+                <li class="daohang_items dropdown active">
+                    <a href="categories.html">商品分类</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="categories.html#beauty">美妆护肤</a></li>
+                        <li><a href="categories.html#clothes">服装鞋包</a></li>
+                        <li><a href="categories.html#books">教材书籍</a></li>
+                        <li><a href="categories.html#electronics">电子产品</a></li>
+                        <li><a href="categories.html#furniture">宿舍家具</a></li>
+                    </ul>
+                </li>
+                <li class="daohang_items"><a href="guide.html">流转锦囊</a></li>
+                <li class="daohang_items"><a href="events.html">活动专区</a></li>
+                <li class="daohang_items"><a href="user.html">用户中心</a></li>
+            </ul>
+            <div class="nav_auth">
+                <a href="signin.html" class="btn_nav">登录</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner  -->
+
+    <header class="cat_banner">
+        <canvas id="catCanvas"></canvas>
+
+        <!-- 背景装饰：漂浮的分类图标 -->
+        <div class="cat_floating_elements">
+            <i class="fas fa-book cat_icon_1"></i> <!-- 书籍资料 -->
+            <i class="fas fa-laptop cat_icon_2"></i> <!-- 电子数码 -->
+            <i class="fas fa-bicycle cat_icon_3"></i> <!-- 运动代步 -->
+            <i class="fas fa-lamp cat_icon_4"></i> <!-- 生活日用 -->
+        </div>
+
+        <div class="cat_banner_content" id="catScene">
+            <div class="cat_text_group" data-depth="0.2">
+                <!-- 标题：博物感 -->
+                <h1 class="elegant_title">
+                    商品分类
+                    <span class="shiguang_seal">分类</span>
+                </h1>
+                <div class="elegant_line"></div>
+
+                <!-- 文雅副标题：强调分类寻找的意境 -->
+                <p class="elegant_subtitle">
+                    万物循迹，续往昔之温；<br>于方寸分类间，重逢每一段校园拾光。
+                </p>
+
+                <!-- 分类页特有的搜索引导 -->
+                <div class="cat_search_wrap">
+                    <input type="text" placeholder="搜寻某段记忆中的物件..." class="cat_search_input">
+                    <button class="cat_search_btn">
+                        <i class="fas fa-search"></i> 寻觅
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!--  底部波浪线 -->
+        <div class="banner_wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C0,0,31.83,14.28,64,27.1,126.31,52,187.31,68,250.31,68c31.11,0,32.25-10.15,71.08-11.56Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
+
+        <!-- 滚动提示 -->
+        <div class="scroll_down_wrapper">
+            <div class="mouse_icon">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main_container">
+        <!-- 面包屑导航  -->
+        <nav class="breadcrumb">
+            <a href="index.html">首页</a> &gt; <span>商品分类</span>
+        </nav>
+
+        <!--  搜索与热门标签 -->
+        <section class="search_module">
+            <div class="search_bar_wrap">
+                <input type="text" placeholder="搜搜看：考研资料、人体工学椅...">
+                <button class="btn_search"><i class="fas fa-search"></i> 搜索</button>
+            </div>
+            <div class="hot_tags">
+                <span>热门搜索：</span>
+                <a href="#">高数课本</a>
+                <a href="#">显示器</a>
+                <a href="#">自行车</a>
+                <a href="#">宿舍小锅</a>
+            </div>
+        </section>
+        <section class="category_quick">
+            <div class="quick_item" data-cat="books">
+                <i class="fas fa-book"></i>
+                <span>教材书籍</span>
+            </div>
+            <div class="quick_item" data-cat="electronics">
+                <i class="fas fa-laptop"></i>
+                <span>电子产品</span>
+            </div>
+            <div class="quick_item" data-cat="clothes">
+                <i class="fas fa-tshirt"></i>
+                <span>服装鞋包</span>
+            </div>
+            <div class="quick_item" data-cat="furniture">
+                <i class="fas fa-couch"></i>
+                <span>宿舍家具</span>
+            </div>
+            <div class="quick_item" data-cat="beauty">
+                <i class="fas fa-air-freshener"></i>
+                <span>美妆护肤</span>
+            </div>
+        </section>
+
+        <div class="category_layout">
+            <!-- 左侧分类筛选-->
+            <aside class="sidebar">
+                <div class="filter_box">
+                    <h3>物品类别</h3>
+                    <ul class="filter_list" id="categoryFilter">
+                        <li class="active" data-cat="all">全部物品</li>
+                        <li data-cat="books">教材书籍</li>
+                        <li data-cat="electronics">电子产品</li>
+                        <li data-cat="clothes">服装鞋包</li>
+                        <li data-cat="furniture">宿舍家具</li>
+                        <li data-cat="beauty">美妆护肤</li>
+                        <li data-cat="other">其它杂物</li>
+                    </ul>
+                </div>
+
+                <!--  热门推荐位  -->
+                <div class="sidebar_ad animate__animated animate__pulse animate__infinite">
+                    <h4>毕业季特惠</h4>
+                    <p>考研资料1折起</p>
+                    <a href="#">立即查看</a>
+                </div>
+
+                <section class="trade_feed sidebar_trade">
+                    <h3>校园实时成交</h3>
+                    <ul>
+                        <li>计算机学院 · 显示器 ¥320 已成交</li>
+                        <li>外国语学院 · 四六级资料 ¥15 已成交</li>
+                        <li>机械学院 · 电风扇 ¥40 已成交</li>
+                    </ul>
+                </section>
+
+            </aside>
+
+            <!-- 右侧主内容 -->
+            <div class="content_area">
+                <!-- 排序筛选工具栏 -->
+                <div class="sort_bar">
+                    <span class="total_count">共找到 <strong id="itemCount">8</strong> 件物品</span>
+                    <div class="sort_options">
+                        <span class="active">综合排序</span>
+                        <span>最新发布</span>
+                        <span>价格从低到高</span>
+                    </div>
+                </div>
+
+                <!-- 7. 商品展示网格-->
+              
+                <div class="product_grid" id="categoryGrid">
+                    <!-- 类别 1: 计算机专业 -->
+                    <div class="product_item" data-category="books">
+                        <div class="item_seal">热门</div>
+                        <div class="img_holder">
+                            <!-- <i class="fas fa-laptop-code"></i> -->
+                            <img src="images/jisuanji.jpg">
+                            <div class="senior_note">
+                                <p>“从C++到算法导论，这里沉淀了熬夜秃头的智慧。”</p>
+                                <!-- <span class="btn_view">进入频道</span> -->
+                                <a href="network_detail.html" class="btn_view">进入频道</a>
+
+
+                            </div>
+                        </div>
+                        <div class="p_info">
+                            <h4>计算机专业教材</h4>
+                            <div class="price_row">
+                                <p class="price">128 <span>件商品</span></p>
+                                <span class="stock_tag">考研重点</span>
+                            </div>
+                            <span class="cat_tag">教材书籍</span>
+                        </div>
+                    </div>
+
+                    <!-- 类别 2: 医学专业 -->
+                    <div class="product_item" data-category="books">
+                        <div class="item_seal">严谨</div>
+                        <div class="img_holder">
+                            <!-- <i class="fas fa-microscope"></i> -->
+                            <img src="images/yixuesheng.jpg">
+                            <div class="senior_note">
+                                <p>“医学书山压力大？学长学姐的划线笔记助你一臂之力。”</p>
+                                <!-- <span class="btn_view">进入频道</span> -->
+                                <a href="clothes_detail.html" class="btn_view">进入频道</a>
+
+                            </div>
+                        </div>
+                        <div class="p_info">
+                            <h4>医学生必备专业书</h4>
+                            <div class="price_row">
+                                <p class="price">85 <span>件商品</span></p>
+                                <span class="stock_tag">带笔记</span>
+                            </div>
+                            <span class="cat_tag">教材书籍</span>
+                        </div>
+                    </div>
+
+                    <!-- 类别 3: 数码外设 -->
+                    <div class="product_item" data-category="electronics">
+                        <div class="item_seal">极客</div>
+                        <div class="img_holder">
+                            <!-- <i class="fas fa-headset"></i> -->
+                            <img src="images/jianpan.jpg">
+                            <div class="senior_note">
+                                <p>“机械键盘与降噪耳机，是宿舍里最后的温柔屏障。”</p>
+                                <!-- <span class="btn_view">进入频道</span> -->
+                                <a href="jike_detail.html" class="btn_view">进入频道</a>
+
+                            </div>
+                        </div>
+                        <div class="p_info">
+                            <h4>数码极客外设</h4>
+                            <div class="price_row">
+                                <p class="price">¥15 <span>起</span></p>
+                                <span class="stock_tag">低价捡漏</span>
+                            </div>
+                            <span class="cat_tag">电子产品</span>
+                        </div>
+                    </div>
+
+                    <!-- 类别 4: 女装/配饰 -->
+                    <div class="product_item" data-category="clothes">
+                        <div class="item_seal">拾光</div>
+                        <div class="img_holder">
+                            <!-- <i class="fas fa-tshirt"></i> -->
+                            <img src="images/fengyi.png">
+                            <div class="senior_note">
+                                <p>“不只是衣服，更是那些在操场散步、图书馆奋斗的青春。”</p>
+                                <!-- <span class="btn_view">进入频道</span> -->
+                                <a href="clothes_detail.html" class="btn_view">进入频道</a>
+
+                            </div>
+                        </div>
+                        <div class="p_info">
+                            <h4>女生穿搭/配饰</h4>
+                            <div class="price_row">
+                                <p class="price">210 <span>件商品</span></p>
+                                <span class="stock_tag">更新极快</span>
+                            </div>
+                            <span class="cat_tag">服装鞋包</span>
+                        </div>
+                    </div>
+
+                    <!-- 类别 5: 宿舍收纳 -->
+                    <div class="product_item" data-category="furniture">
+                        <div class="item_seal">推荐</div>
+                        <div class="img_holder">
+                            <!-- <i class="fas fa-boxes"></i> -->
+                            <img src="images/shounahe.png">
+                            <div class="senior_note">
+                                <p>“把四人间住出家的感觉，全靠这些收纳神器。”</p>
+                                <!-- <span class="btn_view">进入频道</span> -->
+                                <a href="dorm_detail.html" class="btn_view">进入频道</a>
+
+                            </div>
+                        </div>
+                        <div class="p_info">
+                            <h4>宿舍收纳/生活件</h4>
+                            <div class="price_row">
+                                <p class="price">¥5 <span>起</span></p>
+                                <span class="stock_tag">实用主义</span>
+                            </div>
+                            <span class="cat_tag">宿舍家具</span>
+                        </div>
+                    </div>
+
+                    <!-- 类别 6: 经管/外语 -->
+                    <div class="product_item" data-category="books">
+                        <div class="item_seal">拾光</div>
+                        <div class="img_holder">
+                            <!-- <i class="fas fa-chart-line"></i> -->
+                            <img src="images/jingguan.jpg">
+                            <div class="senior_note">
+                                <p>“雅思托福、经管名著，陪你走向更广阔的世界。”</p>
+                                <span class="btn_view">进入频道</span>
+                            </div>
+                        </div>
+                        <div class="p_info">
+                            <h4>经管外语教材</h4>
+                            <div class="price_row">
+                                <p class="price">56 <span>件商品</span></p>
+                                <span class="stock_tag">全英教材</span>
+                            </div>
+                            <span class="cat_tag">教材书籍</span>
+                        </div>
+                    </div>
+                    <div class="product_item" data-category="beauty">
+                        <!-- 频道封印 -->
+                        <div class="item_seal">美妆</div>
+
+                        <!-- 图片区域 -->
+                        <div class="img_holder">
+                        
+                            <!-- <i class="fas fa-pen-nib"></i> -->
+                            <img src="images/kouhong.png">
+
+                            <!-- 悬浮描述 -->
+                            <div class="senior_note">
+                                <p>“精选口红、彩妆新品，让你每一天都美丽动人。”</p>
+                                <a href="beauty_content.html" class="btn_view">进入频道</a>
+                            </div>
+                        </div>
+
+                        <!-- 基本信息 -->
+                        <div class="p_info">
+                            <h4>热门口红推荐</h4>
+
+                            <div class="price_row">
+                                <p class="price">120 <span>件商品</span></p>
+                                <span class="stock_tag">彩妆精选</span>
+                            </div>
+
+                            <span class="cat_tag">美妆护肤</span>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- 分页导航-->
+                <div class="pagination">
+                    <a href="#" class="page_btn">上一页</a>
+                    <a href="#" class="page_num active">1</a>
+                    <a href="#" class="page_num">2</a>
+                    <a href="#" class="page_num">3</a>
+                    <a href="#" class="page_btn">下一页</a>
+                </div>
+
+
+
+                <!-- 交易指南 -->
+                <section class="guide_box">
+                    <h3><i class="fas fa-shield-alt"></i> 安全交易指南</h3>
+                    <ul>
+                        <li>建议选择食堂、图书馆等公共场所进行线下交易。</li>
+                        <li>务必当面检查物品完好性，确认无误后再付款。</li>
+                        <li>严禁发布非法、违规或侵权物品。</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+        <section class="category_tips full_width animate__animated animate__fadeInUp">
+            <h3>分类选购建议</h3>
+            <p>毕业季是物品流转最活跃的时期，不同品类的选购重点也不同：</p>
+            <ul>
+                <li><strong>教材书籍：</strong>注意版本与是否有笔记。</li>
+                <li><strong>电子产品：</strong>建议现场测试，确认无暗病。</li>
+                <li><strong>家具：</strong>提前确认尺寸是否适合宿舍。</li>
+            </ul>
+        </section>
+    </main>
+
+
+    <footer class="footer_area">
+        <div class="footer_wrapper">
+            <div class="bottom_bar">
+                <p>&copy; 2026 Campus Market | 校园毕业物品流转平台团队 | <a href="#">服务条款</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/categories.js"></script>
+</body>
+
+</html>

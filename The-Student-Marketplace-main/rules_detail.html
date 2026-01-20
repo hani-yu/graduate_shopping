@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>拾光法典 · 流转公约 | 校友集市</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/archive_detail.css">
+    <link rel="stylesheet" href="css/rules_detail.css"> <!-- 本页专属 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://kit.fontawesome.com/0ad2b99521.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body class="rules_page">
+
+    <nav class="daohang">
+        <div class="daohang_wrapper">
+            <ul class="daohang_list">
+                <li class="daohang_items"><a href="index.html">首页</a></li>
+                <li class="daohang_items active"><a href="about.html">平台概况</a></li>
+                <li class="daohang_items"><a href="categories.html">商品分类</a></li>
+                <li class="daohang_items"><a href="guide.html">流转锦囊</a></li>
+                <li class="daohang_items"><a href="events.html">活动专区</a></li>
+                <li class="daohang_items"><a href="user.html">用户中心</a></li>
+            </ul>
+            <div class="nav_auth"><a href="signin.html" class="btn_nav">登录</a></div>
+        </div>
+    </nav>
+
+
+    <header class="mission_hero">
+        <div class="hero_overlay"></div>
+        <div class="hero_content animate__animated animate__fadeIn">
+            <span class="en_tag">CAMPUS CONVENTION</span>
+            <h1 class="elegant_title">拾光法典 <span class="mission_seal">公约</span></h1>
+            <div class="elegant_line"></div>
+            <p class="elegant_subtitle">立规明矩 · 以诚为纲 · 共建校园诚信流转生态</p>
+        </div>
+        <div class="banner_wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C0,0,31.83,14.28,64,27.1,126.31,52,187.31,68,250.31,68c31.11,0,32.25-10.15,71.08-11.56Z"
+                    fill="#f9fbfa"></path>
+            </svg>
+        </div>
+    </header>
+
+    <main class="main_container">
+
+        <section id="intro_section" class="section_box intro_new">
+            <div class="container">
+                <div class="intro_baozhuang" id="introCard">
+                    <!-- 装饰性大首字 -->
+                    <div class="shou_zi">规</div>
+                    <div class="intro_content">
+                        <h2 class="title_hu animate__animated" id="introTitle">无规矩不成方圆，诚信是校友集市的唯一通行证</h2>
+                        <div class="mei_xian animate__animated" id="introLine"></div>
+                        <p class="intro_p animate__animated" id="introText">
+                            拾光流转，信义为先。本公约旨在为所有校友提供一个公平、安全、透明的物品流转环境。每一笔交易，不仅是对物品的传递，更是对校园诚信文化的守护与传承。
+                        </p>
+                        <div class="rules_yin animate__animated" id="introYin">立规明矩 · 以诚为纲</div>
+                    </div>
+                    <!-- 卷轴展开覆盖层 -->
+                    <div class="scroll_cover" id="scrollCover"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="rules_matrix_section" class="section_box rules_matrix_area">
+            <div class="container">
+                <!-- 模块标题 -->
+                <div class="section_title_v2">
+                    <span class="en_title">ACCESS RULES</span>
+                    <h2>准入规则矩阵</h2>
+                    <div class="title_decoration"><span class="dot"></span><span class="line"></span></div>
+                    <p class="section_desc">三步认证，保障流转环境的安全与纯净</p>
+                </div>
+
+                <div class="rules_grid">
+                    <!-- 规则卡片 1 -->
+                    <div class="rule_card animate__animated" data-card="1">
+                        <div class="rule_icon_wrap">
+                            <div class="rule_number">01</div>
+                            <i class="fas fa-user-shield rule_icon"></i>
+                        </div>
+                        <h3>身份认证</h3>
+                        <div class="rule_line"></div>
+                        <ul class="rule_list">
+                            <li><i class="fas fa-check-circle"></i> 校园邮箱(.edu)验证</li>
+                            <li><i class="fas fa-check-circle"></i> 学生证/一卡通实名</li>
+                            <li><i class="fas fa-check-circle"></i> 院系信息登记</li>
+                            <li><i class="fas fa-check-circle"></i> 手机号绑定验证</li>
+                        </ul>
+                        <div class="rule_tip">完成认证享优先推荐权</div>
+                    </div>
+
+                    <!-- 规则卡片 2 -->
+                    <div class="rule_card animate__animated" data-card="2">
+                        <div class="rule_icon_wrap">
+                            <div class="rule_number">02</div>
+                            <i class="fas fa-box-open rule_icon"></i>
+                        </div>
+                        <h3>商品要求</h3>
+                        <div class="rule_line"></div>
+                        <ul class="rule_list">
+                            <li><i class="fas fa-check-circle"></i> 实物照片 ≥ 3张</li>
+                            <li><i class="fas fa-check-circle"></i> 成色描述真实客观</li>
+                            <li><i class="fas fa-check-circle"></i> 价格标注清晰合理</li>
+                            <li><i class="fas fa-check-circle"></i> 禁售违规违禁物品</li>
+                        </ul>
+                        <div class="rule_tip">AI辅助审核，确保合规</div>
+                    </div>
+
+                    <!-- 规则卡片 3 -->
+                    <div class="rule_card animate__animated" data-card="3">
+                        <div class="rule_icon_wrap">
+                            <div class="rule_number">03</div>
+                            <i class="fas fa-comments rule_icon"></i>
+                        </div>
+                        <h3>沟通礼仪</h3>
+                        <div class="rule_line"></div>
+                        <ul class="rule_list">
+                            <li><i class="fas fa-check-circle"></i> 礼貌用语，尊重彼此</li>
+                            <li><i class="fas fa-check-circle"></i> 及时回复消息(24h内)</li>
+                            <li><i class="fas fa-check-circle"></i> 明确交易时间地点</li>
+                            <li><i class="fas fa-check-circle"></i> 禁发广告、骚扰信息</li>
+                        </ul>
+                        <div class="rule_tip">良好沟通提升成交率</div>
+                    </div>
+                </div>
+
+                <div class="rules_progress_container">
+                    <div class="rules_progress_bar" id="rulesProgress">
+                        <div class="rules_progress_fill"></div>
+                    </div>
+                    <div class="rules_progress_text">认证完成度: <span id="progressPercent">70%</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="penalty_section" class="section_box penalty_area">
+            <div class="container">
+                <!-- 模块标题 -->
+                <div class="section_title_v2">
+                    <span class="en_title">PENALTY SYSTEM</span>
+                    <h2>违规惩戒机制</h2>
+                    <div class="title_decoration"><span class="dot"></span><span class="line"></span></div>
+                </div>
+
+                <div class="penalty_split">
+                    <!-- 左侧: 黑名单机制 -->
+                    <div class="penalty_left">
+                        <div class="penalty_card penalty_red">
+                            <div class="penalty_header">
+                                <i class="fas fa-ban penalty_icon"></i>
+                                <h3>黑名单机制</h3>
+                            </div>
+                            <div class="penalty_content">
+                                <div class="penalty_levels">
+                                    <div class="penalty_level" data-level="1">
+                                        <div class="level_circle">1</div>
+                                        <h4>轻微违规</h4>
+                                        <p>虚假描述、沟通失礼</p>
+                                        <span class="level_penalty">警告 + 信用分-10</span>
+                                    </div>
+                                    <div class="penalty_level" data-level="2">
+                                        <div class="level_circle">2</div>
+                                        <h4>中度违规</h4>
+                                        <p>恶意取消交易、失联</p>
+                                        <span class="level_penalty">禁言7天 + 信用分-30</span>
+                                    </div>
+                                    <div class="penalty_level" data-level="3">
+                                        <div class="level_circle">3</div>
+                                        <h4>严重违规</h4>
+                                        <p>欺诈、售假、人身攻击</p>
+                                        <span class="level_penalty">永久封禁 + 公示</span>
+                                    </div>
+                                </div>
+                                <div class="penalty_note">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    累计信用分低于60分将自动进入黑名单
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 右侧: 申诉渠道 -->
+                    <div class="penalty_right">
+                        <div class="penalty_card penalty_green">
+                            <div class="penalty_header">
+                                <i class="fas fa-handshake penalty_icon"></i>
+                                <h3>申诉与救济</h3>
+                            </div>
+                            <div class="penalty_content">
+                                <div class="appeal_steps">
+                                    <div class="appeal_step">
+                                        <div class="step_icon"><i class="fas fa-file-alt"></i></div>
+                                        <h4>提交申诉材料</h4>
+                                        <p>在处罚后3天内提交相关证据</p>
+                                    </div>
+                                    <div class="appeal_step">
+                                        <div class="step_icon"><i class="fas fa-users"></i></div>
+                                        <h4>仲裁委员会审核</h4>
+                                        <p>由校团委、学生会代表组成</p>
+                                    </div>
+                                    <div class="appeal_step">
+                                        <div class="step_icon"><i class="fas fa-balance-scale"></i></div>
+                                        <h4>公布处理结果</h4>
+                                        <p>7个工作日内反馈最终裁定</p>
+                                    </div>
+                                </div>
+                                <div class="appeal_note">
+                                    <i class="fas fa-life-ring"></i>
+                                    申诉邮箱: appeal@campusmarket.edu
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="safety_section" class="anquan_mianjiao_qu">
+            <div class="neirong_kuang">
+
+                <!-- 标题 -->
+                <div class="biaoti_qu">
+                    <span class="yingwen_biaoti">SAFETY GUIDE</span>
+                    <h2>面交安全指南</h2>
+                    <div class="biaoti_xian">
+                        <span class="dian"></span><span class="xian"></span>
+                    </div>
+                    <p class="biaoti_shuoming">安全第一，推荐在校内公共区域进行交易</p>
+                </div>
+
+                <div class="anquan_shuanglie">
+
+                    <!-- 左：地图区域 -->
+                    <div class="zuo_mianjiao">
+                        <div class="ditu_kuang">
+
+                            <div class="xiaoYuan_ditu">
+                                <!-- 点位 -->
+                                <div class="ditu_dian" style="top:30%;left:20%;" data-name="图书馆大堂">
+                                    <span class="dian_shiwu"></span>
+                                    <span class="dian_biaoqian">图书馆大堂</span>
+                                </div>
+
+                                <div class="ditu_dian" style="top:50%;left:55%;" data-name="学生活动中心">
+                                    <span class="dian_shiwu"></span>
+                                    <span class="dian_biaoqian">学生活动中心</span>
+                                </div>
+
+                                <div class="ditu_dian" style="top:70%;left:32%;" data-name="食堂入口">
+                                    <span class="dian_shiwu"></span>
+                                    <span class="dian_biaoqian">食堂入口</span>
+                                </div>
+
+                                <div class="ditu_dian" style="top:40%;left:75%;" data-name="校门保安亭">
+                                    <span class="dian_shiwu"></span>
+                                    <span class="dian_biaoqian">校门保安亭</span>
+                                </div>
+                            </div>
+
+                            <div class="mianjiao_tishi">
+                                <h4><i class="fas fa-map-marker-alt"></i> 推荐校内安全面交点</h4>
+                                <ul>
+                                    <li>图书馆大堂（监控覆盖）</li>
+                                    <li>学生活动中心一楼</li>
+                                    <li>食堂入口处（白天）</li>
+                                    <li>校门保安亭旁</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 右：验货流程 -->
+                    <div class="you_mianjiao">
+                        <div class="yanhuo_ka">
+                            <h3><i class="fas fa-clipboard-check"></i> 验货检查清单</h3>
+
+                            <div class="jinDu_tiao">
+                                <div class="jinDu_nei"></div>
+                            </div>
+
+                            <div class="yanhuo_liebiao">
+                                <div class="yanhuo_xiang" data-step="1">
+                                    <div class="yanhuo_tubiao"><i class="fas fa-eye"></i></div>
+                                    <div>
+                                        <h4>外观检查</h4>
+                                        <p>核对照片一致性，检查破损划痕</p>
+                                    </div>
+                                    <div class="yanhuo_zhuangtai"></div>
+                                </div>
+
+                                <div class="yanhuo_xiang" data-step="2">
+                                    <div class="yanhuo_tubiao"><i class="fas fa-power-off"></i></div>
+                                    <div>
+                                        <h4>功能测试</h4>
+                                        <p>电子产品开机，功能正常</p>
+                                    </div>
+                                    <div class="yanhuo_zhuangtai"></div>
+                                </div>
+
+                                <div class="yanhuo_xiang" data-step="3">
+                                    <div class="yanhuo_tubiao"><i class="fas fa-box"></i></div>
+                                    <div>
+                                        <h4>配件确认</h4>
+                                        <p>说明书、充电器等是否齐全</p>
+                                    </div>
+                                    <div class="yanhuo_zhuangtai"></div>
+                                </div>
+
+                                <div class="yanhuo_xiang" data-step="4">
+                                    <div class="yanhuo_tubiao"><i class="fas fa-handshake"></i></div>
+                                    <div>
+                                        <h4>确认交易</h4>
+                                        <p>当面交易并保留记录</p>
+                                    </div>
+                                    <div class="yanhuo_zhuangtai"></div>
+                                </div>
+                            </div>
+
+                            <button id="yanhuoBtn" class="yanhuo_anniu">开始模拟验货流程</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section id="steps_section" class="section_box steps_area">
+            <div class="container">
+                <!-- 模块标题 -->
+                <div class="section_title_v2">
+                    <span class="en_title">STEP BY STEP</span>
+                    <h2>流转使用步骤</h2>
+                    <div class="title_decoration"><span class="dot"></span><span class="line"></span></div>
+                    <p class="section_desc">从发布到成交，手把手教你成为合格拾光者</p>
+                </div>
+
+                <!-- 角色切换 -->
+                <div class="role_switch">
+                    <div class="switch_tabs">
+                        <button class="role_tab active" data-role="seller">
+                            <i class="fas fa-store"></i>
+                            <span>卖家流程</span>
+                        </button>
+                        <button class="role_tab" data-role="buyer">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>买家流程</span>
+                        </button>
+                    </div>
+                    <div class="role_hint">
+                        <i class="fas fa-info-circle"></i>
+                        选择角色查看对应的流转步骤
+                    </div>
+                </div>
+
+                <!-- 卖家流程 -->
+                <div class="steps_container active" id="sellerSteps">
+                    <div class="steps_timeline">
+                        <div class="traction_line"></div> 
+                        <!-- 步骤1 -->
+                        <div class="step_item" data-step="1">
+                            <div class="step_marker">
+                                <div class="step_number">1</div>
+                                <div class="step_connector"></div>
+                            </div>
+                            <div class="step_content">
+                                <div class="step_icon">
+                                    <i class="fas fa-camera"></i>
+                                </div>
+                                <h3>拍照上传</h3>
+                                <div class="step_line"></div>
+                                <p>拍摄至少3张不同角度的实物照片，确保光线充足、细节清晰</p>
+                                <div class="step_tips">
+                                    <span class="step_tip"><i class="fas fa-check"></i> 背景整洁</span>
+                                    <span class="step_tip"><i class="fas fa-check"></i> 无过度美化</span>
+                                    <span class="step_tip"><i class="fas fa-check"></i> 展示瑕疵</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 步骤2 -->
+                        <div class="step_item" data-step="2">
+                            <div class="step_marker">
+                                <div class="step_number">2</div>
+                                <div class="step_connector"></div>
+                            </div>
+                            <div class="step_content">
+                                <div class="step_icon">
+                                    <i class="fas fa-edit"></i>
+                                </div>
+                                <h3>填写描述</h3>
+                                <div class="step_line"></div>
+                                <p>如实描述商品成色、功能、使用时长，合理定价并选择正确分类</p>
+                                <div class="step_tips">
+                                    <span class="step_tip"><i class="fas fa-check"></i> 成色标注准确</span>
+                                    <span class="step_tip"><i class="fas fa-check"></i> 功能说明详细</span>
+                                    <span class="step_tip"><i class="fas fa-check"></i> 价格参考市场</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 步骤3 -->
+                        <div class="step_item" data-step="3">
+                            <div class="step_marker">
+                                <div class="step_number">3</div>
+                                <div class="step_connector"></div>
+                            </div>
+                            <div class="step_content">
+                                <div class="step_icon">
+                                    <i class="fas fa-bell"></i>
+                                </div>
+                                <h3>等待咨询</h3>
+                                <div class="step_line"></div>
+                                <p>商品发布后，及时回复买家咨询，礼貌沟通并回答相关问题</p>
+                                <div class="step_tips">
+                                    <span class="step_tip"><i class="fas fa-check"></i> 24小时内回复</span>
+                                    <span class="step_tip"><i class="fas fa-check"></i> 提供更多照片</span>
+                                    <span class="step_tip"><i class="fas fa-check"></i> 明确交易时间</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 步骤4 -->
+                        <div class="step_item" data-step="4">
+                            <div class="step_marker">
+                                <div class="step_number">4</div>
+                                <div class="step_connector"></div>
+                            </div>
+                            <div class="step_content">
+                                <div class="step_icon">
+                                    <i class="fas fa-handshake"></i>
+                                </div>
+                                <h3>确认交易</h3>
+                                <div class="step_line"></div>
+                                <p>约定校内安全地点面交，当面验货、收款，完成平台确认</p>
+                                <div class="step_tips">
+                                    <span class="step_tip"><i class="fas fa-check"></i> 校内公共场所</span>
+                                    <span class="step_tip"><i class="fas fa-check"></i> 白天时段交易</span>
+                                    <span class="step_tip"><i class="fas fa-check"></i> 确认收款到账</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 步骤5 -->
+                        <div class="step_item" data-step="5">
+                            <div class="step_marker">
+                                <div class="step_number">5</div>
+                                <div class="step_connector"></div>
+                            </div>
+                            <div class="step_content">
+                                <div class="step_icon">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h3>完成评价</h3>
+                                <div class="step_line"></div>
+                                <p>交易完成后为买家评价，分享流转故事，积累信用积分</p>
+                                <div class="step_tips">
+                                    <span class="step_tip"><i class="fas fa-check"></i> 客观真实评价</span>
+                                    <span class="step_tip"><i class="fas fa-check"></i> 分享物品故事</span>
+                                    <span class="step_tip"><i class="fas fa-check"></i> 关注环保贡献</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           
+
+                <!-- 买家流程 -->
+                <div class="steps_container" id="buyerSteps">
+                    <div class="steps_timeline">
+                        <!-- 步骤1 -->
+                        <div class="step_item" data-step="1">
+                            <div class="step_marker">
+                                <div class="step_number">1</div>
+                                <div class="step_connector"></div>
+                            </div>
+                            <div class="step_content">
+                                <div class="step_icon">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                                <h3>浏览筛选</h3>
+                                <div class="step_line"></div>
+                                <p>根据需求浏览商品，利用分类、搜索功能快速定位目标物品</p>
+                                <div class="step_tips">
+                                    <span class="step_tip"><i class="fas fa-check"></i> 使用分类筛选</span>
+                                    <span class="step_tip"><i class="fas fa-check"></i> 查看卖家信用</span>
+                                    <span class="step_tip"><i class="fas fa-check"></i> 阅读商品评价</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 步骤2 -->
+                        <div class="step_item" data-step="2">
+                            <div class="step_marker">
+                                <div class="step_number">2</div>
+                                <div class="step_connector"></div>
+                            </div>
+                            <div class="step_content">
+                                <div class="step_icon">
+                                    <i class="fas fa-comment-alt"></i>
+                                </div>
+                                <h3>咨询沟通</h3>
+                                <div class="step_line"></div>
+                                <p>通过平台联系卖家，询问商品细节、协商价格、确认交易意愿</p>
+                                <div class="step_tips">
+                                    <span class="step_tip"><i class="fas fa-check"></i> 礼貌用语沟通</span>
+                                    <span class="step_tip"><i class="fas fa-check"></i> 明确询问需求</span>
+                                    <span class="step_tip"><i class="fas fa-check"></i> 确认交易细节</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 步骤3 -->
+                        <div class="step_item" data-step="3">
+                            <div class="step_marker">
+                                <div class="step_number">3</div>
+                                <div class="step_connector"></div>
+                            </div>
+                            <div class="step_content">
+                                <div class="step_icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <h3>约定面交</h3>
+                                <div class="step_line"></div>
+                                <p>确定校内安全交易地点和时间，做好验货准备</p>
+                                <div class="step_tips">
+                                    <span class="step_tip"><i class="fas fa-check"></i> 选择公共区域</span>
+                                    <span class="step_tip"><i class="fas fa-check"></i> 白天时段交易</span>
+                                    <span class="step_tip"><i class="fas fa-check"></i> 结伴前往更安全</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 步骤4 -->
+                        <div class="step_item" data-step="4">
+                            <div class="step_marker">
+                                <div class="step_number">4</div>
+                                <div class="step_connector"></div>
+                            </div>
+                            <div class="step_content">
+                                <div class="step_icon">
+                                    <i class="fas fa-clipboard-check"></i>
+                                </div>
+                                <h3>当面验货</h3>
+                                <div class="step_line"></div>
+                                <p>按照验货清单检查商品，确认与描述一致后再付款</p>
+                                <div class="step_tips">
+                                    <span class="step_tip"><i class="fas fa-check"></i> 核对商品外观</span>
+                                    <span class="step_tip"><i class="fas fa-check"></i> 测试核心功能</span>
+                                    <span class="step_tip"><i class="fas fa-check"></i> 检查配件齐全</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 步骤5 -->
+                        <div class="step_item" data-step="5">
+                            <div class="step_marker">
+                                <div class="step_number">5</div>
+                                <div class="step_connector"></div>
+                            </div>
+                            <div class="step_content">
+                                <div class="step_icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <h3>确认评价</h3>
+                                <div class="step_line"></div>
+                                <p>交易成功后为卖家评价，分享购买体验，完成流转闭环</p>
+                                <div class="step_tips">
+                                    <span class="step_tip"><i class="fas fa-check"></i> 客观公正评价</span>
+                                    <span class="step_tip"><i class="fas fa-check"></i> 分享使用感受</span>
+                                    <span class="step_tip"><i class="fas fa-check"></i> 鼓励诚信交易</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section id="download_section" class="section_box download_area">
+            <div class="container">
+                <div class="download_card">
+                    <div class="download_icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h2>下载《校友集市流转公约》完整版</h2>
+                    <div class="download_line"></div>
+                    <p class="download_desc">
+                        包含详细条款、实施细则、仲裁流程等完整内容。<br>
+                        建议每位用户下载并仔细阅读，共同维护校园诚信流转环境。
+                    </p>
+
+                    <div class="download_info">
+                        <div class="info_item">
+                            <i class="fas fa-file-alt"></i>
+                            <span>文件大小: 2.3 MB</span>
+                        </div>
+                        <div class="info_item">
+                            <i class="fas fa-clock"></i>
+                            <span>版本: 2026.03 v2.1</span>
+                        </div>
+                        <div class="info_item">
+                            <i class="fas fa-download"></i>
+                            <span>已下载: 1,248 次</span>
+                        </div>
+                    </div>
+
+                    <div class="download_actions">
+                        <button class="btn_download" id="downloadBtn">
+                            <i class="fas fa-download"></i> 立即下载 PDF 版本
+                        </button>
+                        <button class="btn_preview" id="previewBtn">
+                            <i class="fas fa-eye"></i> 在线预览
+                        </button>
+                    </div>
+
+                    <div class="download_tip">
+                        <i class="fas fa-lightbulb"></i>
+                        下载后打印并签署，可提交至校团委备案，享额外信用积分
+                    </div>
+
+                    <div class="download_success" id="downloadSuccess">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>下载开始!</h4>
+                            <p>《校友集市流转公约.pdf》已开始下载，如未自动下载，请检查浏览器设置。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer_area">
+        <div class="footer_wrapper">
+            <div class="bottom_bar">
+                <p>&copy; 2026 Campus Market | 校园毕业物品流转平台团队 | <a href="#">服务条款</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/rules_detail.js"></script>
+</body>
+
+</html>

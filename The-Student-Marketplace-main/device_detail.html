@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录设备管理 - 锦囊护卫</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/archive_detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/device_detail.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body class="device_page">
+
+    <!-- 顶部导航栏 -->
+    <nav class="daohang">
+        <div class="daohang_wrapper">
+            <ul class="daohang_list">
+                <li class="daohang_items"><a href="index.html">首页</a></li>
+                <li class="daohang_items"><a href="about.html">平台概况</a></li>
+                <li class="daohang_items"><a href="categories.html">商品分类</a></li>
+                <li class="daohang_items"><a href="guide.html">流转锦囊</a></li>
+                <li class="daohang_items"><a href="events.html">活动专区</a></li>
+                <li class="daohang_items active"><a href="user.html">用户中心</a></li>
+            </ul>
+            <div class="nav_auth"><a href="signin.html" class="btn_nav">登录</a></div>
+        </div>
+    </nav>
+
+    <!-- Box 1: Hero Banner  -->
+    <header class="device_hero">
+        <div class="hero_overlay"></div> <!-- 对应 CSS 中的蒙层 -->
+        <div class="hero_content animate__animated animate__fadeIn">
+            <span class="en_text">DEVICE</span>
+            <h1 class="elegant_title">登录设备管理 <span class="device_seal">设备管理</span></h1>
+            <div class="elegant_line"></div>
+          
+        </div>
+
+        <!-- 底部波浪线 -->
+        <div class="banner_wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C0,0,31.83,14.28,64,27.1,126.31,52,187.31,68,250.31,68c31.11,0,32.25-10.15,71.08-11.56Z"
+                    fill="#f9fbfa"></path>
+            </svg>
+        </div>
+    </header>
+    <main>
+        <!-- 主要内容区域 -->
+        <div class="container">
+            <!-- 模块1：当前在线设备列表 -->
+            <section class="management-section" id="online-devices">
+                <div class="section-header">
+                    <h2><i class="fas fa-wifi"></i> 当前在线设备</h2>
+                    <span class="badge">3台在线</span>
+                </div>
+                <div class="devices-list device-grid">
+                    <!-- 设备1 - 当前设备 -->
+                    <div class="device-item current">
+                        <div class="device-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <div class="device-info">
+                            <h3>我的工作电脑 <span class="current-tag">本设备</span></h3>
+                            <p class="device-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> 北京市海淀区</span>
+                                <span><i class="fas fa-clock"></i> 今天 09:30</span>
+                                <span><i class="fas fa-network-wired"></i> IP: 192.168.1.105</span>
+                            </p>
+                            <p class="device-type">Windows 11 · Chrome浏览器</p>
+                        </div>
+                        <div class="device-actions">
+                            <button class="btn-action btn-secondary" disabled>
+                                <i class="fas fa-check-circle"></i> 当前使用中
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 设备2 -->
+                    <div class="device-item">
+                        <div class="device-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="device-info">
+                            <h3>iPhone 14 Pro</h3>
+                            <p class="device-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> 上海市浦东新区</span>
+                                <span><i class="fas fa-clock"></i> 今天 08:15</span>
+                                <span><i class="fas fa-network-wired"></i> IP: 180.158.23.45</span>
+                            </p>
+                            <p class="device-type">iOS 16 · Safari浏览器</p>
+                        </div>
+                        <div class="device-actions">
+                            <button class="btn-action btn-warning">
+                                <i class="fas fa-sign-out-alt"></i> 立即下线
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 设备3 -->
+                    <div class="device-item">
+                        <div class="device-icon">
+                            <i class="fas fa-tablet-alt"></i>
+                        </div>
+                        <div class="device-info">
+                            <h3>华为平板</h3>
+                            <p class="device-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> 杭州市西湖区</span>
+                                <span><i class="fas fa-clock"></i> 昨天 22:45</span>
+                                <span><i class="fas fa-network-wired"></i> IP: 115.238.76.90</span>
+                            </p>
+                            <p class="device-type">HarmonyOS · 锦囊App</p>
+                        </div>
+                        <div class="device-actions">
+                            <button class="btn-action btn-warning">
+                                <i class="fas fa-sign-out-alt"></i> 立即下线
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 模块2：近期登录记录 -->
+            <section class="management-section" id="login-history">
+                <div class="section-header">
+                    <h2><i class="fas fa-history"></i> 近期登录记录</h2>
+                    <div class="filter-options">
+                        <select class="filter-select">
+                            <option value="30">最近30天</option>
+                            <option value="7">最近7天</option>
+                            <option value="90">最近90天</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="login-history-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>时间</th>
+                                <th>设备</th>
+                                <th>地点</th>
+                                <th>登录方式</th>
+                                <th>状态</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="login-success">
+                                <td>2026-01-10 09:30</td>
+                                <td>Windows电脑 (Chrome)</td>
+                                <td>北京市</td>
+                                <td>密码登录</td>
+                                <td><span class="status-success"><i class="fas fa-check-circle"></i> 成功</span></td>
+                            </tr>
+                            <tr class="login-success">
+                                <td>2026-01-10 08:15</td>
+                                <td>iPhone 14 Pro (Safari)</td>
+                                <td>上海市</td>
+                                <td>密码登录</td>
+                                <td><span class="status-success"><i class="fas fa-check-circle"></i> 成功</span></td>
+                            </tr>
+                            <tr class="login-failed">
+                                <td>2026-01-09 23:10</td>
+                                <td>未知设备 (Firefox)</td>
+                                <td>广州市</td>
+                                <td>密码尝试</td>
+                                <td><span class="status-failed"><i class="fas fa-exclamation-triangle"></i> 失败</span>
+                                </td>
+                            </tr>
+                            <tr class="login-success">
+                                <td>2026-01-09 22:45</td>
+                                <td>华为平板 (App)</td>
+                                <td>杭州市</td>
+                                <td>指纹验证</td>
+                                <td><span class="status-success"><i class="fas fa-check-circle"></i> 成功</span></td>
+                            </tr>
+                            <tr class="login-success">
+                                <td>2026-01-08 21:30</td>
+                                <td>MacBook Pro (Safari)</td>
+                                <td>北京市</td>
+                                <td>密码登录</td>
+                                <td><span class="status-success"><i class="fas fa-check-circle"></i> 成功</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-footer">
+                    <button class="btn-secondary">
+                        <i class="fas fa-download"></i> 导出完整记录
+                    </button>
+                    <button class="btn-secondary">
+                        <i class="fas fa-trash-alt"></i> 清空30天前记录
+                    </button>
+                </div>
+            </section>
+
+            <section class="management-section" id="trusted-devices">
+                <div class="section-header">
+                    <h2><i class="fas fa-shield-alt"></i> 可信设备</h2>
+                    <span class="hint-text">已设置 2 / 5 台</span>
+                </div>
+
+                <div class="trusted-grid">
+                    <div class="trusted-card">
+                        <i class="fas fa-desktop card-icon"></i>
+                        <h3>我的工作电脑</h3>
+                        <p>Windows 11 · Chrome</p>
+                        <span class="trusted-badge"><i class="fas fa-star"></i> 可信</span>
+                    </div>
+
+                    <div class="trusted-card">
+                        <i class="fas fa-mobile-alt card-icon"></i>
+                        <h3>iPhone 14 Pro</h3>
+                        <p>iOS 16 · Safari</p>
+                        <span class="trusted-badge"><i class="fas fa-star"></i> 可信</span>
+                    </div>
+
+                    <div class="trusted-card">
+                        <i class="fas fa-tablet-alt card-icon"></i>
+                        <h3>华为平板</h3>
+                        <p>HarmonyOS · 最近登录</p>
+                        <span class="untrusted-badge">未设置</span>
+                    </div>
+                </div>
+
+                <div class="trusted-setting-mini">
+                    <span>可信设备免验证登录</span>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </section>
+
+
+            <!-- 模块4：安全策略配置 -->
+
+            <section class="management-section" id="security-policy">
+                <div class="section-header">
+                    <h2><i class="fas fa-cogs"></i> 安全策略</h2>
+                </div>
+
+                <div class="policy-mini-grid">
+
+                    <div class="policy-mini-card">
+                        <h3><i class="fas fa-mobile-alt"></i> 新设备验证</h3>
+                        <p>当前：短信验证</p>
+                    </div>
+
+                    <div class="policy-mini-card">
+                        <h3><i class="fas fa-clock"></i> 自动下线</h3>
+                        <p>当前：15分钟</p>
+                    </div>
+
+                    <div class="policy-mini-card">
+                        <h3><i class="fas fa-bell"></i> 异地提醒</h3>
+                        <p>已开启</p>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- 模块5：批量管理操作 -->
+
+            <section class="management-section" id="batch-management">
+                <div class="section-header">
+                    <h2><i class="fas fa-tasks"></i> 批量管理</h2>
+                </div>
+
+                <div class="batch-mini-grid">
+
+                    <div class="batch-mini-card">
+                        <i class="fas fa-power-off"></i>
+                        <h3>一键下线</h3>
+                        <button class="btn-warning">执行</button>
+                    </div>
+
+                    <div class="batch-mini-card">
+                        <i class="fas fa-eraser"></i>
+                        <h3>清理记录</h3>
+                        <button class="btn-secondary">清理</button>
+                    </div>
+
+                    <div class="batch-mini-card">
+                        <i class="fas fa-file-export"></i>
+                        <h3>导出报告</h3>
+                        <button class="btn-secondary">导出</button>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- 确认对话框 -->
+            <div class="confirmation-dialog" id="logoutAllDialog" style="display: none;">
+                <div class="dialog-content">
+                    <h3><i class="fas fa-exclamation-triangle"></i> 确认一键下线所有设备</h3>
+                    <p>此操作将使所有已登录设备（除当前设备外）立即退出登录。您需要在其他设备上重新登录。</p>
+                    <div class="dialog-actions">
+                        <button class="btn-secondary" onclick="closeDialog()">取消</button>
+                        <button class="btn-warning" onclick="confirmLogoutAll()">确认下线</button>
+                    </div>
+                </div>
+            </div>
+            </section>
+
+
+        </div>
+    </main>
+
+    <footer class="footer_area">
+        <div class="footer_wrapper">
+            <div class="bottom_bar">
+                <p>&copy; 2026 Campus Market | 校园毕业物品流转平台团队 | <a href="#">服务条款</a></p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="js/device_detail.js"></script>
+</body>
+
+</html>

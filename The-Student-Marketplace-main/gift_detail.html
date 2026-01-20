@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>热门闪购·限时秒杀详情 - 毕业物品流转平台</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/archive_detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="css/gift_detail.css">
+</head>
+
+<body class="gift_page">
+
+    <!-- 顶部导航栏（与主站一致） -->
+    <nav class="daohang">
+        <div class="daohang_wrapper">
+            <ul class="daohang_list">
+                <li class="daohang_items"><a href="index.html">首页</a></li>
+                <li class="daohang_items"><a href="about.html">平台概况</a></li>
+                <li class="daohang_items"><a href="categories.html">商品分类</a></li>
+                <li class="daohang_items"><a href="guide.html">流转锦囊</a></li>
+                <li class="daohang_items active"><a href="events.html">活动专区</a></li>
+                <li class="daohang_items"><a href="user.html">用户中心</a></li>
+            </ul>
+            <div class="nav_auth"><a href="signin.html" class="btn_nav">登录</a></div>
+        </div>
+    </nav>
+
+    <!-- Box 1: Hero Banner  -->
+    <header class="gift_hero">
+        <div class="hero_overlay"></div> <!-- 对应 CSS 中的蒙层 -->
+        <div class="hero_content animate__animated animate__fadeIn">
+            <span class="en_text">GIFT</span>
+            <h1 class="elegant_title">毕业馈赠 <span class="gift_seal">馈赠</span></h1>
+            <div class="elegant_line"></div>
+
+        </div>
+
+        <!-- 底部波浪线  -->
+        <div class="banner_wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C0,0,31.83,14.28,64,27.1,126.31,52,187.31,68,250.31,68c31.11,0,32.25-10.15,71.08-11.56Z"
+                    fill="#f9fbfa"></path>
+            </svg>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- 第一部分：锦囊获取规则说明 -->
+        <section id="rules" class="content-section">
+            <div class="section-header">
+                <div class="section-number">01</div>
+                <h2 class="section-title">锦囊获取规则说明</h2>
+                <p class="section-desc">了解知识传承计划的基本规则与解锁条件</p>
+            </div>
+
+            <div class="section-content">
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-book"></i>
+                        锦囊基本规则
+                    </h3>
+
+                    <div class="rules-grid">
+                        <div class="rule-item">
+                            <div class="rule-icon">
+                                <i class="fas fa-tags"></i>
+                            </div>
+                            <div class="rule-content">
+                                <h4>获取性质</h4>
+                                <p>知识传承公益计划，覆盖12大学科门类，通过贡献或交流获取学习锦囊</p>
+                            </div>
+                        </div>
+
+                        <div class="rule-item">
+                            <div class="rule-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="rule-content">
+                                <h4>时间与权限机制</h4>
+                                <ul>
+                                    <li><strong>预热期：</strong>新上传笔记进入前5页样张公示预览，支持用户评分</li>
+                                    <li><strong>单科下载：</strong>每成功流转1件物品，可获得3个学科的深度下载权限</li>
+                                    <li><strong>无限下载：</strong>成功流转5件以上物品，解锁全部12大学科下载权限</li>
+                                    <li><strong>更新权：</strong>钻石等级会员或高分贡献者享有新笔记优先更新权</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="rule-item">
+                            <div class="rule-icon">
+                                <i class="fas fa-user-check"></i>
+                            </div>
+                            <div class="rule-content">
+                                <h4>参与资格</h4>
+                                <ul>
+                                    <li>平台实名认证学生（保障资料版权与学术纯洁）</li>
+                                    <li>满足任一条件：发布1件闲置、邀请3位好友或分享学习心得</li>
+                                    <li>需遵守知识共享协议，禁止私自大范围传播或商用</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第二部分：获取操作全流程 -->
+        <section id="process" class="content-section">
+            <div class="section-header">
+                <div class="section-number">02</div>
+                <h2 class="section-title">获取操作全流程</h2>
+                <p class="section-desc">从资格验证到高效应用的完整操作指南</p>
+            </div>
+
+            <div class="section-content">
+                <!-- 锦囊解锁操作 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-mouse-pointer"></i>
+                        资格解锁与使用操作
+                    </h3>
+
+                    <div class="process-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-time">第一步</div>
+                            <div class="timeline-content">
+                                <h4>资格验证</h4>
+                                <p>完成任务后系统自动审核（1-2分钟），收到"解锁通知"</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item highlight">
+                            <div class="timeline-time">第二步</div>
+                            <div class="timeline-content">
+                                <h4>浏览筛选</h4>
+                                <p>进入库内按学科、年级、评分筛选笔记，并预览前5页样张</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-time">第三步</div>
+                            <div class="timeline-content">
+                                <h4>下载存库</h4>
+                                <p>选择PDF/Word/图片格式下载，文件保存到"我的锦囊"库</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-time">第四步</div>
+                            <div class="timeline-content">
+                                <h4>学习应用</h4>
+                                <p>对照课程进度选择性学习，结合课堂内容补充个人理解</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tips-box">
+                        <h4><i class="fas fa-lightbulb"></i> 使用建议与技巧</h4>
+                        <div class="tips-grid">
+                            <div class="tip-item">
+                                <i class="fas fa-exchange-alt"></i>
+                                <p>对比学习：下载2-3份同科目笔记，对比学习不同解题思路</p>
+                            </div>
+                            <div class="tip-item">
+                                <i class="fas fa-edit"></i>
+                                <p>补充完善：在学霸笔记基础上添加自己的理解和典型例题</p>
+                            </div>
+                            <div class="tip-item">
+                                <i class="fas fa-project-diagram"></i>
+                                <p>主题学习：按知识主题下载，建立跨学科的知识结构网络</p>
+                            </div>
+                            <div class="tip-item">
+                                <i class="fas fa-bullseye"></i>
+                                <p>考前突击：针对标注"考试重点"的笔记进行针对性复习</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 获取后处理 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-clipboard-check"></i>
+                        按学习阶段划分内容
+                    </h3>
+
+                    <div class="outcome-tabs">
+                        <div class="outcome-nav">
+                            <button class="outcome-btn active" data-outcome="success">基础阶段</button>
+                            <button class="outcome-btn" data-outcome="fail">进阶阶段</button>
+                            <button class="outcome-btn" data-outcome="issue">冲刺阶段</button>
+                        </div>
+
+                        <div class="outcome-content">
+                            <!-- 基础阶段处理 -->
+                            <div class="outcome-pane active" id="success-pane">
+                                <div class="success-steps">
+                                    <div class="success-step">
+                                        <div class="step-icon">
+                                            <i class="fas fa-book"></i>
+                                        </div>
+                                        <div class="step-desc">
+                                            <h5>公共必修笔记</h5>
+                                            <p>高等数学、大学英语、大学物理等完整重点笔记</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="success-step">
+                                        <div class="step-icon">
+                                            <i class="fas fa-map-signs"></i>
+                                        </div>
+                                        <div class="step-desc">
+                                            <h5>入门指南</h5>
+                                            <p>包含学科专业认知、高效时间管理及做笔记技巧</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="success-step">
+                                        <div class="step-icon">
+                                            <i class="fas fa-exclamation-triangle"></i>
+                                        </div>
+                                        <div class="step-desc">
+                                            <h5>避坑指南</h5>
+                                            <p>常见学习误区解析，助力大一新生少走弯路</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 进阶阶段处理 -->
+                            <div class="outcome-pane" id="fail-pane">
+                                <div class="fail-options">
+                                    <div class="option-item">
+                                        <div class="option-icon">
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="option-desc">
+                                            <h5>专业核心重点</h5>
+                                            <p>每专业5-8门核心课精选笔记，覆盖专业壁垒</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="option-item">
+                                        <div class="option-icon">
+                                            <i class="fas fa-flask"></i>
+                                        </div>
+                                        <div class="option-desc">
+                                            <h5>实验报告模板</h5>
+                                            <p>标准实验格式+优秀范例参考，解决实操难题</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="option-item">
+                                        <div class="option-icon">
+                                            <i class="fas fa-trophy"></i>
+                                        </div>
+                                        <div class="option-desc">
+                                            <h5>竞赛备赛资料</h5>
+                                            <p>数模、程序设计等热门竞赛的获奖笔记分享</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 冲刺阶段处理 -->
+                            <div class="outcome-pane" id="issue-pane">
+                                <div class="issue-list">
+                                    <div class="issue-item">
+                                        <div class="issue-name">考研/保研</div>
+                                        <div class="issue-solution">4门统考精讲笔记+各校保研面试常见题库</div>
+                                    </div>
+
+                                    <div class="issue-item">
+                                        <div class="issue-name">毕业论文</div>
+                                        <div class="issue-solution">开题、写作、查重、答辩全流程实战指南</div>
+                                    </div>
+
+                                    <div class="issue-item">
+                                        <div class="issue-name">职业资格</div>
+                                        <div class="issue-solution">教资、财会、软考等高频考证针对性资料</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第三部分：内容详情与评价保障 -->
+        <section id="quality" class="content-section">
+            <div class="section-header">
+                <div class="section-number">03</div>
+                <h2 class="section-title">内容详情与评价保障</h2>
+                <p class="section-desc">学科覆盖、评分标准与质量反馈体系</p>
+            </div>
+
+            <div class="section-content">
+                <!-- 品质分级标准 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-star"></i>
+                        锦囊学科分类详情
+                    </h3>
+
+                    <div class="grade-cards">
+                        <!-- 理工科 -->
+                        <div class="grade-card s-grade">
+                            <div class="grade-header">
+                                <div class="grade-badge">理工类</div>
+                                <div class="grade-title">1,245份笔记</div>
+                            </div>
+                            <div class="grade-content">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> 计算机：算法、OS、网络</li>
+                                    <li><i class="fas fa-check-circle"></i> 电子信息：电路、信号处理</li>
+                                    <li><i class="fas fa-check-circle"></i> 机械：理论力学、结构设计</li>
+                                    <li><i class="fas fa-check-circle"></i> 数理化：高数、线性代数、物理</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- 经管文法 -->
+                        <div class="grade-card a-grade">
+                            <div class="grade-header">
+                                <div class="grade-badge">文管类</div>
+                                <div class="grade-title">1,872份笔记</div>
+                            </div>
+                            <div class="grade-content">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> 经济：微观/宏观经济学</li>
+                                    <li><i class="fas fa-check-circle"></i> 管理：管理学原理、市营</li>
+                                    <li><i class="fas fa-check-circle"></i> 法学：民法、刑法、行政法</li>
+                                    <li><i class="fas fa-check-circle"></i> 文学：现代汉语、英美文学</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- 医学艺术 -->
+                        <div class="grade-card b-grade">
+                            <div class="grade-header">
+                                <div class="grade-badge">医艺类</div>
+                                <div class="grade-title">893份笔记</div>
+                            </div>
+                            <div class="grade-content">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> 医学：解剖学、生理学、生化</li>
+                                    <li><i class="fas fa-check-circle"></i> 临床：内科学、外科学、诊断</li>
+                                    <li><i class="fas fa-check-circle"></i> 艺术：色彩构成、设计概论</li>
+                                    <li><i class="fas fa-check-circle"></i> 音乐：乐理基础、舞台表演</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 质检流程 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-clipboard-list"></i>
+                        质量建设流程
+                    </h3>
+
+                    <div class="inspection-flow">
+                        <div class="flow-step">
+                            <div class="flow-number">1</div>
+                            <div class="flow-content">
+                                <h4>用户初评</h4>
+                                <p>基于完整度、逻辑性、工整度进行打分</p>
+                            </div>
+                        </div>
+
+                        <div class="flow-step">
+                            <div class="flow-number">2</div>
+                            <div class="flow-content">
+                                <h4>纠错机制</h4>
+                                <p>发现内容错误提交申请，审核通过奖积分</p>
+                            </div>
+                        </div>
+
+                        <div class="flow-step">
+                            <div class="flow-number">3</div>
+                            <div class="flow-content">
+                                <h4>结构优化</h4>
+                                <p>知识共建者定期对核心笔记进行结构重组</p>
+                            </div>
+                        </div>
+
+                        <div class="flow-step">
+                            <div class="flow-number">4</div>
+                            <div class="flow-content">
+                                <h4>多维筛选</h4>
+                                <p>按高下载量、高好评率、最新时间排序</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 评分系统体系 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-headset"></i>
+                        锦囊评分系统体系
+                    </h3>
+
+                    <div class="service-grid">
+                        <!-- 评分维度 -->
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <div class="service-content">
+                                <h4>评分维度保障</h4>
+                                <div class="service-details">
+                                    <div class="detail-item">
+                                        <span class="detail-grade">完整度</span>
+                                        <span class="detail-value">知识点覆盖程度</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-grade">逻辑性</span>
+                                        <span class="detail-value">结构清晰/易理解</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-grade">工整度</span>
+                                        <span class="detail-value">字迹、排版规范度</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 动态反馈 -->
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <div class="service-content">
+                                <h4>反馈处理流程</h4>
+                                <ol class="process-list">
+                                    <li>提交纠错描述和正确参考资料</li>
+                                    <li>平台48小时内完成学术审核</li>
+                                    <li>采纳建议发放50-200积分奖励</li>
+                                    <li>同步更新笔记版本，记录更新日志</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <!-- 下载支持 -->
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-money-bill-wave"></i>
+                            </div>
+                            <div class="service-content">
+                                <h4>下载与服务</h4>
+                                <div class="refund-details">
+                                    <div class="refund-item">
+                                        <i class="fas fa-clock"></i>
+                                        <div>
+                                            <strong>PDF/Word格式</strong>
+                                            <p>多端兼容，支持高清打印</p>
+                                        </div>
+                                    </div>
+                                    <div class="refund-item">
+                                        <i class="fas fa-route"></i>
+                                        <div>
+                                            <strong>高清扫描图</strong>
+                                            <p>保留原汁原味的手写笔记感</p>
+                                        </div>
+                                    </div>
+                                    <div class="refund-item">
+                                        <i class="fas fa-hand-holding-usd"></i>
+                                        <div>
+                                            <strong>专属客服</strong>
+                                            <p>解决格式兼容、内容缺失疑问</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 贡献与更新服务 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-shipping-fast"></i>
+                        知识共建与更新奖励
+                    </h3>
+
+                    <div class="delivery-options">
+                        <!-- 内容补充 -->
+                        <div class="delivery-card">
+                            <div class="delivery-header">
+                                <div class="delivery-icon">
+                                    <i class="fas fa-university"></i>
+                                </div>
+                                <h4>内容补充</h4>
+                            </div>
+                            <ul class="delivery-features">
+                                <li>补充缺失例题、深度解析</li>
+                                <li>通过审核可获下载权限奖励</li>
+                                <li>授予"知识共建者"荣誉认证</li>
+                            </ul>
+                        </div>
+
+                        <!-- 需求征集 -->
+                        <div class="delivery-card">
+                            <div class="delivery-header">
+                                <div class="delivery-icon">
+                                    <i class="fas fa-city"></i>
+                                </div>
+                                <h4>笔记需求征集</h4>
+                            </div>
+                            <ul class="delivery-features">
+                                <li>在征集区提交特定课程需求</li>
+                                <li>高人气课程将加快审核速度</li>
+                                <li>优先匹配对应教材版本的笔记</li>
+                            </ul>
+                        </div>
+
+                        <!-- 更新标准 -->
+                        <div class="delivery-card">
+                            <div class="delivery-header">
+                                <div class="delivery-icon">
+                                    <i class="fas fa-box-open"></i>
+                                </div>
+                                <h4>更新记录标准</h4>
+                            </div>
+                            <ul class="delivery-features">
+                                <li>重大纠错后24小时内更新版本</li>
+                                <li>记录有效纠错者的学名致谢</li>
+                                <li>支持按版本日期追溯更新记录</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第四部分：公平性承诺 -->
+        <section id="fairness" class="content-section">
+            <div class="section-header">
+                <div class="section-number">04</div>
+                <h2 class="section-title">公平性承诺</h2>
+                <p class="section-desc">坚持公开透明的知识流转，保障每一位贡献者的权益</p>
+            </div>
+
+            <div class="section-content">
+                <div class="fairness-grid">
+                    <!-- 贡献透明 -->
+                    <div class="fairness-card">
+                        <div class="fairness-header">
+                            <div class="fairness-icon">
+                                <i class="fas fa-dollar-sign"></i>
+                            </div>
+                            <h4>贡献透明</h4>
+                        </div>
+                        <ul class="fairness-list">
+                            <li>明确标注笔记原作者及贡献值</li>
+                            <li>评分、评价内容100%真实公开</li>
+                            <li>历史下载次数实时显示</li>
+                            <li>纠错积分记录全程可查</li>
+                        </ul>
+                    </div>
+
+                    <!-- 过程公开 -->
+                    <div class="fairness-card">
+                        <div class="fairness-header">
+                            <div class="fairness-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <h4>审核公开</h4>
+                        </div>
+                        <ul class="fairness-list">
+                            <li>审核流程、采纳标准公开可见</li>
+                            <li>未通过申请支持二次申诉</li>
+                            <li>优质共建者名单定期公示</li>
+                            <li>规则修订提前公告期30天</li>
+                        </ul>
+                    </div>
+
+                    <!-- 反馈渠道 -->
+                    <div class="fairness-card">
+                        <div class="fairness-header">
+                            <div class="fairness-icon">
+                                <i class="fas fa-comment-alt"></i>
+                            </div>
+                            <h4>仲裁渠道</h4>
+                        </div>
+                        <ul class="fairness-list">
+                            <li>学术争议由专业志愿者仲裁</li>
+                            <li>在线反馈24小时内回复进度</li>
+                            <li>投诉建议直通项目管理组</li>
+                            <li>处理过程及结果全透明</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 公平承诺声明 -->
+                <div class="fairness-statement">
+                    <div class="statement-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="statement-content">
+                        <h4>我们的共建承诺</h4>
+                        <p>我们相信优质学习资源应惠及所有愿意付出的同学。任何通过虚假行为获取权限或通过笔记进行恶意营销者，平台将永久回收其锦囊库使用权限，共建纯净学习空间。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第五部分：常见问题解答 -->
+        <section id="faq" class="content-section">
+            <div class="section-header">
+                <div class="section-number">05</div>
+                <h2 class="section-title">常见问题解答</h2>
+                <p class="section-desc">解答锦囊使用过程中最常见的疑问</p>
+            </div>
+
+            <div class="section-content">
+                <div class="faq-container">
+                    <!-- Q1 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <div class="faq-number">Q1</div>
+                            <div class="faq-text">笔记下载后可以分享给同学吗？</div>
+                            <div class="faq-toggle">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>个人学习分享不限，但禁止通过咸鱼、淘宝等渠道转卖或大规模在非校内群传播。建议邀请同学通过参与流转注册获取，共同维护知识版权。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <div class="faq-number">Q2</div>
+                            <div class="faq-text">笔记内容和我的教材版本不一样怎么办？</div>
+                            <div class="faq-toggle">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>库内支持按版本筛选。如无精准对应版，可选择知识体系相近的笔记。核心知识点（原理、推导、法律条文等）通常一致，可参考逻辑结构自行微调。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <div class="faq-number">Q3</div>
+                            <div class="faq-text">下载的笔记格式不兼容怎么办？</div>
+                            <div class="faq-toggle">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>我们提供PDF、Word及图片格式。如Word因公式编辑器版本导致乱码，推荐使用PDF版或使用在线Office工具打开。仍有问题可联系“格式助手”客服。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q4 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <div class="faq-number">Q4</div>
+                            <div class="faq-text">可以申请特定课程的笔记吗？</div>
+                            <div class="faq-toggle">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>可以在"需求征集"区提交课程名称和指定教材版本。我们会优先定向挖掘高星级毕业生的笔记，并加快审核速度，处理后会第一时间给您发推送通知。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="footer_area">
+        <div class="footer_wrapper">
+            <div class="bottom_bar">
+                <p>&copy; 2026 Campus Market | 校园毕业物品流转平台团队 | <a href="#">服务条款</a></p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="js/gift_detail.js"></script>
+</body>
+
+</html>

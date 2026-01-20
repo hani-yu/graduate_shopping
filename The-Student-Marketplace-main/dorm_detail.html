@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品分类 - 校园毕业物品流转平台</title>
+    <script src="https://kit.fontawesome.com/0ad2b99521.js" crossorigin="anonymous" async></script>
+    <link rel="stylesheet" href="css/style.min.css"> <!-- 引用全局样式 -->
+    <link rel="stylesheet" href="css/dorm_detail.css"> <!-- 引用本页专用样式 -->
+    <link rel="stylesheet" href="css/archive_detail.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body class="dorm_page">
+   <!-- 顶部导航栏 -->
+    <nav class="daohang">
+        <div class="daohang_wrapper">
+            <ul class="daohang_list">
+                <li class="daohang_items"><a href="index.html">首页</a></li>
+                <li class="daohang_items"><a href="about.html">平台概况</a></li>
+                <li class="daohang_items active"><a href="categories.html">商品分类</a></li>
+                <li class="daohang_items"><a href="guide.html">流转锦囊</a></li>
+                <li class="daohang_items"><a href="events.html">活动专区</a></li>
+                <li class="daohang_items"><a href="user.html">用户中心</a></li>
+            </ul>
+            <div class="nav_auth"><a href="signin.html" class="btn_nav">登录</a></div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <header class="dorm_hero">
+        <div class="hero_overlay"></div> <!-- 对应 CSS 中的蒙层 -->
+        <div class="hero_content animate__animated animate__fadeIn">
+            <span class="en_text">DROM THING</span>
+            <h1 class="elegant_title">宿舍收纳 <span class="dorm_seal">家具</span></h1>
+            <div class="elegant_line"></div>
+            
+        </div>
+
+        <!-- 底部波浪线  -->
+        <div class="banner_wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C0,0,31.83,14.28,64,27.1,126.31,52,187.31,68,250.31,68c31.11,0,32.25-10.15,71.08-11.56Z"
+                    fill="#f9fbfa"></path>
+            </svg>
+        </div>
+    </header>
+
+<main class="channel_container">
+    <!-- 顶部：热门大咖推荐 (Hero) -->
+    <section class="hero_recommend">
+        <div class="hero_card">
+            <div class="hero_badge">学长力荐</div>
+            <div class="hero_content">
+                <h2>全能型宿舍桌面书架 (加厚升级版/带背板)</h2>
+                <p class="hero_desc">“在不足2平米的课桌上，它帮我撑起了一座小型图书馆。告别凌乱，让学习更有仪式感。”</p>
+                <div class="hero_price_row">
+                    <span class="price">¥45.00</span>
+                    <span class="old_price">原价 ¥129</span>
+                    <button class="btn_view">立即抢购</button>
+                </div>
+            </div>
+            <div class="hero_icon">
+                <i class="fas fa-dolly-flatbed"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- 分类筛选 -->
+    <div class="filter_bar_wrapper">
+        <div class="filter_bar" id="filterBar">
+            <button class="filter_btn active" data-type="all">全部好物</button>
+            <button class="filter_btn" data-type="storage">收纳神器</button>
+            <button class="filter_btn" data-type="life">生活电器</button>
+            <button class="filter_btn" data-type="decor">寝室装点</button>
+        </div>
+    </div>
+
+    <!-- 限时抢购专区 (Flash Sale) -->
+    <section class="flash_sale">
+        <div class="section_title">
+            <h3><i class="fas fa-bolt"></i> 拾光续缘 <span id="timer">00:00:00</span></h3>
+        </div>
+        <div class="flash_wrapper">
+            <!-- 抢购单品 1 -->
+            <div class="flash_item">
+                <div class="flash_tag">仅两组</div>
+                <i class="fas fa-box-open"></i>
+                <h4>透明抽屉式内衣收纳盒</h4>
+                <p class="flash_price">¥9.9 <del>¥39</del></p>
+            </div>
+            <!-- 抢购单品 2 -->
+            <div class="flash_item">
+                <div class="flash_tag">九成新</div>
+                <i class="fas fa-fan"></i>
+                <h4>超静音宿舍床头小风扇</h4>
+                <p class="flash_price">¥12.0 <del>¥45</del></p>
+            </div>
+             <!-- 抢购单品 3 -->
+             <div class="flash_item">
+                <div class="flash_tag">带挂钩</div>
+                <i class="fas fa-tshirt"></i>
+                <h4>多功能浸塑防滑晾衣架</h4>
+                <p class="flash_price">¥5.0 <del>¥15</del></p>
+            </div>
+        </div>
+    </section>
+
+    <!--底部动态：拾光流转 (Live Feed) -->
+    <section class="live_feed_section">
+        <div class="feed_box">
+            <i class="fas fa-history"></i>
+            <div class="feed_list" id="feedList">
+                <div class="feed_inner" >
+                <p class="feed_item">● 1分钟前：[学长***] 的《手持挂烫机》被 [大一新生] 预约了</p>
+                <p class="feed_item">● 8分钟前：[学姐***] 刚刚上架了《全套床帘/遮光布》</p>
+                <p class="feed_item">● 20分钟前：[南区宿舍楼] 成功流转了一批收纳箱</p>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 进阶宝库 (Thematic Bundles) -->
+    <section class="special_collections">
+        <div class="section_header">
+            <h3><i class="fas fa-layer-group"></i> 拾光宝库·宿舍进阶合辑</h3>
+        </div>
+        <div class="collection_grid">
+            <!-- 合辑 1 -->
+            <div class="collection_card" style="--card-color: #0d9488;">
+                <div class="col_icon"><i class="fas fa-couch"></i></div>
+                <div class="col_info">
+                    <h4>床上升维·精致独处包</h4>
+                    <p>包含：遮光床帘、床头收纳篮、USB长线小排插、床后背靠大抱枕。打造最舒适的寝室私密空间。</p>
+                    <div class="col_footer">
+                        <span class="bundle_tag">共4件</span>
+                        <span class="bundle_price">¥68.00</span>
+                        <button class="btn_view">查看全集</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 合辑 2 -->
+            <div class="collection_card" style="--card-color: #f59e0b;">
+                <div class="col_icon"><i class="fas fa-broom"></i></div>
+                <div class="col_info">
+                    <h4>寝室值日·高效清洁包</h4>
+                    <p>包含：手持迷你吸尘器、旋转拖把、长柄除尘掸。学姐赠送：高效除湿袋及芳香挂件。</p>
+                    <div class="col_footer">
+                        <span class="bundle_tag">共3件</span>
+                        <span class="bundle_price">¥45.00</span>
+                        <button class="btn_view">查看全集</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 合辑 3 -->
+            <div class="collection_card" style="--card-color: #3b82f6;">
+                <div class="col_icon"><i class="fas fa-utensils"></i></div>
+                <div class="col_info">
+                    <h4>深夜食堂·宿舍暖心包</h4>
+                    <p>包含：低功率多功能电煮锅、不锈钢碗筷套装、沥水篮。学长赠送：压箱底的懒人食谱大全。</p>
+                    <div class="col_footer">
+                        <span class="bundle_tag">共3件</span>
+                        <span class="bundle_price">¥55.00</span>
+                        <button class="btn_view">查看全集</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--  求书广场 (改为：求物广场) -->
+    <section class="wishlist_section">
+        <div class="section_header_flex">
+            <div class="header_left">
+                <h3><i class="fas fa-search-plus"></i> 拾光寻迹 · 生活搜寻</h3>
+                <p>宿舍空间太局促？寻找特定尺寸的架子？发布心愿，让学长学姐帮你“断舍离”。</p>
+            </div>
+            <button class="btn_post_wish"><i class="fas fa-pen-nib"></i> 发布求物愿望</button>
+        </div>
+
+        <div class="wish_wall">
+            <!-- 需求卡片 1 -->
+            <div class="wish_card">
+                <div class="wish_user">
+                    <i class="fas fa-home"></i>
+                    <span>大一·萌新</span>
+                </div>
+                <h4>求购：宿舍梯子防滑脚垫</h4>
+                <p>寝室梯子有点硌脚，求学长学姐留下不用的软垫或者防滑贴。</p>
+                <div class="wish_footer">
+                    <span class="wish_time">1小时前发布</span>
+                    <span class="btn_helper">我有此物</span>
+                </div>
+            </div>
+
+            <!-- 需求卡片 2 -->
+            <div class="wish_card">
+                <div class="wish_user">
+                    <i class="fas fa-home"></i>
+                    <span>大二·小张</span>
+                </div>
+                <h4>寻找：高承重不锈钢挂钩</h4>
+                <p>需要能挂厚大衣的那种，粘胶式或背挂式均可，多要几个。</p>
+                <div class="wish_footer">
+                    <span class="wish_time">4小时前发布</span>
+                    <span class="btn_helper">我有此物</span>
+                </div>
+            </div>
+
+            <!-- 需求卡片 3 -->
+            <div class="wish_card">
+                <div class="wish_user">
+                    <i class="fas fa-home"></i>
+                    <span>大三·老王</span>
+                </div>
+                <h4>重赏：二手宿舍小冰箱/制冷盒</h4>
+                <p>求一个能放冰镇饮料的小冰箱，只要制冷给力，价格好商量。</p>
+                <div class="wish_footer">
+                    <span class="wish_time">6小时前发布</span>
+                    <span class="btn_helper">我有此物</span>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+    <footer class="footer_area">
+        <div class="footer_wrapper">
+            <div class="bottom_bar">
+                <p>&copy; 2026 Campus Market | 校园毕业物品流转平台团队 | <a href="#">服务条款</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/dorm_detail.js"></script>
+</body>
+
+</html>

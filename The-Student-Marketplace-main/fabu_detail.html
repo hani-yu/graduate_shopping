@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>毕业物品流转锦囊 - 发布流转商品指南</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/archive_detail.css">
+    <link rel="stylesheet" href="css/fabu_detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body class="fabu_page">
+
+    <!-- 顶部导航栏（与主站一致） -->
+    <nav class="daohang">
+        <div class="daohang_wrapper">
+            <ul class="daohang_list">
+                <li class="daohang_items"><a href="index.html">首页</a></li>
+                <li class="daohang_items"><a href="about.html">平台概况</a></li>
+                <li class="daohang_items"><a href="categories.html">商品分类</a></li>
+                <li class="daohang_items active"><a href="guide.html">流转锦囊</a></li>
+                <li class="daohang_items"><a href="events.html">活动专区</a></li>
+                <li class="daohang_items"><a href="user.html">用户中心</a></li>
+            </ul>
+            <div class="nav_auth"><a href="signin.html" class="btn_nav">登录</a></div>
+        </div>
+    </nav>
+
+    <!-- Box 1: Hero Banner (透视长廊背景) -->
+    <header class="fabu_hero">
+        <div class="hero_overlay"></div> <!-- 对应 CSS 中的蒙层 -->
+        <div class="hero_content animate__animated animate__fadeIn">
+            <span class="en_text">RELEASE PROCESS</span>
+            <h1 class="elegant_title">发布流程 <span class="fabu_seal">发布</span></h1>
+            <div class="elegant_line"></div>
+           
+        </div>
+
+        <!-- 底部波浪线  -->
+        <div class="banner_wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C0,0,31.83,14.28,64,27.1,126.31,52,187.31,68,250.31,68c31.11,0,32.25-10.15,71.08-11.56Z"
+                    fill="#f9fbfa"></path>
+            </svg>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-clipboard-check"></i> 第一部分：发布前准备</h2>
+
+            <div class="note">
+                <p><strong>温馨提示：</strong> 在发布前，请确保您已经准备好物品的清晰照片和详细信息，这将大大加快发布流程。</p>
+            </div>
+
+            <div class="publish-steps">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">物品筛选与清洁</h3>
+                    <div class="step-content">
+                        <p>选择功能完好、外观无明显破损的物品进行流转。清洁消毒物品，提升第一印象。</p>
+
+                        <div class="step-tips">
+                            <h4><i class="fas fa-check-circle"></i> 适合流转：</h4>
+                            <ul>
+                                <li>功能完好的物品</li>
+                                <li>配件齐全</li>
+                                <li>市场需求大的物品</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">信息收集清单</h3>
+                    <div class="step-content">
+                        <p>准备好物品的详细信息，这将帮助您快速填写发布表单：</p>
+                        <ul>
+                            <li>购买时间（精确到年月）</li>
+                            <li>购买价格或原价</li>
+                            <li>品牌、型号、规格</li>
+                            <li>配件清单</li>
+                            <li>使用状况详细描述</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">拍摄清晰照片</h3>
+                    <div class="step-content">
+                        <p>准备3-5张清晰实物照片：</p>
+                        <ul>
+                            <li>全景图（背景简洁）</li>
+                            <li>细节图（品牌、接口处）</li>
+                            <li>功能展示图（如电器通电状态）</li>
+                            <li>配件图（所有附带配件）</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-section" id="horizontal-flow-section">
+            <h2 class="section-title"><i class="fas fa-route"></i> 第二部分：发布流程路径</h2>
+
+            <div class="publish-route-wrapper">
+                <!-- 背景连线：SVG 路径 -->
+                <svg class="route-svg-bg">
+                    <path id="route-path" d="" fill="none" stroke="#f59e0b" stroke-width="3" stroke-dasharray="8,8" />
+                </svg>
+
+                <div class="route-container">
+                    <!-- 步骤 1 -->
+                    <div class="route-step" data-index="1">
+                        <div class="step-card">
+                            <div class="step-num">01</div>
+                            <h3 class="step-title">选择入口</h3>
+                            <p>首页按钮、个人中心或扫码进入。</p>
+                        </div>
+                    </div>
+
+                    <!-- 步骤 2 -->
+                    <div class="route-step" data-index="2">
+                        <div class="step-card">
+                            <div class="step-num">02</div>
+                            <h3 class="step-title">填写信息</h3>
+                            <p>选择类别，输入标题与物品现状。</p>
+                        </div>
+                    </div>
+
+                    <!-- 步骤 3 -->
+                    <div class="route-step" data-index="3">
+                        <div class="step-card">
+                            <div class="step-num">03</div>
+                            <h3 class="step-title">上传照片</h3>
+                            <p>3-6张实拍图，如实展示使用痕迹。</p>
+                        </div>
+                    </div>
+
+                    <!-- 步骤 4 -->
+                    <div class="route-step" data-index="4">
+                        <div class="step-card">
+                            <div class="step-num">04</div>
+                            <h3 class="step-title">撰写描述</h3>
+                            <p>套用描述模板，说明外观与功能。</p>
+                        </div>
+                    </div>
+
+                    <!-- 步骤 5 -->
+                    <div class="route-step" data-index="5">
+                        <div class="step-card">
+                            <div class="step-num">05</div>
+                            <h3 class="step-title">交易设置</h3>
+                            <p>智能估价，设定面交地点。 </p>
+                        </div>
+                    </div>
+
+                    <!-- 步骤 6 -->
+                    <div class="route-step" data-index="6">
+                        <div class="step-card">
+                            <div class="step-num">06</div>
+                            <h3 class="step-title">发布检查</h3>
+                            <p>确认无误，开启流转之旅。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="warning">
+                <p><strong>重要提醒：</strong> 如实描述物品状况是卖家的责任。如因描述不实导致纠纷，卖家需承担相应责任。</p>
+            </div>
+        </div>
+
+        <!-- 特殊物品发布指南 -->
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-box-open"></i> 第三部分：特殊物品发布指南</h2>
+
+            <div class="item-guides">
+                <div class="item-guide">
+                    <div class="item-icon"><i class="fas fa-book"></i></div>
+                    <h3 class="item-title">书籍教材类</h3>
+                    <p><span class="highlight">必填信息：</span> ISBN号、版次、是否有笔记</p>
+                    <p><span class="highlight">拍摄要求：</span> 封面、目录页、版权页、重点笔记页</p>
+                    <p><span class="highlight">打包建议：</span> 同一课程教材+笔记打包出售</p>
+                </div>
+
+                <div class="item-guide">
+                    <div class="item-icon"><i class="fas fa-laptop"></i></div>
+                    <h3 class="item-title">数码产品类</h3>
+                    <p><span class="highlight">必填信息：</span> 序列号、电池健康度、维修记录</p>
+                    <p><span class="highlight">隐私处理：</span> 手机电脑需说明已恢复出厂设置</p>
+                    <p><span class="highlight">配件价值：</span> 原装配件可显著提升价值</p>
+                </div>
+
+                <div class="item-guide">
+                    <div class="item-icon"><i class="fas fa-couch"></i></div>
+                    <h3 class="item-title">家具大件类</h3>
+                    <p><span class="highlight">尺寸测量：</span> 长×宽×高（厘米）</p>
+                    <p><span class="highlight">拆卸说明：</span> 是否可拆卸，是否需要工具</p>
+                    <p><span class="highlight">适用场景：</span> 宿舍床位尺寸、桌面承重等</p>
+                </div>
+
+                <div class="item-guide">
+                    <div class="item-icon"><i class="fas fa-plug"></i></div>
+                    <h3 class="item-title">小家电类</h3>
+                    <p><span class="highlight">安全说明：</span> 是否有3C认证、使用年限</p>
+                    <p><span class="highlight">功能演示：</span> 建议录制短视频展示功能</p>
+                    <p><span class="highlight">清洁状况：</span> 已清洁消毒，可放心使用</p>
+                </div>
+            </div>
+        </div>
+
+        <!--常见问题解答 -->
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-question-circle"></i> 第四部分：常见问题解答</h2>
+
+            <div class="faq-item">
+                <div class="faq-question" data-faq-index="0">
+                    <span>发布后多久能卖出去？</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>根据物品类型和定价，通常3-7天有咨询，热门物品1-3天可成交。您可以通过分享到毕业群、适当降价等方式加速流转。</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" data-faq-index="1">
+                    <span>如何修改已发布的信息？</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>进入"我的物品" → 找到对应物品 → 点击"编辑" → 修改后重新提交。价格修改不受限制，类别修改每月限3次。</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" data-faq-index="2">
+                    <span>发布需要费用吗？</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>平台完全免费。成功交易后不收取任何佣金，我们的目标是促进校园内物品循环利用。</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" data-faq-index="3">
+                    <span>如何提高物品曝光？</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>1) 完善信息，照片清晰 2) 定价合理 3) 每3天刷新一次 4) 分享到年级群、专业群 5) 参与平台毕业季活动获取流量扶持</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" data-faq-index="4">
+                    <span>物品描述有误导致纠纷怎么办？</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>如因描述不实导致纠纷，卖家需承担相应责任。建议发布时如实描述，拍照全面。平台提供标准话术模板帮助您准确描述物品状况。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 立即发布区域 -->
+        <div class="publish-now">
+            <h2 class="publish-title">立即发布你的物品</h2>
+            <p class="publish-subtitle">如果您已准备好物品和照片，现在就可以开始发布流程。预计耗时8-12分钟，按照本指南操作可确保发布质量。</p>
+
+            <button class="publish-button" id="publishBtn">
+                <i class="fas fa-rocket"></i> 立即发布
+            </button>
+
+            <div class="benefits">
+                <div class="benefit">
+                    <div class="benefit-icon"><i class="fas fa-bolt"></i></div>
+                    <div class="benefit-text">前1000名发布者获得"毕业先锋"标识</div>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="benefit-text">发布后24小时内成交享平台流量扶持</div>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon"><i class="fas fa-leaf"></i></div>
+                    <div class="benefit-text">累积发布3件物品获额外环保值奖励</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <footer class="footer_area">
+        <div class="footer_wrapper">
+            <div class="bottom_bar">
+                <p>&copy; 2026 Campus Market | 校园毕业物品流转平台团队 | <a href="#">服务条款</a></p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="js/fabu_detail.js"></script>
+</body>
+
+</html>

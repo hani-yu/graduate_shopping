@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>评价管理中心 - 锦囊护卫</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/archive_detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/review_detail.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body class="review_page">
+
+    <!-- 顶部导航栏（与主站一致） -->
+    <nav class="daohang">
+        <div class="daohang_wrapper">
+            <ul class="daohang_list">
+                <li class="daohang_items"><a href="index.html">首页</a></li>
+                <li class="daohang_items"><a href="about.html">平台概况</a></li>
+                <li class="daohang_items"><a href="categories.html">商品分类</a></li>
+                <li class="daohang_items"><a href="guide.html">流转锦囊</a></li>
+                <li class="daohang_items"><a href="events.html">活动专区</a></li>
+                <li class="daohang_items active"><a href="user.html">用户中心</a></li>
+            </ul>
+            <div class="nav_auth"><a href="signin.html" class="btn_nav">登录</a></div>
+        </div>
+    </nav>
+
+    <!-- Box 1: Hero Banner (透视长廊背景) -->
+    <header class="review_hero">
+        <div class="hero_overlay"></div> <!-- 对应 CSS 中的蒙层 -->
+        <div class="hero_content animate__animated animate__fadeIn">
+            <span class="en_text">REVIEWS</span>
+            <h1 class="elegant_title">评价与信用详情 <span class="review_seal">诚信可靠</span></h1>
+            <div class="elegant_line"></div>
+            <p>累计收到 128 条评价，好评率 96%，平均评分 4.8。见证校园流转中的信用积累。</p>
+        </div>
+
+        <!-- 底部波浪线-->
+        <div class="banner_wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C0,0,31.83,14.28,64,27.1,126.31,52,187.31,68,250.31,68c31.11,0,32.25-10.15,71.08-11.56Z"
+                    fill="#f9fbfa"></path>
+            </svg>
+        </div>
+    </header>
+    <main>
+        <!-- 主要内容区域 -->
+        <div class="container">
+            <!-- 模块1：核心评价指标 -->
+            <section class="management-section" id="online-devices">
+                <div class="section-header">
+                    <h2><i class="fas fa-chart-bar"></i> 评价数据概览</h2>
+                    <span class="badge">更新至 2024-01-15</span>
+                </div>
+                <div class="devices-list device-grid">
+                    <!-- 数据1 - 总体评分 -->
+                    <div class="device-item current">
+                        <div class="device-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="device-info">
+                            <h3>平均评分 4.8 <span class="current-tag">表现极好</span></h3>
+                            <p class="device-meta">
+                                <span><i class="fas fa-comments"></i> 累计 128 条评价</span>
+                                <span><i class="fas fa-check-circle"></i> 好评率 96%</span>
+                                <span><i class="fas fa-reply"></i> 回复率 85%</span>
+                            </p>
+                            <p class="device-type">核心标签：诚信可靠🏅、价格公道💰、描述准确✅</p>
+                        </div>
+                        <div class="device-actions">
+                            <button class="btn-action btn-secondary" disabled>
+                                <i class="fas fa-medal"></i> 优质卖家
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 数据2 - 评分分布 -->
+                    <div class="device-item">
+                        <div class="device-icon">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <div class="device-info">
+                            <h3>五星好评 (65条)</h3>
+                            <p class="device-meta">
+                                <span><i class="fas fa-align-left"></i> 四星: 45条 (35%)</span>
+                                <span><i class="fas fa-align-left"></i> 三星: 12条 (9%)</span>
+                                <span><i class="fas fa-align-left"></i> 低分: 6条 (5%)</span>
+                            </p>
+                            <p class="device-type">高光时刻：苏同学等买家点赞“知识传承”</p>
+                        </div>
+                        <div class="device-actions">
+                            <button class="btn-action btn-warning">
+                                <i class="fas fa-eye"></i> 查看分布
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 数据3 - 成长分析 -->
+                    <div class="device-item">
+                        <div class="device-icon">
+                            <i class="fas fa-road"></i>
+                        </div>
+                        <div class="device-info">
+                            <h3>成熟期 (51-128条)</h3>
+                            <p class="device-meta">
+                                <span><i class="fas fa-seedling"></i> 经历摸索期与成长期</span>
+                                <span><i class="fas fa-trophy"></i> 达成“学长榜样”评价</span>
+                                <span><i class="fas fa-bullseye"></i> 目标: 98% 好评率</span>
+                            </p>
+                            <p class="device-type">近期趋势：本周新增 5 条，稳步上升</p>
+                        </div>
+                        <div class="device-actions">
+                            <button class="btn-action btn-warning">
+                                <i class="fas fa-chart-line"></i> 成长路径
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 模块2：精选评价与待处理列表 -->
+            <section class="management-section" id="login-history">
+                <div class="section-header">
+                    <h2><i class="fas fa-history"></i> 待回复及精选评价</h2>
+                    <div class="filter-options">
+                        <select class="filter-select">
+                            <option value="30">待回复评价 (3条)</option>
+                            <option value="7">最近一周</option>
+                            <option value="90">争议评价记录</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="login-history-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>评价时间</th>
+                                <th>买家</th>
+                                <th>评价内容摘要</th>
+                                <th>评分等级</th>
+                                <th>状态</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="login-success">
+                                <td>2小时前</td>
+                                <td>赵同学</td>
+                                <td>收到台灯了，亮度可调节很实用，包装仔细。</td>
+                                <td><span class="status-success">⭐⭐⭐⭐⭐</span></td>
+                                <td><span class="status-failed"><i class="fas fa-clock"></i> 待回复</span></td>
+                            </tr>
+                            <tr class="login-success">
+                                <td>2024-01-14</td>
+                                <td>王同学</td>
+                                <td>烧水壶和护眼灯非常新，价格合理，交易放心。</td>
+                                <td><span class="status-success">⭐⭐⭐⭐⭐</span></td>
+                                <td><span class="status-success"><i class="fas fa-check-circle"></i> 已回复</span></td>
+                            </tr>
+                            <tr class="login-failed">
+                                <td>3天前</td>
+                                <td>陈同学</td>
+                                <td>椅子调节功能有问题，和描述不太一样。</td>
+                                <td><span class="status-failed">⭐⭐⭐</span></td>
+                                <td><span class="status-failed"><i class="fas fa-exclamation-triangle"></i> 争议中</span>
+                                </td>
+                            </tr>
+                            <tr class="login-success">
+                                <td>1天前</td>
+                                <td>刘同学</td>
+                                <td>键盘手感不错，就是有一点小划痕，总体满意。</td>
+                                <td><span class="status-success">⭐⭐⭐⭐</span></td>
+                                <td><span class="status-failed"><i class="fas fa-clock"></i> 待回复</span></td>
+                            </tr>
+                            <tr class="login-success">
+                                <td>2024-01-10</td>
+                                <td>苏同学</td>
+                                <td>教材里有手写笔记和鼓励贴纸，知识传承很温暖。</td>
+                                <td><span class="status-success">⭐⭐⭐⭐⭐</span></td>
+                                <td><span class="status-success"><i class="fas fa-check-circle"></i> 高光评价</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-footer">
+                    <button class="btn-secondary">
+                        <i class="fas fa-download"></i> 导出完整评价记录
+                    </button>
+                    <button class="btn-secondary">
+                        <i class="fas fa-sync-alt"></i> 加载更多评价
+                    </button>
+                </div>
+            </section>
+
+            <!-- 模块3：按品类查看评价 -->
+            <section class="management-section" id="trusted-devices">
+                <div class="section-header">
+                    <h2><i class="fas fa-boxes"></i> 品类评价统计</h2>
+                    <span class="hint-text">共售出 42 件物品</span>
+                </div>
+
+                <div class="trusted-grid">
+                    <div class="trusted-card">
+                        <i class="fas fa-book card-icon"></i>
+                        <h3>书籍资料</h3>
+                        <p>4.9分 | 42条评价</p>
+                        <span class="trusted-badge"><i class="fas fa-star"></i> 笔记详细</span>
+                    </div>
+
+                    <div class="trusted-card">
+                        <i class="fas fa-home card-icon"></i>
+                        <h3>宿舍家居</h3>
+                        <p>4.8分 | 51条评价</p>
+                        <span class="trusted-badge"><i class="fas fa-star"></i> 结实耐用</span>
+                    </div>
+
+                    <div class="trusted-card">
+                        <i class="fas fa-laptop card-icon"></i>
+                        <h3>数码电子</h3>
+                        <p>4.7分 | 35条评价</p>
+                        <span class="untrusted-badge">功能完好</span>
+                    </div>
+                </div>
+
+                <div class="trusted-setting-mini">
+                    <span>仅向可信用户展示具体评价详情</span>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </section>
+
+
+            <!-- 模块4：改进与安全策略 -->
+            <section class="management-section" id="security-policy">
+                <div class="section-header">
+                    <h2><i class="fas fa-lightbulb"></i> 改进建议与目标</h2>
+                </div>
+
+                <div class="policy-mini-grid">
+
+                    <div class="policy-mini-card">
+                        <h3><i class="fas fa-check-double"></i> 描述准确性</h3>
+                        <p>加强功能状态描述，减少信息差</p>
+                    </div>
+
+                    <div class="policy-mini-card">
+                        <h3><i class="fas fa-tools"></i> 测机环节</h3>
+                        <p>发货前增加电子产品功能测试</p>
+                    </div>
+
+                    <div class="policy-mini-card">
+                        <h3><i class="fas fa-bullseye"></i> 信用目标</h3>
+                        <p>维持 98% 好评率</p>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- 模块5：批量管理评价 -->
+            <section class="management-section" id="batch-management">
+                <div class="section-header">
+                    <h2><i class="fas fa-comments"></i> 评价批量管理</h2>
+                </div>
+
+                <div class="batch-mini-grid">
+
+                    <div class="batch-mini-card">
+                        <i class="fas fa-heart"></i>
+                        <h3>一键感谢</h3>
+                        <button class="btn-warning">执行</button>
+                    </div>
+
+                    <div class="batch-mini-card">
+                        <i class="fas fa-reply-all"></i>
+                        <h3>批量回复</h3>
+                        <button class="btn-secondary">回复</button>
+                    </div>
+
+                    <div class="batch-mini-card">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <h3>争议处理</h3>
+                        <button class="btn-secondary">联系</button>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- 确认对话框 -->
+            <div class="confirmation-dialog" id="logoutAllDialog" style="display: none;">
+                <div class="dialog-content">
+                    <h3><i class="fas fa-exclamation-triangle"></i> 确认发起争议处理</h3>
+                    <p>此操作将邀请平台客服介入陈同学的椅子评价争议。请准备好交易时的实物照片及描述截图。</p>
+                    <div class="dialog-actions">
+                        <button class="btn-secondary" onclick="closeDialog()">取消</button>
+                        <button class="btn-warning" onclick="confirmLogoutAll()">平台介入</button>
+                    </div>
+                </div>
+            </div>
+            </section>
+
+
+        </div>
+    </main>
+
+    <footer class="footer_area">
+        <div class="footer_wrapper">
+            <div class="bottom_bar">
+                <p>&copy; 2026 Campus Market | 校园毕业物品流转平台团队 | <a href="#">服务条款</a></p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="js/review_detail.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>热门闪购·限时秒杀详情 - 毕业物品流转平台</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/archive_detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/notice_detail.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body class="notice_page">
+
+    <!-- 顶部导航栏（与主站一致） -->
+    <nav class="daohang">
+        <div class="daohang_wrapper">
+            <ul class="daohang_list">
+                <li class="daohang_items"><a href="index.html">首页</a></li>
+                <li class="daohang_items"><a href="about.html">平台概况</a></li>
+                <li class="daohang_items"><a href="categories.html">商品分类</a></li>
+                <li class="daohang_items"><a href="guide.html">流转锦囊</a></li>
+                <li class="daohang_items active"><a href="events.html">活动专区</a></li>
+                <li class="daohang_items"><a href="user.html">用户中心</a></li>
+            </ul>
+            <div class="nav_auth"><a href="signin.html" class="btn_nav">登录</a></div>
+        </div>
+    </nav>
+
+    <!-- Box 1: Hero Banner-->
+    <header class="notice_hero">
+        <div class="hero_overlay"></div> <!-- 对应 CSS 中的蒙层 -->
+        <div class="hero_content animate__animated animate__fadeIn">
+            <span class="en_text">NOTICES</span>
+            <h1 class="elegant_title">实时播报 <span class="notice_seal">热点</span></h1>
+            <div class="elegant_line"></div>
+
+        </div>
+
+        <!-- 底部波浪线  -->
+        <div class="banner_wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C0,0,31.83,14.28,64,27.1,126.31,52,187.31,68,250.31,68c31.11,0,32.25-10.15,71.08-11.56Z"
+                    fill="#f9fbfa"></path>
+            </svg>
+        </div>
+    </header>
+    <div class="container">
+
+        <!-- 第一部分：回收规则说明 -->
+        <section id="rules" class="content-section">
+            <div class="section-header">
+                <div class="section-number">01</div>
+                <h2 class="section-title">回收规则说明</h2>
+                <p class="section-desc">明确回收范围与基本标准，开启绿色循环之旅</p>
+            </div>
+
+            <div class="section-content">
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-box-open"></i>
+                        回收基本规则
+                    </h3>
+
+                    <div class="rules-grid">
+                        <div class="rule-item">
+                            <div class="rule-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="rule-content">
+                                <h4>可回收范围</h4>
+                                <p>符合环保循环标准的小型家具、小型家电、体育器材及成套大件书籍资料</p>
+                            </div>
+                        </div>
+
+                        <div class="rule-item">
+                            <div class="rule-icon">
+                                <i class="fas fa-times-circle"></i>
+                            </div>
+                            <div class="rule-content">
+                                <h4>不接收物品</h4>
+                                <ul>
+                                    <li><strong>大型电器：</strong>冰箱、洗衣机、空调等需单独预约专业回收</li>
+                                    <li><strong>安全隐患：</strong>破损严重物品、电池、化学试剂、易燃易爆品</li>
+                                    <li><strong>卫生标准：</strong>床上用品（除捐赠给指定慈善机构外）</li>
+                                    <li><strong>超标尺寸：</strong>单体长宽高超过1.5米的巨型物品</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="rule-item">
+                            <div class="rule-icon">
+                                <i class="fas fa-user-check"></i>
+                            </div>
+                            <div class="rule-content">
+                                <h4>参与资格</h4>
+                                <ul>
+                                    <li>平台实名认证用户均可预约</li>
+                                    <li>物品需确保清洁、干燥、无严重异味</li>
+                                    <li>宿舍组团（5件以上）享有优先上门搬运服务</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第二部分：预约回收全流程 -->
+        <section id="process" class="content-section">
+            <div class="section-header">
+                <div class="section-number">02</div>
+                <h2 class="section-title">预约回收全流程</h2>
+                <p class="section-desc">四步完成预约，轻松参与校园绿色回收服务</p>
+            </div>
+
+            <div class="section-content">
+                <!-- 回收操作流程 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-clipboard-list"></i>
+                        回收申请操作
+                    </h3>
+
+                    <div class="process-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-time">第一步</div>
+                            <div class="timeline-content">
+                                <h4>线上预约</h4>
+                                <p>访问“大件回收”专区，填写物品信息、上传展示照片并预约时段</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item highlight">
+                            <div class="timeline-time">第二步</div>
+                            <div class="timeline-content">
+                                <h4>审核确认</h4>
+                                <p>系统24小时内审核物品标准，通过后生成专属取货核验二维码</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-time">第三步</div>
+                            <div class="timeline-content">
+                                <h4>现场准备</h4>
+                                <p>将物品移至宿舍门口或指定回收点，确保物品清洁并粘贴好标识</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-time">第四步</div>
+                            <div class="timeline-content">
+                                <h4>扫码交接</h4>
+                                <p>工作人员核验二维码，扫码确认物品信息，签署环保流转确认单</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tips-box">
+                        <h4><i class="fas fa-lightbulb"></i> 回收准备技巧</h4>
+                        <div class="tips-grid">
+                            <div class="tip-item">
+                                <i class="fas fa-ruler-combined"></i>
+                                <p>提前测量物品尺寸，确保符合搬运通道标准</p>
+                            </div>
+                            <div class="tip-item">
+                                <i class="fas fa-camera"></i>
+                                <p>照片需清晰展示功能完好，避免后期审核不通过</p>
+                            </div>
+                            <div class="tip-item">
+                                <i class="fas fa-qrcode"></i>
+                                <p>提前截图保存预约二维码，交接时展示更快捷</p>
+                            </div>
+                            <div class="tip-item">
+                                <i class="fas fa-users"></i>
+                                <p>联系同寝室同学组团预约，可享受优先处理权限</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 区域划分 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-map-marker-alt"></i>
+                        回收区域与取货安排
+                    </h3>
+
+                    <div class="outcome-tabs">
+                        <div class="outcome-nav">
+                            <button class="outcome-btn active" data-outcome="success">东区宿舍 (1-6号楼)</button>
+                            <button class="outcome-btn" data-outcome="fail">西区宿舍 (7-12号楼)</button>
+                            <button class="outcome-btn" data-outcome="issue">研究生/国际公寓</button>
+                        </div>
+
+                        <div class="outcome-content">
+                            <!-- 东区 -->
+                            <div class="outcome-pane active" id="success-pane">
+                                <div class="success-steps">
+                                    <div class="success-step">
+                                        <div class="step-icon"><i class="fas fa-door-open"></i></div>
+                                        <div class="step-desc">
+                                            <h5>位置：各楼一层大厅指定区域</h5>
+                                            <p>开放时间：8:00-20:00 (全天候开放)</p>
+                                        </div>
+                                    </div>
+                                    <div class="success-step">
+                                        <div class="step-icon"><i class="fas fa-user"></i></div>
+                                        <div class="step-desc">
+                                            <h5>负责人：各楼管值班室</h5>
+                                            <p>主要覆盖本科生宿舍，现场扫码交接</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 西区 -->
+                            <div class="outcome-pane" id="fail-pane">
+                                <div class="fail-options">
+                                    <div class="option-item">
+                                        <div class="option-icon"><i class="fas fa-tree"></i></div>
+                                        <div class="option-desc">
+                                            <h5>位置：宿舍楼侧面空地(雨棚下)</h5>
+                                            <p>开放时间：9:00-21:00 (避开午休时间)</p>
+                                        </div>
+                                    </div>
+                                    <div class="option-item">
+                                        <div class="option-icon"><i class="fas fa-wrench"></i></div>
+                                        <div class="option-desc">
+                                            <h5>负责人：西区物业办</h5>
+                                            <p>需确保物品不阻挡消防及人行通道</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 研究生区 -->
+                            <div class="outcome-pane" id="issue-pane">
+                                <div class="issue-list">
+                                    <div class="issue-item">
+                                        <div class="issue-name">研究生公寓</div>
+                                        <div class="issue-solution">公寓管理中心一楼大厅，支持24小时自助存放柜</div>
+                                    </div>
+                                    <div class="issue-item">
+                                        <div class="issue-name">国际学生公寓</div>
+                                        <div class="issue-solution">留学生服务处前台，10:00-18:00提供中英双语支持</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第三部分：品质标准与售后跟踪 -->
+        <section id="quality" class="content-section">
+            <div class="section-header">
+                <div class="section-number">03</div>
+                <h2 class="section-title">品质标准与售后跟踪</h2>
+                <p class="section-desc">明确质检流程与积分激励，了解物品流转去向</p>
+            </div>
+
+            <div class="section-content">
+                <!-- 质检分级 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-star"></i>
+                        回收物品成色评估标准
+                    </h3>
+
+                    <div class="grade-cards">
+                        <div class="grade-card s-grade">
+                            <div class="grade-header">
+                                <div class="grade-badge">精品</div>
+                                <div class="grade-title">功能完好</div>
+                            </div>
+                            <div class="grade-content">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> 电器性能稳定，线缆无损</li>
+                                    <li><i class="fas fa-check-circle"></i> 家具结构牢固，外观整洁</li>
+                                    <li><i class="fas fa-check-circle"></i> 奖励高额环保积分</li>
+                                    <li><i class="fas fa-check-circle"></i> 进入“快速流转”通道</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="grade-card a-grade">
+                            <div class="grade-header">
+                                <div class="grade-badge">普通</div>
+                                <div class="grade-title">轻微磨损</div>
+                            </div>
+                            <div class="grade-content">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> 存在正常使用痕迹</li>
+                                    <li><i class="fas fa-check-circle"></i> 核心功能不受影响</li>
+                                    <li><i class="fas fa-check-circle"></i> 需经过二次清洁消毒</li>
+                                    <li><i class="fas fa-check-circle"></i> 适合爱心捐赠或低价流转</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="grade-card b-grade">
+                            <div class="grade-header">
+                                <div class="grade-badge">特殊</div>
+                                <div class="grade-title">需修缮/拆解</div>
+                            </div>
+                            <div class="grade-content">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> 存在部分零件缺失或损坏</li>
+                                    <li><i class="fas fa-check-circle"></i> 由环保协会进行修复尝试</li>
+                                    <li><i class="fas fa-check-circle"></i> 无法修复的进行分类拆解</li>
+                                    <li><i class="fas fa-check-circle"></i> 贡献值计入环保档案</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 跟踪流程 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-search-location"></i>
+                        物品去向跟踪流程
+                    </h3>
+
+                    <div class="inspection-flow">
+                        <div class="flow-step">
+                            <div class="flow-number">1</div>
+                            <div class="flow-content">
+                                <h4>扫码存证</h4>
+                                <p>交接时确认单二维码即为该物品终身身份证</p>
+                            </div>
+                        </div>
+
+                        <div class="flow-step">
+                            <div class="flow-number">2</div>
+                            <div class="flow-content">
+                                <h4>状态推送</h4>
+                                <p>经过消毒、质检、匹配后，系统推送状态更新</p>
+                            </div>
+                        </div>
+
+                        <div class="flow-step">
+                            <div class="flow-number">3</div>
+                            <div class="flow-content">
+                                <h4>流转反馈</h4>
+                                <p>若物品成功匹配捐赠，可收到接收方的匿名感谢</p>
+                            </div>
+                        </div>
+
+                        <div class="flow-step">
+                            <div class="flow-number">4</div>
+                            <div class="flow-content">
+                                <h4>积分到账</h4>
+                                <p>数据审核通过后，24小时内积分发放至账户</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 积分服务 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-leaf"></i>
+                        环保积分激励体系
+                    </h3>
+
+                    <div class="service-grid">
+                        <div class="service-card">
+                            <div class="service-icon"><i class="fas fa-truck"></i></div>
+                            <div class="service-content">
+                                <h4>快递优惠</h4>
+                                <p>50积分可抵扣¥10平台合作快递运费</p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon"><i class="fas fa-gift"></i></div>
+                            <div class="service-content">
+                                <h4>文创兑换</h4>
+                                <p>积分可换取校园文创产品、环保帆布袋等</p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon"><i class="fas fa-crown"></i></div>
+                            <div class="service-content">
+                                <h4>权益升级</h4>
+                                <p>积分可用于提升会员等级，解锁优先抢购权</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第四部分：公平性与服务保障 -->
+        <section id="fairness" class="content-section">
+            <div class="section-header">
+                <div class="section-number">04</div>
+                <h2 class="section-title">公平性与服务保障</h2>
+                <p class="section-desc">坚持公开透明的服务宗旨，保障每一位同学的参与权益</p>
+            </div>
+
+            <div class="section-content">
+                <div class="fairness-grid">
+                    <!-- 争议处理 -->
+                    <div class="fairness-card">
+                        <div class="fairness-header">
+                            <div class="fairness-icon"><i class="fas fa-gavel"></i></div>
+                            <h4>争议仲裁</h4>
+                        </div>
+                        <ul class="fairness-list">
+                            <li>现场拍照存档物品状态，作为唯一处理依据</li>
+                            <li>平台仲裁委员会3个工作日内进行核实并判定</li>
+                            <li>支持物品退回或调整积分补偿方案</li>
+                        </ul>
+                    </div>
+
+                    <!-- 服务通道 -->
+                    <div class="fairness-card">
+                        <div class="fairness-header">
+                            <div class="fairness-icon"><i class="fas fa-phone-alt"></i></div>
+                            <h4>特别通道</h4>
+                        </div>
+                        <ul class="fairness-list">
+                            <li><strong>紧急通道：</strong>特殊情况致电8790-xxxx预约处理</li>
+                            <li><strong>帮扶服务：</strong>行动不便者可申请志愿者上门协助</li>
+                            <li><strong>批量优先：</strong>宿舍组团5件以上享受优先安排</li>
+                        </ul>
+                    </div>
+
+                    <!-- 咨询渠道 -->
+                    <div class="fairness-card">
+                        <div class="fairness-header">
+                            <div class="fairness-icon"><i class="fas fa-comments"></i></div>
+                            <h4>多维咨询</h4>
+                        </div>
+                        <ul class="fairness-list">
+                            <li>平台客服热线 400-xxx-xxxx (8:00-22:00)</li>
+                            <li>后勤处校内热线 8790-xxxx 处理搬运事务</li>
+                            <li>环保协会驻点 学生活动中心308室 晚间答疑</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 承诺声明 -->
+                <div class="fairness-statement">
+                    <div class="statement-icon"><i class="fas fa-handshake"></i></div>
+                    <div class="statement-content">
+                        <h4>服务团队承诺</h4>
+                        <p>我们致力于打造一个高效、公平的校园大件循环网络。无论物品价值高低，您的每一份参与都在为绿色校园做出贡献。我们承诺全流程透明公开，确保物品物尽其用。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第五部分：常见问题解答 -->
+        <section id="faq" class="content-section">
+            <div class="section-header">
+                <div class="section-number">05</div>
+                <h2 class="section-title">常见问题解答</h2>
+                <p class="section-desc">解答大件物品回收过程中最常见的疑问</p>
+            </div>
+
+            <div class="section-content">
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <div class="faq-number">Q1</div>
+                            <div class="faq-text">不确定物品是否符合标准怎么办？</div>
+                            <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>可通过平台上传物品多角度照片，在线客服将在1小时内完成初步评估并给予专业建议。主要关注功能是否完好、外观是否清洁以及尺寸是否超标（长宽高≤1.5米）。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <div class="faq-number">Q2</div>
+                            <div class="faq-text">错过预约的时间段了如何处理？</div>
+                            <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>若原预约已失效，您可直接在平台申请“重新预约”下一轮次。此外，您也可以选择“自助投放”方式，将物品自行搬运至校内指定的24小时自助回收箱并扫描箱体二维码完成登记。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <div class="faq-number">Q3</div>
+                            <div class="faq-text">回收的物品最终会流向哪里？</div>
+                            <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>物品流向主要分三类：1. 优质物品进入平台“二手频道”供低价流转；2. 符合慈善标准的物品由环保协会分拣后捐赠给偏远山区或社会福利机构；3.
+                                    无法修复的物品进行环保拆解与资源再生。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="footer_area">
+        <div class="footer_wrapper">
+            <div class="bottom_bar">
+                <p>&copy; 2026 Campus Market | 校园毕业物品流转平台团队 | <a href="#">服务条款</a></p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="js/notice_detail.js"></script>
+</body>
+
+</html>

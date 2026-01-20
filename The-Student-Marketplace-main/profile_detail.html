@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人档案管理 - 锦囊护卫</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/archive_detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/profile_detail.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body class="profile_page">
+
+    <!-- 顶部导航栏（与主站一致） -->
+    <nav class="daohang">
+        <div class="daohang_wrapper">
+            <ul class="daohang_list">
+                <li class="daohang_items"><a href="index.html">首页</a></li>
+                <li class="daohang_items"><a href="about.html">平台概况</a></li>
+                <li class="daohang_items"><a href="categories.html">商品分类</a></li>
+                <li class="daohang_items"><a href="guide.html">流转锦囊</a></li>
+                <li class="daohang_items"><a href="events.html">活动专区</a></li>
+                <li class="daohang_items active"><a href="user.html">用户中心</a></li>
+            </ul>
+            <div class="nav_auth"><a href="signin.html" class="btn_nav">登录</a></div>
+        </div>
+    </nav>
+
+    <!-- Box 1: Hero Banner -->
+    <header class="profile_hero">
+        <div class="hero_overlay"></div> <!-- 对应 CSS 中的蒙层 -->
+        <div class="hero_content animate__animated animate__fadeIn">
+            <span class="en_text">PROFILE</span>
+            <h1 class="elegant_title">核心档案详情 <span class="profile_seal">本科生</span></h1>
+            <div class="elegant_line"></div>
+            <p>详细了解张明哲的校园定位、成长轨迹、荣誉勋章及绿色环保贡献指南。</p>
+        </div>
+
+        <!-- 底部波浪线 -->
+        <div class="banner_wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C0,0,31.83,14.28,64,27.1,126.31,52,187.31,68,250.31,68c31.11,0,32.25-10.15,71.08-11.56Z"
+                    fill="#f9fbfa"></path>
+            </svg>
+        </div>
+    </header>
+    <main>
+        <!-- 主要内容区域 -->
+        <div class="container">
+            <section id="identity-card" class="content-section">
+                <div class="section-title">
+                    <h2><i class="fas fa-id-card"></i> 身份卡片</h2>
+                    <p class="section-desc">核心身份信息与校园定位</p>
+                </div>
+
+                <div class="identity-container">
+                    <!-- 左侧：紧凑的个人信息 -->
+                    <div class="identity-left-column">
+                        <div class="profile-compact">
+                            <div class="avatar-box">
+                                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=张明哲" alt="张明哲">
+                                <div class="status-dot"></div>
+                            </div>
+                            <div class="avatar-btns">
+                                <button class="mini-btn"><i class="fas fa-camera"></i></button>
+                                <button class="mini-btn"><i class="fas fa-edit"></i></button>
+                            </div>
+                            <h3>张明哲</h3>
+                            <div class="profile-tags">
+                                <span class="tag">流转达人</span>
+                                <span class="tag">环保先锋</span>
+                            </div>
+                        </div>
+
+                        <div class="academic-table">
+                            <div class="table-header"><i class="fas fa-graduation-cap"></i> 学籍信息</div>
+                            <div class="table-content">
+                                <div class="row"><span>学号</span><span class="val">2019****0321</span></div>
+                                <div class="row"><span>专业</span><span class="val">金融学</span></div>
+                                <div class="row"><span>学院</span><span class="val">经济管理学院</span></div>
+                                <div class="row"><span>入学年份</span><span class="val">2019年</span></div>
+                                <div class="row"><span>毕业状态</span><span class="val-highlight">大四（即将毕业）</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 右侧：校园定位 + 2x2 核心数据 -->
+                    <div class="identity-right-column">
+                        <!-- 校园定位 (保持扁平) -->
+                        <div class="sub-group">
+                            <div class="group-label"><i class="fas fa-map-marker-alt"></i> 校园定位</div>
+                            <div class="location-flat-grid">
+                                <div class="loc-item">
+                                    <div class="loc-icon bg-blue"><i class="fas fa-home"></i></div>
+                                    <div class="loc-text">
+                                        <h6>宿舍</h6>
+                                        <p>西区3号楼612室</p>
+                                    </div>
+                                </div>
+                                <div class="loc-item">
+                                    <div class="loc-icon bg-green"><i class="fas fa-university"></i></div>
+                                    <div class="loc-text">
+                                        <h6>常活动区</h6>
+                                        <p>图书馆、学生活动中心</p>
+                                    </div>
+                                </div>
+                                <div class="loc-item">
+                                    <div class="loc-icon bg-orange"><i class="fas fa-road"></i></div>
+                                    <div class="loc-text">
+                                        <h6>毕业去向</h6>
+                                        <p>已保研本校研究生院</p>
+                                    </div>
+                                </div>
+                                <div class="loc-item">
+                                    <div class="loc-icon bg-teal"><i class="fas fa-calendar-alt"></i></div>
+                                    <div class="loc-text">
+                                        <h6>在校时间</h6>
+                                        <p>2019.09 - 2024.06</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 核心数据 -->
+                        <div class="sub-group">
+                            <div class="group-label"><i class="fas fa-chart-line"></i> 核心数据</div>
+                            <div class="stats-2x2-grid">
+                                <div class="stat-box">
+                                    <i class="fas fa-exchange-alt"></i>
+                                    <div class="stat-info"><span class="number">127</span><span
+                                            class="label">累计流转</span></div>
+                                </div>
+                                <div class="stat-box">
+                                    <i class="fas fa-leaf"></i>
+                                    <div class="stat-info"><span class="number">1,245</span><span
+                                            class="label">减碳(kg)</span></div>
+                                </div>
+                                <div class="stat-box">
+                                    <i class="fas fa-star"></i>
+                                    <div class="stat-info"><span class="number">98.7%</span><span
+                                            class="label">好评率</span></div>
+                                </div>
+                                <div class="stat-box">
+                                    <i class="fas fa-award"></i>
+                                    <div class="stat-info"><span class="number">12</span><span class="label">荣誉勋章</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 模块2：成长成就记录 -->
+            <section class="management-section" id="login-history">
+                <div class="section-header">
+                    <h2><i class="fas fa-trophy"></i> 关键成就里程碑</h2>
+                    <div class="filter-options">
+                        <select class="filter-select">
+                            <option value="30">勋章总览 12/16</option>
+                            <option value="7">金质勋章</option>
+                            <option value="90">稀有勋章</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="login-history-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>获得时间</th>
+                                <th>荣誉名称</th>
+                                <th>成就条件</th>
+                                <th>勋章等级</th>
+                                <th>状态</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="login-success">
+                                <td>2024-03-15</td>
+                                <td>流转达人</td>
+                                <td>成功流转100+物品</td>
+                                <td>金质 · 史诗级</td>
+                                <td><span class="status-success"><i class="fas fa-check-circle"></i> 已解锁</span></td>
+                            </tr>
+                            <tr class="login-success">
+                                <td>2024-02-28</td>
+                                <td>环保先锋</td>
+                                <td>减少碳排放500kg+</td>
+                                <td>银质 · 稀有级</td>
+                                <td><span class="status-success"><i class="fas fa-check-circle"></i> 已解锁</span></td>
+                            </tr>
+                            <tr class="login-failed">
+                                <td>2024-04-12</td>
+                                <td>学霸传承</td>
+                                <td>分享10套学习笔记</td>
+                                <td>当前进度 7/10</td>
+
+                                <td><span class="status-failed"><i class="fas fa-spinner"></i> 进行中</span>
+                                </td>
+                            </tr>
+                            <tr class="login-success">
+                                <td>2024-04-05</td>
+                                <td>社群领袖</td>
+                                <td>建立50人流转社群</td>
+                                <td>钻石 · 传说级</td>
+                                <td><span class="status-success"><i class="fas fa-check-circle"></i> 已解锁</span></td>
+                            </tr>
+                            <tr class="login-success">
+                                <td>2024-01-20</td>
+                                <td>诚信之星</td>
+                                <td>连续50次五星好评</td>
+                                <td>铜质 · 精英级</td>
+                                <td><span class="status-success"><i class="fas fa-check-circle"></i> 已解锁</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-footer">
+                    <button class="btn-secondary">
+                        <i class="fas fa-medal"></i> 总成就点: 845
+                    </button>
+                    <button class="btn-secondary">
+                        <i class="fas fa-chart-line"></i> 平台排名: 前5%
+                    </button>
+                </div>
+            </section>
+
+            <!-- 模块3：已获得核心勋章 -->
+            <section class="management-section" id="trusted-devices">
+                <div class="section-header">
+                    <h2><i class="fas fa-award"></i> 稀有勋章墙</h2>
+                    <span class="hint-text">已获得 12 / 16 枚</span>
+                </div>
+
+                <div class="trusted-grid">
+                    <div class="trusted-card">
+                        <i class="fas fa-crown card-icon"></i>
+                        <h3>流转达人</h3>
+                        <p>成功流转127件物品</p>
+                        <span class="trusted-badge"><i class="fas fa-star"></i> 金质勋章</span>
+                    </div>
+
+                    <div class="trusted-card">
+                        <i class="fas fa-leaf card-icon"></i>
+                        <h3>环保先锋</h3>
+                        <p>减碳 1,245 kg</p>
+                        <span class="trusted-badge"><i class="fas fa-star"></i> 银质勋章</span>
+                    </div>
+
+                    <div class="trusted-card">
+                        <i class="fas fa-users card-icon"></i>
+                        <h3>社群领袖</h3>
+                        <p>管理 286 人互助群</p>
+                        <span class="untrusted-badge">钻石勋章</span>
+                    </div>
+                </div>
+
+                <div class="trusted-setting-mini">
+                    <span>公开我的荣誉勋章墙</span>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </section>
+
+
+            <!-- 模块4：绿色贡献看板 -->
+            <section class="management-section" id="security-policy">
+                <div class="section-header">
+                    <h2><i class="fas fa-leaf"></i> 绿色环保看板</h2>
+                </div>
+
+                <div class="policy-mini-grid">
+
+                    <div class="policy-mini-card">
+                        <h3><i class="fas fa-cloud"></i> 减少碳排放</h3>
+                        <p>1,245 kg (约62棵树)</p>
+                    </div>
+
+                    <div class="policy-mini-card">
+                        <h3><i class="fas fa-money-bill-wave"></i> 节省经济价值</h3>
+                        <p>为他人节省: ¥8,760</p>
+                    </div>
+
+                    <div class="policy-mini-card">
+                        <h3><i class="fas fa-hands-helping"></i> 累计帮助他人</h3>
+                        <p>45次互助匹配</p>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- 模块5：社交与联系方式 -->
+            <section class="management-section" id="batch-management">
+                <div class="section-header">
+                    <h2><i class="fas fa-users"></i> 社交关联与社群</h2>
+                </div>
+
+                <div class="batch-mini-grid">
+
+                    <div class="batch-mini-card">
+                        <i class="fab fa-weixin"></i>
+                        <h3>微信: zmz_study</h3>
+                        <button class="btn-secondary">复制</button>
+                    </div>
+
+                    <div class="batch-mini-card">
+                        <i class="fas fa-university"></i>
+                        <h3>学习互助群</h3>
+                        <button class="btn-secondary">管理员</button>
+                    </div>
+
+                    <div class="batch-mini-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>EDU 邮箱</h3>
+                        <button class="btn-secondary">发送</button>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- 确认对话框 -->
+            <div class="confirmation-dialog" id="logoutAllDialog" style="display: none;">
+                <div class="dialog-content">
+                    <h3><i class="fas fa-exclamation-triangle"></i> 确认联系张明哲</h3>
+                    <p>您将通过平台私信功能与该毕业生取得联系。毕业物品流转需遵守校园安全规范。</p>
+                    <div class="dialog-actions">
+                        <button class="btn-secondary" onclick="closeDialog()">取消</button>
+                        <button class="btn-warning" onclick="confirmLogoutAll()">立即咨询</button>
+                    </div>
+                </div>
+            </div>
+            </section>
+
+
+        </div>
+    </main>
+    <footer class="footer_area">
+        <div class="footer_wrapper">
+            <div class="bottom_bar">
+                <p>&copy; 2026 Campus Market | 校园毕业物品流转平台团队 | <a href="#">服务条款</a></p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="js/profile_detail.js"></script>
+</body>
+
+</html>
