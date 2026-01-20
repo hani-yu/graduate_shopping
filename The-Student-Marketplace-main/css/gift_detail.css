@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+/* CSS变量定义 - 使用指定的配色方案 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 :root {
     --deep-green: #064e3b;
     --theme-teal: #0d9488;
@@ -44,6 +48,10 @@ h3 {
 }
 
 
+<<<<<<< HEAD
+=======
+/* --- Box 1: Hero (问号装饰) --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .gift_hero {
     height: 65vh;
     /* background: var(--faq-green); */
@@ -1231,3 +1239,265 @@ body {
     color: var(--text-slate);
     line-height: 1.5;
 }
+<<<<<<< HEAD
+=======
+
+/* 页尾提醒 */
+/* .page-footer {
+    background: linear-gradient(135deg, var(--deep-green) 0%, #0a5c46 100%);
+    color: white;
+    border-radius: 16px;
+    padding: 50px 40px;
+    margin-top: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-footer::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+}
+
+.footer-reminder {
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-reminder h3 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-reminder h3 i {
+    color: var(--accent-gold);
+}
+
+.reminder-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.reminder-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.reminder-item:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-5px);
+}
+
+.reminder-item i {
+    color: var(--accent-gold);
+    font-size: 1.8rem;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.reminder-item h5 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.reminder-item p {
+    opacity: 0.9;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.footer-navigation {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-navigation a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-navigation a:hover {
+    color: var(--light-teal);
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-3px);
+}
+
+.footer-message {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-quote {
+    font-style: italic;
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 25px;
+    line-height: 1.7;
+    position: relative;
+    padding: 0 30px;
+}
+
+.footer-quote i:first-child {
+    position: absolute;
+    left: 0;
+    top: -10px;
+    font-size: 2rem;
+    opacity: 0.5;
+}
+
+.footer-quote i:last-child {
+    position: absolute;
+    right: 0;
+    bottom: -10px;
+    font-size: 2rem;
+    opacity: 0.5;
+}
+
+.footer-wish {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--accent-gold);
+} */
+
+/* 响应式设计 */
+@media (max-width: 992px) {
+    .grade-cards,
+    .service-grid,
+    .delivery-options,
+    .fairness-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .success-steps,
+    .fail-options {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2.2rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .section-number {
+        font-size: 3rem;
+    }
+    
+    .rules-grid,
+    .tips-grid,
+    .inspection-flow,
+    .reminder-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .outcome-nav {
+        flex-direction: column;
+    }
+    
+    .outcome-btn {
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .fairness-statement {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .container {
+        padding: 15px;
+    }
+    
+    .content-section {
+        padding: 25px;
+    }
+    
+    .page-header,
+    .page-footer {
+        padding: 30px 20px;
+    }
+    
+    .faq-answer-content {
+        padding-left: 0;
+        padding-top: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header {
+        padding: 25px 15px;
+    }
+    
+    .page-title {
+        font-size: 1.8rem;
+    }
+    
+    .page-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .header-tagline {
+        font-size: 0.95rem;
+        padding: 10px 20px;
+    }
+    
+    .countdown-digit {
+        font-size: 1.4rem;
+        min-width: 50px;
+        padding: 8px 12px;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .block-title {
+        font-size: 1.3rem;
+    }
+    
+    .faq-question,
+    .faq-answer {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .footer-quote {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+}
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514

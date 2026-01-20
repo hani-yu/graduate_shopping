@@ -9,7 +9,11 @@ $(document).ready(function () {
         }
     });
 
+<<<<<<< HEAD
     // --- 2. 简介卡片入场动画  ---
+=======
+    // --- 2. 简介卡片入场动画 (jianjie_donghua) ---
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     const jianjieObserver = new IntersectionObserver((entries) => {
         if (entries[0].isIntersecting) {
             $('#jianjieCard').addClass('animate__fadeInUp');
@@ -21,7 +25,11 @@ $(document).ready(function () {
     if (jianjieEl) jianjieObserver.observe(jianjieEl);
 
 
+<<<<<<< HEAD
     // --- 3. 时间轴逻辑  ---
+=======
+    // --- 3. 时间轴逻辑 (shijian_zhou) ---
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     function handleTimeline() {
         const scrollPos = $(window).scrollTop() + ($(window).height() * 0.85);
         const $zhouBox = $('.shiguang_zhou_box');
@@ -45,7 +53,11 @@ $(document).ready(function () {
     handleTimeline();
 
 
+<<<<<<< HEAD
     // --- 4. 突破点平移切入 ---
+=======
+    // --- 4. 突破点平移切入 (tupo_reveal) ---
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     const tupoObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -62,7 +74,11 @@ $(document).ready(function () {
     document.querySelectorAll('.tupo_ka').forEach(ka => tupoObserver.observe(ka));
 
 
+<<<<<<< HEAD
     // --- 5. 折线图生长逻辑  ---
+=======
+    // --- 5. 折线图生长逻辑 (quxian_shengzhang) ---
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     const path = document.getElementById('growthPath');
     if (path) { // 安全检查：只有找到路径才执行
         const pathLength = path.getTotalLength();
@@ -283,7 +299,11 @@ $(document).ready(function () {
                 }, 300);
             });
 
+<<<<<<< HEAD
             // 5秒后重置表单
+=======
+            // 5秒后重置表单（实际应用中应该保持订阅状态）
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
             setTimeout(() => {
                 emailInputNew.value = '';
                 frequencySelect.value = 'weekly';
@@ -293,7 +313,11 @@ $(document).ready(function () {
                 subscribeBtnNew.disabled = false;
             }, 5000);
 
+<<<<<<< HEAD
             // 记录订阅信息
+=======
+            // 记录订阅信息（实际应用中应该发送到后端）
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
             console.log('订阅成功:', { email, frequency, timestamp: new Date().toISOString() });
 
         }, 1500);

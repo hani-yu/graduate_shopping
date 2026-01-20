@@ -14,7 +14,11 @@
 
 <body class="device_page">
 
+<<<<<<< HEAD
     <!-- 顶部导航栏 -->
+=======
+    <!-- 顶部导航栏（与主站一致） -->
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     <nav class="daohang">
         <div class="daohang_wrapper">
             <ul class="daohang_list">
@@ -29,17 +33,28 @@
         </div>
     </nav>
 
+<<<<<<< HEAD
     <!-- Box 1: Hero Banner  -->
+=======
+    <!-- Box 1: Hero Banner (透视长廊背景) -->
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     <header class="device_hero">
         <div class="hero_overlay"></div> <!-- 对应 CSS 中的蒙层 -->
         <div class="hero_content animate__animated animate__fadeIn">
             <span class="en_text">DEVICE</span>
             <h1 class="elegant_title">登录设备管理 <span class="device_seal">设备管理</span></h1>
             <div class="elegant_line"></div>
+<<<<<<< HEAD
           
         </div>
 
         <!-- 底部波浪线 -->
+=======
+            <!-- <p>详细了解福利获取机制、成长体系及使用指南。</p> -->
+        </div>
+
+        <!-- 底部波浪线 (建议保留以衔接下方色块) -->
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
         <div class="banner_wave">
             <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
                 <path
@@ -196,6 +211,84 @@
                 </div>
             </section>
 
+<<<<<<< HEAD
+=======
+            <!-- 模块3：可信设备设置 -->
+            <!-- <section class="management-section" id="trusted-devices">
+                <div class="section-header">
+                    <h2><i class="fas fa-shield-alt"></i> 可信设备设置</h2>
+                    <span class="hint-text">已设置 2/5 台可信设备</span>
+                </div>
+                <div class="trusted-devices-list">
+                  
+                    <div class="trusted-device-item">
+                        <div class="device-check">
+                            <input type="checkbox" id="device1" checked>
+                            <label for="device1"></label>
+                        </div>
+                        <div class="device-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <div class="device-info">
+                            <h3>我的工作电脑</h3>
+                            <p class="device-meta">Windows 11 · Chrome浏览器 · 添加于2025-12-15</p>
+                        </div>
+                        <div class="trusted-status">
+                            <span class="trusted-tag"><i class="fas fa-star"></i> 可信设备</span>
+                        </div>
+                    </div>
+                    
+                   
+                    <div class="trusted-device-item">
+                        <div class="device-check">
+                            <input type="checkbox" id="device2" checked>
+                            <label for="device2"></label>
+                        </div>
+                        <div class="device-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="device-info">
+                            <h3>iPhone 14 Pro</h3>
+                            <p class="device-meta">iOS 16 · Safari浏览器 · 添加于2025-11-20</p>
+                        </div>
+                        <div class="trusted-status">
+                            <span class="trusted-tag"><i class="fas fa-star"></i> 可信设备</span>
+                        </div>
+                    </div>
+                    
+                 
+                    <div class="trusted-device-item">
+                        <div class="device-check">
+                            <input type="checkbox" id="device3">
+                            <label for="device3"></label>
+                        </div>
+                        <div class="device-icon">
+                            <i class="fas fa-tablet-alt"></i>
+                        </div>
+                        <div class="device-info">
+                            <h3>华为平板</h3>
+                            <p class="device-meta">HarmonyOS · 锦囊App · 最近登录</p>
+                        </div>
+                        <div class="trusted-status">
+                            <span class="untrusted-tag">未设置可信</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="trusted-settings">
+                    <div class="setting-item">
+                        <div class="toggle-setting">
+                            <span>可信设备免验证登录</span>
+                            <div class="toggle-switch">
+                                <input type="checkbox" id="trustedLogin" checked>
+                                <label for="trustedLogin"></label>
+                            </div>
+                        </div>
+                        <p class="setting-desc">开启后，可信设备登录时无需短信或邮箱验证</p>
+                    </div>
+                </div>
+            </section> -->
+
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
             <section class="management-section" id="trusted-devices">
                 <div class="section-header">
                     <h2><i class="fas fa-shield-alt"></i> 可信设备</h2>
@@ -236,6 +329,81 @@
 
 
             <!-- 模块4：安全策略配置 -->
+<<<<<<< HEAD
+=======
+            <!-- <section class="management-section" id="security-policy">
+                <div class="section-header">
+                    <h2><i class="fas fa-cogs"></i> 安全策略配置</h2>
+                </div>
+                <div class="policy-grid">
+                   
+                    <div class="policy-card">
+                        <h3><i class="fas fa-mobile-alt"></i> 新设备登录验证</h3>
+                        <div class="policy-options">
+                            <div class="option-item">
+                                <input type="radio" id="verifySms" name="verifyMethod" checked>
+                                <label for="verifySms">短信验证</label>
+                            </div>
+                            <div class="option-item">
+                                <input type="radio" id="verifyEmail" name="verifyMethod">
+                                <label for="verifyEmail">邮箱验证</label>
+                            </div>
+                            <div class="option-item">
+                                <input type="radio" id="verifyQuestion" name="verifyMethod">
+                                <label for="verifyQuestion">安全问题</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+            
+                    <div class="policy-card">
+                        <h3><i class="fas fa-clock"></i> 自动下线策略</h3>
+                        <p class="policy-desc">设置无操作后自动下线时间</p>
+                        <div class="policy-options">
+                            <div class="option-item">
+                                <input type="radio" id="timeout15" name="timeout" checked>
+                                <label for="timeout15">15分钟</label>
+                            </div>
+                            <div class="option-item">
+                                <input type="radio" id="timeout30" name="timeout">
+                                <label for="timeout30">30分钟</label>
+                            </div>
+                            <div class="option-item">
+                                <input type="radio" id="timeout60" name="timeout">
+                                <label for="timeout60">1小时</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+           
+                    <div class="policy-card">
+                        <h3><i class="fas fa-bell"></i> 异地登录报警</h3>
+                        <div class="toggle-setting">
+                            <span>开启异地登录提醒</span>
+                            <div class="toggle-switch">
+                                <input type="checkbox" id="locationAlert" checked>
+                                <label for="locationAlert"></label>
+                            </div>
+                        </div>
+                        <p class="policy-desc">当登录地点与常用地不符时发送提醒</p>
+                        <div class="alert-settings">
+                            <div class="option-item">
+                                <input type="checkbox" id="alertSms" checked>
+                                <label for="alertSms">短信提醒</label>
+                            </div>
+                            <div class="option-item">
+                                <input type="checkbox" id="alertEmail" checked>
+                                <label for="alertEmail">邮箱提醒</label>
+                            </div>
+                            <div class="option-item">
+                                <input type="checkbox" id="alertApp" checked>
+                                <label for="alertApp">App内提醒</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 
             <section class="management-section" id="security-policy">
                 <div class="section-header">
@@ -264,6 +432,57 @@
 
 
             <!-- 模块5：批量管理操作 -->
+<<<<<<< HEAD
+=======
+            <!-- <section class="management-section" id="batch-management">
+                <div class="section-header">
+                    <h2><i class="fas fa-tasks"></i> 批量管理操作</h2>
+                    <p class="section-subtitle">谨慎操作，以下操作将影响所有设备</p>
+                </div>
+                <div class="batch-actions">
+              
+                    <div class="batch-action-card">
+                        <div class="action-icon">
+                            <i class="fas fa-power-off"></i>
+                        </div>
+                        <div class="action-content">
+                            <h3>一键下线所有设备</h3>
+                            <p>使所有设备退出登录（当前设备除外）</p>
+                            <button class="btn-action btn-warning">
+                                <i class="fas fa-sign-out-alt"></i> 立即执行
+                            </button>
+                        </div>
+                    </div>
+                    
+          
+                    <div class="batch-action-card">
+                        <div class="action-icon">
+                            <i class="fas fa-eraser"></i>
+                        </div>
+                        <div class="action-content">
+                            <h3>清除历史登录记录</h3>
+                            <p>清除30天前的所有登录记录（保留最近30天记录）</p>
+                            <button class="btn-action btn-secondary">
+                                <i class="fas fa-trash-alt"></i> 清理记录
+                            </button>
+                        </div>
+                    </div>
+                    
+          
+                    <div class="batch-action-card">
+                        <div class="action-icon">
+                            <i class="fas fa-file-export"></i>
+                        </div>
+                        <div class="action-content">
+                            <h3>导出登录记录报告</h3>
+                            <p>导出完整的登录记录（CSV格式，包含所有历史数据）</p>
+                            <button class="btn-action btn-secondary">
+                                <i class="fas fa-download"></i> 导出报告
+                            </button>
+                        </div>
+                    </div>
+                </div> -->
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 
             <section class="management-section" id="batch-management">
                 <div class="section-header">

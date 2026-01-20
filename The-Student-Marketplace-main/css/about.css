@@ -138,6 +138,10 @@ nav.daohang.nav_scrolled {
     display: none;
 }
 
+<<<<<<< HEAD
+=======
+/* 去掉下拉菜单的下划线 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 
 .dropdown-menu a:hover {
     background: #f0fdfa;
@@ -206,9 +210,16 @@ nav.daohang.nav_scrolled {
     margin: 0 auto;
 }
 
+<<<<<<< HEAD
 
 .elegant_title {
     font-family: "Noto Serif SC", "SimSun", serif;
+=======
+/* 标题：改大字号为适中，增加书卷气 */
+.elegant_title {
+    font-family: "Noto Serif SC", "SimSun", serif;
+    /* 使用衬线体更文雅 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     font-size: 4rem;
     font-weight: 700;
     color: #ffffff;
@@ -241,7 +252,11 @@ nav.daohang.nav_scrolled {
     border-radius: 2px;
 }
 
+<<<<<<< HEAD
 
+=======
+/* 副标题：解决看不清的问题 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .elegant_subtitle {
     font-size: 1.25rem;
     color: rgba(255, 255, 255, 0.9);
@@ -525,10 +540,17 @@ nav.daohang.nav_scrolled {
     grid-row: 1;
     /* 强制回到第一行，与标题并列 */
 
+<<<<<<< HEAD
     /* 让按钮宽度自适应内容，不再拉伸 */
     justify-self: start;
 
     /* 将 300px 改为合理的间距（如 20px） */
+=======
+    /* 关键修正 A：让按钮宽度自适应内容，不再拉伸 */
+    justify-self: start;
+
+    /* 关键修正 B：将 300px 改为合理的间距（如 20px） */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     margin-left: 20px;
 
     /* 保持你的精美样式 */
@@ -538,7 +560,11 @@ nav.daohang.nav_scrolled {
     vertical-align: middle;
     text-decoration: none;
     padding: 6px 16px;
+<<<<<<< HEAD
 
+=======
+    /* 稍微增加一点内边距更好看 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     border: 1px solid rgba(245, 158, 11, 0.6);
     border-radius: 4px;
     color: #f59e0b !important;
@@ -817,7 +843,11 @@ nav.daohang.nav_scrolled {
 .btn_tag {
     display: block;
     font-size: 0.75rem !important;
+<<<<<<< HEAD
    
+=======
+    /* 英文标签可小，但增加间距 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     color: #f59e0b;
     letter-spacing: 2px;
     font-weight: 800;
@@ -827,7 +857,11 @@ nav.daohang.nav_scrolled {
 .btn_title {
     display: block;
     font-size: 1.2rem !important;
+<<<<<<< HEAD
  
+=======
+    /* 核心文字 1.2rem */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     color: #ffffff;
     font-weight: 600;
     letter-spacing: 1px;
@@ -941,7 +975,11 @@ nav.daohang.nav_scrolled {
 .polaroid {
     background: white;
     padding: 15px 15px 40px 15px;
+<<<<<<< HEAD
  
+=======
+    /* 底部留白多一点，写字用 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     transform: rotate(var(--rotate));
     /* 随机倾斜度 */
@@ -1300,6 +1338,7 @@ nav.daohang.nav_scrolled {
     grid-row: 1;
     /* 强制回到第一行，与标题并列 */
 
+<<<<<<< HEAD
     /* 让按钮宽度自适应内容，不再拉伸 */
     justify-self: start;
 
@@ -1307,6 +1346,15 @@ nav.daohang.nav_scrolled {
     margin-left: 20px;
 
 
+=======
+    /* 关键修正 A：让按钮宽度自适应内容，不再拉伸 */
+    justify-self: start;
+
+    /* 关键修正 B：将 300px 改为合理的间距（如 20px） */
+    margin-left: 20px;
+
+    /* 保持你的精美样式 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     display: inline-flex;
     align-items: center;
     white-space: nowrap;
@@ -1328,7 +1376,11 @@ nav.daohang.nav_scrolled {
 /* 内部文字大小微调 */
 .Lmini_explore_tag span {
     font-size: 1rem !important;
+<<<<<<< HEAD
  
+=======
+    /* 1.2rem 有点偏大，建议 1rem 或 1.1rem */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     font-weight: 600;
 }
 
@@ -1733,6 +1785,7 @@ nav.daohang.nav_scrolled {
     grid-row: 1;
     /* 强制回到第一行，与标题并列 */
 
+<<<<<<< HEAD
     /* 让按钮宽度自适应内容，不再拉伸 */
     justify-self: start;
 
@@ -1740,13 +1793,26 @@ nav.daohang.nav_scrolled {
     margin-left: 20px;
 
  
+=======
+    /* 关键修正 A：让按钮宽度自适应内容，不再拉伸 */
+    justify-self: start;
+
+    /* 关键修正 B：将 300px 改为合理的间距（如 20px） */
+    margin-left: 20px;
+
+    /* 保持你的精美样式 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     display: inline-flex;
     align-items: center;
     white-space: nowrap;
     vertical-align: middle;
     text-decoration: none;
     padding: 6px 16px;
+<<<<<<< HEAD
  
+=======
+    /* 稍微增加一点内边距更好看 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     border: 1px solid rgba(245, 158, 11, 0.6);
     border-radius: 4px;
     color: #f59e0b !important;
@@ -1761,6 +1827,10 @@ nav.daohang.nav_scrolled {
 /* 内部文字大小微调 */
 .Fmini_explore_tag span {
     font-size: 1rem !important;
+<<<<<<< HEAD
+=======
+    /* 1.2rem 有点偏大，建议 1rem 或 1.1rem */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     font-weight: 600;
 }
 

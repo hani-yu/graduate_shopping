@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品分类 - 校园毕业物品流转平台</title>
+    <!-- <script src="https://kit.fontawesome.com/0ad2b99521.js" crossorigin="anonymous" async></script> -->
+    <link rel="stylesheet" href="css/style.min.css"> <!-- 引用全局样式 -->
+    <link rel="stylesheet" href="css/meizhuang_detail.css"> <!-- 引用本页专用样式 -->
+    <link rel="stylesheet" href="css/archive_detail.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body class="meizhuang_page">
+   <!-- 顶部导航栏（与主站一致） -->
+    <nav class="daohang">
+        <div class="daohang_wrapper">
+            <ul class="daohang_list">
+                <li class="daohang_items"><a href="index.html">首页</a></li>
+                <li class="daohang_items"><a href="about.html">平台概况</a></li>
+                <li class="daohang_items active"><a href="categories.html">商品分类</a></li>
+                <li class="daohang_items"><a href="guide.html">流转锦囊</a></li>
+                <li class="daohang_items"><a href="events.html">活动专区</a></li>
+                <li class="daohang_items"><a href="user.html">用户中心</a></li>
+            </ul>
+            <div class="nav_auth"><a href="signin.html" class="btn_nav">登录</a></div>
+        </div>
+    </nav>
+
+    <!-- Box 1: Hero Banner (透视长廊背景) -->
+    <header class="meizhuang_hero">
+        <div class="hero_overlay"></div> <!-- 对应 CSS 中的蒙层 -->
+        <div class="hero_content animate__animated animate__fadeIn">
+            <span class="en_text">WELFARE</span>
+            <h1 class="elegant_title">校友权益·专属福利详情 <span class="meizhuang_seal">福利领取</span></h1>
+            <div class="elegant_line"></div>
+            <p>详细了解福利获取机制、成长体系及使用指南。</p>
+        </div>
+
+        <!-- 底部波浪线 (建议保留以衔接下方色块) -->
+        <div class="banner_wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C0,0,31.83,14.28,64,27.1,126.31,52,187.31,68,250.31,68c31.11,0,32.25-10.15,71.08-11.56Z"
+                    fill="#f9fbfa"></path>
+            </svg>
+        </div>
+    </header>
+
+<main class="channel_container">
+    <!-- 1. 顶部：热门大咖推荐 (Hero) -->
+    <section class="hero_recommend">
+        <div class="hero_card">
+            <div class="hero_badge">学姐力荐</div>
+            <div class="hero_content">
+                <h2>经典正红 · 复古哑光唇膏 (显白不挑皮)</h2>
+                <p class="hero_desc">“这是我第一次主持迎新晚会时涂的颜色。愿它也能带给你惊艳全场的自信，照亮你的高光时刻。”</p>
+                <div class="hero_price_row">
+                    <span class="price">¥59.00</span>
+                    <span class="old_price">原价 ¥169</span>
+                    <button class="btn_view">立即抢购</button>
+                </div>
+            </div>
+            <div class="hero_icon">
+                <i class="fas fa-magic"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. 分类筛选 -->
+    <div class="filter_bar_wrapper">
+        <div class="filter_bar" id="filterBar">
+            <button class="filter_btn active" data-type="all">全部唇色</button>
+            <button class="filter_btn" data-type="matte">高级哑光</button>
+            <button class="filter_btn" data-type="gloss">晶透唇釉</button>
+            <button class="filter_btn" data-type="care">润唇护理</button>
+        </div>
+    </div>
+
+    <!-- 3. 限时抢购专区 (Flash Sale) -->
+    <section class="flash_sale">
+        <div class="section_title">
+            <h3><i class="fas fa-bolt"></i> 拾光美色 <span id="timer">00:00:00</span></h3>
+        </div>
+        <div class="flash_wrapper">
+            <!-- 抢购单品 1 -->
+            <div class="flash_item">
+                <div class="flash_tag">仅一支</div>
+                <i class="fas fa-tint"></i>
+                <h4>柔雾镜面水光唇釉 (野栗色)</h4>
+                <p class="flash_price">¥19.9 <del>¥69</del></p>
+            </div>
+            <!-- 抢购单品 2 -->
+            <div class="flash_item">
+                <div class="flash_tag">全新</div>
+                <i class="fas fa-spa"></i>
+                <h4>植物修护润唇膏 (无色保湿)</h4>
+                <p class="flash_price">¥9.9 <del>¥35</del></p>
+            </div>
+             <!-- 抢购单品 3 -->
+             <div class="flash_item">
+                <div class="flash_tag">九成新</div>
+                <i class="fas fa-vial"></i>
+                <h4>唇部磨砂膏 (蜜桃味)</h4>
+                <p class="flash_price">¥12.0 <del>¥48</del></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. 底部动态：拾光流转 (Live Feed) -->
+    <section class="live_feed_section">
+        <div class="feed_box">
+            <i class="fas fa-history"></i>
+            <div class="feed_list" id="feedList">
+            <div class="feed_inner">
+                <p class="feed_item">● 2分钟前：[学姐***] 的《豆沙色口红》被 [大一学妹] 预约了</p>
+                <p class="feed_item">● 15分钟前：[艺术学姐] 刚刚上架了《多款热门唇釉试色装》</p>
+                <p class="feed_item">● 45分钟前：[东区寝室] 完成了一次美丽色彩的传递</p>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 进阶宝库 (Thematic Bundles) -->
+    <section class="special_collections">
+        <div class="section_header">
+            <h3><i class="fas fa-layer-group"></i> 拾光宝库·美妆合辑</h3>
+        </div>
+        <div class="collection_grid">
+            <!-- 合辑 1 -->
+            <div class="collection_card" style="--card-color: #0d9488;">
+                <div class="col_icon"><i class="fas fa-smile-beam"></i></div>
+                <div class="col_info">
+                    <h4>早八救星·伪素颜元气包</h4>
+                    <p>包含：显气色润唇膏、清透隔离霜、便携修眉刀。让你在早八的课堂上也能保持自然好状态。</p>
+                    <div class="col_footer">
+                        <span class="bundle_tag">共3件</span>
+                        <span class="bundle_price">¥65.00</span>
+                        <button class="btn_view">查看全集</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 合辑 2 -->
+            <div class="collection_card" style="--card-color: #f59e0b;">
+                <div class="col_icon"><i class="fas fa-star"></i></div>
+                <div class="col_info">
+                    <h4>面试夺魁·干练气质包</h4>
+                    <p>包含：哑光奶茶色口红、雾面定妆粉饼。学姐赠送：面试妆容教程视频及化妆棉一份。</p>
+                    <div class="col_footer">
+                        <span class="bundle_tag">共2件</span>
+                        <span class="bundle_price">¥88.00</span>
+                        <button class="btn_view">查看全集</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 合辑 3 -->
+            <div class="collection_card" style="--card-color: #3b82f6;">
+                <div class="col_icon"><i class="fas fa-heart"></i></div>
+                <div class="col_info">
+                    <h4>初见倾心·约会氛围包</h4>
+                    <p>包含：丝绒枫叶红口红、持久定妆喷雾、便携式小镜子。定格每一个令人心动的瞬间。</p>
+                    <div class="col_footer">
+                        <span class="bundle_tag">共3件</span>
+                        <span class="bundle_price">¥75.00</span>
+                        <button class="btn_view">查看全集</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. 求书广场 (改为：求色专栏) -->
+    <section class="wishlist_section">
+        <div class="section_header_flex">
+            <div class="header_left">
+                <h3><i class="fas fa-search-plus"></i> 拾光寻迹 · 寻色广角</h3>
+                <p>在找某款绝版色号？或者急需一支唇膏？发布心愿，让学姐帮你翻翻化妆包。</p>
+            </div>
+            <button class="btn_post_wish"><i class="fas fa-pen-nib"></i> 发布求美愿望</button>
+        </div>
+
+        <div class="wish_wall">
+            <!-- 需求卡片 1 -->
+            <div class="wish_card">
+                <div class="wish_user">
+                    <i class="fas fa-paint-brush"></i>
+                    <span>大一·萌新</span>
+                </div>
+                <h4>求购：适合黄皮的平价口红</h4>
+                <p>求推荐并转让一支显白、不拔干的日常色号，适合上课涂的那种。</p>
+                <div class="wish_footer">
+                    <span class="wish_time">1小时前发布</span>
+                    <span class="btn_helper">我有此物</span>
+                </div>
+            </div>
+
+            <!-- 需求卡片 2 -->
+            <div class="wish_card">
+                <div class="wish_user">
+                    <i class="fas fa-paint-brush"></i>
+                    <span>大三·小美</span>
+                </div>
+                <h4>寻找：某品牌 08 号烂番茄色</h4>
+                <p>全城急寻这一支，如果哪位学姐手里有闲置，求回血价格，不介意试色过。</p>
+                <div class="wish_footer">
+                    <span class="wish_time">3小时前发布</span>
+                    <span class="btn_helper">我有此物</span>
+                </div>
+            </div>
+
+            <!-- 需求卡片 3 -->
+            <div class="wish_card">
+                <div class="wish_user">
+                    <i class="fas fa-paint-brush"></i>
+                    <span>大四·悦悦</span>
+                </div>
+                <h4>借用/低收：专业特效化妆油彩</h4>
+                <p>社团演出急用，如果有学姐转行不用了，求一套剩余的油彩，重谢！</p>
+                <div class="wish_footer">
+                    <span class="wish_time">昨天发布</span>
+                    <span class="btn_helper">我有此物</span>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+    <footer class="footer_area">
+        <div class="footer_wrapper">
+            <div class="bottom_bar">
+                <p>&copy; 2026 Campus Market | 校园毕业物品流转平台团队 | <a href="#">服务条款</a></p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="js/meizhuang_detail.js"></script>
+</body>
+
+</html>

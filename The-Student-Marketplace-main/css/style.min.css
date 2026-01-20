@@ -21,6 +21,10 @@ body {
     line-height: 1.6;
     color: var(--text-main);
     background-color: #fcfcfc;
+<<<<<<< HEAD
+=======
+    /* 去掉生硬的侧边框，改为优雅的间距 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     padding: 0;
 }
 
@@ -162,7 +166,11 @@ a {
     position: absolute;
     width: 15px;
     height: 15px;
+<<<<<<< HEAD
     background: #ffd700; 
+=======
+    background: #ffd700; /* 毕业金点缀 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     border-radius: 50%;
     right: 0;
     bottom: 0;
@@ -214,6 +222,7 @@ a {
     color: #fff;
 }
 
+<<<<<<< HEAD
 .hot_products {
     padding: 10rem 2rem;
     background-color: #fcfcfc; 
@@ -221,18 +230,38 @@ a {
 
 .hot_products .container {
     max-width: 1100px; 
+=======
+/* --- 热门商品区域背景微调，增加层次感 --- */
+.hot_products {
+    padding: 10rem 2rem;
+    background-color: #fcfcfc; /* 极浅灰，衬托纯白卡片 */
+}
+
+.hot_products .container {
+    max-width: 1100px; /* 关键：限制总宽度，卡片就不会变大 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     margin: 0 auto;
 }
 
 .product_grid {
     display: grid;
+<<<<<<< HEAD
     grid-template-columns: repeat(3, 1fr); 
+=======
+    grid-template-columns: repeat(3, 1fr); /* 关键：一行 3 个 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     gap: 2rem;
     margin-top: 3rem;
 }
 
+<<<<<<< HEAD
 .product_card {
     height: 260px; 
+=======
+/* --- 卡片基础样式优化 --- */
+.product_card {
+    height: 260px; /* 略微增加高度 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     background: #ffffff;
     border-radius: 1.2rem;
     padding: 2rem;
@@ -247,6 +276,10 @@ a {
 	cursor: pointer;
 }
 
+<<<<<<< HEAD
+=======
+/* 分类标签 - 加重字重 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .category_tag {
     font-size: 0.8rem;
     font-weight: 800;
@@ -259,44 +292,80 @@ a {
 .product_card .card_title {
     font-size: 2rem;
     margin-bottom: 1.2rem;
+<<<<<<< HEAD
     color: #1a202c; 
+=======
+    color: #1a202c; /* 更深的标题色 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     z-index: 2;
     font-weight: 700;
 }
 
 .product_card .describe {
     font-size: 1.4rem;
+<<<<<<< HEAD
     color: #4a5568; 
+=======
+    color: #4a5568; /* 更深的描述色 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     line-height: 1.7;
     z-index: 2;
     max-width: 90%;
     transition: color 0.3s;
 }
+<<<<<<< HEAD
+=======
+/* 1. 书籍 - 沉稳蓝 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .category_blue { border-top: 6px solid #83a3e8; }
 .category_blue .category_tag { color: #83a3e8; }
 .category_blue:hover { background-color: #83a3e8; border-top-color: #2563eb; }
 
+<<<<<<< HEAD
+=======
+/* 2. 家具 - 森林绿 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .category_green { border-top: 6px solid #88efce; }
 .category_green .category_tag { color: #88efce; }
 .category_green:hover { background-color: #88efce; border-top-color: #059669; }
 
+<<<<<<< HEAD
+=======
+/* 3. 电子 - 极客紫 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .category_purple { border-top: 6px solid #a47fe4; }
 .category_purple .category_tag { color: #a47fe4; }
 .category_purple:hover { background-color: #a47fe4; border-top-color: #7c3aed; }
 
+<<<<<<< HEAD
+=======
+/* 4. 生活 - 活力橙 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .category_orange { border-top: 6px solid #eda780; }
 .category_orange .category_tag { color: #eda780; }
 .category_orange:hover { background-color: #eda780; border-top-color: #ea580c; }
 
+<<<<<<< HEAD
+=======
+/* 5. 运动 - 湖水蓝 (Teal) */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .category_teal { border-top: 6px solid #55c5bc; }
 .category_teal .category_tag { color: #55c5bc; }
 .category_teal:hover { background-color: #55c5bc; border-top-color: #0d9488; }
 
+<<<<<<< HEAD
+=======
+/* --- 悬停后的文字与图标状态 --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .product_card:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
+<<<<<<< HEAD
+=======
+/* 悬停时文字统一变白，解决“看不见文字”的问题 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .product_card:hover .card_title,
 .product_card:hover .describe,
 .product_card:hover .category_tag,
@@ -304,6 +373,10 @@ a {
     color: #ffffff !important;
 }
 
+<<<<<<< HEAD
+=======
+/* 探索按钮 - 增加一个白色底框效果 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .explore_btn {
     position: absolute;
     bottom: 2.5rem;
@@ -320,23 +393,39 @@ a {
     transform: translateX(0);
 }
 
+<<<<<<< HEAD
+=======
+/* 背景大图标 - 调暗默认透明度，增强悬停对比 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .card_icon {
     position: absolute;
     right: -10px;
     bottom: -10px;
     font-size: 8rem;
+<<<<<<< HEAD
     opacity: 0.03; 
+=======
+    opacity: 0.03; /* 默认非常淡 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     transform: rotate(-15deg);
     transition: all 0.5s ease;
     pointer-events: none;
 }
 
 .product_card:hover .card_icon {
+<<<<<<< HEAD
     opacity: 0.15; 
+=======
+    opacity: 0.15; /* 悬停时稍微亮一点点，但依然作为背景 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     transform: rotate(0deg) scale(1.1);
     color: #fff;
 }
 
+<<<<<<< HEAD
+=======
+/* --- 最新发布区域背景 --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .new_release_section {
     padding: 6rem 2rem;
     background-color: #ffffff;
@@ -347,8 +436,14 @@ a {
     margin: 0 auto;
 }
 
+<<<<<<< HEAD
 .header_box {
     text-align: left; 
+=======
+/* --- 标题样式 --- */
+.header_box {
+    text-align: left; /* 改为左对齐，更有流转平台的感觉 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     margin-bottom: 3rem;
     border-left: 5px solid var(--primary-color);
     padding-left: 1.5rem;
@@ -366,6 +461,10 @@ a {
     margin-top: 0.5rem;
 }
 
+<<<<<<< HEAD
+=======
+/* --- 商品网格布局：一行 3-4 个 --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .goods_list {
     display: grid;
     /* grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); */
@@ -373,6 +472,10 @@ a {
     gap: 2rem;
 }
 
+<<<<<<< HEAD
+=======
+/* --- 单个商品卡片 --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .goods_item {
     background: #ffffff;
     border: 1px solid #f0f0f0;
@@ -427,7 +530,11 @@ a {
     margin-bottom: 1rem;
     white-space: nowrap;
     overflow: hidden;
+<<<<<<< HEAD
     text-overflow: ellipsis; 
+=======
+    text-overflow: ellipsis; /* 文字过长显示省略号 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 }
 
 .price_row {
@@ -438,7 +545,11 @@ a {
 
 .goods_price {
     font-size: 1.4rem;
+<<<<<<< HEAD
     color: #e44d26; 
+=======
+    color: #e44d26; /* 价格使用显眼的橙红色 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     font-weight: 700;
     font-family: 'Arial', sans-serif;
 }
@@ -448,6 +559,10 @@ a {
     color: var(--text-muted);
 }
 
+<<<<<<< HEAD
+=======
+/* --- 鼠标悬停交互 --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .goods_item:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-md);
@@ -463,12 +578,23 @@ a {
     color: var(--primary-color);
 }
 
+<<<<<<< HEAD
 .reviews_section {
     padding: 10rem 0;
     background: linear-gradient(to bottom, #fcfcfc, #f0fdfa);
     overflow: hidden; 
 }
 
+=======
+/* --- 评价区域背景 --- */
+.reviews_section {
+    padding: 10rem 0;
+    background: linear-gradient(to bottom, #fcfcfc, #f0fdfa); /* 渐变到浅青色 */
+    overflow: hidden; /* 隐藏溢出的卡片 */
+}
+
+/* --- 居中标题 --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .section_header_center {
     text-align: center;
     margin-bottom: 5rem;
@@ -488,6 +614,10 @@ a {
     margin: 1.5rem auto;
 }
 
+<<<<<<< HEAD
+=======
+/* --- 滚动轨道布局 --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .review_track_container {
     width: 100%;
     position: relative;
@@ -496,19 +626,34 @@ a {
 
 .review_track {
     display: flex;
+<<<<<<< HEAD
     width: max-content; 
     animation: scroll_track 30s linear infinite; 
 }
 
+=======
+    width: max-content; /* 宽度由内容决定 */
+    animation: scroll_track 30s linear infinite; /* 无缝滚动动画 */
+}
+
+/* 鼠标悬停时停止滚动，方便阅读 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .review_track:hover {
     animation-play-state: paused;
 }
 
 @keyframes scroll_track {
     0% { transform: translateX(0); }
+<<<<<<< HEAD
     100% { transform: translateX(-50%); } 
 }
 
+=======
+    100% { transform: translateX(-50%); } /* 滚动一半的距离实现循环 */
+}
+
+/* --- 评价卡片精致设计 --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .review_card {
     width: 380px;
     background: #ffffff;
@@ -523,7 +668,11 @@ a {
 
 .quote_icon {
     font-size: 2rem;
+<<<<<<< HEAD
     color: rgba(13, 148, 136, 0.2); 
+=======
+    color: rgba(13, 148, 136, 0.2); /* 浅青色引号 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     margin-bottom: 1rem;
 }
 
@@ -531,10 +680,18 @@ a {
     font-size: 1.1rem;
     color: #4b5563;
     line-height: 1.8;
+<<<<<<< HEAD
     height: 80px; 
     margin-bottom: 2rem;
 }
 
+=======
+    height: 80px; /* 固定高度确保整齐 */
+    margin-bottom: 2rem;
+}
+
+/* 学生信息区域 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .student_meta {
     display: flex;
     align-items: center;
@@ -586,7 +743,11 @@ a {
 /* --- 联系区域背景 --- */
 .contact_section {
     padding: 8rem 2rem;
+<<<<<<< HEAD
     background-color: #f8fafc; 
+=======
+    background-color: #f8fafc; /* 极淡的灰蓝色背景 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 }
 
 .container_box {
@@ -699,7 +860,11 @@ a {
     font-size: 0.9rem;
     font-weight: 700;
     color: var(--primary-color);
+<<<<<<< HEAD
     margin-top: auto; 
+=======
+    margin-top: auto; /* 靠底部对齐 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 }
 
 /* --- 交互与动画 --- */
@@ -893,7 +1058,11 @@ a {
 	text-transform: none;
 	color: #f8fffd;
 	text-shadow: 0 1rem 4rem rgba(17, 17, 17, 0.9);
+<<<<<<< HEAD
 	display: inline-block; 
+=======
+	display: inline-block; /* 基础也要设为 inline-block */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 }
 @keyframes dh-drop {
     0% { opacity: 0; transform: translateY(-100px); }
@@ -916,12 +1085,24 @@ a {
     50% { opacity: 0.7; text-shadow: 0 0 20px rgba(20, 184, 166, 0.8); }
 }
 
+<<<<<<< HEAD
 .biaoti-dh {
     display: block !important; 
+=======
+/* 2. 主标题动画：确保是 block 才能位移 */
+.biaoti-dh {
+    display: block !important; /* 必须是 block */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 	opacity: 0;
     animation: dh-drop 1s ease-out forwards !important;
 }
 
+<<<<<<< HEAD
+=======
+
+
+/* 3. 副标题动画：确保是 inline-block */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .wenzi-dh-1 {
     opacity: 0;
     display: inline-block !important;
@@ -934,19 +1115,36 @@ a {
     animation: dh-up 0.8s ease-out 1s forwards !important;
 }
 
+<<<<<<< HEAD
+=======
+/* 4. 底部强调文字 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .bottom-dh {
     opacity: 0;
     display: inline-block !important;
     color: var(--accent-color) !important;
+<<<<<<< HEAD
+=======
+    /* 组合动画：先放大入场，然后持续闪烁 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     animation: dh-zoom 0.5s ease-out 1.5s forwards dh-shanshuo 2s infinite 2s !important;
 }
 
 
 .daohang {
+<<<<<<< HEAD
 	position: fixed;
     top: 0;         
     left: 0;        
     width: 100%;  
+=======
+	/* position: sticky; */
+	position: fixed;
+    top: 0;         /* 建议从 0 开始，如果非要悬浮感可以设为 10px */
+    left: 0;        /* 必须为 0，否则导航栏会偏离 */
+    width: 100%;    /* 宽度占满全屏 */
+	/* z-index: 5; */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 	transition: 0.5s all;
 	/* padding: 10px; */
     backdrop-filter: blur(10px);
@@ -962,7 +1160,11 @@ a {
     justify-content: center;
     align-items: center;
 	position: relative; 
+<<<<<<< HEAD
     max-width: 95%; 
+=======
+    max-width: 95%; /* 调宽一点，给右侧留空间 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     margin: 0 auto;
 	height: 70px;
 }
@@ -974,11 +1176,20 @@ a {
 	gap: 5rem;
 }
 
+<<<<<<< HEAD
 .nav_auth {
 	position: absolute;      
     right: 2rem;              
     top: 50%;
     transform: translateY(-50%); 
+=======
+/* 右侧按钮容器：放大并向右靠齐 */
+.nav_auth {
+	position: absolute;      /* 绝对定位，脱离文档流，不影响菜单居中 */
+    right: 2rem;               /* 靠右对齐 */
+    top: 50%;
+    transform: translateY(-50%); /* 垂直方向完美居中 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     display: flex;
 	align-items: center;
     gap: 1.5rem;
@@ -1001,6 +1212,10 @@ a {
     border: 2px solid transparent;
 }
 
+<<<<<<< HEAD
+=======
+/* --- 登录按钮：简约风格 --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .btn_nav {
     color: #f8fffd;
     background: transparent;
@@ -1012,9 +1227,16 @@ a {
     transform: translateY(-2px);
 }
 
+<<<<<<< HEAD
 .btn_nav_outline {
     background-color: #f8fffd; 
     color: #0d9488 !important;  
+=======
+/* --- 注册按钮：高亮风格 (核心操作) --- */
+.btn_nav_outline {
+    background-color: #f8fffd; /* 纯色背景使其突出 */
+    color: #0d9488 !important;   /* 文字使用主题色 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border: 2px solid #f8fffd;
 }
@@ -1023,7 +1245,11 @@ a {
     background-color: transparent;
     color: #f8fffd !important;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+<<<<<<< HEAD
     transform: translateY(-3px) scale(1.05); 
+=======
+    transform: translateY(-3px) scale(1.05); /* 悬停时稍微放大 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 }
 
 /* --- 点击时的反馈 --- */
@@ -1032,7 +1258,11 @@ a {
 }
 
 .daohang_items {
+<<<<<<< HEAD
     position: relative; 
+=======
+    position: relative; /* 关键：让下拉菜单定位基于父级 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 }
 
 .daohang_items::after {
@@ -1068,9 +1298,15 @@ a {
 .dropdown-menu {
     display: none;
     position: absolute;
+<<<<<<< HEAD
     top: 100%; 
     left: 0;
     background-color: #f8fffd; 
+=======
+    top: 100%; /* 在父菜单下方 */
+    left: 0;
+    background-color: #f8fffd; /* 白色背景 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     border: 1px solid teal;
     min-width: 140px;
     z-index: 1000;
@@ -1086,7 +1322,11 @@ a {
 .dropdown-menu li a {
     display: block;
     padding: 10px 20px;
+<<<<<<< HEAD
     color: teal; 
+=======
+    color: teal; /* 字体颜色 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     text-decoration: none;
     font-size: 1.8rem;
     font-family: "Gotham", Helvetica, Arial, sans-serif;
@@ -1098,10 +1338,18 @@ a {
     color: #f8fffd;
 }
 
+<<<<<<< HEAD
+=======
+/* 鼠标悬停显示二级菜单 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .daohang_items:hover .dropdown-menu {
     display: block;
 }
 
+<<<<<<< HEAD
+=======
+/* 登录注册按钮 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .nav_auth {
     display: flex;
     gap: 20px;
@@ -1182,7 +1430,11 @@ a {
 	.daohang_items {
 		order: 2;
 		padding: 1rem;
+<<<<<<< HEAD
 		position: relative; 
+=======
+		position: relative; /* 确保下拉菜单相对定位 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 	}
 
 	.daohang_items a {
@@ -1268,10 +1520,17 @@ a {
 .section_wrapper {
 	max-width: 175rem;
 	margin: 0 auto;
+<<<<<<< HEAD
 	background-color: #ffffff; 
     border-radius: 1.5rem;     /* 圆角 */
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.15); 
     padding: 4rem 3rem;      
+=======
+	background-color: #ffffff; /* 白色背景，可根据风格调整 */
+    border-radius: 1.5rem;     /* 圆角 */
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.15); /* 阴影效果 */
+    padding: 4rem 3rem;        /* 内边距，保持内容呼吸感 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     transition: transform 0.3s, box-shadow 0.3s;
 }
 /* 鼠标悬停微微放大阴影 */
@@ -1312,8 +1571,14 @@ a {
 }
 
 
+<<<<<<< HEAD
 .footer_area {
     background-color: #1a202c; 
+=======
+/* --- 页脚主区域 --- */
+.footer_area {
+    background-color: #1a202c; /* 深色背景，增加稳重感 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     color: #e2e8f0;
     padding: 5rem 0 2rem;
     margin-top: 5rem;
@@ -1325,6 +1590,10 @@ a {
     padding: 0 2rem;
 }
 
+<<<<<<< HEAD
+=======
+/* --- 上部布局：三栏网格 --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .footer_main {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
@@ -1333,6 +1602,10 @@ a {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+<<<<<<< HEAD
+=======
+/* 品牌部分 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .footer_logo_text {
     font-size: 2.1rem;
     font-weight: 800;
@@ -1355,6 +1628,10 @@ a {
     margin-bottom: 1.5rem;
 }
 
+<<<<<<< HEAD
+=======
+/* 社交图标动画 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .social_icons a {
     color: #cbd5e1;
     font-size: 1.5rem;
@@ -1366,6 +1643,10 @@ a {
     transform: translateY(-3px);
 }
 
+<<<<<<< HEAD
+=======
+/* 链接列表样式 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .footer_title {
     color: #ffffff;
     font-size: 1.5rem;
@@ -1391,7 +1672,11 @@ a {
 
 .footer_link_group ul li a:hover {
     color: #ffffff;
+<<<<<<< HEAD
     padding-left: 5px;
+=======
+    padding-left: 5px; /* 悬停时微微右移 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 }
 
 /* --- 底部版权栏 --- */

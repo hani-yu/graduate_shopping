@@ -24,6 +24,10 @@ h3 {
     font-family: "Noto Serif SC", serif;
 }
 
+<<<<<<< HEAD
+=======
+/* --- Box 1: Hero (法典封面风格) --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .mission_hero {
     height: 60vh;
     background: url('https://images.unsplash.com/photo-1541339907198-e087563f976d?auto=format&fit=crop&w=1200&q=80') center/cover;
@@ -74,6 +78,10 @@ h3 {
     font-size: 1.3rem !important;
 }
 
+<<<<<<< HEAD
+=======
+/* --- Box 2: 简介区域 --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .intro_new {
     background: #fdfdfd;
     padding: 100px 0;
@@ -155,12 +163,20 @@ h3 {
     width: 0%;
     height: 100%;
     background: #f59e0b;
+<<<<<<< HEAD
+=======
+    /* 默认金色 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     border-radius: 6px;
     transition: width 0.5s ease, background-color 0.5s ease;
     position: relative;
     overflow: hidden;
 }
 
+<<<<<<< HEAD
+=======
+/* 进度条填充动画 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .rules_progress_fill::after {
     content: '';
     position: absolute;
@@ -185,6 +201,10 @@ h3 {
     }
 }
 
+<<<<<<< HEAD
+=======
+/* 脉冲效果 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .rules_progress_fill.pulse {
     animation: pulseEffect 1s ease;
 }
@@ -217,6 +237,10 @@ h3 {
     font-weight: 700;
 }
 
+<<<<<<< HEAD
+=======
+/* 卡片完成状态 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .rule_card.completed {
     border-color: #10b981;
     position: relative;
@@ -240,6 +264,10 @@ h3 {
     box-shadow: 0 3px 10px rgba(16, 185, 129, 0.3);
 }
 
+<<<<<<< HEAD
+=======
+/* --- Box 3: 准入规则矩阵 --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .rules_matrix_area {
     background: var(--law-light);
     padding: 100px 0;
@@ -358,6 +386,10 @@ h3 {
     gap: 40px;
 }
 
+<<<<<<< HEAD
+=======
+/* -------- 卡片 -------- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .penalty_card {
     background: rgba(255, 255, 255, .85);
     border-radius: 20px;
@@ -726,13 +758,96 @@ h3 {
     cursor: pointer;
 }
 
+<<<<<<< HEAD
 
+=======
+/* hover 动画 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .student_table_row:hover {
     background: #ecfeff;
     transform: scale(1.01);
     box-shadow: 0 8px 20px rgba(56,189,248,.3);
 }
 
+<<<<<<< HEAD
+=======
+/* 等级色块 */
+.badge_new {
+    background: #22c55e;
+}
+.badge_good {
+    background: #f59e0b;
+}
+.badge_bad {
+    background: #ef4444;
+}
+
+.condition_level_badge {
+    padding: 6px 12px;
+    border-radius: 999px;
+    color: white;
+    font-weight: 700;
+}
+
+/* ======================== 视觉条 ======================= */
+.student_visual_bar {
+    margin-top: 35px;
+    height: 45px;
+    display: flex;
+    gap: 10px;
+}
+
+.visual_piece {
+    flex-grow: 1;
+    border-radius: 999px;
+    color: #fff;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    font-weight: 700;
+    cursor: pointer;
+    position: relative;
+    transition: .4s;
+}
+
+.piece_new {background:#22c55e;}
+.piece_good {background:#f59e0b;}
+.piece_bad {background:#ef4444;}
+
+.visual_piece:hover {
+    transform: translateY(-6px);
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+/* 气泡提示 */
+.visual_piece::after{
+    content: attr(data-txt);
+    position:absolute;
+    bottom:60px;
+    background:#111;
+    color:#fff;
+    padding:6px 12px;
+    border-radius:8px;
+    opacity:0;
+    pointer-events:none;
+    transition:.3s;
+}
+.visual_piece:hover::after{
+    opacity:1;
+}
+
+.visual_number_label{
+    display:flex;
+    justify-content:space-between;
+    margin-top:10px;
+    font-size:13px;
+    color:#555;
+}
+
+/* ===============================
+   流转使用步骤样式
+   =============================== */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .steps_area {
     background: #f9fbfa;
     padding: 100px 0;
@@ -958,6 +1073,7 @@ h3 {
     animation: slideIn 0.5s ease;
 }
 
+<<<<<<< HEAD
 
 #sellerSteps{
     display:none;
@@ -977,6 +1093,8 @@ h3 {
 }
 
 
+=======
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .seller_notice {
     background: rgba(245, 158, 11, 0.1);
     border-left: 4px solid #f59e0b;
@@ -1041,6 +1159,90 @@ h3 {
     color: #0d9488;
 }
 
+<<<<<<< HEAD
+=======
+/* 流程对比 */
+.steps_compare {
+    max-width: 1000px;
+    margin: 40px auto 0;
+    padding: 30px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.steps_compare h3 {
+    color: #064e3b;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.6rem;
+}
+
+.compare_table {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.compare_header {
+    display: contents;
+}
+
+.compare_row {
+    display: contents;
+}
+
+.compare_cell {
+    padding: 12px;
+    border-bottom: 1px solid #e2e8f0;
+    border-right: 1px solid #e2e8f0;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem; 
+}
+
+.compare_cell:nth-child(3n) {
+    border-right: none;
+}
+
+.compare_cell:last-child {
+    border-right: none;
+}
+
+.compare_row:last-child .compare_cell {
+    border-bottom: none;
+}
+
+.compare_header .compare_cell {
+    background: #064e3b;
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-align: center;
+    justify-content: center;
+}
+
+.compare_row .compare_cell:first-child {
+    background: #f8fafc;
+    font-weight: 600;
+    color: #064e3b;
+}
+
+.compare_row .compare_cell:nth-child(2) {
+    background: rgba(245, 158, 11, 0.05);
+}
+
+.compare_row .compare_cell:nth-child(3) {
+    background: rgba(13, 148, 136, 0.05);
+}
+
+/* ===============================
+   下载公约区域样式
+   =============================== */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .download_area {
     background: linear-gradient(135deg, #f9fbfa 0%, #f1f7f5 100%);
     padding: 80px 0;
@@ -1059,6 +1261,10 @@ h3 {
     border: 1px solid rgba(13, 148, 136, 0.2);
 }
 
+<<<<<<< HEAD
+=======
+/* 装饰性背景元素 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .download_card::before {
     content: '';
     position: absolute;

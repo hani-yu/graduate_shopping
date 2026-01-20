@@ -1,5 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+<<<<<<< HEAD
+=======
+    /** ====== 商品过滤逻辑 ====== **/
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     const cards = document.querySelectorAll('.product_item');
     const filterBtns = document.querySelectorAll('.filter_btn');
 
@@ -31,6 +35,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+<<<<<<< HEAD
+=======
+    /** ====== 入场渐显动画 ====== **/
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     const observerOptions = { threshold: 0.1 };
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry, index) => {
@@ -51,6 +59,10 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(card);
     });
 
+<<<<<<< HEAD
+=======
+    /** ====== 动态语录滚动 ====== **/
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     const feedInner = document.querySelector('.feed_inner');
     if (feedInner) {
         setInterval(() => {
@@ -66,6 +78,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 3000);
     }
 
+<<<<<<< HEAD
+=======
+    /** ====== 鼠标 3D 卡片 & 图标视差 ====== **/
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     const card = document.getElementById('heroCard');
     const icon = document.querySelector('.parallax_icon');
 
@@ -94,6 +110,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+<<<<<<< HEAD
+=======
+    /** ====== 专题卡片光影 & 入场动画 ====== **/
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     const colCards = document.querySelectorAll('.collection_card');
 
     colCards.forEach(card => {
@@ -125,6 +145,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     colCards.forEach(card => colObserver.observe(card));
 
+<<<<<<< HEAD
+=======
+    /** ====== 求书卡片入场动画 ====== **/
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     const wishCards = document.querySelectorAll('.wish_card');
 
     wishCards.forEach(card => {
@@ -146,6 +170,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     wishCards.forEach(card => wishObserver.observe(card));
 
+<<<<<<< HEAD
+=======
+    /** ====== 我有此书按钮 ====== **/
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     document.querySelectorAll('.btn_helper').forEach(btn => {
         btn.addEventListener('click', function () {
             this.innerHTML = '<i class="fas fa-check"></i> 已通知同学';
@@ -157,7 +185,11 @@ document.addEventListener('DOMContentLoaded', () => {
     /** ====== 倒计时 ====== **/
     const timerDisplay = document.querySelector("#timer");
     if (timerDisplay) {
+<<<<<<< HEAD
         startTimer(60 * 60 * 3, timerDisplay); // 3 小时
+=======
+        startTimer(60*60*3, timerDisplay); // 3 小时
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     }
 
 }); // DOMContentLoaded 结束

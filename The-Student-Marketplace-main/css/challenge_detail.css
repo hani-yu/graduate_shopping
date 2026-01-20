@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+/* CSS变量定义 - 使用指定的配色方案 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 :root {
     --deep-green: #064e3b;
     --theme-teal: #0d9488;
@@ -45,7 +49,11 @@ h3 {
 }
 
 
+<<<<<<< HEAD
 /* --- Box 1: Hero  --- */
+=======
+/* --- Box 1: Hero (问号装饰) --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .challenge_hero {
     height: 65vh;
     /* background: var(--faq-green); */
@@ -111,6 +119,24 @@ h3 {
 }
 
 
+<<<<<<< HEAD
+=======
+
+/* 基础样式重置 */
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+}
+
+body {
+    background-color: var(--paper-white);
+    color: var(--text-slate);
+    line-height: 1.6;
+} */
+
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .container {
     max-width: 1200px;
     margin: 0 auto;

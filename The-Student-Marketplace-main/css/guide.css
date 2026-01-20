@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+/* ========== 基础变量 ========== */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 :root {
     --main-color: #0d9488;
     --bg-light: #f8fafc;
@@ -19,11 +23,19 @@ nav.daohang {
     background: rgba(248, 250, 252, 0.6);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
+<<<<<<< HEAD
+=======
+    /* 极细的底部边线，增加精致感 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     border-bottom: 1px solid rgba(13, 148, 136, 0.1);
     z-index: 1000;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+<<<<<<< HEAD
+=======
+/* 滚动后的样式：增加不透明度 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 nav.daohang.nav_scrolled {
     background: rgba(255, 255, 255, 0.95);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
@@ -31,6 +43,10 @@ nav.daohang.nav_scrolled {
 
 .daohang_wrapper {
     max-width: 1200px;
+<<<<<<< HEAD
+=======
+    /* 限制宽度，显得不那么散乱 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -50,9 +66,17 @@ nav.daohang.nav_scrolled {
     position: relative;
 }
 
+<<<<<<< HEAD
 .daohang_items a {
     text-decoration: none;
     color: #475569;
+=======
+/* 导航文字：增加字间距与字体质感 */
+.daohang_items a {
+    text-decoration: none;
+    color: #475569;
+    /* 深灰色，更稳重 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     font-weight: 500;
     font-size: rem;
     letter-spacing: 1px;
@@ -61,11 +85,19 @@ nav.daohang.nav_scrolled {
     display: inline-block;
 }
 
+<<<<<<< HEAD
+=======
+/* 悬停效果：颜色变为主题绿，并切换为书卷气的字体感觉 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .daohang_items a:hover,
 .daohang_items a.active {
     color: #0d9488;
 }
 
+<<<<<<< HEAD
+=======
+/* 动态下划线：像毛笔顿笔一样的效果 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .daohang_items a::after {
     content: '';
     position: absolute;
@@ -74,6 +106,10 @@ nav.daohang.nav_scrolled {
     width: 0;
     height: 2px;
     background: #f59e0b;
+<<<<<<< HEAD
+=======
+    /* 使用琥珀金作为点缀 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     transition: all 0.3s ease;
     transform: translateX(-50%);
     border-radius: 2px;
@@ -95,6 +131,10 @@ nav.daohang.nav_scrolled {
     flex-direction: column;
     padding: 1rem 0;
     border-radius: 18px;
+<<<<<<< HEAD
+=======
+    /* 超大圆角 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     border: 1px solid rgba(13, 148, 136, 0.05);
     opacity: 0;
     transition: all 0.3s ease;
@@ -123,12 +163,20 @@ nav.daohang.nav_scrolled {
     display: none;
 }
 
+<<<<<<< HEAD
+=======
+/* 去掉下拉菜单的下划线 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 
 .dropdown-menu a:hover {
     background: #f0fdfa;
     color: #0d9488;
 }
 
+<<<<<<< HEAD
+=======
+/* 登录按钮：改用琥珀金，作为全局视觉焦点 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .btn_nav {
     background: #f59e0b;
     color: #fff !important;
@@ -156,10 +204,21 @@ nav.daohang.nav_scrolled {
     color: #fff;
 } */
 
+<<<<<<< HEAD
+=======
+/* --- 指南页 Banner 基础容器 --- */
+/* ==========================================================================
+   1. Banner 基础容器 (背景与布局)
+   ========================================================================== */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .guide_banner {
     position: relative;
     height: 100vh;
     overflow: hidden;
+<<<<<<< HEAD
+=======
+    /* 背景渐变：保持与 About 页面完全一致 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     background: linear-gradient(135deg, #0d9488 0%, #064e3b 100%) !important;
     display: flex;
     align-items: center;
@@ -180,6 +239,12 @@ nav.daohang.nav_scrolled {
     pointer-events: none;
 }
 
+<<<<<<< HEAD
+=======
+/* ==========================================================================
+   2. 背景装饰 (漂浮图标、波浪、鼠标)
+   ========================================================================== */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 
 /* 漂浮图标通用样式 */
 .guide_floating_elements i {
@@ -238,12 +303,20 @@ nav.daohang.nav_scrolled {
     left: 0;
     width: 100%;
     height: 100px;
+<<<<<<< HEAD
+=======
+    /* 固定高度，防止遮挡文字 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     line-height: 0;
     z-index: 5;
 }
 
 .banner_wave .shape-fill {
     fill: #f8fafc;
+<<<<<<< HEAD
+=======
+    /* 应与下一层 section 的背景色一致 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 }
 
 /* 鼠标形状的 Scroll Down */
@@ -272,6 +345,10 @@ nav.daohang.nav_scrolled {
     width: 4px;
     height: 8px;
     background: #f59e0b;
+<<<<<<< HEAD
+=======
+    /* 琥珀金点缀 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     position: absolute;
     top: 6px;
     left: 50%;
@@ -292,11 +369,21 @@ nav.daohang.nav_scrolled {
     }
 }
 
+<<<<<<< HEAD
+=======
+/* ==========================================================================
+   3. 文字内容层 (保持锦囊感设计)
+   ========================================================================== */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 
 .guide_banner_content {
     position: relative;
     z-index: 10;
     margin-top: -60px;
+<<<<<<< HEAD
+=======
+    /* 整体略微上提，给底部波浪留出视觉空间 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 }
 
 .guide_text_group {
@@ -308,6 +395,10 @@ nav.daohang.nav_scrolled {
     margin: 0 auto;
 }
 
+<<<<<<< HEAD
+=======
+/* 标题：衬线体书卷气 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .elegant_title {
     font-family: "Noto Serif SC", "SimSun", serif;
     font-size: 4rem !important;
@@ -455,6 +546,10 @@ nav.daohang.nav_scrolled {
     left: 0;
     width: 100%;
     height: 100px;
+<<<<<<< HEAD
+=======
+    /* 关键：固定一个较低的高度 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     line-height: 0;
     z-index: 5;
 }
@@ -509,6 +604,10 @@ nav.daohang.nav_scrolled {
 }
 
 /* Banner */
+<<<<<<< HEAD
+=======
+/* .guide_banner { height:35vh; margin-top:65px; background:linear-gradient(rgba(13,148,136,0.85), rgba(13,148,136,0.85)), url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200') center/cover; display:flex; align-items:center; justify-content:center; color:#fff; text-align:center; } */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .guide_banner h1 {
     font-size: 2.5rem;
     letter-spacing: 2px;
@@ -577,6 +676,19 @@ nav.daohang.nav_scrolled {
     margin-bottom: 20px;
 } */
 
+<<<<<<< HEAD
+=======
+/* 列表布局 */
+/* .news_list, .grid_layout, .leaving_steps, .welfare_grid, .social_gallery { display:grid; gap:20px; }
+.news_list { grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); }
+.grid_layout { grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); }
+.leaving_steps { grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); }
+.welfare_grid { grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); }
+.social_gallery { grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); } */
+
+/* .news_card, .res_item, .step_box, .coupon, .social_card { background:#fff; border-radius:12px; padding:20px; border:1px solid #edf2f7; transition:0.3s; } */
+/* .news_card:hover, .res_item:hover, .step_box:hover, .coupon:hover, .social_card:hover { transform: translateY(-5px); box-shadow:0 10px 20px rgba(13,148,136,0.1); } */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .news_section {
     padding: 100px 0;
     background: #f8fafc;
@@ -755,14 +867,30 @@ nav.daohang.nav_scrolled {
     font-size: 1rem;
 }
 
+<<<<<<< HEAD
+=======
+/* --- 学习资源模块升级版 --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .resource_modern {
     background: #fdfdfd;
     padding: 80px 0;
 }
 
+<<<<<<< HEAD
 
 .section_title_v2 {
     display: grid;
+=======
+/* 标题样式增强 */
+/* .section_title_v2 {
+    text-align: center;
+    margin-bottom: 50px;
+} */
+
+.section_title_v2 {
+    display: grid;
+    /* 核心：1fr(左占位) - auto(标题) - 1fr(按钮占位) */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     grid-template-columns: 1fr auto 1fr;
     align-items: center; 
     text-align: center;
@@ -805,12 +933,23 @@ nav.daohang.nav_scrolled {
 .title_decoration .line { width: 50px; height: 2px; background: #0d9488; }
 .title_decoration .dot { width: 6px; height: 6px; background: #f59e0b; border-radius: 50%; }
 
+<<<<<<< HEAD
 .section_title_v2 .mini_explore_tag {
     grid-column: 3;      /* 放在右侧列 */
     grid-row: 2;         /* 与主标题同在第二行 */
     justify-self: start; 
     margin-left: 20px;  
     
+=======
+/* 2. 探索详情按钮：应用精美样式并定位 */
+.section_title_v2 .mini_explore_tag {
+    grid-column: 3;      /* 放在右侧列 */
+    grid-row: 2;         /* 与主标题同在第二行 */
+    justify-self: start; /* 关键：在右侧栏内靠左对齐，紧贴标题 */
+    margin-left: 20px;   /* 设置与标题的间距 */
+    
+    /* 精美样式：琥珀金风格 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     display: inline-flex;
     align-items: center;
     white-space: nowrap;
@@ -823,7 +962,11 @@ nav.daohang.nav_scrolled {
     background: transparent;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     position: relative;
+<<<<<<< HEAD
     top: 2px; 
+=======
+    top: 2px; /* 微调：使按钮中线与标题文字中线视觉对齐 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 }
 
 /* 内部文字与图标样式 */
@@ -965,6 +1108,10 @@ nav.daohang.nav_scrolled {
     gap: 15px;
 }
 
+<<<<<<< HEAD
+=======
+/* 不同颜色的微调 (可选) */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .card_teal:hover { border-bottom: 4px solid #0d9488; }
 .card_amber:hover { border-bottom: 4px solid #f59e0b; }
 .card_blue:hover { border-bottom: 4px solid #3b82f6; }
@@ -1306,7 +1453,11 @@ nav.daohang.nav_scrolled {
     position: absolute;
     width: 20px;
     height: 20px;
+<<<<<<< HEAD
     background: #f8fafc; 
+=======
+    background: #f8fafc; /* 应与背景色一致 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     border-radius: 50%;
     left: 30%;
     z-index: 11;
@@ -1327,6 +1478,10 @@ nav.daohang.nav_scrolled {
     color: #fff;
 }
 
+<<<<<<< HEAD
+=======
+/* --- 社交活动模块升级版 --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .social_modern {
     background: #ffffff;
     padding: 100px 0;
@@ -1342,7 +1497,11 @@ nav.daohang.nav_scrolled {
 } */
 
 .social_modern h4 {
+<<<<<<< HEAD
     font-size: 1.6rem !important;
+=======
+    font-size: 1.6rem !important; /* 标题稍大 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     color: #1e293b;
     margin-bottom: 1rem;
     font-weight: 700;
@@ -1367,7 +1526,11 @@ nav.daohang.nav_scrolled {
     border: 1px solid #f1f5f9;
     box-shadow: 0 10px 30px rgba(0,0,0,0.02);
     transition: box-shadow 0.4s ease, border-color 0.4s ease;
+<<<<<<< HEAD
     overflow: hidden; 
+=======
+    overflow: hidden; /* 必须：裁剪流光 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     
     /* 开启 3D 效果 */
     transform-style: preserve-3d;
@@ -1375,9 +1538,17 @@ nav.daohang.nav_scrolled {
     cursor: pointer;
 }
 
+<<<<<<< HEAD
 .card_glow {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
+=======
+/* 高级流光层：随 JS 坐标移动 */
+.card_glow {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    /* 径向渐变模拟“手电筒”照亮效果 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     background: radial-gradient(
         circle at var(--m-x, 50%) var(--m-y, 50%), 
         rgba(13, 148, 136, 0.12) 0%, 

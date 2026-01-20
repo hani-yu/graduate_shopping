@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 
 document.addEventListener('DOMContentLoaded', function () {
     //  搜索功能
+=======
+// faq_detail.js - 常见问题详情页专属JavaScript
+
+document.addEventListener('DOMContentLoaded', function () {
+    // ===============================
+    // 1. 搜索功能
+    // ===============================
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     const faqSearch = document.getElementById('faqSearch');
     const searchBtn = document.getElementById('searchBtn');
     const searchTags = document.querySelectorAll('.search_tag');
@@ -10,7 +19,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const resultsList = searchResults.querySelector('.results_list');
     const resultsCount = document.getElementById('resultsCount');
 
+<<<<<<< HEAD
     // 问题数据库
+=======
+    // 问题数据库（示例）
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     const faqDatabase = [
         {
             question: "如何修改绑定的手机号？",
@@ -496,7 +509,13 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+<<<<<<< HEAD
     //  手风琴功能
+=======
+    // ===============================
+    // 2. 手风琴功能
+    // ===============================
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     const accordionItems = document.querySelectorAll('.accordion_item');
     const faqItems = document.querySelectorAll('.faq_item');
 
@@ -538,7 +557,13 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+<<<<<<< HEAD
     //  视频教程功能
+=======
+    // ===============================
+    // 3. 视频教程功能
+    // ===============================
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     const watchVideoBtn = document.getElementById('watchVideoBtn');
     const playBtn = document.querySelector('.play_btn');
 
@@ -600,7 +625,13 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+<<<<<<< HEAD
     //  快速自助入口
+=======
+    // ===============================
+    // 4. 快速自助入口
+    // ===============================
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     const quickCards = document.querySelectorAll('.quick_card');
 
     quickCards.forEach(card => {
@@ -673,8 +704,14 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+<<<<<<< HEAD
     // 问题解决进度图表
 
+=======
+    // ===============================
+    // 5. 问题解决进度图表
+    // ===============================
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     const chartBars = document.querySelectorAll('.chart_bar');
 
     // 动画显示进度条
@@ -703,6 +740,16 @@ document.addEventListener('DOMContentLoaded', function () {
                 progressSection.classList.add('animated');
                 animateProgressBars();
 
+<<<<<<< HEAD
+=======
+                // 统计数字动画
+                // const statNumbers = document.querySelectorAll('.stat_number');
+                // statNumbers.forEach(stat => {
+                //     const target = parseInt(stat.textContent);
+                //     const isTime = stat.textContent.includes('h');
+                //     animateCounter(stat, target, isTime);
+                // });
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
                 const statItems = document.querySelectorAll('.stat_item');
                 statItems.forEach(item => {
                     const statNumber = item.querySelector('.stat_number');
@@ -713,6 +760,27 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+<<<<<<< HEAD
+=======
+    // 数字计数器动画
+    // function animateCounter(element, target, isTime = false) {
+    //     let current = 0;
+    //     const increment = target / 50;
+    //     const duration = 1500;
+    //     const stepTime = duration / 50;
+
+    //     const timer = setInterval(() => {
+    //         current += increment;
+    //         if (current >= target) {
+    //             current = target;
+    //             clearInterval(timer);
+    //         }
+
+    //         element.textContent = isTime ? `${Math.round(current)}h` : Math.round(current).toLocaleString();
+    //     }, stepTime);
+    // }
+
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     function animateStatNumber(element, targetText) {
         // 解析目标文本，分离数字和单位
         let numberStr = '';
@@ -765,7 +833,13 @@ document.addEventListener('DOMContentLoaded', function () {
     checkProgressScroll();
     window.addEventListener('scroll', checkProgressScroll);
 
+<<<<<<< HEAD
     //  客服留言表单
+=======
+    // ===============================
+    // 6. 客服留言表单
+    // ===============================
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     const contactForm = document.getElementById('contactForm');
     const contactSuccess = document.getElementById('contactSuccess');
     const charCount = document.getElementById('charCount');
@@ -943,8 +1017,14 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 2000);
     });
 
+<<<<<<< HEAD
     //页面滚动动画
 
+=======
+    // ===============================
+    // 7. 页面滚动动画
+    // ===============================
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     const animatedElements = document.querySelectorAll('.section_box');
 
     function checkAnimations() {
@@ -962,8 +1042,14 @@ document.addEventListener('DOMContentLoaded', function () {
     checkAnimations();
     window.addEventListener('scroll', checkAnimations);
 
+<<<<<<< HEAD
     //  页面加载效果
 
+=======
+    // ===============================
+    // 8. 页面加载效果
+    // ===============================
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     function showLoadingProgress() {
         const loadingBar = document.createElement('div');
         loadingBar.id = 'pageLoadingBar';

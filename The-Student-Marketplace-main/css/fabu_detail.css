@@ -57,6 +57,10 @@ h3 {
 }
 
 
+<<<<<<< HEAD
+=======
+/* --- Box 1: Hero (问号装饰) --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .fabu_hero {
     height: 65vh;
     /* background: var(--faq-green); */
@@ -394,6 +398,61 @@ font-size: 1.3rem !important;
     font-size: 0.95rem;
 }
 
+<<<<<<< HEAD
+=======
+/* FAQ */
+/* .faq-item {
+    border-bottom: 1px solid var(--border-color);
+    padding: 20px 0;
+}
+
+.faq-item:first-child {
+    border-top: 1px solid var(--border-color);
+}
+
+.faq-question {
+    font-size: 1.6rem;
+    color: var(--deep-green);
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    transition: color 0.3s;
+}
+
+.faq-question:hover {
+    color: var(--theme-teal);
+}
+
+.faq-answer {
+    color: var(--text-slate);
+    line-height: 1.7;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-answer p{
+font-size: 1.5rem !important;
+}
+
+.faq-answer.open {
+    max-height: 500px;
+    margin-top: 10px;
+}
+
+.faq-toggle {
+    color: var(--theme-teal);
+    font-size: 1.2rem;
+    transition: transform 0.3s;
+}
+
+.faq-toggle.open {
+    transform: rotate(180deg);
+} */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 
 /* FAQ 容器微调 */
 .faq-item {
@@ -461,7 +520,11 @@ font-size: 1.3rem !important;
 }
 
 .faq-answer p {
+<<<<<<< HEAD
     font-size: 1.4rem !important; 
+=======
+    font-size: 1.4rem !important; /* 调整为更易读的大小 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     color: var(--text-slate);
     line-height: 1;
     padding: 20px 0;

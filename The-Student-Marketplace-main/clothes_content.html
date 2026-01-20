@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>衣锦校路·时尚流转 - 校园服装鞋包流转平台</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/archive_detail.css">
+    <link rel="stylesheet" href="css/clothes_content.css"> <!-- 本页专属 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://kit.fontawesome.com/0ad2b99521.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script> <!-- 手势库 -->
+</head>
+<body class="clothes_page">
+    
+    <!-- 顶部导航栏 -->
+    <nav class="daohang">
+        <div class="daohang_wrapper">
+            <ul class="daohang_list">
+                <li class="daohang_items"><a href="index.html">首页</a></li>
+                <li class="daohang_items"><a href="about.html">平台概况</a></li>
+                <li class="daohang_items active"><a href="categories.html">商品分类</a></li>
+                <li class="daohang_items"><a href="guide.html">流转锦囊</a></li>
+                <li class="daohang_items"><a href="user.html">用户中心</a></li>
+            </ul>
+            <div class="nav_auth"><a href="signin.html" class="btn_nav">登录</a></div>
+        </div>
+    </nav>
+
+    <header class="clothes_hero" id="performanceBanner">
+        <div class="hero_overlay"></div>
+        <div class="hero_content animate__animated animate__fadeIn">
+            <span class="en_tag">FASHION LEGACY</span>
+            <h1 class="elegant_title">衣锦校路 <span class="clothes_seal">服装</span></h1>
+            <div class="elegant_line"></div>
+            <p class="elegant_subtitle">尺码精准匹配 · 求职好运传递 · 让时尚在校园中温暖循环</p>
+        </div>
+        <!-- 数码风格装饰 -->
+        <div class="digital_wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C0,0,31.83,14.28,64,27.1,126.31,52,187.31,68,250.31,68c31.11,0,32.25-10.15,71.08-11.56Z"
+                    fill="#f9fbfa"></path>
+            </svg>
+        </div>
+    </header>
+
+
+    <main class="container">
+        
+        <!-- 模块2：尺码魔方盒 -->
+        <section class="module size-cube-box" id="module2">
+            <h2 class="module-title"><i class="fas fa-cube"></i> 【尺码魔方盒】</h2>
+            <div class="size-selector">
+                <div class="size-control">
+                    <div class="size-label">
+                        <i class="fas fa-male"></i>
+                        <span>身高</span>
+                    </div>
+                    <div class="size-slider">
+                        <input type="range" id="heightSlider" min="150" max="190" value="175" step="1">
+                        <div class="slider-value">
+                            <span id="heightValue">175</span>
+                            <span class="unit">cm</span>
+                        </div>
+                        <div class="slider-marks">
+                            <span>150</span>
+                            <span>160</span>
+                            <span>170</span>
+                            <span>180</span>
+                            <span>190</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="size-control">
+                    <div class="size-label">
+                        <i class="fas fa-weight"></i>
+                        <span>体重</span>
+                    </div>
+                    <div class="size-slider">
+                        <input type="range" id="weightSlider" min="40" max="100" value="65" step="1">
+                        <div class="slider-value">
+                            <span id="weightValue">65</span>
+                            <span class="unit">kg</span>
+                        </div>
+                        <div class="slider-marks">
+                            <span>40</span>
+                            <span>55</span>
+                            <span>70</span>
+                            <span>85</span>
+                            <span>100</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="size-control">
+                    <div class="size-label">
+                        <i class="fas fa-ruler-combined"></i>
+                        <span>肩宽</span>
+                    </div>
+                    <div class="size-slider">
+                        <input type="range" id="shoulderSlider" min="35" max="55" value="45" step="1">
+                        <div class="slider-value">
+                            <span id="shoulderValue">45</span>
+                            <span class="unit">cm</span>
+                        </div>
+                        <div class="slider-marks">
+                            <span>35</span>
+                            <span>40</span>
+                            <span>45</span>
+                            <span>50</span>
+                            <span>55</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="size-result">
+                <div class="result-card">
+                    <h4>您的精准尺码</h4>
+                    <div class="size-details">
+                        <div class="size-item">
+                            <span class="size-label">推荐尺码</span>
+                            <span class="size-value" id="recommendedSize">M/L</span>
+                        </div>
+                        <div class="size-item">
+                            <span class="size-label">匹配成功率</span>
+                            <span class="size-value" id="matchRate">92%</span>
+                        </div>
+                        <div class="size-item">
+                            <span class="size-label">适合款式</span>
+                            <span class="size-value" id="suitableStyle">修身型</span>
+                        </div>
+                    </div>
+                    <button class="btn-match" id="findMatch">
+                        <i class="fas fa-search"></i>
+                        查找匹配服饰
+                    </button>
+                </div>
+                
+                <div class="size-visualization">
+                    <canvas id="bodyChart"></canvas>
+                    <div class="visualization-info">
+                        <p>基于<span id="visualHeight">175</span>cm/<span id="visualWeight">65</span>kg智能匹配</p>
+                        <p class="hint">已找到<span id="matchCount">128</span>件匹配服饰</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 模块3：清洁透明盒 -->
+        <section class="module cleaning-box" id="module3">
+            <h2 class="module-title"><i class="fas fa-spray-can"></i> 【清洁透明盒】</h2>
+            <div class="cleaning-status">
+                <div class="cleaning-card active" data-status="professional">
+                    <div class="cleaning-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3 class="cleaning-title">专业干洗店已洗</h3>
+                    <p class="cleaning-desc">使用专业设备清洗，确保彻底清洁</p>
+                    <div class="cleaning-badge">
+                        <i class="fas fa-check-circle"></i>
+                        已消毒
+                    </div>
+                    <div class="cleaning-details">
+                        <p><i class="far fa-calendar"></i> 清洗时间：3天前</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 地点：校园干洗中心</p>
+                    </div>
+                </div>
+                
+                <div class="cleaning-card" data-status="disinfected">
+                    <div class="cleaning-icon">
+                        <i class="fas fa-hand-sparkles"></i>
+                    </div>
+                    <h3 class="cleaning-title">仅试穿已消毒</h3>
+                    <p class="cleaning-desc">全新试穿，紫外线消毒处理</p>
+                    <div class="cleaning-badge">
+                        <i class="fas fa-shield-virus"></i>
+                        无菌包装
+                    </div>
+                    <div class="cleaning-details">
+                        <p><i class="far fa-calendar"></i> 消毒时间：昨天</p>
+                        <p><i class="fas fa-box"></i> 包装：密封防尘袋</p>
+                    </div>
+                </div>
+                
+                <div class="cleaning-card" data-status="fresh">
+                    <div class="cleaning-icon">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <h3 class="cleaning-title">清新晾晒</h3>
+                    <p class="cleaning-desc">阳光自然晾晒，保留清新气息</p>
+                    <div class="cleaning-badge">
+                        <i class="fas fa-sun"></i>
+                        阳光消毒
+                    </div>
+                    <div class="cleaning-details">
+                        <p><i class="far fa-calendar"></i> 晾晒时间：今天</p>
+                        <p><i class="fas fa-temperature-high"></i> 状态：完全干燥</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cleaning-timeline" id="cleaningTimeline">
+                <!-- 清洁时间线将动态生成 -->
+                <div class="timeline-title">清洁记录时间线</div>
+                <div class="timeline-track">
+                    <div class="timeline-progress"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 模块4：场景分类盒 -->
+        <section class="module scene-box" id="module4">
+            <h2 class="module-title"><i class="fas fa-sitemap"></i> 【场景分类盒】</h2>
+            <div class="scene-grid">
+                <div class="scene-card" data-scene="interview">
+                    <div class="scene-image interview-bg">
+                        <div class="scene-overlay">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                    </div>
+                    <div class="scene-info">
+                        <h3>面试正装</h3>
+                        <p class="scene-count">86件</p>
+                        <p class="scene-desc">求职面试，专业得体</p>
+                    </div>
+                    <div class="scene-tag">
+                        <i class="fas fa-award"></i>
+                        好运传递
+                    </div>
+                </div>
+                
+                <div class="scene-card" data-scene="sports">
+                    <div class="scene-image sports-bg">
+                        <div class="scene-overlay">
+                            <i class="fas fa-running"></i>
+                        </div>
+                    </div>
+                    <div class="scene-info">
+                        <h3>运动社团</h3>
+                        <p class="scene-count">142件</p>
+                        <p class="scene-desc">社团活动，活力四射</p>
+                    </div>
+                    <div class="scene-tag">
+                        <i class="fas fa-users"></i>
+                        团体装备
+                    </div>
+                </div>
+                
+                <div class="scene-card" data-scene="lab">
+                    <div class="scene-image lab-bg">
+                        <div class="scene-overlay">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                    </div>
+                    <div class="scene-info">
+                        <h3>实验白大褂</h3>
+                        <p class="scene-count">58件</p>
+                        <p class="scene-desc">实验专用，干净整洁</p>
+                    </div>
+                    <div class="scene-tag">
+                        <i class="fas fa-microscope"></i>
+                        实验防护
+                    </div>
+                </div>
+                
+                <div class="scene-card" data-scene="daily">
+                    <div class="scene-image daily-bg">
+                        <div class="scene-overlay">
+                            <i class="fas fa-tshirt"></i>
+                        </div>
+                    </div>
+                    <div class="scene-info">
+                        <h3>日常潮流</h3>
+                        <p class="scene-count">324件</p>
+                        <p class="scene-desc">日常穿搭，时尚个性</p>
+                    </div>
+                    <div class="scene-tag">
+                        <i class="fas fa-star"></i>
+                        热门款式
+                    </div>
+                </div>
+                
+                <div class="scene-card" data-scene="graduation">
+                    <div class="scene-image graduation-bg">
+                        <div class="scene-overlay">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                    </div>
+                    <div class="scene-info">
+                        <h3>毕业照学士服</h3>
+                        <p class="scene-count">42件</p>
+                        <p class="scene-desc">毕业留念，仪式感必备</p>
+                    </div>
+                    <div class="scene-tag">
+                        <i class="fas fa-camera"></i>
+                        拍照神器
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scene-filters">
+                <div class="filter-tags" id="sceneFilters">
+                    <button class="filter-tag active" data-filter="all">全部</button>
+                    <button class="filter-tag" data-filter="new">新品</button>
+                    <button class="filter-tag" data-filter="hot">热门</button>
+                    <button class="filter-tag" data-filter="discount">特价</button>
+                    <button class="filter-tag" data-filter="luck">好运传递</button>
+                </div>
+                <div class="filter-sort">
+                    <select id="sortSelect">
+                        <option value="default">默认排序</option>
+                        <option value="price-low">价格从低到高</option>
+                        <option value="price-high">价格从高到低</option>
+                        <option value="newest">最新上架</option>
+                        <option value="popular">最多浏览</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 模块5：真人试穿盒 -->
+        <section class="module tryon-box" id="module5">
+            <h2 class="module-title"><i class="fas fa-user-check"></i> 【真人试穿盒】</h2>
+            <div class="tryon-container">
+                <div class="tryon-viewer" id="tryonViewer">
+                    <div class="viewer-stage">
+                        <div class="mannequin-base" id="mannequinBase">
+                            <!-- 人体模型基础 -->
+                            <div class="head"></div>
+                            <div class="body"></div>
+                            <div class="arm-left"></div>
+                            <div class="arm-right"></div>
+                            <div class="leg-left"></div>
+                            <div class="leg-right"></div>
+                        </div>
+                        <div class="outfit-overlay" id="outfitOverlay">
+                            <!-- 服装将动态叠加 -->
+                        </div>
+                        <div class="viewer-controls">
+                            <button class="view-btn" id="rotateLeft">
+                                <i class="fas fa-undo"></i>
+                            </button>
+                            <button class="view-btn" id="resetView">
+                                <i class="fas fa-redo"></i>
+                            </button>
+                            <button class="view-btn" id="rotateRight">
+                                <i class="fas fa-redo"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="outfit-info" id="outfitInfo">
+                        <h4>穿搭效果预览</h4>
+                        <p class="outfit-desc">查看服饰在实际穿着时的垂感和效果</p>
+                        <div class="outfit-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">垂感指数</span>
+                                <div class="stat-bar">
+                                    <div class="stat-fill" data-value="85"></div>
+                                </div>
+                                <span class="stat-value">85%</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">合身度</span>
+                                <div class="stat-bar">
+                                    <div class="stat-fill" data-value="92"></div>
+                                </div>
+                                <span class="stat-value">92%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tryon-outfits">
+                    <h4>学长学姐真实穿搭</h4>
+                    <div class="outfit-list">
+                        <div class="outfit-item active" data-outfit="suit1" data-image="img/outfit1.jpg" data-desc="法学院张学姐，面试着装，西装垂感优秀">
+                            <div class="outfit-preview">
+                                <div class="preview-image"></div>
+                                <div class="outfit-overlay-blur"></div>
+                            </div>
+                            <div class="outfit-meta">
+                                <h5>面试正装套装</h5>
+                                <p>张学姐 · 法学院</p>
+                                <span class="outfit-tag">求职成功</span>
+                            </div>
+                        </div>
+                        
+                        <div class="outfit-item" data-outfit="suit2" data-image="img/outfit2.jpg" data-desc="体育部李学长，运动套装，透气性极佳">
+                            <div class="outfit-preview">
+                                <div class="preview-image"></div>
+                                <div class="outfit-overlay-blur"></div>
+                            </div>
+                            <div class="outfit-meta">
+                                <h5>运动套装</h5>
+                                <p>李学长 · 体育部</p>
+                                <span class="outfit-tag">社团活动</span>
+                            </div>
+                        </div>
+                        
+                        <div class="outfit-item" data-outfit="suit3" data-image="img/outfit3.jpg" data-desc="文艺部王学姐，日常穿搭，时尚百搭">
+                            <div class="outfit-preview">
+                                <div class="preview-image"></div>
+                                <div class="outfit-overlay-blur"></div>
+                            </div>
+                            <div class="outfit-meta">
+                                <h5>日常连衣裙</h5>
+                                <p>王学姐 · 文艺部</p>
+                                <span class="outfit-tag">日常时尚</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tryon-actions">
+                        <button class="btn-tryon" id="virtualTryon">
+                            <i class="fas fa-magic"></i>
+                            虚拟试穿
+                        </button>
+                        <button class="btn-compare" id="compareOutfits">
+                            <i class="fas fa-layer-group"></i>
+                            对比穿搭
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 模块6：主要展架盒 -->
+        <section class="module showcase-box" id="module6">
+            <h2 class="module-title"><i class="fas fa-tshirt"></i> 【主要展架盒】</h2>
+            <div class="clothing-showcase">
+                <div class="clothing-item" data-id="1">
+                    <div class="clothing-image">
+                        <div class="image-zoom" data-image="detail1">
+                            <div class="zoom-overlay">
+                                <i class="fas fa-search-plus"></i>
+                                查看面料细节
+                            </div>
+                        </div>
+                        <div class="clothing-badges">
+                            <span class="badge-material">棉95% 氨纶5%</span>
+                            <span class="badge-condition">无勾丝</span>
+                        </div>
+                    </div>
+                    <div class="clothing-info">
+                        <h3>男士修身西装外套</h3>
+                        <p class="clothing-specs">尺码：L · 颜色：深灰 · 面料：抗皱羊毛混纺</p>
+                        <div class="clothing-details">
+                            <div class="detail-item">
+                                <i class="fas fa-weight"></i>
+                                <span>面料克重：280g/m²</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-temperature-high"></i>
+                                <span>适宜温度：15-25℃</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-hand-holding-water"></i>
+                                <span>透气性：优秀</span>
+                            </div>
+                        </div>
+                        <div class="clothing-price">
+                            <span class="price-now">¥189</span>
+                            <span class="price-original">¥899</span>
+                        </div>
+                        <button class="btn-view-detail">
+                            <i class="fas fa-expand-alt"></i>
+                            查看面料细节
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="clothing-item" data-id="2">
+                    <div class="clothing-image">
+                        <div class="image-zoom" data-image="detail2">
+                            <div class="zoom-overlay">
+                                <i class="fas fa-search-plus"></i>
+                                查看面料细节
+                            </div>
+                        </div>
+                        <div class="clothing-badges">
+                            <span class="badge-material">聚酯纤维80% 棉20%</span>
+                            <span class="badge-condition">轻微磨损</span>
+                        </div>
+                    </div>
+                    <div class="clothing-info">
+                        <h3>女士职业套装裙</h3>
+                        <p class="clothing-specs">尺码：M · 颜色：藏青 · 面料：弹力混纺</p>
+                        <div class="clothing-details">
+                            <div class="detail-item">
+                                <i class="fas fa-weight"></i>
+                                <span>面料克重：210g/m²</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-temperature-high"></i>
+                                <span>适宜温度：18-28℃</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-hand-holding-water"></i>
+                                <span>弹性：良好</span>
+                            </div>
+                        </div>
+                        <div class="clothing-price">
+                            <span class="price-now">¥128</span>
+                            <span class="price-original">¥658</span>
+                        </div>
+                        <button class="btn-view-detail">
+                            <i class="fas fa-expand-alt"></i>
+                            查看面料细节
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 面料细节大图查看器 -->
+            <div class="fabric-viewer" id="fabricViewer" style="display: none;">
+                <div class="viewer-header">
+                    <h4>面料细节查看器</h4>
+                    <button class="btn-close-viewer">&times;</button>
+                </div>
+                <div class="viewer-content">
+                    <div class="fabric-image-container">
+                        <img id="fabricDetailImage" src="" alt="面料细节">
+                        <div class="fabric-zoom-controls">
+                            <button class="zoom-btn" data-action="zoom-in">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                            <button class="zoom-btn" data-action="zoom-out">
+                                <i class="fas fa-search-minus"></i>
+                            </button>
+                            <button class="zoom-btn" data-action="reset">
+                                <i class="fas fa-sync-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="fabric-info">
+                        <h5 id="fabricName">抗皱羊毛混纺</h5>
+                        <div class="fabric-analysis">
+                            <div class="analysis-item">
+                                <span class="analysis-label">纤维密度</span>
+                                <div class="analysis-bar">
+                                    <div class="analysis-fill" style="width: 85%"></div>
+                                </div>
+                                <span class="analysis-value">85/100</span>
+                            </div>
+                            <div class="analysis-item">
+                                <span class="analysis-label">耐磨程度</span>
+                                <div class="analysis-bar">
+                                    <div class="analysis-fill" style="width: 78%"></div>
+                                </div>
+                                <span class="analysis-value">78/100</span>
+                            </div>
+                            <div class="analysis-item">
+                                <span class="analysis-label">色牢度</span>
+                                <div class="analysis-bar">
+                                    <div class="analysis-fill" style="width: 92%"></div>
+                                </div>
+                                <span class="analysis-value">92/100</span>
+                            </div>
+                        </div>
+                        <div class="fabric-tips">
+                            <h6>洗涤建议</h6>
+                            <ul>
+                                <li><i class="fas fa-temperature-low"></i> 建议冷水手洗</li>
+                                <li><i class="fas fa-wind"></i> 阴凉处晾干</li>
+                                <li><i class="fas fa-tshirt"></i> 避免高温熨烫</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 模块7：互助改衣盒 -->
+        <section class="module tailoring-box" id="module7">
+            <h2 class="module-title"><i class="fas fa-cut"></i> 【互助改衣盒】</h2>
+            <div class="tailoring-container">
+                <div class="tailoring-card">
+                    <div class="tailoring-header">
+                        <div class="tailoring-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <div class="tailoring-title">
+                            <h3>校园周边改衣服务</h3>
+                            <p>专业修改，让衣物更合身</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tailoring-shops">
+                        <div class="shop-card">
+                            <div class="shop-image">
+                                <div class="shop-rating">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.8</span>
+                                </div>
+                            </div>
+                            <div class="shop-info">
+                                <h4>巧手改衣坊</h4>
+                                <p class="shop-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    南门小吃街15号
+                                </p>
+                                <p class="shop-services">
+                                    <i class="fas fa-scissors"></i>
+                                    改裤脚、收腰、换拉链
+                                </p>
+                                <p class="shop-price">
+                                    <i class="fas fa-tag"></i>
+                                    起步价：¥15
+                                </p>
+                                <div class="shop-tags">
+                                    <span class="shop-tag">学生优惠</span>
+                                    <span class="shop-tag">立等可取</span>
+                                </div>
+                            </div>
+                            <button class="btn-navigate">
+                                <i class="fas fa-directions"></i>
+                                导航前往
+                            </button>
+                        </div>
+                        
+                        <div class="shop-card">
+                            <div class="shop-image">
+                                <div class="shop-rating">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.5</span>
+                                </div>
+                            </div>
+                            <div class="shop-info">
+                                <h4>专业干洗改衣店</h4>
+                                <p class="shop-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    东区商业街8号
+                                </p>
+                                <p class="shop-services">
+                                    <i class="fas fa-scissors"></i>
+                                    干洗+修改，专业处理高档衣物
+                                </p>
+                                <p class="shop-price">
+                                    <i class="fas fa-tag"></i>
+                                    起步价：¥25
+                                </p>
+                                <div class="shop-tags">
+                                    <span class="shop-tag">专业设备</span>
+                                    <span class="shop-tag">预约优先</span>
+                                </div>
+                            </div>
+                            <button class="btn-navigate">
+                                <i class="fas fa-directions"></i>
+                                导航前往
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="tailoring-request">
+                        <h4>在线预约改衣</h4>
+                        <div class="request-form">
+                            <div class="form-group">
+                                <label for="tailoringType">修改类型</label>
+                                <select id="tailoringType">
+                                    <option value="">请选择修改类型</option>
+                                    <option value="hemming">改裤脚/裙长</option>
+                                    <option value="waist">收腰/放腰</option>
+                                    <option value="sleeve">改袖长</option>
+                                    <option value="zipper">换拉链</option>
+                                    <option value="other">其他修改</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="urgencyLevel">紧急程度</label>
+                                <div class="urgency-levels">
+                                    <button class="urgency-btn" data-level="normal">
+                                        普通 (3-5天)
+                                    </button>
+                                    <button class="urgency-btn" data-level="urgent">
+                                        加急 (1-2天)
+                                    </button>
+                                    <button class="urgency-btn" data-level="express">
+                                        特急 (当天取)
+                                    </button>
+                                </div>
+                            </div>
+                            <button class="btn-request">
+                                <i class="fas fa-calendar-check"></i>
+                                预约改衣服务
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 模块8：闲置回收盒 -->
+        <section class="module recycle-box" id="module8">
+            <h2 class="module-title"><i class="fas fa-recycle"></i> 【闲置回收盒】</h2>
+            <div class="recycle-container">
+                <div class="recycle-info">
+                    <div class="recycle-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="recycle-content">
+                        <h3>绿色校园，环保循环</h3>
+                        <p>将不能穿的旧衣物投入回收箱，为环保贡献力量，还能获得平台积分奖励！</p>
+                        <div class="recycle-stats">
+                            <div class="stat-item">
+                                <span class="stat-value" id="collectedWeight">1,258</span>
+                                <span class="stat-label">公斤已回收</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value" id="carbonSaved">3,145</span>
+                                <span class="stat-label">公斤碳减排</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value" id="participants">428</span>
+                                <span class="stat-label">位同学参与</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="recycle-map">
+                    <div class="map-title">校园回收箱分布</div>
+                    <div class="map-container" id="recycleMap">
+                        <!-- 回收箱位置地图 -->
+                        <div class="map-point" style="top: 30%; left: 25%;" data-location="图书馆南侧">
+                            <div class="point-marker">
+                                <i class="fas fa-recycle"></i>
+                            </div>
+                            <div class="point-info">图书馆南侧</div>
+                        </div>
+                        <div class="map-point" style="top: 50%; left: 45%;" data-location="学生食堂入口">
+                            <div class="point-marker">
+                                <i class="fas fa-recycle"></i>
+                            </div>
+                            <div class="point-info">学生食堂入口</div>
+                        </div>
+                        <div class="map-point" style="top: 70%; left: 65%;" data-location="体育馆西门">
+                            <div class="point-marker">
+                                <i class="fas fa-recycle"></i>
+                            </div>
+                            <div class="point-info">体育馆西门</div>
+                        </div>
+                        <div class="map-point" style="top: 40%; left: 75%;" data-location="东区宿舍楼">
+                            <div class="point-marker">
+                                <i class="fas fa-recycle"></i>
+                            </div>
+                            <div class="point-info">东区宿舍楼</div>
+                        </div>
+                    </div>
+                    <div class="map-legend">
+                        <div class="legend-item">
+                            <div class="legend-color available"></div>
+                            <span>可投递</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color full"></div>
+                            <span>即将满箱</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color maintenance"></div>
+                            <span>维护中</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="recycle-actions">
+                    <button class="btn-recycle" id="recycleNow">
+                        <i class="fas fa-truck-loading"></i>
+                        预约上门回收
+                    </button>
+                    <button class="btn-guide" id="recycleGuide">
+                        <i class="fas fa-map-signs"></i>
+                        查看回收指南
+                    </button>
+                    <button class="btn-reward" id="checkRewards">
+                        <i class="fas fa-gift"></i>
+                        查看积分奖励
+                    </button>
+                </div>
+                
+                <div class="recycle-progress">
+                    <h4>本月回收目标</h4>
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="recycleProgress" style="width: 65%"></div>
+                        </div>
+                        <div class="progress-text">
+                            <span>已完成：<strong id="currentRecycle">650</strong> 公斤</span>
+                            <span>目标：1000 公斤</span>
+                        </div>
+                    </div>
+                    <p class="progress-hint">达成目标后，所有参与同学将获得额外积分奖励！</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p class="footer-text">© 2023 衣锦校路·时尚流转 - 校园服装鞋包流转平台</p>
+            <p class="footer-text">让时尚在校园中循环，让每一件衣物都找到新的主人</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript文件 -->
+    <script src="js/clothes_content.js"></script>
+</body>
+</html>

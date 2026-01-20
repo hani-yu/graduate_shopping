@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的评价中心 - 毕业物品流转平台</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="css/reviews_detail.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="reviews_page">
+    
+    <!-- 顶部导航栏（留空） -->
+    <nav class="daohang">
+        <!-- 导航栏内容 -->
+          <div class="daohang_wrapper">
+            <ul class="daohang_list">
+                <li class="daohang_items"><a href="index.html">首页</a></li>
+                <li class="daohang_items"><a href="about.html">平台概况</a></li>
+                <li class="daohang_items"><a href="categories.html">商品分类</a></li>
+                <li class="daohang_items"><a href="guide.html">流转锦囊</a></li>
+                <li class="daohang_items"><a href="events.html">活动专区</a></li>
+                <li class="daohang_items active"><a href="user.html">用户中心</a></li>
+            </ul>
+            <div class="nav_auth"><a href="signin.html" class="btn_nav">登录</a></div>
+        </div>
+    </nav>
+
+    <!-- Box 1: Hero Banner (透视长廊背景) -->
+    <header class="reviews_hero">
+        <div class="hero_overlay"></div> <!-- 对应 CSS 中的蒙层 -->
+        <div class="hero_content animate__animated animate__fadeIn">
+            <span class="en_text">REVIEWS</span>
+            <h1 class="elegant_title">我的评价中心 <span class="reviews_seal">评价</span></h1>
+            <div class="elegant_line"></div>
+            <!-- <p>岁月如梭，足迹成卷；回首来时路，锦囊意正浓。</p> -->
+        </div>
+
+        <!-- 底部波浪线 (建议保留以衔接下方色块) -->
+        <div class="banner_wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C0,0,31.83,14.28,64,27.1,126.31,52,187.31,68,250.31,68c31.11,0,32.25-10.15,71.08-11.56Z"
+                    fill="#f9fbfa"></path>
+            </svg>
+        </div>
+    </header>
+
+    <div class="reviews-detail-container">
+        <!-- Block 1: 个人评价数据概览 -->
+        <section id="stats-overview" class="reviews-block animate__animated" data-block="1">
+            <div class="block-header">
+                <div class="block-title">
+                    <i class="fas fa-chart-bar"></i>
+                    <h2>评价数据概览</h2>
+                </div>
+                <div class="update-time">数据更新至：2024-01-15</div>
+            </div>
+            
+            <div class="block-content">
+                <div class="stats-grid">
+                    <!-- 核心数据卡片 -->
+                    <div class="stats-card main-stats">
+                        <div class="stats-item">
+                            <div class="stats-value">128</div>
+                            <div class="stats-label">收到的评价</div>
+                        </div>
+                        <div class="stats-item">
+                            <div class="stats-value">4.8</div>
+                            <div class="stats-label">平均评分</div>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                        <div class="stats-item">
+                            <div class="stats-value">96%</div>
+                            <div class="stats-label">好评率</div>
+                        </div>
+                        <div class="stats-item">
+                            <div class="stats-value">85%</div>
+                            <div class="stats-label">回复率</div>
+                            <div class="stats-note">已回复108条</div>
+                        </div>
+                    </div>
+
+                    <!-- 评分分布 -->
+                    <div class="stats-card distribution-card">
+                        <div class="stats-title">
+                            <i class="fas fa-chart-pie"></i>
+                            <h3>评分分布</h3>
+                        </div>
+                        <div class="distribution-list">
+                            <div class="dist-item" data-rating="5" data-count="65">
+                                <div class="dist-stars">⭐⭐⭐⭐⭐</div>
+                                <div class="dist-bar">
+                                    <div class="dist-fill" style="width: 51%"></div>
+                                </div>
+                                <div class="dist-count">65条 (51%)</div>
+                            </div>
+                            <div class="dist-item" data-rating="4" data-count="45">
+                                <div class="dist-stars">⭐⭐⭐⭐</div>
+                                <div class="dist-bar">
+                                    <div class="dist-fill" style="width: 35%"></div>
+                                </div>
+                                <div class="dist-count">45条 (35%)</div>
+                            </div>
+                            <div class="dist-item" data-rating="3" data-count="12">
+                                <div class="dist-stars">⭐⭐⭐</div>
+                                <div class="dist-bar">
+                                    <div class="dist-fill" style="width: 9%"></div>
+                                </div>
+                                <div class="dist-count">12条 (9%)</div>
+                            </div>
+                            <div class="dist-item" data-rating="2" data-count="4">
+                                <div class="dist-stars">⭐⭐</div>
+                                <div class="dist-bar">
+                                    <div class="dist-fill" style="width: 3%"></div>
+                                </div>
+                                <div class="dist-count">4条 (3%)</div>
+                            </div>
+                            <div class="dist-item" data-rating="1" data-count="2">
+                                <div class="dist-stars">⭐</div>
+                                <div class="dist-bar">
+                                    <div class="dist-fill" style="width: 2%"></div>
+                                </div>
+                                <div class="dist-count">2条 (2%)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 热门标签 -->
+                    <div class="stats-card tags-card">
+                        <div class="stats-title">
+                            <i class="fas fa-tags"></i>
+                            <h3>评价标签墙</h3>
+                        </div>
+                        <div class="tags-cloud">
+                            <span class="tag hot" data-count="89">诚信可靠 🏅</span>
+                            <span class="tag" data-count="76">价格公道 💰</span>
+                            <span class="tag" data-count="68">描述准确 ✅</span>
+                            <span class="tag" data-count="45">服务周到 🤝</span>
+                            <span class="tag" data-count="32">绿色传承 🌿</span>
+                            <span class="tag" data-count="28">包装仔细 📦</span>
+                            <span class="tag" data-count="24">回复及时 ⏱️</span>
+                            <span class="tag" data-count="18">学长榜样 👨‍🎓</span>
+                        </div>
+                        <div class="tags-note">标签后数字表示被提及次数</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Block 2: 精选评价展示 -->
+        <section id="featured-reviews" class="reviews-block animate__animated" data-block="2">
+            <div class="block-header">
+                <div class="block-title">
+                    <i class="fas fa-award"></i>
+                    <h2>精选评价展示</h2>
+                </div>
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="highlight">高光评价</button>
+                    <button class="filter-tab" data-filter="recent">最新评价</button>
+                    <button class="filter-tab" data-filter="useful">最实用评价</button>
+                </div>
+            </div>
+            
+            <div class="block-content">
+                <!-- 瀑布流评价展示 -->
+                <div class="reviews-masonry" id="reviews-masonry">
+                    <!-- 评价1 - 高光评价 -->
+                    <div class="review-card highlight">
+                        <div class="review-header">
+                            <div class="reviewer-avatar">苏</div>
+                            <div class="reviewer-info">
+                                <div class="reviewer-name">苏同学</div>
+                                <div class="reviewer-meta">经管学院 · 2027届</div>
+                            </div>
+                            <div class="review-date">2024-01-10</div>
+                        </div>
+                        
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="rating-text">5.0</span>
+                        </div>
+                        
+                        <div class="review-content">
+                            <p class="review-text">"学长人超级好！买到的《数据结构》教材里还夹了他手写的复试笔记，甚至还有几张考研时候的鼓励贴纸。这种知识的传承真的特别温暖，感觉买到的不仅是书，更是一份宝贵的经验和鼓励。"</p>
+                            
+                            <div class="review-images">
+                                <div class="image-thumb">
+                                    <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=200" alt="笔记照片">
+                                </div>
+                            </div>
+                            
+                            <div class="item-info">
+                                <i class="fas fa-book"></i>
+                                <span>成交物品：《数据结构与算法》教材 + 手写笔记</span>
+                            </div>
+                        </div>
+                        
+                        <div class="review-footer">
+                            <div class="seller-reply">
+                                <div class="reply-header">我的回复：</div>
+                                <p class="reply-text">"很高兴笔记对你有帮助！这些笔记陪伴我度过了考研时光，现在它们能继续发光发热，就是最好的传承。祝你考研顺利，前程似锦！"</p>
+                                <div class="reply-time">回复于 2024-01-10 18:30</div>
+                            </div>
+                            
+                            <div class="review-stats">
+                                <button class="helpful-btn">
+                                    <i class="fas fa-thumbs-up"></i>
+                                    <span>有帮助 (24)</span>
+                                </button>
+                                <span class="view-count">
+                                    <i class="fas fa-eye"></i> 被浏览156次
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 评价2 - 最新评价 -->
+                    <div class="review-card recent">
+                        <div class="review-header">
+                            <div class="reviewer-avatar">王</div>
+                            <div class="reviewer-info">
+                                <div class="reviewer-name">王同学</div>
+                                <div class="reviewer-meta">信息学院 · 2029届</div>
+                            </div>
+                            <div class="review-date">2024-01-14</div>
+                        </div>
+                        
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span class="rating-text">4.5</span>
+                        </div>
+                        
+                        <div class="review-content">
+                            <p class="review-text">"烧水壶和护眼灯都非常新，价格也很合理。作为大一新生，省去了开学到处采购的麻烦。平台的面交流程很规范，交易很放心。"</p>
+                            
+                            <div class="item-info">
+                                <i class="fas fa-plug"></i>
+                                <span>成交物品：九成新烧水壶 + 护眼灯套装</span>
+                            </div>
+                        </div>
+                        
+                        <div class="review-footer">
+                            <div class="seller-reply">
+                                <div class="reply-header">我的回复：</div>
+                                <p class="reply-text">"欢迎来到学校！这些物品陪伴了我整个大学时光，现在交给新主人继续使用，很有意义。祝你大学生活愉快！"</p>
+                                <div class="reply-time">回复于 2024-01-14 20:15</div>
+                            </div>
+                            
+                            <div class="review-stats">
+                                <button class="helpful-btn">
+                                    <i class="fas fa-thumbs-up"></i>
+                                    <span>有帮助 (12)</span>
+                                </button>
+                                <span class="view-count">
+                                    <i class="fas fa-eye"></i> 被浏览89次
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 评价3 - 最实用评价 -->
+                    <!-- <div class="review-card useful">
+                        <div class="review-header">
+                            <div class="reviewer-avatar">李</div>
+                            <div class="reviewer-info">
+                                <div class="reviewer-name">李同学</div>
+                                <div class="reviewer-meta">艺术学院 · 2026届</div>
+                            </div>
+                            <div class="review-date">2024-01-05</div>
+                        </div>
+                        
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="rating-text">5.0</span>
+                        </div>
+                        
+                        <div class="review-content">
+                            <p class="review-text">"人体工学椅非常舒服，腰部支撑特别好。最感动的是搬运的时候学长主动帮我抬到了宿舍楼下，那么重的椅子，真的很感谢！这种互助精神在毕业季特别温暖。"</p>
+                            
+                            <div class="item-info">
+                                <i class="fas fa-chair"></i>
+                                <span>成交物品：九成新人体工学椅</span>
+                            </div>
+                            
+                            <div class="review-tips">
+                                <i class="fas fa-lightbulb"></i>
+                                <strong>实用建议：</strong> 椅子底部的滚轮建议定期清洁，会更好用
+                            </div>
+                        </div> -->
+                        
+                        <!-- <div class="review-footer">
+                            <div class="seller-reply">
+                                <div class="reply-header">我的回复：</div>
+                                <p class="reply-text">"谢谢你的实用建议！很高兴椅子能继续服务新主人。相互帮助是校园传承的重要部分，祝你学习生活愉快！"</p>
+                                <div class="reply-time">回复于 2024-01-05 22:45</div>
+                            </div>
+                            
+                            <div class="review-stats">
+                                <button class="helpful-btn">
+                                    <i class="fas fa-thumbs-up"></i>
+                                    <span>有帮助 (38)</span>
+                                </button>
+                                <span class="view-count">
+                                    <i class="fas fa-eye"></i> 被浏览210次
+                                </span>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+                
+                <div class="load-more">
+                    <button class="btn-load-more">
+                        <i class="fas fa-sync-alt"></i> 加载更多评价
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Block 3: 按品类查看评价 -->
+        <section id="category-reviews" class="reviews-block animate__animated" data-block="3">
+            <div class="block-header">
+                <div class="block-title">
+                    <i class="fas fa-boxes"></i>
+                    <h2>按品类查看评价</h2>
+                </div>
+                <div class="category-summary">
+                    <span class="total-items">共售出 42 件物品</span>
+                </div>
+            </div>
+            
+            <div class="block-content">
+                <div class="category-tabs">
+                    <button class="category-tab active" data-category="all">
+                        <i class="fas fa-th-large"></i> 全部品类
+                    </button>
+                    <button class="category-tab" data-category="books">
+                        <i class="fas fa-book"></i> 书籍资料
+                        <span class="count-badge">42</span>
+                    </button>
+                    <button class="category-tab" data-category="digital">
+                        <i class="fas fa-laptop"></i> 数码电子
+                        <span class="count-badge">35</span>
+                    </button>
+                    <button class="category-tab" data-category="furniture">
+                        <i class="fas fa-home"></i> 宿舍家居
+                        <span class="count-badge">51</span>
+                    </button>
+                </div>
+                
+                <div class="category-details">
+                    <!-- 书籍品类详情 -->
+                    <div class="category-info active" data-category="books">
+                        <div class="category-header">
+                            <h3><i class="fas fa-book"></i> 书籍资料</h3>
+                            <div class="category-rating">
+                                <span class="rating-value">4.9</span>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-count">42条评价</span>
+                            </div>
+                        </div>
+                        
+                        <div class="subcategories">
+                            <div class="subcategory-item">
+                                <h4>教材课本</h4>
+                                <div class="subcategory-stats">
+                                    <span class="count">28条评价</span>
+                                    <span class="rating">4.9</span>
+                                </div>
+                                <div class="subcategory-tags">
+                                    <span class="tag">笔记详细</span>
+                                    <span class="tag">重点标注</span>
+                                    <span class="tag">保存完好</span>
+                                </div>
+                            </div>
+                            
+                            <div class="subcategory-item">
+                                <h4>考研资料</h4>
+                                <div class="subcategory-stats">
+                                    <span class="count">10条评价</span>
+                                    <span class="rating">4.8</span>
+                                </div>
+                                <div class="subcategory-tags">
+                                    <span class="tag">真题齐全</span>
+                                    <span class="tag">备考经验</span>
+                                    <span class="tag">激励传承</span>
+                                </div>
+                            </div>
+                            
+                            <div class="subcategory-item">
+                                <h4>课外读物</h4>
+                                <div class="subcategory-stats">
+                                    <span class="count">4条评价</span>
+                                    <span class="rating">5.0</span>
+                                </div>
+                                <div class="subcategory-tags">
+                                    <span class="tag">经典收藏</span>
+                                    <span class="tag">读书笔记</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 数码品类详情 -->
+                    <div class="category-info" data-category="digital">
+                        <div class="category-header">
+                            <h3><i class="fas fa-laptop"></i> 数码电子</h3>
+                            <div class="category-rating">
+                                <span class="rating-value">4.7</span>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="rating-count">35条评价</span>
+                            </div>
+                        </div>
+                        
+                        <div class="subcategories">
+                            <div class="subcategory-item">
+                                <h4>电脑配件</h4>
+                                <div class="subcategory-stats">
+                                    <span class="count">18条评价</span>
+                                    <span class="rating">4.8</span>
+                                </div>
+                                <div class="subcategory-tags">
+                                    <span class="tag">功能完好</span>
+                                    <span class="tag">配件齐全</span>
+                                    <span class="tag">性价比高</span>
+                                </div>
+                            </div>
+                            
+                            <div class="subcategory-item">
+                                <h4>手机平板</h4>
+                                <div class="subcategory-stats">
+                                    <span class="count">12条评价</span>
+                                    <span class="rating">4.6</span>
+                                </div>
+                                <div class="subcategory-tags">
+                                    <span class="tag">成色新</span>
+                                    <span class="tag">无划痕</span>
+                                    <span class="tag">使用说明</span>
+                                </div>
+                            </div>
+                            
+                            <div class="subcategory-item">
+                                <h4>耳机音响</h4>
+                                <div class="subcategory-stats">
+                                    <span class="count">5条评价</span>
+                                    <span class="rating">4.5</span>
+                                </div>
+                                <div class="subcategory-tags">
+                                    <span class="tag">音质好</span>
+                                    <span class="tag">清洁干净</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 家居品类详情 -->
+                    <div class="category-info" data-category="furniture">
+                        <div class="category-header">
+                            <h3><i class="fas fa-home"></i> 宿舍家居</h3>
+                            <div class="category-rating">
+                                <span class="rating-value">4.8</span>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-count">51条评价</span>
+                            </div>
+                        </div>
+                        
+                        <div class="subcategories">
+                            <div class="subcategory-item">
+                                <h4>家具收纳</h4>
+                                <div class="subcategory-stats">
+                                    <span class="count">25条评价</span>
+                                    <span class="rating">4.9</span>
+                                </div>
+                                <div class="subcategory-tags">
+                                    <span class="tag">结实耐用</span>
+                                    <span class="tag">安装指导</span>
+                                    <span class="tag">搬运协助</span>
+                                </div>
+                            </div>
+                            
+                            <div class="subcategory-item">
+                                <h4>小电器</h4>
+                                <div class="subcategory-stats">
+                                    <span class="count">16条评价</span>
+                                    <span class="rating">4.7</span>
+                                </div>
+                                <div class="subcategory-tags">
+                                    <span class="tag">功能正常</span>
+                                    <span class="tag">安全提醒</span>
+                                    <span class="tag">使用说明</span>
+                                </div>
+                            </div>
+                            
+                            <div class="subcategory-item">
+                                <h4>生活用品</h4>
+                                <div class="subcategory-stats">
+                                    <span class="count">10条评价</span>
+                                    <span class="rating">4.6</span>
+                                </div>
+                                <div class="subcategory-tags">
+                                    <span class="tag">干净卫生</span>
+                                    <span class="tag">实用性强</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Block 4: 评价管理与回复 -->
+        <section id="review-management" class="reviews-block animate__animated" data-block="4">
+            <div class="block-header">
+                <div class="block-title">
+                    <i class="fas fa-comments"></i>
+                    <h2>评价管理与回复</h2>
+                </div>
+                <div class="management-stats">
+                    <span class="stat-item pending">
+                        <i class="fas fa-clock"></i> 待回复：3条
+                    </span>
+                    <span class="stat-item new">
+                        <i class="fas fa-bell"></i> 本周新增：5条
+                    </span>
+                </div>
+            </div>
+            
+            <div class="block-content">
+                <div class="management-grid">
+                    <!-- 左侧：待处理评价 -->
+                    <div class="management-column">
+                        <h3><i class="fas fa-inbox"></i> 待处理评价</h3>
+                        
+                        <div class="pending-reviews">
+                            <!-- 待回复评价1 -->
+                            <div class="pending-review">
+                                <div class="pending-header">
+                                    <div class="reviewer-avatar-small">赵</div>
+                                    <div class="pending-info">
+                                        <div class="reviewer-name">赵同学</div>
+                                        <div class="review-time">2小时前</div>
+                                    </div>
+                                    <div class="review-rating-small">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                
+                                <p class="pending-text">"收到学长卖的台灯了，亮度可调节很实用，包装也很仔细，非常感谢！"</p>
+                                
+                                <div class="pending-actions">
+                                    <button class="btn-reply">立即回复</button>
+                                    <button class="btn-quick-reply">快捷回复</button>
+                                </div>
+                            </div>
+                            
+                            <!-- 待回复评价2 -->
+                            <div class="pending-review">
+                                <div class="pending-header">
+                                    <div class="reviewer-avatar-small">刘</div>
+                                    <div class="pending-info">
+                                        <div class="reviewer-name">刘同学</div>
+                                        <div class="review-time">1天前</div>
+                                    </div>
+                                    <div class="review-rating-small">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                                
+                                <p class="pending-text">"键盘手感不错，就是有一点小划痕，不过不影响使用，总体满意。"</p>
+                                
+                                <div class="pending-actions">
+                                    <button class="btn-reply">立即回复</button>
+                                    <button class="btn-quick-reply">快捷回复</button>
+                                </div>
+                            </div>
+                            
+                            <!-- 争议评价 -->
+                            <div class="pending-review dispute">
+                                <div class="pending-header">
+                                    <div class="reviewer-avatar-small">陈</div>
+                                    <div class="pending-info">
+                                        <div class="reviewer-name">陈同学</div>
+                                        <div class="review-time">3天前</div>
+                                        <div class="dispute-badge">
+                                            <i class="fas fa-exclamation-triangle"></i> 争议评价
+                                        </div>
+                                    </div>
+                                    <div class="review-rating-small">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                
+                                <p class="pending-text">"椅子调节功能有问题，和描述的不太一样，希望处理一下。"</p>
+                                
+                                <div class="pending-actions">
+                                    <button class="btn-resolve">联系解决</button>
+                                    <button class="btn-platform">平台介入</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 右侧：搜索与筛选 -->
+                    <div class="management-column">
+                        <h3><i class="fas fa-search"></i> 搜索与筛选</h3>
+                        
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" id="review-search" placeholder="搜索评价内容、买家姓名...">
+                        </div>
+                        
+                        <div class="filter-options">
+                            <div class="filter-group">
+                                <label><i class="fas fa-star"></i> 按评分筛选</label>
+                                <div class="filter-buttons">
+                                    <button class="filter-btn active" data-rating="all">全部</button>
+                                    <button class="filter-btn" data-rating="5">五星</button>
+                                    <button class="filter-btn" data-rating="4">四星以上</button>
+                                    <button class="filter-btn" data-rating="3">三星及以下</button>
+                                </div>
+                            </div>
+                            
+                            <div class="filter-group">
+                                <label><i class="fas fa-calendar"></i> 按时间筛选</label>
+                                <div class="filter-buttons">
+                                    <button class="filter-btn active" data-time="all">全部</button>
+                                    <button class="filter-btn" data-time="week">最近一周</button>
+                                    <button class="filter-btn" data-time="month">最近一月</button>
+                                    <button class="filter-btn" data-time="quarter">最近三月</button>
+                                </div>
+                            </div>
+                            
+                            <div class="filter-group">
+                                <label><i class="fas fa-box"></i> 按物品筛选</label>
+                                <select class="item-select">
+                                    <option value="">所有物品</option>
+                                    <option value="book">书籍资料</option>
+                                    <option value="digital">数码电子</option>
+                                    <option value="furniture">宿舍家居</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <!-- 批量操作 -->
+                        <div class="batch-actions">
+                            <h4><i class="fas fa-layer-group"></i> 批量操作</h4>
+                            <div class="batch-buttons">
+                                <button class="batch-btn" data-action="thank">
+                                    <i class="fas fa-heart"></i> 一键感谢好评
+                                </button>
+                                <button class="batch-btn" data-action="reply">
+                                    <i class="fas fa-reply-all"></i> 批量回复相似评价
+                                </button>
+                                <button class="batch-btn" data-action="export">
+                                    <i class="fas fa-download"></i> 导出评价记录
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Block 5: 评价成长分析 -->
+        <section id="growth-analysis" class="reviews-block animate__animated" data-block="5">
+            <div class="block-header">
+                <div class="block-title">
+                    <i class="fas fa-chart-line"></i>
+                    <h2>评价成长分析</h2>
+                </div>
+                <div class="time-range">
+                    <select id="time-range-select">
+                        <option value="month">最近一个月</option>
+                        <option value="quarter">最近三个月</option>
+                        <option value="year">最近一年</option>
+                        <option value="all">全部时间</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="block-content">
+                <div class="growth-grid">
+                    <!-- 左侧：趋势分析 -->
+                    <div class="growth-column">
+                        <div class="growth-card">
+                            <div class="growth-title">
+                                <i class="fas fa-trend-up"></i>
+                                <h3>评价趋势分析</h3>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="trendChart"></canvas>
+                            </div>
+                            <div class="chart-legend">
+                                <div class="legend-item">
+                                    <span class="legend-color" style="background: var(--faq-teal);"></span>
+                                    <span>评价数量</span>
+                                </div>
+                                <div class="legend-item">
+                                    <span class="legend-color" style="background: var(--faq-gold);"></span>
+                                    <span>平均评分</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="growth-card">
+                            <div class="growth-title">
+                                <i class="fas fa-road"></i>
+                                <h3>我的卖家成长路径</h3>
+                            </div>
+                            <div class="growth-path">
+                                <div class="path-stage active">
+                                    <div class="stage-marker">1</div>
+                                    <div class="stage-content">
+                                        <h4>摸索期（1-10条）</h4>
+                                        <p>关键词：价格实惠、回复及时</p>
+                                        <div class="stage-stats">平均评分：4.5</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="path-stage active">
+                                    <div class="stage-marker">2</div>
+                                    <div class="stage-content">
+                                        <h4>成长期（11-50条）</h4>
+                                        <p>关键词：诚信可靠、描述准确</p>
+                                        <div class="stage-stats">平均评分：4.7</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="path-stage active">
+                                    <div class="stage-marker">3</div>
+                                    <div class="stage-content">
+                                        <h4>成熟期（51-128条）</h4>
+                                        <p>关键词：学长榜样、服务专业</p>
+                                        <div class="stage-stats">平均评分：4.8</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 右侧：改进建议 -->
+                    <div class="growth-column">
+                        <div class="growth-card">
+                            <div class="growth-title">
+                                <i class="fas fa-lightbulb"></i>
+                                <h3>改进建议</h3>
+                            </div>
+                            
+                            <div class="improvement-list">
+                                <div class="improvement-item">
+                                    <div class="improvement-header">
+                                        <h4>根据3星以下评价分析</h4>
+                                        <span class="issue-count">6条低分评价</span>
+                                    </div>
+                                    <ul class="improvement-suggestions">
+                                        <li>加强物品描述的准确性，特别是功能状态的描述</li>
+                                        <li>发货前增加功能测试环节</li>
+                                        <li>提供更清晰的物品使用说明</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="improvement-item">
+                                    <div class="improvement-header">
+                                        <h4>买家常见问题汇总</h4>
+                                        <span class="issue-count">12个常见问题</span>
+                                    </div>
+                                    <ul class="improvement-suggestions">
+                                        <li>物品使用方法和注意事项</li>
+                                        <li>保修期和售后支持范围</li>
+                                        <li>面交地点和时间的灵活性</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="improvement-item">
+                                    <div class="improvement-header">
+                                        <h4>提升好评率策略</h4>
+                                        <span class="target">目标：98%好评率</span>
+                                    </div>
+                                    <ul class="improvement-suggestions">
+                                        <li>主动跟进交易，及时解决买家疑问</li>
+                                        <li>完善物品描述，减少信息差</li>
+                                        <li>提供附加价值（如使用建议、保养方法）</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- <div class="growth-card">
+                            <div class="growth-title">
+                                <i class="fas fa-bullseye"></i>
+                                <h3>近期目标设定</h3>
+                            </div>
+                            
+                            <div class="goals-list">
+                                <div class="goal-item">
+                                    <div class="goal-info">
+                                        <h4>提升回复率至90%</h4>
+                                        <p>当前：85% | 目标：90%</p>
+                                    </div>
+                                    <div class="goal-progress">
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 85%"></div>
+                                        </div>
+                                        <span>85%</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="goal-item">
+                                    <div class="goal-info">
+                                        <h4>减少争议评价</h4>
+                                        <p>当前：1条 | 目标：0条</p>
+                                    </div>
+                                    <div class="goal-progress">
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 50%"></div>
+                                        </div>
+                                        <span>50%</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="goal-item">
+                                    <div class="goal-info">
+                                        <h4>增加高光评价</h4>
+                                        <p>当前：12条 | 目标：20条</p>
+                                    </div>
+                                    <div class="goal-progress">
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 60%"></div>
+                                        </div>
+                                        <span>60%</span>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- 页面底部（留空） -->
+    <footer class="page-footer">
+        <!-- 底部内容 -->
+    </footer>
+
+    <!-- 脚本 -->
+    <script src="js/reviews_detail.js"></script>
+</body>
+</html>

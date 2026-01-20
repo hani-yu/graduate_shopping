@@ -5,6 +5,23 @@
      background-color: var(--bg-light);
  }
 
+<<<<<<< HEAD
+=======
+ /* 顶部导航 */
+ /* .daohang_wrapper { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
+.daohang_list { display: flex; list-style: none; margin: 0; padding: 0; }
+.daohang_items { margin: 0 1rem; position: relative; }
+.daohang_items a { text-decoration: none; color: #333; font-weight: 500; transition: color 0.3s; }
+.daohang_items.active > a, .daohang_items a:hover { color: #0d9488; }
+
+.dropdown-menu { position: absolute; top: 120%; left: 0; background: #fff; box-shadow: 0 5px 20px rgba(0,0,0,0.1); display: none; flex-direction: column; padding: 0.5rem 0; border-radius: 6px; list-style: none; }
+.dropdown:hover .dropdown-menu { display: flex; }
+.dropdown-menu a { padding: 0.5rem 1.5rem; white-space: nowrap; font-size: 0.9rem; }
+
+.btn_nav { background: #0d9488; color: #fff; padding: 0.5rem 1.2rem; border-radius: 6px; text-decoration: none; transition: 0.3s; }
+.btn_nav:hover { background: #0b7b6c; box-shadow: 0 4px 12px rgba(13,148,136,0.2); } */
+
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
  nav.daohang {
      position: fixed;
      width: 100%;
@@ -12,11 +29,19 @@
      background: rgba(248, 250, 252, 0.6);
      backdrop-filter: blur(20px);
      -webkit-backdrop-filter: blur(20px);
+<<<<<<< HEAD
+=======
+     /* 极细的底部边线，增加精致感 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
      border-bottom: 1px solid rgba(13, 148, 136, 0.1);
      z-index: 1000;
      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
  }
 
+<<<<<<< HEAD
+=======
+ /* 滚动后的样式：增加不透明度 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
  nav.daohang.nav_scrolled {
      background: rgba(255, 255, 255, 0.95);
      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
@@ -24,6 +49,10 @@
 
  .daohang_wrapper {
      max-width: 1200px;
+<<<<<<< HEAD
+=======
+     /* 限制宽度，显得不那么散乱 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
      margin: 0 auto;
      display: flex;
      justify-content: space-between;
@@ -43,9 +72,17 @@
      position: relative;
  }
 
+<<<<<<< HEAD
  .daohang_items a {
      text-decoration: none;
      color: #475569;
+=======
+ /* 导航文字：增加字间距与字体质感 */
+ .daohang_items a {
+     text-decoration: none;
+     color: #475569;
+     /* 深灰色，更稳重 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
      font-weight: 500;
      font-size: rem;
      letter-spacing: 1px;
@@ -54,11 +91,19 @@
      display: inline-block;
  }
 
+<<<<<<< HEAD
+=======
+ /* 悬停效果：颜色变为主题绿，并切换为书卷气的字体感觉 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
  .daohang_items a:hover,
  .daohang_items a.active {
      color: #0d9488;
  }
 
+<<<<<<< HEAD
+=======
+ /* 动态下划线：像毛笔顿笔一样的效果 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
  .daohang_items a::after {
      content: '';
      position: absolute;
@@ -67,6 +112,10 @@
      width: 0;
      height: 2px;
      background: #f59e0b;
+<<<<<<< HEAD
+=======
+     /* 使用琥珀金作为点缀 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
      transition: all 0.3s ease;
      transform: translateX(-50%);
      border-radius: 2px;
@@ -76,6 +125,10 @@
      width: 100%;
  }
 
+<<<<<<< HEAD
+=======
+ /* 下拉菜单：圆润且带有软阴影 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
  .dropdown-menu {
      position: absolute;
      top: 150%;
@@ -87,6 +140,10 @@
      flex-direction: column;
      padding: 1rem 0;
      border-radius: 18px;
+<<<<<<< HEAD
+=======
+     /* 超大圆角 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
      border: 1px solid rgba(13, 148, 136, 0.05);
      opacity: 0;
      transition: all 0.3s ease;
@@ -115,17 +172,29 @@
      display: none;
  }
 
+<<<<<<< HEAD
+=======
+ /* 去掉下拉菜单的下划线 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 
  .dropdown-menu a:hover {
      background: #f0fdfa;
      color: #0d9488;
  }
 
+<<<<<<< HEAD
+=======
+ /* 登录按钮：改用琥珀金，作为全局视觉焦点 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
  .btn_nav {
      background: #f59e0b;
      color: #fff !important;
      padding: 0.6rem 1.8rem;
      border-radius: 50px;
+<<<<<<< HEAD
+=======
+     /* 胶囊形状 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
      font-weight: 600;
      letter-spacing: 2px;
      box-shadow: 0 10px 20px rgba(245, 158, 11, 0.2);
@@ -138,9 +207,59 @@
      background: #d97706;
  }
 
+<<<<<<< HEAD
 .user_banner {
     position: relative;
     height: 100vh; 
+=======
+ /* 页面标题 */
+ /* .user_header { text-align: center; padding: 5rem 1rem 2rem; background: #f0fdf4; }
+.user_header h1 { font-size: 2rem; color: #0d9488; margin-bottom: 0.5rem; }
+.user_header p { font-size: 1rem; color: #555; } */
+
+ /* 卡片布局 */
+ /* .user_dashboard { max-width: 1200px; margin: 0 auto; padding: 1rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; }
+.card_block { background: #fff; border-radius: 10px; padding: 1rem 1.5rem; box-shadow: 0 3px 10px rgba(0,0,0,0.05); transition: transform 0.3s; }
+.card_block:hover { transform: translateY(-5px); }
+.card_block h2 { font-size: 1.2rem; color: #0d9488; margin-bottom: 0.8rem; }
+.card_content { display: flex; flex-direction: column; gap: 0.5rem; }
+.avatar { font-size: 3rem; color: #0d9488; }
+.info p { margin: 0.2rem 0; }
+.favorites_grid { display: flex; gap: 1rem; flex-wrap: wrap; }
+.fav_item { background: #f0fdf4; padding: 0.5rem 1rem; border-radius: 6px; display: flex; align-items: center; gap: 0.5rem; }
+.review_card { background: #f9f9f9; padding: 0.5rem 1rem; border-radius: 6px; margin-bottom: 0.5rem; }
+.status { color: #0d9488; font-weight: bold; }
+.notice_list, .message_list, .order_list { list-style: none; padding-left: 0; }
+.notice_list li, .message_list li, .order_list li { padding: 0.3rem 0; border-bottom: 1px solid #eee; } */
+
+ /* 折叠内容 */
+ /* .collapse_content { display: none; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem; }
+.collapse_content input { padding: 0.4rem; border-radius: 4px; border: 1px solid #ccc; }
+.btn_toggle, .btn_save { padding: 0.4rem 0.8rem; border-radius: 4px; border: none; background: #0d9488; color: #fff; cursor: pointer; transition: 0.3s; }
+.btn_toggle:hover, .btn_save:hover { background: #0b7b6c; } */
+
+ /* 主体 */
+ /* main { padding:6rem 1rem 2rem; max-width:800px; margin:0 auto; line-height:1.6; color:#333; font-size:1rem; }
+.user_header { text-align:center; margin-bottom:2rem; }
+.user_header h1 { font-size:2rem; color:#0d9488; }
+.user_header p { font-size:1rem; color:#555; } */
+
+ /* 子版块 */
+ /* .user_section { margin-bottom:2rem; }
+.user_section h2 { font-size:1.5rem; color:#0d9488; margin-bottom:0.5rem; }
+.user_section ul { padding-left:1.2rem; }
+.user_section li { margin-bottom:0.4rem; }
+input { padding:0.4rem; border-radius:4px; border:1px solid #ccc; margin-top:0.4rem; display:block; }
+.btn_toggle, .btn_save { padding:0.4rem 0.8rem; border:none; border-radius:4px; background:#0d9488; color:#fff; cursor:pointer; margin-top:0.5rem; }
+.btn_toggle:hover, .btn_save:hover { background:#0b7b6c; }
+.collapse_content { display:none; margin-top:0.5rem; } */
+
+ /* --- 统一 Banner 风格 --- */
+/* --- 用户中心 Banner 全屏升级 --- */
+.user_banner {
+    position: relative;
+    height: 100vh; /* 统一为全屏高度 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     overflow: hidden;
     background: linear-gradient(135deg, #0d9488 0%, #064e3b 100%) !important;
     display: flex;
@@ -159,6 +278,10 @@
     pointer-events: none;
 }
 
+<<<<<<< HEAD
+=======
+/* 漂浮图标动画 (同步效果) */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .user_floating_elements i {
     position: absolute;
     color: rgba(255,255,255,0.2);
@@ -190,6 +313,10 @@
     text-align: center;
 }
 
+<<<<<<< HEAD
+=======
+/* 标题样式：Noto Serif SC 衬线体 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .elegant_title {
     font-family: "Noto Serif SC", "SimSun", serif;
     font-size: 4rem;
@@ -244,12 +371,20 @@
     border-radius: 50px; transition: 0.3s;
 }
 
+<<<<<<< HEAD
+=======
+/* 波浪填充色 (需与下面 section 背景一致) */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .banner_wave {
     position: absolute;
     bottom: 0; left: 0; width: 100%; height: 100px;
     z-index: 5;
 }
+<<<<<<< HEAD
 .banner_wave .shape-fill { fill: #f8fafc; } 
+=======
+.banner_wave .shape-fill { fill: #f8fafc; } /* 此处应与 dashboard_overview 背景一致 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 
 /* 鼠标滚动指示 */
 .scroll_down_wrapper {
@@ -270,20 +405,38 @@
     100% { opacity: 0; transform: translate(-50%, 15px); }
 }
 
+<<<<<<< HEAD
+=======
+ /* --- 强制文字规范 (1.1rem) --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
  .section_box p,
  .section_box span,
  .section_box li,
  .section_box div {
      /* font-size: 1.1rem !important; */
      color: #4d7c78;
+<<<<<<< HEAD
+=======
+     /* 灰绿调 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
  }
 
  .section_title_v2 h2 {
      font-size: 2.2rem !important;
      color: #064e3b;
+<<<<<<< HEAD
      font-family: "Noto Serif SC", serif;
  }
 
+=======
+     /* 深林绿 */
+     font-family: "Noto Serif SC", serif;
+ }
+
+ /* --- 5大模块专用样式 --- */
+ /* 模块 1: 看板 */
+ /* --- 档案看板高级样式 --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .stats_premium {
     background: #f8fafc;
     padding: 100px 0;
@@ -299,6 +452,10 @@
     padding: 0 20px;
 }
 
+<<<<<<< HEAD
+=======
+/* 核心卡片 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .stat_premium_card {
     background: #fff;
     border-radius: 30px;
@@ -311,6 +468,10 @@
     transform-style: preserve-3d;
 }
 
+<<<<<<< HEAD
+=======
+/* 装饰光晕 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .stat_halo {
     position: absolute;
     top: -50%; left: -50%; width: 200%; height: 200%;
@@ -327,6 +488,10 @@
     gap: 30px;
 }
 
+<<<<<<< HEAD
+=======
+/* 环形进度条视觉 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .stat_visual {
     position: relative;
     width: 100px;
@@ -356,7 +521,11 @@
 /* 不同颜色的仪表盘 */
 .meter.m-1 { stroke: #0d9488; }
 .meter.m-2 { stroke: #10b981; }
+<<<<<<< HEAD
 .meter.m-3 { stroke: #f59e0b; } 
+=======
+.meter.m-3 { stroke: #f59e0b; } /* 琥珀金对应诚信分 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 
 .stat_visual i {
     position: absolute;
@@ -393,6 +562,11 @@
     box-shadow: 0 25px 50px rgba(13, 148, 136, 0.1);
 }
 
+<<<<<<< HEAD
+=======
+ /* 模块 2: 流转记录 */
+/* --- 流转行志高级样式 --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .history_archive_premium {
     background: #fdfdfd;
     padding: 100px 0;
@@ -491,7 +665,11 @@
     margin-left: auto;
     font-size: 1.3rem !important;
     font-weight: 800;
+<<<<<<< HEAD
     color: #f59e0b; 
+=======
+    color: #f59e0b; /* 琥珀金价格 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 }
 
 /* 印章样式 */
@@ -499,14 +677,23 @@
     position: absolute;
     right: 10px; bottom: 10px;
     width: 80px; height: 80px;
+<<<<<<< HEAD
     color: rgba(239, 68, 68, 0); 
     transform: rotate(-20deg) scale(3); 
+=======
+    color: rgba(239, 68, 68, 0); /* 初始透明 */
+    transform: rotate(-20deg) scale(3); /* 初始巨大且在空中 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     pointer-events: none;
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .stamped .status_stamp {
+<<<<<<< HEAD
     color: rgba(239, 68, 68, 0.6); 
+=======
+    color: rgba(239, 68, 68, 0.6); /* 印章红色 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     transform: rotate(-20deg) scale(1);
 }
 
@@ -517,11 +704,43 @@
     transform: scale(1.02);
 }
 
+<<<<<<< HEAD
+=======
+ /* 模块 3: 收藏 */
+/* --- 收藏锦匣高级样式 --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .treasures_premium {
     background: #f8fafc;
     padding: 100px 0;
 }
 
+<<<<<<< HEAD
+=======
+/* 分类按钮 */
+/* .treasure_filter {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.treasure_filter button {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    padding: 8px 25px;
+    border-radius: 50px;
+    margin: 0 5px;
+    color: #64748b;
+    font-size: 1rem !important;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.treasure_filter button.active {
+    background: #0d9488;
+    color: #fff;
+    border-color: #0d9488;
+    box-shadow: 0 5px 15px rgba(13, 148, 136, 0.3);
+} */
+
+/* --- 分类按钮高级动画 --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .treasure_filter {
     text-align: center;
     margin-bottom: 50px;
@@ -537,15 +756,26 @@
     padding: 10px 30px;
     border-radius: 50px;
     color: #4d7c78;
+<<<<<<< HEAD
     font-size: 1.1rem !important; 
     font-weight: 600;
     cursor: pointer;
     overflow: hidden; 
+=======
+    font-size: 1.1rem !important; /* 强制 1.1rem */
+    font-weight: 600;
+    cursor: pointer;
+    overflow: hidden; /* 必须：裁剪内部滑动层 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1;
     letter-spacing: 1px;
 }
 
+<<<<<<< HEAD
+=======
+/* 按钮内部的“金墨”滑动层 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .treasure_filter button::before {
     content: '';
     position: absolute;
@@ -553,7 +783,11 @@
     left: -100%; /* 初始在左侧隐藏 */
     width: 100%;
     height: 100%;
+<<<<<<< HEAD
     background: linear-gradient(90deg, #0d9488, #f59e0b); 
+=======
+    background: linear-gradient(90deg, #0d9488, #f59e0b); /* 绿到金的渐变 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: -1;
 }
@@ -567,9 +801,16 @@
 }
 
 .treasure_filter button:hover::before {
+<<<<<<< HEAD
     left: 0; 
 }
 
+=======
+    left: 0; /* 滑动进入 */
+}
+
+/* 激活(点击)状态：琥珀金呼吸灯效果 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .treasure_filter button.active {
     color: #fff !important;
     background: #0d9488;
@@ -628,7 +869,11 @@
 }
 
 .parallax_img {
+<<<<<<< HEAD
     width: 110%; 
+=======
+    width: 110%; /* 预留平移空间 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     height: 110%;
     object-fit: cover;
     opacity: 0.9;
@@ -676,6 +921,10 @@
     transition: 0.3s;
 }
 
+<<<<<<< HEAD
+=======
+/* 悬停效果：琥珀金边框流光 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .treasure_box::before {
     content: '';
     position: absolute;
@@ -696,6 +945,10 @@
     transform: translateY(-5px);
 }
 
+<<<<<<< HEAD
+=======
+/* 闪光粒子样式 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .box_sparkle {
     position: absolute;
     width: 4px; height: 4px;
@@ -711,6 +964,11 @@
     100% { transform: scale(2); opacity: 0; }
 }
 
+<<<<<<< HEAD
+=======
+ /* 模块 4: 评价 */
+/* --- 言传评价模块高级样式 --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .reviews_premium {
     background: #ffffff;
     padding: 100px 0;
@@ -727,7 +985,11 @@
 
 /* 信笺卡片 */
 .review_letter {
+<<<<<<< HEAD
     break-inside: avoid; 
+=======
+    break-inside: avoid; /* 防止跨栏断开 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     background: #fff;
     margin-bottom: 30px;
     border: 1px solid #f1f5f9;
@@ -739,11 +1001,19 @@
     cursor: pointer;
 }
 
+<<<<<<< HEAD
+=======
+/* 封缄印章 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .letter_stamp {
     position: absolute;
     top: -10px;
     right: 20px;
+<<<<<<< HEAD
     background: #f59e0b; 
+=======
+    background: #f59e0b; /* 琥珀金 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     color: #fff;
     padding: 5px 15px;
     border-radius: 5px;
@@ -810,6 +1080,10 @@
     color: #94a3b8;
 }
 
+<<<<<<< HEAD
+=======
+/* 悬停动效：信笺浮动与光晕 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .review_letter:hover {
     transform: translateY(-10px) rotate(1deg);
     border-color: #0d9488;
@@ -844,6 +1118,11 @@
 @media (max-width: 600px) {
     .reviews_masonry { column-count: 1; }
 }
+<<<<<<< HEAD
+=======
+ /* 模块 5: 安全 */
+ /* --- 账户安全模块高级样式 --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .vault_premium {
     background: #fdfdfd;
     padding: 100px 0;
@@ -899,10 +1178,17 @@
 .score_label { font-size: 1.1rem !important; opacity: 0.8; color: #ccfbf1 !important;}
 
 .status_info h4 {
+<<<<<<< HEAD
     color: #f59e0b !important;
 }
 .status_info p {
     color: rgba(255, 255, 255, 0.9) !important;
+=======
+    color: #f59e0b !important; /* 琥珀金，作为核心状态最醒目 */
+}
+.status_info p {
+    color: rgba(255, 255, 255, 0.9) !important; /* 90%透明度的白色 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 }
 .scan_btn {
     background: rgba(255,255,255,0.1);
@@ -968,13 +1254,21 @@
 }
 .pwd_strength_bar span { display: block; height: 100%; width: 0; transition: 0.4s; }
 
+<<<<<<< HEAD
+=======
+/* --- 拟物化功能签按钮 --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .btn_vault_action {
     background: transparent;
     border: 1px solid rgba(13, 148, 136, 0.4); /* 初始淡绿色边框 */
     padding: 10px 25px;
     border-radius: 50px;
     color: #0d9488;
+<<<<<<< HEAD
     font-size: 1.1rem !important; 
+=======
+    font-size: 1.1rem !important; /* 强制大字体 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     font-weight: 600;
     cursor: pointer;
     display: flex;
@@ -1001,9 +1295,15 @@
 /* 悬停状态 */
 .btn_vault_action:hover {
     color: #fff !important;
+<<<<<<< HEAD
     background: #dbeeec; 
     border-color: #f59e0b; 
     padding-right: 35px; 
+=======
+    background: #dbeeec; /* 悬停变主题绿 */
+    border-color: #f59e0b; /* 边框变琥珀金 */
+    padding-right: 35px; /* 伸展空间 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     box-shadow: 0 10px 20px rgba(13, 148, 136, 0.2);
     transform: translateX(5px);
 }
@@ -1020,7 +1320,11 @@
 
 .btn_vault_action:hover i {
     transform: translateX(5px) scale(1.2);
+<<<<<<< HEAD
     color: #f59e0b; 
+=======
+    color: #f59e0b; /* 图标变金 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 }
 
 /* 激活(展开)状态 */
@@ -1034,6 +1338,10 @@
     transform: rotate(90deg); /* 展开时箭头向下 */
 }
 
+<<<<<<< HEAD
+=======
+/* 针对危险或警告项的微调 (可选) */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .action_item[data-status="warning"] .btn_vault_action {
     border-color: rgba(239, 68, 68, 0.3);
     color: #ef4444;
@@ -1092,6 +1400,11 @@
     margin-right: 12px;
 }
 
+<<<<<<< HEAD
+=======
+
+/* ---- 按钮样式（基于你给的继续用） ---- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .mini_explore_tag {
     display: inline-flex;
     align-items: center;

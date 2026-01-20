@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+// 毕业季·云端拍卖会详情页交互功能
+
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 document.addEventListener('DOMContentLoaded', function () {
     // 初始化买家流程标签页
     initBuyerTabs();

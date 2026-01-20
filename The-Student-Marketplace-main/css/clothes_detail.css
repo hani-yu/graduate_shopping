@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 
+=======
+/* ============================================================
+   计算机专业教材频道 - 核心样式 (Main Content Only)
+   基调：淡雅白、大字体(>=1.1rem)、幽灵按钮
+   ============================================================ */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 
 :root {
     --main-color: #0d9488;       /* 主题深青 */
@@ -34,7 +41,11 @@ h3 {
 }
 
 
+<<<<<<< HEAD
 /* --- Box 1: Hero  --- */
+=======
+/* --- Box 1: Hero (问号装饰) --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .network_hero {
     height: 65vh;
     /* background: var(--faq-green); */
@@ -95,10 +106,17 @@ h3 {
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
+<<<<<<< HEAD
     font-size: 1.1rem; 
 }
 
 
+=======
+    font-size: 1.1rem; /* 确保全局基础字体满足要求 */
+}
+
+/* 2. 通用幽灵按钮 - 这里的背景是透明或纯白，看起来非常轻盈 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .btn_view {
     display: inline-block;
     padding: 10px 24px;
@@ -120,7 +138,11 @@ h3 {
     transform: translateY(-2px);
 }
 
+<<<<<<< HEAD
 /* 3. 顶部推荐 (Hero Card)  */
+=======
+/* 3. 顶部推荐 (Hero Card) - 白色基调，侧边点缀 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .hero_recommend {
     margin-bottom: 50px;
 }
@@ -227,7 +249,11 @@ h3 {
     background: var(--main-light);
 }
 
+<<<<<<< HEAD
 /* 5. 限时抢购 (Flash Sale) */
+=======
+/* 5. 限时抢购 (Flash Sale) - 虚线描边增加灵动感 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .flash_sale {
     background: #fff;
     border-radius: 20px;
@@ -302,7 +328,11 @@ h3 {
     margin-left: 10px;
 }
 
+<<<<<<< HEAD
 /* 6. 商品展示网格 */
+=======
+/* 6. 商品展示网格 (3D 卡片保持淡雅) */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .product_grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -450,12 +480,22 @@ h3 {
     color: var(--main-color);
 }
 
+<<<<<<< HEAD
 
 .live_feed_section {
     margin-top: 50px;
    
     background: #f0fdfa; 
  
+=======
+/* 8. 底部流转动态 (Live Feed) - 悬浮胶囊 */
+/* --- 5. 底部动态：拾光流转 (Live Feed) 修改版 --- */
+.live_feed_section {
+    margin-top: 50px;
+    /* 换成淡淡的青色背景，让它在白色背景中脱颖而出 */
+    background: #f0fdfa; 
+    /* 增加一个稍微深一点的青色边框 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     border: 1.5px solid rgba(13, 148, 136, 0.2); 
     padding: 18px 40px;
     border-radius: 50px; /* 胶囊形状 */
@@ -471,7 +511,11 @@ h3 {
 .feed_box i {
     color: var(--main-color);
     font-size: 1.5rem; /* 图标放大 */
+<<<<<<< HEAD
     animation: pulse-icon 2s infinite; 
+=======
+    animation: pulse-icon 2s infinite; /* 给图标加个微弱的呼吸感 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 }
 
 /* 呼吸动画：让小图标动起来 */
@@ -491,7 +535,11 @@ h3 {
 .feed_item {
     height: 36px;
     line-height: 36px;
+<<<<<<< HEAD
 
+=======
+    /* 字体加粗放大到 1.2rem */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     font-size: 1.2rem; 
     color: var(--text-dark);
     font-weight: 500;

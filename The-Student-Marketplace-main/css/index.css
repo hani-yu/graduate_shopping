@@ -1,10 +1,18 @@
 :root {
+<<<<<<< HEAD
+=======
+    /* 你提供的新配色 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     --deep-green: #064e3b;
     --theme-teal: #0d9488;
     --accent-gold: #f59e0b;
     --paper-white: #f9fbfa;
     --text-slate: #475569;
 
+<<<<<<< HEAD
+=======
+    /* 映射原有变量以保持兼容性 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     --primary-color: var(--theme-teal);
     --primary-light: #f0fdfa;
     --accent-color: var(--theme-teal);
@@ -28,6 +36,10 @@ body {
     line-height: 1.6;
     color: var(--text-main);
     background-color: #fcfcfc;
+<<<<<<< HEAD
+=======
+    /* 去掉生硬的侧边框，改为优雅的间距 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     padding: 0;
 }
 
@@ -43,17 +55,33 @@ body {
     position: relative;
     
 
+<<<<<<< HEAD
+=======
+    /* 关键属性：overlay 模式会让颜色“染”进图片里，而不是死板的覆盖 */
+    /* background-blend-mode: overlay; */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     background-size: cover !important;
     background-position: center !important;
     background-image: url('../images/beijing.jpg') !important; 
     background-attachment: fixed;
+<<<<<<< HEAD
 }
 
+=======
+    /* 视差效果，增加高级感 */
+}
+
+/* 彻底删除之前丑陋的 ::before 和 ::after */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .header::before,
 .header::after {
     display: none !important;
 }
 
+<<<<<<< HEAD
+=======
+/* 4. 装饰元素：漂浮的虚化圆球（增加细节） */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .header .deco-circle {
     position: absolute;
     border-radius: 50%;
@@ -104,19 +132,41 @@ body {
     }
 }
 
+<<<<<<< HEAD
 .header_glass_box {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(4px);
+=======
+/* --- 文字背后的轻微毛玻璃容器（可选，若想文字纯悬浮可去掉背景） --- */
+.header_glass_box {
+    background: rgba(255, 255, 255, 0.1);
+    /* 极度透明的白色 */
+    backdrop-filter: blur(4px);
+    /* 淡淡的毛玻璃，让背景图更高级 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     padding: 4rem 6rem;
     border-radius: 2rem;
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+<<<<<<< HEAD
 }
 
 .header_text {
     position: relative;
     z-index: 2;
     text-align: center;
+=======
+    /* 极淡的阴影 */
+}
+
+/* --- 文字容器：确保在背景上方 --- */
+.header_text {
+    position: relative;
+    z-index: 2;
+    /* 必须高于伪元素的 z-index */
+    text-align: center;
+    /* margin-top 这里可以适当调小，因为父容器用了 flex 居中 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     margin-top: 5rem;
     padding: 6rem;
     background-image:
@@ -125,6 +175,10 @@ body {
     background-position: center;
 }
 
+<<<<<<< HEAD
+=======
+/* --- 背景专用缩放动画（只缩放背景，不抖动文字） --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 @keyframes bg-zoom-animation {
     from {
         transform: scale(1);
@@ -132,9 +186,17 @@ body {
 
     to {
         transform: scale(1.15);
+<<<<<<< HEAD
     }
 }
 
+=======
+        /* 稍微放大，产生呼吸感 */
+    }
+}
+
+/* --- 主标题颜色与阴影修改 --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .header_title--primary {
     font-family: "Gotham", Helvetica, Arial, sans-serif;
     font-size: 8rem;
@@ -151,6 +213,10 @@ body {
 }
 
 
+<<<<<<< HEAD
+=======
+/* 强调文字使用辅助金 (Accent Gold) */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .bottom-dh {
     opacity: 0;
     display: inline-block !important;
@@ -158,6 +224,10 @@ body {
     text-shadow: 0 0 2rem rgba(245, 158, 11, 0.6) !important;
 }
 
+<<<<<<< HEAD
+=======
+/* --- Banner 按钮修改 --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .btn_primary {
     background-color: transparent;
     color: var(--paper-white);
@@ -170,8 +240,15 @@ body {
 
 .btn_primary:hover {
     background-color: var(--accent-gold);
+<<<<<<< HEAD
     border-color: var(--accent-gold);
     color: var(--deep-green);
+=======
+    /* 悬停变为金色 */
+    border-color: var(--accent-gold);
+    color: var(--deep-green);
+    /* 文字变深绿增加对比 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     box-shadow: 0 1rem 2rem rgba(6, 78, 59, 0.3);
 }
 
@@ -314,6 +391,10 @@ a {
     width: 15px;
     height: 15px;
     background: #ffd700;
+<<<<<<< HEAD
+=======
+    /* 毕业金点缀 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     border-radius: 50%;
     right: 0;
     bottom: 0;
@@ -365,25 +446,48 @@ a {
     color: #fff;
 }
 
+<<<<<<< HEAD
 .hot_products {
     padding: 10rem 2rem;
     background-color: #fcfcfc;
+=======
+/* --- 热门商品区域背景微调，增加层次感 --- */
+.hot_products {
+    padding: 10rem 2rem;
+    background-color: #fcfcfc;
+    /* 极浅灰，衬托纯白卡片 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 }
 
 .hot_products .container {
     max-width: 1100px;
+<<<<<<< HEAD
+=======
+    /* 关键：限制总宽度，卡片就不会变大 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     margin: 0 auto;
 }
 
 .product_grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+<<<<<<< HEAD
+=======
+    /* 关键：一行 3 个 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     gap: 2rem;
     margin-top: 3rem;
 }
 
+<<<<<<< HEAD
 .product_card {
     height: 260px;
+=======
+/* --- 卡片基础样式优化 --- */
+.product_card {
+    height: 260px;
+    /* 略微增加高度 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     background: #ffffff;
     border-radius: 1.2rem;
     padding: 2rem;
@@ -392,12 +496,20 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+<<<<<<< HEAD
+=======
+    /* 顶部对齐 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     border: 1px solid #edf2f7;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
     cursor: pointer;
 }
 
+<<<<<<< HEAD
+=======
+/* 分类标签 - 加重字重 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .category_tag {
     font-size: 0.8rem;
     font-weight: 800;
@@ -411,18 +523,32 @@ a {
     font-size: 2rem;
     margin-bottom: 1.2rem;
     color: #1a202c;
+<<<<<<< HEAD
+=======
+    /* 更深的标题色 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     z-index: 2;
     font-weight: 700;
 }
 
 .product_card .describe {
     font-size: 1.4rem;
+<<<<<<< HEAD
     color: #4a5568;    line-height: 1.7;
+=======
+    color: #4a5568;
+    /* 更深的描述色 */
+    line-height: 1.7;
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     z-index: 2;
     max-width: 90%;
     transition: color 0.3s;
 }
 
+<<<<<<< HEAD
+=======
+/* 1. 书籍 - 沉稳蓝 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .category_blue {
     border-top: 6px solid #83a3e8;
 }
@@ -436,6 +562,10 @@ a {
     border-top-color: #2563eb;
 }
 
+<<<<<<< HEAD
+=======
+/* 2. 家具 - 森林绿 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .category_green {
     border-top: 6px solid #88efce;
 }
@@ -449,6 +579,10 @@ a {
     border-top-color: #059669;
 }
 
+<<<<<<< HEAD
+=======
+/* 3. 电子 - 极客紫 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .category_purple {
     border-top: 6px solid #a47fe4;
 }
@@ -462,6 +596,10 @@ a {
     border-top-color: #7c3aed;
 }
 
+<<<<<<< HEAD
+=======
+/* 4. 生活 - 活力橙 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .category_orange {
     border-top: 6px solid #eda780;
 }
@@ -475,6 +613,10 @@ a {
     border-top-color: #ea580c;
 }
 
+<<<<<<< HEAD
+=======
+/* 5. 运动 - 湖水蓝 (Teal) */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .category_teal {
     border-top: 6px solid #55c5bc;
 }
@@ -488,11 +630,19 @@ a {
     border-top-color: #0d9488;
 }
 
+<<<<<<< HEAD
+=======
+/* --- 悬停后的文字与图标状态 --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .product_card:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
+<<<<<<< HEAD
+=======
+/* 悬停时文字统一变白，解决“看不见文字”的问题 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .product_card:hover .card_title,
 .product_card:hover .describe,
 .product_card:hover .category_tag,
@@ -500,6 +650,10 @@ a {
     color: #ffffff !important;
 }
 
+<<<<<<< HEAD
+=======
+/* 探索按钮 - 增加一个白色底框效果 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .explore_btn {
     position: absolute;
     bottom: 2.5rem;
@@ -516,12 +670,20 @@ a {
     transform: translateX(0);
 }
 
+<<<<<<< HEAD
+=======
+/* 背景大图标 - 调暗默认透明度，增强悬停对比 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .card_icon {
     position: absolute;
     right: -10px;
     bottom: -10px;
     font-size: 8rem;
     opacity: 0.03;
+<<<<<<< HEAD
+=======
+    /* 默认非常淡 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     transform: rotate(-15deg);
     transition: all 0.5s ease;
     pointer-events: none;
@@ -529,10 +691,18 @@ a {
 
 .product_card:hover .card_icon {
     opacity: 0.15;
+<<<<<<< HEAD
+=======
+    /* 悬停时稍微亮一点点，但依然作为背景 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     transform: rotate(0deg) scale(1.1);
     color: #fff;
 }
 
+<<<<<<< HEAD
+=======
+/* --- 最新发布区域背景 --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .new_release_section {
     padding: 6rem 2rem;
     background-color: #ffffff;
@@ -543,8 +713,15 @@ a {
     margin: 0 auto;
 }
 
+<<<<<<< HEAD
 .header_box {
     text-align: left;
+=======
+/* --- 标题样式 --- */
+.header_box {
+    text-align: left;
+    /* 改为左对齐，更有流转平台的感觉 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     margin-bottom: 3rem;
     border-left: 5px solid var(--primary-color);
     padding-left: 1.5rem;
@@ -562,6 +739,10 @@ a {
     margin-top: 0.5rem;
 }
 
+<<<<<<< HEAD
+=======
+/* --- 商品网格布局：一行 3-4 个 --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .goods_list {
     display: grid;
     /* grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); */
@@ -648,6 +829,10 @@ a {
 .goods_price {
     font-size: 1.4rem;
     color: #e44d26;
+<<<<<<< HEAD
+=======
+    /* 价格使用显眼的橙红色 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     font-weight: 700;
     font-family: 'Arial', sans-serif;
 }
@@ -677,9 +862,18 @@ a {
 .reviews_section {
     padding: 10rem 0;
     background: linear-gradient(to bottom, #fcfcfc, #f0fdfa);
+<<<<<<< HEAD
     overflow: hidden;
 }
 
+=======
+    /* 渐变到浅青色 */
+    overflow: hidden;
+    /* 隐藏溢出的卡片 */
+}
+
+/* --- 居中标题 --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .section_header_center {
     text-align: center;
     margin-bottom: 5rem;
@@ -709,9 +903,18 @@ a {
 .review_track {
     display: flex;
     width: max-content;
+<<<<<<< HEAD
     animation: scroll_track 30s linear infinite;
 }
 
+=======
+    /* 宽度由内容决定 */
+    animation: scroll_track 30s linear infinite;
+    /* 无缝滚动动画 */
+}
+
+/* 鼠标悬停时停止滚动，方便阅读 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .review_track:hover {
     animation-play-state: paused;
 }
@@ -725,8 +928,15 @@ a {
         transform: translateX(-50%);
     }
 
+<<<<<<< HEAD
 }
 
+=======
+    /* 滚动一半的距离实现循环 */
+}
+
+/* --- 评价卡片精致设计 --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .review_card {
     width: 380px;
     background: #ffffff;
@@ -742,6 +952,10 @@ a {
 .quote_icon {
     font-size: 2rem;
     color: rgba(13, 148, 136, 0.2);
+<<<<<<< HEAD
+=======
+    /* 浅青色引号 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     margin-bottom: 1rem;
 }
 
@@ -750,9 +964,17 @@ a {
     color: #4b5563;
     line-height: 1.8;
     height: 80px;
+<<<<<<< HEAD
     margin-bottom: 2rem;
 }
 
+=======
+    /* 固定高度确保整齐 */
+    margin-bottom: 2rem;
+}
+
+/* 学生信息区域 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .student_meta {
     display: flex;
     align-items: center;
@@ -816,6 +1038,10 @@ a {
 .contact_section {
     padding: 8rem 2rem;
     background-color: #f8fafc;
+<<<<<<< HEAD
+=======
+    /* 极淡的灰蓝色背景 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 }
 
 .container_box {
@@ -863,6 +1089,10 @@ a {
     border-radius: 1.5rem;
     text-align: center;
     text-decoration: none;
+<<<<<<< HEAD
+=======
+    /* 针对链接卡片 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     color: inherit;
     display: flex;
     flex-direction: column;
@@ -930,6 +1160,10 @@ a {
     font-weight: 700;
     color: var(--primary-color);
     margin-top: auto;
+<<<<<<< HEAD
+=======
+    /* 靠底部对齐 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 }
 
 /* --- 交互与动画 --- */
@@ -943,6 +1177,10 @@ a {
     background: var(--primary-color);
     color: #ffffff;
     transform: rotate(10deg);
+<<<<<<< HEAD
+=======
+    /* 悬停时图标微旋 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 }
 
 /* 图标呼吸动画 */
@@ -1076,6 +1314,7 @@ a {
 
 .header {
     min-height: 100vh;
+<<<<<<< HEAD
     background-image:
         linear-gradient(to bottom right,
             rgba(6, 78, 59, 0.85),
@@ -1083,6 +1322,19 @@ a {
         ),
         url('https://images.unsplash.com/photo-1541339907198-e087563f976d?auto=format&fit=crop&w=1200&q=80');
 
+=======
+    /* 1. 混合层：将深绿渐变放在图片前面 */
+    background-image:
+        linear-gradient(to bottom right,
+            rgba(6, 78, 59, 0.85),
+            /* 你的 --deep-green 透明版 */
+            rgba(13, 148, 136, 0.7)
+            /* 你的 --theme-teal 透明版 */
+        ),
+        url('https://images.unsplash.com/photo-1541339907198-e087563f976d?auto=format&fit=crop&w=1200&q=80');
+
+    /* 2. 核心设置：使用 multiply 让颜色和图片融合，变绿的关键！ */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     background-blend-mode: multiply;
     /* background-size: cover; */
     background-size: 100% auto;
@@ -1148,6 +1400,10 @@ a {
     /* color: var(--deep-green) !important; */
     text-shadow: 0 1rem 4rem rgba(17, 17, 17, 0.9);
     display: inline-block;
+<<<<<<< HEAD
+=======
+    /* 基础也要设为 inline-block */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 }
 
 .header_title--secondary:hover {
@@ -1210,14 +1466,25 @@ a {
     }
 }
 
+<<<<<<< HEAD
 .biaoti-dh {
     display: block !important;
+=======
+/* 2. 主标题动画：确保是 block 才能位移 */
+.biaoti-dh {
+    display: block !important;
+    /* 必须是 block */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     opacity: 0;
     animation: dh-drop 1s ease-out forwards !important;
 }
 
 
 
+<<<<<<< HEAD
+=======
+/* 3. 副标题动画：确保是 inline-block */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .wenzi-dh-1 {
     opacity: 0;
     display: inline-block !important;
@@ -1230,10 +1497,18 @@ a {
     animation: dh-up 0.8s ease-out 1s forwards !important;
 }
 
+<<<<<<< HEAD
+=======
+/* 4. 底部强调文字 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .bottom-dh {
     opacity: 0;
     display: inline-block !important;
     color: var(--accent-color) !important;
+<<<<<<< HEAD
+=======
+    /* 组合动画：先放大入场，然后持续闪烁 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     animation: dh-zoom 0.5s ease-out 1.5s forwards dh-shanshuo 2s infinite 2s !important;
 }
 
@@ -1242,14 +1517,26 @@ a {
     /* position: sticky; */
     position: fixed;
     top: 0;
+<<<<<<< HEAD
     left: 0;
     width: 100%;
+=======
+    /* 建议从 0 开始，如果非要悬浮感可以设为 10px */
+    left: 0;
+    /* 必须为 0，否则导航栏会偏离 */
+    width: 100%;
+    /* 宽度占满全屏 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     /* z-index: 5; */
     transition: 0.5s all;
     /* padding: 10px; */
     backdrop-filter: blur(10px);
     padding: 1rem 0;
     z-index: 1000;
+<<<<<<< HEAD
+=======
+    /* 未滚动时背景可略带深绿透明 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     background-color: rgba(6, 78, 59, 0.1);
     padding: 1rem 0;
     z-index: 1000;
@@ -1264,6 +1551,10 @@ a {
     align-items: center;
     position: relative;
     max-width: 95%;
+<<<<<<< HEAD
+=======
+    /* 调宽一点，给右侧留空间 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     margin: 0 auto;
     height: 70px;
 }
@@ -1275,11 +1566,23 @@ a {
     gap: 5rem;
 }
 
+<<<<<<< HEAD
 .nav_auth {
     position: absolute;
     right: 2rem;
     top: 50%;
     transform: translateY(-50%);
+=======
+/* 右侧按钮容器：放大并向右靠齐 */
+.nav_auth {
+    position: absolute;
+    /* 绝对定位，脱离文档流，不影响菜单居中 */
+    right: 2rem;
+    /* 靠右对齐 */
+    top: 50%;
+    transform: translateY(-50%);
+    /* 垂直方向完美居中 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     display: flex;
     align-items: center;
     gap: 1.5rem;
@@ -1295,6 +1598,10 @@ a {
     letter-spacing: 1px;
     padding: 1rem 2.4rem;
     border-radius: 50px;
+<<<<<<< HEAD
+=======
+    /* 胶囊形状 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
     display: inline-block;
@@ -1302,6 +1609,10 @@ a {
     border: 2px solid transparent;
 }
 
+<<<<<<< HEAD
+=======
+/* --- 登录按钮：简约风格 --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .btn_nav {
     color: #f8fffd;
     background: transparent;
@@ -1313,9 +1624,18 @@ a {
     transform: translateY(-2px);
 }
 
+<<<<<<< HEAD
 .btn_nav_outline {
     background-color: #f8fffd;
     color: #0d9488 !important;
+=======
+/* --- 注册按钮：高亮风格 (核心操作) --- */
+.btn_nav_outline {
+    background-color: #f8fffd;
+    /* 纯色背景使其突出 */
+    color: #0d9488 !important;
+    /* 文字使用主题色 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border: 2px solid #f8fffd;
 }
@@ -1325,6 +1645,10 @@ a {
     color: #f8fffd !important;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
     transform: translateY(-3px) scale(1.05);
+<<<<<<< HEAD
+=======
+    /* 悬停时稍微放大 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 }
 
 /* --- 点击时的反馈 --- */
@@ -1335,6 +1659,10 @@ a {
 
 .daohang_items {
     position: relative;
+<<<<<<< HEAD
+=======
+    /* 关键：让下拉菜单定位基于父级 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 }
 
 .daohang_items::after {
@@ -1374,8 +1702,15 @@ a {
     display: none;
     position: absolute;
     top: 100%;
+<<<<<<< HEAD
     left: 0;
     background-color: #f8fffd;
+=======
+    /* 在父菜单下方 */
+    left: 0;
+    background-color: #f8fffd;
+    /* 白色背景 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     border: 1px solid teal;
     min-width: 140px;
     z-index: 1000;
@@ -1392,6 +1727,10 @@ a {
     display: block;
     padding: 10px 20px;
     color: teal;
+<<<<<<< HEAD
+=======
+    /* 字体颜色 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     text-decoration: none;
     font-size: 1.8rem;
     font-family: "Gotham", Helvetica, Arial, sans-serif;
@@ -1403,10 +1742,18 @@ a {
     color: #f8fffd;
 }
 
+<<<<<<< HEAD
+=======
+/* 鼠标悬停显示二级菜单 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .daohang_items:hover .dropdown-menu {
     display: block;
 }
 
+<<<<<<< HEAD
+=======
+/* 登录注册按钮 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .nav_auth {
     display: flex;
     gap: 20px;
@@ -1495,6 +1842,10 @@ a {
         order: 2;
         padding: 1rem;
         position: relative;
+<<<<<<< HEAD
+=======
+        /* 确保下拉菜单相对定位 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     }
 
     .daohang_items a {
@@ -1581,12 +1932,26 @@ a {
     max-width: 175rem;
     margin: 0 auto;
     background-color: #ffffff;
+<<<<<<< HEAD
     border-radius: 1.5rem;
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.15);
     padding: 4rem 3rem;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
+=======
+    /* 白色背景，可根据风格调整 */
+    border-radius: 1.5rem;
+    /* 圆角 */
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.15);
+    /* 阴影效果 */
+    padding: 4rem 3rem;
+    /* 内边距，保持内容呼吸感 */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* 鼠标悬停微微放大阴影 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .section_wrapper:hover {
     transform: translateY(-0.5rem);
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
@@ -1627,6 +1992,10 @@ a {
 /* --- 页脚主区域 --- */
 .footer_area {
     background-color: #1a202c;
+<<<<<<< HEAD
+=======
+    /* 深色背景，增加稳重感 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     color: #e2e8f0;
     padding: 5rem 0 2rem;
     margin-top: 5rem;

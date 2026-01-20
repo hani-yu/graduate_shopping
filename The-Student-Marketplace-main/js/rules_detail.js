@@ -1,5 +1,14 @@
+<<<<<<< HEAD
 document.addEventListener('DOMContentLoaded', function () {
     //  简介区域卷轴动画
+=======
+// rules_detail.js - 使用规则详情页专属JavaScript
+
+document.addEventListener('DOMContentLoaded', function () {
+    // ===============================
+    // 1. 简介区域卷轴动画
+    // ===============================
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     const introCard = document.getElementById('introCard');
 
     if (introCard) {
@@ -14,6 +23,10 @@ document.addEventListener('DOMContentLoaded', function () {
         bellElement.innerHTML = '<i class="fas fa-gavel"></i>';
         introCard.appendChild(bellElement);
 
+<<<<<<< HEAD
+=======
+        // 文字逐字动画效果（可选）
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
         const titleElement = document.getElementById('introTitle');
         const textElement = document.getElementById('introText');
 
@@ -47,6 +60,10 @@ document.addEventListener('DOMContentLoaded', function () {
                     // 开始卷轴展开动画
                     introCard.classList.add('animated');
 
+<<<<<<< HEAD
+=======
+                    // 可选：添加逐字动画效果
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
                     setTimeout(() => {
                         if (titleElement) charAnimation(titleElement);
                         if (textElement) charAnimation(textElement);
@@ -62,17 +79,29 @@ document.addEventListener('DOMContentLoaded', function () {
         checkIntroScroll();
         window.addEventListener('scroll', checkIntroScroll);
 
+<<<<<<< HEAD
         // 页面加载后延迟触发
+=======
+        // 页面加载后延迟触发（确保用户能看到动画）
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
         setTimeout(() => {
             checkIntroScroll();
         }, 500);
 
+<<<<<<< HEAD
         // 点击重新触发动画
+=======
+        // 点击重新触发动画（用于演示）
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
         introCard.addEventListener('click', function () {
             if (introCard.classList.contains('animated')) {
                 // 重置状态
                 introCard.classList.remove('animated');
 
+<<<<<<< HEAD
+=======
+                // 重置文字（如果是逐字动画）
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
                 if (titleElement) {
                     const titleSpans = titleElement.querySelectorAll('span');
                     if (titleSpans.length > 0) {
@@ -99,7 +128,13 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+<<<<<<< HEAD
     // 规则矩阵卡片动画
+=======
+    // ===============================
+    // 2. 规则矩阵卡片动画
+    // ===============================
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     const ruleCards = document.querySelectorAll('.rule_card');
 
     function checkRulesScroll() {
@@ -121,7 +156,13 @@ document.addEventListener('DOMContentLoaded', function () {
         window.addEventListener('scroll', checkRulesScroll);
     }
 
+<<<<<<< HEAD
     // 认证进度条动画效果
+=======
+    // ===============================
+    // 认证进度条动画效果
+    // ===============================
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     const rulesProgress = document.getElementById('rulesProgress');
     const rulesProgressFill = document.querySelector('.rules_progress_fill');
     const progressPercent = document.getElementById('progressPercent');
@@ -242,7 +283,13 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 500);
     }
 
+<<<<<<< HEAD
     // 违规级别交互
+=======
+    // ===============================
+    // 3. 违规级别交互
+    // ===============================
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     const penaltyLevels = document.querySelectorAll('.penalty_level');
 
     if (penaltyLevels.length > 0) {
@@ -282,6 +329,79 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+<<<<<<< HEAD
+=======
+    // ===============================
+    // 4. 面交安全指南交互
+    // ===============================
+    // const checklistBtn = document.getElementById('checklistBtn');
+    // const checklistItems = document.querySelectorAll('.checklist_item');
+
+    // if (checklistBtn && checklistItems.length > 0) {
+    //     let currentStep = 0;
+
+    //     checklistBtn.addEventListener('click', function() {
+    //         if (currentStep < checklistItems.length) {
+    //             // 激活当前步骤
+    //             const currentItem = checklistItems[currentStep];
+    //             currentItem.classList.add('active');
+
+    //             // 更新步骤图标
+    //             const checkStatus = currentItem.querySelector('.check_status');
+    //             if (checkStatus) {
+    //                 checkStatus.innerHTML = '<i class="fas fa-check"></i>';
+    //                 checkStatus.style.color = '#0d9488';
+    //             }
+
+    //             currentStep++;
+
+    //             // 如果所有步骤完成，显示完成消息
+    //             if (currentStep === checklistItems.length) {
+    //                 checklistBtn.innerHTML = '<i class="fas fa-check-circle"></i> 验货流程完成';
+    //                 checklistBtn.style.background = 'linear-gradient(to right, #0d9488, #064e3b)';
+    //                 checklistBtn.disabled = true;
+
+    //                 // 3秒后重置
+    //                 setTimeout(() => {
+    //                     checklistItems.forEach(item => {
+    //                         item.classList.remove('active');
+    //                         const status = item.querySelector('.check_status');
+    //                         if (status) {
+    //                             status.innerHTML = '';
+    //                             status.style.color = '';
+    //                         }
+    //                     });
+    //                     checklistBtn.innerHTML = '模拟验货流程';
+    //                     checklistBtn.style.background = '';
+    //                     checklistBtn.disabled = false;
+    //                     currentStep = 0;
+    //                 }, 3000);
+    //             } else {
+    //                 checklistBtn.innerHTML = `下一步 (${currentStep + 1}/4)`;
+    //             }
+    //         }
+    //     });
+
+    //     // 地图位置点交互
+    //     const mapLocations = document.querySelectorAll('.map_location');
+    //     mapLocations.forEach(location => {
+    //         location.addEventListener('click', function() {
+    //             const locationName = this.getAttribute('data-location');
+    //             const tips = {
+    //                 '图书馆大堂': '开放时间: 8:00-22:00 | 监控全覆盖 | 有保安巡逻',
+    //                 '学生活动中心': '开放时间: 9:00-21:00 | 有服务台 | 人流量大',
+    //                 '食堂入口': '推荐时间: 11:00-13:00, 17:00-19:00 | 光线充足',
+    //                 '校门保安亭': '24小时开放 | 最安全 | 推荐贵重物品交易'
+    //             };
+
+    //             if (tips[locationName]) {
+    //                 alert(`📍 ${locationName}\n\n${tips[locationName]}`);
+    //             }
+    //         });
+    //     });
+    // }
+
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     const yanhuoBtn = document.getElementById("yanhuoBtn");
     const yanhuoItems = document.querySelectorAll(".yanhuo_xiang");
     const jinDu = document.querySelector(".jinDu_nei");
@@ -352,6 +472,42 @@ document.addEventListener('DOMContentLoaded', function () {
         setTimeout(() => yanhuo.remove(), 1500);
     }
 
+<<<<<<< HEAD
+=======
+    // ===============================
+    // 5. 成色标准表交互
+    // ===============================
+    // const tableRows = document.querySelectorAll('.table_row');
+    // const visualSegments = document.querySelectorAll('.visual_segment');
+
+    // if (tableRows.length > 0) {
+    //     tableRows.forEach(row => {
+    //         row.addEventListener('mouseenter', function () {
+    //             const rowClass = this.classList[1]; // row_new, row_good, row_fair
+    //             this.style.transform = 'translateX(10px)';
+    //             this.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
+
+    //             // 高亮对应的视觉条段
+    //             visualSegments.forEach(segment => {
+    //                 if (segment.classList.contains(rowClass.replace('row_', 'segment_'))) {
+    //                     segment.style.transform = 'scaleY(1.2)';
+    //                 }
+    //             });
+    //         });
+
+    //         row.addEventListener('mouseleave', function () {
+    //             this.style.transform = 'translateX(0)';
+    //             this.style.boxShadow = '';
+
+    //             // 恢复视觉条段
+    //             visualSegments.forEach(segment => {
+    //                 segment.style.transform = 'scaleY(1)';
+    //             });
+    //         });
+    //     });
+    // }
+
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     const conditionRows = document.querySelectorAll('.student_table_row');
 
     conditionRows.forEach(row => {
@@ -380,7 +536,258 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 1500);
 
 
+<<<<<<< HEAD
     // 页面滚动动画全局管理
+=======
+    // ===============================
+    // 6. 规则测试小工具
+    // ===============================
+    const quizContainer = document.querySelector('.quiz_container');
+
+    if (quizContainer) {
+        const quizQuestions = [
+            {
+                question: "在平台上发布商品时，至少需要上传几张实物照片？",
+                options: ["A. 1张", "B. 2张", "C. 3张", "D. 越多越好"],
+                correct: "C",
+                explanation: "根据平台规则，必须上传至少3张不同角度的实物照片，确保商品描述真实。"
+            },
+            {
+                question: "发现卖家商品描述与实物严重不符，应该怎么办？",
+                options: [
+                    "A. 直接给差评",
+                    "B. 先与卖家沟通，协商解决",
+                    "C. 在平台上举报并申请仲裁",
+                    "D. 自认倒霉"
+                ],
+                correct: "C",
+                explanation: "应先通过平台举报系统提交证据，由仲裁委员会处理，避免私下冲突。"
+            },
+            {
+                question: "以下哪种情况会被列入黑名单？",
+                options: [
+                    "A. 轻微沟通不当",
+                    "B. 一次忘记回复消息",
+                    "C. 恶意欺诈或售假",
+                    "D. 价格标注稍高"
+                ],
+                correct: "C",
+                explanation: "只有严重违规如欺诈、售假等行为会被永久封禁并列入黑名单。"
+            },
+            {
+                question: "推荐的面交地点是哪里？",
+                options: [
+                    "A. 校外偏僻小巷",
+                    "B. 宿舍房间内",
+                    "C. 图书馆大堂等校内公共场所",
+                    "D. 深夜的操场"
+                ],
+                correct: "C",
+                explanation: "必须选择校内公共场所，如图书馆大堂、学生活动中心等有监控和人流的地方。"
+            },
+            {
+                question: "商品标注'九成新'的标准是什么？",
+                options: [
+                    "A. 有一点使用痕迹",
+                    "B. 几乎无使用痕迹，功能完好",
+                    "C. 有明显磨损但能用",
+                    "D. 包装已拆封就算"
+                ],
+                correct: "B",
+                explanation: "'九成新'标准：几乎无使用痕迹，包装配件齐全，功能完好如新。"
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+        let userAnswers = [];
+        let score = 0;
+
+        const questionText = document.getElementById('questionText');
+        const currentQuestionSpan = document.getElementById('currentQuestion');
+        const quizProgress = document.getElementById('quizProgress');
+        const questionContainer = document.getElementById('questionContainer');
+        const resultContainer = document.getElementById('resultContainer');
+        const finalScoreSpan = document.getElementById('finalScore');
+        const resultLevel = document.getElementById('resultLevel');
+        const resultFeedback = document.getElementById('resultFeedback');
+        const nextBtn = document.getElementById('nextQuestion');
+        const prevBtn = document.getElementById('prevQuestion');
+        const submitBtn = document.getElementById('submitQuiz');
+        const restartBtn = document.getElementById('restartQuiz');
+        const quizOptions = document.querySelectorAll('.quiz_option');
+
+        // 初始化测试
+        function initQuiz() {
+            currentQuestionIndex = 0;
+            userAnswers = [];
+            score = 0;
+            resultContainer.style.display = 'none';
+            questionContainer.style.display = 'block';
+            updateQuestion();
+            updateNavigation();
+        }
+
+        // 更新题目
+        function updateQuestion() {
+            const question = quizQuestions[currentQuestionIndex];
+            questionText.textContent = question.question;
+            currentQuestionSpan.textContent = currentQuestionIndex + 1;
+
+            // 更新选项
+            quizOptions.forEach((option, index) => {
+                const optionText = option.querySelector('.option_text');
+                optionText.textContent = question.options[index].substring(3); // 去掉"A. "前缀
+                option.setAttribute('data-option', String.fromCharCode(65 + index)); // A, B, C, D
+
+                // 重置选项状态
+                option.classList.remove('selected', 'correct', 'wrong');
+            });
+
+            // 恢复用户已选答案
+            if (userAnswers[currentQuestionIndex]) {
+                const selectedOption = document.querySelector(`.quiz_option[data-option="${userAnswers[currentQuestionIndex]}"]`);
+                if (selectedOption) {
+                    selectedOption.classList.add('selected');
+                }
+            }
+
+            // 更新进度条
+            const progress = ((currentQuestionIndex + 1) / quizQuestions.length) * 100;
+            quizProgress.style.width = `${progress}%`;
+        }
+
+        // 更新导航按钮状态
+        function updateNavigation() {
+            prevBtn.disabled = currentQuestionIndex === 0;
+            nextBtn.disabled = currentQuestionIndex === quizQuestions.length - 1;
+            submitBtn.style.display = currentQuestionIndex === quizQuestions.length - 1 ? 'inline-block' : 'none';
+            nextBtn.style.display = currentQuestionIndex === quizQuestions.length - 1 ? 'none' : 'inline-block';
+        }
+
+        // 选项点击事件
+        quizOptions.forEach(option => {
+            option.addEventListener('click', function () {
+                // 移除其他选项的选择状态
+                quizOptions.forEach(opt => opt.classList.remove('selected'));
+
+                // 标记当前选项
+                this.classList.add('selected');
+
+                // 保存答案
+                const selectedOption = this.getAttribute('data-option');
+                userAnswers[currentQuestionIndex] = selectedOption;
+            });
+        });
+
+        // 下一题
+        nextBtn.addEventListener('click', function () {
+            if (currentQuestionIndex < quizQuestions.length - 1) {
+                currentQuestionIndex++;
+                updateQuestion();
+                updateNavigation();
+            }
+        });
+
+        // 上一题
+        prevBtn.addEventListener('click', function () {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                updateQuestion();
+                updateNavigation();
+            }
+        });
+
+        // 提交测试
+        submitBtn.addEventListener('click', function () {
+            // 计算分数
+            score = 0;
+            userAnswers.forEach((answer, index) => {
+                if (answer === quizQuestions[index].correct) {
+                    score += 20;
+                }
+            });
+
+            // 显示结果
+            questionContainer.style.display = 'none';
+            resultContainer.style.display = 'block';
+
+            finalScoreSpan.textContent = score;
+
+            // 根据分数显示等级和反馈
+            let level = '', feedback = '';
+            if (score >= 90) {
+                level = '规则专家';
+                feedback = '您对平台规则了如指掌，是合格的拾光者！感谢您为校园诚信流转做出的贡献。';
+            } else if (score >= 70) {
+                level = '熟悉规则';
+                feedback = '您对平台规则有较好的了解，可以顺畅使用平台进行物品流转。';
+            } else if (score >= 50) {
+                level = '基本了解';
+                feedback = '您对平台规则有基本了解，建议下载完整版公约进一步学习。';
+            } else {
+                level = '需要学习';
+                feedback = '建议仔细阅读本页内容，并通过测试后再开始使用平台进行交易。';
+            }
+
+            resultLevel.innerHTML = `<span class="level_badge">${level}</span>`;
+            resultFeedback.textContent = feedback;
+        });
+
+        // 重新测试
+        restartBtn.addEventListener('click', initQuiz);
+
+        // 初始化
+        initQuiz();
+    }
+
+    // // ===============================
+    // // 7. 下载公约PDF交互
+    // // ===============================
+    // const downloadBtn = document.getElementById('downloadBtn');
+    // const previewBtn = document.getElementById('previewBtn');
+    // const downloadSuccess = document.getElementById('downloadSuccess');
+
+    // if (downloadBtn) {
+    //     downloadBtn.addEventListener('click', function () {
+    //         // 显示下载中状态
+    //         const originalText = downloadBtn.innerHTML;
+    //         downloadBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 下载中...';
+    //         downloadBtn.disabled = true;
+
+    //         // 模拟下载过程
+    //         setTimeout(() => {
+    //             // 显示成功消息
+    //             downloadSuccess.style.display = 'flex';
+    //             downloadBtn.innerHTML = '<i class="fas fa-check"></i> 已下载';
+    //             downloadBtn.style.background = '#10b981';
+
+    //             // 模拟文件下载（实际项目中应链接真实文件）
+    //             const link = document.createElement('a');
+    //             link.href = '#'; // 实际应为PDF文件URL
+    //             link.download = '校友集市流转公约_v2.1.pdf';
+    //             link.click();
+
+    //             // 5秒后重置
+    //             setTimeout(() => {
+    //                 downloadSuccess.style.display = 'none';
+    //                 downloadBtn.innerHTML = originalText;
+    //                 downloadBtn.style.background = '';
+    //                 downloadBtn.disabled = false;
+    //             }, 5000);
+    //         }, 1500);
+    //     });
+    // }
+
+    // if (previewBtn) {
+    //     previewBtn.addEventListener('click', function () {
+    //         alert('在线预览功能正在开发中...\n\n目前请下载PDF文件查看完整内容。');
+    //     });
+    // }
+
+    // ===============================
+    // 8. 页面滚动动画全局管理
+    // ===============================
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     const animatedElements = document.querySelectorAll('.animate__animated');
 
     function checkAllAnimations() {
@@ -401,7 +808,13 @@ document.addEventListener('DOMContentLoaded', function () {
     checkAllAnimations();
     window.addEventListener('scroll', checkAllAnimations);
 
+<<<<<<< HEAD
     // 页面加载进度指示
+=======
+    // ===============================
+    // 9. 页面加载进度指示
+    // ===============================
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     function showPageLoaded() {
         const loadingBar = document.createElement('div');
         loadingBar.id = 'pageLoadingBar';
@@ -438,7 +851,13 @@ document.addEventListener('DOMContentLoaded', function () {
     // 页面加载完成后显示进度条
     window.addEventListener('load', showPageLoaded);
 
+<<<<<<< HEAD
     // 返回顶部按钮
+=======
+    // ===============================
+    // 10. 返回顶部按钮
+    // ===============================
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     const backToTopBtn = document.createElement('button');
     backToTopBtn.id = 'backToTop';
     backToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
@@ -480,11 +899,18 @@ document.addEventListener('DOMContentLoaded', function () {
             behavior: 'smooth'
         });
     });
+<<<<<<< HEAD
     // 流转使用步骤功能
+=======
+        // ===============================
+    // 流转使用步骤功能
+    // ===============================
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     const roleTabs = document.querySelectorAll('.role_tab');
     const sellerSteps = document.getElementById('sellerSteps');
     const buyerSteps = document.getElementById('buyerSteps');
     const stepItems = document.querySelectorAll('.step_item');
+<<<<<<< HEAD
 
     if (roleTabs.length > 0) {
         // 角色切换
@@ -497,6 +923,20 @@ document.addEventListener('DOMContentLoaded', function () {
                 this.classList.add('active');
 
                 //显示对应的流程
+=======
+    
+    if (roleTabs.length > 0) {
+        // 角色切换
+        roleTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                const role = this.getAttribute('data-role');
+                
+                // 更新激活状态
+                roleTabs.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                
+                // 显示对应的流程
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
                 if (role === 'seller') {
                     sellerSteps.classList.add('active');
                     buyerSteps.classList.remove('active');
@@ -504,11 +944,16 @@ document.addEventListener('DOMContentLoaded', function () {
                     sellerSteps.classList.remove('active');
                     buyerSteps.classList.add('active');
                 }
+<<<<<<< HEAD
 
+=======
+                
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
                 // 重置步骤动画
                 resetStepAnimations(role);
             });
         });
+<<<<<<< HEAD
         function resetStepAnimations(role) {
 
             // 切换显示谁
@@ -544,10 +989,38 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+=======
+        
+        // 步骤动画效果
+        function resetStepAnimations(role) {
+            // 移除所有步骤的动画类
+            stepItems.forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateX(-20px)';
+            });
+            
+            // 延迟添加动画
+            setTimeout(() => {
+                const currentSteps = role === 'seller' ? 
+                    sellerSteps.querySelectorAll('.step_item') : 
+                    buyerSteps.querySelectorAll('.step_item');
+                
+                currentSteps.forEach((item, index) => {
+                    setTimeout(() => {
+                        item.style.transition = 'all 0.5s ease';
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateX(0)';
+                    }, index * 200);
+                });
+            }, 300);
+        }
+        
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
         // 初始显示卖家流程动画
         setTimeout(() => {
             resetStepAnimations('seller');
         }, 500);
+<<<<<<< HEAD
 
         // 步骤点击效果
         stepItems.forEach(item => {
@@ -555,24 +1028,51 @@ document.addEventListener('DOMContentLoaded', function () {
                 const stepNum = this.getAttribute('data-step');
                 const currentRole = document.querySelector('.role_tab.active').getAttribute('data-role');
 
+=======
+        
+        // 步骤点击效果
+        stepItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const stepNum = this.getAttribute('data-step');
+                const currentRole = document.querySelector('.role_tab.active').getAttribute('data-role');
+                
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
                 // 添加点击反馈
                 this.style.transform = 'scale(0.98)';
                 setTimeout(() => {
                     this.style.transform = '';
                 }, 200);
+<<<<<<< HEAD
 
                 console.log(`${currentRole}流程 - 步骤${stepNum}被点击`);
 
                 if (!this.classList.contains('expanded')) {
                     this.classList.add('expanded');
 
+=======
+                
+                // 显示步骤详情（可扩展）
+                console.log(`${currentRole}流程 - 步骤${stepNum}被点击`);
+                
+                // 可以为每个步骤添加详细展开内容
+                if (!this.classList.contains('expanded')) {
+                    this.classList.add('expanded');
+                    
+                    // 这里可以添加详细内容的显示逻辑
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
                     const stepContent = this.querySelector('.step_content p');
                     if (stepContent) {
                         const originalText = stepContent.textContent;
                         const detailedText = getStepDetails(currentRole, stepNum);
+<<<<<<< HEAD
 
                         stepContent.textContent = detailedText;
 
+=======
+                        
+                        stepContent.textContent = detailedText;
+                        
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
                         // 3秒后恢复
                         setTimeout(() => {
                             stepContent.textContent = originalText;
@@ -582,8 +1082,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             });
         });
+<<<<<<< HEAD
 
         // 获取步骤详细内容
+=======
+        
+        // 获取步骤详细内容（示例）
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
         function getStepDetails(role, step) {
             const details = {
                 'seller': {
@@ -601,14 +1106,22 @@ document.addEventListener('DOMContentLoaded', function () {
                     '5': '评价内容将公开显示，帮助其他买家做决策，同时也是对卖家诚信的监督。'
                 }
             };
+<<<<<<< HEAD
 
             return details[role]?.[step] || '详细内容正在完善中...';
         }
 
+=======
+            
+            return details[role]?.[step] || '详细内容正在完善中...';
+        }
+        
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
         // 滚动触发步骤动画
         function checkStepsScroll() {
             const stepsSection = document.getElementById('steps_section');
             if (!stepsSection) return;
+<<<<<<< HEAD
 
             const rect = stepsSection.getBoundingClientRect();
             const windowHeight = window.innerHeight;
@@ -620,22 +1133,48 @@ document.addEventListener('DOMContentLoaded', function () {
                     sellerSteps.querySelectorAll('.step_item') :
                     buyerSteps.querySelectorAll('.step_item');
 
+=======
+            
+            const rect = stepsSection.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            
+            if (rect.top < windowHeight * 0.8 && rect.bottom > 0) {
+                // 激活当前显示流程的动画
+                const activeRole = document.querySelector('.role_tab.active').getAttribute('data-role');
+                const currentSteps = activeRole === 'seller' ? 
+                    sellerSteps.querySelectorAll('.step_item') : 
+                    buyerSteps.querySelectorAll('.step_item');
+                
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
                 currentSteps.forEach((item, index) => {
                     setTimeout(() => {
                         item.style.opacity = '1';
                         item.style.transform = 'translateX(0)';
                     }, index * 200);
                 });
+<<<<<<< HEAD
 
+=======
+                
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
                 // 移除滚动监听
                 window.removeEventListener('scroll', checkStepsScroll);
             }
         }
+<<<<<<< HEAD
 
         // 初始检查和添加滚动监听
         checkStepsScroll();
         window.addEventListener('scroll', checkStepsScroll);
 
+=======
+        
+        // 初始检查和添加滚动监听
+        checkStepsScroll();
+        window.addEventListener('scroll', checkStepsScroll);
+        
+        // 模拟流程完成（可选功能）
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
         const simulateCompleteBtn = document.createElement('button');
         simulateCompleteBtn.className = 'simulate_complete_btn';
         simulateCompleteBtn.innerHTML = '<i class="fas fa-play-circle"></i> 模拟流程演示';
@@ -652,6 +1191,7 @@ document.addEventListener('DOMContentLoaded', function () {
             cursor: pointer;
             transition: all 0.3s ease;
         `;
+<<<<<<< HEAD
 
         simulateCompleteBtn.addEventListener('mouseenter', function () {
             this.style.background = '#064e3b';
@@ -673,19 +1213,50 @@ document.addEventListener('DOMContentLoaded', function () {
             this.disabled = true;
             this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 演示中...';
 
+=======
+        
+        simulateCompleteBtn.addEventListener('mouseenter', function() {
+            this.style.background = '#064e3b';
+            this.style.transform = 'translateY(-2px)';
+        });
+        
+        simulateCompleteBtn.addEventListener('mouseleave', function() {
+            this.style.background = '#0d9488';
+            this.style.transform = 'translateY(0)';
+        });
+        
+        simulateCompleteBtn.addEventListener('click', function() {
+            const activeRole = document.querySelector('.role_tab.active').getAttribute('data-role');
+            const currentSteps = activeRole === 'seller' ? 
+                sellerSteps.querySelectorAll('.step_item') : 
+                buyerSteps.querySelectorAll('.step_item');
+            
+            // 禁用按钮
+            this.disabled = true;
+            this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 演示中...';
+            
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
             // 模拟步骤完成动画
             currentSteps.forEach((item, index) => {
                 setTimeout(() => {
                     item.style.borderLeftColor = '#10b981';
                     item.style.boxShadow = '0 10px 25px rgba(16, 185, 129, 0.2)';
+<<<<<<< HEAD
 
+=======
+                    
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
                     // 标记完成
                     const marker = item.querySelector('.step_number');
                     marker.style.background = '#10b981';
                     marker.style.borderColor = '#10b981';
                     marker.style.color = 'white';
                     marker.innerHTML = '<i class="fas fa-check"></i>';
+<<<<<<< HEAD
 
+=======
+                    
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
                     // 完成动画
                     item.style.transform = 'scale(1.02)';
                     setTimeout(() => {
@@ -693,25 +1264,41 @@ document.addEventListener('DOMContentLoaded', function () {
                     }, 300);
                 }, index * 800);
             });
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
             // 完成后重置
             setTimeout(() => {
                 currentSteps.forEach(item => {
                     item.style.borderLeftColor = '';
                     item.style.boxShadow = '';
+<<<<<<< HEAD
 
+=======
+                    
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
                     const marker = item.querySelector('.step_number');
                     marker.style.background = '';
                     marker.style.borderColor = '';
                     marker.style.color = '';
                     marker.textContent = marker.getAttribute('data-step');
                 });
+<<<<<<< HEAD
 
+=======
+                
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
                 this.disabled = false;
                 this.innerHTML = '<i class="fas fa-play-circle"></i> 模拟流程演示';
             }, 5000);
         });
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
         // 将模拟按钮添加到容器中
         const stepsArea = document.querySelector('.steps_area .container');
         if (stepsArea) {
@@ -719,22 +1306,37 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+<<<<<<< HEAD
     // 下载公约PDF功能
+=======
+        // ===============================
+    // 下载公约PDF功能
+    // ===============================
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     const downloadBtn = document.getElementById('downloadBtn');
     const previewBtn = document.getElementById('previewBtn');
     const downloadSuccess = document.getElementById('downloadSuccess');
     const downloadCountSpan = document.querySelector('.download_info .info_item:nth-child(3) span');
+<<<<<<< HEAD
 
     if (downloadBtn) {
         let downloadCount = 1248; // 初始下载次数
         let isDownloading = false;
 
+=======
+    
+    if (downloadBtn) {
+        let downloadCount = 1248; // 初始下载次数
+        let isDownloading = false;
+        
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
         // 更新下载次数显示
         function updateDownloadCount() {
             if (downloadCountSpan) {
                 downloadCountSpan.textContent = `已下载: ${downloadCount.toLocaleString()} 次`;
             }
         }
+<<<<<<< HEAD
 
         // 下载按钮点击事件
         downloadBtn.addEventListener('click', function () {
@@ -743,15 +1345,31 @@ document.addEventListener('DOMContentLoaded', function () {
             isDownloading = true;
             const originalText = downloadBtn.innerHTML;
 
+=======
+        
+        // 下载按钮点击事件
+        downloadBtn.addEventListener('click', function() {
+            if (isDownloading) return;
+            
+            isDownloading = true;
+            const originalText = downloadBtn.innerHTML;
+            
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
             // 显示下载中状态
             downloadBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 下载中...';
             downloadBtn.disabled = true;
             previewBtn.disabled = true;
+<<<<<<< HEAD
 
+=======
+            
+            // 模拟下载过程（实际项目中应链接真实PDF文件）
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
             setTimeout(() => {
                 // 增加下载计数
                 downloadCount++;
                 updateDownloadCount();
+<<<<<<< HEAD
 
                 // 显示成功消息
                 downloadSuccess.classList.add('show');
@@ -765,6 +1383,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 recordDownload();
 
+=======
+                
+                // 显示成功消息
+                downloadSuccess.classList.add('show');
+                
+                // 更新按钮状态
+                downloadBtn.innerHTML = '<i class="fas fa-check"></i> 已下载';
+                downloadBtn.style.background = 'linear-gradient(to right, #10b981, #059669)';
+                
+                // 模拟文件下载
+                simulateFileDownload();
+                
+                // 记录下载（实际项目中应发送到后端）
+                recordDownload();
+                
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
                 // 5秒后重置状态
                 setTimeout(() => {
                     downloadSuccess.classList.remove('show');
@@ -776,6 +1410,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }, 5000);
             }, 2000);
         });
+<<<<<<< HEAD
 
         // 预览按钮点击事件
         previewBtn.addEventListener('click', function () {
@@ -783,24 +1418,48 @@ document.addEventListener('DOMContentLoaded', function () {
             openPreviewModal();
         });
 
+=======
+        
+        // 预览按钮点击事件
+        previewBtn.addEventListener('click', function() {
+            // 打开预览模态框
+            openPreviewModal();
+        });
+        
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
         // 模拟文件下载
         function simulateFileDownload() {
             // 创建一个临时链接进行下载
             const link = document.createElement('a');
+<<<<<<< HEAD
             link.href = '#';
             link.download = '校友集市流转公约_v2.1.pdf';
             link.click();
 
+=======
+            link.href = '#'; // 实际应为PDF文件URL
+            link.download = '校友集市流转公约_v2.1.pdf';
+            link.click();
+            
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
             // 添加下载动画效果
             const icon = document.querySelector('.download_icon i');
             icon.style.transform = 'scale(1.2)';
             icon.style.color = '#10b981';
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
             setTimeout(() => {
                 icon.style.transform = 'scale(1)';
                 icon.style.color = 'white';
             }, 500);
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
             // 卡片动画效果
             const card = document.querySelector('.download_card');
             card.style.transform = 'scale(1.02)';
@@ -808,18 +1467,37 @@ document.addEventListener('DOMContentLoaded', function () {
                 card.style.transform = 'scale(1)';
             }, 300);
         }
+<<<<<<< HEAD
 
+=======
+        
+        // 记录下载信息（示例）
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
         function recordDownload() {
             const downloadData = {
                 timestamp: new Date().toISOString(),
                 userAgent: navigator.userAgent,
                 totalDownloads: downloadCount
             };
+<<<<<<< HEAD
 
             console.log('下载记录:', downloadData);
 
         }
 
+=======
+            
+            console.log('下载记录:', downloadData);
+            
+            // 实际项目中应发送到后端API
+            // fetch('/api/downloads', {
+            //     method: 'POST',
+            //     headers: {'Content-Type': 'application/json'},
+            //     body: JSON.stringify(downloadData)
+            // });
+        }
+        
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
         // 打开预览模态框
         function openPreviewModal() {
             // 创建预览模态框
@@ -860,9 +1538,15 @@ document.addEventListener('DOMContentLoaded', function () {
                     </div>
                 </div>
             `;
+<<<<<<< HEAD
 
             document.body.appendChild(modal);
 
+=======
+            
+            document.body.appendChild(modal);
+            
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
             // 添加样式
             const style = document.createElement('style');
             style.textContent = `
@@ -1029,7 +1713,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             `;
             document.head.appendChild(style);
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
             // 绑定事件
             const closeBtns = modal.querySelectorAll('.modal_close, .btn_modal_close');
             closeBtns.forEach(btn => {
@@ -1041,17 +1729,29 @@ document.addEventListener('DOMContentLoaded', function () {
                     }, 300);
                 });
             });
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
             modal.querySelector('.btn_modal_download').addEventListener('click', () => {
                 downloadBtn.click();
                 modal.querySelector('.btn_modal_close').click();
             });
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
             // 点击遮罩层关闭
             modal.querySelector('.modal_overlay').addEventListener('click', () => {
                 modal.querySelector('.btn_modal_close').click();
             });
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
             // ESC键关闭
             document.addEventListener('keydown', function closeOnEsc(e) {
                 if (e.key === 'Escape') {
@@ -1060,15 +1760,26 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             });
         }
+<<<<<<< HEAD
 
         // 初始更新下载次数
         updateDownloadCount();
 
+=======
+        
+        // 初始更新下载次数
+        updateDownloadCount();
+        
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
         // 添加下载次数动画效果
         if (downloadCountSpan) {
             const countElement = downloadCountSpan.querySelector('span') || downloadCountSpan;
             countElement.classList.add('download_count');
         }
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 });

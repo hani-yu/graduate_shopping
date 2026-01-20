@@ -664,6 +664,7 @@ nav.daohang.nav_scrolled {
     color: #1e293b;
     margin-bottom: 1.75rem;
     text-align: center;
+<<<<<<< HEAD
     
 
     border-left: none;
@@ -676,6 +677,21 @@ nav.daohang.nav_scrolled {
   
     width: fit-content;
    
+=======
+    /* 文字水平居中 */
+
+    /* 注意：如果之前有 border-left (左边框)，居中后会显得不对称，建议删除或改为底边框 */
+    border-left: none;
+    /* 移除左边框 */
+    padding-left: 0;
+    /* 移除左内边距 */
+    padding-bottom: 10px;
+    /* 增加底部间距 */
+    border-bottom: 2px solid #0d9488;
+    /* 改为底边框，更有视觉重心 */
+    width: fit-content;
+    /* 宽度随文字 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     margin-left: auto;
     /* 配合 width 实现块级居中 */
     margin-right: auto;
@@ -693,7 +709,11 @@ nav.daohang.nav_scrolled {
     font-size: 1.5rem;
 
     text-align: center;
+<<<<<<< HEAD
     
+=======
+    /* 核心代码：让 li 内部的文字居中 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 }
 
 .filter_list {
@@ -809,6 +829,68 @@ nav.daohang.nav_scrolled {
     font-weight: bold;
 }
 
+<<<<<<< HEAD
+=======
+/* 商品网格 (使用与核心团队相似的卡片风格) */
+/* .product_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 25px;
+    position: relative;
+}
+
+.product_item {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.product_item:hover {
+    transform: translateY(-10px);
+    border: 1px solid #0d9488;
+    box-shadow: 0 10px 25px rgba(13, 148, 136, 0.1);
+}
+
+.img_holder {
+    height: 160px;
+    background: #f8fafc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: #cbd5e1;
+}
+
+.p_info {
+    padding: 1.2rem;
+}
+
+.p_info h4 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.price {
+    color: #0d9488;
+    font-size: 1.3rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+.cat_tag {
+    font-size: 1rem;
+    background: #f0fdfa;
+    color: #0d9488;
+    padding: 2px 10px;
+    border-radius: 4px;
+} */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 
 /* --- 商品网格 3D 环境 --- */
 .product_grid {
@@ -901,6 +983,10 @@ nav.daohang.nav_scrolled {
     box-shadow: 0 15px 35px rgba(13,148,136,0.15);
 }
 
+<<<<<<< HEAD
+=======
+/* 如果分类卡片被点击，添加一个微弱的缩放反馈 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .product_item:active {
     transform: scale(0.98);
 }
@@ -917,7 +1003,11 @@ nav.daohang.nav_scrolled {
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     background: transparent;
+<<<<<<< HEAD
     letter-spacing: 1px;       
+=======
+    letter-spacing: 1px;       /* 字母间距，更有质感 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -938,17 +1028,31 @@ nav.daohang.nav_scrolled {
     transition: 0.1s;
 }
 
+<<<<<<< HEAD
 
+=======
+/* --- 优化：让 senior_note 里的文字排版更美观 --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .senior_note p {
     color: #fff;
     font-size: 0.95rem;
     font-style: italic;
+<<<<<<< HEAD
     margin-bottom: 20px;     
     line-height: 1.6;
     max-width: 80%;          
     text-shadow: 0 2px 4px rgba(0,0,0,0.1); 
 }
 
+=======
+    margin-bottom: 20px;      /* 增加文字与按钮的间距 */
+    line-height: 1.6;
+    max-width: 80%;           /* 限制宽度，防止文字贴边 */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 给文字一点阴影，防背景干扰 */
+}
+
+/* --- 额外修饰：给按钮加一个扫光动画 (可选，增强“拾光”感) --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .btn_view::after {
     content: '';
     position: absolute;
@@ -969,8 +1073,32 @@ nav.daohang.nav_scrolled {
     left: 100%;
 }
 
+<<<<<<< HEAD
 
 
+=======
+/* --- 图片区域：保留你最初的 160px 高度 --- */
+/* .img_holder { 
+    height: 160px; 
+    background: #f8fafc; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-size: 3rem; 
+    color: #cbd5e1; 
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+
+
+.product_item:hover .senior_note {
+    opacity: 1;
+    transform: translateY(0); */
+/* } */
+
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .senior_note {
     position: absolute;
     top: 0;
@@ -1172,6 +1300,12 @@ nav.daohang.nav_scrolled {
     text-align: center;
 }
 
+<<<<<<< HEAD
+=======
+/* ===== 统一下方模块的垂直起点 ===== */
+
+
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .trade_feed {
     background: linear-gradient(135deg, #f0fdfa, #ecfeff);
     border-radius: 16px;
@@ -1204,7 +1338,11 @@ nav.daohang.nav_scrolled {
 
 
 /* ==========================================================================
+<<<<<<< HEAD
    7. 交易指南 
+=======
+   7. 交易指南 (风格同安全保障)
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
    ========================================================================== */
 .guide_box {
     /* margin-top: 4rem;  */
@@ -1320,7 +1458,11 @@ nav.daohang.nav_scrolled {
 }
 
 /* ==========================================================================
+<<<<<<< HEAD
    8. 页脚 
+=======
+   8. 页脚 (风格保持一致)
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
    ========================================================================== */
 .footer_area {
     background: #f8fafc;

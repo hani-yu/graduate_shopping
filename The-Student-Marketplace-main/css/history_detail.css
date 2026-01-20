@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+/* --- 基础规范 --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 
 :root {
     --deep-green: #064e3b;
@@ -59,6 +63,10 @@
     height: 80px;
 }
 
+<<<<<<< HEAD
+=======
+/* --- 简介模块新样式 --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .jianjie_new {
     background: #fdfdfd;
     padding: 100px 0;
@@ -73,6 +81,10 @@
     position: relative;
     box-shadow: 0 30px 70px rgba(0, 0, 0, 0.05);
     border-left: 5px solid #064e3b;
+<<<<<<< HEAD
+=======
+    /* 模拟书页边缘 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 }
 
 .shou_zi {
@@ -105,6 +117,10 @@
 
 .jianjie_p {
     font-size: 1.25rem !important;
+<<<<<<< HEAD
+=======
+    /* 字体加大，增强阅读感 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     line-height: 2;
     color: #475569;
     text-align: justify;
@@ -118,6 +134,10 @@
     font-size: 1.2rem;
 }
 
+<<<<<<< HEAD
+=======
+/* --- 时间轴模块新样式 --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .licheng_area {
     background: #f9fbfa;
     padding: 100px 0;
@@ -144,6 +164,10 @@
 .zhou_progress {
     width: 100%;
     height: 0;
+<<<<<<< HEAD
+=======
+    /* JS 控制生长高度 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     background: linear-gradient(to bottom, #0d9488, #f59e0b);
     transition: height 0.1s linear;
 }
@@ -154,6 +178,10 @@
     margin-bottom: 80px;
     position: relative;
     opacity: 0;
+<<<<<<< HEAD
+=======
+    /* JS 控制显示 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
@@ -247,6 +275,10 @@
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
 }
 
+<<<<<<< HEAD
+=======
+/* --- 突破点模块 (展柜风) --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .tupo_area_new {
     background: #ffffff;
     padding: 120px 0;
@@ -274,6 +306,10 @@
     transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
+<<<<<<< HEAD
+=======
+/* 核心：JS 触发后的状态 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .tupo_ka.active_ka {
     opacity: 1 !important;
     transform: translateY(0) !important;
@@ -315,6 +351,10 @@
     width: 100%;
     height: 100%;
     background: #064e3b;
+<<<<<<< HEAD
+=======
+    /* 使用深林绿作为开场颜色 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     z-index: 2;
     transform: translateX(0);
     transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1);
@@ -370,6 +410,11 @@
     line-height: 2;
 }
 
+<<<<<<< HEAD
+=======
+/* --- 数据模块 (数智看板) --- */
+/* --- 折线图看板区域 (学生作业风格) --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .quxian_area {
     background: #fdfdfd;
     padding: 100px 0;
@@ -380,6 +425,10 @@
     height: 450px;
     margin: 50px auto;
     background: #064e3b;
+<<<<<<< HEAD
+=======
+    /* 深林绿底色，像博物馆黑板 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     border-radius: 30px;
     position: relative;
     padding: 60px 40px;
@@ -417,6 +466,10 @@
 #growthPath {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
+<<<<<<< HEAD
+=======
+    /* JS控制变0 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 }
 
 /* 坐标点样式 */
@@ -477,6 +530,10 @@
     color: #f59e0b;
     font-weight: 800;
     font-size: 1.2rem !important;
+<<<<<<< HEAD
+=======
+    /* 字体加大 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 }
 
 .gold_node .pao_num {
@@ -485,12 +542,17 @@
 }
 
 .board_bottom_text {
+<<<<<<< HEAD
+=======
+    /* 核心修改：改为绝对定位，固定在底部 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     position: absolute;
     bottom: 20px;
     left: 0;
     width: 100%;
 
     text-align: center;
+<<<<<<< HEAD
     color: white;
     font-size: 1.3rem !important;
     margin: 0;
@@ -498,6 +560,743 @@
     pointer-events: none;
 }
 
+=======
+    /* 稍微调亮一点颜色，防止看不清 */
+    color: white;
+    font-size: 1.3rem !important;
+    margin: 0;
+    /* 清除之前的 margin */
+    z-index: 10;
+    /* 确保在最上层 */
+    pointer-events: none;
+    /* 防止挡住鼠标点击点位 */
+}
+
+/* --- Box 7: 伙伴 --- */
+/* .huoban_grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1000px; margin: 40px auto;
+}
+.huoban_item {
+    background: #fff; padding: 30px; text-align: center; border-radius: 20px;
+    border: 1px solid #f1f5f9; transition: 0.3s;
+}
+.huoban_item:hover { transform: scale(1.05); border-color: var(--teal); }
+.huoban_item i { font-size: 2.5rem; color: var(--teal); margin-bottom: 15px; display: block; } */
+
+/* --- Box 8: CTA --- */
+/* .dingyue_box {
+    max-width: 800px; margin: 0 auto; background: #fff; padding: 60px;
+    border-radius: 30px; text-align: center; border: 1px solid #eee;
+}
+.input_wrap { margin-top: 30px; display: flex; gap: 10px; justify-content: center; }
+.input_wrap input { padding: 15px 25px; border-radius: 50px; border: 1px solid #ddd; width: 300px; }
+.btn_dingyue { background: var(--gold); color: #fff; border: none; padding: 15px 40px; border-radius: 50px; cursor: pointer; font-weight: bold; } */
+
+/* 锦囊合作伙伴区域样式 */
+/* .huoban_area {
+    background: linear-gradient(145deg, #fff9f0 0%, #fff0e6 100%);
+    border-left: 6px solid #ff9a3d;
+    position: relative;
+}
+
+.area_title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #5a3921;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.area_title::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, transparent, #ff9a3d, transparent);
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.jinang_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    perspective: 1000px;
+}
+
+.jinang {
+    width: 220px;
+    height: 280px;
+    position: relative;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.jinang:hover {
+    transform: translateY(-15px) rotateX(5deg);
+}
+
+.jinang_front,
+.jinang_back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.jinang_front {
+    background: linear-gradient(145deg, #ffffff 0%, #f8f4ff 100%);
+    border: 2px solid #e6d6c6;
+}
+
+.jinang_back {
+    background: linear-gradient(145deg, #fff5eb 0%, #ffebd6 100%);
+    border: 2px solid #ff9a3d;
+    transform: rotateY(180deg);
+    text-align: center;
+}
+
+.jinang.open {
+    transform: rotateY(180deg) translateY(-10px);
+}
+
+.jinang_icon {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: #ff9a3d;
+    transition: all 0.5s ease;
+}
+
+.jinang:hover .jinang_icon {
+    transform: scale(1.2);
+}
+
+.jinang_name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #5a3921;
+    margin-bottom: 10px;
+}
+
+.jinang_desc {
+    font-size: 0.95rem;
+    color: #8b7355;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.jinang_ribbon {
+    position: absolute;
+    top: -10px;
+    right: 15px;
+    width: 60px;
+    height: 70px;
+    background: #ff6b6b;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 70%, 0% 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(255, 107, 107, 0.3);
+} */
+
+/* --- 基础规范 --- */
+
+:root {
+    --deep-green: #064e3b;
+    --accent-gold: #f59e0b;
+}
+
+/* --- Box 1: Hero --- */
+.hero_box {
+    height: 65vh;
+    background: var(--green);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+}
+
+.hero_line_bg {
+    /* position: absolute; width: 200%; height: 200%;
+    background-image: repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(255,255,255,0.05) 40px, rgba(255,255,255,0.05) 41px),
+                      repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(255,255,255,0.05) 40px, rgba(255,255,255,0.05) 41px);
+    transform: perspective(500px) rotateX(60deg);
+    top: -50%; */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(6, 78, 59, 0.7);
+    backdrop-filter: blur(4px);
+}
+
+.big_title {
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: 10px;
+    position: relative;
+}
+
+.seal_tag {
+    font-size: 0.8rem;
+    background: var(--gold);
+    color: var(--green);
+    padding: 5px;
+    writing-mode: vertical-rl;
+}
+
+.gold_line {
+    width: 60px;
+    height: 3px;
+    background: var(--gold);
+    margin: 20px auto;
+}
+
+.wave_box {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+}
+
+/* --- Box 3: 时间轴 --- */
+/* .shijian_zhou_area { padding: 100px 0; }
+.zhou_container { max-width: 900px; margin: 0 auto; position: relative; }
+.vertical_line {
+    position: absolute; left: 50%; top: 0; width: 4px; height: 100%;
+    background: #e2e8f0; transform: translateX(-50%);
+}
+.line_fill {
+    width: 100%; height: 0; background: var(--teal);
+    transition: height 2s ease;
+}
+.zhou_item {
+    width: 45%; margin-bottom: 60px; position: relative; opacity: 0;
+}
+.left_item { margin-right: auto; text-align: right; }
+.right_item { margin-left: auto; text-align: left; }
+.zhou_dian {
+    position: absolute; top: 20px; width: 20px; height: 20px;
+    background: #fff; border: 4px solid var(--teal); border-radius: 50%;
+    z-index: 5;
+}
+.left_item .zhou_dian { right: -12.5%; }
+.right_item .zhou_dian { left: -12.5%; }
+.zhou_card {
+    background: #fff; padding: 25px; border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+.zhou_date { font-weight: 800; color: var(--gold); font-size: 1.2rem !important; } */
+
+/* --- Box 4 & 5: Split --- */
+/* .tupo_grid {
+    display: flex; align-items: center; gap: 50px; max-width: 1100px; margin: 0 auto;
+}
+.reverse_box .tupo_grid { flex-direction: row-reverse; }
+.tupo_img { flex: 1; position: relative; }
+.tupo_img img { width: 100%; border-radius: 25px; }
+.img_mask_gold { position: absolute; bottom: 20px; left: 20px; background: var(--gold); color: #fff; padding: 5px 15px; border-radius: 5px; font-weight: bold; }
+.img_mask_green { position: absolute; bottom: 20px; right: 20px; background: var(--teal); color: #fff; padding: 5px 15px; border-radius: 5px; font-weight: bold; } */
+/* .tupo_text { flex: 1.2; } */
+
+/* --- 简介模块新样式 --- */
+.jianjie_new {
+    background: #fdfdfd;
+    padding: 100px 0;
+}
+
+.jianjie_baozhuang {
+    max-width: 850px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 60px;
+    border-radius: 4px;
+    position: relative;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid #064e3b;
+    /* 模拟书页边缘 */
+}
+
+.shou_zi {
+    position: absolute;
+    top: -40px;
+    left: 40px;
+    font-size: 6rem;
+    font-family: "Noto Serif SC", serif;
+    color: rgba(13, 148, 136, 0.1);
+    z-index: 0;
+}
+
+.jianjie_content {
+    position: relative;
+    z-index: 1;
+}
+
+.title_hu {
+    font-size: 1.8rem !important;
+    color: #064e3b;
+    margin-bottom: 20px;
+}
+
+.mei_xian {
+    width: 40px;
+    height: 3px;
+    background: #f59e0b;
+    margin-bottom: 25px;
+}
+
+.jianjie_p {
+    font-size: 1.25rem !important;
+    /* 字体加大，增强阅读感 */
+    line-height: 2;
+    color: #475569;
+    text-align: justify;
+}
+
+.shiguang_yin {
+    margin-top: 30px;
+    text-align: right;
+    font-family: "KaiTi", serif;
+    color: #0d9488;
+    font-size: 1.2rem;
+}
+
+/* --- 时间轴模块新样式 --- */
+.licheng_area {
+    background: #f9fbfa;
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+.shiguang_zhou_box {
+    max-width: 1000px;
+    margin: 80px auto 0;
+    position: relative;
+}
+
+/* 中间生长线 */
+.zhou_middle_line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: #e2e8f0;
+    transform: translateX(-50%);
+}
+
+.zhou_progress {
+    width: 100%;
+    height: 0;
+    /* JS 控制生长高度 */
+    background: linear-gradient(to bottom, #0d9488, #f59e0b);
+    transition: height 0.1s linear;
+}
+
+/* 卡片容器 */
+.zhou_ka_wrap {
+    width: 50%;
+    margin-bottom: 80px;
+    position: relative;
+    opacity: 0;
+    /* JS 控制显示 */
+    transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.left_ka {
+    padding-right: 60px;
+    text-align: right;
+    transform: translateX(-50px);
+}
+
+.right_ka {
+    margin-left: 50%;
+    padding-left: 60px;
+    text-align: left;
+    transform: translateX(50px);
+}
+
+/* 节点圆点 */
+.zhou_dian_new {
+    position: absolute;
+    top: 20px;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border: 3px solid #e2e8f0;
+    border-radius: 50%;
+    z-index: 5;
+    transition: 0.5s;
+}
+
+.left_ka .zhou_dian_new {
+    right: -8px;
+}
+
+.right_ka .zhou_dian_new {
+    left: -8px;
+}
+
+/* 卡片实体 */
+.zhou_ka {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    border: 1px solid transparent;
+    transition: 0.4s;
+}
+
+.ka_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    color: #f59e0b;
+}
+
+.left_ka .ka_header {
+    flex-direction: row-reverse;
+}
+
+.ka_date {
+    font-weight: 800;
+    font-size: 1.1rem !important;
+}
+
+.zhou_ka h4 {
+    font-size: 1.4rem !important;
+    color: #064e3b;
+    margin-bottom: 10px;
+}
+
+.zhou_ka p {
+    font-size: 1.2rem !important;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* 激活状态样式 */
+.zhou_ka_wrap.active_ka {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.zhou_ka_wrap.active_ka .zhou_dian_new {
+    border-color: #0d9488;
+    background: #0d9488;
+    box-shadow: 0 0 15px rgba(13, 148, 136, 0.4);
+}
+
+.zhou_ka_wrap.active_ka .zhou_ka {
+    border-color: rgba(13, 148, 136, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+}
+
+/* --- 突破点模块 (展柜风) --- */
+.tupo_area_new {
+    background: #ffffff;
+    padding: 120px 0;
+}
+
+/* .tupo_ka {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    margin-bottom: 120px;
+    opacity: 0; 
+    transform: translateY(50px);
+    transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+} */
+
+.tupo_ka {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    margin-bottom: 120px;
+
+    /* 核心：初始隐藏 */
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* 核心：JS 触发后的状态 */
+.tupo_ka.active_ka {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.right_ka_new {
+    flex-direction: row-reverse;
+}
+
+/* 图片展柜效果 */
+.tupo_tu_wrap {
+    flex: 1;
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+}
+
+.tupo_tu_wrap img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+/* 图片入场遮罩 */
+/* .tu_zhehao {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: #064e3b;
+    z-index: 2;
+    transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1);
+} */
+
+.tu_zhehao {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #064e3b;
+    /* 使用深林绿作为开场颜色 */
+    z-index: 2;
+    transform: translateX(0);
+    transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.active_ka .tu_zhehao {
+    transform: translateX(101%);
+}
+
+.tu_label_pin {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background: #f59e0b;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+    z-index: 3;
+    font-size: 1.1rem !important;
+}
+
+/* 文字部分 */
+.tupo_wen_box {
+    flex: 1;
+}
+
+.tupo_year {
+    font-size: 3rem !important;
+    font-weight: 900;
+    color: rgba(13, 148, 136, 0.1);
+    font-family: 'Arial';
+    display: block;
+    margin-bottom: -20px;
+}
+
+.tupo_wen_box h3 {
+    font-size: 1.8rem !important;
+    color: #064e3b;
+    margin-bottom: 20px;
+}
+
+.wen_line {
+    width: 60px;
+    height: 4px;
+    background: #0d9488;
+    margin-bottom: 30px;
+}
+
+.tupo_wen_box p {
+    font-size: 1.25rem !important;
+    color: #475569;
+    line-height: 2;
+}
+
+/* --- 数据模块 (数智看板) --- */
+/* --- 折线图看板区域 (学生作业风格) --- */
+.quxian_area {
+    background: #fdfdfd;
+    padding: 100px 0;
+}
+
+.zhe_xian_board {
+    max-width: 900px;
+    height: 450px;
+    margin: 50px auto;
+    background: #064e3b;
+    /* 深林绿底色，像博物馆黑板 */
+    border-radius: 30px;
+    position: relative;
+    padding: 60px 40px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+/* 坐标网格线 */
+.wang_ge {
+    position: absolute;
+    top: 60px;
+    left: 40px;
+    right: 40px;
+    bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.wang_ge span {
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* SVG 容器 */
+.svg_wrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+/* 折线生长初始状态 */
+#growthPath {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    /* JS控制变0 */
+}
+
+/* 坐标点样式 */
+.quxian_dian {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 5;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.quxian_dian.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* 涟漪动画 */
+.dian_ripple {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border: 2px solid #f59e0b;
+    border-radius: 50%;
+    animation: ripple_play 2s infinite;
+    opacity: 0;
+}
+
+@keyframes ripple_play {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(4);
+        opacity: 0;
+    }
+}
+
+/* 节点文字 */
+.dian_label {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.1rem !important;
+    text-align: center;
+}
+
+.pao_num {
+    color: #f59e0b;
+    font-weight: 800;
+    font-size: 1.2rem !important;
+    /* 字体加大 */
+}
+
+.gold_node .pao_num {
+    font-size: 1.6rem !important;
+    text-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
+}
+
+.board_bottom_text {
+    /* 核心修改：改为绝对定位，固定在底部 */
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+
+    text-align: center;
+    /* 稍微调亮一点颜色，防止看不清 */
+    color: white;
+    font-size: 1.3rem !important;
+    margin: 0;
+    /* 清除之前的 margin */
+    z-index: 10;
+    /* 确保在最上层 */
+    pointer-events: none;
+    /* 防止挡住鼠标点击点位 */
+}
+
+/* --- Box 7: 伙伴 --- */
+/* .huoban_grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1000px; margin: 40px auto;
+}
+.huoban_item {
+    background: #fff; padding: 30px; text-align: center; border-radius: 20px;
+    border: 1px solid #f1f5f9; transition: 0.3s;
+}
+.huoban_item:hover { transform: scale(1.05); border-color: var(--teal); }
+.huoban_item i { font-size: 2.5rem; color: var(--teal); margin-bottom: 15px; display: block; } */
+
+/* --- Box 8: CTA --- */
+/* .dingyue_box {
+    max-width: 800px; margin: 0 auto; background: #fff; padding: 60px;
+    border-radius: 30px; text-align: center; border: 1px solid #eee;
+}
+.input_wrap { margin-top: 30px; display: flex; gap: 10px; justify-content: center; }
+.input_wrap input { padding: 15px 25px; border-radius: 50px; border: 1px solid #ddd; width: 300px; }
+.btn_dingyue { background: var(--gold); color: #fff; border: none; padding: 15px 40px; border-radius: 50px; cursor: pointer; font-weight: bold; } */
+
+/* 锦囊合作伙伴区域样式 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .huoban_area {
     background: linear-gradient(145deg, #fff9f0 0%, #fff0e6 100%);
     border-left: 6px solid #ff9a3d;
@@ -804,7 +1603,195 @@
     animation: float 4s ease-in-out infinite;
 }
 
+<<<<<<< HEAD
 
+=======
+/* 书本订阅区域样式 */
+/* .dingyue_area {
+    background: linear-gradient(145deg, #f0f7ff 0%, #e6f0ff 100%);
+    border-left: 6px solid #4a90e2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+.book {
+    width: 90%;
+    max-width: 800px;
+    height: 360px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    cursor: pointer;
+}
+
+.book:hover {
+    transform: translateY(-10px) rotateX(5deg);
+}
+
+.book_cover,
+.book_page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.book_cover {
+    background: linear-gradient(145deg, #5a7ca6 0%, #3a5a8a 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    color: white;
+    backface-visibility: hidden;
+    z-index: 10;
+}
+
+.book_cover h3 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.book_cover p {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 35px;
+    max-width: 600px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.book_page {
+    background: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.book.open {
+    transform: rotateY(180deg) translateY(-10px);
+}
+
+.input_wrap {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+    width: 100%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.input_wrap input {
+    flex-grow: 1;
+    padding: 18px 25px;
+    border: none;
+    font-size: 1.1rem;
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.input_wrap input:focus {
+    outline: none;
+    background: white;
+}
+
+.btn_dingyue {
+    background: linear-gradient(to right, #ff9a3d, #ff6b6b);
+    color: white;
+    border: none;
+    padding: 18px 35px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.btn_dingyue:hover {
+    background: linear-gradient(to right, #ff8a2d, #ff5b5b);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+}
+
+.book_spine {
+    position: absolute;
+    width: 40px;
+    height: 100%;
+    background: linear-gradient(to right, #3a5a8a, #2a4a7a);
+    left: -20px;
+    top: 0;
+    border-radius: 4px 0 0 4px;
+    transform: rotateY(90deg);
+    transform-origin: left;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.book_pages {
+    position: absolute;
+    width: 98%;
+    height: 96%;
+    top: 2%;
+    left: 1%;
+    background: #f9f9f9;
+    border-radius: 4px;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.05);
+    z-index: -1;
+}
+
+.success_message {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    background: rgba(106, 176, 76, 0.1);
+    border-radius: 12px;
+    margin-top: 25px;
+    animation: fadeIn 0.5s ease;
+}
+
+.success_message.show {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.float_animation {
+    animation: float 4s ease-in-out infinite;
+} */
+
+/* --- Box 8: 订阅 CTA (摊开书本样式) --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .dingyue_area_new {
     background: linear-gradient(145deg, #f9fbfa 0%, #f1f7f5 100%);
     padding: 80px 0;

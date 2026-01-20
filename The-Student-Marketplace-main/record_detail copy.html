@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>流转全记录 - 毕业物品流转平台</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="css/record_detail.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="record-page">
+    
+   <nav class="daohang">
+        <div class="daohang_wrapper">
+            <ul class="daohang_list">
+                <li class="daohang_items"><a href="index.html">首页</a></li>
+                <li class="daohang_items"><a href="about.html">平台概况</a></li>
+                <li class="daohang_items"><a href="categories.html">商品分类</a></li>
+                <li class="daohang_items"><a href="guide.html">流转锦囊</a></li>
+                <li class="daohang_items"><a href="events.html">活动专区</a></li>
+                <li class="daohang_items active"><a href="user.html">用户中心</a></li>
+            </ul>
+            <div class="nav_auth"><a href="signin.html" class="btn_nav">登录</a></div>
+        </div>
+    </nav>
+
+
+    <!-- Box 1: Hero Banner (法典封面风格) -->
+    <header class="record_hero">
+        <div class="hero_overlay"></div>
+        <div class="hero_content animate__animated animate__fadeIn">
+            <span class="en_tag">FURNITURE LEGACY</span>
+            <h1 class="elegant_title">流转行志 <span class="record_seal">家具</span></h1>
+            <div class="elegant_line"></div>
+            <p class="elegant_subtitle">买卖合一的校园物品流转账本</p>
+        </div>
+        <!-- 装饰波浪 -->
+        <div class="banner_wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C0,0,31.83,14.28,64,27.1,126.31,52,187.31,68,250.31,68c31.11,0,32.25-10.15,71.08-11.56Z"
+                    fill="#f9fbfa"></path>
+            </svg>
+        </div>
+    </header>
+
+
+    <div class="record-container">
+
+        <!-- Block 1: 实时物流/面交状态 -->
+        <section id="live-status" class="record-block animate__animated" data-block="1">
+            <div class="block-header">
+                <div class="block-title">
+                    <i class="fas fa-truck-moving"></i>
+                    <h2>实时物流/面交状态</h2>
+                </div>
+                <div class="block-badge ongoing">进行中 (3)</div>
+            </div>
+            
+            <div class="block-content">
+                <div class="status-timeline">
+                    <!-- 状态1 -->
+                    <div class="status-item delivering">
+                        <div class="status-icon">
+                            <i class="fas fa-shipping-fast"></i>
+                        </div>
+                        <div class="status-content">
+                            <div class="status-header">
+                                <h4>《数据结构与算法》教材</h4>
+                                <div class="status-tag">快递寄送</div>
+                            </div>
+                            <p class="status-desc">顺丰快递 SF123456789 | 预计明天送达</p>
+                            <div class="status-progress">
+                                <div class="progress-track">
+                                    <div class="progress-step active"><i class="fas fa-box"></i><span>已揽收</span></div>
+                                    <div class="progress-step active"><i class="fas fa-warehouse"></i><span>运输中</span></div>
+                                    <div class="progress-step"><i class="fas fa-truck"></i><span>派送中</span></div>
+                                    <div class="progress-step"><i class="fas fa-check-circle"></i><span>已签收</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 状态2 -->
+                    <div class="status-item meetup">
+                        <div class="status-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="status-content">
+                            <div class="status-header">
+                                <h4>便携式小台灯</h4>
+                                <div class="status-tag">面交待确认</div>
+                            </div>
+                            <p class="status-desc">图书馆3楼自习区 | 今天 18:30</p>
+                            <div class="meetup-actions">
+                                <button class="btn-confirm">确认完成</button>
+                                <button class="btn-modify">修改时间</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 状态3 -->
+                    <div class="status-item pickup">
+                        <div class="status-icon">
+                            <i class="fas fa-people-carry"></i>
+                        </div>
+                        <div class="status-content">
+                            <div class="status-header">
+                                <h4>宿舍小冰箱</h4>
+                                <div class="status-tag">上门取件</div>
+                            </div>
+                            <p class="status-desc">明天 14:00-16:00 | 快递员：王师傅 138****1234</p>
+                            <div class="status-warning">
+                                <i class="fas fa-exclamation-circle"></i>
+                                请提前准备好物品，保持电话畅通
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Block 2: 我发布的闲置 -->
+        <section id="my-items" class="record-block animate__animated" data-block="2">
+            <div class="block-header">
+                <div class="block-title">
+                    <i class="fas fa-bullhorn"></i>
+                    <h2>我发布的闲置</h2>
+                </div>
+                <div class="block-actions">
+                    <button class="btn-action" id="add-item">
+                        <i class="fas fa-plus"></i> 发布新闲置
+                    </button>
+                    <div class="filter-dropdown">
+                        <select id="item-filter">
+                            <option value="all">全部状态</option>
+                            <option value="selling">出售中</option>
+                            <option value="sold">已售出</option>
+                            <option value="expired">已下架</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="block-content">
+                <div class="items-grid">
+                    <!-- 物品1 -->
+                    <div class="item-card selling">
+                        <div class="item-badge">出售中</div>
+                        <div class="item-image">
+                            <img src="https://via.placeholder.com/150x150/0d9488/ffffff?text=数码" alt="物品图片">
+                        </div>
+                        <div class="item-info">
+                            <h4>九成新 Kindle Paperwhite</h4>
+                            <p class="item-price">¥350</p>
+                            <p class="item-time">发布时间：3天前</p>
+                            <div class="item-stats">
+                                <span><i class="fas fa-eye"></i> 128</span>
+                                <span><i class="fas fa-comment"></i> 5</span>
+                                <span><i class="fas fa-heart"></i> 12</span>
+                            </div>
+                        </div>
+                        <div class="item-actions">
+                            <button class="btn-item edit"><i class="fas fa-edit"></i></button>
+                            <button class="btn-item refresh"><i class="fas fa-redo"></i></button>
+                            <button class="btn-item offline"><i class="fas fa-eye-slash"></i></button>
+                        </div>
+                    </div>
+                    
+                    <!-- 物品2 -->
+                    <div class="item-card sold">
+                        <div class="item-badge">已售出</div>
+                        <div class="item-image">
+                            <img src="https://via.placeholder.com/150x150/f59e0b/ffffff?text=书籍" alt="物品图片">
+                        </div>
+                        <div class="item-info">
+                            <h4>考研英语全套资料</h4>
+                            <p class="item-price">¥120</p>
+                            <p class="item-time">售出时间：2天前</p>
+                            <div class="buyer-info">
+                                <i class="fas fa-user-circle"></i>
+                                <span>李同学·计算机学院</span>
+                            </div>
+                        </div>
+                        <div class="item-actions">
+                            <button class="btn-item review"><i class="fas fa-comment-alt"></i> 评价</button>
+                        </div>
+                    </div>
+                    
+                    <!-- 物品3 -->
+                    <div class="item-card selling">
+                        <div class="item-badge">出售中</div>
+                        <div class="item-image">
+                            <img src="https://via.placeholder.com/150x150/064e3b/ffffff?text=家具" alt="物品图片">
+                        </div>
+                        <div class="item-info">
+                            <h4>宜家书桌+椅子套装</h4>
+                            <p class="item-price">¥200</p>
+                            <p class="item-time">发布时间：1周前</p>
+                            <div class="item-stats">
+                                <span><i class="fas fa-eye"></i> 256</span>
+                                <span><i class="fas fa-comment"></i> 8</span>
+                                <span><i class="fas fa-heart"></i> 23</span>
+                            </div>
+                        </div>
+                        <div class="item-actions">
+                            <button class="btn-item edit"><i class="fas fa-edit"></i></button>
+                            <button class="btn-item refresh"><i class="fas fa-redo"></i></button>
+                            <button class="btn-item offline"><i class="fas fa-eye-slash"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="view-all">
+                    <a href="#" class="view-all-link">查看全部12件闲置 →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Block 3: 我收入的锦囊 -->
+        <section id="purchased-items" class="record-block animate__animated" data-block="3">
+            <div class="block-header">
+                <div class="block-title">
+                    <i class="fas fa-shopping-bag"></i>
+                    <h2>我收入的锦囊</h2>
+                </div>
+                <div class="block-badge total">总计 ¥850</div>
+            </div>
+            
+            <div class="block-content">
+                <div class="purchases-list">
+                    <!-- 购买记录1 -->
+                    <div class="purchase-item">
+                        <div class="purchase-icon">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <div class="purchase-details">
+                            <h4>机械键盘（青轴）</h4>
+                            <div class="purchase-meta">
+                                <span class="price">¥180</span>
+                                <span class="seller">卖家：张学长·软件工程</span>
+                                <span class="date">5月12日</span>
+                            </div>
+                            <div class="purchase-status completed">
+                                <i class="fas fa-check-circle"></i> 交易完成
+                            </div>
+                        </div>
+                        <button class="btn-review">
+                            <i class="fas fa-star"></i> 评价
+                        </button>
+                    </div>
+                    
+                    <!-- 购买记录2 -->
+                    <div class="purchase-item">
+                        <div class="purchase-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="purchase-details">
+                            <h4>《JavaScript高级程序设计》</h4>
+                            <div class="purchase-meta">
+                                <span class="price">¥45</span>
+                                <span class="seller">卖家：王同学·前端开发</span>
+                                <span class="date">5月8日</span>
+                            </div>
+                            <div class="purchase-status shipping">
+                                <i class="fas fa-shipping-fast"></i> 运输中
+                            </div>
+                        </div>
+                        <button class="btn-track">
+                            <i class="fas fa-map-marker-alt"></i> 跟踪
+                        </button>
+                    </div>
+                    
+                    <!-- 购买记录3 -->
+                    <div class="purchase-item">
+                        <div class="purchase-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <div class="purchase-details">
+                            <h4>Nintendo Switch游戏卡带</h4>
+                            <div class="purchase-meta">
+                                <span class="price">¥220</span>
+                                <span class="seller">卖家：游戏社官方账号</span>
+                                <span class="date">5月5日</span>
+                            </div>
+                            <div class="purchase-status dispute">
+                                <i class="fas fa-exclamation-triangle"></i> 争议处理中
+                            </div>
+                        </div>
+                        <button class="btn-dispute">
+                            <i class="fas fa-headset"></i> 申诉
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Block 4: 流转财务报表 -->
+        <section id="finance-report" class="record-block animate__animated" data-block="4">
+            <div class="block-header">
+                <div class="block-title">
+                    <i class="fas fa-chart-line"></i>
+                    <h2>流转财务报表</h2>
+                </div>
+                <div class="period-selector">
+                    <select id="period-select">
+                        <option value="month">本月</option>
+                        <option value="quarter">本季度</option>
+                        <option value="year">本年度</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="block-content">
+                <div class="finance-overview">
+                    <!-- 收入支出对比 -->
+                    <div class="finance-card income-card">
+                        <div class="finance-header">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <h3>总收入</h3>
+                        </div>
+                        <div class="finance-value">¥1,280</div>
+                        <div class="finance-change positive">
+                            <i class="fas fa-arrow-up"></i> 较上月增长15%
+                        </div>
+                        <div class="income-breakdown">
+                            <div class="breakdown-item">
+                                <span class="label">数码产品</span>
+                                <span class="value">¥850</span>
+                                <div class="bar" style="width: 66%;"></div>
+                            </div>
+                            <div class="breakdown-item">
+                                <span class="label">书籍教材</span>
+                                <span class="value">¥280</span>
+                                <div class="bar" style="width: 22%;"></div>
+                            </div>
+                            <div class="breakdown-item">
+                                <span class="label">生活用品</span>
+                                <span class="value">¥150</span>
+                                <div class="bar" style="width: 12%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 支出统计 -->
+                    <div class="finance-card expense-card">
+                        <div class="finance-header">
+                            <i class="fas fa-shopping-cart"></i>
+                            <h3>总支出</h3>
+                        </div>
+                        <div class="finance-value">¥850</div>
+                        <div class="finance-change negative">
+                            <i class="fas fa-arrow-down"></i> 较上月减少8%
+                        </div>
+                        <div class="expense-breakdown">
+                            <div class="breakdown-item">
+                                <span class="label">学习用品</span>
+                                <span class="value">¥420</span>
+                                <div class="bar" style="width: 49%;"></div>
+                            </div>
+                            <div class="breakdown-item">
+                                <span class="label">电子设备</span>
+                                <span class="value">¥280</span>
+                                <div class="bar" style="width: 33%;"></div>
+                            </div>
+                            <div class="breakdown-item">
+                                <span class="label">其他</span>
+                                <span class="value">¥150</span>
+                                <div class="bar" style="width: 18%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 净利润 -->
+                    <div class="finance-card profit-card">
+                        <div class="finance-header">
+                            <i class="fas fa-coins"></i>
+                            <h3>净收益</h3>
+                        </div>
+                        <div class="finance-value">¥430</div>
+                        <div class="finance-change positive">
+                            <i class="fas fa-smile"></i> 实现正向循环
+                        </div>
+                        <div class="profit-note">
+                            <p>通过流转闲置，既减轻了离校负担，又获得了额外收入！</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Block 5: 物品价值分析图 -->
+        <section id="value-analysis" class="record-block animate__animated" data-block="5">
+            <div class="block-header">
+                <div class="block-title">
+                    <i class="fas fa-chart-pie"></i>
+                    <h2>物品价值分析图</h2>
+                </div>
+                <div class="analysis-toggle">
+                    <button class="toggle-btn active" data-type="popularity">受欢迎度</button>
+                    <button class="toggle-btn" data-type="value">流转价值</button>
+                    <button class="toggle-btn" data-type="speed">成交速度</button>
+                </div>
+            </div>
+            
+            <div class="block-content">
+                <div class="analysis-container">
+                    <!-- 图表区域 -->
+                    <div class="chart-container">
+                        <canvas id="itemAnalysisChart"></canvas>
+                    </div>
+                
+                    
+                </div>
+            </div>
+        </section>
+
+  
+
+        <!-- Block 7: 历史订单搜索/筛选 -->
+        <section id="order-search" class="record-block animate__animated" data-block="7">
+            <div class="block-header">
+                <div class="block-title">
+                    <i class="fas fa-search"></i>
+                    <h2>历史订单搜索/筛选</h2>
+                </div>
+                <div class="search-tools">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="order-search-input" placeholder="搜索物品名称、卖家、订单号...">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="block-content">
+                <!-- 筛选条件 -->
+                <div class="filter-panel">
+                    <div class="filter-group">
+                        <span class="filter-label">交易类型：</span>
+                        <div class="filter-buttons">
+                            <button class="filter-btn active" data-type="all">全部</button>
+                            <button class="filter-btn" data-type="sell">出售</button>
+                            <button class="filter-btn" data-type="buy">购买</button>
+                            <button class="filter-btn" data-type="recycle">回收</button>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <span class="filter-label">时间范围：</span>
+                        <div class="filter-buttons">
+                            <button class="filter-btn active" data-range="all">全部</button>
+                            <button class="filter-btn" data-range="month">本月</button>
+                            <button class="filter-btn" data-range="quarter">本季度</button>
+                            <button class="filter-btn" data-range="year">今年</button>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <span class="filter-label">状态：</span>
+                        <div class="filter-buttons">
+                            <button class="filter-btn active" data-status="all">全部</button>
+                            <button class="filter-btn" data-status="completed">已完成</button>
+                            <button class="filter-btn" data-status="ongoing">进行中</button>
+                            <button class="filter-btn" data-status="dispute">争议中</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 搜索结果 -->
+                <div class="search-results">
+                    <div class="results-header">
+                        <span>找到 <strong>28</strong> 条记录</span>
+                        <div class="sort-options">
+                            <select id="sort-orders">
+                                <option value="newest">最新优先</option>
+                                <option value="oldest">最早优先</option>
+                                <option value="price-high">价格最高</option>
+                                <option value="price-low">价格最低</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- 订单列表 -->
+                    <div class="orders-list">
+                        <!-- 订单项示例 -->
+                        <div class="order-item">
+                            <div class="order-type sell">
+                                <i class="fas fa-arrow-up"></i> 出售
+                            </div>
+                            <div class="order-info">
+                                <h4>便携蓝牙音箱</h4>
+                                <div class="order-meta">
+                                    <span>订单号：DD20240512001</span>
+                                    <span>买家：王同学</span>
+                                    <span>时间：2024-05-12</span>
+                                </div>
+                            </div>
+                            <div class="order-price">¥120</div>
+                            <div class="order-status completed">已完成</div>
+                        </div>
+                    </div>
+                    
+                    <!-- 分页 -->
+                    <div class="pagination">
+                        <button class="page-btn prev" disabled><i class="fas fa-chevron-left"></i></button>
+                        <button class="page-btn active">1</button>
+                        <button class="page-btn">2</button>
+                        <button class="page-btn">3</button>
+                        <button class="page-btn next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- 页面底部（留空） -->
+    <footer class="page-footer">
+        <!-- 底部内容 -->
+    </footer>
+
+    <!-- 脚本 -->
+    <script src="js/record_detail.js"></script>
+</body>
+</html>

@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+/* faq_detail.css - 常见问题详情页专属样式 */
+
+/* --- 全局变量 --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 :root {
     --faq-green: #064e3b;
     --faq-gold: #f59e0b;
@@ -24,6 +30,10 @@ h3 {
 }
 
 
+<<<<<<< HEAD
+=======
+/* --- Box 1: Hero (问号装饰) --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .mission_hero {
     height: 65vh;
     /* background: var(--faq-green); */

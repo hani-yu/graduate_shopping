@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>安居锦囊·温馨复刻 - 宿舍家具流转平台</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/archive_detail.css">
+    <link rel="stylesheet" href="css/dorm_content.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body class="furniture_page">
+ 
+    <!-- Box 1: 顶部导航栏 (全站统一) -->
+    <nav class="daohang">
+        <div class="daohang_wrapper">
+            <ul class="daohang_list">
+                <li class="daohang_items"><a href="index.html">首页</a></li>
+                <li class="daohang_items"><a href="about.html">平台概况</a></li>
+                <li class="daohang_items active"><a href="categories.html">商品分类</a></li>
+                <li class="daohang_items"><a href="guide.html">流转锦囊</a></li>
+                <li class="daohang_items"><a href="events.html">活动专区</a></li>
+                <li class="daohang_items"><a href="user.html">用户中心</a></li>
+            </ul>
+            <div class="nav_auth"><a href="signin.html" class="btn_nav">登录</a></div>
+        </div>
+    </nav>
+
+
+    <!-- Box 1: Hero Banner (法典封面风格) -->
+    <header class="furniture_hero">
+        <div class="hero_overlay"></div>
+        <div class="hero_content animate__animated animate__fadeIn">
+            <span class="en_tag">FURNITURE LEGACY</span>
+            <h1 class="elegant_title">安居锦囊 <span class="furniture_seal">家具</span></h1>
+            <div class="elegant_line"></div>
+            <p class="elegant_subtitle">尺寸精准适配 · 搬运便捷无忧 · 让温暖在寝室间传承</p>
+        </div>
+        <!-- 装饰波浪 -->
+        <div class="banner_wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C0,0,31.83,14.28,64,27.1,126.31,52,187.31,68,250.31,68c31.11,0,32.25-10.15,71.08-11.56Z"
+                    fill="#f9fbfa"></path>
+            </svg>
+        </div>
+    </header>
+
+    <!-- Box 1: Hero Banner (安居锦囊) -->
+    <!-- <header class="furniture_hero">
+        <div class="hero_overlay"></div>
+        <div class="hero_content">
+            <span class="en_tag">FURNITURE LEGACY</span>
+            <h1 class="furniture_title">安居锦囊<span class="furniture_seal">·温馨复刻</span></h1>
+            <div class="furniture_line"></div>
+            <p class="furniture_subtitle">尺寸精准适配 · 搬运便捷无忧 · 让温暖在寝室间传承</p>
+        </div> -->
+        <!-- 装饰波浪 -->
+        <!-- <div class="furniture_wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C0,0,31.83,14.28,64,27.1,126.31,52,187.31,68,250.31,68c31.11,0,32.25-10.15,71.08-11.56Z"
+                    fill="#f9f7f3"></path>
+            </svg>
+        </div>
+    </header> -->
+
+    <main class="container">
+        
+        <!-- 模块2：尺寸校验盒 -->
+        <section class="module size-check-box" id="module2">
+            <h2 class="module-title"><i class="fas fa-ruler-combined"></i> 【尺寸校验盒】</h2>
+            <div class="size-checker">
+                <div class="input-group">
+                    <div class="input-label">
+                        <i class="fas fa-building"></i>
+                        <span>请输入您的寝室号</span>
+                    </div>
+                    <div class="input-control">
+                        <input type="text" id="dormNumber" placeholder="例如：1号楼302室" maxlength="20">
+                        <button class="btn-check" id="checkSize">
+                            <i class="fas fa-search"></i>
+                            校验尺寸
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="check-result" id="checkResult" style="display: none;">
+                    <div class="result-success">
+                        <i class="fas fa-check-circle"></i>
+                        <div class="result-content">
+                            <h4>尺寸匹配成功！</h4>
+                            <p id="matchText">该梯柜完美适配1号楼上铺，尺寸完全匹配。</p>
+                        </div>
+                    </div>
+                    <div class="result-details">
+                        <div class="detail-item">
+                            <span class="detail-label">寝室规格</span>
+                            <span class="detail-value" id="dormSpec">4人间 · 上铺下桌</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">推荐家具</span>
+                            <span class="detail-value" id="recommendedItems">梯柜、床帘、桌面置物架</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">匹配度</span>
+                            <span class="detail-value" id="matchRate">95%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 模块3：拆卸状态盒 -->
+        <section class="module disassembly-box" id="module3">
+            <h2 class="module-title"><i class="fas fa-tools"></i> 【拆卸状态盒】</h2>
+            <div class="disassembly-status">
+                <div class="status-card active" data-status="foldable">
+                    <div class="status-icon">
+                        <i class="fas fa-compress-alt"></i>
+                    </div>
+                    <h3 class="status-title">可折叠</h3>
+                    <p class="status-desc">轻松折叠，便于搬运</p>
+                    <div class="status-count">42件</div>
+                </div>
+                
+                <div class="status-card" data-status="moveable">
+                    <div class="status-icon">
+                        <i class="fas fa-dolly"></i>
+                    </div>
+                    <h3 class="status-title">需整体搬运</h3>
+                    <p class="status-desc">建议两人搬运</p>
+                    <div class="status-count">28件</div>
+                </div>
+                
+                <div class="status-card" data-status="disassembled">
+                    <div class="status-icon">
+                        <i class="fas fa-screwdriver"></i>
+                    </div>
+                    <h3 class="status-title">已拆卸</h3>
+                    <p class="status-desc">附安装视频</p>
+                    <div class="status-count">35件</div>
+                </div>
+            </div>
+            
+            <div class="status-details" id="statusDetails">
+                <h4>拆卸说明</h4>
+                <p>选择上方状态查看详细说明...</p>
+            </div>
+        </section>
+        
+        <!-- 模块4：承重公示盒 -->
+        <section class="module weight-box" id="module4">
+            <h2 class="module-title"><i class="fas fa-weight-hanging"></i> 【承重公示盒】</h2>
+            <div class="weight-items">
+                <div class="weight-card">
+                    <div class="weight-icon">
+                        <i class="fas fa-chair"></i>
+                    </div>
+                    <div class="weight-info">
+                        <h4>人体工学椅</h4>
+                        <div class="weight-bar">
+                            <div class="bar-fill" style="width: 90%"></div>
+                        </div>
+                        <div class="weight-spec">
+                            <span class="min">0kg</span>
+                            <span class="current">实测承重</span>
+                            <span class="max">120kg</span>
+                        </div>
+                        <p class="weight-desc">安全承重范围：0-120kg</p>
+                    </div>
+                </div>
+                
+                <div class="weight-card">
+                    <div class="weight-icon">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    <div class="weight-info">
+                        <h4>床头置物架</h4>
+                        <div class="weight-bar">
+                            <div class="bar-fill" style="width: 70%"></div>
+                        </div>
+                        <div class="weight-spec">
+                            <span class="min">0kg</span>
+                            <span class="current">实测承重</span>
+                            <span class="max">30kg</span>
+                        </div>
+                        <p class="weight-desc">建议放置轻物</p>
+                    </div>
+                </div>
+                
+                <div class="weight-card">
+                    <div class="weight-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <div class="weight-info">
+                        <h4>书架组合柜</h4>
+                        <div class="weight-bar">
+                            <div class="bar-fill" style="width: 85%"></div>
+                        </div>
+                        <div class="weight-spec">
+                            <span class="min">0kg</span>
+                            <span class="current">实测承重</span>
+                            <span class="max">50kg</span>
+                        </div>
+                        <p class="weight-desc">单层承重15kg</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="weight-notice">
+                <i class="fas fa-exclamation-triangle"></i>
+                <p>所有承重数据均为实际测试结果，请勿超载使用</p>
+            </div>
+        </section>
+        
+        <!-- 模块5：邻里互助盒 -->
+        <section class="module neighbor-box" id="module5">
+            <h2 class="module-title"><i class="fas fa-hands-helping"></i> 【邻里互助盒】</h2>
+            <div class="neighbor-filter">
+                <div class="filter-group">
+                    <div class="filter-label">
+                        <i class="fas fa-male"></i>
+                        <span>男生宿舍</span>
+                    </div>
+                    <div class="filter-options">
+                        <button class="option-btn" data-building="1">1号楼</button>
+                        <button class="option-btn" data-building="3">3号楼</button>
+                        <button class="option-btn" data-building="5">5号楼</button>
+                        <button class="option-btn" data-building="8">8号楼</button>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <div class="filter-label">
+                        <i class="fas fa-female"></i>
+                        <span>女生宿舍</span>
+                    </div>
+                    <div class="filter-options">
+                        <button class="option-btn" data-building="2">2号楼</button>
+                        <button class="option-btn" data-building="4">4号楼</button>
+                        <button class="option-btn" data-building="6">6号楼</button>
+                        <button class="option-btn" data-building="7">7号楼</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="neighbor-result" id="neighborResult">
+                <div class="result-header">
+                    <h4><i class="fas fa-exchange-alt"></i> 同楼交易 · 免搬运</h4>
+                    <p>选择宿舍楼查看可交易物品</p>
+                </div>
+                <div class="result-items" id="neighborItems">
+                    <!-- 动态生成物品列表 -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- 模块6：主要展架盒 -->
+        <section class="module showcase-box" id="module6">
+            <h2 class="module-title"><i class="fas fa-couch"></i> 【主要展架盒】</h2>
+            <div class="furniture-grid">
+                <div class="furniture-item">
+                    <div class="item-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-chair"></i>
+                        </div>
+                        <div class="item-badge">免搬运</div>
+                    </div>
+                    <div class="item-info">
+                        <h3>人体工学椅</h3>
+                        <p class="item-desc">可调节高度，腰部支撑</p>
+                        <div class="item-specs">
+                            <span><i class="fas fa-ruler"></i> 适配标准桌高</span>
+                            <span><i class="fas fa-weight"></i> 承重120kg</span>
+                        </div>
+                        <div class="item-price">
+                            <span class="price-now">¥128</span>
+                            <span class="price-original">¥299</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="furniture-item">
+                    <div class="item-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-table"></i>
+                        </div>
+                        <div class="item-badge">可折叠</div>
+                    </div>
+                    <div class="item-info">
+                        <h3>寝室小桌</h3>
+                        <p class="item-desc">床上桌，带USB接口</p>
+                        <div class="item-specs">
+                            <span><i class="fas fa-ruler"></i> 60×40cm</span>
+                            <span><i class="fas fa-bolt"></i> 带充电口</span>
+                        </div>
+                        <div class="item-price">
+                            <span class="price-now">¥68</span>
+                            <span class="price-original">¥129</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="furniture-item">
+                    <div class="item-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-moon"></i>
+                        </div>
+                        <div class="item-badge">遮光95%</div>
+                    </div>
+                    <div class="item-info">
+                        <h3>遮光床帘</h3>
+                        <p class="item-desc">三片式，带蚊帐</p>
+                        <div class="item-specs">
+                            <span><i class="fas fa-ruler"></i> 适配0.9/1.2m床</span>
+                            <span><i class="fas fa-sun"></i> 全遮光</span>
+                        </div>
+                        <div class="item-price">
+                            <span class="price-now">¥89</span>
+                            <span class="price-original">¥158</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="furniture-item">
+                    <div class="item-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-box-open"></i>
+                        </div>
+                        <div class="item-badge">多层设计</div>
+                    </div>
+                    <div class="item-info">
+                        <h3>收纳整理箱</h3>
+                        <p class="item-desc">透明可视，带轮子</p>
+                        <div class="item-specs">
+                            <span><i class="fas fa-ruler"></i> 45×30×25cm</span>
+                            <span><i class="fas fa-layer-group"></i> 3层</span>
+                        </div>
+                        <div class="item-price">
+                            <span class="price-now">¥35</span>
+                            <span class="price-original">¥68</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 模块7：搬运帮帮盒 -->
+        <section class="module moving-box" id="module7">
+            <h2 class="module-title"><i class="fas fa-truck-loading"></i> 【搬运帮帮盒】</h2>
+            <div class="moving-services">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bicycle"></i>
+                    </div>
+                    <div class="service-info">
+                        <h4>校园"小黄车"搬运</h4>
+                        <p class="service-desc">电动三轮车，适合大件家具</p>
+                        <div class="service-details">
+                            <p><i class="fas fa-clock"></i> 服务时间：8:00-20:00</p>
+                            <p><i class="fas fa-tag"></i> 起步价：¥15（1公里内）</p>
+                            <p><i class="fas fa-user-friends"></i> 含1名搬运工</p>
+                        </div>
+                        <button class="btn-book" data-service="bike">
+                            <i class="fas fa-calendar-check"></i>
+                            预约搬运
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="service-info">
+                        <h4>勤工助学搬运组</h4>
+                        <p class="service-desc">学生团队，价格优惠</p>
+                        <div class="service-details">
+                            <p><i class="fas fa-clock"></i> 需提前2小时预约</p>
+                            <p><i class="fas fa-tag"></i> 起步价：¥20（含2人）</p>
+                            <p><i class="fas fa-graduation-cap"></i> 本校学生服务</p>
+                        </div>
+                        <button class="btn-book" data-service="student">
+                            <i class="fas fa-calendar-check"></i>
+                            预约搬运
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="moving-notice">
+                <div class="notice-item">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <p>大件家具建议选择"小黄车"服务</p>
+                </div>
+                <div class="notice-item">
+                    <i class="fas fa-handshake"></i>
+                    <p>同楼交易可享受免费互助搬运</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 模块8：家具物语盒 -->
+        <section class="module story-box" id="module8">
+            <h2 class="module-title"><i class="fas fa-comment-alt"></i> 【家具物语盒】</h2>
+            <div class="stories-container">
+                <div class="story-card active">
+                    <div class="story-avatar">
+                        <div class="avatar-circle">张</div>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-header">
+                            <h4>张学姐 · 毕业留念</h4>
+                            <span class="story-time">2023.06</span>
+                        </div>
+                        <p class="story-text">"这个靠垫陪我刷完了所有的期末考试，无数个深夜它是我最温暖的依靠。现在毕业了，希望它也能温暖你的学习时光。"</p>
+                        <div class="story-footer">
+                            <span class="story-item">记忆棉靠垫</span>
+                            <button class="story-like">
+                                <i class="far fa-heart"></i> 感动
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="story-card">
+                    <div class="story-avatar">
+                        <div class="avatar-circle">李</div>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-header">
+                            <h4>李学长 · 考研传承</h4>
+                            <span class="story-time">2023.05</span>
+                        </div>
+                        <p class="story-text">"这把台灯见证了我从挂科到保研的全过程，它的暖光总是能让我静下心来。希望它能照亮你前行的路。"</p>
+                        <div class="story-footer">
+                            <span class="story-item">护眼台灯</span>
+                            <button class="story-like">
+                                <i class="far fa-heart"></i> 感动
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="story-card">
+                    <div class="story-avatar">
+                        <div class="avatar-circle">王</div>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-header">
+                            <h4>王同学 · 实习转手</h4>
+                            <span class="story-time">2023.07</span>
+                        </div>
+                        <p class="story-text">"这个小冰箱让我在炎热的夏天也能喝到冰饮料，现在要去外地实习了，希望它能继续服务新的主人。"</p>
+                        <div class="story-footer">
+                            <span class="story-item">迷你冰箱</span>
+                            <button class="story-like">
+                                <i class="far fa-heart"></i> 感动
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="story-actions">
+                <button class="btn-add-story">
+                    <i class="fas fa-plus"></i>
+                    分享你的家具故事
+                </button>
+                <button class="btn-view-more">
+                    <i class="fas fa-history"></i>
+                    查看更多故事
+                </button>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p class="footer-text">© 2023 安居锦囊·温馨复刻 - 宿舍家具流转平台</p>
+            <p class="footer-text">让温暖在寝室间传递，让每一件家具都有新的故事</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript文件 -->
+    <script src="js/dorm_content.js"></script>
+</body>
+</html>

@@ -89,7 +89,11 @@ nav.daohang.nav_scrolled .daohang_items a:hover {
     color: #f59e0b !important; /* 强制显示为金色 */
 }
 
+<<<<<<< HEAD
 
+=======
+/* 悬停效果：颜色变为主题绿，并切换为书卷气的字体感觉 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .daohang_items a:hover,
 .daohang_items a.active {
     color: #0d9488;
@@ -160,6 +164,10 @@ nav.daohang.nav_scrolled .daohang_items a:hover {
     display: none;
 }
 
+<<<<<<< HEAD
+=======
+/* 去掉下拉菜单的下划线 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 
 .dropdown-menu a:hover {
     background: #f0fdfa;
@@ -249,7 +257,11 @@ nav.daohang.nav_scrolled .daohang_items a:hover {
 .m_card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.05); }
 .m_card i { font-size: 2.5rem; color: var(--accent-gold); margin-bottom: 20px; } */
 
+<<<<<<< HEAD
 /* --- 核心价值矩阵 --- */
+=======
+/* --- 核心价值矩阵重塑 --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .value_matrix {
     background: #fdfdfd;
     padding: 120px 0;
@@ -271,6 +283,12 @@ nav.daohang.nav_scrolled .daohang_items a:hover {
     letter-spacing: 20px;
 }
 
+<<<<<<< HEAD
+=======
+/* ==========================================================================
+   全站通用：标题区域 V2 (section_title_v2)
+   ========================================================================== */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 
 .section_title_v2 {
     text-align: center;
@@ -282,7 +300,11 @@ nav.daohang.nav_scrolled .daohang_items a:hover {
 /* 顶部小标题 (英文) */
 .section_title_v2 .en_title {
     display: block;
+<<<<<<< HEAD
     font-size: 0.9rem; 
+=======
+    font-size: 0.9rem; /* 标签感可以略小，但间距拉开 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     color: #0d9488; /* 主题绿 */
     letter-spacing: 4px;
     font-weight: 700;
@@ -292,7 +314,11 @@ nav.daohang.nav_scrolled .daohang_items a:hover {
 
 /* 主标题 (中文) */
 .section_title_v2 h2 {
+<<<<<<< HEAD
     font-size: 2.4rem !important;
+=======
+    font-size: 2.4rem !important; /* 核心标题，大气稳重 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     color: #064e3b; /* 深林绿 */
     font-family: "Noto Serif SC", "SimSun", serif;
     font-weight: 800;
@@ -458,7 +484,11 @@ nav.daohang.nav_scrolled .daohang_items a:hover {
     width: 60px;
 }
 
+<<<<<<< HEAD
 
+=======
+/* --- Box 6: Infographic --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .impact_bg {
     background: #f9fbfa; /* 极浅的背景 */
     padding: 60px 0;
@@ -530,9 +560,15 @@ nav.daohang.nav_scrolled .daohang_items a:hover {
     animation: ringRotate 8s linear infinite;
 }
 
+<<<<<<< HEAD
 
 .node_text_refined .num_count {
     font-size: 2.4rem !important; 
+=======
+/* --- 文字部分显著放大 --- */
+.node_text_refined .num_count {
+    font-size: 2.4rem !important; /* 极大数字 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     font-weight: 800;
     color: #1e293b;
     line-height: 1;
@@ -546,7 +582,11 @@ nav.daohang.nav_scrolled .daohang_items a:hover {
 }
 
 .node_text_refined p {
+<<<<<<< HEAD
     font-size: 1.2rem !important; 
+=======
+    font-size: 1.2rem !important; /* 增大正文 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     color: #475569;
     margin-top: 8px;
 }
@@ -601,7 +641,11 @@ nav.daohang.nav_scrolled .daohang_items a:hover {
 /* 卷轴筒 (初始状态) */
 .scroll_header {
     width: 100%;
+<<<<<<< HEAD
     height: 50px;
+=======
+    height: 50px; /* 增加厚度 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     display: flex;
     align-items: center;
     position: relative;

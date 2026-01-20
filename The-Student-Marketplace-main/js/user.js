@@ -1,5 +1,9 @@
 $(document).ready(function () {
+<<<<<<< HEAD
     /* -------- Canvas 粒子连线 -------- */
+=======
+    /* -------- 1. Canvas 粒子连线 (同步逻辑) -------- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     const canvas = document.getElementById('userCanvas');
     if (canvas) {
         const ctx = canvas.getContext('2d');
@@ -61,7 +65,11 @@ $(document).ready(function () {
         window.addEventListener('resize', initCanvas);
     }
 
+<<<<<<< HEAD
     /* -------- 鼠标视差效果 -------- */
+=======
+    /* -------- 2. 鼠标视差效果 -------- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     $(document).on('mousemove', function (e) {
         const moveX = (window.innerWidth / 2 - e.pageX) * 0.01;
         const moveY = (window.innerHeight / 2 - e.pageY) * 0.01;
@@ -69,7 +77,11 @@ $(document).ready(function () {
         $('.user_floating_elements i').css('transform', `translate(${-moveX * 2}px, ${-moveY * 2}px)`);
     });
 
+<<<<<<< HEAD
     // 导航栏滚动变色
+=======
+    // 1. 导航栏滚动变色
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     $(window).scroll(function () {
         if ($(this).scrollTop() > 50) {
             $('.daohang').addClass('nav_scrolled');
@@ -78,7 +90,11 @@ $(document).ready(function () {
         }
     });
 
+<<<<<<< HEAD
     // 统计数字跳动效果
+=======
+    // 2. 统计数字跳动效果
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     $('.num').each(function () {
         $(this).prop('Counter', 0).animate({
             Counter: $(this).text()
@@ -90,7 +106,11 @@ $(document).ready(function () {
         });
     });
 
+<<<<<<< HEAD
     // 收藏项 3D 悬浮
+=======
+    // 3. 收藏项 3D 悬浮 (与社交模块风格一致)
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     $('.treasure_item').on('mousemove', function (e) {
         const rect = this.getBoundingClientRect();
         const rotateX = (e.clientY - rect.top - rect.height / 2) / 10;
@@ -98,7 +118,11 @@ $(document).ready(function () {
         $(this).css('transform', `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`);
     });
 
+<<<<<<< HEAD
     // 数字滚动与环形进度执行
+=======
+    // 1. 数字滚动与环形进度执行
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     const animateStats = () => {
         $('.stat_premium_card').each(function () {
             const $card = $(this);
@@ -119,7 +143,11 @@ $(document).ready(function () {
                 }
             });
 
+<<<<<<< HEAD
             // 环形进度条动画
+=======
+            // 环形进度条动画 (根据百分比，此处模拟展示)
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
             // 假设流转目标是50件，碳减排目标30kg，诚信满分1000
             let percent = 0;
             if ($num.data('target') == 12) percent = (12 / 50);
@@ -131,7 +159,11 @@ $(document).ready(function () {
         });
     };
 
+<<<<<<< HEAD
     // 视口观察器：进入画面再开始动画
+=======
+    // 2. 视口观察器：进入画面再开始动画
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     const observer = new IntersectionObserver((entries) => {
         if (entries[0].isIntersecting) {
             animateStats();
@@ -143,7 +175,11 @@ $(document).ready(function () {
         observer.observe(document.querySelector('.stats_premium'));
     }
 
+<<<<<<< HEAD
     // 磁吸 3D 效果
+=======
+    // 3. 磁吸 3D 效果
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     $('.stat_premium_card').on('mousemove', function (e) {
         const rect = this.getBoundingClientRect();
         const x = e.clientX - rect.left;
@@ -157,7 +193,11 @@ $(document).ready(function () {
         $(this).css('transform', `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`);
     });
 
+<<<<<<< HEAD
     // 差异化入场动画
+=======
+    // 1. 差异化入场动画
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     const entryObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -178,7 +218,11 @@ $(document).ready(function () {
                         }
                     },
                     complete: function () {
+<<<<<<< HEAD
                         // 入场完成后，触发“印章落下”
+=======
+                        // 2. 入场完成后，触发“印章落下”
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
                         $(this).addClass('stamped');
                         // 模拟敲章震动
                         $(this).find('.entry_card').addClass('animate__animated animate__headShake');
@@ -192,7 +236,11 @@ $(document).ready(function () {
 
     document.querySelectorAll('.history_entry').forEach(el => entryObserver.observe(el));
 
+<<<<<<< HEAD
     // 点击卡片的“纸张卷动”效果 (差异化JS)
+=======
+    // 3. 点击卡片的“纸张卷动”效果 (差异化JS)
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     $('.entry_card').click(function () {
         const card = $(this);
         // 模拟档案被翻阅的视觉反馈
@@ -201,11 +249,19 @@ $(document).ready(function () {
 
         setTimeout(() => {
             card.css('transform', 'rotateX(0deg) scale(1.02)');
+<<<<<<< HEAD
+=======
+            // 这里可以链接到订单详情页
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
             console.log("正在调取该卷宗详情...");
         }, 200);
     });
 
+<<<<<<< HEAD
     // 分类按钮切换逻辑
+=======
+    // 1. 分类按钮切换逻辑
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     $('.treasure_filter button').click(function () {
         $('.treasure_filter button').removeClass('active');
         $(this).addClass('active');
@@ -217,7 +273,11 @@ $(document).ready(function () {
         }, 500);
     });
 
+<<<<<<< HEAD
     // 磁吸效果：按钮轻微随鼠标移动
+=======
+    // 2. 磁吸效果：按钮轻微随鼠标移动
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     const filterButtons = document.querySelectorAll('.treasure_filter button');
 
     filterButtons.forEach(btn => {
@@ -240,7 +300,11 @@ $(document).ready(function () {
         });
     });
 
+<<<<<<< HEAD
     // 点击时的“锦囊开启”声效反馈
+=======
+    // 3. 点击时的“锦囊开启”声效反馈 (模拟逻辑)
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     $('.treasure_filter button').on('mousedown', function () {
         $(this).css('transform', 'scale(0.95)');
     });
@@ -248,7 +312,11 @@ $(document).ready(function () {
         $(this).css('transform', 'scale(1.05)');
     });
 
+<<<<<<< HEAD
     // 视差漫游：图片随鼠标方向轻微移动
+=======
+    // 1. 视差漫游：图片随鼠标方向轻微移动
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     $('.treasure_box').on('mousemove', function (e) {
         const rect = this.getBoundingClientRect();
         const mouseX = e.clientX - rect.left;
@@ -269,7 +337,11 @@ $(document).ready(function () {
         });
     });
 
+<<<<<<< HEAD
     // 锦匣闪烁效果：在悬停时产生随机的金色小闪光
+=======
+    // 2. 锦匣闪烁效果：在悬停时产生随机的金色小闪光
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     $('.treasure_box').hover(function () {
         this.sparkleTimer = setInterval(() => {
             const x = Math.random() * 100;
@@ -293,7 +365,11 @@ $(document).ready(function () {
 }`;
     document.head.appendChild(style);
 
+<<<<<<< HEAD
     // 评价卡片的随机微动 (差异化动效)
+=======
+    // 1. 评价卡片的随机微动 (差异化动效)
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     // 让卡片在页面上有一种轻轻漂浮的感觉
     $('.review_letter').each(function (index) {
         const randomDelay = Math.random() * 2;
@@ -303,7 +379,11 @@ $(document).ready(function () {
         });
     });
 
+<<<<<<< HEAD
     // 点击评价产生“点赞”红心效果
+=======
+    // 2. 点击评价产生“点赞”红心效果
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     $('.review_letter').click(function (e) {
         const heart = $('<i class="fas fa-heart"></i>');
         const x = e.pageX;
@@ -327,6 +407,7 @@ $(document).ready(function () {
         });
     });
 
+<<<<<<< HEAD
     // 模拟安全扫描效果
     $('.scan_btn').click(function () {
         const $btn = $(this);
@@ -336,6 +417,17 @@ $(document).ready(function () {
         $btn.html('<i class="fas fa-sync-alt fa-spin"></i> 正在安全检测...');
         $radar.css('animation-duration', '0.5s'); // 加速旋转
 
+=======
+        // 1. 模拟安全扫描效果
+    $('.scan_btn').click(function() {
+        const $btn = $(this);
+        const $score = $('.score_num');
+        const $radar = $('.radar_line');
+        
+        $btn.html('<i class="fas fa-sync-alt fa-spin"></i> 正在安全检测...');
+        $radar.css('animation-duration', '0.5s'); // 加速旋转
+        
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
         let currentScore = 85;
         const interval = setInterval(() => {
             let temp = Math.floor(Math.random() * 100);
@@ -351,8 +443,13 @@ $(document).ready(function () {
         }, 2500);
     });
 
+<<<<<<< HEAD
     // 密码强度实时反馈
     $('#newPwdInput').on('input', function () {
+=======
+    // 2. 密码强度实时反馈
+    $('#newPwdInput').on('input', function() {
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
         const val = $(this).val();
         let strength = 0;
         if (val.length > 6) strength += 30;
@@ -361,21 +458,33 @@ $(document).ready(function () {
 
         const $bar = $('#strengthBar');
         $bar.css('width', strength + '%');
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
         if (strength < 40) $bar.css('background', '#ef4444');
         else if (strength < 70) $bar.css('background', '#f59e0b');
         else $bar.css('background', '#10b981');
     });
 
+<<<<<<< HEAD
     // 点击展开高级表单
     $('.btn_action_toggle').click(function () {
         const targetId = $(this).data('target');
         if (targetId) {
+=======
+    // 3. 点击展开高级表单
+    $('.btn_action_toggle').click(function() {
+        const targetId = $(this).data('target');
+        if(targetId) {
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
             $(`#${targetId}`).toggleClass('active');
             $(this).text($(this).text() === "修改" ? "收起" : "修改");
         }
     });
 
+<<<<<<< HEAD
     // 处理按钮点击的状态切换
     $('.btn_action_toggle').click(function () {
         const $btn = $(this);
@@ -388,11 +497,29 @@ $(document).ready(function () {
         if (targetId) {
             $(`#${targetId}`).toggleClass('active');
 
+=======
+        // 处理按钮点击的状态切换
+    $('.btn_action_toggle').click(function() {
+        const $btn = $(this);
+        const targetId = $btn.data('target');
+        
+        // 切换按钮自身的 active 类
+        $btn.toggleClass('active_btn');
+        
+        // 切换折叠表单
+        if(targetId) {
+            $(`#${targetId}`).toggleClass('active');
+            
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
             // 改变文字内容
             const isOpened = $(`#${targetId}`).hasClass('active');
             $btn.find('span').text(isOpened ? "收起面板" : "安全修改");
         }
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
         // 增加震动反馈
         $btn.addClass('animate__animated animate__pulse');
         setTimeout(() => $btn.removeClass('animate__animated animate__pulse'), 500);

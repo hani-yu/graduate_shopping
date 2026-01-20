@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 document.addEventListener('DOMContentLoaded', function () {
+=======
+document.addEventListener('DOMContentLoaded', function() {
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 
     // ====== FAQ折叠逻辑 ======
     initFAQAccordion();
@@ -6,9 +10,20 @@ document.addEventListener('DOMContentLoaded', function () {
     // ====== 页面悬停动画 ======
     initPageAnimations();
 
+<<<<<<< HEAD
     initProcessTimelineScroll(); // 启动滚动动画
     initOutcomeTabs();
 
+=======
+    // ====== outcome 面板切换 ======
+    // initOutcomeTabs();
+
+    initProcessTimelineScroll(); // 启动滚动动画
+    initOutcomeTabs();  
+
+    // ====== 流程时间轴动画 ======
+    // initProcessTimelineAnimation();
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 
     // ====== 键盘导航支持 ======
     initKeyboardNavigation();
@@ -23,14 +38,22 @@ function initOutcomeTabs() {
     const panes = document.querySelectorAll('.outcome-pane');
 
     tabs.forEach(tab => {
+<<<<<<< HEAD
         tab.addEventListener('click', function () {
+=======
+        tab.addEventListener('click', function() {
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
             tabs.forEach(t => t.classList.remove('active'));
             this.classList.add('active');
 
             const target = this.getAttribute('data-outcome');
 
             panes.forEach(pane => {
+<<<<<<< HEAD
                 if (pane.id === target + '-pane') {
+=======
+                if(pane.id === target + '-pane') {
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
                     pane.classList.add('active');
                     pane.style.display = 'block';
                     animateOutcomePane(pane);
@@ -43,7 +66,11 @@ function initOutcomeTabs() {
     });
 
     panes.forEach(pane => {
+<<<<<<< HEAD
         if (!pane.classList.contains('active')) pane.style.display = 'none';
+=======
+        if(!pane.classList.contains('active')) pane.style.display = 'none';
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
         else animateOutcomePane(pane);
     });
 }
@@ -67,7 +94,11 @@ function animateOutcomePane(pane) {
 function initProcessTimelineScroll() {
     // 选中所有的步骤项
     const timelineItems = document.querySelectorAll('.process-timeline .timeline-item');
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     if (timelineItems.length === 0) return;
 
     // 1. 初始化状态：隐藏所有步骤，准备动画
@@ -88,7 +119,13 @@ function initProcessTimelineScroll() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const item = entry.target;
+<<<<<<< HEAD
 
+=======
+                
+                // 获取当前节点在父容器中的索引，用于计算延迟时间
+                // 这样可以实现无论用户滚动多快，都是按 1-2-3-4 顺序显示
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
                 const siblings = Array.from(item.parentNode.querySelectorAll('.timeline-item'));
                 const index = siblings.indexOf(item);
 
@@ -108,16 +145,54 @@ function initProcessTimelineScroll() {
     timelineItems.forEach(item => observer.observe(item));
 }
 
+<<<<<<< HEAD
+=======
+/**
+ * 抢购后处理的结果切换逻辑 (Success/Fail/Issue Tabs)
+ */
+// function initOutcomeTabs() {
+//     const tabs = document.querySelectorAll('.outcome-btn');
+//     const panes = document.querySelectorAll('.outcome-pane');
+
+//     tabs.forEach(tab => {
+//         tab.addEventListener('click', () => {
+//             const target = tab.getAttribute('data-outcome');
+
+//             // 切换按钮状态
+//             tabs.forEach(t => t.classList.remove('active'));
+//             tab.classList.add('active');
+
+//             // 切换内容显示
+//             panes.forEach(pane => {
+//                 pane.classList.remove('active');
+//                 if (pane.id === `${target}-pane`) {
+//                     pane.classList.add('active');
+//                 }
+//             });
+//         });
+//     });
+// }
+
+
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 // ====== 页面悬停动画 ======
 function initPageAnimations() {
     // 流程步骤悬停
     const timelineItems = document.querySelectorAll('.timeline-item');
     timelineItems.forEach(item => {
+<<<<<<< HEAD
         item.addEventListener('mouseenter', function () {
             this.style.transform = 'translateY(-5px)';
             this.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
         });
         item.addEventListener('mouseleave', function () {
+=======
+        item.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-5px)';
+            this.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
+        });
+        item.addEventListener('mouseleave', function() {
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
             this.style.transform = 'translateY(0)';
             this.style.boxShadow = 'none';
         });
@@ -141,10 +216,17 @@ function initPageAnimations() {
 function initFAQAccordion() {
     const faqQuestions = document.querySelectorAll('.faq-question');
     faqQuestions.forEach(question => {
+<<<<<<< HEAD
         question.addEventListener('click', function () {
             const answer = this.nextElementSibling;
             const toggle = this.querySelector('.faq-toggle');
             if (answer.classList.contains('active')) {
+=======
+        question.addEventListener('click', function() {
+            const answer = this.nextElementSibling;
+            const toggle = this.querySelector('.faq-toggle');
+            if(answer.classList.contains('active')) {
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
                 answer.classList.remove('active');
                 toggle.classList.remove('active');
                 return;
@@ -154,7 +236,11 @@ function initFAQAccordion() {
             toggle.classList.add('active');
         });
     });
+<<<<<<< HEAD
     if (faqQuestions.length > 0) {
+=======
+    if(faqQuestions.length > 0) {
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
         const firstAnswer = faqQuestions[0].nextElementSibling;
         const firstToggle = faqQuestions[0].querySelector('.faq-toggle');
         firstAnswer.classList.add('active');
@@ -169,10 +255,17 @@ function closeAllFAQs() {
 
 // ====== 键盘导航 ======
 function initKeyboardNavigation() {
+<<<<<<< HEAD
     document.addEventListener('keydown', function (e) {
         if (e.key === 'Tab') document.body.classList.add('using-keyboard');
     });
     document.addEventListener('mousedown', function () {
+=======
+    document.addEventListener('keydown', function(e) {
+        if(e.key === 'Tab') document.body.classList.add('using-keyboard');
+    });
+    document.addEventListener('mousedown', function() {
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
         document.body.classList.remove('using-keyboard');
     });
 }

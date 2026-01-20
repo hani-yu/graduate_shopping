@@ -1,0 +1,1809 @@
+/* --- 全局变量 --- */
+:root {
+    --deep-green: #064e3b;
+    --theme-teal: #0d9488;
+    --accent-gold: #f59e0b;
+    --paper-white: #f9fbfa;
+    --text-slate: #475569;
+}
+
+body.clothes_page {
+    background: var(--paper-white);
+    color: var(--text-slate);
+    font-family: 'PingFang SC', 'Noto Serif SC', serif;
+}
+
+p {
+    font-size: 1.15rem !important;
+    line-height: 1.8;
+}
+
+h2,
+h3 {
+    color: var(--deep-green);
+    font-family: "Noto Serif SC", serif;
+}
+
+/* --- Box 1: Hero (法典封面风格) --- */
+.clothes_hero {
+    height: 60vh;
+    background: url('https://images.unsplash.com/photo-1541339907198-e087563f976d?auto=format&fit=crop&w=1200&q=80') center/cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero_overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(6, 78, 59, 0.7);
+    backdrop-filter: blur(4px);
+}
+
+.hero_content {
+    position: relative;
+    z-index: 2;
+}
+
+.elegant_title {
+    font-size: 4rem;
+    letter-spacing: 8px;
+    font-weight: 800;
+}
+
+.clothes_seal {
+    font-size: 0.8rem;
+    background: var(--accent-gold);
+    color: var(--deep-green);
+    padding: 8px 4px;
+    writing-mode: vertical-rl;
+    vertical-align: middle;
+}
+
+.elegant_line {
+    width: 60px;
+    height: 3px;
+    background: var(--accent-gold);
+    margin: 20px auto;
+}
+
+.hero_content p {
+    font-size: 1.3rem !important;
+}
+
+/* 模块通用样式 */
+.module {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 50px;
+    box-shadow: 0 10px 40px rgba(167, 139, 250, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.module:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(167, 139, 250, 0.15);
+}
+
+.module::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--fashion-primary), var(--fashion-secondary));
+}
+
+.module-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--fashion-dark);
+    margin-bottom: 35px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(167, 139, 250, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.module-title i {
+    color: var(--fashion-primary);
+    animation: iconFloat 3s infinite ease-in-out;
+}
+
+@keyframes iconFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* 尺码魔方盒 */
+.size-cube-box {
+    background: linear-gradient(135deg, rgba(253, 244, 255, 0.5) 0%, rgba(248, 250, 252, 0.3) 100%);
+}
+
+.size-selector {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.size-control {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.size-control:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(167, 139, 250, 0.15);
+}
+
+.size-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--fashion-dark);
+}
+
+.size-label i {
+    font-size: 24px;
+    color: var(--fashion-primary);
+}
+
+.size-slider {
+    position: relative;
+}
+
+.size-slider input[type="range"] {
+    width: 100%;
+    height: 8px;
+    -webkit-appearance: none;
+    background: linear-gradient(90deg, #c4b5fd, #a78bfa);
+    border-radius: 4px;
+    outline: none;
+}
+
+.size-slider input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 24px;
+    height: 24px;
+    background: white;
+    border: 3px solid var(--fashion-primary);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.size-slider input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 15px rgba(167, 139, 250, 0.4);
+}
+
+.slider-value {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--fashion-dark);
+}
+
+.slider-value .unit {
+    font-size: 16px;
+    color: var(--text-slate);
+    margin-left: 5px;
+}
+
+.slider-marks {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 12px;
+    color: var(--text-slate);
+}
+
+.size-result {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.result-card {
+    background: linear-gradient(135deg, var(--fashion-primary), var(--fashion-secondary));
+    color: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(167, 139, 250, 0.3);
+}
+
+.result-card h4 {
+    font-size: 20px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.size-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.size-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.size-value {
+    font-size: 22px;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+.btn-match {
+    width: 100%;
+    padding: 15px;
+    background: white;
+    color: var(--fashion-primary);
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-match:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+.btn-match:active {
+    transform: translateY(-1px);
+}
+
+.size-visualization {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.visualization-info {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.visualization-info p {
+    margin: 8px 0;
+    color: var(--text-slate);
+}
+
+.visualization-info .hint {
+    color: var(--fashion-primary);
+    font-weight: 600;
+}
+
+/* 清洁透明盒 */
+.cleaning-box {
+    background: linear-gradient(135deg, rgba(240, 249, 255, 0.5) 0%, rgba(219, 234, 254, 0.3) 100%);
+}
+
+.cleaning-status {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.cleaning-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.cleaning-card.active {
+    border-color: var(--fashion-success);
+    box-shadow: 0 10px 25px rgba(52, 211, 153, 0.2);
+}
+
+.cleaning-card:hover:not(.active) {
+    transform: translateY(-5px);
+    border-color: rgba(167, 139, 250, 0.3);
+}
+
+.cleaning-icon {
+    font-size: 36px;
+    color: var(--fashion-primary);
+    margin-bottom: 15px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cleaning-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--fashion-dark);
+}
+
+.cleaning-desc {
+    font-size: 14px;
+    color: var(--text-slate);
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.cleaning-badge {
+    display: inline-block;
+    background: rgba(52, 211, 153, 0.1);
+    color: var(--fashion-success);
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.cleaning-details {
+    text-align: left;
+    font-size: 13px;
+    color: var(--text-slate);
+}
+
+.cleaning-details p {
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cleaning-details i {
+    color: var(--fashion-primary);
+}
+
+.cleaning-timeline {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.timeline-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--fashion-dark);
+    text-align: center;
+}
+
+.timeline-track {
+    height: 6px;
+    background: #e5e7eb;
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+}
+
+.timeline-progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: linear-gradient(90deg, var(--fashion-primary), var(--fashion-secondary));
+    border-radius: 3px;
+    animation: timelineFill 3s ease-in-out infinite alternate;
+}
+
+@keyframes timelineFill {
+    0% { width: 30%; }
+    100% { width: 70%; }
+}
+
+/* 场景分类盒 */
+.scene-box {
+    background: linear-gradient(135deg, rgba(253, 244, 255, 0.5) 0%, rgba(248, 250, 252, 0.3) 100%);
+}
+
+.scene-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.scene-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    position: relative;
+}
+
+.scene-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(167, 139, 250, 0.2);
+}
+
+.scene-image {
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+}
+
+.interview-bg { background: linear-gradient(135deg, #6366f1, #8b5cf6); }
+.sports-bg { background: linear-gradient(135deg, #10b981, #34d399); }
+.lab-bg { background: linear-gradient(135deg, #f59e0b, #fbbf24); }
+.daily-bg { background: linear-gradient(135deg, #ec4899, #f472b6); }
+.graduation-bg { background: linear-gradient(135deg, #8b5cf6, #a78bfa); }
+
+.scene-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 48px;
+    opacity: 0.9;
+}
+
+.scene-info {
+    padding: 20px;
+}
+
+.scene-info h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--fashion-dark);
+}
+
+.scene-count {
+    color: var(--fashion-primary);
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.scene-desc {
+    font-size: 14px;
+    color: var(--text-slate);
+    line-height: 1.5;
+}
+
+.scene-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--fashion-primary);
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.scene-filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.filter-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-tag {
+    padding: 8px 16px;
+    background: #f3f4f6;
+    border: none;
+    border-radius: 20px;
+    color: var(--text-slate);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-tag.active {
+    background: var(--fashion-primary);
+    color: white;
+}
+
+.filter-tag:hover:not(.active) {
+    background: #e5e7eb;
+}
+
+.filter-sort select {
+    padding: 10px 15px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    background: white;
+    color: var(--fashion-dark);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-sort select:focus {
+    outline: none;
+    border-color: var(--fashion-primary);
+}
+
+/* 真人试穿盒 */
+.tryon-box {
+    background: linear-gradient(135deg, rgba(240, 249, 255, 0.5) 0%, rgba(219, 234, 254, 0.3) 100%);
+}
+
+.tryon-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+.tryon-viewer {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.viewer-stage {
+    width: 100%;
+    height: 400px;
+    background: #f9fafb;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.mannequin-base {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 350px;
+}
+
+.mannequin-base div {
+    position: absolute;
+    background: #d1d5db;
+    border-radius: 10px;
+}
+
+.mannequin-base .head {
+    width: 60px;
+    height: 70px;
+    top: 0;
+    left: 45px;
+    border-radius: 30px;
+}
+
+.mannequin-base .body {
+    width: 100px;
+    height: 150px;
+    top: 75px;
+    left: 25px;
+}
+
+.mannequin-base .arm-left,
+.mannequin-base .arm-right {
+    width: 25px;
+    height: 100px;
+    top: 85px;
+}
+
+.mannequin-base .arm-left {
+    left: 0;
+    transform: rotate(20deg);
+}
+
+.mannequin-base .arm-right {
+    right: 0;
+    transform: rotate(-20deg);
+}
+
+.mannequin-base .leg-left,
+.mannequin-base .leg-right {
+    width: 40px;
+    height: 120px;
+    top: 225px;
+}
+
+.mannequin-base .leg-left {
+    left: 35px;
+}
+
+.mannequin-base .leg-right {
+    right: 35px;
+}
+
+.outfit-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.viewer-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.view-btn {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border: 2px solid var(--fashion-primary);
+    border-radius: 50%;
+    color: var(--fashion-primary);
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.view-btn:hover {
+    background: var(--fashion-primary);
+    color: white;
+    transform: scale(1.1);
+}
+
+.outfit-info {
+    text-align: center;
+}
+
+.outfit-info h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--fashion-dark);
+}
+
+.outfit-desc {
+    font-size: 14px;
+    color: var(--text-slate);
+    margin-bottom: 25px;
+}
+
+.outfit-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.stat-label {
+    width: 80px;
+    font-size: 14px;
+    color: var(--text-slate);
+}
+
+.stat-bar {
+    flex: 1;
+    height: 8px;
+    background: #e5e7eb;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.stat-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--fashion-primary), var(--fashion-secondary));
+    border-radius: 4px;
+    transition: width 1.5s ease;
+}
+
+.stat-value {
+    width: 50px;
+    text-align: right;
+    font-weight: 600;
+    color: var(--fashion-primary);
+}
+
+.tryon-outfits {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.tryon-outfits h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--fashion-dark);
+}
+
+.outfit-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.outfit-item {
+    background: #f9fafb;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.outfit-item.active {
+    border-color: var(--fashion-primary);
+    background: rgba(167, 139, 250, 0.05);
+}
+
+.outfit-item:hover:not(.active) {
+    transform: translateX(5px);
+    border-color: rgba(167, 139, 250, 0.3);
+}
+
+.outfit-preview {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #c4b5fd, #a78bfa);
+    position: relative;
+    overflow: hidden;
+}
+
+.preview-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.outfit-overlay-blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2px);
+}
+
+.outfit-meta {
+    flex: 1;
+}
+
+.outfit-meta h5 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--fashion-dark);
+}
+
+.outfit-meta p {
+    font-size: 13px;
+    color: var(--text-slate);
+    margin-bottom: 8px;
+}
+
+.outfit-tag {
+    display: inline-block;
+    background: rgba(167, 139, 250, 0.1);
+    color: var(--fashion-primary);
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.tryon-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn-tryon, .btn-compare {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-tryon {
+    background: var(--fashion-primary);
+    color: white;
+}
+
+.btn-compare {
+    background: white;
+    color: var(--fashion-primary);
+    border: 2px solid var(--fashion-primary);
+}
+
+.btn-tryon:hover {
+    background: #8b5cf6;
+    transform: translateY(-3px);
+}
+
+.btn-compare:hover {
+    background: rgba(167, 139, 250, 0.1);
+    transform: translateY(-3px);
+}
+
+/* 主要展架盒 */
+.clothing-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.clothing-item {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.clothing-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(167, 139, 250, 0.15);
+}
+
+.clothing-image {
+    height: 250px;
+    background: linear-gradient(135deg, #e5e7eb, #d1d5db);
+    position: relative;
+    overflow: hidden;
+}
+
+.image-zoom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: zoom-in;
+}
+
+.zoom-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-zoom:hover .zoom-overlay {
+    opacity: 1;
+}
+
+.zoom-overlay i {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.clothing-badges {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.badge-material, .badge-condition {
+    padding: 6px 12px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.badge-material {
+    color: var(--fashion-primary);
+}
+
+.badge-condition {
+    color: var(--fashion-success);
+}
+
+.clothing-info {
+    padding: 25px;
+}
+
+.clothing-info h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--fashion-dark);
+}
+
+.clothing-specs {
+    font-size: 14px;
+    color: var(--text-slate);
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.clothing-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.detail-item i {
+    font-size: 18px;
+    color: var(--fashion-primary);
+    margin-bottom: 8px;
+}
+
+.detail-item span {
+    font-size: 13px;
+    color: var(--text-slate);
+}
+
+.clothing-price {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.price-now {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--fashion-primary);
+}
+
+.price-original {
+    font-size: 16px;
+    color: #9ca3af;
+    text-decoration: line-through;
+}
+
+.btn-view-detail {
+    width: 100%;
+    padding: 12px;
+    background: rgba(167, 139, 250, 0.1);
+    color: var(--fashion-primary);
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-view-detail:hover {
+    background: rgba(167, 139, 250, 0.2);
+    transform: translateY(-2px);
+}
+
+/* 面料细节查看器 */
+.fabric-viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.viewer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: white;
+    border-radius: 15px 15px 0 0;
+}
+
+.viewer-header h4 {
+    margin: 0;
+    color: var(--fashion-dark);
+}
+
+.btn-close-viewer {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--text-slate);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.btn-close-viewer:hover {
+    color: var(--fashion-danger);
+}
+
+.viewer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    background: white;
+    padding: 30px;
+    border-radius: 0 0 15px 15px;
+    max-width: 1000px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.fabric-image-container {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #f9fafb;
+}
+
+.fabric-image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.fabric-zoom-controls {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.zoom-btn {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    color: var(--fashion-primary);
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.zoom-btn:hover {
+    background: var(--fashion-primary);
+    color: white;
+}
+
+.fabric-info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.fabric-info h5 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--fashion-dark);
+    margin: 0;
+}
+
+.fabric-analysis {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.analysis-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.analysis-label {
+    width: 80px;
+    font-size: 14px;
+    color: var(--text-slate);
+}
+
+.analysis-bar {
+    flex: 1;
+    height: 6px;
+    background: #e5e7eb;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.analysis-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--fashion-primary), var(--fashion-secondary));
+    border-radius: 3px;
+}
+
+.analysis-value {
+    width: 50px;
+    text-align: right;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--fashion-primary);
+}
+
+.fabric-tips h6 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--fashion-dark);
+}
+
+.fabric-tips ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.fabric-tips li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: var(--text-slate);
+}
+
+.fabric-tips i {
+    color: var(--fashion-primary);
+}
+
+/* 互助改衣盒 */
+.tailoring-box {
+    background: linear-gradient(135deg, rgba(253, 244, 255, 0.5) 0%, rgba(248, 250, 252, 0.3) 100%);
+}
+
+.tailoring-container {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.tailoring-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgba(167, 139, 250, 0.1);
+}
+
+.tailoring-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--fashion-primary), var(--fashion-secondary));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+}
+
+.tailoring-title h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--fashion-dark);
+}
+
+.tailoring-title p {
+    font-size: 14px;
+    color: var(--text-slate);
+}
+
+.tailoring-shops {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.shop-card {
+    background: #f9fafb;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.shop-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.shop-image {
+    height: 150px;
+    background: linear-gradient(135deg, #c4b5fd, #a78bfa);
+    position: relative;
+}
+
+.shop-rating {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 600;
+    color: var(--fashion-dark);
+}
+
+.shop-rating i {
+    color: var(--fashion-accent);
+}
+
+.shop-info {
+    padding: 20px;
+}
+
+.shop-info h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--fashion-dark);
+}
+
+.shop-location,
+.shop-services,
+.shop-price {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: var(--text-slate);
+}
+
+.shop-location i,
+.shop-services i,
+.shop-price i {
+    color: var(--fashion-primary);
+}
+
+.shop-tags {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.shop-tag {
+    background: rgba(167, 139, 250, 0.1);
+    color: var(--fashion-primary);
+    padding: 4px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.btn-navigate {
+    width: 100%;
+    padding: 12px;
+    background: var(--fashion-primary);
+    color: white;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-navigate:hover {
+    background: #8b5cf6;
+}
+
+.tailoring-request {
+    background: linear-gradient(135deg, rgba(253, 244, 255, 0.8), rgba(248, 250, 252, 0.8));
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.tailoring-request h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--fashion-dark);
+    text-align: center;
+}
+
+.request-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--fashion-dark);
+}
+
+.form-group select {
+    padding: 12px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    background: white;
+    color: var(--text-slate);
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form-group select:focus {
+    outline: none;
+    border-color: var(--fashion-primary);
+}
+
+.urgency-levels {
+    display: flex;
+    gap: 10px;
+}
+
+.urgency-btn {
+    flex: 1;
+    padding: 10px;
+    background: #f3f4f6;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    color: var(--text-slate);
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.urgency-btn:hover {
+    background: #e5e7eb;
+}
+
+.urgency-btn.active {
+    background: var(--fashion-primary);
+    color: white;
+    border-color: var(--fashion-primary);
+}
+
+.btn-request {
+    padding: 15px;
+    background: linear-gradient(135deg, var(--fashion-primary), var(--fashion-secondary));
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-request:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(167, 139, 250, 0.3);
+}
+
+/* 闲置回收盒 */
+.recycle-box {
+    background: linear-gradient(135deg, rgba(209, 250, 229, 0.5) 0%, rgba(167, 243, 208, 0.3) 100%);
+}
+
+.recycle-container {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.recycle-info {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid rgba(167, 139, 250, 0.1);
+}
+
+.recycle-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #34d399, #10b981);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 36px;
+}
+
+.recycle-content {
+    flex: 1;
+}
+
+.recycle-content h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--fashion-dark);
+}
+
+.recycle-content p {
+    font-size: 16px;
+    color: var(--text-slate);
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.recycle-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 15px;
+    background: #f9fafb;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.stat-value {
+    display: block;
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--fashion-success);
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: var(--text-slate);
+}
+
+.recycle-map {
+    margin-bottom: 40px;
+    padding: 25px;
+    background: #f9fafb;
+    border-radius: 15px;
+}
+
+.map-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--fashion-dark);
+    text-align: center;
+}
+
+.map-container {
+    height: 300px;
+    background: linear-gradient(135deg, #e5e7eb, #d1d5db);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.map-point {
+    position: absolute;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.map-point:hover {
+    transform: scale(1.2);
+}
+
+.point-marker {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--fashion-success);
+    font-size: 18px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: 3px solid var(--fashion-success);
+}
+
+.point-info {
+    position: absolute;
+    top: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--fashion-dark);
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.map-point:hover .point-info {
+    opacity: 1;
+}
+
+.map-legend {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--text-slate);
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+}
+
+.legend-color.available {
+    background: var(--fashion-success);
+}
+
+.legend-color.full {
+    background: var(--fashion-warning);
+}
+
+.legend-color.maintenance {
+    background: var(--fashion-danger);
+}
+
+.recycle-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.btn-recycle,
+.btn-guide,
+.btn-reward {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    min-width: 180px;
+}
+
+.btn-recycle {
+    background: var(--fashion-success);
+    color: white;
+}
+
+.btn-guide {
+    background: white;
+    color: var(--fashion-primary);
+    border: 2px solid var(--fashion-primary);
+}
+
+.btn-reward {
+    background: var(--fashion-primary);
+    color: white;
+}
+
+.btn-recycle:hover {
+    background: #10b981;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(52, 211, 153, 0.3);
+}
+
+.btn-guide:hover {
+    background: rgba(167, 139, 250, 0.1);
+    transform: translateY(-3px);
+}
+
+.btn-reward:hover {
+    background: #8b5cf6;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(167, 139, 250, 0.3);
+}
+
+.recycle-progress {
+    background: #f9fafb;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.recycle-progress h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--fashion-dark);
+    text-align: center;
+}
+
+.progress-container {
+    margin-bottom: 15px;
+}
+
+.progress-bar {
+    height: 12px;
+    background: #e5e7eb;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--fashion-success), #34d399);
+    border-radius: 6px;
+    transition: width 1.5s ease;
+}
+
+.progress-text {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: var(--text-slate);
+}
+
+.progress-text strong {
+    color: var(--fashion-success);
+}
+
+.progress-hint {
+    text-align: center;
+    font-size: 14px;
+    color: var(--fashion-primary);
+    font-weight: 500;
+}
+
+/* 页脚 */
+footer {
+    background: linear-gradient(135deg, var(--fashion-dark), #7c3aed);
+    color: white;
+    padding: 40px 0;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.footer-text {
+    opacity: 0.8;
+    font-size: 14px;
+    margin: 5px 0;
+}
+

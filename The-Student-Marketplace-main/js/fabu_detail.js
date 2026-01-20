@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+// JavaScript功能实现
+
+// FAQ切换功能
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 document.addEventListener('DOMContentLoaded', function() {
     // 初始化FAQ功能
     initFAQ();
@@ -204,7 +210,14 @@ function startPublishing() {
     // 继续发布功能
     modal.querySelector('#continuePublish').addEventListener('click', function() {
         document.body.removeChild(modal);
+<<<<<<< HEAD
                 
+=======
+        
+        // 这里可以添加实际跳转逻辑
+        // window.location.href = "/publish";
+        
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
         // 模拟跳转
         setTimeout(() => {
             alert("正在跳转到发布页面...\n\n发布流程已启动，请按照页面提示完成发布。");

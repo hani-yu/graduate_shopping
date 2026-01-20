@@ -1,9 +1,16 @@
 $(document).ready(function () {
 
+<<<<<<< HEAD
     /* 
          模块入场动画 —— 三段式动画
          进入时：淡入 → 上浮 → 轻缩放
       */
+=======
+  /* -------------------------------
+       模块入场动画 —— 三段式动画
+       进入时：淡入 → 上浮 → 轻缩放
+    -------------------------------- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     const observerOptions = { threshold: 0.15 };
     const sectionObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry, index) => {
@@ -30,9 +37,15 @@ $(document).ready(function () {
     });
 
 
+<<<<<<< HEAD
     /*
        小卡片浮现 —— 逐项延迟
  */
+=======
+    /* -------------------------------
+       小卡片浮现 —— 逐项延迟
+    -------------------------------- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     function revealItems(selector) {
         const items = document.querySelectorAll(selector);
         const itemObserver = new IntersectionObserver((entries) => {
@@ -54,6 +67,13 @@ $(document).ready(function () {
     revealItems(".batch-mini-card");
 
 
+<<<<<<< HEAD
+=======
+    /* -------------------------------
+       鼠标 Hover 动态（设备/勋章卡片）
+       卡片倾斜 + 图标光带扫描
+    -------------------------------- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     $(".device-item").on("mousemove", function (e) {
         const r = this.getBoundingClientRect();
         const x = e.clientX - r.left;
@@ -66,7 +86,11 @@ $(document).ready(function () {
         const rotateY = (x - centerX) / 18;
 
         $(this).css({
+<<<<<<< HEAD
             transform: `translateX(0) scale(1.02) rotateX(${-rotateX}deg) rotateY(${rotateY}deg)`,
+=======
+            transform: `translateX(0) scale(1.02) rotateX(${ -rotateX }deg) rotateY(${ rotateY }deg)`,
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
             transition: "transform .2s ease-out"
         });
 
@@ -85,6 +109,10 @@ $(document).ready(function () {
         $(this).find(".device-icon").css({ background: "" });
     });
 
+<<<<<<< HEAD
+=======
+    // 可选：勋章卡 hover 高亮
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     $(".trusted-card").on("mouseenter", function (e) {
         $(this).css({
             transform: "scale(1.05)",
@@ -101,6 +129,13 @@ $(document).ready(function () {
         $(this).find(".card-icon").css({ background: "" });
     });
 
+<<<<<<< HEAD
+=======
+    /* -------------------------------
+       立即下线 交互升级
+       增加：能量波 + 爆散消失
+    -------------------------------- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     $('.btn-warning').on('click', function () {
         const $item = $(this).closest('.device-item');
         const deviceName = $item.find('h3').text();
@@ -137,8 +172,14 @@ $(document).ready(function () {
     });
 
 
+<<<<<<< HEAD
     /* 
        鼠标扫描线 */
+=======
+    /* -------------------------------
+       鼠标扫描线保留 + 优化颜色
+    -------------------------------- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     $(".device-item").on("mouseenter", function () {
         const scanLine = $('<div class="scan-line"></div>');
         $(this).find(".device-icon").append(scanLine);
@@ -147,6 +188,13 @@ $(document).ready(function () {
         });
     });
 
+<<<<<<< HEAD
+=======
+
+    /* -------------------------------
+       数量更新动画 —— 弹跳变色
+    -------------------------------- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     function updateDeviceCount() {
         const count = $('#online-devices .device-item').length;
         const badge = $('.badge');
@@ -156,6 +204,13 @@ $(document).ready(function () {
         setTimeout(() => badge.removeClass('badge-pulse'), 900);
     }
 
+<<<<<<< HEAD
+=======
+
+    /* -------------------------------
+       全部下线动画增强
+    -------------------------------- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     window.closeDialog = function () {
         $('#logoutAllDialog').fadeOut(300);
     }
@@ -198,5 +253,9 @@ $(document).ready(function () {
             });
     }
 
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 });

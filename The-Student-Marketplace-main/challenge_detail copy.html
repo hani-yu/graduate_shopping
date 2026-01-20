@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>流转挑战赛 | 校园流转平台</title>
+    <link rel="stylesheet" href="css/challenge_detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 顶部导航栏（结构保留，内容留空） -->
+    <nav class="main-nav"></nav>
+
+    <!-- Banner区域（结构保留，内容留空） -->
+    <header class="page-banner"></header>
+
+    <!-- 主要内容区 -->
+    <main class="challenge-container">
+        <!-- 模块一：挑战赛概览区 -->
+        <section id="contest-overview" class="content-section">
+            <div class="section-title">
+                <h2><i class="fas fa-trophy"></i> 挑战赛概览</h2>
+                <p class="section-desc">赛事基本信息与核心目标</p>
+            </div>
+
+            <div class="overview-grid">
+                <div class="overview-card main-info">
+                    <div class="card-header">
+                        <h3><i class="fas fa-bullseye"></i> 赛事核心信息</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-flag-checkered"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>赛事目标</h4>
+                                <p>促进校园物品循环，减少毕业浪费，建设绿色校园</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="far fa-calendar-alt"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>赛季时间</h4>
+                                <p>2023年4月15日 - 2023年6月15日（共62天）</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>参与资格</h4>
+                                <p>全校在籍学生（含本科生、硕士研究生、博士研究生）</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-sign-in-alt"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>参与方式</h4>
+                                <ul class="participation-list">
+                                    <li><i class="fas fa-cube"></i> 发布闲置物品</li>
+                                    <li><i class="fas fa-exchange-alt"></i> 完成成功交换</li>
+                                    <li><i class="fas fa-user-plus"></i> 邀请好友参与</li>
+                                    <li><i class="fas fa-pen-fancy"></i> 撰写流转故事</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="overview-card highlight-card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-lightbulb"></i> 赛事亮点</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <div class="highlight-content">
+                                <h5>碳积分兑换</h5>
+                                <p>低碳环保贡献可换算碳积分，兑换实物奖励</p>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="highlight-content">
+                                <h5>绿色毕业指南</h5>
+                                <p>优秀案例入选校园《绿色毕业指南》永久收藏</p>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <div class="highlight-content">
+                                <h5>实习绿色通道</h5>
+                                <p>获得合作企业实习优先推荐机会</p>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="highlight-content">
+                                <h5>环保论坛邀请</h5>
+                                <p>冠亚季军受邀参与年度环保论坛</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 模块二：挑战任务系统 -->
+        <section id="task-system" class="content-section">
+            <div class="section-title">
+                <h2><i class="fas fa-tasks"></i> 挑战任务系统</h2>
+                <p class="section-desc">四级任务阶梯，层层进阶，赢取专属奖励</p>
+            </div>
+
+            <div class="task-levels">
+                <!-- 青铜级 -->
+                <div class="task-card bronze-level">
+                    <div class="level-header">
+                        <div class="level-badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <span class="level-name">青铜级</span>
+                        </div>
+                        <div class="level-subtitle">新手入门</div>
+                    </div>
+                    
+                    <ul class="task-list">
+                        <li class="task-item completed">
+                            <i class="fas fa-check-circle"></i>
+                            <span>发布第一件闲置物品</span>
+                        </li>
+                        <li class="task-item completed">
+                            <i class="fas fa-check-circle"></i>
+                            <span>完成首次成功交换</span>
+                        </li>
+                        <li class="task-item">
+                            <i class="far fa-circle"></i>
+                            <span>关注5位流转达人</span>
+                            <span class="task-progress">(2/5)</span>
+                        </li>
+                        <li class="task-item">
+                            <i class="far fa-circle"></i>
+                            <span>为他人物品点赞10次</span>
+                            <span class="task-progress">(4/10)</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="reward-box">
+                        <div class="reward-label">任务奖励</div>
+                        <div class="rewards">
+                            <span class="reward-item">
+                                <i class="fas fa-coins"></i>
+                                50环保积分
+                            </span>
+                            <span class="reward-item">
+                                <i class="fas fa-medal"></i>
+                                新手徽章
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 白银级 -->
+                <div class="task-card silver-level">
+                    <div class="level-header">
+                        <div class="level-badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <span class="level-name">白银级</span>
+                        </div>
+                        <div class="level-subtitle">活跃玩家</div>
+                    </div>
+                    
+                    <ul class="task-list">
+                        <li class="task-item">
+                            <i class="far fa-circle"></i>
+                            <span>成功流转10件物品</span>
+                            <span class="task-progress">(6/10)</span>
+                        </li>
+                        <li class="task-item">
+                            <i class="far fa-circle"></i>
+                            <span>获得5次五星好评</span>
+                            <span class="task-progress">(3/5)</span>
+                        </li>
+                        <li class="task-item">
+                            <i class="far fa-circle"></i>
+                            <span>帮助3位同学匹配成功</span>
+                            <span class="task-progress">(1/3)</span>
+                        </li>
+                        <li class="task-item">
+                            <i class="far fa-circle"></i>
+                            <span>撰写1篇流转心得</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="reward-box">
+                        <div class="reward-label">任务奖励</div>
+                        <div class="rewards">
+                            <span class="reward-item">
+                                <i class="fas fa-coins"></i>
+                                200环保积分
+                            </span>
+                            <span class="reward-item">
+                                <i class="fas fa-medal"></i>
+                                白银勋章
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 黄金级 -->
+                <div class="task-card gold-level">
+                    <div class="level-header">
+                        <div class="level-badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <span class="level-name">黄金级</span>
+                        </div>
+                        <div class="level-subtitle">流转达人</div>
+                    </div>
+                    
+                    <ul class="task-list">
+                        <li class="task-item">
+                            <i class="far fa-circle"></i>
+                            <span>月流转量达30件</span>
+                            <span class="task-progress">(12/30)</span>
+                        </li>
+                        <li class="task-item">
+                            <i class="far fa-circle"></i>
+                            <span>好评率保持95%以上</span>
+                            <span class="task-progress">(当前：91%)</span>
+                        </li>
+                        <li class="task-item">
+                            <i class="far fa-circle"></i>
+                            <span>成功推荐10位新用户</span>
+                            <span class="task-progress">(4/10)</span>
+                        </li>
+                        <li class="task-item">
+                            <i class="far fa-circle"></i>
+                            <span>策划1次主题流转活动</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="reward-box">
+                        <div class="reward-label">任务奖励</div>
+                        <div class="rewards">
+                            <span class="reward-item">
+                                <i class="fas fa-coins"></i>
+                                500环保积分
+                            </span>
+                            <span class="reward-item">
+                                <i class="fas fa-medal"></i>
+                                黄金勋章
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 钻石级 -->
+                <div class="task-card diamond-level">
+                    <div class="level-header">
+                        <div class="level-badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <span class="level-name">钻石级</span>
+                        </div>
+                        <div class="level-subtitle">环保先锋</div>
+                    </div>
+                    
+                    <ul class="task-list">
+                        <li class="task-item">
+                            <i class="far fa-circle"></i>
+                            <span>赛季流转量达100件</span>
+                            <span class="task-progress">(38/100)</span>
+                        </li>
+                        <li class="task-item">
+                            <i class="far fa-circle"></i>
+                            <span>创建专属流转社群（50+成员）</span>
+                            <span class="task-progress">(23/50)</span>
+                        </li>
+                        <li class="task-item">
+                            <i class="far fa-circle"></i>
+                            <span>组织校园环保公益活动</span>
+                        </li>
+                        <li class="task-item">
+                            <i class="far fa-circle"></i>
+                            <span>撰写深度调研报告</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="reward-box">
+                        <div class="reward-label">任务奖励</div>
+                        <div class="rewards">
+                            <span class="reward-item">
+                                <i class="fas fa-coins"></i>
+                                1000环保积分
+                            </span>
+                            <span class="reward-item">
+                                <i class="fas fa-medal"></i>
+                                钻石勋章
+                            </span>
+                            <span class="reward-item">
+                                <i class="fas fa-briefcase"></i>
+                                企业实习机会
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 模块三：实时排行榜 -->
+        <section id="live-ranking" class="content-section">
+            <div class="section-title">
+                <h2><i class="fas fa-chart-line"></i> 实时排行榜</h2>
+                <p class="section-desc">多维度榜单，见证流转达人的风采</p>
+            </div>
+
+            <div class="ranking-tabs">
+                <div class="tab-nav">
+                    <button class="tab-btn active" data-tab="total">流转达人榜</button>
+                    <button class="tab-btn" data-tab="growth">增长最快榜</button>
+                    <button class="tab-btn" data-tab="eco">环保贡献榜</button>
+                </div>
+                
+                <div class="tab-content">
+                    <!-- 总积分榜 -->
+                    <div class="tab-pane active" id="total-rank">
+                        <div class="ranking-cards">
+                            <!-- 第一名 -->
+                            <div class="rank-card champion">
+                                <div class="rank-number">
+                                    <i class="fas fa-crown"></i>
+                                    <div class="rank-label">冠军</div>
+                                </div>
+                                <div class="rank-content">
+                                    <h3>张明哲</h3>
+                                    <div class="rank-info">
+                                        <span class="college">
+                                            <i class="fas fa-graduation-cap"></i>
+                                            经济学院
+                                        </span>
+                                        <span class="score">
+                                            <i class="fas fa-star"></i>
+                                            积分：2,845
+                                        </span>
+                                    </div>
+                                    <div class="rank-stats">
+                                        <div class="stat-item">
+                                            <div class="stat-value">127件</div>
+                                            <div class="stat-label">成功流转</div>
+                                        </div>
+                                        <div class="stat-item">
+                                            <div class="stat-value">45次</div>
+                                            <div class="stat-label">帮助匹配</div>
+                                        </div>
+                                        <div class="stat-item">
+                                            <div class="stat-value">8篇</div>
+                                            <div class="stat-label">环保故事</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 第二名 -->
+                            <div class="rank-card runner-up">
+                                <div class="rank-number">
+                                    <div class="number">2</div>
+                                    <div class="rank-label">亚军</div>
+                                </div>
+                                <div class="rank-content">
+                                    <h3>李雨薇</h3>
+                                    <div class="rank-info">
+                                        <span class="college">
+                                            <i class="fas fa-graduation-cap"></i>
+                                            外国语学院
+                                        </span>
+                                        <span class="score">
+                                            <i class="fas fa-star"></i>
+                                            积分：2,312
+                                        </span>
+                                    </div>
+                                    <div class="rank-stats">
+                                        <div class="stat-item">
+                                            <div class="stat-value">98件</div>
+                                            <div class="stat-label">成功流转</div>
+                                        </div>
+                                        <div class="stat-item">
+                                            <div class="stat-value">156次</div>
+                                            <div class="stat-label">获得好评</div>
+                                        </div>
+                                        <div class="stat-item">
+                                            <div class="stat-value">67人</div>
+                                            <div class="stat-label">社群成员</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 第三名 -->
+                            <div class="rank-card third-place">
+                                <div class="rank-number">
+                                    <div class="number">3</div>
+                                    <div class="rank-label">季军</div>
+                                </div>
+                                <div class="rank-content">
+                                    <h3>王志远</h3>
+                                    <div class="rank-info">
+                                        <span class="college">
+                                            <i class="fas fa-graduation-cap"></i>
+                                            计算机学院
+                                        </span>
+                                        <span class="score">
+                                            <i class="fas fa-star"></i>
+                                            积分：1,987
+                                        </span>
+                                    </div>
+                                    <div class="rank-stats">
+                                        <div class="stat-item">
+                                            <div class="stat-value">84件</div>
+                                            <div class="stat-label">成功流转</div>
+                                        </div>
+                                        <div class="stat-item">
+                                            <div class="stat-value">23人</div>
+                                            <div class="stat-label">邀请好友</div>
+                                        </div>
+                                        <div class="stat-item">
+                                            <div class="stat-value">3次</div>
+                                            <div class="stat-label">活动组织</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 增长榜 -->
+                    <div class="tab-pane" id="growth-rank">
+                        <div class="ranking-cards">
+                            <!-- 增长第一名 -->
+                            <div class="rank-card growth-first">
+                                <div class="rank-number">
+                                    <div class="number">↑1</div>
+                                    <div class="growth-badge">本周黑马</div>
+                                </div>
+                                <div class="rank-content">
+                                    <h3>刘思颖</h3>
+                                    <div class="rank-info">
+                                        <span class="college">
+                                            <i class="fas fa-graduation-cap"></i>
+                                            环境学院
+                                        </span>
+                                        <span class="score growth">
+                                            <i class="fas fa-chart-line"></i>
+                                            +425分
+                                        </span>
+                                    </div>
+                                    <div class="rank-stats">
+                                        <div class="stat-item">
+                                            <div class="stat-value">63件</div>
+                                            <div class="stat-label">本周流转</div>
+                                        </div>
+                                        <div class="stat-item">
+                                            <div class="stat-value">28次</div>
+                                            <div class="stat-label">新增好评</div>
+                                        </div>
+                                        <div class="stat-item">
+                                            <div class="stat-value">15人</div>
+                                            <div class="stat-label">新邀请</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 增长第二名 -->
+                            <div class="rank-card">
+                                <div class="rank-number">
+                                    <div class="number">↑2</div>
+                                </div>
+                                <div class="rank-content">
+                                    <h3>陈浩然</h3>
+                                    <div class="rank-info">
+                                        <span class="college">
+                                            <i class="fas fa-graduation-cap"></i>
+                                            工学院
+                                        </span>
+                                        <span class="score growth">
+                                            <i class="fas fa-chart-line"></i>
+                                            +398分
+                                        </span>
+                                    </div>
+                                    <div class="rank-stats">
+                                        <div class="stat-item">
+                                            <div class="stat-value">58件</div>
+                                            <div class="stat-label">本周流转</div>
+                                        </div>
+                                        <div class="stat-item">
+                                            <div class="stat-value">31次</div>
+                                            <div class="stat-label">新增好评</div>
+                                        </div>
+                                        <div class="stat-item">
+                                            <div class="stat-value">12人</div>
+                                            <div class="stat-label">新邀请</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 增长第三名 -->
+                            <div class="rank-card">
+                                <div class="rank-number">
+                                    <div class="number">↑3</div>
+                                </div>
+                                <div class="rank-content">
+                                    <h3>赵雅婷</h3>
+                                    <div class="rank-info">
+                                        <span class="college">
+                                            <i class="fas fa-graduation-cap"></i>
+                                            艺术学院
+                                        </span>
+                                        <span class="score growth">
+                                            <i class="fas fa-chart-line"></i>
+                                            +356分
+                                        </span>
+                                    </div>
+                                    <div class="rank-stats">
+                                        <div class="stat-item">
+                                            <div class="stat-value">52件</div>
+                                            <div class="stat-label">本周流转</div>
+                                        </div>
+                                        <div class="stat-item">
+                                            <div class="stat-value">42次</div>
+                                            <div class="stat-label">新增好评</div>
+                                        </div>
+                                        <div class="stat-item">
+                                            <div class="stat-value">8人</div>
+                                            <div class="stat-label">新邀请</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 环保贡献榜 -->
+                    <div class="tab-pane" id="eco-rank">
+                        <div class="ranking-cards">
+                            <!-- 环保第一名 -->
+                            <div class="rank-card eco-first">
+                                <div class="rank-number">
+                                    <div class="eco-icon">
+                                        <i class="fas fa-tree"></i>
+                                    </div>
+                                    <div class="rank-label">环保之星</div>
+                                </div>
+                                <div class="rank-content">
+                                    <h3>环保贡献榜</h3>
+                                    <div class="rank-info">
+                                        <span class="college">
+                                            <i class="fas fa-leaf"></i>
+                                            碳减排成就
+                                        </span>
+                                    </div>
+                                    <div class="eco-stats">
+                                        <div class="eco-item">
+                                            <div class="eco-value">♻️ 128棵</div>
+                                            <div class="eco-label">相当于种植树木</div>
+                                            <div class="eco-user">张明哲（经济学院）</div>
+                                        </div>
+                                        <div class="eco-item">
+                                            <div class="eco-value">♻️ 97棵</div>
+                                            <div class="eco-label">相当于种植树木</div>
+                                            <div class="eco-user">李雨薇（外国语学院）</div>
+                                        </div>
+                                        <div class="eco-item">
+                                            <div class="eco-value">♻️ 76棵</div>
+                                            <div class="eco-label">相当于种植树木</div>
+                                            <div class="eco-user">王志远（计算机学院）</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 模块四：时间节点 -->
+        <section id="timeline" class="content-section">
+            <div class="section-title">
+                <h2><i class="far fa-calendar-alt"></i> 赛季时间线</h2>
+                <p class="section-desc">重要节点与活动安排，不错过每个精彩时刻</p>
+            </div>
+
+            <div class="timeline-container">
+                <!-- 重要节点时间线 -->
+                <div class="key-timeline">
+                    <h4>赛季重要时间节点</h4>
+                    <div class="timeline-track">
+                        <div class="timeline-item passed">
+                            <div class="timeline-date">
+                                <div class="date">4月15日</div>
+                                <div class="status">已开始</div>
+                            </div>
+                            <div class="timeline-content">
+                                <h5>挑战赛正式启动</h5>
+                                <p>启动仪式暨环保论坛开幕式</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item passed">
+                            <div class="timeline-date">
+                                <div class="date">4月22日</div>
+                                <div class="status">进行中</div>
+                            </div>
+                            <div class="timeline-content">
+                                <h5>世界地球日 · 环保主题周</h5>
+                                <p>地球日特别活动，环保知识竞赛</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item current">
+                            <div class="timeline-date">
+                                <div class="date">5月1日-7日</div>
+                                <div class="status">即将开始</div>
+                            </div>
+                            <div class="timeline-content">
+                                <h5>劳动节流转冲刺周</h5>
+                                <p>双倍积分，流转任务奖励加倍</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-date">
+                                <div class="date">5月20日</div>
+                            </div>
+                            <div class="timeline-content">
+                                <h5>学霸笔记专项日</h5>
+                                <p>知识传承特别活动</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-date">
+                                <div class="date">6月1日</div>
+                            </div>
+                            <div class="timeline-content">
+                                <h5>儿童节爱心流转日</h5>
+                                <p>与山区儿童爱心对接活动</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-date">
+                                <div class="date">6月5日</div>
+                            </div>
+                            <div class="timeline-content">
+                                <h5>世界环境日 · 环保成果展</h5>
+                                <p>成果展示与优秀案例分享</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-date">
+                                <div class="date">6月10日</div>
+                            </div>
+                            <div class="timeline-content">
+                                <h5>赛季任务截止</h5>
+                                <p>最后冲刺，数据统计截止</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-date">
+                                <div class="date">6月15日</div>
+                            </div>
+                            <div class="timeline-content">
+                                <h5>颁奖典礼暨环保论坛</h5>
+                                <p>盛大颁奖，优秀经验分享</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 月度主题 -->
+                <div class="monthly-themes">
+                    <h4>月度主题活动</h4>
+                    <div class="theme-cards">
+                        <div class="theme-card spring-theme">
+                            <div class="theme-header">
+                                <h5>4月</h5>
+                                <div class="theme-tag">进行中</div>
+                            </div>
+                            <div class="theme-content">
+                                <h6>【春焕新生】春季清仓大行动</h6>
+                                <p>春季换季，衣物书籍大流转</p>
+                            </div>
+                            <div class="theme-stats">
+                                <span><i class="fas fa-users"></i> 1,245人参与</span>
+                                <span><i class="fas fa-cube"></i> 3,478件流转</span>
+                            </div>
+                        </div>
+                        
+                        <div class="theme-card knowledge-theme">
+                            <div class="theme-header">
+                                <h5>5月</h5>
+                                <div class="theme-tag">即将开始</div>
+                            </div>
+                            <div class="theme-content">
+                                <h6>【学霸接力】知识传承月</h6>
+                                <p>学习资料循环，学霸经验分享</p>
+                            </div>
+                            <div class="theme-stats">
+                                <span><i class="fas fa-bullhorn"></i> 预热中</span>
+                            </div>
+                        </div>
+                        
+                        <div class="theme-card graduation-theme">
+                            <div class="theme-header">
+                                <h5>6月</h5>
+                                <div class="theme-tag">筹备中</div>
+                            </div>
+                            <div class="theme-content">
+                                <h6>【毕业季】宿舍清仓总动员</h6>
+                                <p>毕业生宿舍闲置物品大流转</p>
+                            </div>
+                            <div class="theme-stats">
+                                <span><i class="fas fa-clock"></i> 倒计时准备</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 模块五：参与指南与侧边栏 -->
+        <section id="participation" class="content-section">
+            <div class="section-title">
+                <h2><i class="fas fa-compass"></i> 参与指南</h2>
+                <p class="section-desc">清晰参与路径，快速上手流转挑战</p>
+            </div>
+
+            <div class="guide-container">
+                <!-- 主内容区 -->
+                <div class="guide-main">
+                    <!-- 四步参与 -->
+                    <div class="step-guide">
+                        <h4><i class="fas fa-rocket"></i> 四步快速参与</h4>
+                        <div class="steps">
+                            <div class="step-item">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h5>注册登录</h5>
+                                    <p>完善个人环保档案，开启挑战之旅</p>
+                                </div>
+                            </div>
+                            
+                            <div class="step-item">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h5>选择赛道</h5>
+                                    <p>根据兴趣加入专项挑战，发挥所长</p>
+                                </div>
+                            </div>
+                            
+                            <div class="step-item">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h5>完成任务</h5>
+                                    <p>参照任务系统逐步完成，积累经验</p>
+                                </div>
+                            </div>
+                            
+                            <div class="step-item">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <h5>积累积分</h5>
+                                    <p>兑换奖励、冲击排行榜，赢取大奖</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 评分规则 -->
+                    <div class="scoring-rules">
+                        <h4><i class="fas fa-star-half-alt"></i> 评分规则详解</h4>
+                        <div class="rules-grid">
+                            <div class="rule-item">
+                                <div class="rule-icon">
+                                    <i class="fas fa-exchange-alt"></i>
+                                </div>
+                                <div class="rule-content">
+                                    <h6>基础流转分</h6>
+                                    <p>每成功流转1件 +10分</p>
+                                </div>
+                            </div>
+                            
+                            <div class="rule-item">
+                                <div class="rule-icon">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="rule-content">
+                                    <h6>质量加分</h6>
+                                    <p>获得五星好评 +5分/次</p>
+                                </div>
+                            </div>
+                            
+                            <div class="rule-item">
+                                <div class="rule-icon">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+                                <div class="rule-content">
+                                    <h6>效率加分</h6>
+                                    <p>24小时内完成匹配 +3分</p>
+                                </div>
+                            </div>
+                            
+                            <div class="rule-item">
+                                <div class="rule-icon">
+                                    <i class="fas fa-boxes"></i>
+                                </div>
+                                <div class="rule-content">
+                                    <h6>规模加分</h6>
+                                    <p>批量流转（5件以上）额外+20%</p>
+                                </div>
+                            </div>
+                            
+                            <div class="rule-item">
+                                <div class="rule-icon">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <div class="rule-content">
+                                    <h6>创意加分</h6>
+                                    <p>改造创新 +15分/件</p>
+                                </div>
+                            </div>
+                            
+                            <div class="rule-item">
+                                <div class="rule-icon">
+                                    <i class="fas fa-user-plus"></i>
+                                </div>
+                                <div class="rule-content">
+                                    <h6>社交加分</h6>
+                                    <p>成功邀请好友 +8分/人</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 规则提醒 -->
+                    <div class="rules-reminder">
+                        <h4><i class="fas fa-exclamation-triangle"></i> 重要规则提醒</h4>
+                        <ul class="reminder-list">
+                            <li><i class="fas fa-ban"></i> 禁止虚假交易、刷单行为</li>
+                            <li><i class="fas fa-check-circle"></i> 所有流转需真实有效</li>
+                            <li><i class="fas fa-box"></i> 物品需符合平台规范</li>
+                            <li><i class="fas fa-balance-scale"></i> 争议处理以平台仲裁为准</li>
+                            <li><i class="fas fa-file-contract"></i> 最终解释权归组委会所有</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 侧边栏 -->
+                <aside class="guide-sidebar">
+                    <div class="sidebar-card">
+                        <div class="sidebar-header">
+                            <h5><i class="fas fa-user-circle"></i> 我的挑战进度</h5>
+                        </div>
+                        
+                        <div class="current-level">
+                            <div class="level-display">
+                                <span class="level-name">白银级</span>
+                                <div class="level-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="level-info">
+                                <div class="info-item">
+                                    <span class="label">总积分</span>
+                                    <span class="value">1,245分</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="label">本周排名</span>
+                                    <span class="value">第87名</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="personal-stats">
+                            <h6><i class="fas fa-chart-bar"></i> 个人数据</h6>
+                            <div class="stats-grid">
+                                <div class="stat-item">
+                                    <div class="stat-value">38件</div>
+                                    <div class="stat-label">成功流转</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">127次</div>
+                                    <div class="stat-label">获得好评</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">8人</div>
+                                    <div class="stat-label">邀请好友</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">3篇</div>
+                                    <div class="stat-label">环保故事</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="next-task">
+                            <h6><i class="fas fa-bullseye"></i> 下一个任务</h6>
+                            <div class="task-preview">
+                                <div class="task-title">
+                                    <i class="fas fa-check-circle completed"></i>
+                                    <span>发布学霸笔记（2/5）</span>
+                                </div>
+                                <div class="task-reward">
+                                    <i class="fas fa-gift"></i>
+                                    奖励：50积分
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="sidebar-actions">
+                            <button class="sidebar-btn view-progress">
+                                <i class="fas fa-chart-line"></i> 查看完整进度
+                            </button>
+                            <button class="sidebar-btn share-progress">
+                                <i class="fas fa-share-alt"></i> 一键分享
+                            </button>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <!-- 底部信息栏（结构保留，内容留空） -->
+    <footer class="main-footer"></footer>
+
+    <script src="js/challenge_detail.js"></script>
+</body>
+</html>

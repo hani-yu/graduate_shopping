@@ -6,10 +6,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // ====== 页面悬停动画 ======
     initPageAnimations();
 
+<<<<<<< HEAD
+=======
+    // ====== outcome 面板切换 ======
+    // initOutcomeTabs();
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 
     initProcessTimelineScroll(); // 启动滚动动画
     initOutcomeTabs();  
 
+<<<<<<< HEAD
+=======
+    // ====== 流程时间轴动画 ======
+    // initProcessTimelineAnimation();
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 
     // ====== 键盘导航支持 ======
     initKeyboardNavigation();
@@ -90,6 +100,11 @@ function initProcessTimelineScroll() {
             if (entry.isIntersecting) {
                 const item = entry.target;
                 
+<<<<<<< HEAD
+=======
+                // 获取当前节点在父容器中的索引，用于计算延迟时间
+                // 这样可以实现无论用户滚动多快，都是按 1-2-3-4 顺序显示
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
                 const siblings = Array.from(item.parentNode.querySelectorAll('.timeline-item'));
                 const index = siblings.indexOf(item);
 
@@ -108,6 +123,37 @@ function initProcessTimelineScroll() {
     // 开始观察每一个步骤节点
     timelineItems.forEach(item => observer.observe(item));
 }
+<<<<<<< HEAD
+=======
+
+/**
+ * 抢购后处理的结果切换逻辑 (Success/Fail/Issue Tabs)
+ */
+// function initOutcomeTabs() {
+//     const tabs = document.querySelectorAll('.outcome-btn');
+//     const panes = document.querySelectorAll('.outcome-pane');
+
+//     tabs.forEach(tab => {
+//         tab.addEventListener('click', () => {
+//             const target = tab.getAttribute('data-outcome');
+
+//             // 切换按钮状态
+//             tabs.forEach(t => t.classList.remove('active'));
+//             tab.classList.add('active');
+
+//             // 切换内容显示
+//             panes.forEach(pane => {
+//                 pane.classList.remove('active');
+//                 if (pane.id === `${target}-pane`) {
+//                     pane.classList.add('active');
+//                 }
+//             });
+//         });
+//     });
+// }
+
+
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 // ====== 页面悬停动画 ======
 function initPageAnimations() {
     // 流程步骤悬停

@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校友权益·专属福利详情 - 毕业物品流转平台</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/archive_detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/welfare_detail.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body class="welfare_page">
+
+    
+    <!-- 顶部导航栏（与主站一致） -->
+    <nav class="daohang">
+        <div class="daohang_wrapper">
+            <ul class="daohang_list">
+                <li class="daohang_items"><a href="index.html">首页</a></li>
+                <li class="daohang_items"><a href="about.html">平台概况</a></li>
+                <li class="daohang_items"><a href="categories.html">商品分类</a></li>
+                <li class="daohang_items active"><a href="guide.html">流转锦囊</a></li>
+                <li class="daohang_items"><a href="events.html">活动专区</a></li>
+                <li class="daohang_items"><a href="user.html">用户中心</a></li>
+            </ul>
+            <div class="nav_auth"><a href="signin.html" class="btn_nav">登录</a></div>
+        </div>
+    </nav>
+
+    <!-- Box 1: Hero Banner (透视长廊背景) -->
+    <header class="welfare_hero">
+        <div class="hero_overlay"></div> <!-- 对应 CSS 中的蒙层 -->
+        <div class="hero_content animate__animated animate__fadeIn">
+            <span class="en_text">WELFARE</span>
+            <h1 class="elegant_title">校友权益·专属福利详情 <span class="welfare_seal">福利领取</span></h1>
+            <div class="elegant_line"></div>
+            <p>详细了解福利获取机制、成长体系及使用指南。</p>
+        </div>
+
+        <!-- 底部波浪线 (建议保留以衔接下方色块) -->
+        <div class="banner_wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C0,0,31.83,14.28,64,27.1,126.31,52,187.31,68,250.31,68c31.11,0,32.25-10.15,71.08-11.56Z"
+                    fill="#f9fbfa"></path>
+            </svg>
+        </div>
+    </header>
+
+
+    <div class="container">
+        <!-- 第一部分：福利获取机制说明 -->
+        <section id="mechanism" class="content-section">
+            <div class="section-header">
+                <div class="section-number">01</div>
+                <h2 class="section-title">福利获取机制说明</h2>
+                <p class="section-desc">了解如何通过参与校园物品流转积累贡献值，解锁相应福利</p>
+            </div>
+
+            <div class="section-content">
+                <!-- 基础获取规则 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-trophy"></i>
+                        基础获取规则
+                    </h3>
+                    <p class="block-intro">通过参与校园物品流转积累贡献值，贡献值达标即可解锁相应福利</p>
+                    
+                    <div class="mechanism-grid">
+                        <!-- 物品成功流转 -->
+                        <div class="mechanism-card">
+                            <div class="mechanism-icon">
+                                <i class="fas fa-recycle"></i>
+                            </div>
+                            <h4 class="mechanism-title">物品成功流转</h4>
+                            <ul class="mechanism-list">
+                                <li>
+                                    <span class="score">+10分</span>
+                                    <span class="desc">成功出售物品</span>
+                                </li>
+                                <li>
+                                    <span class="score">+15分</span>
+                                    <span class="desc">无偿赠送物品</span>
+                                </li>
+                                <li>
+                                    <span class="score">+5/3/8分</span>
+                                    <span class="desc">按品类加成（数码/书籍/家具）</span>
+                                </li>
+                                <li>
+                                    <span class="score">+3/1分</span>
+                                    <span class="desc">按时效加成（24小时/3天内）</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- 内容质量贡献 -->
+                        <div class="mechanism-card">
+                            <div class="mechanism-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4 class="mechanism-title">内容质量贡献</h4>
+                            <ul class="mechanism-list">
+                                <li>
+                                    <span class="score">+2分</span>
+                                    <span class="desc">发布详尽描述（>200字）</span>
+                                </li>
+                                <li>
+                                    <span class="score">+3分</span>
+                                    <span class="desc">上传高质量图片（≥3张）</span>
+                                </li>
+                                <li>
+                                    <span class="score">+2分</span>
+                                    <span class="desc">获得买家好评</span>
+                                </li>
+                                <li>
+                                    <span class="score">+5分</span>
+                                    <span class="desc">撰写真实交易心得</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- 社区共建贡献 -->
+                        <div class="mechanism-card">
+                            <div class="mechanism-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h4 class="mechanism-title">社区共建贡献</h4>
+                            <ul class="mechanism-list">
+                                <li>
+                                    <span class="score">+5分/人</span>
+                                    <span class="desc">邀请同学注册认证</span>
+                                </li>
+                                <li>
+                                    <span class="score">+3分/次</span>
+                                    <span class="desc">举报虚假信息有效</span>
+                                </li>
+                                <li>
+                                    <span class="score">+2分/次</span>
+                                    <span class="desc">参与平台调研反馈</span>
+                                </li>
+                                <li>
+                                    <span class="score">+10分/月</span>
+                                    <span class="desc">担任楼栋流转志愿者</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 福利解锁逻辑 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-unlock"></i>
+                        福利解锁逻辑
+                    </h3>
+                    
+                    <div class="unlock-methods">
+                        <div class="unlock-card">
+                            <div class="unlock-icon">
+                                <i class="fas fa-stairs"></i>
+                            </div>
+                            <div class="unlock-content">
+                                <h4>阶梯式解锁</h4>
+                                <p>达到对应贡献值门槛自动解锁相应福利</p>
+                            </div>
+                        </div>
+                        
+                        <div class="unlock-card">
+                            <div class="unlock-icon">
+                                <i class="fas fa-tasks"></i>
+                            </div>
+                            <div class="unlock-content">
+                                <h4>定向任务解锁</h4>
+                                <p>完成特定任务直接获得福利（如"毕业季清空计划"）</p>
+                            </div>
+                        </div>
+                        
+                        <div class="unlock-card">
+                            <div class="unlock-icon">
+                                <i class="fas fa-calendar-star"></i>
+                            </div>
+                            <div class="unlock-content">
+                                <h4>限时活动解锁</h4>
+                                <p>参与平台主题活动赢取福利</p>
+                            </div>
+                        </div>
+                        
+                        <div class="unlock-card">
+                            <div class="unlock-icon">
+                                <i class="fas fa-user-plus"></i>
+                            </div>
+                            <div class="unlock-content">
+                                <h4>邀请解锁</h4>
+                                <p>邀请好友达到一定数量获得福利</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 有效期和等级保留 -->
+                    <div class="important-notes">
+                        <div class="note-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <div>
+                                <strong>有效期：</strong>贡献值年度累积，每年1月1日清零重置
+                            </div>
+                        </div>
+                        <div class="note-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <strong>等级保留：</strong>已解锁的福利等级永久保留
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第二部分：福利进阶体系 -->
+        <section id="level-system" class="content-section">
+            <div class="section-header">
+                <div class="section-number">02</div>
+                <h2 class="section-title">福利进阶体系</h2>
+                <p class="section-desc">四级成长体系，从青铜到钻石，权益逐步升级</p>
+            </div>
+
+            <div class="section-content">
+                <!-- 等级导航 -->
+                <div class="level-navigation">
+                    <div class="level-nav-item active" data-level="bronze">
+                        <div class="level-nav-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="level-nav-text">
+                            <div class="level-name">青铜等级</div>
+                            <div class="level-range">0-199贡献值</div>
+                        </div>
+                    </div>
+                    
+                    <div class="level-nav-item" data-level="silver">
+                        <div class="level-nav-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="level-nav-text">
+                            <div class="level-name">白银等级</div>
+                            <div class="level-range">200-499贡献值</div>
+                        </div>
+                    </div>
+                    
+                    <div class="level-nav-item" data-level="gold">
+                        <div class="level-nav-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="level-nav-text">
+                            <div class="level-name">黄金等级</div>
+                            <div class="level-range">500-999贡献值</div>
+                        </div>
+                    </div>
+                    
+                    <div class="level-nav-item" data-level="diamond">
+                        <div class="level-nav-icon">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <div class="level-nav-text">
+                            <div class="level-name">钻石等级</div>
+                            <div class="level-range">1000+贡献值</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 等级详情内容 -->
+                <div class="level-details-container">
+                    <!-- 青铜等级详情 -->
+                    <div class="level-details active" id="bronze-details">
+                        <div class="level-header">
+                            <div class="level-badge bronze">
+                                <i class="fas fa-award"></i>
+                                <span>青铜等级</span>
+                            </div>
+                            <div class="level-score-range">0-199贡献值</div>
+                        </div>
+                        
+                        <div class="level-content">
+                            <div class="level-benefits">
+                                <h4><i class="fas fa-gift"></i> 解锁福利</h4>
+                                <ul>
+                                    <li>基础打包材料</li>
+                                    <li>平台使用指南</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="level-privileges">
+                                <h4><i class="fas fa-crown"></i> 专属权益</h4>
+                                <ul>
+                                    <li>每日可刷新发布物品1次</li>
+                                    <li>可同时在线发布3件物品</li>
+                                    <li>基础客服响应（24小时内）</li>
+                                    <li>参与平台基础活动资格</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 白银等级详情 -->
+                    <div class="level-details" id="silver-details">
+                        <div class="level-header">
+                            <div class="level-badge silver">
+                                <i class="fas fa-award"></i>
+                                <span>白银等级</span>
+                            </div>
+                            <div class="level-score-range">200-499贡献值</div>
+                        </div>
+                        
+                        <div class="level-content">
+                            <div class="level-benefits">
+                                <h4><i class="fas fa-gift"></i> 解锁福利</h4>
+                                <ul>
+                                    <li>寄件优惠券</li>
+                                    <li>校园餐饮折扣</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="level-privileges">
+                                <h4><i class="fas fa-crown"></i> 专属权益</h4>
+                                <ul>
+                                    <li>每日可刷新发布物品3次</li>
+                                    <li>可同时在线发布5件物品</li>
+                                    <li>优先客服响应（12小时内）</li>
+                                    <li>获得"活跃流转者"标识</li>
+                                    <li>参与平台中级活动资格</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 黄金等级详情 -->
+                    <div class="level-details" id="gold-details">
+                        <div class="level-header">
+                            <div class="level-badge gold">
+                                <i class="fas fa-award"></i>
+                                <span>黄金等级</span>
+                            </div>
+                            <div class="level-score-range">500-999贡献值</div>
+                        </div>
+                        
+                        <div class="level-content">
+                            <div class="level-benefits">
+                                <h4><i class="fas fa-gift"></i> 解锁福利</h4>
+                                <ul>
+                                    <li>专业鉴定服务</li>
+                                    <li>合作商家VIP折扣</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="level-privileges">
+                                <h4><i class="fas fa-crown"></i> 专属权益</h4>
+                                <ul>
+                                    <li>每日可刷新发布物品5次</li>
+                                    <li>可同时在线发布8件物品</li>
+                                    <li>VIP客服通道（6小时内响应）</li>
+                                    <li>获得"校园流转达人"认证</li>
+                                    <li>优先参与平台高级活动</li>
+                                    <li>获得线下活动邀请资格</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 钻石等级详情 -->
+                    <div class="level-details" id="diamond-details">
+                        <div class="level-header">
+                            <div class="level-badge diamond">
+                                <i class="fas fa-gem"></i>
+                                <span>钻石等级</span>
+                            </div>
+                            <div class="level-score-range">1000+贡献值</div>
+                        </div>
+                        
+                        <div class="level-content">
+                            <div class="level-benefits">
+                                <h4><i class="fas fa-gift"></i> 解锁福利</h4>
+                                <ul>
+                                    <li>全套毕业福利包</li>
+                                    <li>校友终身权益</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="level-privileges">
+                                <h4><i class="fas fa-crown"></i> 专属权益</h4>
+                                <ul>
+                                    <li>无限次刷新发布物品</li>
+                                    <li>可同时在线发布15件物品</li>
+                                    <li>专属客服经理服务</li>
+                                    <li>获得"可持续校友"终身荣誉</li>
+                                    <li>受邀担任平台校园大使</li>
+                                    <li>毕业后续享校友专属服务</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第三部分：福利领取与使用指南 -->
+        <section id="usage-guide" class="content-section">
+            <div class="section-header">
+                <div class="section-number">03</div>
+                <h2 class="section-title">福利领取与使用指南</h2>
+                <p class="section-desc">标准化领取流程，详细使用指导，确保福利顺利使用</p>
+            </div>
+
+            <div class="section-content">
+                <!-- 领取流程标准化 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-download"></i>
+                        领取流程标准化
+                    </h3>
+                    
+                    <div class="process-steps">
+                        <!-- 步骤1 -->
+                        <div class="process-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>资格确认</h4>
+                                <ul>
+                                    <li>系统自动推送可领取福利通知</li>
+                                    <li>个人中心"待领取福利"专区显示</li>
+                                    <li>点击查看福利详情及使用规则</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- 步骤2 -->
+                        <div class="process-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>领取操作</h4>
+                                <ul>
+                                    <li>点击"立即领取"按钮</li>
+                                    <li>选择领取形式：电子券码/实物领取/服务预约</li>
+                                    <li>确认领取后不可撤销</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- 步骤3 -->
+                        <div class="process-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>凭证获取</h4>
+                                <ul>
+                                    <li>电子券：生成唯一二维码+数字码</li>
+                                    <li>实物券：生成领取码，凭码至指定地点兑换</li>
+                                    <li>服务类：生成预约码，凭码预约服务时间</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- 步骤4 -->
+                        <div class="process-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>使用准备</h4>
+                                <ul>
+                                    <li>阅读详细使用说明</li>
+                                    <li>确认有效期和使用限制</li>
+                                    <li>了解合作商家信息</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 使用场景指导 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-shopping-cart"></i>
+                        使用场景指导
+                    </h3>
+                    
+                    <div class="usage-scenarios">
+                        <!-- 线上福利使用 -->
+                        <div class="scenario-card">
+                            <div class="scenario-icon">
+                                <i class="fas fa-laptop"></i>
+                            </div>
+                            <div class="scenario-content">
+                                <h4>线上福利使用</h4>
+                                <ul>
+                                    <li>在合作平台结算页面输入券码</li>
+                                    <li>系统自动核销并显示优惠后价格</li>
+                                    <li>如遇问题可联系平台客服协助</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- 线下福利使用 -->
+                        <div class="scenario-card">
+                            <div class="scenario-icon">
+                                <i class="fas fa-store"></i>
+                            </div>
+                            <div class="scenario-content">
+                                <h4>线下福利使用</h4>
+                                <ul>
+                                    <li>向商家展示二维码</li>
+                                    <li>商家扫码核销</li>
+                                    <li>核对最终支付金额</li>
+                                    <li>索要消费凭证备查</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- 服务类福利使用 -->
+                        <div class="scenario-card">
+                            <div class="scenario-icon">
+                                <i class="fas fa-concierge-bell"></i>
+                            </div>
+                            <div class="scenario-content">
+                                <h4>服务类福利使用</h4>
+                                <ul>
+                                    <li>提前至少24小时预约</li>
+                                    <li>确认服务人员身份信息</li>
+                                    <li>服务完成后签字确认</li>
+                                    <li>及时反馈服务质量</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 异常情况处理 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        异常情况处理
+                    </h3>
+                    
+                    <div class="issue-handling">
+                        <!-- 问题类型及解决方案 -->
+                        <div class="issue-types">
+                            <h4>问题类型及解决方案</h4>
+                            <div class="issue-list">
+                                <div class="issue-item">
+                                    <div class="issue-name">券码失效</div>
+                                    <div class="issue-solution">联系客服核实后重新发放</div>
+                                </div>
+                                <div class="issue-item">
+                                    <div class="issue-name">商家拒收</div>
+                                    <div class="issue-solution">提供平台投诉通道，核实后补偿</div>
+                                </div>
+                                <div class="issue-item">
+                                    <div class="issue-name">信息不符</div>
+                                    <div class="issue-solution">核对使用规则，确认符合条件</div>
+                                </div>
+                                <div class="issue-item">
+                                    <div class="issue-name">技术故障</div>
+                                    <div class="issue-solution">截图保存证据，联系技术支持</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 投诉处理流程 -->
+                        <div class="complaint-process">
+                            <h4>投诉处理流程</h4>
+                            <div class="process-flow">
+                                <div class="flow-step">
+                                    <div class="flow-step-number">1</div>
+                                    <div class="flow-step-desc">提交投诉申请（附凭证截图）</div>
+                                </div>
+                                <div class="flow-arrow">→</div>
+                                <div class="flow-step">
+                                    <div class="flow-step-number">2</div>
+                                    <div class="flow-step-desc">平台24小时内响应</div>
+                                </div>
+                                <div class="flow-arrow">→</div>
+                                <div class="flow-step">
+                                    <div class="flow-step-number">3</div>
+                                    <div class="flow-step-desc">核实情况后提出解决方案</div>
+                                </div>
+                                <div class="flow-arrow">→</div>
+                                <div class="flow-step">
+                                    <div class="flow-step-number">4</div>
+                                    <div class="flow-step-desc">用户确认方案并执行</div>
+                                </div>
+                                <div class="flow-arrow">→</div>
+                                <div class="flow-step">
+                                    <div class="flow-step-number">5</div>
+                                    <div class="flow-step-desc">问题关闭后进行满意度评价</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第六部分：毕业衔接与校友权益延续 -->
+        <section id="alumni-rights" class="content-section">
+            <div class="section-header">
+                <div class="section-number">04</div>
+                <h2 class="section-title">毕业衔接与校友权益延续</h2>
+                <p class="section-desc">从学生到校友的平稳过渡，延续你在平台的贡献与价值</p>
+            </div>
+
+            <div class="section-content">
+                <!-- 毕业身份转换 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-graduation-cap"></i>
+                        毕业身份转换
+                    </h3>
+                    
+                    <div class="transition-grid">
+                        <!-- 权益平稳过渡 -->
+                        <div class="transition-card">
+                            <div class="transition-header">
+                                <div class="transition-icon">
+                                    <i class="fas fa-exchange-alt"></i>
+                                </div>
+                                <h4>权益平稳过渡</h4>
+                            </div>
+                            <ul class="transition-list">
+                                <li>毕业前已获福利有效期延长至离校后90天</li>
+                                <li>学生账号转为校友账号，保留历史记录</li>
+                                <li>已累积贡献值转换为校友积分</li>
+                                <li>解锁的等级权益部分保留</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- 校友专属福利 -->
+                        <div class="transition-card">
+                            <div class="transition-header">
+                                <div class="transition-icon">
+                                    <i class="fas fa-user-graduate"></i>
+                                </div>
+                                <h4>校友专属福利</h4>
+                            </div>
+                            <ul class="transition-list">
+                                <li>继续享受平台信息服务</li>
+                                <li>参与校友专属流转活动</li>
+                                <li>获得校友企业招聘信息</li>
+                                <li>受邀参加校友交流活动</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 长期价值体系 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-history"></i>
+                        长期价值体系
+                    </h3>
+                    
+                    <div class="value-system">
+                        <!-- 终身贡献记录 -->
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-scroll"></i>
+                            </div>
+                            <div class="value-content">
+                                <h4>终身贡献记录</h4>
+                                <ul>
+                                    <li>平台永久保存流转贡献历史</li>
+                                    <li>可随时查询校园时期的环保贡献</li>
+                                    <li>作为个人可持续发展履历证明</li>
+                                    <li>支持背景调查和推荐信出具</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- 跨代际传承 -->
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-hands-helping"></i>
+                            </div>
+                            <div class="value-content">
+                                <h4>跨代际传承</h4>
+                                <ul>
+                                    <li>高年级校友福利可部分转赠低年级同学</li>
+                                    <li>建立学长学姐-学弟学妹帮扶机制</li>
+                                    <li>优秀流转经验形成知识库传承</li>
+                                    <li>校友捐赠物品设立专项奖学金</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第七部分：特别说明与法律条款 -->
+        <section id="legal-terms" class="content-section">
+            <div class="section-header">
+                <div class="section-number">05</div>
+                <h2 class="section-title">特别说明与法律条款</h2>
+                <p class="section-desc">重要须知、更新通知及联系方式</p>
+            </div>
+
+            <div class="section-content">
+                <!-- 重要须知 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-exclamation-circle"></i>
+                        重要须知
+                    </h3>
+                    
+                    <div class="terms-list">
+                        <div class="term-item">
+                            <div class="term-icon">
+                                <i class="fas fa-user-check"></i>
+                            </div>
+                            <div class="term-content">
+                                <p>福利仅限本校在校学生及应届毕业生使用</p>
+                            </div>
+                        </div>
+                        
+                        <div class="term-item">
+                            <div class="term-icon">
+                                <i class="fas fa-ban"></i>
+                            </div>
+                            <div class="term-content">
+                                <p>福利不得出售、转让给非指定对象</p>
+                            </div>
+                        </div>
+                        
+                        <div class="term-item">
+                            <div class="term-icon">
+                                <i class="fas fa-gavel"></i>
+                            </div>
+                            <div class="term-content">
+                                <p>如发现违规行为，平台有权收回福利并取消参与资格</p>
+                            </div>
+                        </div>
+                        
+                        <div class="term-item">
+                            <div class="term-icon">
+                                <i class="fas fa-balance-scale"></i>
+                            </div>
+                            <div class="term-content">
+                                <p>最终解释权归平台所有</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 更新与通知 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-bullhorn"></i>
+                        更新与通知
+                    </h3>
+                    
+                    <div class="update-info">
+                        <div class="update-item">
+                            <i class="fas fa-sync-alt"></i>
+                            <div>
+                                <p>福利政策可能随平台发展而调整</p>
+                            </div>
+                        </div>
+                        
+                        <div class="update-item">
+                            <i class="fas fa-calendar-check"></i>
+                            <div>
+                                <p>重大调整将提前30天公示并通知</p>
+                            </div>
+                        </div>
+                        
+                        <div class="update-item">
+                            <i class="fas fa-bell"></i>
+                            <div>
+                                <p>用户有义务关注平台公告</p>
+                            </div>
+                        </div>
+                        
+                        <div class="update-item">
+                            <i class="fas fa-check-double"></i>
+                            <div>
+                                <p>继续使用视为接受更新条款</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 联系方式 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-headset"></i>
+                        联系方式
+                    </h3>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <div class="contact-details">
+                                <div class="contact-type">福利咨询客服</div>
+                                <div class="contact-value">平台内在线客服</div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <div class="contact-type">投诉建议邮箱</div>
+                                <div class="contact-value">benefit@campus-recycle.edu</div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <div class="contact-type">紧急问题热线</div>
+                                <div class="contact-value">400-xxx-xxxx</div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <div class="contact-type">办公时间</div>
+                                <div class="contact-value">工作日 9:00-18:00</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 页面底部 -->
+        <footer class="page-footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-recycle"></i>
+                    <span>毕业物品流转平台</span>
+                </div>
+                <p class="footer-text">每一次流转，都是对校园的绿色贡献；每一份福利，都是对你付出的认可。</p>
+                <div class="footer-links">
+                    <a href="#mechanism">福利机制</a>
+                    <a href="#level-system">成长体系</a>
+                    <a href="#usage-guide">使用指南</a>
+                    <a href="#alumni-rights">校友权益</a>
+                    <a href="#legal-terms">法律条款</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/welfare_detail.js"></script>
+</body>
+</html>

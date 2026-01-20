@@ -1,3 +1,29 @@
+<<<<<<< HEAD
+=======
+/* CSS变量定义 - 使用指定的配色方案 */
+/* :root {
+    --deep-green: #064e3b;
+    --theme-teal: #0d9488;
+    --accent-gold: #f59e0b;
+    --paper-white: #f9fbfa;
+    --text-slate: #475569;
+    --light-teal: #5eead4;
+    --light-green: #a7f3d0;
+    --light-gray: #f1f5f9;
+    --border-color: #e2e8f0;
+    --shadow-color: rgba(6, 78, 59, 0.08);
+    --hover-shadow-color: rgba(6, 78, 59, 0.15);
+
+    
+      --faq-green: #064e3b;
+    --faq-gold: #f59e0b;
+    --faq-teal: #0d9488;
+    --faq-light: #f9fbfa;
+    --faq-red: #ef4444;
+} */
+
+/* 自定义配色变量 - 遵循设计规范 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 :root {
     --faq-green: #064e3b;
     --faq-gold: #f59e0b;
@@ -28,6 +54,10 @@ h3 {
 }
 
 
+<<<<<<< HEAD
+=======
+/* --- Box 1: Hero (问号装饰) --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .welfare_hero {
     height: 65vh;
     /* background: var(--faq-green); */
@@ -99,11 +129,20 @@ h3 {
     padding: 20px;
 }
 
+<<<<<<< HEAD
+=======
+/* 页面头部 */
+/* 福利详情页特定样式 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .coupon-detail-page {
     background-color: var(--faq-light);
     min-height: 100vh;
 }
 
+<<<<<<< HEAD
+=======
+/* 顶部福利卡片预览 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .coupon-preview-section {
     background: linear-gradient(135deg, var(--faq-teal) 0%, var(--faq-green) 100%);
     color: white;
@@ -307,6 +346,10 @@ h3 {
     color: white;
 }
 
+<<<<<<< HEAD
+=======
+/* 详情内容区域 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .detail-sections {
     max-width: 1000px;
     margin: 40px auto;

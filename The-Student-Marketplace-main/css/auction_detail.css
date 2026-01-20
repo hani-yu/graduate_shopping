@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+/* CSS变量定义 - 使用指定的配色方案 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 :root {
     --deep-green: #064e3b;
     --theme-teal: #0d9488;
@@ -940,7 +944,11 @@ h3 {
     line-height: 1.5;
 }
 
+<<<<<<< HEAD
 /* 常见问题解答 */
+=======
+/* 第九部分：常见问题解答 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .faq-container {
     background-color: var(--paper-white);
     border-radius: 12px;

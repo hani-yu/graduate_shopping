@@ -1,8 +1,125 @@
+<<<<<<< HEAD
 $(document).ready(function () {
 
     /*模块入场动画 —— 三段式动画
        进入时：淡入 → 上浮 → 轻缩放
     */
+=======
+// $(document).ready(function() {
+    
+//     // --- 1. 模块入场动画 (多元动画) ---
+//     // 使用 Intersection Observer 实现随滚动逐个浮现
+//     const observerOptions = { threshold: 0.1 };
+//     const sectionObserver = new IntersectionObserver((entries) => {
+//         entries.forEach((entry, index) => {
+//             if (entry.isIntersecting) {
+//                 // 设置阶梯延迟显现
+//                 setTimeout(() => {
+//                     $(entry.target).css({
+//                         'opacity': '1',
+//                         'transform': 'translateY(0)',
+//                         'transition': 'all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1)'
+//                     });
+//                 }, index * 150);
+//                 sectionObserver.unobserve(entry.target);
+//             }
+//         });
+//     }, observerOptions);
+
+//     document.querySelectorAll('.management-section').forEach(section => {
+//         sectionObserver.observe(section);
+//     });
+
+
+//     // --- 2. 设备“立即下线”交互 (多元 JS 效果) ---
+//     $('.btn-warning').on('click', function() {
+//         const $item = $(this).closest('.device-item');
+//         const deviceName = $item.find('h3').text();
+        
+//         // 如果点击的是一键下线
+//         if ($(this).closest('.batch-action-card').length > 0) {
+//             $('#logoutAllDialog').fadeIn(300).css('display', 'flex');
+//             return;
+//         }
+
+//         // 单个设备下线模拟
+//         if(confirm(`确定要将设备 [${deviceName}] 强制下线吗？`)) {
+//             // 播放一个“震动并消失”的动画
+//             $item.addClass('animate__animated animate__headShake');
+            
+//             setTimeout(() => {
+//                 $item.css({
+//                     'transform': 'translateX(100px)',
+//                     'opacity': '0',
+//                     'transition': 'all 0.6s ease'
+//                 });
+//                 setTimeout(() => {
+//                     $item.slideUp(400, () => {
+//                         $item.remove();
+//                         updateDeviceCount(); // 更新统计数字
+//                     });
+//                 }, 300);
+//             }, 500);
+//         }
+//     });
+
+
+//     // --- 3. 极客扫描反馈 (互动细节) ---
+//     // 鼠标滑过设备时，模拟扫描线
+//     $('.device-item').on('mouseenter', function() {
+//         const $icon = $(this).find('.device-icon');
+//         const scanLine = $('<div class="scan-line"></div>').css({
+//             'position': 'absolute',
+//             'top': '0', 'left': '0', 'width': '100%', 'height': '2px',
+//             'background': 'var(--accent-gold)',
+//             'box-shadow': '0 0 10px var(--accent-gold)',
+//             'z-index': '5'
+//         });
+//         $icon.append(scanLine);
+//         scanLine.animate({ top: '100%' }, 600, function() {
+//             $(this).remove();
+//         });
+//     });
+
+
+//     // --- 4. 实时统计更新 ---
+//     function updateDeviceCount() {
+//         const count = $('#online-devices .device-item').length;
+//         $('.badge').text(`${count}台在线`).addClass('animate__animated animate__rubberBand');
+//         setTimeout(() => $('.badge').removeClass('animate__animated animate__rubberBand'), 1000);
+//     }
+
+//     // 关闭弹窗
+//     window.closeDialog = function() {
+//         $('#logoutAllDialog').fadeOut(300);
+//     }
+
+//     window.confirmLogoutAll = function() {
+//         $('.devices-list .device-item:not(.current)').each(function(i) {
+//             $(this).delay(i * 150).fadeOut(500, function() {
+//                 $(this).remove();
+//                 updateDeviceCount();
+//             });
+//         });
+//         closeDialog();
+//         // 成功反馈
+//         const toast = $('<div class="toast">所有远程设备已安全下线</div>').css({
+//             'position': 'fixed', 'top': '20px', 'left': '50%', 'transform': 'translateX(-50%)',
+//             'background': 'var(--deep-green)', 'color': 'white', 'padding': '12px 30px',
+//             'border-radius': '50px', 'z-index': '2000', 'box-shadow': '0 10px 30px rgba(0,0,0,0.2)'
+//         });
+//         $('body').append(toast);
+//         toast.delay(2000).fadeOut(500, function() { $(this).remove(); });
+//     }
+// });
+
+$(document).ready(function () {
+
+    /* -------------------------------
+       1️⃣ 模块入场动画 —— 三段式动画
+       进入时：淡入 → 上浮 → 轻缩放
+    -------------------------------- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     const observerOptions = { threshold: 0.15 };
     const sectionObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry, index) => {
@@ -33,8 +150,14 @@ $(document).ready(function () {
     });
 
 
+<<<<<<< HEAD
     /* 小卡片浮现 —— 逐项延迟
      */
+=======
+    /* -------------------------------
+       2️⃣ 小卡片浮现 —— 逐项延迟
+    -------------------------------- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     function revealItems(selector) {
         const items = document.querySelectorAll(selector);
         const itemObserver = new IntersectionObserver((entries) => {
@@ -54,6 +177,14 @@ $(document).ready(function () {
     revealItems(".policy-mini-card");
     revealItems(".batch-mini-card");
 
+<<<<<<< HEAD
+=======
+
+    /* -------------------------------
+       3️⃣ 设备卡片 Hover —— 科技感升级
+       增加：轻倾斜 + 高光扫过
+    -------------------------------- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     $(".device-item").on("mousemove", function (e) {
         const r = this.getBoundingClientRect();
         const x = e.clientX - r.left;
@@ -66,7 +197,11 @@ $(document).ready(function () {
         const rotateY = (x - centerX) / 18;
 
         $(this).css({
+<<<<<<< HEAD
             transform: `translateX(10px) scale(1.02) rotateX(${-rotateX}deg) rotateY(${rotateY}deg)`,
+=======
+            transform: `translateX(10px) scale(1.02) rotateX(${ -rotateX }deg) rotateY(${ rotateY }deg)`,
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
             transition: "transform .2s ease-out"
         });
 
@@ -84,6 +219,14 @@ $(document).ready(function () {
         });
     });
 
+<<<<<<< HEAD
+=======
+
+    /* -------------------------------
+       4️⃣ 立即下线 交互升级
+       增加：能量波 + 爆散消失
+    -------------------------------- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     $('.btn-warning').on('click', function () {
         const $item = $(this).closest('.device-item');
         const deviceName = $item.find('h3').text();
@@ -119,6 +262,13 @@ $(document).ready(function () {
         }
     });
 
+<<<<<<< HEAD
+=======
+
+    /* -------------------------------
+       5️⃣ 鼠标扫描线保留 + 优化颜色
+    -------------------------------- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     $(".device-item").on("mouseenter", function () {
         const scanLine = $('<div class="scan-line"></div>');
         $(this).find(".device-icon").append(scanLine);
@@ -127,6 +277,13 @@ $(document).ready(function () {
         });
     });
 
+<<<<<<< HEAD
+=======
+
+    /* -------------------------------
+       6️⃣ 数量更新动画 —— 弹跳变色
+    -------------------------------- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     function updateDeviceCount() {
         const count = $('#online-devices .device-item').length;
         const badge = $('.badge');
@@ -136,6 +293,13 @@ $(document).ready(function () {
         setTimeout(() => badge.removeClass('badge-pulse'), 900);
     }
 
+<<<<<<< HEAD
+=======
+
+    /* -------------------------------
+       7️⃣ 全部下线动画增强
+    -------------------------------- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     window.closeDialog = function () {
         $('#logoutAllDialog').fadeOut(300);
     }
@@ -178,5 +342,9 @@ $(document).ready(function () {
             });
     }
 
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 });

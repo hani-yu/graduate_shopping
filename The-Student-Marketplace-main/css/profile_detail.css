@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+/* ------------------------------------
+   Device Page — Premium Elegant Theme
+------------------------------------ */
+
+/* --- 全局变量 --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 :root {
     --deep-green: #064e3b;
     --theme-teal: #0d9488;
@@ -19,6 +27,10 @@ h2, h3 {
     font-family: "Noto Serif SC", serif;
 }
 
+<<<<<<< HEAD
+=======
+/* --- Box 1: Hero (法典封面风格) --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .profile_hero {
     height: 60vh;
     background: url('https://images.unsplash.com/photo-1541339907198-e087563f976d?auto=format&fit=crop&w=1200&q=80') center/cover;
@@ -61,6 +73,12 @@ h2, h3 {
 
 .hero_content p { font-size: 1.3rem !important; }
 
+<<<<<<< HEAD
+=======
+/* ------------------------------------
+   MAIN 布局 & 文字体系
+------------------------------------ */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .container {
     max-width: 1200px;
     margin: 60px auto;
@@ -81,6 +99,12 @@ h2.section-title { font-size: 1.7rem; }
     line-height: 1.9;
 }
 
+<<<<<<< HEAD
+=======
+/* ------------------------------------
+   模块卡片 精装档案盒
+------------------------------------ */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .management-section {
     background: linear-gradient(180deg,#ffffff,#fbfefd);
     border-radius: 22px;
@@ -224,11 +248,21 @@ h2.section-title { font-size: 1.7rem; }
 .login-history-table th{ font-size:1.2rem; padding:16px; background:#f5faf9; }
 .login-history-table td{ font-size:1.2rem; padding:14px 16px; }
 
+<<<<<<< HEAD
+=======
+/* ------------------------------------
+   近期登录记录表格行 Hover 动态效果
+------------------------------------ */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .login-history-table tr {
     transition: all 0.35s cubic-bezier(.25,.8,.25,1);
     cursor: pointer;
 }
 
+<<<<<<< HEAD
+=======
+/* 鼠标悬停：轻微浮起 + 背景高亮 +阴影 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .login-history-table tr:hover {
     transform: translateY(-4px);
     background: rgba(13, 148, 136, 0.05);
@@ -263,6 +297,13 @@ h2.section-title { font-size: 1.7rem; }
     border:1px solid rgba(13,148,136,.12);
     box-shadow:0 18px 40px rgba(6,78,59,.06);
 }
+<<<<<<< HEAD
+=======
+
+/* ------------------------------------
+   ✨ 动画
+------------------------------------ */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 @keyframes float-up {
     0% {opacity:0; transform:translateY(50px) scale(.97);}
     100% {opacity:1; transform:translateY(0) scale(1);}
@@ -344,6 +385,11 @@ h2.section-title { font-size: 1.7rem; }
     overflow: hidden;
     cursor: pointer;
 }
+<<<<<<< HEAD
+=======
+
+/* 鼠标移入效果：浮起 + 阴影 + 边框强化 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .trusted-card:hover,
 .policy-mini-card:hover,
 .batch-mini-card:hover {
@@ -352,6 +398,10 @@ h2.section-title { font-size: 1.7rem; }
     border: 1px solid rgba(13,148,136,.35);
 }
 
+<<<<<<< HEAD
+=======
+/* ✨ 高光扫过 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .trusted-card::after,
 .policy-mini-card::after,
 .batch-mini-card::after {
@@ -377,12 +427,22 @@ h2.section-title { font-size: 1.7rem; }
     left: 130%;
 }
 
+<<<<<<< HEAD
+=======
+/* ------------------------------------
+   全局按钮样式统一
+------------------------------------ */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 button,
 button:focus,
 button:active,
 button:hover {
     font-family: "PingFang SC", "Noto Serif SC", serif;
+<<<<<<< HEAD
     font-size: 1.15rem; 
+=======
+    font-size: 1.15rem; /* 所有按钮统一大小 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     line-height: 1.5;
     padding: 10px 20px;
     border-radius: 12px;
@@ -395,7 +455,11 @@ button:hover {
 }
 
 button:hover {
+<<<<<<< HEAD
     background: #14b8a6; 
+=======
+    background: #14b8a6; /* Hover 色彩 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     transform: translateY(-2px);
     box-shadow: 0 8px 18px rgba(13,148,136,0.2);
 }
@@ -417,15 +481,27 @@ input[type="submit"] {
 }
 
 
+<<<<<<< HEAD
 .identity-container {
     display: grid;
     grid-template-columns: 400px 1fr; 
+=======
+/* 容器布局 */
+/* 容器调整：拉宽并限制高度 */
+.identity-container {
+    display: grid;
+    grid-template-columns: 400px 1fr; /* 左侧固定，右侧拉伸 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     gap: 20px;
     background: #fff;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+<<<<<<< HEAD
     max-width: 1200px; 
+=======
+    max-width: 1200px; /* 增加最大宽度让整体更扁平 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     margin: 0 auto;
     margin-bottom: 20px;
 }
@@ -443,7 +519,11 @@ input[type="submit"] {
 
 .avatar-box {
     position: relative;
+<<<<<<< HEAD
     width: 80px; 
+=======
+    width: 80px; /* 缩小头像 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     margin: 0 auto 10px;
 }
 
@@ -480,6 +560,10 @@ input[type="submit"] {
     margin: 0 2px;
 }
 
+<<<<<<< HEAD
+=======
+/* 学籍表格紧凑化 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .academic-table .table-header {
     font-size: 13px;
     font-weight: bold;
@@ -502,7 +586,11 @@ input[type="submit"] {
 .identity-right-column {
     display: flex;
     flex-direction: column;
+<<<<<<< HEAD
     justify-content: space-between;
+=======
+    justify-content: space-between; /* 让定位和数据上下分布 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 }
 
 .group-label {
@@ -512,6 +600,10 @@ input[type="submit"] {
     margin-bottom: 10px;
 }
 
+<<<<<<< HEAD
+=======
+/* 定位网格：依然保持横向 2x2 以节省高度 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .location-flat-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -546,6 +638,10 @@ input[type="submit"] {
 .loc-text h6 { font-size: 11px; color: #777; margin: 0; }
 .loc-text p { font-size: 13px; color: #333; margin: 0; font-weight: 500; }
 
+<<<<<<< HEAD
+=======
+/* 核心数据：2x2 排列 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .stats-2x2-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -586,3 +682,40 @@ input[type="submit"] {
     color: #888;
 }
 
+<<<<<<< HEAD
+=======
+/* .progress-bar-container {
+    position: relative;
+    width: 120px;
+    height: 16px;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 100%;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #10b981, #3dd6b8);
+    border-radius: 8px;
+    transition: width 1.5s ease-in-out;
+}
+
+.progress-text {
+    position: absolute;
+    right: -40px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #10b981;
+} */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514

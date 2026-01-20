@@ -1,4 +1,5 @@
 :root {
+<<<<<<< HEAD
   --primary-blue: #0d9488;
   --primary-blue-light: #10b981;
   --primary-blue-dark: #064e3b;
@@ -8,6 +9,24 @@
   --secondary-orange: #f59e0b;
   --secondary-orange-light: #fef3c7;
 
+=======
+  /* 主色调：由深林绿到明亮绿 */
+  --primary-blue: #0d9488;
+  /* 对应原先的 Teal 绿色 */
+  --primary-blue-light: #10b981;
+  /* 对应明亮的草绿 */
+  --primary-blue-dark: #064e3b;
+  /* 对应深林绿 */
+
+  /* 辅助色：绿色系的互补或邻近色 */
+  --secondary-green: #22c55e;
+  --secondary-green-light: #86efac;
+  --secondary-orange: #f59e0b;
+  /* 琥珀金：保留作为点缀，不突兀 */
+  --secondary-orange-light: #fef3c7;
+
+  /* 中性色：纸墨感 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
   --neutral-gray: #f8fafc;
   --neutral-gray-light: #f9fbfa;
   --neutral-gray-medium: #e2e8f0;
@@ -15,9 +34,17 @@
   --neutral-dark: #0f172a;
   --neutral-white: #ffffff;
 
+<<<<<<< HEAD
   --accent-purple: #ebf6ef;
   --accent-red: #ef4444;
 
+=======
+  /* 警告色 */
+  --accent-purple: #ebf6ef;
+  --accent-red: #ef4444;
+
+  /* 阴影：改用绿色调阴影，更通透 */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
   --shadow-soft: 0 4px 12px rgba(6, 78, 59, 0.05);
   --shadow-medium: 0 8px 24px rgba(6, 78, 59, 0.1);
   --shadow-strong: 0 12px 32px rgba(6, 78, 59, 0.15);
@@ -34,10 +61,21 @@
   --faq-red: #ef4444;
 
   --primary-teal: var(--primary-blue);
+<<<<<<< HEAD
   --primary-teal-light: var(--primary-blue-light);
   --primary-teal-dark: var(--primary-blue-dark);
   --secondary-blue: var(--primary-blue-light);
   --accent-yellow: var(--secondary-orange);
+=======
+  /* #0d9488 */
+  --primary-teal-light: var(--primary-blue-light);
+  /* #10b981 */
+  --primary-teal-dark: var(--primary-blue-dark);
+  /* #064e3b */
+  --secondary-blue: var(--primary-blue-light);
+  --accent-yellow: var(--secondary-orange);
+  /* #f59e0b */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 }
 
 body.study_page {
@@ -58,6 +96,10 @@ h3 {
 }
 
 
+<<<<<<< HEAD
+=======
+/* --- Box 1: Hero (问号装饰) --- */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .study_hero {
   height: 65vh;
   /* background: var(--faq-green); */
@@ -121,6 +163,11 @@ h3 {
   background: var(--faq-gold);
   margin: 20px auto;
 }
+<<<<<<< HEAD
+=======
+
+/* ===== 容器与通用样式 ===== */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -168,6 +215,10 @@ h3 {
   font-style: italic;
 }
 
+<<<<<<< HEAD
+=======
+/* ===== 盒子1：学科分类导航网格 ===== */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .category-tabs {
   background: var(--neutral-gray-light);
   border-radius: var(--radius-medium);
@@ -487,6 +538,10 @@ h3 {
   box-shadow: var(--shadow-soft);
 }
 
+<<<<<<< HEAD
+=======
+/* ===== 盒子2：学霸笔记展示墙 ===== */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .notes-filter {
   display: flex;
   justify-content: space-between;
@@ -567,6 +622,7 @@ h3 {
 }
 
 .note-preview.math-bg {
+<<<<<<< HEAD
   /* background: linear-gradient(45deg, #3498db, #2ecc71); */
   background-image: url("../images/gaoshu.png");
 }
@@ -584,6 +640,21 @@ h3 {
 .note-preview.physics-bg {
   /* background: linear-gradient(45deg, #e74c3c, #f39c12); */
   background-image: url("../images/wuli.png");
+=======
+  background: linear-gradient(45deg, #3498db, #2ecc71);
+}
+
+.note-preview.english-bg {
+  background: linear-gradient(45deg, #9b59b6, #3498db);
+}
+
+.note-preview.cs-bg {
+  background: linear-gradient(45deg, #2c3e50, #34495e);
+}
+
+.note-preview.physics-bg {
+  background: linear-gradient(45deg, #e74c3c, #f39c12);
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 }
 
 .note-badge {
@@ -826,6 +897,10 @@ h3 {
   font-size: 1.1rem;
 }
 
+<<<<<<< HEAD
+=======
+/* ===== 盒子3：课件与资料时间线 ===== */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .timeline-container {
   background: var(--neutral-gray-light);
   border-radius: var(--radius-medium);
@@ -1103,6 +1178,10 @@ h3 {
   font-size: 0.85rem;
 }
 
+<<<<<<< HEAD
+=======
+/* ===== 盒子4：智能搜索与筛选 ===== */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .search-container {
   background: var(--neutral-gray-light);
   border-radius: var(--radius-medium);
@@ -1390,6 +1469,10 @@ h3 {
   font-size: 1.1rem;
 }
 
+<<<<<<< HEAD
+=======
+/* ===== 盒子5：学习工具与社区互动 ===== */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .tools-container {
   background: var(--neutral-gray-light);
   border-radius: var(--radius-medium);
@@ -1766,6 +1849,10 @@ h3 {
   transform: translateY(-2px);
 }
 
+<<<<<<< HEAD
+=======
+/* ===== 上传资料CTA ===== */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 .upload-cta {
   background: linear-gradient(135deg, var(--primary-teal), var(--secondary-blue));
   border-radius: var(--radius-large);
@@ -1825,6 +1912,10 @@ h3 {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
+<<<<<<< HEAD
+=======
+/* ===== 页脚样式 ===== */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 footer {
   background: linear-gradient(135deg, var(--neutral-dark), #1a252f);
   color: var(--neutral-white);
@@ -1921,6 +2012,138 @@ footer {
     text-decoration: underline;
 }
 
+<<<<<<< HEAD
+=======
+/* ===== 响应式设计 ===== */
+@media (max-width: 992px) {
+  .resource-title {
+    font-size: 2.5rem;
+  }
+
+  .resource-stats {
+    justify-content: center;
+  }
+
+  .cta-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cta-text {
+    text-align: center;
+  }
+
+  .search-bar {
+    flex-direction: column;
+  }
+
+  .search-input-group {
+    min-width: 100%;
+  }
+
+  .note-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .note-rating {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .resource-banner {
+    padding: 60px 0 100px;
+  }
+
+  .content-box {
+    padding: 30px 20px;
+  }
+
+  .tab-buttons {
+    flex-direction: column;
+  }
+
+  .tab-btn {
+    width: 100%;
+  }
+
+  .notes-filter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sort-options {
+    align-self: stretch;
+  }
+
+  .sort-select {
+    width: 100%;
+  }
+
+  .timeline-nav {
+    flex-direction: column;
+  }
+
+  .timeline-nav-btn {
+    width: 100%;
+  }
+
+  .upload-cta {
+    padding: 30px 20px;
+  }
+
+  .bounty-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .bounty-reward {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .resource-title {
+    font-size: 2rem;
+  }
+
+  .box-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .stat-item {
+    min-width: 120px;
+    padding: 12px 15px;
+  }
+
+  .stat-number {
+    font-size: 1.8rem;
+  }
+
+  .note-actions {
+    flex-direction: column;
+  }
+
+  .toplist-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .rank {
+    margin-right: 0;
+  }
+
+  .item-meta {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 /* ===== 动画效果 ===== */
 @keyframes fadeInUp {
   from {

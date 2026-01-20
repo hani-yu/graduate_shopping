@@ -46,7 +46,11 @@ $(document).ready(function () {
             }
         }
 
+<<<<<<< HEAD
         // 绘制连线逻辑
+=======
+        // 核心：绘制连线逻辑
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
         function drawLines() {
             for (let i = 0; i < particles.length; i++) {
                 for (let j = i + 1; j < particles.length; j++) {
@@ -59,7 +63,11 @@ $(document).ready(function () {
                         ctx.beginPath();
                         // 连线的透明度随距离增加而变淡
                         const opacity = 1 - (distance / minDistance);
+<<<<<<< HEAD
                         ctx.strokeStyle = `rgba(255, 255, 255, ${opacity * 0.3})`;
+=======
+                        ctx.strokeStyle = `rgba(255, 255, 255, ${opacity * 0.3})`; 
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
                         ctx.lineWidth = 0.8;
                         ctx.moveTo(particles[i].x, particles[i].y);
                         ctx.lineTo(particles[j].x, particles[j].y);
@@ -72,7 +80,11 @@ $(document).ready(function () {
 
         function loop() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
             // 1. 更新并绘制点
             particles.forEach(p => {
                 p.update();
@@ -95,6 +107,7 @@ $(document).ready(function () {
         });
     }
 
+<<<<<<< HEAD
     // ---  视差偏移  ---
     $(document).on('mousemove', function (e) {
         const x = (window.innerWidth / 2 - e.pageX) * 0.01;
@@ -102,17 +115,31 @@ $(document).ready(function () {
         $('.cat_text_group').css('transform', `translate(${x}px, ${y}px)`);
 
         $('.cat_floating_elements i').each(function (i) {
+=======
+    // --- 2. 视差偏移 (保持不变) ---
+    $(document).on('mousemove', function(e) {
+        const x = (window.innerWidth / 2 - e.pageX) * 0.01;
+        const y = (window.innerHeight / 2 - e.pageY) * 0.01;
+        $('.cat_text_group').css('transform', `translate(${x}px, ${y}px)`);
+        
+        $('.cat_floating_elements i').each(function(i) {
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
             const factor = (i + 1) * 0.02;
             $(this).css('transform', `translate(${-x * factor * 20}px, ${-y * factor * 20}px)`);
         });
     });
 
     /* -------- 磁性 3D 倾斜效果 -------- */
+<<<<<<< HEAD
     $('.product_item').on('mousemove', function (e) {
+=======
+    $('.product_item').on('mousemove', function(e) {
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
         const card = $(this);
         const rect = this.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
+<<<<<<< HEAD
 
         const centerX = rect.width / 2;
         const centerY = rect.height / 2;
@@ -131,6 +158,26 @@ $(document).ready(function () {
     /* 
        分类筛选 + 动画
   */
+=======
+        
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        // 计算旋转角度 (最大 10 度)
+        const rotateX = (centerY - y) / 10;
+        const rotateY = (x - centerX) / 10;
+        
+        card.css('transform', `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-12px)`);
+    });
+
+    $('.product_item').on('mouseleave', function() {
+        $(this).css('transform', 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0)');
+    });
+
+    /* ===============================
+       1. 分类筛选 + 动画
+    =============================== */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     $('#categoryFilter li').click(function () {
         const category = $(this).data('cat');
 
@@ -156,9 +203,15 @@ $(document).ready(function () {
 
 
 
+<<<<<<< HEAD
     /* 
     搜索即时筛选
  */
+=======
+    /* ===============================
+       2. 搜索即时筛选
+    =============================== */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     $('.search_bar_wrap input').on('input', function () {
         const keyword = $(this).val().toLowerCase();
 
@@ -181,15 +234,27 @@ $(document).ready(function () {
         $('#categoryFilter li[data-cat="' + cat + '"]').trigger('click');
     });
 
+<<<<<<< HEAD
     /*  排序点击动画
     */
+=======
+    /* ===============================
+       3. 排序点击动画
+    =============================== */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     $('.sort_options span').click(function () {
         $(this).addClass('active').siblings().removeClass('active');
         $('.product_item').addClass('animate__animated animate__fadeInUp');
     });
 
+<<<<<<< HEAD
     /*  滚动进入动画
    */
+=======
+    /* ===============================
+       4. 滚动进入动画
+    =============================== */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     $(window).on('scroll', function () {
         $('.product_item').each(function () {
             if ($(this).offset().top < $(window).scrollTop() + $(window).height() - 50) {
@@ -207,13 +272,20 @@ $(document).ready(function () {
     }, 3000);
 
 
+<<<<<<< HEAD
     /* 更新数量
     */
+=======
+    /* ===============================
+       公共：更新数量
+    =============================== */
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
     function updateCount() {
         const count = $('.product_item:visible').length;
         $('#itemCount').text(count);
     }
 
+<<<<<<< HEAD
     /*  处理从导航栏跳转过来的分类锚点
     */
     function handleHashJump() {
@@ -228,6 +300,23 @@ $(document).ready(function () {
                 // 2. 触发点击事件
                 $targetFilter.trigger('click');
 
+=======
+    /* ===============================
+   5. 处理从导航栏跳转过来的分类锚点
+    =============================== */
+    function handleHashJump() {
+        // 获取地址栏的 hash（例如 #books）
+        const hash = window.location.hash.replace('#', '');
+        
+        if (hash) {
+            // 1. 找到侧边栏中 data-cat 属性等于这个 hash 的选项
+            const $targetFilter = $(`#categoryFilter li[data-cat="${hash}"]`);
+            
+            if ($targetFilter.length > 0) {
+                // 2. 触发点击事件（执行你已经写好的筛选逻辑）
+                $targetFilter.trigger('click');
+                
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
                 // 3. 平滑滚动到商品区域
                 $('html, body').animate({
                     scrollTop: $('.content_area').offset().top - 100
@@ -240,7 +329,11 @@ $(document).ready(function () {
     handleHashJump();
 
     // 监听地址栏变化（当用户已经在分类页，再次点击顶部导航菜单时触发）
+<<<<<<< HEAD
     $(window).on('hashchange', function () {
+=======
+    $(window).on('hashchange', function() {
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
         handleHashJump();
     });
 });

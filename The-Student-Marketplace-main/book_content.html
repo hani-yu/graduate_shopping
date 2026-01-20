@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>墨香传承·学海拾贝 - 校园教材流转平台</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/archive_detail.css">
+    <link rel="stylesheet" href="css/book_content.css"> <!-- 本页专属 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://kit.fontawesome.com/0ad2b99521.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body class="book_page">
+ 
+    <!-- Box 1: 顶部导航栏 (全站统一) -->
+    <nav class="daohang">
+        <div class="daohang_wrapper">
+            <ul class="daohang_list">
+                <li class="daohang_items"><a href="index.html">首页</a></li>
+                <li class="daohang_items"><a href="about.html">平台概况</a></li>
+                <li class="daohang_items active"><a href="categories.html">商品分类</a></li>
+                <li class="daohang_items"><a href="guide.html">流转锦囊</a></li>
+                <li class="daohang_items"><a href="events.html">活动专区</a></li>
+                <li class="daohang_items"><a href="user.html">用户中心</a></li>
+            </ul>
+            <div class="nav_auth"><a href="signin.html" class="btn_nav">登录</a></div>
+        </div>
+    </nav>
+
+
+    <!-- Box 1: Hero Banner (法典封面风格) -->
+    <header class="book_hero">
+        <div class="hero_overlay"></div>
+        <div class="hero_content animate__animated animate__fadeIn">
+            <span class="en_tag">KNOWLEDGE LEGACY</span>
+            <h1 class="elegant_title">墨香·传薪 <span class="book_seal">书香</span></h1>
+            <div class="elegant_line"></div>
+            <p class="elegant_subtitle">一纸千金 · 笔耕不辍 · 让智慧在字里行间温暖流转</p>
+        </div>
+        <!-- 装饰波浪 -->
+        <div class="banner_wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C0,0,31.83,14.28,64,27.1,126.31,52,187.31,68,250.31,68c31.11,0,32.25-10.15,71.08-11.56Z"
+                    fill="#f9fbfa"></path>
+            </svg>
+        </div>
+    </header>
+
+    
+    <main class="container">
+        
+        <!-- 模块1：学霸光环盒 -->
+        <section class="module star-box" id="module1">
+            <h2 class="module-title"><i class="fas fa-crown"></i> 【学霸光环盒】</h2>
+            <div class="star-grid">
+                <div class="star-card">
+                    <i class="fas fa-medal star-medal"></i>
+                    <div class="star-avatar" style="background-color: #4a7bc8; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold;">张</div>
+                    <h3 class="star-name">张学长</h3>
+                    <p class="star-achievement">保研至清华大学</p>
+                    <p class="star-books">全套法学教材 + 笔记</p>
+                </div>
+                <div class="star-card">
+                    <i class="fas fa-medal star-medal"></i>
+                    <div class="star-avatar" style="background-color: #e6a23c; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold;">李</div>
+                    <h3 class="star-name">李学姐</h3>
+                    <p class="star-achievement">考研总分425分</p>
+                    <p class="star-books">高等数学全套笔记</p>
+                </div>
+                <div class="star-card">
+                    <i class="fas fa-medal star-medal"></i>
+                    <div class="star-avatar" style="background-color: #67c23a; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold;">王</div>
+                    <h3 class="star-name">王学长</h3>
+                    <p class="star-achievement">雅思8.0分</p>
+                    <p class="star-books">英语备考资料全套</p>
+                </div>
+                <div class="star-card">
+                    <i class="fas fa-medal star-medal"></i>
+                    <div class="star-avatar" style="background-color: #f56c6c; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold;">赵</div>
+                    <h3 class="star-name">赵学姐</h3>
+                    <p class="star-achievement">CPA一次性通过</p>
+                    <p class="star-books">会计学专业全套教材</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 模块2：类目检索盒 -->
+        <section class="module" id="module2">
+            <h2 class="module-title"><i class="fas fa-search"></i> 【类目检索盒】</h2>
+            <div class="category-grid">
+                <div class="category-card" data-category="kaoyan">
+                    <i class="fas fa-university category-icon"></i>
+                    <h3 class="category-name">考研资料</h3>
+                    <span class="category-count">428本</span>
+                </div>
+                <div class="category-card" data-category="major">
+                    <i class="fas fa-book-open category-icon"></i>
+                    <h3 class="category-name">专业课教材</h3>
+                    <span class="category-count">1,203本</span>
+                </div>
+                <div class="category-card" data-category="elective">
+                    <i class="fas fa-book-reader category-icon"></i>
+                    <h3 class="category-name">公选课轻松读</h3>
+                    <span class="category-count">567本</span>
+                </div>
+                <div class="category-card" data-category="language">
+                    <i class="fas fa-language category-icon"></i>
+                    <h3 class="category-name">语言考证</h3>
+                    <span class="category-count">312本</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 模块3：笔记预览盒 -->
+        <section class="module" id="module3">
+            <h2 class="module-title"><i class="fas fa-sticky-note"></i> 【笔记预览盒】</h2>
+            <div class="notes-preview">
+                <div class="book-display">
+                    <div class="book-3d" id="book3d">
+                        <div class="book-cover">
+                            <div>民法总论</div>
+                            <div style="font-size: 14px; margin-top: 10px;">学霸笔记版</div>
+                        </div>
+                        <div class="book-pages">
+                            <div class="note-sample" id="note1">
+                                <h4>第一章 民事法律关系</h4>
+                                <p>1. 民事法律关系的要素：主体、客体、内容</p>
+                                <p>2. 民事权利的分类：</p>
+                                <p>&nbsp;&nbsp;- 财产权 vs 人身权</p>
+                                <p>&nbsp;&nbsp;- 绝对权 vs 相对权</p>
+                                <p>&nbsp;&nbsp;- 支配权、请求权、形成权、抗辩权</p>
+                                <p>3. 重点：形成权的行使通常受除斥期间限制</p>
+                            </div>
+                            <div class="note-sample" id="note2">
+                                <h4>高等数学重点公式</h4>
+                                <p>• 泰勒公式：f(x)=f(x₀)+f'(x₀)(x-x₀)+...</p>
+                                <p>• 拉格朗日中值定理：∃ξ∈(a,b)使f'(ξ)=[f(b)-f(a)]/(b-a)</p>
+                                <p>• 积分公式：∫udv=uv-∫vdu</p>
+                                <p>• 常考题型：极限计算、微分中值定理证明、积分应用</p>
+                            </div>
+                            <div class="note-sample" id="note3">
+                                <h4>英语写作高级句型</h4>
+                                <p>1. 强调句：It is + 被强调部分 + that/who + 句子其余部分</p>
+                                <p>2. 倒装句：Only in this way can we solve the problem.</p>
+                                <p>3. 非谓语动词：Having finished the work, he went home.</p>
+                                <p>4. 虚拟语气：If I were you, I would accept the offer.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="notes-controls">
+                    <button class="note-control-btn" data-note="note1">
+                        <strong>《民法总论》学霸笔记</strong><br>
+                        <small>法学院张学长保研笔记，重点清晰，案例丰富</small>
+                    </button>
+                    <button class="note-control-btn" data-note="note2">
+                        <strong>《高等数学》解题笔记</strong><br>
+                        <small>李学姐考研数学145分笔记，涵盖所有重要题型</small>
+                    </button>
+                    <button class="note-control-btn" data-note="note3">
+                        <strong>《英语写作》高级表达</strong><br>
+                        <small>王学长雅思8.0分写作模板，提升作文档次</small>
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 模块4：价格天平盒 -->
+        <section class="module" id="module4">
+            <h2 class="module-title"><i class="fas fa-balance-scale"></i> 【价格天平盒】</h2>
+            <div class="price-comparison">
+                <div class="price-card new-price">
+                    <div class="price-label">新书价格</div>
+                    <div class="price-amount">¥89.00</div>
+                    <div class="price-note">官方定价</div>
+                </div>
+                
+                <div class="balance-scale">
+                    <i class="fas fa-balance-scale-right"></i>
+                </div>
+                
+                <div class="price-card used-price">
+                    <div class="price-label">二手教材</div>
+                    <div class="price-amount">¥8.90</div>
+                    <div class="price-note">含学霸笔记</div>
+                    <div class="price-discount">1折起</div>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 20px; color: var(--text-light);">购买二手教材，不仅省钱，还能获得学霸的珍贵笔记！</p>
+        </section>
+        
+        <!-- 模块5：实时流转盒 -->
+        <section class="module realtime-flow" id="module5">
+            <h2 class="module-title"><i class="fas fa-sync-alt"></i> 【实时流转盒】</h2>
+            <div class="flow-items">
+                <div class="flow-item">
+                    <div class="flow-avatar">张</div>
+                    <div class="flow-text">法学院张同学 3分钟前入手了《民法总论》</div>
+                    <div class="flow-time">刚刚</div>
+                </div>
+                <div class="flow-item">
+                    <div class="flow-avatar">李</div>
+                    <div class="flow-text">数学系李同学 8分钟前购买了《高等数学习题集》</div>
+                    <div class="flow-time">8分钟前</div>
+                </div>
+                <div class="flow-item">
+                    <div class="flow-avatar">王</div>
+                    <div class="flow-text">外语学院王同学 15分钟前入手了《雅思写作高分指南》</div>
+                    <div class="flow-time">15分钟前</div>
+                </div>
+                <div class="flow-item">
+                    <div class="flow-avatar">赵</div>
+                    <div class="flow-text">经管学院赵同学 25分钟前购买了《宏观经济学》</div>
+                    <div class="flow-time">25分钟前</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 模块6：主要展架盒 -->
+        <section class="module" id="module6">
+            <h2 class="module-title"><i class="fas fa-th-large"></i> 【主要展架盒】</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-badge">附赠全套笔记</div>
+                    <div class="product-img">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">《民法总论》（第五版）</h3>
+                        <p class="product-desc">王泽鉴著，法学院必修教材，包含学长完整课堂笔记和案例分析。</p>
+                        <div class="product-price">
+                            <span class="price-now">¥12.50</span>
+                            <span class="price-original">¥89.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-badge">附赠PPT</div>
+                    <div class="product-img">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">《高等数学》（上册）</h3>
+                        <p class="product-desc">同济大学第七版，包含考研重点标注和习题解答，附赠老师课件。</p>
+                        <div class="product-price">
+                            <span class="price-now">¥15.80</span>
+                            <span class="price-original">¥68.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-badge">学霸笔记</div>
+                    <div class="product-img">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">《新东方雅思词汇》</h3>
+                        <p class="product-desc">乱序版，包含记忆方法和真题例句，附赠学长8.0分备考计划。</p>
+                        <div class="product-price">
+                            <span class="price-now">¥9.90</span>
+                            <span class="price-original">¥65.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-badge">附赠习题解答</div>
+                    <div class="product-img">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">《宏观经济学》</h3>
+                        <p class="product-desc">曼昆著，第九版，包含重点概念梳理和课后习题完整解答。</p>
+                        <div class="product-price">
+                            <span class="price-now">¥18.50</span>
+                            <span class="price-original">¥99.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 模块7：避坑指南盒 -->
+        <section class="module warning-box" id="module7">
+            <h2 class="module-title"><i class="fas fa-exclamation-triangle"></i> 【避坑指南盒】</h2>
+            <div class="warning-list">
+                <div class="warning-item">
+                    <i class="fas fa-clipboard-check warning-icon"></i>
+                    <div class="warning-content">
+                        <h4>检查版本号</h4>
+                        <p>确认教材是第几版，不同版本内容差异可能很大，特别是考研指定教材。</p>
+                    </div>
+                </div>
+                <div class="warning-item">
+                    <i class="fas fa-file-excel warning-icon"></i>
+                    <div class="warning-content">
+                        <h4>检查是否缺页</h4>
+                        <p>仔细翻阅教材，确保没有缺页、撕页情况，特别是习题解答部分。</p>
+                    </div>
+                </div>
+                <div class="warning-item">
+                    <i class="fas fa-highlighter warning-icon"></i>
+                    <div class="warning-content">
+                        <h4>检查涂改情况</h4>
+                        <p>少量笔记是加分项，但大量涂改会影响阅读，购买前请仔细查看。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 模块8：赠书专区盒 -->
+        <section class="module free-book-box" id="module8">
+            <div class="free-icon">
+                <i class="fas fa-gift"></i>
+            </div>
+            <h2 class="free-title">【赠书专区盒】</h2>
+            <p class="free-subtitle">毕业带不走的教材免费赠送区，传递知识，传递温暖。仅限本校同学自提，每人限领2本。</p>
+            
+            <div class="free-books">
+                <div class="free-book-item">
+                    <div class="free-book-img">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3 class="free-book-title">《大学英语1》</h3>
+                    <p class="free-book-location">15号楼302室</p>
+                </div>
+                <div class="free-book-item">
+                    <div class="free-book-img">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3 class="free-book-title">《思修与法基》</h3>
+                    <p class="free-book-location">8号楼115室</p>
+                </div>
+                <div class="free-book-item">
+                    <div class="free-book-img">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3 class="free-book-title">《计算机基础》</h3>
+                    <p class="free-book-location">图书馆3楼服务台</p>
+                </div>
+            </div>
+            
+            <button class="free-btn" id="claimBooks">
+                <i class="fas fa-hands-helping"></i>
+                立即领取赠书
+            </button>
+        </section>
+    </main>
+    
+    <footer class="footer_area">
+        <div class="footer_wrapper">
+            <div class="bottom_bar">
+                <p>&copy; 2026 Campus Market | 校园毕业物品流转平台团队 | <a href="#">服务条款</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学霸笔记锦囊详情 - 毕业物品流转平台</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/gift_detail.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- 第二部分：学科分类与内容详情 -->
+        <section id="categories" class="content-section">
+            <div class="section-header">
+                <div class="section-number">02</div>
+                <h2 class="section-title">学科分类与内容详情</h2>
+                <p class="section-desc">覆盖12大学科门类，满足不同专业学习需求</p>
+            </div>
+
+            <div class="section-content">
+                <!-- 学科大类导航 -->
+                <div class="category-navigation">
+                    <div class="category-nav-item active" data-category="science">
+                        <div class="nav-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="nav-text">
+                            <div class="nav-title">理工科类</div>
+                            <div class="nav-count">1,245份笔记</div>
+                        </div>
+                    </div>
+                    
+                    <div class="category-nav-item" data-category="management">
+                        <div class="nav-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="nav-text">
+                            <div class="nav-title">经管文法类</div>
+                            <div class="nav-count">1,872份笔记</div>
+                        </div>
+                    </div>
+                    
+                    <div class="category-nav-item" data-category="medical">
+                        <div class="nav-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <div class="nav-text">
+                            <div class="nav-title">医学艺术类</div>
+                            <div class="nav-count">893份笔记</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 学科详情内容 -->
+                <div class="category-details-container">
+                    <!-- 理工科类详情 -->
+                    <div class="category-details active" id="science-details">
+                        <div class="category-header">
+                            <div class="category-badge science-badge">
+                                <i class="fas fa-laptop-code"></i>
+                                <span>理工科类</span>
+                            </div>
+                            <div class="category-total">共1,245份笔记</div>
+                        </div>
+                        
+                        <div class="subject-grid">
+                            <div class="subject-card">
+                                <div class="subject-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <div class="subject-content">
+                                    <h4>计算机科学</h4>
+                                    <div class="subject-courses">
+                                        <span class="course">数据结构</span>
+                                        <span class="course">算法</span>
+                                        <span class="course">操作系统</span>
+                                        <span class="course">计算机网络</span>
+                                    </div>
+                                    <div class="subject-count">217份笔记</div>
+                                </div>
+                            </div>
+                            
+                            <div class="subject-card">
+                                <div class="subject-icon">
+                                    <i class="fas fa-microchip"></i>
+                                </div>
+                                <div class="subject-content">
+                                    <h4>电子信息</h4>
+                                    <div class="subject-courses">
+                                        <span class="course">电路原理</span>
+                                        <span class="course">数字逻辑</span>
+                                        <span class="course">信号处理</span>
+                                    </div>
+                                    <div class="subject-count">189份笔记</div>
+                                </div>
+                            </div>
+                            
+                            <div class="subject-card">
+                                <div class="subject-icon">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                                <div class="subject-content">
+                                    <h4>机械工程</h4>
+                                    <div class="subject-courses">
+                                        <span class="course">理论力学</span>
+                                        <span class="course">材料力学</span>
+                                        <span class="course">机械设计</span>
+                                    </div>
+                                    <div class="subject-count">156份笔记</div>
+                                </div>
+                            </div>
+                            
+                            <div class="subject-card">
+                                <div class="subject-icon">
+                                    <i class="fas fa-building"></i>
+                                </div>
+                                <div class="subject-content">
+                                    <h4>土木建筑</h4>
+                                    <div class="subject-courses">
+                                        <span class="course">结构力学</span>
+                                        <span class="course">建筑材料</span>
+                                        <span class="course">建筑设计</span>
+                                    </div>
+                                    <div class="subject-count">134份笔记</div>
+                                </div>
+                            </div>
+                            
+                            <div class="subject-card">
+                                <div class="subject-icon">
+                                    <i class="fas fa-square-root-alt"></i>
+                                </div>
+                                <div class="subject-content">
+                                    <h4>数学物理</h4>
+                                    <div class="subject-courses">
+                                        <span class="course">高等数学</span>
+                                        <span class="course">线性代数</span>
+                                        <span class="course">大学物理</span>
+                                    </div>
+                                    <div class="subject-count">312份笔记</div>
+                                </div>
+                            </div>
+                            
+                            <div class="subject-card">
+                                <div class="subject-icon">
+                                    <i class="fas fa-flask"></i>
+                                </div>
+                                <div class="subject-content">
+                                    <h4>化学化工</h4>
+                                    <div class="subject-courses">
+                                        <span class="course">有机化学</span>
+                                        <span class="course">物理化学</span>
+                                        <span class="course">化工原理</span>
+                                    </div>
+                                    <div class="subject-count">237份笔记</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 经管文法类详情 -->
+                    <div class="category-details" id="management-details">
+                        <div class="category-header">
+                            <div class="category-badge management-badge">
+                                <i class="fas fa-chart-line"></i>
+                                <span>经管文法类</span>
+                            </div>
+                            <div class="category-total">共1,872份笔记</div>
+                        </div>
+                        
+                        <div class="subject-grid">
+                            <div class="subject-card">
+                                <div class="subject-icon">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                </div>
+                                <div class="subject-content">
+                                    <h4>经济学</h4>
+                                    <div class="subject-courses">
+                                        <span class="course">微观经济学</span>
+                                        <span class="course">宏观经济学</span>
+                                        <span class="course">计量经济学</span>
+                                    </div>
+                                    <div class="subject-count">328份笔记</div>
+                                </div>
+                            </div>
+                            
+                            <div class="subject-card">
+                                <div class="subject-icon">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+                                <div class="subject-content">
+                                    <h4>管理学</h4>
+                                    <div class="subject-courses">
+                                        <span class="course">管理学原理</span>
+                                        <span class="course">市场营销</span>
+                                        <span class="course">人力资源管理</span>
+                                    </div>
+                                    <div class="subject-count">415份笔记</div>
+                                </div>
+                            </div>
+                            
+                            <div class="subject-card">
+                                <div class="subject-icon">
+                                    <i class="fas fa-gavel"></i>
+                                </div>
+                                <div class="subject-content">
+                                    <h4>法学</h4>
+                                    <div class="subject-courses">
+                                        <span class="course">民法总论</span>
+                                        <span class="course">刑法学</span>
+                                        <span class="course">行政法学</span>
+                                    </div>
+                                    <div class="subject-count">287份笔记</div>
+                                </div>
+                            </div>
+                            
+                            <div class="subject-card">
+                                <div class="subject-icon">
+                                    <i class="fas fa-book-open"></i>
+                                </div>
+                                <div class="subject-content">
+                                    <h4>文学外语</h4>
+                                    <div class="subject-courses">
+                                        <span class="course">现代汉语</span>
+                                        <span class="course">英国文学</span>
+                                        <span class="course">高级英语</span>
+                                    </div>
+                                    <div class="subject-count">562份笔记</div>
+                                </div>
+                            </div>
+                            
+                            <div class="subject-card">
+                                <div class="subject-icon">
+                                    <i class="fas fa-bullhorn"></i>
+                                </div>
+                                <div class="subject-content">
+                                    <h4>新闻传播</h4>
+                                    <div class="subject-courses">
+                                        <span class="course">新闻学概论</span>
+                                        <span class="course">传播学理论</span>
+                                        <span class="course">广告学</span>
+                                    </div>
+                                    <div class="subject-count">280份笔记</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 医学艺术类详情 -->
+                    <div class="category-details" id="medical-details">
+                        <div class="category-header">
+                            <div class="category-badge medical-badge">
+                                <i class="fas fa-heartbeat"></i>
+                                <span>医学艺术类</span>
+                            </div>
+                            <div class="category-total">共893份笔记</div>
+                        </div>
+                        
+                        <div class="subject-grid">
+                            <div class="subject-card">
+                                <div class="subject-icon">
+                                    <i class="fas fa-stethoscope"></i>
+                                </div>
+                                <div class="subject-content">
+                                    <h4>医学基础</h4>
+                                    <div class="subject-courses">
+                                        <span class="course">人体解剖学</span>
+                                        <span class="course">生理学</span>
+                                        <span class="course">生物化学</span>
+                                    </div>
+                                    <div class="subject-count">321份笔记</div>
+                                </div>
+                            </div>
+                            
+                            <div class="subject-card">
+                                <div class="subject-icon">
+                                    <i class="fas fa-user-md"></i>
+                                </div>
+                                <div class="subject-content">
+                                    <h4>临床医学</h4>
+                                    <div class="subject-courses">
+                                        <span class="course">内科学</span>
+                                        <span class="course">外科学</span>
+                                        <span class="course">诊断学</span>
+                                    </div>
+                                    <div class="subject-count">287份笔记</div>
+                                </div>
+                            </div>
+                            
+                            <div class="subject-card">
+                                <div class="subject-icon">
+                                    <i class="fas fa-palette"></i>
+                                </div>
+                                <div class="subject-content">
+                                    <h4>艺术设计</h4>
+                                    <div class="subject-courses">
+                                        <span class="course">设计概论</span>
+                                        <span class="course">色彩构成</span>
+                                        <span class="course">素描基础</span>
+                                    </div>
+                                    <div class="subject-count">185份笔记</div>
+                                </div>
+                            </div>
+                            
+                            <div class="subject-card">
+                                <div class="subject-icon">
+                                    <i class="fas fa-music"></i>
+                                </div>
+                                <div class="subject-content">
+                                    <h4>音乐表演</h4>
+                                    <div class="subject-courses">
+                                        <span class="course">乐理基础</span>
+                                        <span class="course">声乐技巧</span>
+                                        <span class="course">舞台表演</span>
+                                    </div>
+                                    <div class="subject-count">100份笔记</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 学习阶段划分 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-graduation-cap"></i>
+                        按学习阶段划分
+                    </h3>
+                    
+                    <div class="stage-tabs">
+                        <div class="stage-nav">
+                            <button class="stage-btn active" data-stage="basic">基础阶段</button>
+                            <button class="stage-btn" data-stage="advanced">进阶阶段</button>
+                            <button class="stage-btn" data-stage="final">冲刺阶段</button>
+                        </div>
+                        
+                        <div class="stage-content">
+                            <!-- 基础阶段 -->
+                            <div class="stage-pane active" id="basic-pane">
+                                <div class="stage-features">
+                                    <div class="feature">
+                                        <i class="fas fa-book"></i>
+                                        <div>
+                                            <h5>公共必修课完整笔记</h5>
+                                            <p>高等数学、大学英语、大学物理等</p>
+                                        </div>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fas fa-lightbulb"></i>
+                                        <div>
+                                            <h5>学习方法指导</h5>
+                                            <p>如何高效做笔记、时间管理技巧</p>
+                                        </div>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fas fa-map-signs"></i>
+                                        <div>
+                                            <h5>学科入门指南</h5>
+                                            <p>专业认知、课程体系介绍</p>
+                                        </div>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fas fa-exclamation-triangle"></i>
+                                        <div>
+                                            <h5>常见学习误区解析</h5>
+                                            <p>避免走弯路，提高学习效率</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 进阶阶段 -->
+                            <div class="stage-pane" id="advanced-pane">
+                                <div class="stage-features">
+                                    <div class="feature">
+                                        <i class="fas fa-star"></i>
+                                        <div>
+                                            <h5>专业核心课重点笔记</h5>
+                                            <p>每专业5-8门核心课程精选笔记</p>
+                                        </div>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fas fa-flask"></i>
+                                        <div>
+                                            <h5>实验报告模板</h5>
+                                            <p>标准格式+优秀范例</p>
+                                        </div>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fas fa-project-diagram"></i>
+                                        <div>
+                                            <h5>课程设计范例</h5>
+                                            <p>完整项目文档+设计思路</p>
+                                        </div>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fas fa-trophy"></i>
+                                        <div>
+                                            <h5>竞赛备赛资料</h5>
+                                            <p>数学建模、程序设计等竞赛资料</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 冲刺阶段 -->
+                            <div class="stage-pane" id="final-pane">
+                                <div class="stage-features">
+                                    <div class="feature">
+                                        <i class="fas fa-university"></i>
+                                        <div>
+                                            <h5>考研重点科目精讲</h5>
+                                            <p>政治、英语、数学、专业课</p>
+                                        </div>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fas fa-comments"></i>
+                                        <div>
+                                            <h5>保研面试题库</h5>
+                                            <p>常见问题+回答技巧</p>
+                                        </div>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fas fa-file-alt"></i>
+                                        <div>
+                                            <h5>毕业论文写作指南</h5>
+                                            <p>选题、开题、写作、答辩全流程</p>
+                                        </div>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="fas fa-award"></i>
+                                        <div>
+                                            <h5>职业资格考证资料</h5>
+                                            <p>教师资格证、注册会计师等</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 星级评分系统 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-star-half-alt"></i>
+                        星级评分系统
+                    </h3>
+                    
+                    <div class="rating-system">
+                        <div class="rating-cards">
+                            <div class="rating-card">
+                                <div class="rating-title">内容完整度</div>
+                                <div class="rating-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="rating-desc">知识点覆盖程度</div>
+                            </div>
+                            
+                            <div class="rating-card">
+                                <div class="rating-title">逻辑清晰度</div>
+                                <div class="rating-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="rating-desc">知识结构是否清晰</div>
+                            </div>
+                            
+                            <div class="rating-card">
+                                <div class="rating-title">书写工整度</div>
+                                <div class="rating-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="rating-desc">字迹、排版是否工整</div>
+                            </div>
+                            
+                            <div class="rating-card">
+                                <div class="rating-title">实用价值</div>
+                                <div class="rating-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="rating-desc">对学习的实际帮助程度</div>
+                            </div>
+                        </div>
+                        
+                        <div class="rating-overview">
+                            <div class="overview-item">
+                                <div class="overview-label">用户好评率</div>
+                                <div class="overview-value">98.7%</div>
+                                <div class="overview-desc">基于真实用户反馈</div>
+                            </div>
+                            
+                            <div class="overview-item">
+                                <div class="overview-label">优质笔记标准</div>
+                                <div class="overview-value">4.5星以上</div>
+                                <div class="overview-desc">为优质笔记筛选门槛</div>
+                            </div>
+                            
+                            <div class="overview-item">
+                                <div class="overview-label">筛选维度</div>
+                                <div class="overview-value">多维度</div>
+                                <div class="overview-desc">支持按评分、下载量、更新时间筛选</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第三部分：获取与使用指南 -->
+        <section id="guide" class="content-section">
+            <div class="section-header">
+                <div class="section-number">03</div>
+                <h2 class="section-title">获取与使用指南</h2>
+                <p class="section-desc">简单三步，开启高效学习之旅</p>
+            </div>
+
+            <div class="section-content">
+                <!-- 解锁条件 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-unlock"></i>
+                        解锁条件
+                    </h3>
+                    
+                    <div class="unlock-options">
+                        <div class="option-header">
+                            <h4>基础获取条件（三选一）</h4>
+                            <div class="option-subtitle">满足任一条件即可解锁锦囊</div>
+                        </div>
+                        
+                        <div class="option-cards">
+                            <div class="option-card">
+                                <div class="option-icon">
+                                    <i class="fas fa-box-open"></i>
+                                </div>
+                                <div class="option-content">
+                                    <h5>发布闲置物品</h5>
+                                    <p>在平台成功发布任意1件闲置物品</p>
+                                    <div class="option-tag">推荐</div>
+                                </div>
+                            </div>
+                            
+                            <div class="option-card">
+                                <div class="option-icon">
+                                    <i class="fas fa-user-plus"></i>
+                                </div>
+                                <div class="option-content">
+                                    <h5>邀请好友注册</h5>
+                                    <p>邀请3位同学注册并完成实名认证</p>
+                                </div>
+                            </div>
+                            
+                            <div class="option-card">
+                                <div class="option-icon">
+                                    <i class="fas fa-share-alt"></i>
+                                </div>
+                                <div class="option-content">
+                                    <h5>分享学习心得</h5>
+                                    <p>参与"知识传承计划"分享自己的学习心得</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="advanced-permissions">
+                            <h4><i class="fas fa-crown"></i> 进阶获取权限</h4>
+                            <div class="permissions-grid">
+                                <div class="permission-item">
+                                    <div class="permission-name">全学科通览</div>
+                                    <div class="permission-desc">满足基础条件即可浏览所有学科分类</div>
+                                </div>
+                                
+                                <div class="permission-item">
+                                    <div class="permission-name">单科下载</div>
+                                    <div class="permission-desc">每成功流转1件物品，可获得3个学科的下载权限</div>
+                                </div>
+                                
+                                <div class="permission-item">
+                                    <div class="permission-name">无限下载</div>
+                                    <div class="permission-desc">成功流转5件以上物品，解锁全部下载权限</div>
+                                </div>
+                                
+                                <div class="permission-item">
+                                    <div class="permission-name">优先更新权</div>
+                                    <div class="permission-desc">钻石等级会员优先获取新上传笔记</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 使用流程 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-list-ol"></i>
+                        使用流程
+                    </h3>
+                    
+                    <div class="process-steps">
+                        <!-- 步骤1 -->
+                        <div class="process-step">
+                            <div class="step-header">
+                                <div class="step-number">第一步</div>
+                                <h4>资格验证</h4>
+                            </div>
+                            <ol class="step-details">
+                                <li>完成上述任一解锁条件</li>
+                                <li>系统自动审核通过（1-2分钟）</li>
+                                <li>收到"学霸笔记锦囊"解锁通知</li>
+                            </ol>
+                        </div>
+                        
+                        <!-- 步骤2 -->
+                        <div class="process-step">
+                            <div class="step-header">
+                                <div class="step-number">第二步</div>
+                                <h4>浏览选择</h4>
+                            </div>
+                            <ol class="step-details">
+                                <li>进入锦囊库页面</li>
+                                <li>按学科、年级、评分筛选</li>
+                                <li>预览笔记样张（前5页）</li>
+                                <li>查看其他用户的评价和建议</li>
+                            </ol>
+                        </div>
+                        
+                        <!-- 步骤3 -->
+                        <div class="process-step">
+                            <div class="step-header">
+                                <div class="step-number">第三步</div>
+                                <h4>下载使用</h4>
+                            </div>
+                            <ol class="step-details">
+                                <li>选择需要的笔记格式（PDF/Word/图片）</li>
+                                <li>点击下载，系统自动计数</li>
+                                <li>文件保存到"我的锦囊"库</li>
+                                <li>支持在线预览和手机端查看</li>
+                            </ol>
+                        </div>
+                        
+                        <!-- 步骤4 -->
+                        <div class="process-step">
+                            <div class="step-header">
+                                <div class="step-number">第四步</div>
+                                <h4>学习应用</h4>
+                            </div>
+                            <ol class="step-details">
+                                <li>建议先快速浏览整体框架</li>
+                                <li>对照自己的课程进度选择性学习</li>
+                                <li>结合课堂内容补充个人理解</li>
+                                <li>可打印重点章节随身携带</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 使用建议与技巧 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-lightbulb"></i>
+                        使用建议与技巧
+                    </h3>
+                    
+                    <div class="tips-grid">
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-exchange-alt"></i>
+                            </div>
+                            <div class="tip-content">
+                                <h4>对比学习法</h4>
+                                <p>下载2-3份同科目笔记，对比学习不同思路</p>
+                            </div>
+                        </div>
+                        
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-edit"></i>
+                            </div>
+                            <div class="tip-content">
+                                <h4>补充完善法</h4>
+                                <p>在学霸笔记基础上添加自己的理解和例题</p>
+                            </div>
+                        </div>
+                        
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                            <div class="tip-content">
+                                <h4>主题学习法</h4>
+                                <p>按知识主题下载相关笔记，建立知识网络</p>
+                            </div>
+                        </div>
+                        
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <div class="tip-content">
+                                <h4>考前突击法</h4>
+                                <p>使用标注了"考试重点"的笔记进行针对性复习</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第四部分：使用相关问题 -->
+        <section id="faq" class="content-section">
+            <div class="section-header">
+                <div class="section-number">04</div>
+                <h2 class="section-title">使用相关问题</h2>
+                <p class="section-desc">解答使用过程中最常见的疑问</p>
+            </div>
+
+            <div class="section-content">
+                <div class="faq-container">
+                    <!-- Q1 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <div class="faq-number">Q1</div>
+                            <div class="faq-text">笔记下载后可以分享给同学吗？</div>
+                            <div class="faq-toggle">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>个人学习使用不限，但禁止商业用途和大范围传播。为尊重原作者的版权和付出，建议邀请同学通过正规渠道获取。</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Q2 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <div class="faq-number">Q2</div>
+                            <div class="faq-text">笔记内容和我的教材版本不一样怎么办？</div>
+                            <div class="faq-toggle">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>锦囊库支持按教材版本筛选。如无对应版本，可选择知识体系相近的笔记，核心知识点通常是一致的。</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Q3 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <div class="faq-number">Q3</div>
+                            <div class="faq-text">下载的笔记格式不兼容怎么办？</div>
+                            <div class="faq-toggle">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>我们提供PDF（通用）、Word（可编辑）、图片（高清扫描）三种格式。如遇问题，可联系客服获取技术支持。</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Q4 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <div class="faq-number">Q4</div>
+                            <div class="faq-text">可以申请特定课程的笔记吗？</div>
+                            <div class="faq-toggle">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>可以。在"笔记需求征集"区提交课程信息，我们会优先寻找和审核相关笔记。需求人数多的课程会加快处理速度。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第五部分：错误反馈与更新 -->
+        <section id="feedback" class="content-section">
+            <div class="section-header">
+                <div class="section-number">05</div>
+                <h2 class="section-title">错误反馈与更新</h2>
+                <p class="section-desc">共建高质量知识库，持续优化学习资源</p>
+            </div>
+
+            <div class="section-content">
+                <div class="feedback-intro">
+                    <div class="intro-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <div class="intro-content">
+                        <h3>共建高质量知识库</h3>
+                        <p>我们相信，优质的学习资源需要大家共同维护和完善。您的每一次反馈，都能让笔记锦囊变得更好。</p>
+                    </div>
+                </div>
+                
+                <!-- 纠错机制 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-bug"></i>
+                        纠错机制
+                    </h3>
+                    
+                    <div class="correction-system">
+                        <div class="correction-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>发现与提交</h4>
+                                <p>发现笔记内容错误可提交纠错申请，需提供错误位置、正确内容、参考资料</p>
+                            </div>
+                        </div>
+                        
+                        <div class="correction-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>审核与奖励</h4>
+                                <p>审核通过后给予积分奖励（50-200积分），有效纠错者姓名将记录在笔记更新日志中</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 更新建议 -->
+                <div class="content-block">
+                    <h3 class="block-title">
+                        <i class="fas fa-lightbulb"></i>
+                        更新建议
+                    </h3>
+                    
+                    <div class="suggestion-system">
+                        <div class="suggestion-types">
+                            <div class="type-item">
+                                <div class="type-icon">
+                                    <i class="fas fa-plus-circle"></i>
+                                </div>
+                                <div class="type-content">
+                                    <h5>内容补充</h5>
+                                    <p>补充缺失的知识点、例题、解析</p>
+                                </div>
+                            </div>
+                            
+                            <div class="type-item">
+                                <div class="type-icon">
+                                    <i class="fas fa-sitemap"></i>
+                                </div>
+                                <div class="type-content">
+                                    <h5>结构优化</h5>
+                                    <p>优化知识结构，使其更清晰易懂</p>
+                                </div>
+                            </div>
+                            
+                            <div class="type-item">
+                                <div class="type-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="type-content">
+                                    <h5>例题增加</h5>
+                                    <p>增加典型例题和解题步骤</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="suggestion-benefits">
+                            <h4><i class="fas fa-gift"></i> 建议采纳奖励</h4>
+                            <ul>
+                                <li>建议被采纳可获得下载权限奖励</li>
+                                <li>优秀建议者有机会成为笔记优化志愿者</li>
+                                <li>持续贡献者可获"知识共建者"认证</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 页尾 -->
+        <footer class="page-footer">
+            <div class="footer-content">
+                <div class="footer-cta">
+                    <h3>立即开启学霸笔记之旅</h3>
+                    <p>完成简单解锁条件，获取3000+份精选学霸笔记，提升学习效率</p>
+                    <button class="cta-button" id="startJourney">
+                        <i class="fas fa-rocket"></i> 立即解锁锦囊
+                    </button>
+                </div>
+                
+                <div class="footer-navigation">
+                    <a href="#quality">质量保障</a>
+                    <a href="#categories">学科分类</a>
+                    <a href="#guide">使用指南</a>
+                    <a href="#faq">常见问题</a>
+                    <a href="#feedback">反馈更新</a>
+                </div>
+                
+                <div class="footer-message">
+                    <p class="footer-quote">
+                        让每一份智慧都不被埋没，让每一次努力都更有方向。学霸笔记锦囊，助你高效学习，智慧传承。
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/gift_detail.js"></script>
+</body>
+</html>

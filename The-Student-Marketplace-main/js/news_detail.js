@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+// news_detail.js - 新闻详情页面交互效果
+
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 $(document).ready(function () {
 
   console.log('新闻详情页面加载完成');
@@ -86,7 +91,11 @@ $(document).ready(function () {
         $btn.html(originalText);
         $btn.prop('disabled', false);
 
+<<<<<<< HEAD
         // 清空表单
+=======
+        // 清空表单（模拟）
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
         $('.form-preview-input, .form-preview-textarea, .form-preview-select').val('');
       }, 1500);
     });
@@ -217,6 +226,38 @@ $(document).ready(function () {
     });
   }
 
+<<<<<<< HEAD
+=======
+  // ===== 页面加载进度模拟 =====
+  // function initPageProgress() {
+  //   const $readingProgress = $('<div class="reading-progress"></div>');
+  //   $('body').append($readingProgress);
+
+  //   $(window).on('scroll', function() {
+  //     const scrollTop = $(window).scrollTop();
+  //     const docHeight = $(document).height();
+  //     const winHeight = $(window).height();
+  //     const scrollPercent = (scrollTop / (docHeight - winHeight)) * 100;
+
+  //     $readingProgress.css('width', scrollPercent + '%');
+  //   });
+
+  //   // 添加进度条样式
+  //   $('<style>').text(`
+  //     .reading-progress {
+  //       position: fixed;
+  //       top: 0;
+  //       left: 0;
+  //       width: 0%;
+  //       height: 3px;
+  //       background: linear-gradient(to right, #3498db, #2ecc71);
+  //       z-index: 9999;
+  //       transition: width 0.3s ease;
+  //     }
+  //   `).appendTo('head');
+  // }
+
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
   // ===== 初始化所有功能 =====
   function initAllFeatures() {
     initFAQ();
@@ -234,6 +275,10 @@ $(document).ready(function () {
   // 页面加载完成后初始化
   setTimeout(initAllFeatures, 100);
 
+<<<<<<< HEAD
+=======
+  // ===== 添加一些额外的交互效果 =====
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
   $(window).on('load', function () {
     // 页面加载完成后的动画
     $('.content-box').each(function (index) {

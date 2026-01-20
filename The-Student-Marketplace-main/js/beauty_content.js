@@ -1,8 +1,17 @@
+<<<<<<< HEAD
+=======
+// beauty_effects.js - 简化版交互效果
+
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 $(document).ready(function () {
 
   console.log('拾光容颜·悦己锦盒页面加载完成');
 
+<<<<<<< HEAD
   // =====  用户反馈卡片轮播 =====
+=======
+  // ===== 1. 用户反馈卡片轮播 =====
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
   function initReviewCarousel() {
     const $reviewsContainer = $('.swatch-reviews');
     const $reviewCards = $('.review-card');
@@ -90,7 +99,11 @@ $(document).ready(function () {
     console.log('用户反馈轮播初始化完成，共 ' + $reviewCards.length + ' 张卡片');
   }
 
+<<<<<<< HEAD
   // ===== 成分百科轮播 =====
+=======
+  // ===== 2. 成分百科轮播 =====
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
   function initIngredientCarousel() {
     const $ingredientButtons = $('.ingredient-btn');
     const $ingredientDetail = $('#ingredientDetail');
@@ -235,7 +248,11 @@ $(document).ready(function () {
   }
 
 
+<<<<<<< HEAD
   // ===== 页面加载动画 =====
+=======
+  // ===== 4. 页面加载动画 =====
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
   function initPageAnimations() {
     // 模块渐入动画
     $('.module').each(function (index) {
@@ -291,7 +308,11 @@ $('.progress-fill').each(function () {
   });
 });
 
+<<<<<<< HEAD
 // =====  添加自定义样式 =====
+=======
+// ===== 5. 添加自定义样式 =====
+>>>>>>> 21c3d52686c9a679495ab37cfe1359263f350514
 function addCustomStyles() {
   const style = `
     <style>
